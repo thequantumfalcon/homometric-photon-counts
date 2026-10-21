@@ -59,8 +59,182 @@
       "source": "PhotonMomentPolynomial.lean",
       "sha256": "12f178bf7c193a2ae304ec6a2d41fa8527eee1993ef2c4134151751ae8a0c119",
       "axiom_audit_count": 10
+    },
+    {
+      "name": "PhotonCertA0",
+      "source": "PhotonCertA0.lean",
+      "sha256": "84a3e082f575157c861b84a7648b25e2ac854999c3c21449fbcfaa78fba9fc59",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA1",
+      "source": "PhotonCertA1.lean",
+      "sha256": "5d1e95cf23879951a16c8e9a9e356a1887a5b065c5288f72e013814c6a86812b",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA2",
+      "source": "PhotonCertA2.lean",
+      "sha256": "40be09ebd64447fecf745cc0fa50bd1795ec33170a5c215e2642f7bd6ab69137",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA3",
+      "source": "PhotonCertA3.lean",
+      "sha256": "b7063ce379d161ba195ea8ad8295adc89aa41738dc24638fd7057a1a6e7e9fc3",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA4",
+      "source": "PhotonCertA4.lean",
+      "sha256": "850594184b3fc09c530abff8920a5d9824ceb2092345e33f5b4e6ae026d91d5e",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA5",
+      "source": "PhotonCertA5.lean",
+      "sha256": "9991ea20ba01558c79c2b7bd7ff8504dacbe0ea0642444c124256aab3ec51f44",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA6",
+      "source": "PhotonCertA6.lean",
+      "sha256": "79f364cf8c78ac49fa0724c3cf27bfb126c278c63e4ffdd49348b1934fe40c85",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA7",
+      "source": "PhotonCertA7.lean",
+      "sha256": "f298015123479d3cbf26054f9e9194169b48bb3682da9cb68eabd53bf6bae83a",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA8",
+      "source": "PhotonCertA8.lean",
+      "sha256": "06792d1dd4a7f43b97e0edc8b0023bbe34756f0b985d990b86bc5fc85c23d105",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA9",
+      "source": "PhotonCertA9.lean",
+      "sha256": "1a8ac6515fb334e2c118766299c6b478215f6abedba274a21ee3b2f6fa7ec107",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA10",
+      "source": "PhotonCertA10.lean",
+      "sha256": "76d0d8adfec566cd7011b014ec17337f53ea3f29dbdf86b6511c6a65790faa40",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA11",
+      "source": "PhotonCertA11.lean",
+      "sha256": "eb937f593b91240fabece37d3611aa86c5044590022e7beb0c817383517e49a5",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA12",
+      "source": "PhotonCertA12.lean",
+      "sha256": "45afcf431d95ba12ded3c525543d93983fc0a94f9c48673e6851497d56d8d59a",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA13",
+      "source": "PhotonCertA13.lean",
+      "sha256": "70b6a0e7526f0fbaf85e247834ceddbfd30f5400d9bf8cf28d49fff9c8235658",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA14",
+      "source": "PhotonCertA14.lean",
+      "sha256": "819f2dde047a70ca765d83750892911c54845f9999a25b57a84070db0128c375",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA15",
+      "source": "PhotonCertA15.lean",
+      "sha256": "88a6c307da8dfd78fc1cfb649ebcfbfc60f10253f3e8f7acd7d7de0bb8cf2acb",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA16",
+      "source": "PhotonCertA16.lean",
+      "sha256": "d0b4494988c8fc1be0b4d7c8a22b8aa54e6d3a7ad04e7a08b206eaac3a72fa18",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA17",
+      "source": "PhotonCertA17.lean",
+      "sha256": "d70edf042b6e55868994120f06c9fc14e27dea60ab2cf942a6371fe37fa40339",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA18",
+      "source": "PhotonCertA18.lean",
+      "sha256": "3e0200f439e64f3cb62a30bbc510ba68c3ad4e781454230a6c933cf378ddcb47",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA19",
+      "source": "PhotonCertA19.lean",
+      "sha256": "439059d23958b4297568a4013f6be8818365ea8e32f6b0230773fd84f72d7765",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA20",
+      "source": "PhotonCertA20.lean",
+      "sha256": "596e1823c8d8b3950e065f9d2b8ee9366bf184633195a73031b08fa59b0494f6",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertA21",
+      "source": "PhotonCertA21.lean",
+      "sha256": "31a56028c01313022f4c5af8ebd90d587d4652b11aba8cb5a967b60e2cd4518b",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCertABlock42",
+      "source": "PhotonCertABlock42.lean",
+      "sha256": "3095ff94bc2033be028f87bf28f6055fb6c125d23d5ef153b5ea71d735300bc6",
+      "axiom_audit_count": 105
+    },
+    {
+      "name": "PhotonCertABlock63",
+      "source": "PhotonCertABlock63.lean",
+      "sha256": "c80141417aa72c48c3cb9908c0e16511f5ac3620fbf6054469a63cf319a0641f",
+      "axiom_audit_count": 105
+    },
+    {
+      "name": "PhotonCertBBlock42",
+      "source": "PhotonCertBBlock42.lean",
+      "sha256": "56ff6612e64791b127c7497d28e3d4c0cda25bc5dadc5ec3ff0fccbfe97fbf70",
+      "axiom_audit_count": 110
+    },
+    {
+      "name": "PhotonCertBBlock63",
+      "source": "PhotonCertBBlock63.lean",
+      "sha256": "0e59a67135c5f4dd8a9bb844da6d876f7f0ef5213115b5672750a44423d7ede5",
+      "axiom_audit_count": 105
+    },
+    {
+      "name": "PhotonConcreteTransfer",
+      "source": "PhotonConcreteTransfer.lean",
+      "sha256": "f1b91baef92ef888434f4a3820fc5447955e6e3befe56bc03659c3b727933fa7",
+      "axiom_audit_count": 2
+    },
+    {
+      "name": "PhotonConcreteVectors",
+      "source": "PhotonConcreteVectors.lean",
+      "sha256": "cf0099f262f4c7b16b7d0758394d4f6420fe7e0ea8a93fccf4f404f86f4aee7f",
+      "axiom_audit_count": 2
+    },
+    {
+      "name": "PhotonConcreteSeparation",
+      "source": "PhotonConcreteSeparation.lean",
+      "sha256": "1c900776eb332b3fd83aa026246a07f3ca2ae9fad391f7d4ea1ef26dde56c64f",
+      "axiom_audit_count": 10
     }
   ],
-  "fresh_kernel_module": "PhotonMomentPolynomial",
-  "scope": "Constructed Poisson mixtures, concrete phase geometry, Gaussian intensity moments and their site-append recurrence, a polynomial representation with degree bounds, and reduction of the fourth-order identities to 33 exact evaluations. The concrete 63-site coefficient calculation remains unformalized. See formal/GAUSSIAN.md."
+  "fresh_kernel_module": "PhotonConcreteSeparation",
+  "scope": "Count-law distinction for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moment matching and the fourth-gap identity are proved by exact certificates, not assumed. Coordinate-file parsing, root/testing certificates, physical validation and novelty remain separate. See formal/CERTIFICATES.md."
 }

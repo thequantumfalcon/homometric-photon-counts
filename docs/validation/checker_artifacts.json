@@ -1,0 +1,53 @@
+{
+  "status": "PASS_ARTIFACT_BINDING",
+  "rea_operation": "inspect_rust_binary",
+  "rea_evidence_id": "ev_6e8b9b818af25e259cd98a65072f17bf99a131d913167367f25a5bb51a864319",
+  "rea_version": "6.7.0",
+  "artifact_name": "nanoda_bin.exe",
+  "artifact_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+  "artifact_bytes": 1141248,
+  "format": "pe",
+  "architecture": "amd64",
+  "auditable_metadata_present": false,
+  "rustc_commit_inference": {
+    "evidence_kind": "inferred",
+    "hashes": [
+      {
+        "hash": "59807616e1fa2540724bfbac14d7976d7e4a3860",
+        "file_offset": 905168
+      }
+    ]
+  },
+  "shipped_bindings": {
+    "status": "PASS",
+    "archive_name": "lean-4.35.0-windows.zip",
+    "members": [
+      {
+        "member": "lean-4.35.0-windows/bin/nanoda_bin.exe",
+        "sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+        "bytes": 1141248,
+        "installed_bytes_match": true
+      },
+      {
+        "member": "lean-4.35.0-windows/bin/leanexport.exe",
+        "sha256": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+        "bytes": 307712,
+        "installed_bytes_match": true
+      },
+      {
+        "member": "lean-4.35.0-windows/bin/leanchecker.exe",
+        "sha256": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+        "bytes": 120832,
+        "installed_bytes_match": true
+      }
+    ],
+    "scope": "Selected executable bytes agree with the retained runtime ZIP; this is not an authenticity or software-correctness proof."
+  },
+  "limits": [
+    "Embedded dependency metadata is file content. It does not authenticate package names, versions, sources, or the compiler that produced the binary.",
+    "Only the .dep-v0 dependency section and read-only compiler path strings are inspected. Functions, types, and runtime behavior are not recovered.",
+    "Resource guards bound the selected file to 256 MiB, a dependency section to 1 MiB, inflated JSON to the smaller of 8 MiB and 64 times the section size, and the complete report to 8 MiB. Package and dependency counts are admitted against that output budget before schema cloning, graph objects, or reverse-edge allocation.",
+    "No .dep-v0 section was found. Absence of .dep-v0 does not mean the binary has no dependencies.",
+    "The rustc commit hash is inferred from a /rustc/<40-hex>/ path in read-only data. It does not by itself prove which compiler produced the binary."
+  ]
+}

@@ -2,7 +2,7 @@
 
 | Open target | Evidence needed to close it |
 | --- | --- |
-| Complete formal model chain | Evaluate the proved Gaussian moment polynomial with verified exact arithmetic to establish the concrete 63-site first-three-moment matches and fourth-gap polynomial; formally bind the phase definitions to archived coordinates; express the joint phase/count interpretation; bind numerical certificates to the decision theorem |
+| Extend formal coverage beyond count-law distinction | Formally bind the phase definitions to archived coordinates; express the joint phase/count interpretation; formalize the root and testing certificates and their connection to the decision theorem |
 | Quantitative root stability | A certified full parameter rectangle preserving all four simple roots, including the compact gain interval |
 | Global parameter root count | Exclusion of additional roots across all claimed phase widths/backgrounds, not a finite scan |
 | Optimal testing and design | Bounds for the exact observation/risk criterion and certified exclusion of competing designs; pooled bins do not automatically bound full counts |
@@ -10,4 +10,4 @@
 | Physical validation | Calibrated geometry, phase motion and detector measurements, dependence checks, and a feasible acquisition analysis |
 | Broader formal portability | A separately validated Linux/macOS toolchain and dependency build; the supplied replay targets the retained pinned Windows environment |
 
-The current reference four-root count is settled within its analytic/computational assumptions. The local stability theorem and fixed-bin necessary count narrow separate gaps. The formal sources now cover concrete phase harmonics, Gaussian expectations, an all-order intensity-moment formula, a proved site-by-site recurrence, and the Gaussian/Poisson marginal count-law construction. The remaining moment gap is the concrete exact-arithmetic evaluation, described in the [Gaussian scope](../formal/GAUSSIAN.md). Repository polish, licensing, CI, and artifact integrity support inspection but cannot replace missing mathematical or experimental evidence.
+The current reference four-root count is settled within its analytic/computational assumptions. The local stability theorem and fixed-bin necessary count narrow separate gaps. The formal sources now cover concrete phase harmonics, Gaussian expectations, an all-order intensity-moment formula, a proved site-by-site recurrence, and the Gaussian/Poisson marginal count-law construction. The [concrete exact certificates](../formal/CERTIFICATES.md) now close the moment-evaluation gap and prove count-law distinction for the explicit model. Repository polish, licensing, CI, and artifact integrity support inspection but cannot replace missing mathematical or experimental evidence.

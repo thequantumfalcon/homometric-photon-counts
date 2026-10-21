@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "seconds": 0.01600000000325963,
+  "scope": "Compatibility probe of Nat.add_comm only; no project theorem checked.",
+  "binary_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+  "export_sha256": "6aa6de21984e6c060d8d7c5e674ced9766553089c0568783753564bbf4f2617f",
+  "log_sha256": "b25dec1970a09c8a15f5dc5e5356012516fab7ea4c13c8ea6f2f801df8f3629b",
+  "rea_returncode": 0,
+  "rea_sha256": "515fcc200677fc30fcb224f16dda180c7a5e882599dbe7a5f401dc15bcde3c0c",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

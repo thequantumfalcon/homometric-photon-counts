@@ -33,7 +33,30 @@ Compiled objects and the large toolchain are not distributed. The mathlib build 
 python tools/replay_formal.py --runtime PATH_TO_LEAN_4_35_WINDOWS --mathlib PATH_TO_PINNED_MATHLIB --output build/formal-check
 ```
 
-This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 92 axiom audits before reporting success. It recompiles fifteen modules: the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), the [concrete geometry extension](../formal/GEOMETRY.md), and eight [Gaussian/intensity/recurrence/polynomial modules](../formal/GAUSSIAN.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check `PhotonMomentPolynomial` and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. See the [validation record](validation/README.md) for completed execution coverage. It is a pinned Windows replay, not a claim of cross-platform formal CI or a complete end-to-end Lean theorem.
+This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 641 axiom audits before reporting success. It recompiles 44 modules: the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), the [concrete geometry extension](../formal/GEOMETRY.md), eight [Gaussian/intensity/recurrence/polynomial modules](../formal/GAUSSIAN.md), and 29 [concrete certificate and linking modules](../formal/CERTIFICATES.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check `PhotonConcreteSeparation` and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. See the [validation record](validation/README.md) for completed execution coverage. It is a pinned Windows replay, not a claim of cross-platform formal CI or formal coverage of every scientific result. The large concrete certificate blocks require substantial memory and several gigabytes of object storage. The retained concrete receipt stages previously successful compilations into an isolated directory and fresh-checks the full environment; this command performs a full source rebuild.
+
+## Optional independent exported-proof check
+
+The retained Lean 4.35.0 Windows distribution also contains `leanexport.exe` and Nanoda 0.4.19 (`nanoda_bin.exe`). Their selected bytes are recorded in [checker_artifacts.json](validation/checker_artifacts.json). This project does not install or upgrade a checker automatically.
+
+After the formal build, use the pinned mathlib checkout as the working directory, put that runtime's `bin` directory on `PATH`, and set `LEAN_PATH` to the absolute formal-build output directory. Export only `PhotonConcreteSeparation.count_laws_distinct` with the argument list `leanexport PhotonConcreteSeparation -- PhotonConcreteSeparation.count_laws_distinct`, through `lake --no-cache env`. Capture stdout directly to a binary file, for example with Python's `subprocess.run(..., stdout=opened_binary_file, check=True)`, so shell text encoding does not change the newline-delimited JSON. The selected export includes the theorem's transitive dependencies and is several gigabytes; it is not part of the source capsule.
+
+Run `nanoda_bin PATH_TO_CONFIG.json` with this configuration, replacing the export path:
+
+```json
+{
+  "use_stdin": false,
+  "export_file_path": "ABSOLUTE_PATH_TO_EXPORTED_NDJSON",
+  "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "unpermitted_axiom_hard_error": true,
+  "num_threads": 4,
+  "nat_extension": true,
+  "string_extension": true,
+  "print_success_message": true
+}
+```
+
+Retain the exit status, checker/export hashes and complete diagnostic log. This is a direct exported-proof check, not the sandboxed Lean comparator workflow. It does not independently establish the intended meaning of the theorem. Consult the [validation record](validation/README.md) for actual executed coverage.
 
 ## Validate the distributed artifact
 

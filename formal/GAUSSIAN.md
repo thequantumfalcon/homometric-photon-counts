@@ -1,6 +1,6 @@
 # Gaussian intensity moments and the count model
 
-The Gaussian extension proves a general finite intensity-moment formula, a correct site-by-site recurrence, and the Gaussian/Poisson count-model construction for the two phase lists. The remaining formal mathematical step for count-law distinction is the concrete coefficient calculation: equality of the first three intensity moments and the stated fourth-moment difference. The integration rule and recurrence are no longer assumed premises.
+The Gaussian extension proves a general finite intensity-moment formula, a correct site-by-site recurrence, and the Gaussian/Poisson count-model construction for the two phase lists. The [concrete certificates](CERTIFICATES.md) complete the coefficient calculation: equality of the first three intensity moments and the stated fourth-moment difference. The final theorem assumes neither the integration rule nor these concrete moment values.
 
 ## Coverage of the eight modules
 
@@ -33,11 +33,11 @@ The formal equality embeds the real integral on the left into the complex number
 
 The proof expands the field power, groups repeated site indices into occupancies, uses the Gaussian characteristic function, and applies finite-product integration and finite-sum linearity. It does not assume the desired intensity moments or invoke an external symbolic evaluator as an oracle.
 
-This expression has `n^(2k)` index pairs. It is a mathematical specification, not a fast evaluation algorithm for 63 sites or high orders. The later proved recurrence below avoids requiring this exhaustive expansion as the route to coefficient evaluation. Its exact polynomial and number-field instantiation for the two geometries remains unfinished.
+This expression has `n^(2k)` index pairs. It is a mathematical specification, not a fast evaluation algorithm for 63 sites or high orders. The later proved recurrence below avoids requiring this exhaustive expansion as the route to coefficient evaluation. Its exact polynomial and number-field instantiation for the two geometries is supplied by the later certificate modules.
 
 The standard-normal connection is also explicit: `scaled_standard_gaussian_law` proves that mapping `Z ~ N(0,1)` by `sqrt(s) * Z` gives `N(0,s)`. `standard_gaussian_mixed_phase_integral` proves the single-site mixed moment in the original `exp(i sqrt(s) Z)` notation. The finite-site integration theorem uses the product Gaussian measure, so independence is part of its defined model.
 
-## What remains for the concrete count-law theorem
+## From the model construction to the concrete count-law theorem
 
 For the exact phase lists in [PhotonGeometry.lean](PhotonGeometry.lean), the model module defines the nonnegative rate `eta * I + b` and mixes the proved Poisson measures over the Gaussian phase law. Measurability, normalization, the affine rate representation, the factorial-moment transfer, and intensity integrability are supplied by the construction and the preceding proofs.
 
@@ -46,9 +46,9 @@ The theorem `count_gap_of_intensity_moments` assumes positive variance and gain,
 1. The concrete intensity integrals agree at orders `k <= 3`, including normalization at order zero.
 2. Their fourth-moment difference is `PhotonAlgebra.delta4 (exp(-s))`.
 
-It then proves the fourth factorial-count moment difference and inequality of the two constructed count laws. These hypotheses have not been discharged by proving the general formula and recurrence. Evaluating the recurrence for the two geometries with verified exact arithmetic remains the next formal obligation.
+It then proves the fourth factorial-count moment difference and inequality of the two constructed count laws. The later `PhotonConcreteSeparation.intensity_matching` and `intensity_gap` theorems prove both hypotheses. `count_laws_distinct` supplies them to this intermediate theorem, completing the count-law distinction proof for the explicit model.
 
-## The proved recurrence and remaining calculation
+## The proved recurrence and its concrete evaluation
 
 `gaussian_append_recurrence` proves how the actual Gaussian mixed amplitude moment changes when one independent site is appended. If `R(a,b)` is the moment before adding the site, then
 
@@ -56,9 +56,9 @@ $$R'(a,b)=\sum_{i=0}^{a}\sum_{j=0}^{b}{a\choose i}{b\choose j}R(a-i,b-j)z^i\over
 
 `recurrence_eq_mixedMoment` proves the recursively defined values equal those integrals for every finite complex geometry and every pair of natural orders. `recurrence_eq_real_intensity` identifies the diagonal entry `R(k,k)` with the real kth intensity moment. Integrability is proved separately.
 
-For orders `0 <= a,b <= 4`, the recurrence only references those same 25 entries. Updating such a table across 63 sites entails 14,175 summands before coefficient arithmetic. This describes the mathematical recurrence, not a verified implementation of memoization or the archived Python optimizations. The Lean definition uses complex values and real exponentials and is noncomputable; a checked polynomial/number-field evaluator and its concrete output are still needed. In particular, the unit-modulus simplifications in the archived [`direct_site_moments`](../evidence/homometric-photon-counts/science_extension/finite_detection/homogeneous_moment_engine.py) implementation are not automatically certified by the recurrence theorem.
+For orders `0 <= a,b <= 4`, the recurrence only references those same 25 entries. Updating such a table across 63 sites entails 14,175 summands before coefficient arithmetic. This describes the mathematical recurrence, not a verified implementation of memoization or the archived Python optimizations. The Lean definition uses complex values and real exponentials and is noncomputable; the later certificate modules prove its required concrete polynomial values through exact identities, without trusting an external evaluator. In particular, the unit-modulus simplifications in the archived [`direct_site_moments`](../evidence/homometric-photon-counts/science_extension/finite_detection/homogeneous_moment_engine.py) implementation are not automatically certified by the recurrence theorem.
 
-The existing [33-node certificate program](../evidence/audit-2026-10-20/moments/symbolic_fourth.py) offers an alternative route to the remaining concrete calculation, and the new polynomial module now proves its structural prerequisites. `momentPoly_degree` bounds mixed order (a,b) by a²+b², hence the fourth diagonal difference has degree at most 32. `difference_eq_of_33_nodes` proves equality to any target of degree at most 32 from equal evaluations at 1,...,33. `eval_momentPoly_intensity` identifies the value at exp(-s/2) with the actual intensity integral. Nodes above one are polynomial evaluations, not Gaussian parameter values. The 33 concrete arithmetic equalities are still hypotheses; the archived Python certificate is not treated as a Lean proof of them.
+The existing [33-node certificate program](../evidence/audit-2026-10-20/moments/symbolic_fourth.py) offers an alternative route to the concrete calculation, and the polynomial module proves its structural prerequisites. The final certificate proof instead establishes polynomial identities directly, so it does not depend on those 33 node evaluations. `momentPoly_degree` bounds mixed order (a,b) by a²+b², hence the fourth diagonal difference has degree at most 32. `difference_eq_of_33_nodes` proves equality to any target of degree at most 32 from equal evaluations at 1,...,33. `eval_momentPoly_intensity` identifies the value at exp(-s/2) with the actual intensity integral. Nodes above one are polynomial evaluations, not Gaussian parameter values. The 33 concrete arithmetic equalities are still hypotheses; the archived Python certificate is not treated as a Lean proof of them.
 
 ## Evidence and interpretation boundaries
 
@@ -68,8 +68,8 @@ The count law is a constructed marginal probability measure. The extension does 
 
 The [source manifest](manifest.json) identifies the maintained formal sources. Module compilation, axiom audits, and a complete fresh-kernel replay are distinct checks; the [validation record](../docs/validation/README.md) records executed runs. Earlier geometry and mixture receipts describe their earlier source sets and do not certify later additions. The checker is Lean's kernel, not Lean4Lean or external human review.
 
-The earlier [Gaussian replay](../docs/validation/gaussian_formal_replay.json) recompiled twelve modules, passed 73 standard-axiom audits, and completed the fresh-kernel check of `PhotonGaussianModel`. It predates the two recurrence modules. The maintained replay now contains fifteen modules and 92 audits with target `PhotonMomentPolynomial`; consult the validation record for executed coverage. The fourteen-module receipt below predates the polynomial addition.
+The earlier [Gaussian replay](../docs/validation/gaussian_formal_replay.json) recompiled twelve modules, passed 73 standard-axiom audits, and completed the fresh-kernel check of `PhotonGaussianModel`. It predates the two recurrence modules. The maintained replay now contains 44 modules and 641 audits with target `PhotonConcreteSeparation`; consult the validation record for executed coverage. The fourteen-module receipt below predates the polynomial addition.
 
 The [executed recurrence replay](../docs/validation/recurrence_formal_replay.json) recompiled all fourteen modules, passed 82 standard-axiom audits, and completed the fresh-kernel check of `PhotonMixedRecurrence` and its full imported environment. This extends the earlier twelve-module replay to the proved compression recurrence.
 
-The [executed polynomial replay](../docs/validation/polynomial_formal_replay.json) recompiled all fifteen modules, passed 92 standard-axiom audits, and completed the fresh-kernel check of `PhotonMomentPolynomial` and its imported environment. Concrete arithmetic remains a separate proof obligation.
+The [executed polynomial replay](../docs/validation/polynomial_formal_replay.json) recompiled all fifteen modules, passed 92 standard-axiom audits, and completed the fresh-kernel check of `PhotonMomentPolynomial` and its imported environment. That historical replay predates the later concrete certificates and final theorem; their execution coverage is recorded separately.
