@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "observed_at_utc": "2026-10-21T11:26:25.592102+00:00",
+  "repository": "https://github.com/thequantumfalcon/homometric-photon-counts",
+  "verified_commit": {
+    "sha": "2c0ca470b4d3f1a45df2188141adfa9a9538f5e6",
+    "verified": true,
+    "reason": "valid"
+  },
+  "runs": [
+    {
+      "id": 39590144863,
+      "name": "ci",
+      "event": "pull_request",
+      "head_sha": "2c0ca470b4d3f1a45df2188141adfa9a9538f5e6",
+      "head_branch": "proof/joint-snapshot-model",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/thequantumfalcon/homometric-photon-counts/actions/runs/39590144863",
+      "jobs": [
+        {
+          "id": 119188775578,
+          "name": "capsule (ubuntu-latest)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119188775838,
+          "name": "arb",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119188775846,
+          "name": "capsule (windows-latest)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119191156796,
+          "name": "ci",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 39591050888,
+      "name": "ci",
+      "event": "push",
+      "head_sha": "2c0ca470b4d3f1a45df2188141adfa9a9538f5e6",
+      "head_branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/thequantumfalcon/homometric-photon-counts/actions/runs/39591050888",
+      "jobs": [
+        {
+          "id": 119191800783,
+          "name": "capsule (ubuntu-latest)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119191800801,
+          "name": "capsule (windows-latest)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119191801019,
+          "name": "arb",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119193761446,
+          "name": "ci",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 39591050317,
+      "name": "Push on main",
+      "event": "dynamic",
+      "head_sha": "2c0ca470b4d3f1a45df2188141adfa9a9538f5e6",
+      "head_branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/thequantumfalcon/homometric-photon-counts/actions/runs/39591050317",
+      "jobs": [
+        {
+          "id": 119191805923,
+          "name": "Analyze (actions)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119191806342,
+          "name": "Analyze (python)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "open_code_scanning_alerts": 0,
+  "source_anchors": {
+    "formal/manifest.json": "40043ad60d92dc84a3450e6a8be7902a736af72ab23ed2eeb33e17065bb835d9",
+    "evidence/public_manifest.json": "a7dd9a003d88f193eac09bfb9def36a40ad5088b3729bc257f06ca7027258b24"
+  },
+  "scope": "Observed post-merge status of the named joint-proof commit. Later commits require their own CI. Lean and Nanoda were executed separately as recorded in their source-bound receipts; GitHub CI does not rebuild the Lean proof. This is not external peer review, physical validation, or a novelty determination."
+}

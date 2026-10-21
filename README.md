@@ -1,5 +1,7 @@
 # Homometric photon counts
 
+[![Main branch CI](https://github.com/thequantumfalcon/homometric-photon-counts/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/thequantumfalcon/homometric-photon-counts/actions/workflows/ci.yml?query=branch%3Amain)
+
 Proofs and reproducible certificates for distinguishing two fixed 63-site homometric structures under independent Gaussian phase motion and conditional Poisson photon counting.
 
 This is conditional mathematical research. The repository contains no measured detector data, established novelty claim, or practical acquisition recommendation. Its exact assumptions and remaining gaps are part of the results.
@@ -39,7 +41,7 @@ The curve is illustrative numerical quadrature. The endpoint signs and interval 
 
 The [claim ledger](docs/claims.md) links each result to its actual proof, certificate, replay, and remaining assumptions. The [model guide](docs/model.md) separates this homogeneous phase model from the archived historical extensions.
 
-The [validation record](docs/validation/README.md) distinguishes local formal checks from executed GitHub CI. The [verification-tool status](docs/verification-tools.md) separates completed checks from possible additional checks.
+The completed formal milestone contains **45 modules and 654 theorem-axiom audits**, with a fresh Lean kernel check of the joint model and its imported environment. Separate Nanoda checks cover the exported concrete count-law theorem and selected joint conditional-law theorems. The [validation record](docs/validation/README.md) identifies their exact scopes and records passing PR and main-branch CI for the published proof commit. GitHub CI checks the capsule and arithmetic replays; the Lean and Nanoda results are separate local checks. The [verification-tool status](docs/verification-tools.md) separates completed checks from possible additional checks.
 
 The [Gaussian formalization](formal/GAUSSIAN.md) derives the general expectation formula and proves a site-by-site moment recurrence for any finite complex geometry. [Checked exact certificates](formal/CERTIFICATES.md) evaluate that recurrence for this particular pair. The separating conclusion is specific to these two structures. The [joint snapshot model](formal/JOINT_MODEL.md) now proves the stated conditional Poisson law on one probability space. A separate [model-error bound](docs/model-tolerance.md) quantifies a conservative tolerance for the fixed-bin test; it does not demonstrate physical feasibility.
 
