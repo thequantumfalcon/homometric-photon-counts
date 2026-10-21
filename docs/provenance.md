@@ -8,4 +8,6 @@ The transformation does not change mathematical coefficients, inequalities, root
 
 Selection excludes private ASTRA source, unrelated desktop inventories, external article PDFs, runtime binaries, compiled proof objects, and local repository settings. The included archived reports may refer to earlier local workflows or omitted rendering artifacts. Current navigation and supported commands are specified in the root documentation.
 
-The manifest proves byte identity relative to its anchor, not authenticity against an adversary who replaces both. A future signed commit/release supplies a separate provenance layer. No signed public release is claimed by this candidate.
+New formal work is added under `formal/` with a separate source manifest. It does not rewrite historical proof statements or the 327-file public evidence inventory. The later mixture construction discharges the tower premises for its constructed laws; historical scope files remain accurate descriptions of the earlier modules.
+
+The manifests prove byte identity relative to their anchors, not authenticity against an adversary who replaces both. Signed commits supply a separate provenance layer. GitHub verified the [initial public commit](https://github.com/thequantumfalcon/homometric-photon-counts/commit/d7fece070757c9e045acc554751d286dc928b187) under the maintainer's pseudonymous identity. There is no tagged public release.

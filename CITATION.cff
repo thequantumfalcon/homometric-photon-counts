@@ -1,7 +1,8 @@
 cff-version: 1.2.0
-message: "Cite the exact repository revision and the specific model/certificate used. This candidate is not a peer-reviewed article."
+message: "Cite the exact repository revision and the specific model/certificate used. This research software is not a peer-reviewed article."
 type: software
 license: MIT
+repository-code: "https://github.com/thequantumfalcon/homometric-photon-counts"
 title: "Homometric photon counts: conditional proofs and reproducible certificates"
 authors:
   - name: "The Quantum Falcon"

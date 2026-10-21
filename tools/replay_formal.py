@@ -12,7 +12,7 @@ import shutil
 import subprocess
 import time
 
-from project import EVIDENCE, require, verify
+from project import EVIDENCE, ROOT, formal_manifest, require, verify
 
 
 def digest(path: Path) -> str:
@@ -32,10 +32,14 @@ def main() -> None:
     args = parser.parse_args()
     runtime, mathlib, output = (p.resolve() for p in (args.runtime, args.mathlib, args.output))
     require(not output.exists(), "Formal output must be fresh")
-    require(not any(output.is_relative_to(p) for p in (EVIDENCE, runtime, mathlib)), "Unsafe output location")
+    require(
+        not any(output.is_relative_to(p) for p in (EVIDENCE, ROOT / "formal", runtime, mathlib)),
+        "Unsafe output location",
+    )
     verify()
     source_manifest = EVIDENCE / "followup-2026-10-20/lean/proof_manifest.json"
     manifest = json.loads(source_manifest.read_text())
+    extension = formal_manifest()
     runtime_prefix = manifest["runtime_relative_path"] + "/"
     mathlib_prefix = manifest["mathlib_relative_path"] + "/"
     checked_runtime = {}
@@ -81,12 +85,16 @@ def main() -> None:
         "proof_manifest_sha256": digest(source_manifest),
         "runtime_inputs": checked_runtime,
         "steps": steps,
-        "scope": manifest["scope"],
+        "extension_manifest_sha256": digest(ROOT / "formal/manifest.json"),
+        "scope": extension["scope"],
     }
-    for row in manifest["modules"]:
+    modules = [
+        (row, EVIDENCE / row["source"], manifest["input_sha256"][row["source"]])
+        for row in manifest["modules"]
+    ] + [(row, ROOT / "formal" / row["source"], row["sha256"]) for row in extension["modules"]]
+    for row, source, expected in modules:
         name = row["name"]
-        source = EVIDENCE / row["source"]
-        require(digest(source) == manifest["input_sha256"][row["source"]], "Formal source pin mismatch")
+        require(digest(source) == expected, "Formal source pin mismatch")
         target = output / (name + ".lean")
         shutil.copyfile(source, target)
         commands = [
@@ -105,7 +113,7 @@ def main() -> None:
                 ],
             )
         ]
-        if args.fresh_kernel and name == manifest["fresh_kernel_module"]:
+        if args.fresh_kernel and name == extension["fresh_kernel_module"]:
             commands.append(
                 (
                     "fresh_kernel",

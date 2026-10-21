@@ -1,6 +1,6 @@
 # Changelog
 
-Changes to this research capsule are recorded here. There is no published release of this repository candidate.
+Changes to this research capsule are recorded here. The source repository is public; there is no tagged release.
 
 ## [Unreleased]
 
@@ -10,6 +10,8 @@ Changes to this research capsule are recorded here. There is no published releas
 
 ### Added
 
+- A measurable Poisson-mixture construction, normalization and factorial tower theorem, composed with the conditional count-law distinction theorem.
+- Public GitHub repository with verified signed commits, Windows/Ubuntu package checks, Arb CI and default CodeQL analysis.
 - MIT license for project-owned code and documentation, approved on 2026-10-21; third-party notices retained.
 - Exact reference four-root certificate and a separate Fourier reconstruction.
 - Local stability argument for sufficiently small phase/background changes.

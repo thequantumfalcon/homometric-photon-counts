@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "fresh_kernel_performed": true,
+  "proof_manifest_sha256": "ad3e0db6ce653542785f8119fa664b06c0450a318e1cafcd319015e0633300c3",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.812999999994645,
+      "source_sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "log_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "axiom_audits": 5
+    },
+    {
+      "module": "PhotonMomentTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.014999999999418,
+      "source_sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "log_sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "axiom_audits": 2
+    },
+    {
+      "module": "PhotonPoissonSeries",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 19.547000000005937,
+      "source_sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "log_sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "axiom_audits": 1
+    },
+    {
+      "module": "PhotonPoissonMeasure",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.656000000002678,
+      "source_sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "log_sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "axiom_audits": 3
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.812999999994645,
+      "source_sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "log_sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "axiom_audits": 2
+    },
+    {
+      "module": "PhotonPoissonMixture",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.764999999999418,
+      "source_sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "log_sha256": "517035d8a95044d2d1625777c87ec75890cef57c1b792434f83d9444d0375a8e",
+      "axiom_audits": 5
+    },
+    {
+      "module": "PhotonPoissonMixture",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 408.4060000000027,
+      "source_sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "log_sha256": "cf8e9cc51359a139ad0d7d4b2c3609f0369d6a2f0a72cacc32e7744a3a0f3868"
+    }
+  ],
+  "extension_manifest_sha256": "ad09fa2f9dd510e993b3a66297c1092dbee8e2598c2d033685e6ee85cbce1733",
+  "scope": "Constructed measurable Poisson mixtures, normalization and factorial tower identity; count-law distinction follows from explicit intensity-moment premises. See formal/SCOPE.md."
+}

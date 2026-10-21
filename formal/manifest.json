@@ -1,0 +1,12 @@
+{
+  "modules": [
+    {
+      "name": "PhotonPoissonMixture",
+      "source": "PhotonPoissonMixture.lean",
+      "sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "axiom_audit_count": 5
+    }
+  ],
+  "fresh_kernel_module": "PhotonPoissonMixture",
+  "scope": "Constructed measurable Poisson mixtures, normalization and factorial tower identity; count-law distinction follows from explicit intensity-moment premises. See formal/SCOPE.md."
+}

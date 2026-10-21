@@ -1,0 +1,15 @@
+{
+  "status": "UNAVAILABLE_INCOMPATIBLE_OBJECT_FORMAT",
+  "checker_sha256": "2463006ea615a6f69c80689142cf7cb0a8724fc7819c57ad2b395e99eb6a9f3c",
+  "runtime": "Lean 4.35.0 existing local installation",
+  "module": "Init",
+  "arguments": [
+    "Init"
+  ],
+  "returncode": 1,
+  "project_proofs_checked": false,
+  "scope": "Compatibility probe only. No proof failure or successful Lean4Lean verification is inferred.",
+  "sanitized_log_sha256": "73f21014885b99d4ece18b2c6d18982cd51563c1bfe0ea0888b78b9438d9dc65",
+  "output_excerpt": "lean4lean found a problem in Init:\nfailed to read file 'LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\lib\\lean\\Init.olean', incompatible header",
+  "log_lines": 1306
+}

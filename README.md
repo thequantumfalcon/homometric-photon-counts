@@ -29,7 +29,7 @@ $$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim
 | Exactly four positive blind gains | At $t=1/2$ and $b=0$, the event $N=4$ has equal probability under the two structures at exactly four simple positive gains. The final root lies in $(0.2934841,0.2934842)$. The proof includes every arbitrarily large gain. |
 | Four roots persist locally | Exactly four simple roots persist for sufficiently small changes in phase variance and nonnegative background. This is an existence theorem; a full usable neighborhood radius has not been computed. |
 | Necessary and sufficient counts | At $s=2\log2,\eta=1/20,b=0$, with iid observations of the fixed bins $0,\ldots,11,\geq12$, any test with each error below 5% needs at least **28,091,647,285,174** observations. A certified score succeeds with **102,399,876,723,169**. The ratio is below 3.646; the optimum is unknown. |
-| Focused formal proofs | Lean checks selected algebra, probability implications, explicit Poisson factorial moments, and common-background cancellation. The complete geometry-to-detector chain is not formalized. |
+| Focused formal proofs | Lean checks selected algebra, Poisson factorial moments, background cancellation, and a measurable mixture construction with its factorial tower identity. The complete geometry-to-detector chain is not formalized. |
 
 A blind gain concerns the single event $N=4$, not equality of the full count laws. All sample counts above are for the specified binned iid experiment; they do not describe arbitrary detectors, temporal dependence, unknown calibration, or an optimized design.
 
@@ -39,7 +39,7 @@ The curve is illustrative numerical quadrature. The endpoint signs and interval 
 
 The [claim ledger](docs/claims.md) links each result to its actual proof, certificate, replay, and remaining assumptions. The [model guide](docs/model.md) separates this homogeneous phase model from the archived historical extensions.
 
-The [validation record](docs/validation/README.md) distinguishes completed local checks from remote CI that has not run. The [verification-tool status](docs/verification-tools.md) separates completed checks from possible additional checks.
+The [validation record](docs/validation/README.md) distinguishes local formal checks from executed GitHub CI. The [verification-tool status](docs/verification-tools.md) separates completed checks from possible additional checks.
 
 ## Research provenance
 
@@ -55,4 +55,4 @@ Report a proof gap with its statement, model, evidence path, and a concrete coun
 
 Open work includes the remaining formal model links, a quantitative stability neighborhood, root counts over the full parameter domain, optimal testing/design, primary-literature comparison, and physical validation. See the [research roadmap](docs/roadmap.md).
 
-Maintained under the pseudonym **The Quantum Falcon**. Project-owned code and documentation are [MIT licensed](LICENSE.txt); [third-party terms remain intact](LICENSE_STATUS.md). This is a local repository candidate; remote CI, repository settings, and public release have not yet been verified.
+Maintained under the pseudonym **The Quantum Falcon**. Project-owned code and documentation are [MIT licensed](LICENSE.txt); [third-party terms remain intact](LICENSE_STATUS.md). The [public repository](https://github.com/thequantumfalcon/homometric-photon-counts) is available for inspection. It has no tagged scientific release or external peer-review endorsement. See the [repository status](docs/repository-readiness.md) for verified settings and checks.

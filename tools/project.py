@@ -33,6 +33,25 @@ def files(root: Path = ROOT) -> dict[str, Path]:
     }
 
 
+def formal_manifest() -> dict:
+    directory = ROOT / "formal"
+    raw = (directory / "manifest.json").read_bytes()
+    require(
+        sha256(raw).hexdigest() == (directory / "manifest.sha256").read_text().split()[0],
+        "Formal extension manifest anchor mismatch",
+    )
+    manifest = json.loads(raw)
+    names = set()
+    for row in manifest["modules"]:
+        name = row["source"]
+        require(name == row["name"] + ".lean" and Path(name).name == name, "Unsafe formal source path")
+        require(name not in names, "Duplicate formal source")
+        names.add(name)
+        require(sha256((directory / name).read_bytes()).hexdigest() == row["sha256"], "Changed formal source")
+    require(names == {p.name for p in directory.glob("*.lean")}, "Formal extension inventory changed")
+    return manifest
+
+
 def verify() -> None:
     raw = (EVIDENCE / "public_manifest.json").read_bytes()
     require(
@@ -68,6 +87,7 @@ def verify() -> None:
     lower = json.loads((EVIDENCE / "followup-2026-10-20/lowerbounds/binned_lower_bound.json").read_text())
     require(lower["necessary_m_at_least"] == 28091647285174, "Unexpected necessary sample claim")
     require(lower["certified_m_sufficient"] == 102399876723169, "Unexpected sufficient sample claim")
+    formal_manifest()
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
 
 
@@ -84,7 +104,12 @@ def check() -> None:
         if path.suffix == ".py":
             ast.parse(data, filename=name)
     # Current navigation is checked separately from archived scientific prose.
-    docs = [ROOT / "README.md", *list((ROOT / "docs").rglob("*.md")), *list((ROOT / ".github").rglob("*.md"))]
+    docs = [
+        ROOT / "README.md",
+        *list((ROOT / "docs").rglob("*.md")),
+        *list((ROOT / ".github").rglob("*.md")),
+        *list((ROOT / "formal").rglob("*.md")),
+    ]
     for path in docs:
         for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
             target = target.split("#", 1)[0]
