@@ -113,7 +113,11 @@ def main() -> None:
                 ],
             )
         ]
-        if args.fresh_kernel and name == extension["fresh_kernel_module"]:
+        fresh_roots = [
+            extension["fresh_kernel_module"],
+            *extension.get("additional_fresh_kernel_modules", []),
+        ]
+        if args.fresh_kernel and name in fresh_roots:
             commands.append(
                 (
                     "fresh_kernel",

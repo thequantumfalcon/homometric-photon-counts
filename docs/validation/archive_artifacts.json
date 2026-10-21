@@ -1,0 +1,37 @@
+{
+  "status": "PASS_ARCHIVED_PHASE_INPUT_IDENTITY",
+  "rea_version": "6.7.0",
+  "rea_cli_sha256": "ed06cee49505b95a3cc5fceb1b4b279167e26df86227c644bb366ffffdbaf738",
+  "archives": [
+    {
+      "version": "v0.1.0",
+      "archive_sha256": "61774346a947371b935ec4142ff57ab4dd39a50d3e8f7e7d4196e83fc2afd90a",
+      "rea_evidence_id": "ev_a14af7094bc91ebffe6da1edb6524aa6f2174135fbe35c40e8a11e36b0c6eb6a",
+      "retained_member_path": "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+      "input_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "identical_to_public_evidence": true,
+      "coverage": {
+        "scope": "container-entries",
+        "status": "complete"
+      }
+    },
+    {
+      "version": "v0.2.0",
+      "archive_sha256": "ecdf3169f00d795775e5731f65fffd5649fc09d24e493d8aa2d585d947425494",
+      "rea_evidence_id": "ev_fa586744064ff8f92369c9ab02a302c23a15f77ad400bad664a6a2cd7402bc93",
+      "retained_member_path": "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+      "input_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "identical_to_public_evidence": true,
+      "coverage": {
+        "scope": "container-entries",
+        "status": "complete"
+      }
+    }
+  ],
+  "input_bytes": 336739,
+  "phase_counts": {
+    "A": 63,
+    "B": 63
+  },
+  "scope": "Retained local REA inventories were reused after checking archive hashes; exact member bytes were compared with the public input. Artifact identity only, without target execution, mathematical proof or priority determination."
+}

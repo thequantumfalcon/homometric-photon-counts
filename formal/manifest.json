@@ -239,8 +239,35 @@
       "source": "PhotonJointModel.lean",
       "sha256": "35033ce8fccb030f37cfb8ab2c5e8d78ed9153cc3c009833e8666b473aa2fd0b",
       "axiom_audit_count": 13
+    },
+    {
+      "name": "PhotonArchiveBinding",
+      "source": "PhotonArchiveBinding.lean",
+      "sha256": "9d0e265799210f38b3f9a1293b49c7876621b78ed8d9dfdf78869d601005706c",
+      "axiom_audit_count": 2
+    },
+    {
+      "name": "PhotonArchiveParserCore",
+      "source": "PhotonArchiveParserCore.lean",
+      "sha256": "278328d4480988bcf4a88482a523f0f1c541214bd960401bc90f938b7c953bc5",
+      "axiom_audit_count": 3
+    },
+    {
+      "name": "PhotonArchiveParsed",
+      "source": "PhotonArchiveParsed.lean",
+      "sha256": "2993621e7d955098da769d2bc1332675fbbacd482f017d30297e7b86ccb52464",
+      "axiom_audit_count": 2
+    },
+    {
+      "name": "PhotonArchiveBridge",
+      "source": "PhotonArchiveBridge.lean",
+      "sha256": "502c15013f5f869b991250400e58b153a2eb6c3061a30b0c3cd11b6d466f65c3",
+      "axiom_audit_count": 2
     }
   ],
   "fresh_kernel_module": "PhotonJointModel",
-  "scope": "Count-law distinction for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moments are proved, not assumed. A joint snapshot law has the stated phase/count marginals and conditional Poisson law given intensity. Coordinate-file parsing, temporal/exposure models, root/testing certificates, physical validation and novelty remain separate. See formal/CERTIFICATES.md and formal/JOINT_MODEL.md."
+  "scope": "Count-law distinction and joint snapshot interpretation for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moments are proved. The archive branch parses the exact saved phase arrays and proves their evaluations permute the formal phase lists. External byte selection, coordinate-to-phase interpretation, probability reindexing, temporal/exposure models, root/testing formalization, physical validation and novelty remain separate. See formal/ARCHIVE_INPUT.md, formal/CERTIFICATES.md and formal/JOINT_MODEL.md.",
+  "additional_fresh_kernel_modules": [
+    "PhotonArchiveBridge"
+  ]
 }

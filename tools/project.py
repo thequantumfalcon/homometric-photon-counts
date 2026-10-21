@@ -15,6 +15,8 @@ import tempfile
 import time
 import zipfile
 
+from check_archive_binding import certificate as archive_binding
+
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "evidence"
 IGNORED = {".git", ".venv", "build", "dist", "__pycache__", ".ruff_cache", ".pytest_cache"}
@@ -49,6 +51,9 @@ def formal_manifest() -> dict:
         names.add(name)
         require(sha256((directory / name).read_bytes()).hexdigest() == row["sha256"], "Changed formal source")
     require(names == {p.name for p in directory.glob("*.lean")}, "Formal extension inventory changed")
+    roots = [manifest["fresh_kernel_module"], *manifest.get("additional_fresh_kernel_modules", [])]
+    require(len(roots) == len(set(roots)), "Duplicate fresh-kernel root")
+    require(all(root + ".lean" in names for root in roots), "Missing fresh-kernel root")
     return manifest
 
 
@@ -88,6 +93,7 @@ def verify() -> None:
     require(lower["necessary_m_at_least"] == 28091647285174, "Unexpected necessary sample claim")
     require(lower["certified_m_sufficient"] == 102399876723169, "Unexpected sufficient sample claim")
     formal_manifest()
+    archive_binding()
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
 
 

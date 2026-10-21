@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "fresh_kernel_performed": true,
+  "fresh_kernel_root": "PhotonArchiveBridge",
+  "new_modules": 4,
+  "new_axiom_audits": 9,
+  "prior_joint_receipt_sha256": "d4cb268dc80a0be5b85408adf0b37c4a173305b5756b6a0f9bff7cf691b2009c",
+  "extension_manifest_sha256": "852613bf2379e301a880cdac4761024e96dfe15b89c300c8191bdb9b882e3a21",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.030999999988126,
+      "source_sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "log_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "axiom_audits": 5,
+      "object_sha256": "7ba7faa455588e6a477b4eea674bf6b142d4390839d8feeb55ea518364e8999a",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonMomentTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.15700000000652,
+      "source_sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "log_sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "axiom_audits": 2,
+      "object_sha256": "335cf47985bb65da3119bd5b86e8bdf09728dcc98647dd8fa10253084c897977",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonPoissonSeries",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.23399999999674,
+      "source_sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "log_sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "axiom_audits": 1,
+      "object_sha256": "cdc6fa7ee4b10adfd37bbaa7bfcf197f696675a9c50374aac1752618a3dd5a29",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonPoissonMeasure",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.85899999999674,
+      "source_sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "log_sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "axiom_audits": 3,
+      "object_sha256": "8470d3d75be0d4dbbf23f083c0d925414906b541cc47c0acb5cfdafbd4397ad1",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.844000000011874,
+      "source_sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "log_sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "axiom_audits": 2,
+      "object_sha256": "55a06f78f2edeb20b7e34382e8c52b5c7e5879c5621fa39e56b811f4d9b5d5b2",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonPoissonMixture",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.921999999991385,
+      "source_sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "log_sha256": "517035d8a95044d2d1625777c87ec75890cef57c1b792434f83d9444d0375a8e",
+      "axiom_audits": 5,
+      "object_sha256": "345ca62898087fdc28539cc77dbceea6846ffe5bbd511d9edd6aa671f400506b",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonGeometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.75,
+      "source_sha256": "88667df23f32776eed39a38d96231b22d8c80f0945731acce743e1ecbf160300",
+      "log_sha256": "1985e671b90cd9597c08e321e5fe0079be5569a9579a36ed39823139bb60bc6f",
+      "axiom_audits": 20,
+      "object_sha256": "58c8f0b716c0986da00ec268a7b1b7aed6ab7dc912dd3bb02b8accecace76d31",
+      "execution": "reused source-bound compilation"
+    },
+    {
+      "module": "PhotonArchiveBinding",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.235000000000582,
+      "source_sha256": "9d0e265799210f38b3f9a1293b49c7876621b78ed8d9dfdf78869d601005706c",
+      "object_sha256": "d8df2093801657df9fb6366749ffc162527224f81dea8c089c85ca8a1e75b878",
+      "log_sha256": "d3ab5345d4a7c7441f9c1dfa77787a7d00c4fd56e382b142f2db03b5d304f386",
+      "axiom_audits": 2,
+      "execution": "new source compilation"
+    },
+    {
+      "module": "PhotonArchiveParserCore",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 13.813000000009197,
+      "source_sha256": "278328d4480988bcf4a88482a523f0f1c541214bd960401bc90f938b7c953bc5",
+      "object_sha256": "a3ab65052f9db78c3877f25efaf92933bf8a469c1299be0bd901e33bfdccb347",
+      "log_sha256": "7e661caa8fadc8e98af9eb2c5a34af774de07fe65d4b5939ca22d4891e15853b",
+      "axiom_audits": 3,
+      "execution": "new source compilation"
+    },
+    {
+      "module": "PhotonArchiveParsed",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 50.07799999999406,
+      "source_sha256": "2993621e7d955098da769d2bc1332675fbbacd482f017d30297e7b86ccb52464",
+      "object_sha256": "41f9d25f01b9471ad4f2cc0eb6631605833c6444ae82886ee3b013567244596f",
+      "log_sha256": "816f7e0455fba7bd8b03225f1e0a762029b6e94202e451c40648fe677b63f4e5",
+      "axiom_audits": 2,
+      "execution": "new source compilation"
+    },
+    {
+      "module": "PhotonArchiveBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.140999999988708,
+      "source_sha256": "502c15013f5f869b991250400e58b153a2eb6c3061a30b0c3cd11b6d466f65c3",
+      "object_sha256": "67b47ad0945585438caf7c2483ff75e347978bf3c346e3d09888b55310afac52",
+      "log_sha256": "638a647ef7c4cdae9c56498aa3d9af4a0fd3eea9a8e134af6de4e267293a2407",
+      "axiom_audits": 2,
+      "execution": "new source compilation"
+    },
+    {
+      "module": "PhotonArchiveBridge",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 552.2030000000086,
+      "source_sha256": "502c15013f5f869b991250400e58b153a2eb6c3061a30b0c3cd11b6d466f65c3",
+      "object_sha256": "67b47ad0945585438caf7c2483ff75e347978bf3c346e3d09888b55310afac52",
+      "log_sha256": "215eeb49f5799a127cca96b6a579cdc7ce85e93c375f6993d03658aecc81edc5"
+    }
+  ],
+  "scope": "Fresh check of the archive branch and its seven earlier project dependencies. The unchanged 45-module joint-model branch retains its separately recorded check. Exact phase-array parsing and permutation are proved; external byte binding, coordinate interpretation, probability reindexing, physical validation and novelty are separate."
+}

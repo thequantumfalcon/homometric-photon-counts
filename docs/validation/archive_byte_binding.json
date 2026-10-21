@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "model": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+  "model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "literal_module": "formal/PhotonArchiveParsed.lean",
+  "literal_module_sha256": "2993621e7d955098da769d2bc1332675fbbacd482f017d30297e7b86ccb52464",
+  "fragments": [
+    {
+      "structure": "A",
+      "json_pointer": "/graphs/A/phases_exact",
+      "start_byte": 129158,
+      "end_byte_exclusive": 152013,
+      "bytes": 22855,
+      "sha256": "6ac00d4cc61a97b78bd0aeb5ca6b100039ad7922a5e5018ff0f0645bbec16aab",
+      "phase_count": 63
+    },
+    {
+      "structure": "B",
+      "json_pointer": "/graphs/B/phases_exact",
+      "start_byte": 297044,
+      "end_byte_exclusive": 319817,
+      "bytes": 22773,
+      "sha256": "f3866fba7d8932aae17e0d080f8a5efeed013a55aa02c409c38bef30c5ae3760",
+      "phase_count": 63
+    }
+  ],
+  "scope": "External byte and JSON-field binding only; Lean checks parsing and exact phase geometry separately."
+}
