@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "new_modules": 5,
+  "new_axiom_audits": 26,
+  "steps": [
+    {
+      "module": "PhotonHomometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 132.48499999998603,
+      "source_sha256": "e264fee37e174dc4143d606aafc90b164ea0a1284b5862f29a535bd944c1f8bc",
+      "object_sha256": "798f86f18e43e3ba92ef28a756d7a311a9dc272afcc16793fa07788b9bb26979",
+      "log_sha256": "7285b240e250d7bf8aad535d95218f95ba4dd44b3d89a1eca439c2868ec0d1c2",
+      "axiom_audits": 4
+    },
+    {
+      "module": "PhotonCoordinateOrder",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 221.48399999999674,
+      "source_sha256": "bb5ab2df8f5cd9b381e93d6e942b30726c7cb9951158a288eb174d078d7c254f",
+      "object_sha256": "9995aa6f0db2ac162f7744ff537397f60cbc239f9f18e783337790fa68375767",
+      "log_sha256": "530160f83177fa62b7998b8d19e7d3ef827e0941f743119ff14c8be76ea9eb46",
+      "axiom_audits": 9
+    },
+    {
+      "module": "PhotonCoordinateHomometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 34.875,
+      "source_sha256": "d1fdd2efe727774ab011ec6e6e71ea9e792e3199e2e5d896188332350836591b",
+      "object_sha256": "d4e7a2cb8627508b1a41f3663b34e358d958775f83596ad822327f1acccaa187",
+      "log_sha256": "393435297367ad4d8b1de4e27669bf7bca1dfaf1f5e04157a986d3dcf646af63",
+      "axiom_audits": 5
+    },
+    {
+      "module": "PhotonCoordinateNoncongruence",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 44.375,
+      "source_sha256": "2790055d8a6066b7e2d6e657a6ee93354bf779e928a368cde6bd2a768c7b0905",
+      "object_sha256": "9ae11ae171aacface41095c2aa9760e4033456ab4ba69584c2c3d930f55913ac",
+      "log_sha256": "b1a5bb3e655eaa620fd3325d7e9d3a88d824ee6d1c12eac23aba892b858f5062",
+      "axiom_audits": 3
+    },
+    {
+      "module": "PhotonSpatialSeparation",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.937000000005355,
+      "source_sha256": "028a97ca610a67e819cbf8f39facc1dd93be996e87eecdbe74364172b5702e7e",
+      "object_sha256": "492aafde54be091477a208a1ec9bb5b465cd3f01e6a6f941318ebf173c39144b",
+      "log_sha256": "59d468105e7e75e02b1b34e2387b58d12b1c435f7c12744439e246e588677059",
+      "axiom_audits": 5
+    },
+    {
+      "module": "PhotonHomometry",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "source_sha256": "e264fee37e174dc4143d606aafc90b164ea0a1284b5862f29a535bd944c1f8bc",
+      "log_sha256": "0b0d21c308b9bb6d76e6e1dbd5f86915cadbfa1db0e662a39f5f5748d7292348",
+      "seconds": 236.01600000000326,
+      "object_sha256": "798f86f18e43e3ba92ef28a756d7a311a9dc272afcc16793fa07788b9bb26979"
+    }
+  ],
+  "fresh_kernel_performed": true,
+  "fresh_kernel_roots": [
+    "PhotonHomometry"
+  ],
+  "fresh_kernel_scope": "The new generic homometry module and its mathlib environment passed an additional fresh-kernel check. All five new modules passed ordinary kernel compilation. No new fresh replay of the full concrete coordinate/count-law environment and no new Nanoda export is claimed. Earlier checks and the optional reindexing timeout retain their recorded scopes.",
+  "inherited_compile_receipts": {
+    "docs/validation/joint_formal_replay.json": "d4cb268dc80a0be5b85408adf0b37c4a173305b5756b6a0f9bff7cf691b2009c",
+    "docs/validation/archive_formal_replay.json": "144b5277f531d09d84d3cdaecee933b6759213bbb088bc0192a6d1ff98fc7a59",
+    "docs/validation/coordinate_formal_replay.json": "32d66a9da7cc44474106cff02946efa129bdd57b4ca76fed75d8e37068fe8339"
+  },
+  "extension_manifest_sha256": "737a21eafabd3e90dc9c659abe8d3e9a3ff0cec30ca130950dafcdc12bc61236",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "git_dependencies": [
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4",
+      "commit": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/plausible",
+      "commit": "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/LeanSearchClient",
+      "commit": "d6b4c7be5be75ec4917c873ac50c756dc1436372"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/importGraph",
+      "commit": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/proofwidgets",
+      "commit": "df72b022e558978a1c50264cfc4d7fec86fa8e04"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/aesop",
+      "commit": "4a174c490d8707121c4a9290800489f105d85e07"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Qq",
+      "commit": "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/batteries",
+      "commit": "66e469188fe07963e5cf666c7d4433f45b8131c5"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Cli",
+      "commit": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  ],
+  "aggregate_source_bound_modules": 61,
+  "aggregate_standard_axiom_audits": 722,
+  "scope": "Exact symbolic coordinates define two noncongruent 63-site real sets with identical directed-difference multisets and distinct full count laws in the specified iid Gaussian-phase/Poisson model, for positive variance/gain and common nonnegative background. Coordinate-to-phase identities, reindexing and concrete moments are proved. External byte selection, decimal rounding, instrument response, graph/covariance and temporal/exposure models, root/testing formalization, physical validation and novelty remain separate. See formal/HOMOMETRY.md and the linked historical scopes."
+}

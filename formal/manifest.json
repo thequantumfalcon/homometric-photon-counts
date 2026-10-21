@@ -305,13 +305,44 @@
       "source": "PhotonCoordinateCountLaw.lean",
       "sha256": "c02f9c29187d4c563d59606abc41a154cdf17e5d372d1a38bed95f7f248965f3",
       "axiom_audit_count": 7
+    },
+    {
+      "name": "PhotonHomometry",
+      "source": "PhotonHomometry.lean",
+      "sha256": "e264fee37e174dc4143d606aafc90b164ea0a1284b5862f29a535bd944c1f8bc",
+      "axiom_audit_count": 4
+    },
+    {
+      "name": "PhotonCoordinateOrder",
+      "source": "PhotonCoordinateOrder.lean",
+      "sha256": "bb5ab2df8f5cd9b381e93d6e942b30726c7cb9951158a288eb174d078d7c254f",
+      "axiom_audit_count": 9
+    },
+    {
+      "name": "PhotonCoordinateHomometry",
+      "source": "PhotonCoordinateHomometry.lean",
+      "sha256": "d1fdd2efe727774ab011ec6e6e71ea9e792e3199e2e5d896188332350836591b",
+      "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonCoordinateNoncongruence",
+      "source": "PhotonCoordinateNoncongruence.lean",
+      "sha256": "2790055d8a6066b7e2d6e657a6ee93354bf779e928a368cde6bd2a768c7b0905",
+      "axiom_audit_count": 3
+    },
+    {
+      "name": "PhotonSpatialSeparation",
+      "source": "PhotonSpatialSeparation.lean",
+      "sha256": "028a97ca610a67e819cbf8f39facc1dd93be996e87eecdbe74364172b5702e7e",
+      "axiom_audit_count": 5
     }
   ],
   "fresh_kernel_module": "PhotonJointModel",
-  "scope": "Count-law distinction and joint snapshot interpretation for the explicit two 63-site iid Gaussian-phase/Poisson models, with positive variance/gain and common nonnegative background. The archived exact phase and symbolic coordinate arrays are parsed; coordinate exponentials and full count-law reindexing are proved. External byte selection, decimal rounding, complete homometry/graph formalization, temporal/exposure models, root/testing formalization, physical validation and novelty remain separate. See formal/COORDINATES.md and the linked historical scopes.",
+  "scope": "Exact symbolic coordinates define two noncongruent 63-site real sets with identical directed-difference multisets and distinct full count laws in the specified iid Gaussian-phase/Poisson model, for positive variance/gain and common nonnegative background. Coordinate-to-phase identities, reindexing and concrete moments are proved. External byte selection, decimal rounding, instrument response, graph/covariance and temporal/exposure models, root/testing formalization, physical validation and novelty remain separate. See formal/HOMOMETRY.md and the linked historical scopes.",
   "additional_fresh_kernel_modules": [
     "PhotonArchiveBridge",
     "PhotonCoordinateGeometry",
-    "PhotonCountReindex"
+    "PhotonCountReindex",
+    "PhotonHomometry"
   ]
 }
