@@ -27,13 +27,13 @@ The extended replay runs ten checks: exact endpoint constants, two sample-bound 
 
 Archived Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. Those receipts record historical fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative. Current extensions live under `formal/`, with execution coverage recorded separately in the validation directory.
 
-Compiled objects and the large toolchain are not distributed. The mathlib build must include `Mathlib.Probability.Distributions.Gaussian.Real` and its dependencies; the replay command does not fetch missing compiled imports. With the already built pinned Windows runtime and mathlib checkout, run:
+Compiled objects and the large toolchain are not distributed. The mathlib build must include `Mathlib.Probability.Distributions.Gaussian.Real`, `Mathlib.Probability.HasCondDistrib` and their dependencies; the replay command does not fetch missing compiled imports. With the already built pinned Windows runtime and mathlib checkout, run:
 
 ```sh
 python tools/replay_formal.py --runtime PATH_TO_LEAN_4_35_WINDOWS --mathlib PATH_TO_PINNED_MATHLIB --output build/formal-check
 ```
 
-This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 641 axiom audits before reporting success. It recompiles 44 modules: the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), the [concrete geometry extension](../formal/GEOMETRY.md), eight [Gaussian/intensity/recurrence/polynomial modules](../formal/GAUSSIAN.md), and 29 [concrete certificate and linking modules](../formal/CERTIFICATES.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check `PhotonConcreteSeparation` and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. See the [validation record](validation/README.md) for completed execution coverage. It is a pinned Windows replay, not a claim of cross-platform formal CI or formal coverage of every scientific result. The large concrete certificate blocks require substantial memory and several gigabytes of object storage. The retained concrete receipt stages previously successful compilations into an isolated directory and fresh-checks the full environment; this command performs a full source rebuild.
+This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 654 axiom audits before reporting success. It recompiles 45 modules: the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), the [concrete geometry extension](../formal/GEOMETRY.md), eight [Gaussian/intensity/recurrence/polynomial modules](../formal/GAUSSIAN.md), 29 [concrete certificate and linking modules](../formal/CERTIFICATES.md), and the [joint snapshot module](../formal/JOINT_MODEL.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check `PhotonJointModel` and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. See the [validation record](validation/README.md) for completed execution coverage. It is a pinned Windows replay, not a claim of cross-platform formal CI or formal coverage of every scientific result. The large concrete certificate blocks require substantial memory and several gigabytes of object storage. The retained concrete receipt stages previously successful compilations into an isolated directory and fresh-checks the full environment; this command performs a full source rebuild.
 
 ## Optional independent exported-proof check
 
@@ -57,6 +57,10 @@ Run `nanoda_bin PATH_TO_CONFIG.json` with this configuration, replacing the expo
 ```
 
 Retain the exit status, checker/export hashes and complete diagnostic log. This is a direct exported-proof check, not the sandboxed Lean comparator workflow. It does not independently establish the intended meaning of the theorem. Consult the [validation record](validation/README.md) for actual executed coverage.
+
+The joint-law check exports `PhotonJointModel` with the three names `PhotonJointModel.count_given_phases`, `PhotonJointModel.count_given_intensity`, and `PhotonJointModel.count_marginal` after `--`. This selects their dependency closures; it does not recheck the concrete coefficient theorem, which has its separate export above.
+
+The [model-error bound](model-tolerance.md) has a standard-library replay: `python tools/check_model_tolerance.py --output build/model-tolerance.json`. This exact rational check is also exercised by the unit suite.
 
 ## Validate the distributed artifact
 

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "checker": "Nanoda 0.4.19",
+  "targets": [
+    "PhotonJointModel.count_given_phases",
+    "PhotonJointModel.count_given_intensity",
+    "PhotonJointModel.count_marginal"
+  ],
+  "export_seconds": 31.01600000000326,
+  "check_seconds": 11.077999999994063,
+  "export_bytes": 301563624,
+  "export_sha256": "38369972251ad9aa134e7821ed231133a725f1ecb0a1e409df7b49e2559ee82f",
+  "checker_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+  "exporter_sha256": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+  "extension_manifest_sha256": "40043ad60d92dc84a3450e6a8be7902a736af72ab23ed2eeb33e17065bb835d9",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "log_sha256": "1349c9edec0a22bebf84fea519f36543560f7f2eebe4b2e6c4c186ac32d67913",
+  "scope": "Direct Nanoda check of the exported joint conditional laws and count marginal and its transitive dependencies; not the sandboxed comparator workflow, a check of all project declarations, experimental validation, or an independent review of the statement meaning.",
+  "declarations_checked": 48262,
+  "typechecker_errors": 0,
+  "pretty_printer_errors": [
+    "Unable to print axioms"
+  ]
+}

@@ -14,12 +14,12 @@
     {
       "name": "ruff-format",
       "returncode": 0,
-      "log_sha256": "f114d83b30c5c657ee43a847a45bafccaea255d82673feb87c26d252c61e29c1"
+      "log_sha256": "0321fffcb91606a42c0a19d8c1121d5c544379d663821fce616c71a7bb62f6b5"
     },
     {
       "name": "credit-policy-tests",
       "returncode": 0,
-      "log_sha256": "b0dd04239029a366af42e7a16c28cfbd2a9f7d5319e0614ad07a350ecb2ef585"
+      "log_sha256": "475058256eed37bf27b4a9dd424115119a8f53a51769b0b0f4f3d4a88260a301"
     },
     {
       "name": "actionlint",
@@ -44,7 +44,7 @@
     {
       "name": "staged-secret-scan",
       "returncode": 0,
-      "log_sha256": "d3c0ad99d7ae796ee34d9c06d8f0cc2c24ae0a9427109b20f9077e1c9d58c1b1"
+      "log_sha256": "f1cd185f74082af2c5b0144f92c69409f510500e3beb46223c47de488cd85ecf"
     },
     {
       "name": "public-integrity",
@@ -62,9 +62,11 @@
   "scope": "Local checks of maintained tooling, staged source and current documentation. Evidence is deliberately excluded from whitespace rewriting. No remote Actions result is claimed.",
   "maintained_source_sha256": {
     "tools/check_commit_credits.py": "4360fef2c9447ef5c37749539846a054225a5babb62352270a61d565bf514172",
+    "tools/check_model_tolerance.py": "f7d3ab284c029d2d3970edd8f63de9b1ed554883ddc520d4ed466c9afcf5cac6",
     "tools/project.py": "8321b3f3b92cd28e53d768fa6939803bcf2d821c1f450bbab16fac982dac0a4e",
     "tools/replay_formal.py": "4142fc9cdf1a49c3ead828d2738918c207cd0e11378cc94f30755333d8c1e808",
     "tests/test_archive_paths.py": "c16513238c4422cbbb770ffbbbfb29b1ebbbfb200f1dc5b22103a826c046b0b1",
-    "tests/test_commit_credits.py": "cc669bb09e317564fe6249526510490fa9a196226a29a995a58fda199a3b3183"
+    "tests/test_commit_credits.py": "cc669bb09e317564fe6249526510490fa9a196226a29a995a58fda199a3b3183",
+    "tests/test_model_tolerance.py": "cae7137cbdd30c3d80b4574d2cd5d690948f46aaf23ca38f9f0085d46aaec126"
   }
 }

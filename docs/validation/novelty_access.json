@@ -1,0 +1,100 @@
+{
+  "status": "METADATA_LINKS_RECOVERED_FULL_TEXT_UNRESOLVED",
+  "client_date": "2026-10-21",
+  "rea_version": "6.7.0",
+  "rea_cli_sha256": "ed06cee49505b95a3cc5fceb1b4b279167e26df86227c644bb366ffffdbaf738",
+  "records": [
+    {
+      "target": "ainsleigh",
+      "doi": "10.1137/16m1082019",
+      "metadata_url": "https://api.crossref.org/works/10.1137/16M1082019",
+      "metadata_capture_sha256": "83ebbfda52fbc53cb2783237553c1a04a11f035c1cead6f785535f464c1a8575",
+      "metadata_evidence_id": "ev_cdf474b2e5e8414074b620235c49fa52573eec7de003decc6d43245ab6121f3d",
+      "metadata_capture_complete": true,
+      "publisher_pdf_url": "https://epubs.siam.org/doi/pdf/10.1137/16M1082019",
+      "deposited_link_intended_application": "similarity-checking",
+      "publisher_response_status": 403,
+      "publisher_response_type": "text/html; charset=UTF-8",
+      "publisher_response_sha256": "107a41f7beb916c196f7c9a4e17695cbdf48a28bc074261f3da24a7351be5754",
+      "pdf_bytes_recovered": false,
+      "browser_cleanup": "terminated-owned-process"
+    },
+    {
+      "target": "barakat",
+      "doi": "10.1364/josa.73.001138",
+      "metadata_url": "https://api.crossref.org/works/10.1364/JOSA.73.001138",
+      "metadata_capture_sha256": "c223342ce7950bf36601a54f844a089100c7f1947f8f31459ed20bef6165e0b6",
+      "metadata_evidence_id": "ev_8e21f3c981e6dfa9f4e8e9ec2e0a9edf621a3d66944af36ed7c361228d4a30ed",
+      "metadata_capture_complete": true,
+      "publisher_pdf_url": "https://www.osapublishing.org/viewmedia.cfm?URI=josa-73-9-1138&seq=0",
+      "deposited_link_intended_application": "similarity-checking",
+      "publisher_response_status": 202,
+      "publisher_response_type": "text/html;charset=UTF-8",
+      "publisher_response_sha256": "cbbe5d3286992d6b9ac43ad299ec378ad7e4c690f773ab975ba66d5a9a98d0f9",
+      "pdf_bytes_recovered": false,
+      "browser_cleanup": "terminated-owned-process"
+    },
+    {
+      "target": "grunbaum_moore",
+      "doi": "10.1107/s0108767394009827",
+      "metadata_url": "https://api.crossref.org/works/10.1107/S0108767394009827",
+      "metadata_capture_sha256": "0ac74e744ebe9237c7e66c696292b7a0de665ee3669eddce940c756aee480c16",
+      "metadata_evidence_id": "ev_abcbdef17b7678c98038ba240d8ad46be4fa47f098995044cc5b4e50cfeb5d42",
+      "metadata_capture_complete": true,
+      "publisher_pdf_url": "http://journals.iucr.org/a/issues/1995/03/00/gr0371/gr0371.pdf",
+      "deposited_link_intended_application": "text-mining",
+      "publisher_response_status": 403,
+      "publisher_response_type": "text/html; charset=UTF-8",
+      "publisher_response_sha256": "7194728f558ddde0a499780fe5ddd5a17357c3056c8cb32addc689f2b71b6476",
+      "pdf_bytes_recovered": false,
+      "browser_cleanup": "terminated-owned-process"
+    }
+  ],
+  "barakat_normal_browser_followup": {
+    "capture_sha256": "bbf5569898a3119d2b913779e7023e4b99dc9602d29738c69dbd0cd1d38b7968",
+    "evidence_id": "ev_24d041ea63ecf40f4c3d15c309de6ce6bd007f4b664f0f04b89d06bc8b21a31b",
+    "finding": "Publisher redirect ended at a CAPTCHA page; no article recovered. No challenge was submitted.",
+    "capture_completeness": {
+      "status": "incomplete",
+      "equality_eligible": false,
+      "missing_sections": [
+        "events"
+      ],
+      "truncated_sections": []
+    },
+    "browser_cleanup": "terminated-owned-process"
+  },
+  "scope": "Local REA used temporary headless browser profiles to capture public DOI metadata, followed by ordinary fetches of publisher-deposited links and one REA publisher-navigation capture. Metadata links and license fields do not prove unrestricted full-text availability. Direct fetches returned HTML rather than PDF; no restricted text was recovered, no access control was bypassed, and no novelty claim is established. Raw captures remain local; this public summary omits network identifiers and challenge query values. Additional isolated-browser ORCID and ADS inspections are recorded separately; their DOM/network coverage limits remain explicit. No raw cookies, query identifiers, or page captures are published.",
+  "additional_public_route_inspections": [
+    {
+      "target": "ainsleigh_orcid",
+      "requested_url": "https://orcid.org/0000-0003-3453-1531",
+      "evidence_id": "ev_ddd384ee7bafc40bb21a36c42111e3420ff1e328cbc4b07c7784e913f66a79e9",
+      "capture_sha256": "5278352388653d44302ccf02e4c937d953efe5826aadbaf8c7faf4fdac49a6ca",
+      "cleanup": "terminated-owned-process",
+      "completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "finding": "Public record rendered; the captured works/links did not supply the 2017 article. No conclusion about other author copies. The DOM includes hidden application templates; only the works/link inventory was used."
+    },
+    {
+      "target": "barakat_ads",
+      "requested_url": "https://ui.adsabs.harvard.edu/abs/1983JOSA...73.1138B/abstract",
+      "evidence_id": "ev_309ad46f569cad775124b6c30749688834eddff60481dfae09b0c8b377fbea8f",
+      "capture_sha256": "193894ec4e3c7c24da3a611bdb0005c476dd02457ed9814ab5054d24136f9f79",
+      "cleanup": "terminated-owned-process",
+      "completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "finding": "Navigation reached human verification. No puzzle was submitted and no article was recovered."
+    }
+  ]
+}

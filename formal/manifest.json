@@ -233,8 +233,14 @@
       "source": "PhotonConcreteSeparation.lean",
       "sha256": "1c900776eb332b3fd83aa026246a07f3ca2ae9fad391f7d4ea1ef26dde56c64f",
       "axiom_audit_count": 10
+    },
+    {
+      "name": "PhotonJointModel",
+      "source": "PhotonJointModel.lean",
+      "sha256": "35033ce8fccb030f37cfb8ab2c5e8d78ed9153cc3c009833e8666b473aa2fd0b",
+      "axiom_audit_count": 13
     }
   ],
-  "fresh_kernel_module": "PhotonConcreteSeparation",
-  "scope": "Count-law distinction for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moment matching and the fourth-gap identity are proved by exact certificates, not assumed. Coordinate-file parsing, root/testing certificates, physical validation and novelty remain separate. See formal/CERTIFICATES.md."
+  "fresh_kernel_module": "PhotonJointModel",
+  "scope": "Count-law distinction for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moments are proved, not assumed. A joint snapshot law has the stated phase/count marginals and conditional Poisson law given intensity. Coordinate-file parsing, temporal/exposure models, root/testing certificates, physical validation and novelty remain separate. See formal/CERTIFICATES.md and formal/JOINT_MODEL.md."
 }
