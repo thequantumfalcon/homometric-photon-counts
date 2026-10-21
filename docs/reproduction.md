@@ -10,6 +10,15 @@ python tools/project.py test --output build/quick-check
 
 These checks require only the standard library. Outputs must be fresh and outside the evidence tree. `check` adds syntax, current local-link, and bounded privacy-marker checks. This is not a full secret scanner or a proof of scientific correctness.
 
+The [quantitative root-stability budget](root-stability.md) has a separate standard-library command:
+
+```sh
+python tools/check_root_stability.py --output build/root-stability.json
+python -m unittest discover -s tests
+```
+
+The tests reproduce its retained receipt and reject missing cover intervals, incorrect endpoint signs and oversized parameter rectangles. This checks arithmetic and certificate handling, not the analytic derivation itself.
+
 ## Arb reconstruction
 
 The retained setting uses python-flint 0.9.0 on Windows/Python 3.11. The hash-locked requirements file currently covers the verified Windows x86-64 wheel. In an isolated Windows environment:
