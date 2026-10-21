@@ -1,0 +1,120 @@
+CONTINUOUS PARAMETER-BOX ARGUMENT
+
+Use the geometry, phase model and fixed score from ../design-search/METHOD.txt.
+Let eta denote actual gain, b actual background, s the pre-quantization Gaussian
+command variance, and t=exp(-s/2). The score is always
+
+  Y(N)=(N)_2/63^2-(17/10)*N/63,
+
+and threshold is always h=-3200551/5000000. The normalization is NOT eta-dependent.
+
+1. Intensity polynomial family
+
+In the raw mixed-moment recurrence, a site's characteristic coefficient has
+factor t^((a-b)^2). Thus the kth intensity moment is a polynomial of degree at
+most 2*k^2 in t. For a monomial term, sum_j a_j=sum_j b_j=k, so
+sum_j(a_j-b_j)^2 <= sum_j a_j^2+sum_j b_j^2 <= 2*k^2.
+The mixed recurrence retains every site and every required term.
+
+For uniform L=256 phase quantization, multiply the principal coefficient by
+sinc((a-b)*pi/L). Add a complex coefficient enclosure for the omitted Fourier
+aliases, bounded as in the prior METHOD using the uniform lower variance
+s_min=1/25. All assessed boxes have s>=s_min. The tail bound decreases with s,
+so the bound at s_min applies throughout the domain.
+
+At any s in the domain, every exact characteristic moment is represented by a
+choice inside these coefficient enclosures. After the finite recurrence the
+diagonal's real parts therefore give a ball-coefficient polynomial family
+containing the actual intensity moment at that s. Alias coefficients may depend
+on s: a single polynomial is NOT claimed to represent the full quantized moment
+function for all s. Uniform enclosure at each point is all interval evaluation
+requires. This distinction also applies when combining the moment families.
+
+Write M_k(t)=E[(I/63)^k] for the enclosed family, k=0,...,5. For conditional
+Poisson primaries with rate lambda=eta*I+b,
+
+  R_k=E[lambda^k]
+     =sum_{j=0}^k binom(k,j)*eta^j*b^(k-j)*63^j*M_j(t).
+
+These are polynomial families in eta,b,t. From the count factorial identities,
+
+  mu=R_2/63^2-beta*R_1/63,
+  Q=R_4/63^4+(4/63^4-2*beta/63^3)*R_3
+       +(2/63^4-4*beta/63^3+beta^2/63^2)*R_2+beta^2*R_1/63^2,
+  V=Q-mu^2,  beta=17/10.
+
+The polynomial operations enclose these expressions before parameter intervals
+are substituted. In particular, gain effects do not renormalize the score and
+the variance is not bounded by separately subtracting unrelated wide mean and
+second-moment intervals.
+
+2. Translation and enclosure
+
+Expand each polynomial at eta0=1, b0=1/8, t0=exp(-1/40), using binomial expansion.
+For a univariate polynomial sum_j a_j*t^j, the coefficient of (t-t0)^k is
+sum_{j>=k} a_j*binom(j,k)*t0^(j-k). Apply the same finite translation in eta and b.
+All coefficients, including t0, are evaluated with outward Arb enclosures.
+
+For each box, enclose t=exp(-s/2), then evaluate the translated polynomials on
+the intervals for eta-eta0, b-b0 and t-t0. Ordinary interval multiplication and
+addition enclose every simultaneous parameter choice. Correlations among these
+enclosures may make the result conservative, but cannot invalidate coverage.
+Integer powers of centered intervals are calculated by repeated multiplication;
+generic real powers are not used for intervals crossing zero.
+
+3. Uniform dead-time correction
+
+The earlier pathwise and Poisson inserted-pair argument supplies nonnegative
+bounds epsilon1 on |E[Y']-E[Y]| and epsilon2 on |E[(Y')^2]-E[Y^2]| for accepted
+counts under initially-live nonparalyzable dead time. Its pair factor is
+d-d^2/2, monotone for 0<=d<=1. Substituting d_max=22/5000000 therefore covers
+every dead time between zero and 22 ns for a 5 ms gate.
+
+The required pair-weighted raw count moments, omitting this geometric factor,
+are R_2, R_3+2R_2, R_4+5R_3+4R_2, and
+R_5+9R_4+19R_3+8R_2. Insert these into the earlier score-change bounds, then
+translate/evaluate these polynomials over the same parameter box.
+
+If the unthinned score mean is mu and the thinned mean is mu+delta, then
+
+  Var(Y') <= Var(Y)+epsilon2-2*mu*delta-delta^2
+           <= Var(Y)+epsilon2+2*|mu|*epsilon1.
+
+Use the box-wide upper variance bound, upper epsilon1/epsilon2 and upper |mu|
+to obtain a uniform upper bound Vmax. Widen the mean interval by epsilon1.
+This avoids counting parameter uncertainty as random extra observations and
+does not assume that the unknown parameter values are re-estimated per sample.
+
+4. Fixed-threshold risk and sample budget
+
+For A let d_A=h-upper(mean_A); for B let d_B=lower(mean_B)-h. When d_G>0,
+Cantelli's inequality for m iid snapshots gives
+
+  P_G(error) <= Vmax_G/(Vmax_G+m*d_G^2).
+
+All endpoints are exported as outward rational bounds; final risk fractions
+are exact. Both errors are strictly below 1/20 whenever
+
+  m > max_G 19*Vmax_G/d_G^2.
+
+The recorded sufficient integer is floor(max_G 19*Vmax_G/d_G^2)+1.
+For the 2% gain/variance box and b in [0.10,0.15] this gives 4,502. Keeping
+5,000 snapshots yields the reported worst error below 4.53%. For the 4% box
+and b in [0.075,0.175], it gives 10,769; 11,000 is a convenient rounded budget.
+If a distance is nonpositive, the method supplies no such sufficient count.
+This is failure to certify that box with these enclosures, not a lower bound
+on the optimal sample count or proof that its distributions are indistinguishable.
+
+5. Interpretation and trust
+
+The guarantee is simultaneous over the entire box for any fixed unknown
+parameters within it. It assumes the specified Gaussian command law, site and
+snapshot independence, equal field amplitudes, exact encoded spatial frequency,
+ideal uniform phase quantizer and the stated detector model. It does not prove
+those assumptions from calibration data. Time-varying/dependent parameters,
+afterpulsing and optical transfer errors require further arguments.
+
+Arb arithmetic, source execution and input identity remain trusted computational
+components. Point and corner tests support implementation review but do not
+replace the continuum enclosure proof. This new argument is not Lean-formalized,
+externally peer reviewed or physically validated.

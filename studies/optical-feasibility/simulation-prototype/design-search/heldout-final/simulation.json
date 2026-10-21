@@ -1,0 +1,88 @@
+{
+  "status": "PASS_SIMULATION_DIAGNOSTICS",
+  "results": [
+    {
+      "structure": "A",
+      "scenario": "ideal",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6546506602670694,
+      "predicted_score_mean": -0.6547286267993171,
+      "mean_diagnostic_z": 0.7344328752772487
+    },
+    {
+      "structure": "A",
+      "scenario": "known_dark_counts",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6551105947845807,
+      "predicted_score_mean": -0.6551007511567308,
+      "mean_diagnostic_z": -0.09290995123446513
+    },
+    {
+      "structure": "A",
+      "scenario": "known_dark_and_first_generation_afterpulse",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6550525372637945,
+      "predicted_score_mean": -0.6550794191791248,
+      "mean_diagnostic_z": 0.25124352825303636
+    },
+    {
+      "structure": "A",
+      "scenario": "uniform_256_phase_levels_and_dark",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6550117029226504,
+      "predicted_score_mean": -0.6550447558055155,
+      "mean_diagnostic_z": 0.3121199045288071
+    },
+    {
+      "structure": "B",
+      "scenario": "ideal",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6251989121693123,
+      "predicted_score_mean": -0.6248857321291263,
+      "mean_diagnostic_z": -2.1174777771205093
+    },
+    {
+      "structure": "B",
+      "scenario": "known_dark_counts",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6255288478206095,
+      "predicted_score_mean": -0.6252578564865401,
+      "mean_diagnostic_z": -1.8259601644619265
+    },
+    {
+      "structure": "B",
+      "scenario": "known_dark_and_first_generation_afterpulse",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6251058447971782,
+      "predicted_score_mean": -0.6249373494898653,
+      "mean_diagnostic_z": -1.1205785680809774
+    },
+    {
+      "structure": "B",
+      "scenario": "uniform_256_phase_levels_and_dark",
+      "independent_trials": 200,
+      "snapshots_per_trial": 5000,
+      "misclassified_trials": 0,
+      "empirical_score_mean": -0.6253471013605443,
+      "predicted_score_mean": -0.6251756407266053,
+      "mean_diagnostic_z": -1.1539647123703618
+    }
+  ],
+  "source_sha256": "996f97d0bb457439918c7dd3c52d0c3d7810eab9b30d6f2c12e5849078cb7871",
+  "certificate_sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0",
+  "scope": "Synthetic held-out diagnostic of four simplified count laws, with independent A/B streams. Scenarios share phase samples within a structure. No physical observations; zero observed failures would not prove zero risk. Dead-time bound is not simulated here."
+}

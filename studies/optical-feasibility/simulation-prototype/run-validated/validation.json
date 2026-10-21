@@ -1,0 +1,33 @@
+{
+  "status": "PASS_DIAGNOSTICS_ONLY",
+  "samples_per_geometry": 100000,
+  "diagnostics": {
+    "A": {
+      "max_abs_bin_z": 1.9794023326781907,
+      "mean_z": {
+        "intensity": -0.04203922779945857,
+        "ideal_counts": -0.2813209003019262
+      },
+      "paired_mean_lost_counts": {
+        "n": 100000,
+        "mean": 0.10479000000000022,
+        "estimated_standard_error": 0.0012828511277892577
+      },
+      "fraction_of_ideal_counts_lost": 0.04440273052004493
+    },
+    "B": {
+      "max_abs_bin_z": 1.9787554171231314,
+      "mean_z": {
+        "intensity": 0.5950499433312674,
+        "ideal_counts": 0.6503560449107493
+      },
+      "paired_mean_lost_counts": {
+        "n": 100000,
+        "mean": 0.10473999999999768,
+        "estimated_standard_error": 0.0012707916717994117
+      },
+      "fraction_of_ideal_counts_lost": 0.04422581598614878
+    }
+  },
+  "scope": "Fixed-seed software consistency diagnostics with conservative six-standard-error thresholds; no calibrated hypothesis test, formal theorem or experimental validation."
+}

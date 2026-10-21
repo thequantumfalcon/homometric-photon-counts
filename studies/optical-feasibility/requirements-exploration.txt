@@ -1,0 +1,5 @@
+# Optional plotting, exploratory search and simulation tests only.
+# Versions used in the retained local execution; not a hash-locked environment.
+numpy==2.2.6
+scipy==1.16.3
+matplotlib==3.10.8

@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "exact_risk_fractions_recomputed": 12,
+  "prior_artifacts_preserved": 13,
+  "source_result_bindings_checked": 3,
+  "simulation_certificate_binding_checked": true,
+  "unit_tests_passed": 12,
+  "lint_passed": true,
+  "format_passed": true,
+  "final_figure_visually_inspected": true,
+  "risk_checks": [
+    {
+      "scenario": "ideal",
+      "structure": "A",
+      "risk_upper": 0.010030833497920518
+    },
+    {
+      "scenario": "ideal",
+      "structure": "B",
+      "risk_upper": 0.01951103280846552
+    },
+    {
+      "scenario": "known_dark_counts",
+      "structure": "A",
+      "risk_upper": 0.01002692358921315
+    },
+    {
+      "scenario": "known_dark_counts",
+      "structure": "B",
+      "risk_upper": 0.01953568651435035
+    },
+    {
+      "scenario": "known_dark_and_first_generation_afterpulse",
+      "structure": "A",
+      "risk_upper": 0.0100224119534632
+    },
+    {
+      "scenario": "known_dark_and_first_generation_afterpulse",
+      "structure": "B",
+      "risk_upper": 0.019596122571770243
+    },
+    {
+      "scenario": "known_dark_and_dead_time",
+      "structure": "A",
+      "risk_upper": 0.015027102475913271
+    },
+    {
+      "scenario": "known_dark_and_dead_time",
+      "structure": "B",
+      "risk_upper": 0.026298183633054077
+    },
+    {
+      "scenario": "uniform_256_phase_levels_and_dark",
+      "structure": "A",
+      "risk_upper": 0.01002630351492321
+    },
+    {
+      "scenario": "uniform_256_phase_levels_and_dark",
+      "structure": "B",
+      "risk_upper": 0.019536433818521985
+    },
+    {
+      "scenario": "uniform_256_phase_levels_dark_and_dead_time",
+      "structure": "A",
+      "risk_upper": 0.015020228683642082
+    },
+    {
+      "scenario": "uniform_256_phase_levels_dark_and_dead_time",
+      "structure": "B",
+      "risk_upper": 0.02629180425661434
+    }
+  ]
+}

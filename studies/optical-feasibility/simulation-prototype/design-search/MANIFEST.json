@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-21",
+  "status": "CONDITIONAL_NEW_DESIGN_CANDIDATE",
+  "sha256": {
+    "search.py": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45",
+    "certify.py": "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40",
+    "simulate_candidate.py": "996f97d0bb457439918c7dd3c52d0c3d7810eab9b30d6f2c12e5849078cb7871",
+    "test_design.py": "f291ed48946eff3b3aa5bc68a23abc83b17acb80b41d18ef6c60996dca0c86dc",
+    "plot_results.py": "787d727a851dea839671775416422c7708aaef3fec3c8584b827b86057e3701c",
+    "README.txt": "e208db9505ec3d14f731e1e5269adc69894b7f35267c0186d402e1fedd42dc68",
+    "METHOD.txt": "c9b302ea7bec7e11e6189dedf299c821f86562c98c626c382ca46a8c0c4731ea",
+    "scan-01/search.json": "938f193db2bf6814e59e80d61850e147ab085b4954c8b0dc680eaa638e658229",
+    "interval-final/certificate.json": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0",
+    "heldout-final/simulation.json": "fca2ff4044541591e848a84b36990fd434d1d92234bb9d266f4d23e11902ccab",
+    "figures-final/candidate.png": "8077f66e944125f66ece187afdd7fe061176f01865b34ef4f814f3de4f1fb22d",
+    "figures-final/candidate.pdf": "09b821e26bb5bc57b99e5e7a556e8fb65462582f523235943c29b6a666701891",
+    "validation.json": "114148196e6db414c3ea6bf6eafe98177a38ad8529597508b3d5f1eda7940e43"
+  },
+  "input_model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "public_repository_changed": false,
+  "checks": {
+    "status": "PASS",
+    "exact_risk_fractions_recomputed": 12,
+    "prior_artifacts_preserved": 13,
+    "source_result_bindings_checked": 3,
+    "simulation_certificate_binding_checked": true,
+    "unit_tests_passed": 12,
+    "lint_passed": true,
+    "format_passed": true,
+    "final_figure_visually_inspected": true,
+    "risk_checks": [
+      {
+        "scenario": "ideal",
+        "structure": "A",
+        "risk_upper": 0.010030833497920518
+      },
+      {
+        "scenario": "ideal",
+        "structure": "B",
+        "risk_upper": 0.01951103280846552
+      },
+      {
+        "scenario": "known_dark_counts",
+        "structure": "A",
+        "risk_upper": 0.01002692358921315
+      },
+      {
+        "scenario": "known_dark_counts",
+        "structure": "B",
+        "risk_upper": 0.01953568651435035
+      },
+      {
+        "scenario": "known_dark_and_first_generation_afterpulse",
+        "structure": "A",
+        "risk_upper": 0.0100224119534632
+      },
+      {
+        "scenario": "known_dark_and_first_generation_afterpulse",
+        "structure": "B",
+        "risk_upper": 0.019596122571770243
+      },
+      {
+        "scenario": "known_dark_and_dead_time",
+        "structure": "A",
+        "risk_upper": 0.015027102475913271
+      },
+      {
+        "scenario": "known_dark_and_dead_time",
+        "structure": "B",
+        "risk_upper": 0.026298183633054077
+      },
+      {
+        "scenario": "uniform_256_phase_levels_and_dark",
+        "structure": "A",
+        "risk_upper": 0.01002630351492321
+      },
+      {
+        "scenario": "uniform_256_phase_levels_and_dark",
+        "structure": "B",
+        "risk_upper": 0.019536433818521985
+      },
+      {
+        "scenario": "uniform_256_phase_levels_dark_and_dead_time",
+        "structure": "A",
+        "risk_upper": 0.015020228683642082
+      },
+      {
+        "scenario": "uniform_256_phase_levels_dark_and_dead_time",
+        "structure": "B",
+        "risk_upper": 0.02629180425661434
+      }
+    ]
+  },
+  "parameters": {
+    "q_over_pi": "201/200",
+    "site_phase_variance": "1/20",
+    "gain": "1",
+    "sites": 63,
+    "snapshots": 5000,
+    "score": "N*(N-1)/3969 - (17/10)*N/63",
+    "planning_hz": 10,
+    "acquisition_seconds_at_planning_rate": 500.0
+  },
+  "scope": "New frequency and unbinned second-factorial score, iid snapshots, known parameters and scenario-specific threshold. Arb plus analytic recurrence/Cantelli argument; not a Lean theorem or hardware validation. Afterpulse and dead-time scenarios are separate, not a joint detector model.",
+  "handoff": "Bounded design search complete. Changed frequency, variance, gain and unbinned second-order score; 5000 iid snapshots with per-hypothesis error upper bounds below 2.63% in the stated separate models. Next gate: optical transfer and calibration review. This does not demonstrate the original fourth-order-only effect; no physical validation or novelty claim."
+}

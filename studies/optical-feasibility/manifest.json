@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "baseline_commit": "077430d24eb07f940fa175243ae511f8228ceb5a",
+  "transformation": "None. Selected local study files copied byte-for-byte.",
+  "historical_scope": "Local-only status fields describe the original executions before publication.",
+  "files": [
+    {
+      "path": "simulation-prototype/README.txt",
+      "size": 7465,
+      "sha256": "8aafb90ab8867c77ccfb74e0ae5d39783bcf551f494d9d60caeda66df51df784"
+    },
+    {
+      "path": "simulation-prototype/RUN_MANIFEST.json",
+      "size": 1011,
+      "sha256": "f82e6b2826b32f55a157d4e7cc04e8367acb69a18c84498d5d81450b64addce9"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/MANIFEST.json",
+      "size": 4252,
+      "sha256": "cf51c51f2fe699c24a4938e54c3ad9df78472d66f630394722a7210e597fbc8e"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/METHOD.txt",
+      "size": 5956,
+      "sha256": "845c268bb2ed31d87c48869f7762a8688711b89f9ef861ac33c1b1eb36cc8c53"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/README.txt",
+      "size": 6909,
+      "sha256": "2200872e52aff2e98f52364fba722819ae2dc870937d42ba1d42b3fb20a81c9f"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/calibrate.py",
+      "size": 13065,
+      "sha256": "2f1d17f08a00a88814fa27af0201cb80ea31f4331662b968177a081771bdaa0d"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/run-checked/calibration.json",
+      "size": 25511,
+      "sha256": "cf262b1c7b31c476fc2e81f740e3d206355087038ed8d26b18f6aac3b6a9c8b3"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/test_calibration.py",
+      "size": 5861,
+      "sha256": "955b2775714c9c3d89fba2e03633952ec6f694e3a7605a667e0dc493fedd90e7"
+    },
+    {
+      "path": "simulation-prototype/calibration-study/validation.json",
+      "size": 2238,
+      "sha256": "124abdb6b02b65fd6343d4d7df5eec187770ce6bc2867412cf80ff6a622787c4"
+    },
+    {
+      "path": "simulation-prototype/design-search/MANIFEST.json",
+      "size": 4493,
+      "sha256": "96330f7ec35d82ad2d1debaa1d9cb323ad68ea86eea2fe4b737c8a65e9563b83"
+    },
+    {
+      "path": "simulation-prototype/design-search/METHOD.txt",
+      "size": 7123,
+      "sha256": "c9b302ea7bec7e11e6189dedf299c821f86562c98c626c382ca46a8c0c4731ea"
+    },
+    {
+      "path": "simulation-prototype/design-search/README.txt",
+      "size": 8350,
+      "sha256": "e208db9505ec3d14f731e1e5269adc69894b7f35267c0186d402e1fedd42dc68"
+    },
+    {
+      "path": "simulation-prototype/design-search/certify.py",
+      "size": 13530,
+      "sha256": "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40"
+    },
+    {
+      "path": "simulation-prototype/design-search/figures-final/candidate.pdf",
+      "size": 18918,
+      "sha256": "09b821e26bb5bc57b99e5e7a556e8fb65462582f523235943c29b6a666701891"
+    },
+    {
+      "path": "simulation-prototype/design-search/figures-final/candidate.png",
+      "size": 100820,
+      "sha256": "8077f66e944125f66ece187afdd7fe061176f01865b34ef4f814f3de4f1fb22d"
+    },
+    {
+      "path": "simulation-prototype/design-search/heldout-final/simulation.json",
+      "size": 3267,
+      "sha256": "fca2ff4044541591e848a84b36990fd434d1d92234bb9d266f4d23e11902ccab"
+    },
+    {
+      "path": "simulation-prototype/design-search/interval-final/certificate.json",
+      "size": 38839,
+      "sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0"
+    },
+    {
+      "path": "simulation-prototype/design-search/plot_results.py",
+      "size": 2231,
+      "sha256": "787d727a851dea839671775416422c7708aaef3fec3c8584b827b86057e3701c"
+    },
+    {
+      "path": "simulation-prototype/design-search/scan-01/search.json",
+      "size": 36687,
+      "sha256": "938f193db2bf6814e59e80d61850e147ab085b4954c8b0dc680eaa638e658229"
+    },
+    {
+      "path": "simulation-prototype/design-search/search.py",
+      "size": 8071,
+      "sha256": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45"
+    },
+    {
+      "path": "simulation-prototype/design-search/simulate_candidate.py",
+      "size": 4597,
+      "sha256": "996f97d0bb457439918c7dd3c52d0c3d7810eab9b30d6f2c12e5849078cb7871"
+    },
+    {
+      "path": "simulation-prototype/design-search/test_design.py",
+      "size": 6421,
+      "sha256": "f291ed48946eff3b3aa5bc68a23abc83b17acb80b41d18ef6c60996dca0c86dc"
+    },
+    {
+      "path": "simulation-prototype/design-search/validation.json",
+      "size": 1923,
+      "sha256": "114148196e6db414c3ea6bf6eafe98177a38ad8529597508b3d5f1eda7940e43"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/MANIFEST.json",
+      "size": 2724,
+      "sha256": "c76a9660d43b25c6b8787ef0a56eeed1853155eb42124e3bef7b21afd8e0f389"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/README.txt",
+      "size": 10571,
+      "sha256": "110c0bbdf8bf2ddfe4eade33e33994a165f92811388200ad2a85a6d86805a2c3"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/run-checked/feasibility.pdf",
+      "size": 20208,
+      "sha256": "a5e9bc97c432e5a84aa05d8f69ea233f23f2d04d8f921983c8187a6cda118b51"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/run-checked/feasibility.png",
+      "size": 132027,
+      "sha256": "e838e40e82e0058a374636eb872a30c1fb1bac40d960324fa15bf53004b7f031"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/run-checked/results.json",
+      "size": 22182,
+      "sha256": "855430d22378efbca4197f1ecb332341d700ff5ac93fe26f4bfaadb4aca93d04"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/study.py",
+      "size": 17395,
+      "sha256": "6a01a6d27926ccaf39f55445dbe0290e47f61f18ca56dde8ab4f7190508ea23e"
+    },
+    {
+      "path": "simulation-prototype/feasibility-study/test_study.py",
+      "size": 3280,
+      "sha256": "c20a78cebccf33a3a2cbbc2380b2d45694bccaa0819e175929824402949b207f"
+    },
+    {
+      "path": "simulation-prototype/run-validated/report.json",
+      "size": 17196,
+      "sha256": "e1cbb596e7f1d3b077ebf501221e382edb08e3b5c108380565479d58134b7e8a"
+    },
+    {
+      "path": "simulation-prototype/run-validated/report.txt",
+      "size": 3976,
+      "sha256": "5b4925ae4bfe7c4ddeb607921cdde7b98e0c5c40ee7a2b548b6424d9137c1541"
+    },
+    {
+      "path": "simulation-prototype/run-validated/validation.json",
+      "size": 1096,
+      "sha256": "ec64199df6e4b9f69c1b5c9a50f48f29469873793cfa75b4ed70681056d8e1c5"
+    },
+    {
+      "path": "simulation-prototype/simulate.py",
+      "size": 15478,
+      "sha256": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92"
+    },
+    {
+      "path": "simulation-prototype/test_simulation.py",
+      "size": 4071,
+      "sha256": "41da66892dc8dba5fc05fba35bbae23d876a384f9ca14bb8602d606c2de443b0"
+    },
+    {
+      "path": "simulation-prototype/validate_run.py",
+      "size": 2075,
+      "sha256": "bf56e916886df8f93b3d7079dc58b96e5747b5e6a80bd65711e6f7396e10ac60"
+    }
+  ]
+}

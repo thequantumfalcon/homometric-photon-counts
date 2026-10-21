@@ -1,5 +1,7 @@
 # Public evidence provenance
 
+The [optical feasibility extension](../studies/optical-feasibility/README.md) is a separate addition after the spatial-homometry checkpoint. Its [manifest](../studies/optical-feasibility/manifest.json) pins 36 original local study files copied without byte changes. The portable runner stages those files and three retained inputs in a fresh workspace, preserving their original source/hash bindings. Historical local-only status fields describe the original execution. No file in the earlier evidence or formal trees is replaced by this addition.
+
 The public capsule is a documented derivative of five retained local research layers. Original sealed local evidence remains separate. The public inventory records both the original and distributed SHA256 for every included scientific file.
 
 Two mechanical transformations were applied: machine-specific workspace/home prefixes became `LOCAL_WORKSPACE` or `LOCAL_USER_HOME`, and dependent file-hash references were rebound transitively. The continuation input manifest was projected onto the selected public files with their current sizes and hashes. This prevents a public input checker from depending on a private path or an omitted inventory member.

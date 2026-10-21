@@ -46,6 +46,12 @@ The current formal sources contain **61 modules and 722 theorem-axiom audits**. 
 
 The [Gaussian formalization](formal/GAUSSIAN.md) derives the general expectation formula and proves a site-by-site moment recurrence for any finite complex geometry. [Checked exact certificates](formal/CERTIFICATES.md) evaluate that recurrence for this particular pair. The separating conclusion is specific to these two structures. The [joint snapshot model](formal/JOINT_MODEL.md) now proves the stated conditional Poisson law on one probability space. A separate [model-error bound](docs/model-tolerance.md) quantifies a conservative tolerance for the fixed-bin test; it does not demonstrate physical feasibility.
 
+## Bounded optical feasibility study
+
+A separate [optical feasibility extension](studies/optical-feasibility/README.md) preserves the original results and explores a different measurement frequency with unbinned counts. Under its explicit iid Gaussian, ideal phase-quantization and detector assumptions, a fixed score and threshold have each error below **4.53% at 5,000 independent snapshots**, uniformly over specified simultaneous gain, background and phase-variance uncertainty. A wider box needs 11,000 snapshots for each error below 4.90%. Arb certificates, exact risk checks, simulation and reproducible sources are included.
+
+This candidate uses a **second-order signal at a different frequency**. It does not demonstrate the original fourth-order-only effect or contradict the original binned sample bound. Acquisition rates, optical transfer, real phase levels and detector behavior remain unvalidated. The study is conditional feasibility evidence, not a physical experiment or acquisition recommendation.
+
 ## Research provenance
 
 Substantial parts of the arguments, code, checks, and documentation were developed with AI assistance under human direction. The maintainer did not independently derive or manually verify every step. Internal alternative implementations provide useful evidence but are not external human review. Read the [methods and limitations disclosure](docs/research-disclosure.md).

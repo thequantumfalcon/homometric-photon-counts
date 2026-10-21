@@ -2,6 +2,8 @@
 
 Status is attached to a statement and its assumptions, not to an entire repository.
 
+The separate [optical feasibility extension](../studies/optical-feasibility/README.md) adds conditional computational results without changing the original claims below. At a changed spatial frequency, unbinned counts expose a second-order signal. One fixed score and threshold have each error below 4.53% with 5,000 iid snapshots uniformly over the specified ±2% gain/phase-variance and background box; 11,000 snapshots cover the wider ±4% box below 4.90%. Ideal 256-level phase quantization and initially-live dead time up to 22 ns per 5 ms gate are included. Unknown parameters must remain fixed inside the box. Afterpulsing, real optical transfer and temporal dependence are excluded. The [derivation](../studies/optical-feasibility/simulation-prototype/calibration-study/METHOD.txt) and [certificate](../studies/optical-feasibility/simulation-prototype/calibration-study/run-checked/calibration.json) are not Lean proofs, physical validation or novelty evidence. The original reference experiment still fails the specified 288,000-snapshot budget.
+
 | Claim | Evidence | Limits |
 | --- | --- | --- |
 | Reference four-root count | [Analytic argument](../evidence/scientist-review-2026-10-20/global/compact_gain_proof.txt), [certificate](../evidence/scientist-review-2026-10-20/global/compact_gain_certificate.json), [exact brackets](../evidence/scientist-review-2026-10-20/global/certified_roots.json), [separate implementation](../evidence/scientist-review-2026-10-20/review/independent_compact_gain.py) | $t=1/2,b=0$; interval/Fourier proof, not a Lean theorem |

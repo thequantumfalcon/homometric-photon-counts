@@ -1,0 +1,155 @@
+CONDITIONAL MATHEMATICAL CERTIFICATE FOR THE CHANGED-FREQUENCY DESIGN
+
+1. Model and evidence boundary
+
+Use the two exact coordinate lists from the retained input_model.json, identified
+by SHA256 4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288.
+Coordinates are reconstructed from integer/offset metadata. The two offsets are
+3*asin(1/(5*sqrt(3)))/pi and -3*asin(1/(8*sqrt(3)))/pi. Decimal coordinate strings
+are not used as exact data. Let q=201*pi/200, s=1/20, n=63 and
+
+  S = sum_j exp(i*(q*x_j + Z_j)),  I=|S|^2,  J=I/63,
+
+where all Z_j are independent N(0,s). Independent snapshots repeat the entire
+random phase draw. Conditional primary counts obey N|I ~ Poisson(I+b).
+The gain is fixed at one. Each certificate is conditional on its exact stated
+law; measurements have not established that an apparatus follows this law.
+
+2. Mixed-moment calculation
+
+For V_j=exp(i*(q*x_j+Z_j))/sqrt(n), the Gaussian characteristic function gives
+
+  E[V_j^a conjugate(V_j)^b]
+   = n^(-(a+b)/2)*exp(i*(a-b)*q*x_j)*exp(-s*(a-b)^2/2).
+
+If M_j(p,r)=E[(sum_{k<=j}V_k)^p*(sum_{k<=j}conjugate(V_k))^r], independence and
+two applications of the binomial theorem give
+
+  M_j(p,r)=sum_{a=0}^p sum_{b=0}^r
+     binom(p,a)*binom(r,b)*M_{j-1}(p-a,r-b)*E[V_j^a conjugate(V_j)^b].
+
+Initialize M_0(0,0)=1 and all other entries zero. The diagonal M_63(k,k)
+is E[J^k]. certify.py evaluates this recurrence for all 63 sites with Arb/acb
+enclosures through order five. The exploratory NumPy code instead multiplies
+truncated exponential generating functions. Exhaustive two-site expansion and
+the retained fourth-gap formula supply separate test oracles.
+
+3. Count moments and the fixed score
+
+For lambda=I+b, expand E[lambda^k] from E[J^j] by the binomial theorem.
+For Poisson primaries E[(N)_k]=E[lambda^k]. The elementary identities
+
+  (N)_2^2 = (N)_4+4*(N)_3+2*(N)_2,
+  N*(N)_2 = (N)_3+2*(N)_2,  N^2=(N)_2+N
+
+provide E[Y] and E[Y^2] for Y=(N)_2/63^2-(17/10)*N/63. Variance is
+E[Y^2]-E[Y]^2. For the separate first-generation afterpulse model, the
+conditional factorial generating function is
+
+  E[(1+u)^N | lambda] = exp(lambda*((1+p)*u+p*u^2)),
+
+so its kth factorial moment is
+
+  k! * sum_{j=0}^{floor(k/2)}
+     (1+p)^(k-2j)*p^j*E[lambda^(k-j)] / ((k-2j)!*j!).
+
+This model adds at most one child per primary and has no delay or cascading.
+
+4. Finite-sample guarantee
+
+For m iid scores with variance at most V, the variance of their average is
+at most V/m. Cantelli's one-sided inequality gives, for a positive distance d
+between the hypothesis mean and decision threshold,
+
+  P(classification error) <= V/(V+m*d^2).
+
+For completeness, for any centered variable X with variance v and a>0,
+Markov applied to (X+v/a)^2 on {X>=a} yields
+P(X>=a) <= (v+(v/a)^2)/(a+v/a)^2 = v/(v+a^2).
+Apply this to X or -X as required. The score has finite variance since I is
+bounded and Poisson mixtures with bounded rate have all moments.
+
+The code encloses each hypothesis mean, obtains an upper variance bound, fixes
+a rational threshold, and takes the smallest distance allowed by the mean
+enclosure. The final fraction is evaluated with exact Fraction arithmetic,
+using outward rational endpoints exported by Arb. Every reported risk is
+strictly below 1/20 at m=5000. The threshold is fixed without inspecting the
+held-out simulation. There is no multiple-testing penalty from choosing a
+design using deterministic moment calculations and then proving its risk bound.
+
+5. Uniform phase quantization
+
+Let Q_L(x) round a phase to the nearest multiple of 2*pi/L, modulo 2*pi.
+For an integer d, the periodic function exp(i*d*Q_L(x)) has Fourier modes
+n=d+k*L, with coefficients sinc(n*pi/L). Gaussian convolution therefore gives
+
+  E[exp(i*d*Q_L(theta+Z))]
+   = sum_{k in Z} sinc((d+k*L)*pi/L)
+       *exp(i*(d+k*L)*theta-s*(d+k*L)^2/2).
+
+The Gaussian factor ensures absolute convergence for s>0. For 0<|d|<L,
+write a=L-|d|. Since |sinc|<=1, the absolute sum of all k!=0 terms is at most
+
+  T = 2*exp(-s*a^2/2)/(1-exp(-s*a*L)).
+
+Indeed, for |k|=j>=1, |d+kL|>=a+(j-1)L, whose square is at least
+a^2+2*a*L*(j-1); the remaining bound is a geometric series. Add [-T,T]
+to both real and imaginary parts of the retained k=0 term. For d=0 the value
+is exactly one. Substitute these enclosures for the single-site characteristic
+moments in section 2. Here L=256, s=1/20 and |d|<=5; the omitted tail is far
+below the 256-bit arithmetic precision, but it is explicitly included.
+
+The bound covers nearest uniform optical phase levels, not an arbitrary
+8-bit electro-optical transfer curve. Independent wrapped-normal cell
+integration tests the implementation, including a case with visible aliases.
+
+6. Conservative dead-time correction
+
+Scale each 5 ms gate to [0,1]. The 22 ns dead time is d=22/5000000.
+Let N count primary arrivals and N' count accepted arrivals for an initially-live
+nonparalyzable detector. Let C count unordered primary pairs separated by less
+than d. Each rejected event has an earlier accepted event within d, so
+
+  0 <= N-N' <= C.
+
+For any nonnegative function f and a homogeneous conditional Poisson process,
+integration over an inserted pair of events gives
+
+  E[f(N)*C | lambda]
+    = lambda^2*(d-d^2/2)*E[f(K+2)],  K~Poisson(lambda).
+
+The geometric factor is the measure of 0<u<v<1 with v-u<d. The remaining
+Poisson events are independent of the two inserted events. This is the only
+point-process identity used beyond the specified arrival law.
+
+Let h=63 and beta=17/10. Direct differences of the quadratic score give
+
+  |Y(N)-Y(N')| <= C*(2*N/h^2+beta/h),
+  |Y(N)^2-Y(N')^2|
+    <= C*(4*N^3/h^4+6*beta*N^2/h^3+2*beta^2*N/h^2).
+
+The second inequality follows from |Y(k)|<=N^2/h^2+beta*N/h for 0<=k<=N.
+Taking expectations with the inserted-pair identity uses rate moments only
+through order five and yields nonnegative bounds epsilon1, epsilon2 on the
+mean and raw-second-moment changes. These are conservative bounds, not loss
+predictions. Known background is included in lambda=I+1/8.
+
+Enclose the accepted-score mean in [mu-epsilon1,mu+epsilon1]. Its raw second
+moment is at most E[Y^2]+epsilon2. All resulting mean intervals here lie below
+zero; subtract the square of their upper endpoint to bound variance above.
+Feed this variance upper bound and widened mean interval into section 4.
+
+The JSON field variance_or_upper_bound_expression records the arithmetic
+expression evaluated for this upper bound. Its lower endpoint is NOT a lower
+bound on the actual dead-time variance. Only variance_upper_bound_exact is
+used for the risk calculation. Afterpulsing, initial recovery and cross-gate
+memory are excluded from this dead-time argument.
+
+7. Trust and interpretation
+
+The proof argument and new evaluator have not been formalized in Lean or
+externally peer reviewed. The Arb arithmetic implementation and input binding
+are trusted components; tests are supplementary checks. No physical noise
+calibration, instrument response, practical settling rate, or historical
+novelty is established. The certificate concerns the new second-order design
+and does not amend the original fourth-order theorem or its fixed-test bounds.

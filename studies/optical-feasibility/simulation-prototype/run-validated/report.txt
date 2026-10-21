@@ -1,0 +1,57 @@
+PHOTON EXPERIMENT: NUMERICAL FEASIBILITY PROTOTYPE
+
+Synthetic observations only. No detector measurements or physical validation.
+The simulation follows the specified snapshot model using floating-point arithmetic.
+Dead time is an illustrative extension; gates start live and reset independently.
+
+Parameters: {'samples': 100000, 'seed': 20261021, 'variance': 1.3862943611198906, 'gain': 0.05, 'background': 0.0, 'dead_time_fraction': 0.01}
+Reference certificate applies to the ideal run: True
+
+A:
+  intensity: 47.2437255; estimated MC SE 0.1493
+  ideal_counts: 2.35999; estimated MC SE 0.008922
+  dead_time_counts: 2.2552; estimated MC SE 0.008205
+  ideal_factorial4: 773.41008; estimated MC SE 29.51
+  paired_score_shift: -1.28774063e-11; estimated MC SE 2.961e-10
+  analytic mean ideal counts: 2.3625
+B:
+  intensity: 47.3388477; estimated MC SE 0.1493
+  ideal_counts: 2.3683; estimated MC SE 0.008918
+  dead_time_counts: 2.26356; estimated MC SE 0.008214
+  ideal_factorial4: 745.22448; estimated MC SE 28.31
+  paired_score_shift: -6.87421879e-12; estimated MC SE 2.967e-10
+  analytic mean ideal counts: 2.3625
+
+Reference probabilities versus finite-sample resolution:
+bin       certified midpoint gap A-B    observed MC gap       expected MC SE
+   0       1.15153986e-07          -1.10000000e-04       2.04374891e-03
+   1      -6.06196341e-08           3.30000000e-04       1.81808363e-03
+   2      -7.56823553e-08           1.95000000e-03       1.58304189e-03
+   3      -4.41296302e-08          -2.30000000e-04       1.36074124e-03
+   4      -1.07413463e-08           1.60000000e-04       1.16011430e-03
+   5       1.11797982e-08          -1.42000000e-03       9.83741392e-04
+   6       2.10648426e-08           5.70000000e-04       8.31145234e-04
+   7       2.23587824e-08           1.70000000e-04       7.00459508e-04
+   8       1.88603348e-08          -8.90000000e-04       5.89288712e-04
+   9       1.34765142e-08          -2.50000000e-04       4.95147322e-04
+  10       8.03090137e-09           1.00000000e-04       4.15674900e-04
+  11       3.46208156e-09          -7.20000000e-04       3.48731078e-04
+>=12      -2.24142756e-08           3.40000000e-04       5.32421335e-04
+
+Necessary reference snapshots: 28,091,647,285,174
+Certified sufficient reference snapshots: 102,399,876,723,169
+At an ASSUMED 1,000 independent snapshots/s: necessary 890.171 years; sufficient 3244.856 years.
+At an ASSUMED 1,000,000 independent snapshots/s: necessary 0.890 years; sufficient 3.245 years.
+
+Rates are illustrative assumptions, not measured hardware throughput. Counts are independent snapshots, not individual photons.
+
+Limits and interpretation:
+- A and B use separate random streams. Only ideal/dead-time observations within each structure are paired.
+- Small Monte Carlo differences do not establish the tiny A/B separation. Use the existing certified probability intervals for that claim.
+- Reported standard errors are numerical diagnostics, not rigorous confidence certificates or measured detector uncertainties.
+- The fixed reference score observes only the count bin; latent phases and intensities are simulator diagnostics, not extra classifier inputs.
+- The detector extension assumes a constant rate during each gate, uniform conditional arrival times, nonparalyzable dead time and independent resets. No cross-gate memory, afterpulsing or optical propagation is simulated.
+- No physical gate length, detector efficiency or attainable independent sample rate has been measured. Gain and background are effective per-gate parameters.
+- The graph covariance in the archived file is not used; phase fluctuations are independent Gaussian draws.
+- Changing gain, variance, background or detector response invalidates applying the retained reference risk/sample guarantees to that changed experiment.
+- No parameter search, experimental validation, novelty result or universal feasibility conclusion is obtained.

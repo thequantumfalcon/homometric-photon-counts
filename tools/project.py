@@ -17,6 +17,7 @@ import zipfile
 
 from check_archive_binding import certificate as archive_binding
 from check_coordinate_binding import certificate as coordinate_binding
+from optical_study import verify as optical_study_binding
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "evidence"
@@ -96,6 +97,7 @@ def verify() -> None:
     formal_manifest()
     archive_binding()
     coordinate_binding()
+    optical_study_binding()
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
 
 
@@ -117,6 +119,7 @@ def check() -> None:
         *list((ROOT / "docs").rglob("*.md")),
         *list((ROOT / ".github").rglob("*.md")),
         *list((ROOT / "formal").rglob("*.md")),
+        *list((ROOT / "studies").rglob("*.md")),
     ]
     for path in docs:
         for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", path.read_text(encoding="utf-8")):

@@ -32,6 +32,17 @@ Installation obtains a dependency; the replay itself is offline. An existing iso
 
 The extended replay runs ten checks: exact endpoint constants, two sample-bound implementations, exact phasors, an Arb lower-bound check, probability/bounded-root reconstruction, independent Fourier tails, density at zero, the global root cover, and its separate full-product implementation. It can take several minutes. It does not regenerate every inherited moment from geometry or replace review of the analytic arguments.
 
+## Optical feasibility extension
+
+The separate [study guide](../studies/optical-feasibility/README.md) describes its observation model, conditional guarantees, archived evidence and optional exploration dependencies.
+
+```sh
+python tools/optical_study.py verify
+python tools/optical_study.py replay --output build/optical-replay
+```
+
+The first command uses only the standard library. The second uses the same pinned python-flint environment as the Arb reconstruction above, stages copies into a fresh output directory, runs 18 prototype/calibration tests, and reconstructs both new certificates. Every non-runtime result field must match the archive. It does not edit retained inputs or prove the analytic derivations in Lean. The Windows Arb CI job executes this additional replay.
+
 ## Formal evidence
 
 Archived Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. Those receipts record historical fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative. Current extensions live under `formal/`, with execution coverage recorded separately in the validation directory.
