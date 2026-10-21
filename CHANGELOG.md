@@ -4,6 +4,10 @@ Changes to this research capsule are recorded here. There is no published releas
 
 ## [Unreleased]
 
+### Fixed
+
+- Canonicalize the extraction root before checking ZIP member containment, so Windows temporary-directory aliases do not reject safe packaged files. Traversal checks remain enforced before extraction.
+
 ### Added
 
 - MIT license for project-owned code and documentation, approved on 2026-10-21; third-party notices retained.

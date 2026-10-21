@@ -4,7 +4,7 @@
     {
       "name": "stage",
       "returncode": 0,
-      "log_sha256": "21eda37cd7632d5d6416c9af34df6c2de1e471b0993e00afa0b81a85991a2c30"
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "name": "ruff-check",
@@ -14,12 +14,12 @@
     {
       "name": "ruff-format",
       "returncode": 0,
-      "log_sha256": "177f260a5645724013185e4b140c7045cc39e56c0c97b120f5cb23599f85f0de"
+      "log_sha256": "f114d83b30c5c657ee43a847a45bafccaea255d82673feb87c26d252c61e29c1"
     },
     {
       "name": "credit-policy-tests",
       "returncode": 0,
-      "log_sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4"
+      "log_sha256": "0f40ff8f52499628ea6f0f59e75b43e13de6b7ef770873fd29d1e625a27308a5"
     },
     {
       "name": "actionlint",
@@ -44,7 +44,7 @@
     {
       "name": "staged-secret-scan",
       "returncode": 0,
-      "log_sha256": "6154e0be9fb9132f5c329869a700eba19c2360466358fc07dfc121830f0ecaee"
+      "log_sha256": "94abc37b652b6b88637a9da99a99b9660af66dac4f15c7a11d30cff8df172aa2"
     },
     {
       "name": "public-integrity",
@@ -62,8 +62,9 @@
   "scope": "Local checks of maintained tooling, staged source and current documentation. Evidence is deliberately excluded from whitespace rewriting. No remote Actions result is claimed.",
   "maintained_source_sha256": {
     "tools/check_commit_credits.py": "4360fef2c9447ef5c37749539846a054225a5babb62352270a61d565bf514172",
-    "tools/project.py": "68e8e551b7d4013eb60b5eb6dff423cfc777e0a1411fba7f62609599ea2a6c68",
+    "tools/project.py": "5c8675a5795bccc11483137fc663f6dd0ba3acea0345c7a28850ee8547549829",
     "tools/replay_formal.py": "2486dc3670d9ddd0a9ea55cb9642ed4c9ea6b096b3bcc56dd4f9e239dd733dc7",
+    "tests/test_archive_paths.py": "c16513238c4422cbbb770ffbbbfb29b1ebbbfb200f1dc5b22103a826c046b0b1",
     "tests/test_commit_credits.py": "cc669bb09e317564fe6249526510490fa9a196226a29a995a58fda199a3b3183"
   }
 }
