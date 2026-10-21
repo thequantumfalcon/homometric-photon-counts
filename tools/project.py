@@ -16,6 +16,7 @@ import time
 import zipfile
 
 from check_archive_binding import certificate as archive_binding
+from check_coordinate_binding import certificate as coordinate_binding
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "evidence"
@@ -94,6 +95,7 @@ def verify() -> None:
     require(lower["certified_m_sufficient"] == 102399876723169, "Unexpected sufficient sample claim")
     formal_manifest()
     archive_binding()
+    coordinate_binding()
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
 
 

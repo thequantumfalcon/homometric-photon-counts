@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "new_modules": 7,
+  "new_axiom_audits": 33,
+  "steps": [
+    {
+      "module": "PhotonCoordinates",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 24.625,
+      "source_sha256": "a04e43caf1deff962403693847441a934e5e21cebaf7f86fb6df6dd81c91be5e",
+      "object_sha256": "9fc6ade9fa2a8e9cf2fc8eede35c2a196efb42f517c4440bad6849e4e08c57fd",
+      "log_sha256": "6ea0ec4800b86cbfbc690c2ac7f4bf07c60a53cc213f56f338e10bbc374fa575",
+      "axiom_audits": 5
+    },
+    {
+      "module": "PhotonCoordinateParser",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.562000000005355,
+      "source_sha256": "3f233f46b933fd1112fe21d1e878d642c530f8c7e24d74ba91199f56cb38f345",
+      "object_sha256": "f04cb8c34430f7863916b842a803b043390b1113c345965533e0a93cc84a92a9",
+      "log_sha256": "7417db82d699ac59a48955be67b437ff998e7929483edc08077f130d90a435cc",
+      "axiom_audits": 3
+    },
+    {
+      "module": "PhotonCoordinateData",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 31.57799999997951,
+      "source_sha256": "593c5148145143615f80f0ff1bebb67bd110f2ee6a778f74029f2a0f8095a066",
+      "object_sha256": "52c01812c41aa27d97c664524e812beac50e9c0a932277d5b0aff9c594286b11",
+      "log_sha256": "ce0ab7266a5124f94d57c34ac8da2bf12fca1636208ad1d03761b58a4c161040",
+      "axiom_audits": 4
+    },
+    {
+      "module": "PhotonCoordinateGeometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 26.296999999991385,
+      "source_sha256": "ec3dcc7d518751346dc5bcb7c1233821c7f48ecd7fdb0e21abe3a8d3f748cb10",
+      "object_sha256": "5d4487a71ae3a58bb838ae8e92f645ef58375a69e4884cc9d167f3f0a3fd33ca",
+      "log_sha256": "1610f01e9776cbf3dab4bec50b23e319f2583eda0334f59832b8da836ecd31e5",
+      "axiom_audits": 4
+    },
+    {
+      "module": "PhotonCountReindex",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.312000000005355,
+      "source_sha256": "e6d78710195a6e8cb8d4efd5fd154ce61277a03675364be9556d8754c08c9752",
+      "object_sha256": "b93c673cc19130291a96eaa258811072b14e6d252ee50a8862279caa2de57042",
+      "log_sha256": "56c544e31e8a63e2952f1fc90f54705662941ffa999792992f943e94f2c3de1e",
+      "axiom_audits": 6
+    },
+    {
+      "module": "PhotonArchiveCountLaw",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 29.219000000011874,
+      "source_sha256": "1c95f707b4ee149f8f47ea8d7168863dc5f83c285bca9759fdef5ca350280ec7",
+      "object_sha256": "0d3a2fb00141f934b1eb113a22244aad9824537456c685d3ad4f9834dc4b53a1",
+      "log_sha256": "176938c7603420598d6d7daf4a63609b713c0ede4ff9f34bd9c89d17b270b02d",
+      "axiom_audits": 4
+    },
+    {
+      "module": "PhotonCoordinateCountLaw",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 49.0,
+      "source_sha256": "c02f9c29187d4c563d59606abc41a154cdf17e5d372d1a38bed95f7f248965f3",
+      "object_sha256": "e68ae49ad53b62283501cb65c7b96febee3bce030f9f44c4b10cbf104a282c75",
+      "log_sha256": "07a600001722563b5d388ea5c2e2271b790ca97e5530ef3dfd922e2d6781cb37",
+      "axiom_audits": 7
+    },
+    {
+      "module": "PhotonCoordinateGeometry",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 814.6410000000033,
+      "source_sha256": "ec3dcc7d518751346dc5bcb7c1233821c7f48ecd7fdb0e21abe3a8d3f748cb10",
+      "object_sha256": "5d4487a71ae3a58bb838ae8e92f645ef58375a69e4884cc9d167f3f0a3fd33ca",
+      "log_sha256": "0ef1aa00e1c68757441ac3b3e59f5960175dba19d19a9134e4bc395dfcb23756"
+    },
+    {
+      "module": "PhotonCountReindex",
+      "kind": "fresh_kernel",
+      "status": "timeout",
+      "returncode": null,
+      "wrapper_returncode": 1,
+      "timeout_seconds": 900,
+      "source_sha256": "e6d78710195a6e8cb8d4efd5fd154ce61277a03675364be9556d8754c08c9752",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_bytes": 0,
+      "detail": "subprocess.TimeoutExpired: lake.exe --no-cache env leanchecker --fresh --verbose PhotonCountReindex timed out after 900.0 seconds. No fresh-kernel success is claimed. Both new modules previously compiled and passed all ten axiom audits.",
+      "object_sha256": "b93c673cc19130291a96eaa258811072b14e6d252ee50a8862279caa2de57042"
+    }
+  ],
+  "fresh_kernel_performed": true,
+  "fresh_kernel_roots": [
+    "PhotonCoordinateGeometry"
+  ],
+  "optional_reindex_fresh_kernel_passed": false,
+  "fresh_kernel_scope": "The coordinate root and its imported environment passed. The optional general reindexing fresh replay timed out at 900 seconds; no success is claimed. All seven new modules, including reindexing and concrete linking, passed ordinary kernel compilation. No new fresh replay of the combined heavy environment is claimed.",
+  "inherited_compile_receipts": {
+    "docs/validation/joint_formal_replay.json": "d4cb268dc80a0be5b85408adf0b37c4a173305b5756b6a0f9bff7cf691b2009c",
+    "docs/validation/archive_formal_replay.json": "144b5277f531d09d84d3cdaecee933b6759213bbb088bc0192a6d1ff98fc7a59"
+  },
+  "extension_manifest_sha256": "782e7e9e9861620c1f54e15d6f179f4d3e5a36238d8a25c7415cdbe58f1faf62",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "aggregate_source_bound_modules": 56,
+  "aggregate_standard_axiom_audits": 696,
+  "scope": "Exact symbolic-coordinate parsing, exponential phase identities, ordered equality to archived phases, full iid Gaussian/Poisson count-law reindexing and concrete separation. External bytes, decimal rounding, full homometry/graph formalization, temporal/exposure models, root/testing formalization, physical validation and novelty remain separate."
+}

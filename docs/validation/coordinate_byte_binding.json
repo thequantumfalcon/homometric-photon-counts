@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "model": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+  "model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "literal_module": "formal/PhotonCoordinateData.lean",
+  "literal_module_sha256": "593c5148145143615f80f0ff1bebb67bd110f2ee6a778f74029f2a0f8095a066",
+  "fragments": [
+    {
+      "structure": "A",
+      "json_pointer": "/graphs/A/coordinates",
+      "start_byte": 112534,
+      "end_byte_exclusive": 129134,
+      "bytes": 16600,
+      "sha256": "73ff4696cbd889068dd0aeb5430205c7d81c92fc8af06bf77f3c788a9611fd86",
+      "coordinate_count": 63
+    },
+    {
+      "structure": "B",
+      "json_pointer": "/graphs/B/coordinates",
+      "start_byte": 280420,
+      "end_byte_exclusive": 297020,
+      "bytes": 16600,
+      "sha256": "23f6a9dcc7619e4436562d3b832ccaf50645a8f7e0a8168489f25d2cf1319bd9",
+      "coordinate_count": 63
+    }
+  ],
+  "scope": "External byte and JSON-field binding. Lean interprets base_integer, offset_kind and offset_sign as exact symbolic coordinates; coordinate_decimal is display text, not an exact real input."
+}

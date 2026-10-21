@@ -22,7 +22,7 @@ The 33-node interpolation theorem remains available, but this final proof establ
 
 ## Executed checks and reproducibility
 
-The maintained proof set, including the later joint snapshot extension, contains 45 modules and 654 explicit theorem-axiom audits. The final theorem's transitive axiom list is exactly `propext`, `Classical.choice`, and `Quot.sound`. Sources are pinned in [manifest.json](manifest.json); the [validation record](../docs/validation/README.md) distinguishes source compilation, fresh-kernel checking and other checks. Generated files can emit harmless unused-tactic warnings; no warning-free compilation claim is made.
+The joint snapshot milestone contains 45 modules and 654 explicit theorem-axiom audits. Later additions are counted in the current README. The final theorem's transitive axiom list is exactly `propext`, `Classical.choice`, and `Quot.sound`. Sources are pinned in [manifest.json](manifest.json); the [validation record](../docs/validation/README.md) distinguishes source compilation, fresh-kernel checking and other checks. Generated files can emit harmless unused-tactic warnings; no warning-free compilation claim is made.
 
 The retained concrete compilation receipt collects successful source-bound compilations and copies their objects into a new isolated directory. This is not a second compilation of unchanged files. A subsequent fresh-kernel check rechecks the complete imported proof environment. For a new full rebuild, use the pinned replay command in the [reproduction guide](../docs/reproduction.md), with `--fresh-kernel`.
 
@@ -30,6 +30,6 @@ The [Nanoda check](../docs/validation/nanoda_concrete.json) accepted the exporte
 
 ## Scope that remains separate
 
-This closes the concrete geometry-to-moment calculation for the explicit formal phase lists and its transfer to distinct count laws. The archive-coordinate correspondence still has an exact computational check rather than a formal parser theorem. The later [joint snapshot extension](JOINT_MODEL.md) proves the conditional Poisson interpretation. Temporal/exposure models, the root and testing certificates, and a quantitative stability neighborhood are outside this theorem. No measured detector data, experimental validity, novelty, optimal sample complexity, or universal imaging claim follows from these proof checks.
+This closes the concrete geometry-to-moment calculation for the explicit formal phase lists and its transfer to distinct count laws. The later [coordinate extension](COORDINATES.md) adds the formal parser, coordinate exponentials and full count-law reindexing. The later [joint snapshot extension](JOINT_MODEL.md) proves the conditional Poisson interpretation. Temporal/exposure models, the root and testing certificates, and a quantitative stability neighborhood are outside this theorem. No measured detector data, experimental validity, novelty, optimal sample complexity, or universal imaging claim follows from these proof checks.
 
 The [completed concrete fresh replay](../docs/validation/concrete_formal_replay.json) rechecked the entire imported environment of `PhotonConcreteSeparation` from an empty kernel environment. Its inputs were staged from 44 successful source-bound compilations, with 641 standard-axiom audits. This is distinct from the selected-theorem Nanoda export check.

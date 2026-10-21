@@ -27,6 +27,18 @@ def unique_pairs(pairs: list[tuple]) -> dict:
     return result
 
 
+def literal_characters(source: str, name: str) -> str:
+    """Decode an explicit ASCII List Char, using the common Lean/Python escapes."""
+    declarations = re.findall(rf"^def {re.escape(name)} : List Char := (.*)$", source, flags=re.MULTILINE)
+    require(len(declarations) == 1, "Missing or duplicate Lean literal declaration")
+    quoted = declarations[0]
+    character = r"'(?:[^'\\\x00-\x1f]|\\['\"\\nrt])'"
+    require(re.fullmatch(rf"\[{character}(?:, {character})*\]", quoted) is not None, "Unsafe literal escape")
+    chars = ast.literal_eval(quoted)
+    require(all(isinstance(c, str) and len(c) == 1 for c in chars), "Invalid character literal")
+    return "".join(chars)
+
+
 def bind(model_bytes: bytes, literal_bytes: bytes) -> dict:
     """Check byte origin, not Lean theorem truth or physical interpretation."""
     require(sha256(model_bytes).hexdigest() == MODEL_SHA256, "Archived model hash mismatch")
@@ -51,16 +63,9 @@ def bind(model_bytes: bytes, literal_bytes: bytes) -> dict:
         # Only explicit character literals with the shared Python/Lean ASCII
         # escape subset are admitted. No expressions or Unicode escapes.
         # The full formal source is pinned separately by the source manifest.
-        declarations = re.findall(rf"^def raw{label} : List Char := (.*)$", source, flags=re.MULTILINE)
-        require(len(declarations) == 1, "Missing or duplicate Lean literal declaration")
-        quoted = declarations[0]
-        character = r"'(?:[^'\\\x00-\x1f]|\\['\"\\nrt])'"
         require(
-            re.fullmatch(rf"\[{character}(?:, {character})*\]", quoted) is not None, "Unsafe literal escape"
+            literal_characters(source, f"raw{label}") == fragment, "Lean literal differs from archived bytes"
         )
-        chars = ast.literal_eval(quoted)
-        require(all(isinstance(c, str) and len(c) == 1 for c in chars), "Invalid character literal")
-        require("".join(chars) == fragment, "Lean literal differs from archived bytes")
         records.append(
             {
                 "structure": label,

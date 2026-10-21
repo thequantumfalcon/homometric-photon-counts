@@ -2,7 +2,7 @@
 
 | Open target | Evidence needed to close it |
 | --- | --- |
-| Extend formal coverage beyond count-law distinction | Build on the [proved exact-phase-array bridge](../formal/ARCHIVE_INPUT.md) by deriving the symbolic coordinate-to-phase relation and probability-law reindexing; formalize the root and testing certificates and their connection to the decision theorem |
+| Extend formal coverage beyond count-law distinction | Build on the [proved symbolic-coordinate and reindexing bridge](../formal/COORDINATES.md); formalize the root and testing certificates and their connection to the decision theorem. Real-coordinate ordering, full homometry and graph claims also remain outside the Lean coverage |
 | Useful larger root-stability neighborhoods | Improve the [certified rectangle](root-stability.md), whose radii $10^{-23}$ in $t$ and $10^{-20}$ in common background are deliberately conservative; assess tolerances relevant to a specified experiment |
 | Global parameter root count | Exclusion of additional roots across all claimed phase widths/backgrounds, not a finite scan |
 | Optimal testing and design | Bounds for the exact observation/risk criterion and certified exclusion of competing designs; pooled bins do not automatically bound full counts |
