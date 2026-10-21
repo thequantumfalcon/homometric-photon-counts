@@ -4,7 +4,7 @@
     {
       "name": "stage",
       "returncode": 0,
-      "log_sha256": "21eda37cd7632d5d6416c9af34df6c2de1e471b0993e00afa0b81a85991a2c30"
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "name": "ruff-check",
@@ -19,7 +19,7 @@
     {
       "name": "credit-policy-tests",
       "returncode": 0,
-      "log_sha256": "970f2c3893cc1d90798d5af1d6840832eab1f1a1c3eb28da1db1d495b832e02c"
+      "log_sha256": "b0dd04239029a366af42e7a16c28cfbd2a9f7d5319e0614ad07a350ecb2ef585"
     },
     {
       "name": "actionlint",
@@ -44,7 +44,7 @@
     {
       "name": "staged-secret-scan",
       "returncode": 0,
-      "log_sha256": "fd920e35de25ffb0e1fe6d2e0d7656a0644b29f920b13469deb74953ac0be19a"
+      "log_sha256": "d3c0ad99d7ae796ee34d9c06d8f0cc2c24ae0a9427109b20f9077e1c9d58c1b1"
     },
     {
       "name": "public-integrity",

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "checker": "Nanoda 0.4.19",
+  "target": "PhotonConcreteSeparation.count_laws_distinct",
+  "export_seconds": 487.17200000000594,
+  "check_seconds": 232.95299999999406,
+  "export_bytes": 5808889527,
+  "export_sha256": "769c2588f8de64ef5c0a1758a965447ccaa7c399c532597e6b77e273d90f2efc",
+  "checker_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+  "exporter_sha256": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+  "extension_manifest_sha256": "7b3b1318270de7629ee41c32004d064be38f9ff159cf5faf098bdb329af26f7e",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "log_sha256": "25d7e2b55f78673f23069e9328e6a9c63ad66f24fc8e9a96e81ac0acbb2b0134",
+  "scope": "Direct Nanoda check of the exported final theorem and its transitive dependencies; not the sandboxed comparator workflow, a check of all project declarations, experimental validation, or an independent review of the statement meaning.",
+  "declarations_checked": 54245,
+  "typechecker_errors": 0,
+  "pretty_printer_errors": [
+    "Unable to print axioms"
+  ],
+  "diagnostic_log": "Checked 54245 declarations with no typechecker errors, 1 pretty printer errors: [\n    \"Unable to print axioms\",\n]\n"
+}

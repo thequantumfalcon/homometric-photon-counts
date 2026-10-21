@@ -1,6 +1,6 @@
 # Model and notation
 
-The primary model has two fixed sets of 63 unit phasors, independent centered Gaussian site phases, a time-local conditional Poisson detector, common background, and known parameters for the stated testing result. The intensity satisfies $0\le I\le3969$.
+The primary model has two fixed lists of 63 unit phasors, independent centered Gaussian site phases, a time-local conditional Poisson detector, common background, and known parameters for the stated testing result. The intensity satisfies $0\le I\le3969$.
 
 Use $s$ for phase variance, $t=e^{-s/2}$, and $x=t^2=e^{-s}$. The reference point is $s=2\log2,t=1/2,x=1/4$. The [geometry extension](../formal/GEOMETRY.md) proves the exponential substitution and the resulting polynomial identity. The [Gaussian extension](../formal/GAUSSIAN.md) derives an exact finite-sum expression for every intensity moment. The [concrete certificates](../formal/CERTIFICATES.md) evaluate the proved recurrence to establish the specific 63-site moment identities below.
 

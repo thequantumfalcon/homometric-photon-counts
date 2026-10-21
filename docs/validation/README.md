@@ -14,9 +14,11 @@ Executed on Windows with Python 3.11.9, during 20–21 October 2026.
 | Mixed-moment recurrence extension | [Fourteen modules and 82 audits passed](recurrence_formal_replay.json), including a fresh-kernel check of `PhotonMixedRecurrence` and all preceding proof modules |
 | Polynomial representation and interpolation | [Fifteen modules and 92 audits passed](polynomial_formal_replay.json), including a fresh-kernel check of `PhotonMomentPolynomial` and all imported proof modules |
 | Concrete moment certificates and final theorem | [44 successful module compilations and 641 standard-axiom audits](concrete_compile.json); compilation and the subsequent fresh-kernel check are recorded separately |
+| Full concrete proof environment | [Fresh-kernel check passed](concrete_formal_replay.json) for `PhotonConcreteSeparation` and all imported declarations, using 44 source-bound successful compilations and 641 audits staged into an isolated directory. Unchanged sources were not compiled a second time. |
 | Maintained tooling and source | [Local quality checks passed](local_quality.json), including workflow audits, three attribution-policy tests, two extraction-path regressions, pre-commit and staged secret scanning |
 | Initial GitHub publication | [Executed remote checks and settings](github_initial.json): Windows/Ubuntu packaged checks, all ten Arb stages and combined `ci` passed at the named commit; CodeQL Python/Actions setup passed |
 | Lean4Lean compatibility | [Local probe failed on the installed object format](lean4lean_compatibility.json); no project-proof check was performed |
+| Independent check of the final theorem | [Nanoda 0.4.19 passed](nanoda_concrete.json): 54,245 exported declarations, no typechecker errors, only the three standard axioms permitted. One axiom-printing diagnostic is retained. This direct check is distinct from the sandboxed comparator workflow. |
 | Local checker artifact inspection | [REA metadata and shipped-byte bindings](checker_artifacts.json); limited static inspection, not a checker-correctness proof |
 | Nanoda compatibility | [Small probe passed](nanoda_compatibility.json): `Nat.add_comm` and 52 exported declarations checked without typechecker errors; one pretty-printer diagnostic was reported. This probe alone does not check a project theorem. |
 

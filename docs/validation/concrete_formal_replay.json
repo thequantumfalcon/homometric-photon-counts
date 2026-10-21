@@ -1,0 +1,475 @@
+{
+  "passed": true,
+  "fresh_kernel_performed": true,
+  "compilation_mode": "Staged successful source-bound compilations; unchanged compiled objects copied into a new isolated directory for a fresh check of the complete environment. This is not a second compilation of every unchanged source.",
+  "proof_manifest_sha256": "ad3e0db6ce653542785f8119fa664b06c0450a318e1cafcd319015e0633300c3",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.030999999988126,
+      "source_sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "log_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "axiom_audits": 5,
+      "object_sha256": "7ba7faa455588e6a477b4eea674bf6b142d4390839d8feeb55ea518364e8999a"
+    },
+    {
+      "module": "PhotonMomentTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.15700000000652,
+      "source_sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "log_sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "axiom_audits": 2,
+      "object_sha256": "335cf47985bb65da3119bd5b86e8bdf09728dcc98647dd8fa10253084c897977"
+    },
+    {
+      "module": "PhotonPoissonSeries",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.23399999999674,
+      "source_sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "log_sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "axiom_audits": 1,
+      "object_sha256": "cdc6fa7ee4b10adfd37bbaa7bfcf197f696675a9c50374aac1752618a3dd5a29"
+    },
+    {
+      "module": "PhotonPoissonMeasure",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.85899999999674,
+      "source_sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "log_sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "axiom_audits": 3,
+      "object_sha256": "8470d3d75be0d4dbbf23f083c0d925414906b541cc47c0acb5cfdafbd4397ad1"
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.844000000011874,
+      "source_sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "log_sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "axiom_audits": 2,
+      "object_sha256": "55a06f78f2edeb20b7e34382e8c52b5c7e5879c5621fa39e56b811f4d9b5d5b2"
+    },
+    {
+      "module": "PhotonPoissonMixture",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.921999999991385,
+      "source_sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "log_sha256": "517035d8a95044d2d1625777c87ec75890cef57c1b792434f83d9444d0375a8e",
+      "axiom_audits": 5,
+      "object_sha256": "345ca62898087fdc28539cc77dbceea6846ffe5bbd511d9edd6aa671f400506b"
+    },
+    {
+      "module": "PhotonGeometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.75,
+      "source_sha256": "88667df23f32776eed39a38d96231b22d8c80f0945731acce743e1ecbf160300",
+      "log_sha256": "1985e671b90cd9597c08e321e5fe0079be5569a9579a36ed39823139bb60bc6f",
+      "axiom_audits": 20,
+      "object_sha256": "58c8f0b716c0986da00ec268a7b1b7aed6ab7dc912dd3bb02b8accecace76d31"
+    },
+    {
+      "module": "PhotonGaussianPhase",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.46799999999348,
+      "source_sha256": "d60b521a8353ab8614c3409dc4c62ba635371428634774a08dc146a431f693e7",
+      "log_sha256": "5a98580200660cea1b6775bdf19b54ef7329c48890916e02b5a6aa5a66bdc647",
+      "axiom_audits": 12,
+      "object_sha256": "9620dd8f9c7b9f12d51c3249dd28726466d06f06b05662e7528f736461ddc62a"
+    },
+    {
+      "module": "PhotonIntensityBounds",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.485000000000582,
+      "source_sha256": "3b641a7131fcb2f34c6c66fa74df8c05e3d82cc02bd350d85a4c68dc8cebadde",
+      "log_sha256": "1c6c70e353c01d6e1cec9f38ff080800ceb260a7b8f5697321c7bd1060a19f56",
+      "axiom_audits": 10,
+      "object_sha256": "5e78f03fa1bc698473288b9eba9da9b5036a7f0883f6a40b23b97a19c312f8e5"
+    },
+    {
+      "module": "PhotonIntensityExpansion",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.343000000008033,
+      "source_sha256": "e38fa60c3f792cb24d89643d90a5d5097bb63c67aed77b6bae91d7c5f308bb39",
+      "log_sha256": "695f7ca93c1dd3c134dddfc61a71641c5765ebdc82f7fe8472b870fd4770785e",
+      "axiom_audits": 4,
+      "object_sha256": "8574175502cd1d96af6cc9c71bd7195dd91f27168d2d973b1e19876f3659f196"
+    },
+    {
+      "module": "PhotonGaussianIntensity",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.780999999988126,
+      "source_sha256": "22440bdb3421d842d8fa40a2fa95fafefe8b6edc674f7ae12b1e81a8a615bdb7",
+      "log_sha256": "cf0d7e2967cd9ae3fab8048652aa4e19abb7a5bf24ac807c48f7ce643fcc4f5d",
+      "axiom_audits": 3,
+      "object_sha256": "c23b22f6e260d6b8b6e5d5d8090fd5909a44a966cc8b9536abd2734c0b00213a"
+    },
+    {
+      "module": "PhotonGaussianModel",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.375,
+      "source_sha256": "573252cd4344a2620dd224bc639ae510c6c7910aeb7caee8ec441485adb5c2b4",
+      "log_sha256": "08e6375f5c01cbda9f1176ecbff3adf884dd1cccf3e6be5cf7ed55d9f7b003e0",
+      "axiom_audits": 6,
+      "object_sha256": "2ff5e782e8bf9d26fc583fd6270f670ea13693d6853c1a1d86915c573d2a3e43"
+    },
+    {
+      "module": "PhotonGaussianAppend",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.313000000009197,
+      "source_sha256": "d77fefb08e9682ce81667fb25b94b8719783a5a9bf536e324f0b283b2e448bd8",
+      "log_sha256": "0918692b7f4edd445eccd59299119477acb5d6914c7df8208a99e68eb492d7d9",
+      "axiom_audits": 2,
+      "object_sha256": "022ce1e3dbe40660438aa686d986308a63da97d01def50d57c9ca0814861d6f4"
+    },
+    {
+      "module": "PhotonMixedRecurrence",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.593999999997322,
+      "source_sha256": "ad3bb594affd4e662e769cc079ca5ac224017ae9f394c723545d942396bb3d09",
+      "log_sha256": "011c2afe7e86c3ee323c84cdebb9f66a56a14f7dd1d1bcf142d2bb4f41bf3428",
+      "axiom_audits": 7,
+      "object_sha256": "d874b07c1c1f698596cdfd26bdbf7cbe90bc77b2948aa58dc9547cd6d76f9e13"
+    },
+    {
+      "module": "PhotonMomentPolynomial",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 23.21799999999348,
+      "source_sha256": "12f178bf7c193a2ae304ec6a2d41fa8527eee1993ef2c4134151751ae8a0c119",
+      "log_sha256": "bbd0740a3c9c459c7b540921a3a7a5c4dd6bc07b132bde1622cb8da662f85a2c",
+      "axiom_audits": 10,
+      "object_sha256": "bf564c01645cf7eface4c591b9bfe0b799e726963f5c8235569016b02a62800b"
+    },
+    {
+      "module": "PhotonCertA0",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.67,
+      "source_sha256": "84a3e082f575157c861b84a7648b25e2ac854999c3c21449fbcfaa78fba9fc59",
+      "log_sha256": "46b064ad2d5ca4053eb530144258c3e509acdd49008f1f2af44d1d85a03d1671",
+      "axiom_audits": 5,
+      "object_sha256": "3a0c3d7e0d04e1af4ae53ce3d2628a86446ba9c38469a04a93e73427fc0272a2"
+    },
+    {
+      "module": "PhotonCertA1",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 27.31,
+      "source_sha256": "5d1e95cf23879951a16c8e9a9e356a1887a5b065c5288f72e013814c6a86812b",
+      "log_sha256": "02d11632d89e6ce06e30cd3452c0bef84faf85f4aeb646193dc9f2cda74a2a86",
+      "axiom_audits": 5,
+      "object_sha256": "280cf7e0455c3514aa40675a3e19d9f310c8e5e401e43b6dfb60324116dd2b77"
+    },
+    {
+      "module": "PhotonCertA2",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.91,
+      "source_sha256": "40be09ebd64447fecf745cc0fa50bd1795ec33170a5c215e2642f7bd6ab69137",
+      "log_sha256": "c7e99343c8fd32defe47438f4fc8d6b6908b91f4644fa4d9f5963a6991f9e361",
+      "axiom_audits": 5,
+      "object_sha256": "3aced76c015e0cd994f609a5a6e735c41b6b62fa0b81d21e732ff0a181d955aa"
+    },
+    {
+      "module": "PhotonCertA3",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 31.3,
+      "source_sha256": "b7063ce379d161ba195ea8ad8295adc89aa41738dc24638fd7057a1a6e7e9fc3",
+      "log_sha256": "07109679a270f5628dacd31ebf19cb25dffebd4ac465846ed953cfaffcf65410",
+      "axiom_audits": 5,
+      "object_sha256": "19096df14cb73e6538b4da0568fb46fbd2c366917f1da24be82258fe2eb66df9"
+    },
+    {
+      "module": "PhotonCertA4",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 33.64,
+      "source_sha256": "850594184b3fc09c530abff8920a5d9824ceb2092345e33f5b4e6ae026d91d5e",
+      "log_sha256": "211e475c65f9a9f746d2b08bfd851ead8dc4ced8429c23a6373ea2f2a04955c0",
+      "axiom_audits": 5,
+      "object_sha256": "7a8a86c3fc288e7397687fc6c350efd559c122cd8bb7ce62378c38d7371a862d"
+    },
+    {
+      "module": "PhotonCertA5",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.0,
+      "source_sha256": "9991ea20ba01558c79c2b7bd7ff8504dacbe0ea0642444c124256aab3ec51f44",
+      "log_sha256": "3957c84bcb99b65a38c76e4b80e1bf0a402add89811b7b5986476db740be2528",
+      "axiom_audits": 5,
+      "object_sha256": "f612bdc59871e6123b2a5d266adfd152de2be5c6f75d710d1b9636763bb8a199"
+    },
+    {
+      "module": "PhotonCertA6",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 38.31,
+      "source_sha256": "79f364cf8c78ac49fa0724c3cf27bfb126c278c63e4ffdd49348b1934fe40c85",
+      "log_sha256": "3997d0a744e6e0f26b0b3699e099e78cb9083c3b360e48ae7a6739726c6c4011",
+      "axiom_audits": 5,
+      "object_sha256": "a9d67b9c7e601ceb883f2905c903eae94b4a3a21589cfaa320ef2847473505ad"
+    },
+    {
+      "module": "PhotonCertA7",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.95,
+      "source_sha256": "f298015123479d3cbf26054f9e9194169b48bb3682da9cb68eabd53bf6bae83a",
+      "log_sha256": "7b23279667c7f731332f76791a7e3e2dff0fdaac6e1e38a443c707cfdbda960c",
+      "axiom_audits": 5,
+      "object_sha256": "7a0b0ee53f3110e6940e3d1c52eb06286ee7659b6c9cd01341267c5740daf812"
+    },
+    {
+      "module": "PhotonCertA8",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.98,
+      "source_sha256": "06792d1dd4a7f43b97e0edc8b0023bbe34756f0b985d990b86bc5fc85c23d105",
+      "log_sha256": "1b02154daa8a71a66c16663e4c3e93c8f0624ab6993405c5b0a8dc23248ccdfb",
+      "axiom_audits": 5,
+      "object_sha256": "68d8c17b6719736ee22ae5b298ba7ae9249cbfe5983469013d2e6e3b3a98dd6e"
+    },
+    {
+      "module": "PhotonCertA9",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 36.16,
+      "source_sha256": "1a8ac6515fb334e2c118766299c6b478215f6abedba274a21ee3b2f6fa7ec107",
+      "log_sha256": "a97c6702cec2dbecb19735222cdb000f3a803cd5a1efa1941cb3b11bbf78e79a",
+      "axiom_audits": 5,
+      "object_sha256": "2c098bdf94a53846b908fa713d6ca9aebd9d85bd3387f99a0ccacaf1678254f3"
+    },
+    {
+      "module": "PhotonCertA10",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 33.58,
+      "source_sha256": "76d0d8adfec566cd7011b014ec17337f53ea3f29dbdf86b6511c6a65790faa40",
+      "log_sha256": "8cdee2a82ccb889846d62e47dc248bd652e5ae6aa3258f34ee68d391f5a7a454",
+      "axiom_audits": 5,
+      "object_sha256": "0a7b030775138b9cc7bd6e4c01df501bee90c1dfb856c65451f246a4aa185dea"
+    },
+    {
+      "module": "PhotonCertA11",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 34.61,
+      "source_sha256": "eb937f593b91240fabece37d3611aa86c5044590022e7beb0c817383517e49a5",
+      "log_sha256": "091e4e873dd96787e7bbae77c68d2a5ae16c9cd73fa3d50cf27b7bc7e77c1225",
+      "axiom_audits": 5,
+      "object_sha256": "38939863c890454ea3b42fa4ed69ec7c10ed3441537597a63a3b0f1a09e0315e"
+    },
+    {
+      "module": "PhotonCertA12",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 40.78,
+      "source_sha256": "45afcf431d95ba12ded3c525543d93983fc0a94f9c48673e6851497d56d8d59a",
+      "log_sha256": "f92e12fc570fbf500994b7d22dd56f89c5eab9affced6da9dde669360ec0ebc9",
+      "axiom_audits": 5,
+      "object_sha256": "b4d74a4459fc4fdfc2f4d1ae289df527f8268c003c1f68ad94260fd6dac39210"
+    },
+    {
+      "module": "PhotonCertA13",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 39.01,
+      "source_sha256": "70b6a0e7526f0fbaf85e247834ceddbfd30f5400d9bf8cf28d49fff9c8235658",
+      "log_sha256": "92e4a05e72fb578badecd1872f095bff829d13217d3e83472fe56ecb8df4fd2e",
+      "axiom_audits": 5,
+      "object_sha256": "77a47de60525cb9d5116229ea3fd26147a474097936833f90f2bdfcb270ba8e7"
+    },
+    {
+      "module": "PhotonCertA14",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 41.47,
+      "source_sha256": "819f2dde047a70ca765d83750892911c54845f9999a25b57a84070db0128c375",
+      "log_sha256": "0f18b168999c594c43d5bc50cedce4a34cabaef51c34725c92981b5df416f0fe",
+      "axiom_audits": 5,
+      "object_sha256": "7a7851e421234806a881d110f805e0d25d3f8022b3937e06ae0e7bae77de026c"
+    },
+    {
+      "module": "PhotonCertA15",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 38.77,
+      "source_sha256": "88a6c307da8dfd78fc1cfb649ebcfbfc60f10253f3e8f7acd7d7de0bb8cf2acb",
+      "log_sha256": "93aad2bb4af78fb45d538fd129f99efb7c6f362cb1295f6c1932eb1a2f4d1495",
+      "axiom_audits": 5,
+      "object_sha256": "ae385df752a8c7833c31c5276d259f9fac2f5757b2bf596ab2f18af133353e33"
+    },
+    {
+      "module": "PhotonCertA16",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 37.94,
+      "source_sha256": "d0b4494988c8fc1be0b4d7c8a22b8aa54e6d3a7ad04e7a08b206eaac3a72fa18",
+      "log_sha256": "d3a1b0887ed6a37f376fd2c0d3c47ad1f56ff039795a5347d2d00b454950f126",
+      "axiom_audits": 5,
+      "object_sha256": "632c5d72b4bed179dd587250b7d0b1cc20860d8ca61b15b422c191125b765b0a"
+    },
+    {
+      "module": "PhotonCertA17",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 37.2,
+      "source_sha256": "d70edf042b6e55868994120f06c9fc14e27dea60ab2cf942a6371fe37fa40339",
+      "log_sha256": "2b7c7179e96b8e0151dbcd461a35da790c008cbe74a3fbde5c1774787de70438",
+      "axiom_audits": 5,
+      "object_sha256": "3c2f6bf043ea138125425e44d16f008ac8dbd95fa54b4c5027271b1184a6fd69"
+    },
+    {
+      "module": "PhotonCertA18",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.27,
+      "source_sha256": "3e0200f439e64f3cb62a30bbc510ba68c3ad4e781454230a6c933cf378ddcb47",
+      "log_sha256": "676e52f80747f9831749ded8a2584dc2e147d7828893a6ea6611d7598c8ca35a",
+      "axiom_audits": 5,
+      "object_sha256": "a732d5892d4bbc3ba9668b70cd5c8b8be0f499ff2b2c9df7d757eeabd2ce5615"
+    },
+    {
+      "module": "PhotonCertA19",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.66,
+      "source_sha256": "439059d23958b4297568a4013f6be8818365ea8e32f6b0230773fd84f72d7765",
+      "log_sha256": "84e5e1987262d67ec6c53bf477fc61c3cdfdfb4e744d1f156fc65f4f61d88c78",
+      "axiom_audits": 5,
+      "object_sha256": "04d5237074a50cfeffb4c8234e412b01c7db8a7beb06d0a8bc7924d0a7e4fa16"
+    },
+    {
+      "module": "PhotonCertA20",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.56,
+      "source_sha256": "596e1823c8d8b3950e065f9d2b8ee9366bf184633195a73031b08fa59b0494f6",
+      "log_sha256": "f117072e434e6cbb954ec340f0980b6f8bd4bea67c1370d8e9ba8c0849936ad3",
+      "axiom_audits": 5,
+      "object_sha256": "ec20a39046b5ac7b37a5eb560d7e4e447217acc7de433ca83be8424ea8d52fb0"
+    },
+    {
+      "module": "PhotonCertA21",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 26.34,
+      "source_sha256": "31a56028c01313022f4c5af8ebd90d587d4652b11aba8cb5a967b60e2cd4518b",
+      "log_sha256": "3f95daea8f688403a579f4a9c2ca97a8e0b38297598a9a9e3301815b5a6ee6b5",
+      "axiom_audits": 5,
+      "object_sha256": "270529cfea1dc91ad035dcb820fc5726fb31f11edcbfba93543087cab7700a3d"
+    },
+    {
+      "module": "PhotonCertABlock42",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 611.84,
+      "source_sha256": "3095ff94bc2033be028f87bf28f6055fb6c125d23d5ef153b5ea71d735300bc6",
+      "log_sha256": "33a1512e0459d546a271ace355d63369c40a2d8b287786cd787d606bf8d3e532",
+      "axiom_audits": 105,
+      "object_sha256": "df72eaf6a4363badd1a7eb94db9cd10e8ea77c5e3316f0ffc9f0963e7618e6e6"
+    },
+    {
+      "module": "PhotonCertABlock63",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 652.2,
+      "source_sha256": "c80141417aa72c48c3cb9908c0e16511f5ac3620fbf6054469a63cf319a0641f",
+      "log_sha256": "87938cc59f822549d6b52b95258ca6441574493d9952ab04c4f4c116d3884aa6",
+      "axiom_audits": 105,
+      "object_sha256": "f7da6b8e66b9049c520398717e21b2aa2374b20b909e084e638fda3df43ceb6c"
+    },
+    {
+      "module": "PhotonCertBBlock42",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 535.25,
+      "source_sha256": "56ff6612e64791b127c7497d28e3d4c0cda25bc5dadc5ec3ff0fccbfe97fbf70",
+      "log_sha256": "6e0445e460d18bab2be78426a6fdd6ec2915f2b5364cf46d8818affef46fd60c",
+      "axiom_audits": 110,
+      "object_sha256": "f0819d5db0f122db63627f8e463179b4b1779229c78d70e01f6c8388c2c6b2ab"
+    },
+    {
+      "module": "PhotonCertBBlock63",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 669.48,
+      "source_sha256": "0e59a67135c5f4dd8a9bb844da6d876f7f0ef5213115b5672750a44423d7ede5",
+      "log_sha256": "037f0ce873d7a9ba760aa05fd4cc98fe581e4bc7700f434c6fedf0a090ab3855",
+      "axiom_audits": 105,
+      "object_sha256": "83c0c2cf6dbd57c230b8000e2f13f149385019a39fd078c0346031c12ddbc2c9"
+    },
+    {
+      "module": "PhotonConcreteTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.66,
+      "source_sha256": "f1b91baef92ef888434f4a3820fc5447955e6e3befe56bc03659c3b727933fa7",
+      "log_sha256": "108c21461970ea7f76bba328bef92560f1ad6ace6619250bde64e1c028a0fb01",
+      "axiom_audits": 2,
+      "object_sha256": "9aacfa23a98a2be010b9465e92702c7db5f757f284f2d6cd0ff6281fc5eecec1"
+    },
+    {
+      "module": "PhotonConcreteVectors",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 79.61,
+      "source_sha256": "cf0099f262f4c7b16b7d0758394d4f6420fe7e0ea8a93fccf4f404f86f4aee7f",
+      "log_sha256": "4ff27bcf919dc8c0a6d16bcb93d54463e02a9bf29f5f047dd4d81fcbe7429e2f",
+      "axiom_audits": 2,
+      "object_sha256": "75cb35282f2822fdd53ef90788915ae63cb33e3f8b80a2af9bbde71e3d54ae7e"
+    },
+    {
+      "module": "PhotonConcreteSeparation",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 23.05,
+      "source_sha256": "1c900776eb332b3fd83aa026246a07f3ca2ae9fad391f7d4ea1ef26dde56c64f",
+      "log_sha256": "51c3e867d956822631fa532231041f6b2c8a28bd5f492fefdc71e3a491a8718f",
+      "axiom_audits": 10,
+      "object_sha256": "76e28376f3d86a58de58439dc2444c32854ca1c5cb1dad696794bfe75468f7bf"
+    },
+    {
+      "module": "PhotonConcreteSeparation",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 1388.125,
+      "source_sha256": "1c900776eb332b3fd83aa026246a07f3ca2ae9fad391f7d4ea1ef26dde56c64f",
+      "object_sha256": "76e28376f3d86a58de58439dc2444c32854ca1c5cb1dad696794bfe75468f7bf",
+      "log_sha256": "b0bad7301d5d4ffc292bd46ea00bb39dbabbcc9f8dc10e007811d4245628ceb2"
+    }
+  ],
+  "extension_manifest_sha256": "7b3b1318270de7629ee41c32004d064be38f9ff159cf5faf098bdb329af26f7e",
+  "scope": "Count-law distinction for the explicit two 63-site Gaussian-phase/Poisson models, with positive variance and gain and nonnegative common background. Concrete moment matching and the fourth-gap identity are proved by exact certificates, not assumed. Coordinate-file parsing, root/testing certificates, physical validation and novelty remain separate. See formal/CERTIFICATES.md."
+}
