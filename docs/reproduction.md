@@ -33,7 +33,7 @@ Compiled objects and the large toolchain are not distributed. With the already b
 python tools/replay_formal.py --runtime PATH_TO_LEAN_4_35_WINDOWS --mathlib PATH_TO_PINNED_MATHLIB --output build/formal-check
 ```
 
-This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all eighteen axiom audits before reporting success. It recompiles the five archived moment-bridge modules and the [measurable-mixture extension](../formal/SCOPE.md), whose source has a separate hash manifest. Add `--fresh-kernel` to check the extension and its imported environment. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. It is a pinned Windows replay, not a claim of cross-platform formal CI or a complete end-to-end Lean theorem.
+This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 38 axiom audits before reporting success. It recompiles the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), and the [concrete geometry extension](../formal/GEOMETRY.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check the geometry module and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. It is a pinned Windows replay, not a claim of cross-platform formal CI or a complete end-to-end Lean theorem.
 
 ## Validate the distributed artifact
 

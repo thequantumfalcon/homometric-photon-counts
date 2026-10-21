@@ -5,8 +5,14 @@
       "source": "PhotonPoissonMixture.lean",
       "sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
       "axiom_audit_count": 5
+    },
+    {
+      "name": "PhotonGeometry",
+      "source": "PhotonGeometry.lean",
+      "sha256": "88667df23f32776eed39a38d96231b22d8c80f0945731acce743e1ecbf160300",
+      "axiom_audit_count": 20
     }
   ],
-  "fresh_kernel_module": "PhotonPoissonMixture",
-  "scope": "Constructed measurable Poisson mixtures, normalization and factorial tower identity; count-law distinction follows from explicit intensity-moment premises. See formal/SCOPE.md."
+  "fresh_kernel_module": "PhotonGeometry",
+  "scope": "Constructed Poisson mixtures and concrete finite phase geometry, harmonic invariants, and parameter substitution. Gaussian intensity-moment derivation remains unformalized. See formal/SCOPE.md and formal/GEOMETRY.md."
 }

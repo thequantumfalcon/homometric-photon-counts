@@ -5,7 +5,7 @@
 3. For the reference root count, inspect the compact inverse-gain proof and tail cover linked in the ledger. Check how the bounded-gain and large-gain arguments join at $1/6$.
 4. For the new local theorem, check Fourier normalization, the uniform small/large-gain bounds, and the compactness/implicit-function argument. The rational checker alone does not prove those analytic implications.
 5. For the necessary count, check the affinity bound, product law, total-variation testing inequality, strict error criterion, and integer rounding. The independently coded Taylor and Arb checks address different numerical routes.
-6. Inspect each Lean theorem's hypotheses. Compare the archived tower premises with the [new construction](../formal/SCOPE.md), which derives them for measurable Poisson mixtures. Check the still-explicit concrete geometry/intensity identities and the distinction between a constructed marginal law and a joint physical model.
+6. Inspect each Lean theorem's hypotheses. Compare the archived tower premises with the [new construction](../formal/SCOPE.md), which derives them for measurable Poisson mixtures. The [geometry extension](../formal/GEOMETRY.md) proves the finite phase algebra and parameter substitution. Check the remaining Gaussian intensity-moment premises and the distinction between a constructed marginal law and a joint physical model.
 
 Criticism should identify a specific implication, assumption, certificate entry, or reproduction failure. A successful file hash proves identity, and a successful formal check proves its exact statement; neither validates a physical detector.
 

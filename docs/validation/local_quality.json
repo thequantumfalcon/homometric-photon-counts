@@ -4,7 +4,7 @@
     {
       "name": "stage",
       "returncode": 0,
-      "log_sha256": "9aa64d38050471cd65a129a897b2fbea6275d32ab9c2cfdaefb43d409b2c1917"
+      "log_sha256": "926db88cbda7ff0dad531b3aa8147137f87bdea2db07ff7e36c60be1e3cb9f91"
     },
     {
       "name": "ruff-check",
@@ -44,7 +44,7 @@
     {
       "name": "staged-secret-scan",
       "returncode": 0,
-      "log_sha256": "f950005b6757913496851c317fd9643226ae82c5c0cfccb09a1177c7dad404dc"
+      "log_sha256": "8bde8d84e873cdad144f9d0fe062e8fb04ec69008c2dbbaec49b4afac304352f"
     },
     {
       "name": "public-integrity",
