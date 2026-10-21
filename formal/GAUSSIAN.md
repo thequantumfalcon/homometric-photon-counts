@@ -2,7 +2,7 @@
 
 The Gaussian extension proves a general finite intensity-moment formula, a correct site-by-site recurrence, and the Gaussian/Poisson count-model construction for the two phase lists. The remaining formal mathematical step for count-law distinction is the concrete coefficient calculation: equality of the first three intensity moments and the stated fourth-moment difference. The integration rule and recurrence are no longer assumed premises.
 
-## Coverage of the seven modules
+## Coverage of the eight modules
 
 | Module | Mathematical content |
 | --- | --- |
@@ -13,6 +13,7 @@ The Gaussian extension proves a general finite intensity-moment formula, a corre
 | [PhotonGaussianModel.lean](PhotonGaussianModel.lean) | Constructs measurable nonnegative detector rates and marginal Poisson-mixture count laws. Proves their factorial-moment identity and specializes the previous distinction theorem to the concrete Gaussian intensities. |
 | [PhotonGaussianAppend.lean](PhotonGaussianAppend.lean) | Proves the field identity for an appended site and transports the finite Gaussian integral to the previous sites times one independent Gaussian coordinate. |
 | [PhotonMixedRecurrence.lean](PhotonMixedRecurrence.lean) | Proves the site-by-site mixed-moment recurrence, its recursive correctness for arbitrary finite complex weights, and equality of its diagonal entries with the real intensity moments. |
+| [PhotonMomentPolynomial.lean](PhotonMomentPolynomial.lean) | Represents the recurrence as a polynomial in t, proves equality with the actual intensity integral at t = exp(-s/2), bounds its degree, and proves that 33 distinct evaluations determine each difference through order four. |
 
 ## The finite moment formula
 
@@ -57,7 +58,7 @@ $$R'(a,b)=\sum_{i=0}^{a}\sum_{j=0}^{b}{a\choose i}{b\choose j}R(a-i,b-j)z^i\over
 
 For orders `0 <= a,b <= 4`, the recurrence only references those same 25 entries. Updating such a table across 63 sites entails 14,175 summands before coefficient arithmetic. This describes the mathematical recurrence, not a verified implementation of memoization or the archived Python optimizations. The Lean definition uses complex values and real exponentials and is noncomputable; a checked polynomial/number-field evaluator and its concrete output are still needed. In particular, the unit-modulus simplifications in the archived [`direct_site_moments`](../evidence/homometric-photon-counts/science_extension/finite_detection/homogeneous_moment_engine.py) implementation are not automatically certified by the recurrence theorem.
 
-The existing [33-node certificate program](../evidence/audit-2026-10-20/moments/symbolic_fourth.py) offers an alternative route to the remaining concrete calculation, but its formal interpretation would also require its degree bound, distinct evaluation nodes, exact arithmetic, and connection to the complex phase definitions. Its nodes above one are polynomial evaluations, not Gaussian parameter values. That certificate interpretation is not currently a Lean theorem.
+The existing [33-node certificate program](../evidence/audit-2026-10-20/moments/symbolic_fourth.py) offers an alternative route to the remaining concrete calculation, and the new polynomial module now proves its structural prerequisites. `momentPoly_degree` bounds mixed order (a,b) by a²+b², hence the fourth diagonal difference has degree at most 32. `difference_eq_of_33_nodes` proves equality to any target of degree at most 32 from equal evaluations at 1,...,33. `eval_momentPoly_intensity` identifies the value at exp(-s/2) with the actual intensity integral. Nodes above one are polynomial evaluations, not Gaussian parameter values. The 33 concrete arithmetic equalities are still hypotheses; the archived Python certificate is not treated as a Lean proof of them.
 
 ## Evidence and interpretation boundaries
 
@@ -67,4 +68,8 @@ The count law is a constructed marginal probability measure. The extension does 
 
 The [source manifest](manifest.json) identifies the maintained formal sources. Module compilation, axiom audits, and a complete fresh-kernel replay are distinct checks; the [validation record](../docs/validation/README.md) records executed runs. Earlier geometry and mixture receipts describe their earlier source sets and do not certify later additions. The checker is Lean's kernel, not Lean4Lean or external human review.
 
-The earlier [Gaussian replay](../docs/validation/gaussian_formal_replay.json) recompiled twelve modules, passed 73 standard-axiom audits, and completed the fresh-kernel check of `PhotonGaussianModel`. It predates the two recurrence modules. The maintained replay now covers fourteen modules and 82 audits with target `PhotonMixedRecurrence`; consult the validation record for its completed execution status.
+The earlier [Gaussian replay](../docs/validation/gaussian_formal_replay.json) recompiled twelve modules, passed 73 standard-axiom audits, and completed the fresh-kernel check of `PhotonGaussianModel`. It predates the two recurrence modules. The maintained replay now contains fifteen modules and 92 audits with target `PhotonMomentPolynomial`; consult the validation record for executed coverage. The fourteen-module receipt below predates the polynomial addition.
+
+The [executed recurrence replay](../docs/validation/recurrence_formal_replay.json) recompiled all fourteen modules, passed 82 standard-axiom audits, and completed the fresh-kernel check of `PhotonMixedRecurrence` and its full imported environment. This extends the earlier twelve-module replay to the proved compression recurrence.
+
+The [executed polynomial replay](../docs/validation/polynomial_formal_replay.json) recompiled all fifteen modules, passed 92 standard-axiom audits, and completed the fresh-kernel check of `PhotonMomentPolynomial` and its imported environment. Concrete arithmetic remains a separate proof obligation.

@@ -53,8 +53,14 @@
       "source": "PhotonMixedRecurrence.lean",
       "sha256": "ad3bb594affd4e662e769cc079ca5ac224017ae9f394c723545d942396bb3d09",
       "axiom_audit_count": 7
+    },
+    {
+      "name": "PhotonMomentPolynomial",
+      "source": "PhotonMomentPolynomial.lean",
+      "sha256": "12f178bf7c193a2ae304ec6a2d41fa8527eee1993ef2c4134151751ae8a0c119",
+      "axiom_audit_count": 10
     }
   ],
-  "fresh_kernel_module": "PhotonMixedRecurrence",
-  "scope": "Constructed Poisson mixtures, concrete phase geometry, Gaussian phase expectations, all-order finite intensity moments, an explicit Gaussian/Poisson model, and correctness of the site-append mixed-moment recurrence. The concrete 63-site coefficient evaluation in a checked polynomial/number-field representation remains unformalized. See formal/GAUSSIAN.md."
+  "fresh_kernel_module": "PhotonMomentPolynomial",
+  "scope": "Constructed Poisson mixtures, concrete phase geometry, Gaussian intensity moments and their site-append recurrence, a polynomial representation with degree bounds, and reduction of the fourth-order identities to 33 exact evaluations. The concrete 63-site coefficient calculation remains unformalized. See formal/GAUSSIAN.md."
 }

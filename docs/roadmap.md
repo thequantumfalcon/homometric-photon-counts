@@ -2,7 +2,7 @@
 
 | Open target | Evidence needed to close it |
 | --- | --- |
-| Complete formal model chain | Instantiate the proved Gaussian moment recurrence with verified polynomial/number-field arithmetic to establish the concrete 63-site first-three-moment matches and fourth-gap polynomial; formally bind the phase definitions to archived coordinates; express the joint phase/count interpretation; bind numerical certificates to the decision theorem |
+| Complete formal model chain | Evaluate the proved Gaussian moment polynomial with verified exact arithmetic to establish the concrete 63-site first-three-moment matches and fourth-gap polynomial; formally bind the phase definitions to archived coordinates; express the joint phase/count interpretation; bind numerical certificates to the decision theorem |
 | Quantitative root stability | A certified full parameter rectangle preserving all four simple roots, including the compact gain interval |
 | Global parameter root count | Exclusion of additional roots across all claimed phase widths/backgrounds, not a finite scan |
 | Optimal testing and design | Bounds for the exact observation/risk criterion and certified exclusion of competing designs; pooled bins do not automatically bound full counts |
