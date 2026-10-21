@@ -1,0 +1,21 @@
+{
+  "status": "PASS_COMPILE",
+  "modules": [
+    {
+      "module": "PhotonGaussianAppend",
+      "source_sha256": "d77fefb08e9682ce81667fb25b94b8719783a5a9bf536e324f0b283b2e448bd8",
+      "axiom_audits": 2,
+      "log_sha256": "0918692b7f4edd445eccd59299119477acb5d6914c7df8208a99e68eb492d7d9",
+      "compile_returncode": 0
+    },
+    {
+      "module": "PhotonMixedRecurrence",
+      "source_sha256": "ad3bb594affd4e662e769cc079ca5ac224017ae9f394c723545d942396bb3d09",
+      "axiom_audits": 7,
+      "log_sha256": "011c2afe7e86c3ee323c84cdebb9f66a56a14f7dd1d1bcf142d2bb4f41bf3428",
+      "compile_returncode": 0
+    }
+  ],
+  "fresh_kernel_in_this_receipt": false,
+  "scope": "Two recurrence modules compiled against the preceding checked Gaussian chain; nine audits contain only standard axioms. The separate full fourteen-module fresh replay was still pending at publication preparation."
+}

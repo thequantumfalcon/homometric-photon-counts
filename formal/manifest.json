@@ -11,8 +11,50 @@
       "source": "PhotonGeometry.lean",
       "sha256": "88667df23f32776eed39a38d96231b22d8c80f0945731acce743e1ecbf160300",
       "axiom_audit_count": 20
+    },
+    {
+      "name": "PhotonGaussianPhase",
+      "source": "PhotonGaussianPhase.lean",
+      "sha256": "d60b521a8353ab8614c3409dc4c62ba635371428634774a08dc146a431f693e7",
+      "axiom_audit_count": 12
+    },
+    {
+      "name": "PhotonIntensityBounds",
+      "source": "PhotonIntensityBounds.lean",
+      "sha256": "3b641a7131fcb2f34c6c66fa74df8c05e3d82cc02bd350d85a4c68dc8cebadde",
+      "axiom_audit_count": 10
+    },
+    {
+      "name": "PhotonIntensityExpansion",
+      "source": "PhotonIntensityExpansion.lean",
+      "sha256": "e38fa60c3f792cb24d89643d90a5d5097bb63c67aed77b6bae91d7c5f308bb39",
+      "axiom_audit_count": 4
+    },
+    {
+      "name": "PhotonGaussianIntensity",
+      "source": "PhotonGaussianIntensity.lean",
+      "sha256": "22440bdb3421d842d8fa40a2fa95fafefe8b6edc674f7ae12b1e81a8a615bdb7",
+      "axiom_audit_count": 3
+    },
+    {
+      "name": "PhotonGaussianModel",
+      "source": "PhotonGaussianModel.lean",
+      "sha256": "573252cd4344a2620dd224bc639ae510c6c7910aeb7caee8ec441485adb5c2b4",
+      "axiom_audit_count": 6
+    },
+    {
+      "name": "PhotonGaussianAppend",
+      "source": "PhotonGaussianAppend.lean",
+      "sha256": "d77fefb08e9682ce81667fb25b94b8719783a5a9bf536e324f0b283b2e448bd8",
+      "axiom_audit_count": 2
+    },
+    {
+      "name": "PhotonMixedRecurrence",
+      "source": "PhotonMixedRecurrence.lean",
+      "sha256": "ad3bb594affd4e662e769cc079ca5ac224017ae9f394c723545d942396bb3d09",
+      "axiom_audit_count": 7
     }
   ],
-  "fresh_kernel_module": "PhotonGeometry",
-  "scope": "Constructed Poisson mixtures and concrete finite phase geometry, harmonic invariants, and parameter substitution. Gaussian intensity-moment derivation remains unformalized. See formal/SCOPE.md and formal/GEOMETRY.md."
+  "fresh_kernel_module": "PhotonMixedRecurrence",
+  "scope": "Constructed Poisson mixtures, concrete phase geometry, Gaussian phase expectations, all-order finite intensity moments, an explicit Gaussian/Poisson model, and correctness of the site-append mixed-moment recurrence. The concrete 63-site coefficient evaluation in a checked polynomial/number-field representation remains unformalized. See formal/GAUSSIAN.md."
 }

@@ -9,6 +9,8 @@ Executed on Windows with Python 3.11.9, during 20–21 October 2026.
 | Public formal replay | [Five modules recompiled](formal_replay.json), with thirteen standard-axiom audits; no fresh-kernel rerun in this particular public replay |
 | Measurable-mixture extension | [Six modules and eighteen audits passed](mixture_formal_replay.json), including a fresh-kernel check of the extension and its imported environment |
 | Concrete geometry extension | [Seven modules and 38 audits passed](geometry_formal_replay.json), including a fresh-kernel check of the concrete geometry and its imported environment |
+| Gaussian intensity and model extension | [Twelve modules and 73 audits passed](gaussian_formal_replay.json), including a fresh-kernel check of `PhotonGaussianModel` and all imported proof modules |
+| Recurrence source compilation | [Two added modules and nine standard-axiom audits passed](recurrence_compile.json); the full fourteen-module fresh-kernel replay is pending and is not certified by this receipt |
 | Maintained tooling and source | [Local quality checks passed](local_quality.json), including workflow audits, three attribution-policy tests, two extraction-path regressions, pre-commit and staged secret scanning |
 | Initial GitHub publication | [Executed remote checks and settings](github_initial.json): Windows/Ubuntu packaged checks, all ten Arb stages and combined `ci` passed at the named commit; CodeQL Python/Actions setup passed |
 | Lean4Lean compatibility | [Local probe failed on the installed object format](lean4lean_compatibility.json); no project-proof check was performed |

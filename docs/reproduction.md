@@ -25,15 +25,15 @@ The extended replay runs ten checks: exact endpoint constants, two sample-bound 
 
 ## Formal evidence
 
-The Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. The receipts record fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative.
+Archived Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. Those receipts record historical fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative. Current extensions live under `formal/`, with execution coverage recorded separately in the validation directory.
 
-Compiled objects and the large toolchain are not distributed. With the already built pinned Windows runtime and mathlib checkout, run:
+Compiled objects and the large toolchain are not distributed. The mathlib build must include `Mathlib.Probability.Distributions.Gaussian.Real` and its dependencies; the replay command does not fetch missing compiled imports. With the already built pinned Windows runtime and mathlib checkout, run:
 
 ```sh
 python tools/replay_formal.py --runtime PATH_TO_LEAN_4_35_WINDOWS --mathlib PATH_TO_PINNED_MATHLIB --output build/formal-check
 ```
 
-This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 38 axiom audits before reporting success. It recompiles the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), and the [concrete geometry extension](../formal/GEOMETRY.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check the geometry module and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. It is a pinned Windows replay, not a claim of cross-platform formal CI or a complete end-to-end Lean theorem.
+This helper verifies runtime binary hashes, dependency commits, tracked source cleanliness, scientific source hashes and all 82 axiom audits before reporting success. It recompiles fourteen modules: the five archived moment-bridge modules, the [measurable-mixture extension](../formal/SCOPE.md), the [concrete geometry extension](../formal/GEOMETRY.md), and seven [Gaussian/intensity/recurrence modules](../formal/GAUSSIAN.md). The extensions have a separate source hash manifest. Add `--fresh-kernel` to check `PhotonMixedRecurrence` and its imported environment, including the earlier proofs. No dependency is downloaded and no global Git setting is changed. The historical `SCOPE.txt` paths describe the earlier local workflow; this helper is the public entry point. See the [validation record](validation/README.md) for completed execution coverage. It is a pinned Windows replay, not a claim of cross-platform formal CI or a complete end-to-end Lean theorem.
 
 ## Validate the distributed artifact
 

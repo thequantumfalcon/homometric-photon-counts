@@ -29,7 +29,7 @@ $$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim
 | Exactly four positive blind gains | At $t=1/2$ and $b=0$, the event $N=4$ has equal probability under the two structures at exactly four simple positive gains. The final root lies in $(0.2934841,0.2934842)$. The proof includes every arbitrarily large gain. |
 | Four roots persist locally | Exactly four simple roots persist for sufficiently small changes in phase variance and nonnegative background. This is an existence theorem; a full usable neighborhood radius has not been computed. |
 | Necessary and sufficient counts | At $s=2\log2,\eta=1/20,b=0$, with iid observations of the fixed bins $0,\ldots,11,\geq12$, any test with each error below 5% needs at least **28,091,647,285,174** observations. A certified score succeeds with **102,399,876,723,169**. The ratio is below 3.646; the optimum is unknown. |
-| Focused formal proofs | Lean checks concrete phasor geometry and harmonic invariants, parameter substitution, selected algebra, Poisson factorial moments, background cancellation, and a measurable mixture construction with its factorial tower identity. The Gaussian intensity-moment derivation remains unformalized. |
+| Focused formal proofs | Lean sources prove concrete phase geometry, Gaussian phase expectations, an all-order intensity-moment formula and site-by-site recurrence, integrability, and the constructed Gaussian/Poisson count law. Exact polynomial and number-field evaluation for the specific 63-site moment matches and fourth-gap identity remains an open formal step. |
 
 A blind gain concerns the single event $N=4$, not equality of the full count laws. All sample counts above are for the specified binned iid experiment; they do not describe arbitrary detectors, temporal dependence, unknown calibration, or an optimized design.
 
@@ -40,6 +40,8 @@ The curve is illustrative numerical quadrature. The endpoint signs and interval 
 The [claim ledger](docs/claims.md) links each result to its actual proof, certificate, replay, and remaining assumptions. The [model guide](docs/model.md) separates this homogeneous phase model from the archived historical extensions.
 
 The [validation record](docs/validation/README.md) distinguishes local formal checks from executed GitHub CI. The [verification-tool status](docs/verification-tools.md) separates completed checks from possible additional checks.
+
+The [Gaussian formalization](formal/GAUSSIAN.md) derives the general expectation formula and proves a site-by-site moment recurrence for any finite complex geometry. Its concrete exact-arithmetic evaluation remains unfinished; the recurrence does not establish the same separating result for arbitrary structures.
 
 ## Research provenance
 

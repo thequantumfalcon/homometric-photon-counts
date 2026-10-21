@@ -2,13 +2,15 @@
 
 The primary model has two fixed sets of 63 unit phasors, independent centered Gaussian site phases, a time-local conditional Poisson detector, common background, and known parameters for the stated testing result. The intensity satisfies $0\le I\le3969$.
 
-Use $s$ for phase variance, $t=e^{-s/2}$, and $x=t^2=e^{-s}$. The reference point is $s=2\log2,t=1/2,x=1/4$. The [geometry extension](../formal/GEOMETRY.md) proves the exponential substitution and the resulting polynomial identity. Deriving that polynomial as the Gaussian intensity-moment difference remains a separate formal obligation.
+Use $s$ for phase variance, $t=e^{-s/2}$, and $x=t^2=e^{-s}$. The reference point is $s=2\log2,t=1/2,x=1/4$. The [geometry extension](../formal/GEOMETRY.md) proves the exponential substitution and the resulting polynomial identity. The [Gaussian extension](../formal/GAUSSIAN.md) derives an exact finite-sum expression for every intensity moment. Reducing those sums to the specific 63-site moment identities below remains a separate formal obligation.
 
 The intensity moment differences $D_k=E_A[I^k]-E_B[I^k]$ obey $D_0=\cdots=D_3=0$ and
 
 $$D_4(t)=\frac{455015761}{20000}t^8(1-t^2)^5(t^6+3t^4+6t^2+6)>0.$$
 
 For $N\mid I\sim\mathrm{Poisson}(b+\eta I)$, the fourth falling-factorial moment difference equals $\eta^4D_4(t)$. Common background cancels because the first three intensity moments match. Arbitrary preprocessing, detector saturation, dead time, dependent site phases, unequal backgrounds, or drifting parameters require additional arguments.
+
+The formal construction uses a finite product of centered Gaussian laws with variance $s$, the explicit phase lists, and a measurable Poisson mixture with rate $b+\eta I$. It proves $0\le I\le3969$ for both geometries and integrability of every intensity power. Its count-law distinction theorem still assumes the concrete low-order moment matches and fourth-gap identity. The correspondence between the phase lists and archived coordinates is checked computationally; it is not a formal parsing theorem or a physical calibration result.
 
 The fixed testing experiment pools counts at least 12 into one bin. It assumes iid snapshots and known $s,\eta,b$. Its lower bound does not apply to the richer unbinned observation, and its sufficient count does not establish a feasible measurement duration.
 
