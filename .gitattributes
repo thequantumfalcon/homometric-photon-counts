@@ -9,4 +9,5 @@
 *.svg text eol=lf
 # Scientific inventories identify exact bytes. Never normalize their payloads.
 /evidence/** -text
+/formal/*.lean -text
 /docs/** linguist-documentation
