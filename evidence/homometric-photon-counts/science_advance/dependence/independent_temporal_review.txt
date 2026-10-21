@@ -1,0 +1,126 @@
+INDEPENDENT REVIEW OF THE SPECIFIED TEMPORAL-DEPENDENCE EXTENSION
+21 October 2026
+
+Disposition: PASS within the explicitly stated stationary Gaussian AR(1)
+phase and conditionally independent Poisson detector model. No mathematical
+defect was found in the proof or its reported numerical applications.
+This is a separate computational/mathematical review in the present work,
+not external human peer review and not an experimental validation.
+
+Material reviewed
+-----------------
+  temporal_dependence_proofs.txt
+  certify_temporal_dependence.py
+  temporal_dependence_certificate.json
+
+The accompanying independent_temporal_replay.py imports neither the temporal
+producer nor the previous iid-testing producer. It reads their retained JSON
+certificates, verifies hashes, and rebuilds the new arithmetic independently.
+The replay output records the exact producer, certificate, input, and replay
+source hashes so that its scope remains tied to the checked versions.
+
+Analytic review
+---------------
+1. Observable dimension and path comparison.
+The common-phase cancellation is pathwise. Projecting the 63-dimensional
+Gaussian phase to the orthogonal complement of the all-ones vector leaves
+62 standard Gaussian contrasts after scaling, with exactly the same AR
+coefficient. The intensity and conditional count kernel factor through
+these contrasts, justifying dimension 62 rather than 63 in the path KL.
+The conditional Gaussian relative entropy integrates to
+-62 log(1-r^2)/2 per transition. The trace and mean terms cancel under
+stationarity; the initial law is the same. Pinsker under TV=sup event
+probability difference gives the factor 1/2 in the displayed square root.
+The rational replacement -log(1-u)<=u/(1-u) has the correct direction.
+
+2. Transfer of testing bounds.
+Each hypothesis's dependent joint count law is within delta of its iid
+joint law. Averaging two success probabilities costs delta, not 2delta.
+Taking suprema over rules preserves this bound, so the lower endpoint
+properly covers rules that use temporal correlation and know a. Prefix
+consistency proves monotonic optimal success in the retained sample count.
+The result is confined to the regular-spacing experiment; it is not a
+lower bound for observing all intervening counts. The proof distinguishes
+equal-prior average 95% success from separate per-hypothesis success.
+
+3. Covariance and confidence transfer.
+Conditional detector independence removes all off-diagonal emission noise.
+The multivariate Hermite expansion gives the covariance series with terms
+a^(k|alpha|), including signs when a<0. Absolute values give the claimed
+maximal-correlation bound, and summing the geometric series gives
+kappa=(1+a_max)/(1-a_max). Total variance yields the stated refinement with
+uninflated conditional detector variance. These facts are sufficient for
+unconditional Chebyshev bounds and union bounds over prespecified groups;
+no conditional independence after a data-dependent pilot guard is invoked.
+The adjacent three-group calibration design uses fixed guards and thus
+fits this unconditional argument. Tripling every group at a_max=1/2 is
+an exact variance/radius transfer, not an iid approximation.
+
+4. Hermite-rank refinement for the raw mean.
+Differentiating the exact iid-site intensity expectation under a phase mean
+shift produces zero gradient at the common null. Gaussian integration by
+parts therefore kills the first Hermite degree, also in the contrast
+coordinates. The rank-2 factor (1+a_max^2)/(1-a_max^2) is valid for I and
+the conditional mean of N. The proof correctly avoids extending this
+rank claim automatically to higher factorial statistics or geometry errors.
+
+5. All-consecutive score and Cantelli bound.
+Defining the score to be zero above count 24 gives a well-defined statistic
+on the complete count space. The old conditional probability intervals
+are converted to unconditioned probability bounds by the paid one-count
+tail bound. Signed weights are handled by endpoint ordering; a valid
+variance upper bound subtracts a lower bound on the squared mean.
+The common threshold and positive drift use the worst mean endpoints.
+Cantelli with variance at most m*kappa*V gives the stated denominator
+kappa*V+m*d0^2. The tie convention is harmless: A's error is a strict
+lower tail, B's is a weak upper tail, both covered by the weak inequality.
+The ceiling of 19*kappa*V/d0^2 therefore guarantees separate 95% success
+under both structures. This is a sufficient bound for the fixed score,
+not an optimal sample count for dependent data.
+
+6. Frozen-motion obstruction.
+With the phase frozen, the entire count record is a Markov-kernel output
+of one latent intensity, so data processing limits its structural success
+by the one-intensity total variation. Strictly positive wrapped Gaussian
+phase densities remain mutually absolutely continuous after absorbing
+the fixed clean phases. The common intensity map preserves mutual absolute
+continuity; two equivalent probability measures cannot have TV equal to
+one. Thus consistency from indefinitely repeated observations of a frozen
+single realization is impossible. This alone does not prove success is
+below 95% at the saved reference point, and the note correctly says so.
+The retained small-width TV limit supplies widths where even 95% cannot
+be reached. For a fixed finite record, a->1 makes the Gaussian path
+converge to the frozen path; bounded continuous count-kernel probabilities
+converge pointwise. Countable probability mass convergence then gives TV
+convergence. This supports the stated absence of a uniform rate without
+a known bound away from one.
+
+Independent arithmetic replay
+-----------------------------
+The replay passed all five spacing schedules, verified the exact dyadic
+square-root upper enclosures by squaring, checked both transferred success
+endpoints, and checked failure of the previous spacing under the SAME
+two-endpoint sufficient bound. It independently rebuilt the score mean,
+second moment, variance, drift, threshold, ceiling count, and both Cantelli
+errors from the pinned original probability intervals and rational weights.
+The resulting sufficient consecutive sample count is exactly
+
+  2372403589637318817.
+
+It also passed 389 finite identity checks with different constructions:
+40 fraction-free Bareiss determinants; 324 Hermite covariance checks using
+Y=rho X+sqrt(1-rho^2)Z and the Hermite recurrence; and 25 finite variance
+inflation checks using a closed-form geometric derivative sum. These finite
+checks supplement the analytic proofs; they do not replace proofs for all
+sample sizes or Hermite degrees.
+
+Material limits retained
+------------------------
+The review does not rebuild the old iid count-distribution intervals from
+the geometry. That remains an explicit retained input with its earlier
+verification record. The AR model, stationarity, common coefficient bound,
+time-local Poisson detector, and absence of detector memory are assumptions,
+not experimentally demonstrated properties. An estimated autocorrelation
+or shuffled data cannot substitute for those assumptions. No statement of
+research priority, human peer review, physical time feasibility, or an
+exact globally optimal dependent sample integer is made by this review.

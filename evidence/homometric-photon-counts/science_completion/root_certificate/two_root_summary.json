@@ -1,0 +1,72 @@
+{
+  "schema": "fresh-two-root-certificate-summary-v1",
+  "scope": "New complete global proof for the reconstructed original and star controls, not recovery of old certificate bytes.",
+  "exact_positive_root_count": 2,
+  "all_positive_roots_simple": true,
+  "origin_multiplicity": 2,
+  "sign_sequence": [
+    "positive",
+    "negative",
+    "positive"
+  ],
+  "positive_cover_cells": 3,
+  "negative_cover_cells": 9,
+  "original_v_roots": [
+    {
+      "lower_numerator": "1100380576448719013486070772932096568379051580198661249360528673625126202383954",
+      "upper_numerator": "1100380576448719013486070772932096568457227556636451886296327184880116496802982",
+      "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+      "decimal_lower": "9.5030721329631257456241425241601195107606",
+      "decimal_upper": "9.5030721329631257456241425241601195114359"
+    },
+    {
+      "lower_numerator": "226580593110586163612719625383892691539889502503753153948429245456790140961875660",
+      "upper_numerator": "226580593110586163612719625383892691539967678480190944585365043968045131256429220",
+      "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+      "decimal_lower": "1956.7881934162931830464011547470401621927635",
+      "decimal_upper": "1956.7881934162931830464011547470401621934387"
+    }
+  ],
+  "star_v_roots": [
+    {
+      "lower_numerator": "1082632502635029997139521244336417591469712038582553809854713695018269328151955",
+      "upper_numerator": "1082632502635029997139521244336417591546627112174573630065741262543340424273901",
+      "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+      "decimal_lower": "9.3497967759798495239205273221575369380064",
+      "decimal_upper": "9.3497967759798495239205273221575369386708"
+    },
+    {
+      "lower_numerator": "222926067415254128715740276587378293289246123431111974046035225368777396752813150",
+      "upper_numerator": "222926067415254128715740276587378293289323038504703993866246252936302467849067459",
+      "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+      "decimal_lower": "1925.2270935224820026746850070898298369961060",
+      "decimal_upper": "1925.2270935224820026746850070898298369967703"
+    }
+  ],
+  "second_root_common_x_strictly_above_2180": true,
+  "conservative_origin_bound": "F(x)/x^2 > 17/1000 for 0<x<=1",
+  "conservative_monotone_tail_bound": "F_prime(x) > exp(-(189/242972)*x)/1000 for x>=2048",
+  "independent_review_status": "requested; not incorporated in this summary",
+  "artifacts": [
+    {
+      "name": "certify_two_roots.py",
+      "bytes": 19185,
+      "sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631"
+    },
+    {
+      "name": "input_premises.json",
+      "bytes": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+    },
+    {
+      "name": "two_root_certificate.json",
+      "bytes": 590553,
+      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+    },
+    {
+      "name": "two_root_proof.txt",
+      "bytes": 13512,
+      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+    }
+  ]
+}

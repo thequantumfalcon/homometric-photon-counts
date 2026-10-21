@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "imports_producer_or_moment_engine": false,
+  "general_order_four_charge_patterns": [
+    [
+      -4,
+      2,
+      2
+    ],
+    [
+      -4,
+      4
+    ],
+    [
+      -3,
+      3
+    ],
+    [
+      -2,
+      -2,
+      2,
+      2
+    ],
+    [
+      -2,
+      -2,
+      4
+    ],
+    [
+      -2,
+      2
+    ]
+  ],
+  "cauchy_order_seven_charge_patterns": [
+    [
+      -5,
+      5
+    ],
+    [
+      -4,
+      2,
+      2
+    ],
+    [
+      -4,
+      4
+    ],
+    [
+      -3,
+      3
+    ],
+    [
+      -2,
+      -2,
+      4
+    ],
+    [
+      -2,
+      2
+    ]
+  ],
+  "no_nonpairing_charges_through_order_six": true,
+  "partitions_per_orientation": 2940,
+  "complex_T_difference_real": "-455015761/120000",
+  "complex_T_difference_imag_sqrt3_coefficient": "28907930179/4800000",
+  "seventh_gap_at_half": "-601985851803/16384000",
+  "bounded_witness_TV_lower_at_half": "455015761/46910259941745934556172000",
+  "asymmetric_coefficient_real": "-278/2187",
+  "asymmetric_coefficient_imag": "16/243",
+  "cross_family_second_collision": "53587/103987",
+  "cross_family_third_gap_at_collision": "-25087690453913212850809554872899594124966635200/1421711387011936544792839799933222941958356627",
+  "dependency": "Explicit structural power sums and the separately generated third-moment polynomial are premises; the independent review checks their use, not a new order-32 or geometric reconstruction.",
+  "proof_sha256": "f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d",
+  "script_sha256": "4b5a020193a1c1486e83144ebfc6be84ff7901d59b98ae67688002109452084a"
+}

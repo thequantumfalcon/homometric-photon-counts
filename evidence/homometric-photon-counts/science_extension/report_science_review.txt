@@ -1,0 +1,297 @@
+SCIENTIFIC CONSISTENCY REVIEW OF THE EXTENSION REPORT
+20 October 2026
+
+REVIEWED REPORT SNAPSHOT
+
+science_extension_report.tex
+Bytes: 36027
+SHA-256: 636c673b7f4c398fa82c7271a2a10d01623d515cc65a537c6526cf3f9e0d223f
+
+Reviewer: /root/phase_law_extension. I authored the phase-law extension and
+its exact computational checks. This is a report-to-evidence consistency
+review of those results, together with analytic review of the root's
+identifiability and robustness arguments and a consistency check against
+the completed finite-detection certificate. It is not a wholly independent
+reproof of my own phase package, external peer review, or formal verification.
+
+VERDICT
+
+PASS. The full report source was read. After the four notation/transcription
+fixes listed below, no scientific inconsistency or unsupported claim was
+found in this snapshot. The report accurately states the assumptions and
+separates population identifiability, finite known-parameter sample bounds,
+and practical experimental performance. The new extension of joint nuisance
+identifiability to either of the two candidate phase families is valid.
+
+1. GENERAL PHASE-LAW IDENTITY
+
+The complex coefficient is correct:
+
+ Delta4 = 6 Re[kappa40 conjugate(kappa20)^2 (T_A-T_B)].
+
+Conjugation cannot be dropped for a general asymmetric law. The reported
+complex invariant and the three-atom coefficient agree with the final
+exact phase-law results, including the nonzero imaginary coefficient and
+resulting sqrt(3) contribution. The common-null charge classification is
+complete through intensity order four: charge-one blocks vanish, matched
+pairs and the (2,2,-2,-2) pattern use only common magnitudes, and only
+(4,-2,-2) and its conjugate contribute the unmatched invariant. Each has
+three labeled pairings, giving the factor six. The formulas for pure
+second and fourth cumulants are correct.
+
+The symmetric two-point and biased real two-point formulas match the exact
+results. The stated sign ranges, the exceptional zero at m^2=1/3, and the
+absence of a full-law conclusion at that exceptional value are all correct.
+The small-angle parameter s=theta^2 is a variance in the equal-probability
+case, so its fourth-power comparison with Gaussian fifth-power scaling
+uses consistent powers of a variance.
+
+2. WRAPPED-CAUCHY COST ARGUMENT AND SEVENTH MOMENT
+
+The density, circular moments r^abs(k), vanishing higher pure cumulants,
+and formula kappa_(a,1)=(-1)^(a+1)r^(a-1)(1-r^2) are consistent. Every
+surviving charged block has |charge|>=2 and contains both slot signs,
+which gives the budget p>=L+b. Matched pairs agree by homometry. Three
+charged blocks first permit a non-pairing pattern at p=7, with charges
+(4,-2,-2); four blocks require p>=8, and larger block counts cannot evade
+the budget. At p=7 the mixed block sizes must be (5,1),(1,3),(1,3), with
+no slots available for extra charge-zero blocks.
+
+Both the factorial count and the direct labeled-slot count give 2940 per
+orientation, hence the coefficient 5880. The concrete factorization
+
+ Delta7=-(22295772289/1000)r^8(1-r^2)^3
+
+and its rational check at r=1/2 agree with the final output. Strict
+negativity on 0<r<1 proves that the first differing intensity moment is
+exactly seven. The distinction between seventh intensity moment and
+fourteenth field moment is correct. The r=0 uniform full-law erasure and
+r=1 deterministic common-null endpoints are correctly excluded.
+
+The seventh-degree bounded statistic has leading coefficient 4096. With
+moments through six equal, its expectation gap is 4096*|Delta7|/n^14.
+The stated rational TV lower bound agrees with this calculation. The
+unique maximum at r^2=4/7 optimizes that moment gap and bound only, as the
+report explicitly states.
+
+3. PHASE-FAMILY IDENTIFICATION
+
+At the common null, means are n(1-t^2) and n(1-r^2), so equal means force
+t=r. The second-moment difference factorization and its sole interior
+zero x0=53587/103987 match cross_family_results.json. The reported exact
+negative third-moment gap at that point also matches. Since both candidate
+geometries have identical first three moments within either family, these
+statistics identify the phase family without knowing the geometry first.
+The mean then identifies its width parameter, and the strict fourth or
+seventh gap identifies the geometry. Excluding the uniform/deterministic
+endpoints and the unobservable common phase rotation is essential and is
+done correctly. This is population identifiability within two specified
+families, not a universal phase-law classification theorem.
+
+4. QUANTITATIVE COMMON-LAW ROBUSTNESS
+
+The bounds |kappa20|<=1, |kappa40|<=7, their moment-perturbation bounds
+3*delta and 75*delta, and the product bound 117*delta are correct for
+complex unit-circle laws. Multiplication by 6*|T| yields the factor 702.
+The concrete Fourier-error tolerance and certified gap lower bound match
+my separate independent_phase_robustness_review.txt and the root's exact
+arithmetic results. The proof retains the common iid law, fixed geometry,
+and fixed frequency. The sufficient single-site TV condition uses the
+correct factor two. The report does not mistake this conservative
+neighborhood for a maximal tolerance or a physical calibration budget.
+
+5. JOINT UNKNOWN DETECTOR IDENTIFIABILITY, INCLUDING BOTH PHASE FAMILIES
+
+The compact-signal/common-error convolution theorem needs no error
+moments. Local nonvanishing of the error characteristic function follows
+from continuity at zero; compact support makes the signal difference
+entire, and the complex identity theorem completes the argument.
+
+Both interior Gaussian and wrapped-Cauchy phase laws have full support
+on the circle. Translating by clean phases preserves the torus support.
+The continuous intensity map has compact connected image [0,n^2], and
+every neighborhood of an image point has positive probability. Thus the
+same exact support lemma applies to BOTH phase families.
+
+For Gaussian readout, the quadratic MGF growth identifies sigma^2
+because the compact affine signal contributes only linear log-MGF growth.
+This includes sigma=0. Gaussian deconvolution identifies the affine signal
+law. Its support endpoints identify b and positive eta, because n is known.
+For Poisson readout, equality of count laws identifies the bounded mixing
+law by its entire Laplace transform; its support endpoints likewise
+identify background b and positive eta, including b=0.
+
+The important sequence is therefore:
+  equal complete output laws -> equal detector nuisance parameters and
+  equal intensity laws -> equal means -> equal x -> equal first three
+  moments -> same phase family -> same width -> same geometry.
+
+The cross-family third-moment certificate rules out the sole candidate
+second-moment collision; the strictly nonzero fourth/seventh gap then
+rules out an A/B alias within the identified family. Thus the new report's
+strict uniqueness across family, width, structure, and the specified
+Gaussian or Poisson detector parameters is justified. A common phase
+rotation is expressly not included among identifiable parameters.
+
+The nonuniform-performance examples and unknown-unrestricted-error
+counterexample are also sound. The Gaussian TV bound has the correct
+1/sqrt(2*pi) factor; the Poisson coupling bound is valid. Letting noise
+grow or gain decrease shows absence of a single finite sample size that
+works uniformly over all allowed nuisance parameters. The swapped
+independent-error construction creates identical output laws with
+zero-mean equal-variance errors, but uses different error laws under the
+two competing explanations. The report clearly distinguishes that
+obstruction from injectivity under one common error law.
+
+6. FINITE-DETECTION SECTIONS AND EXACT GAIN BRACKET
+
+I read the complete finite_detection_proof.txt and its independent review.
+I did not regenerate the expensive order-32 moment table or rerun the
+full certificate engine. The completed certificate and its independent
+replay are the supporting evidence for those numbers. I independently
+checked the analytic inequality directions in the report and compared
+all displayed finite enclosures and integer thresholds directly against
+the final exact certificate using rational arithmetic.
+
+The odd/even exponential Taylor bounds hold for all nonnegative inputs
+by the signed remainder; decreasing successive terms are unnecessary.
+The factorial-moment tail bound covers the entire omitted count tail.
+The Hellinger tail factor and the extra one-half factor for TV are correct.
+The report's rounded full-count Hellinger/TV bounds, binary Hellinger
+bounds, probability gap, and separation-ratio bounds strictly enclose
+the certificate's rational intervals in the proper directions.
+
+The four necessary/sufficient sample integers and the fifth explicit
+Bernstein-rule integer match the certificate exactly. The required
+success 19/20 yields the stated constants log(100/19) and log(10) with
+the correct necessary and sufficient inequality directions. The binary
+threshold's orientation is correct because p_A(4)<p_B(4) at the selected
+finite point. The reported counts assume known competing calibrated
+models and independent observations; the report does not transfer them
+to an unknown-nuisance estimation procedure.
+
+The blind-gain interval is copied exactly:
+
+ [61217055127150107/36893488147419103232,
+  38260659454468817/23058430092136939520].
+
+Its width is exactly 1/184467440737095516160. The report's outward
+derivative range strictly encloses the certificate range. Monotonicity
+of each R_G,5 gives the stated uniform enclosure for F' without requiring
+F' itself to be monotone. Strict opposite signs and F'<0 prove one simple
+zero within THIS exact interval, not global uniqueness. At the zero,
+the four-count Bernoulli laws agree exactly while the full laws remain
+different by their fourth factorial moments. The scope limitation on the
+earlier s->0 four-count optimality claim is correct.
+
+The six-moment finite-s bound uses the B sixth moment with the correct
+negative sign. Squaring the positive probability gap and dividing by
+4u gives the Hellinger lower bound; the sufficient sample factor is
+8u*log(10)/ell^2. Substituting the established moment expansions recovers
+the coefficient eta^4*c5^2/(96*m4) and the s^-6 order as stated.
+
+7. CORRECTIONS RESOLVED BEFORE THIS SNAPSHOT
+
+Three literal superscripts `^{,2}` were corrected to `^{\,2}` in the
+general-theorem contribution, asymmetric coefficient, and robustness
+coefficient. The partition denominator's literal comma was replaced by
+multiplication spacing before 2!. These were transcription defects,
+not changes to the underlying derivations. The Shimizu bibliography
+placeholder was replaced with the full article title. All four notation
+fixes and the populated title are present in the bound snapshot.
+
+8. PRESENTATION AND ASSEMBLY STATUS
+
+This reviewed snapshot contains the full scientific sections and no new
+figure insertion yet. The root is preparing a figure and rendering the
+report. This review does not certify the final PDF layout or an eventual
+figure/caption. A later layout/figure insertion changes the source hash;
+record the final rendering snapshot and verify the added caption against
+the already proved results. Any new scientific claim requires review.
+
+The report's assembly description assumes the completed extension and
+foundation PDFs and their reproducibility files will be included. That
+file assembly and byte-integrity verification remain the root's final
+packaging task. Internal reviews are correctly described as AI-assisted;
+no external peer review, formal proof-assistant verification, physical
+experiment, or established historical priority is claimed.
+
+EVIDENCE HASHES
+
+Paths below are relative to science_extension.
+phase_laws/phase_law_proofs.txt
+  f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d
+phase_laws/phase_law_results.json
+  58d6c632902a243463f26fe806b40ee2b2fba141392f44676dd042c1a2455848
+phase_laws/cross_family_results.json
+  ee1c34d302956624701a88a5c168c1df92faa1c69803534aa1fb650c6c96f2d4
+identifiability/identifiability_proofs.txt
+  2902025ac51cb17d419bcf5c254b599961cabdb14394a717886ff4a75cf56f6b
+identifiability/independent_identifiability_review.txt
+  0168a2ed114244f097fa00143f26d39dcc280db55c4fd06de6d85ba65a77a5ef
+identifiability/phase_robustness_proof.txt
+  599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0
+identifiability/independent_phase_robustness_review.txt
+  c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33
+finite_detection/finite_detection_proof.txt
+  cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e
+finite_detection/finite_detection_certificate.json
+  6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8
+finite_detection/independent_finite_detection_review.txt
+  07c2480de4a020b35043b1a093cbe8718417b02ec5c63f26aab25a4c72e4f81d
+
+
+ADDENDUM: FIGURE/CAPTION AND TWO LAYOUT EDITS
+20 October 2026 — Result: PASS.
+
+New reviewed report snapshot:
+  science_extension_report.tex
+  Bytes: 36749
+  SHA-256: 18708979fef329c7b11a58dd1b8b74f50f9b0556b1e52a0e1a5fbf6a8a0376af
+
+The original full scientific review remains bound to source SHA-256
+636c673b7f4c398fa82c7271a2a10d01623d515cc65a537c6526cf3f9e0d223f.
+This addendum preserves that original review and its scope. The earlier
+pending-figure note is resolved for this new snapshot.
+
+I read the inserted caption, separate figure caption, metadata and exact
+data, and visually inspected the supplied PNG. The stated Gaussian phase
+variance s=2 log(2), zero background, n=63, and unnormalized intensity in
+[0,3969] match the model. The data contain 51 rational gain samples, from
+1/700 to 1/500. The A-minus-B probability-gap sign and the negative point
+at eta=1/512 agree with the figure. The joining line is explicitly a visual
+guide and supplies no new root-count claim.
+
+The marked root and derivative intervals agree EXACTLY with the completed
+finite-detection certificate. The caption correctly restricts simplicity
+and uniqueness to the exact rational interval in the report. Both plotted
+Hellinger intervals and their ratio also agree EXACTLY with the certificate.
+The labels near 2.403e-17 and 2.227e-19, the logarithmic vertical scale, and
+the ratio near 107.865 are consistent. The caption correctly identifies a
+ratio of squared Hellinger separations, not an exact sample-count ratio,
+and retains the illustrative-model-settings qualification.
+
+Two subsequent source edits are layout-only. The sufficient inequality
+m>=8u(s)log(10)/ell(s)^2 was moved from inline math to a displayed fraction;
+its expression, direction, and 95% success claim are unchanged. A small-font
+command was added immediately after the bibliography environment begins;
+this changes reference typography without changing reference content.
+
+No new scientific claim is introduced by these additions. This addendum
+does not independently regenerate all 51 grid enclosures or certify final
+PDF pagination. The generating certificate algorithm and root's final
+render/visual checks cover those respective tasks. Any later scientific
+change requires review; later layout-only edits should be recorded with
+their final source hash.
+
+Figure evidence hashes, relative to science_extension:
+figures/four_count_blind_gain_data.json
+  96277c19171d1f55891fb2e4d0c1ffcc969b7b2de79d7c34f6c363a2a72aa8f9
+figures/four_count_blind_gain_metadata.json
+  fccf27d628a88c88a20d0ffa919fdabab60232e83358602fdb7776f5033c07cf
+figures/four_count_blind_gain_caption.txt
+  be851e2182a8ce6842f94e9cd74737bf5fd99f8eb036da88d2847032df352149
+figures/four_count_blind_gain.pdf
+  058eb39e8f93af28c76a238054e360148663822a009c5ceb750a9166df14b249
+figures/four_count_blind_gain.png
+  5e74b0f1f6745ed39a5f9dbc7ac9b7a3c81dbfe948b074d4303ec66db117f091

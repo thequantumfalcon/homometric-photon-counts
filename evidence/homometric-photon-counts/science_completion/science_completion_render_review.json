@@ -1,0 +1,24 @@
+{
+  "source_sha256": "7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92",
+  "renderer_sha256": "7a355218ad1691e9fc24d44ff5c09a2ac2b212043d29ec58aee087a20f62ff65",
+  "presentation_source_sha256": "7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92",
+  "pdf_sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6",
+  "pdf_bytes": 470043,
+  "engine": "native pdfLaTeX; three passes; shell escape disabled",
+  "format_only_replacements": {},
+  "mathematical_expression_replacements": 0,
+  "tex_log_diagnostic_matches": [],
+  "visual_QA_pending": false,
+  "visual_QA_status": "PASS",
+  "page_count": 18,
+  "all_pages_rendered_and_visually_inspected": true,
+  "contact_sheets_inspected": 3,
+  "full_resolution_spot_checks": [
+    5,
+    7,
+    13,
+    14
+  ],
+  "findings": "No clipping, overlapping formulas, missing glyphs, unresolved references, or TeX diagnostic warnings. The full report source is unchanged from the scientific review snapshot.",
+  "render_tool": "Poppler pdftoppm at 110 dpi; all 18 pages; final report PDF unchanged after rendering."
+}

@@ -1,0 +1,172 @@
+INDEPENDENT MATHEMATICAL AND EXACT-ARITHMETIC REVIEW
+Efficient calibration continuation, 21 October 2026 UTC
+
+Verdict
+-------
+PASS within the explicitly stated model and input-dependency scope.
+No unresolved mathematical defect was found in the three-stage procedure,
+the finite reference-point power argument, or the specified AR(1) transfer.
+This is an independent analysis/replay by a separate assistant agent in the
+same session. It is not external human peer review or experimental validation.
+
+Reviewed producer SHA256:
+  0b2d56d568413a154a193205be4df982f489b46d91b404983157783e92464a2f
+Reviewed numerical certificate SHA256:
+  43a52ff1da49eef528b4ab54a59d2a6eb77c891a67ff8bec11c9d5c373ad7521
+Reviewed proof SHA256:
+  d1b355deab720c9a7826f269b6a4e0162cd72ba20f7e28227d5a023cce6544d9
+
+The separate independent_efficient_calibration_replay.py imports neither
+the new producer nor the retained calibration implementation. Its saved
+result records 267 exact checks. The current review and replay remain
+dependent on the preserved geometric moment polynomials and fixed-t moment
+table. They do not independently rebuild the geometry or all high moments.
+
+1. Uniform moment bound
+-----------------------
+At the exact null, F=sum_j z_j(W_j-EW_j), with centered independent site
+terms. In the 2r-factor expansion of |F|^(2r), any site appearing only once
+contributes zero in expectation. For a block of size q>=2, the magnitude
+of its expectation is at most E|W-EW|^q<=2^(q-2), using |W-EW|<=2 and
+E|W-EW|^2<=1. Counting nonsingleton partitions and distinct site assignments
+therefore proves the displayed U_r uniformly over both geometries and the
+whole common iid phase family. No phase-width estimate enters this bound.
+
+The replay obtains the nonsingleton partition numbers from coefficients of
+(exp(z)-1-z)^k/k!, rather than the producer's recurrence. It independently
+reconstructs every U_r through r=8. The falling-factorial square identity
+is checked as a degree-2r polynomial identity at 2r+1 distinct integer
+arguments, separately for r=1,...,4. The count variance bounds safely use
+second moments as upper bounds on variances.
+
+2. Local moment control
+----------------------
+The fixed local phase-parameter box is validated from data before its
+moment bounds are used; it is not assumed a priori to contain the truth.
+For x in this box, coupling to x0=1/4 with the same Gaussian coordinates
+and applying the phase Lipschitz inequality plus Minkowski gives the
+displayed L^(2r) amplitude bound. The logarithmic standard-deviation
+modulus 1/498 is valid because x<1/3 and exp(1)<3 imply -log(x)>1.
+
+The replay verifies the rational reference and Gaussian moment roots by
+integer powers, re-derives the local moments and all count factorial/second
+moment bounds, and verifies the selected minimum with the separate low-order
+polynomial bound. The 10^-6 root grid only makes bounds conservative.
+
+3. Three fixed guards and coverage
+---------------------------------
+The algorithm's infer_histograms input contains three prespecified count
+histograms, a valid known conditional-rate bound B, and optionally the
+specified AR coefficient bound. It receives no true x, eta, b, or geometry.
+The local target box and background cap are fixed tuning choices.
+
+If b exceeds the cap, passing the first guard requires failure of a valid
+unconditional mean confidence event. If b is within the cap, the coarse
+variance bounds are valid as deterministic facts about that parameter
+point. If the truth is outside the fixed local box, passing the second
+guard then requires failure of a coarse moment confidence event. If the
+truth is inside the box, the main-stage variance bounds are valid as
+deterministic facts, and the four main confidence events control all final
+exclusions. This branch-by-branch argument does not assert a new conditional
+law after selection and does not require independent groups.
+
+The error allocation is exactly 1/200+3/200+4*(3/400)=1/20.
+The producer uses upper-enclosed radii, so rounding preserves the guarantee.
+The pilot variance bound B+B^2/4 follows from Var(N)=E Lambda+Var(Lambda),
+E Lambda<=B, and the range bound Var(Lambda)<=B^2/4. The latter follows by
+centering Lambda at B/2 and using its bounded square; it needs no additional
+distribution assumption beyond 0<=Lambda<=B.
+
+The prerequisite eta<=B/3969 uses Gaussian full support, as stated in the
+proof. Merely knowing I<=3969 would not give this implication in a model
+without that support. This distinction is handled correctly.
+
+4. Profiled fourth-moment decision
+---------------------------------
+The replay constructs cumulants through the formal logarithm of the moment
+generating series, rather than inserting the producer's explicit fourth
+cumulant formula. Polynomial division in descending degree independently
+verifies kappa4(I_G)=(1-x)^4 S_G(x), and differentiating these reconstructed
+polynomials gives the saved profile Jacobian numerators.
+
+The profiled prediction
+  T_G(u)=c2(u)^2 R_G(Q^-1(c3(u)^2/c2(u)^3))
+         +4u3u1+3u2^2-12u2u1^2+6u1^4
+is correct. It preserves the dependence between gain, background, and the
+first three moments. Its displayed gradient follows from
+  dc2=(-2u1,1,0),
+  dc3=(-3u2+6u1^2,-3u1,1),
+and R'_G/Q'=V(S'_G V-2 S_G V')/(C H).
+
+The procedure explicitly requires c2>0, c3>0, and the entire ratio interval
+strictly inside (Q(0),Q(1)). Thus the inverse is smooth over the complete
+first-three-moment rectangle, including every line segment used in the
+mean-value argument. The retained calibration routine returns the raw ratio
+interval; it does not silently clip it in a way that would conceal an
+out-of-domain corner. Its geometry/gain/background outer bounds do not
+narrow the gradient domain incorrectly; the gradient calculation uses the
+whole moment-derived c2, c3, and x intervals.
+
+5. Arithmetic enclosures and all-good-data power
+-----------------------------------------------
+The replay reconstructs fresh rational interval arithmetic and checks
+the recorded inversion brackets by applying Q directly to their endpoints
+and adjacent 2^-160 points. It verifies both gain-root enclosures by squared
+endpoint comparisons and reconstructs background endpoints. It checks that
+the coarse envelope lies inside the fixed local design region and that the
+main envelope covers the reference calibration.
+
+The central profile interval has width at most rho_G as stated. Its proof
+uses interval polynomial width <=sum_k k|coefficient_k| times interval
+width, the positive denominator V>=V(0), and the reciprocal-square width
+bound. Multiplication by c2^2 is bounded by B^4 because a midpoint in the
+valid moment box has 0<c2<=f2<=B^2. No finite inverse precision is silently
+treated as exact.
+
+For every main dataset on the simultaneous confidence event, its rectangle
+J lies inside the population envelope E. Its midpoint is at distance at
+most e_r from the true moment and its radius is at most e_r. This follows
+even with endpoint clipping, since the true value belongs to J. Interval
+evaluation and inverse brackets preserve inclusion, so derivative bounds
+over J are no larger than those over E. The wrong predicted fourth moment
+therefore differs from its reference value by at most
+  2 sum_r L_r e_r+rho_G.
+The observed fourth interval is within 2e4 of the true fourth moment. The
+replay independently verifies both positive rejection margins exactly.
+This certifies all datasets on the good event, not a favorable artificial
+histogram or a normal approximation to an experiment.
+
+6. Counts and the temporal extension
+-----------------------------------
+The iid total is exactly
+  101000000010000000000 = 10^10+10^18+10^20.
+At the specified reference point, each true geometry has at least 95%
+probability of correct identification jointly with coverage of the three
+calibration parameters. The source does not claim that this is the optimal
+number, or that this identification probability holds uniformly over all
+calibrations. Its validity/error control is global; its power certificate
+is for the stated local reference point. The code can remain unresolved
+outside its fixed design region.
+
+For the separately specified stationary Gaussian AR(1) phase process,
+the covariance/Hermite proof gives variance inflation
+  (1+a0)/(1-a0).
+At a0=1/2 this is 3. All eight radius arguments are unchanged if all three
+group sizes are multiplied by 3, giving exactly
+  303000000030000000000 observations.
+The same unconditional guard argument applies. A count histogram cannot
+verify the temporal model or the claimed bound a0; these remain assumptions.
+
+7. Material limits
+------------------
+The required observations remain astronomical. This improvement establishes
+a much stronger sufficient bound, not experimental practicality or exact
+optimality. The Gaussian phase family, clean geometry/null, site conditions,
+known B, count model, fixed group assignments, and specified time dependence
+remain substantive assumptions. Optional stopping, arbitrary dependence,
+uncontrolled geometry error, and outside-human review are not supplied by
+this calculation. No actual or stochastic simulated observations are
+represented as evidence in the finite certificate.
+
+Reproduce the exact independent checks with
+  python3 science_advance/calibration/independent_efficient_calibration_replay.py

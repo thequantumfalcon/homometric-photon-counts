@@ -1,0 +1,254 @@
+TARGETED PRIORITY UPDATE: EXACT HOMOMETRIC SELECTION AND JOINT CALIBRATION
+20 October 2026
+
+Status
+------
+This is a documented, limited literature comparison. It is not an exhaustive
+priority determination, an external referee report, or experimental evidence.
+No author, editor, referee, or laboratory was contacted.
+
+The comparison began by reading the earlier notes:
+  science_extension/literature/targeted_priority_update.txt
+  science_completion/literature/iid_gaussian_homometry_novelty_comparison.txt
+The latter was available in the existing complete-record extraction.
+Their remaining access gaps are retained explicitly below.
+
+1. What this pass changes
+-------------------------
+New primary full-text comparisons were added for fluorescence factorial
+cumulant analysis: Muller (2004), Wu and Muller (2005), and Scales and
+Swain (2019), together with the latter paper's 2025 correction. These are
+direct precedents for extracting unknown parameters and distinguishing
+components using a few photon-count factorial cumulants.
+
+Therefore, the new project result should not be described as the invention
+of factorial-cumulant calibration, separation using four photon moments,
+or removing Poisson shot noise through factorial cumulants. The specific
+candidate contribution is the globally invertible map for THIS homometric
+Gaussian-phase family, together with the first-three/fourth-moment structural
+selection theorem and the explicit confidence procedure.
+
+The Ainsleigh (2017) full-text access gap remains. Its official abstract and
+bibliography were rechecked. The project's intensity is algebraically a
+special case of the wrapped-variable quadratic forms described there.
+
+No exact earlier statement of the project's common-null theorem or its
+specific monotone calibration polynomial was found in the passages inspected
+in this pass. That is a report of the search/read scope, not proof of absence.
+
+2. Freeze the claims before judging their priority
+--------------------------------------------------
+C1. For the supplied two finite, unit-weight homometric geometries at a
+common clean null, identical independent Gaussian site phases give equality
+of the first three SINGLE-FREQUENCY RAW INTENSITY MOMENTS and a nonzero
+fourth-moment difference for every finite positive variance.
+
+C2. The fourth-moment difference selects the real diagonal bispectral
+invariant Re[M4 conjugate(M2)^2] with the stated exact Gaussian coefficient.
+The invariant itself is familiar. The proposed contribution is the precise
+measurement-order cancellation and coefficient for this experiment.
+
+C3. For the two supplied 63-site candidates and N|I~Poisson(b+eta I),
+the first three photon factorial cumulants identify x=exp(-s), eta, and b:
+
+  c3^2/c2^3 = C(x)^2/V(x)^3.
+
+The project proves that this ratio is strictly increasing on 0<x<1 by
+checking all coefficients of 2C'V-3CV' are positive. The fourth factorial
+moment then identifies the structure. This is a global population inversion
+for the stated family, not a claim about arbitrary unknown phase laws.
+
+C4. Truncation plus simultaneous bounded-moment confidence intervals gives
+a fixed-sample joint confidence procedure with an 'unresolved' outcome.
+The reported m=10^36 example is an explicit sufficient existence result,
+not an optimized or practically demonstrated acquisition requirement.
+
+C5. Strict detector ordering, the infinite-gain limit, interior width-optimum
+existence, and the finite-root theorem are applications of probability,
+analysis, and established external theorems. Their application and exact
+certificates may be useful parts of the project; no broad method-priority
+claim is justified merely by deriving them here.
+
+3. Claim-level comparisons with inspected primary sources
+---------------------------------------------------------
+R13. Sylvain Ravy, "Homometry in the light of coherent beams,"
+Acta Crystallographica A 69 (2013), 543-548.
+DOI: https://doi.org/10.1107/S0108767313022733
+Author preprint: https://arxiv.org/html/1303.3792v3
+Read in this pass: sections III-V and their definitions of Bragg, diffuse,
+and coherent homometry; speckle-intensity distributions and four-point order.
+The arXiv version history is March 2013; a regenerated 2026 HTML body date
+must not be treated as its publication date.
+
+The paper distinguishes structures with matching diffuse diffraction through
+different speckle statistics, including Rudin-Shapiro/Bernoulli comparisons.
+It also separates this situation from complete coherent homometry of a fixed
+basis. Thus the broad statement that fluctuations can expose information
+hidden by mean diffraction is prior art. Its inspected comparison is not
+the present pair of finite exactly clean-homometric geometries subjected
+to the same Gaussian phase law at one common null. Spatial four-point
+correlations and fourth raw moments of one intensity are distinct objects.
+This supplies close context for C1-C2, not an external proof of them.
+
+A17. Phillip Ainsleigh, "A Method for Computing Moments of Quadratic Forms
+Involving Wrapped Random Variables," SIAM Journal on Matrix Analysis and
+Applications 38(2) (2017), 554-573.
+DOI and official page: https://doi.org/10.1137/16M1082019
+https://epubs.siam.org/doi/10.1137/16M1082019
+Read: official abstract, metadata, bibliography. Full-text endpoint:
+https://epubs.siam.org/doi/pdf/10.1137/16M1082019
+It was inaccessible in this pass. Author/title/DOI and institutional-domain
+searches did not supply a usable primary full text.
+
+The abstract describes analytic higher moments of quadratic forms in
+independent wrapped variables, using characteristic functions and matrix
+symmetries, with wrapped-normal examples. The direct project specialization
+is our algebraic inference: W_j=exp(i theta_j), a=conjugate(z), and
+I=|z^T W|^2=W^*(a a^*)W. It is a rank-one Hermitian positive quadratic form.
+Hence analytic finite wrapped-phase intensity-moment computation cannot be
+claimed as a new general method. Whether the unread article already implies
+C1-C2 as an immediate specialized corollary remains an open comparison.
+
+S25. Kenji Shimizu, "Process-based modelling of nonharmonic internal tides
+using adjoint, statistical, and stochastic approaches - Part 1,"
+Ocean Science 21 (2025), 2233-2253.
+DOI: https://doi.org/10.5194/os-21-2233-2025
+Full text:
+https://os.copernicus.org/articles/21/2233/2025/os-21-2233-2025.html
+Read: Appendix A, equations A2-A3 and A14, plus the finite/limiting-model
+distinction in the discussion.
+
+Its finite-component characteristic function allows deterministic phase
+offsets and component-specific phase spreads, including wrapped-normal
+Fourier coefficients. Choosing fixed unit amplitudes, equal spreads, and
+structural offsets gives this project's random-phasor model; the total
+centering cancels at the common null. That specialization is our inference
+from the formulas. The many-source Gaussian approximation must not replace
+the exact finite model in C1-C2. These inspected sections provide a general
+finite-phasor framework, not the project's moment-cancellation theorem.
+
+M04. Joachim D. Muller, "Cumulant Analysis in Fluorescence Fluctuation
+Spectroscopy," Biophysical Journal 86 (2004), 3981-3992.
+DOI: https://doi.org/10.1529/biophysj.103.037887
+Author-hosted full text:
+https://groups.spa.umn.edu/2-photon/publications/JM04BJ.pdf
+Read: photon-detection theory, equations 1-6 and 12-13, and "Resolving
+species with cumulants" (published pp. 3982-3985).
+
+This paper relates photon factorial cumulants to integrated-intensity
+cumulants and determines brightness/concentration parameters of a binary
+fluorescent mixture from four factorial cumulants, with error analysis.
+Thus using a few photon cumulants for joint parameter inference and
+component resolution is established. Its latent fluorescence-mixture
+parameters differ from the Gaussian phase width, gain, background, and
+fixed homometric geometry in C3. It does not establish the specific
+monotonicity polynomial or our global nuisance inversion.
+
+WM05. Bin Wu and Joachim D. Muller, "Time-Integrated Fluorescence Cumulant
+Analysis in Fluorescence Fluctuation Spectroscopy,"
+Biophysical Journal 89 (2005), 2721-2735.
+DOI: https://doi.org/10.1529/biophysj.105.063685
+Author-hosted full text:
+https://groups.spa.umn.edu/2-photon/publications/BW05BJ.pdf
+Read: equations 1-3, binning-function theory overview, and calibration
+discussion on published p. 2733. All estimation proofs were not audited.
+
+Equation 3 states the photon factorial-cumulant/intensity-cumulant identity.
+The paper treats finite integration time and estimates brightness,
+occupation, and diffusion parameters; it also calibrates higher point-spread
+shape factors. This is prior art for the general principles behind C3 and
+for treating integration-time effects. Its formulas concern integrated
+fluorescence, not the specific fixed-phase-snapshot family. The project's
+snapshot model requires a separate argument when motion occurs during
+the count gate.
+
+SS19. Nathan Scales and Peter S. Swain, "Resolving fluorescent species by
+their brightness and diffusion using correlated photon-counting histograms,"
+PLOS ONE 14(12) (2019), e0226063.
+DOI: https://doi.org/10.1371/journal.pone.0226063
+Full text:
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0226063
+Read: "Moments," "Moments of moments," and analytic parameter-inversion
+subsection, equations 34-36 and 59-62.
+
+The text explicitly uses the fact that a constant Poisson background
+contributes only to the first factorial cumulant. It also analytically
+inverts four factorial cumulants to infer a two-species brightness and
+concentration model, with label exchange accounting for symmetry.
+Thus background removal above order one and analytic few-cumulant inversion
+are prior principles. C3 adds a different family-specific global uniqueness
+argument. The paper's sampling-error approximations do not supply C4's
+explicit fixed-sample simultaneous guarantee for our model.
+
+Correction checked in full:
+Scales and Swain (2025), PLOS ONE 20(3), e0320511.
+https://doi.org/10.1371/journal.pone.0320511
+It corrects funding information, a summation-rendering error in equation 36,
+and supplies previously omitted supporting information. We do not use an
+uninspected variance formula or detector correction from that supplement.
+
+SA95. Theofanis Sapatinas, "Identifiability of mixtures of power-series
+distributions and related characterizations,"
+Annals of the Institute of Statistical Mathematics 47 (1995), 447-459.
+DOI: https://doi.org/10.1007/BF00773394
+Official full text: https://www.ism.ac.jp/editsec/aism/pdf/047_3_0447.pdf
+Read again: Theorem 2.1 and Note 1.
+
+Arbitrary Poisson-mixture identifiability is established there. Recovering
+the rate distribution from the complete count law is therefore prior
+mathematics. It does not by itself show that three factorial cumulants
+recover the particular phase width/gain/background in C3, nor that four
+moments distinguish an arbitrary unknown mixing law.
+
+4. Search log and access limits
+-------------------------------
+Date: 20 October 2026. Both available general web-search systems were used.
+Queries included the following exact or closely constrained formulations:
+
+  "10.1137/16M1082019"
+  "A Method for Computing Moments" "Ainsleigh" pdf
+  "Ainsleigh" "16M1082019" pdf site:mil OR site:gov OR site:edu
+  "Ainsleigh" "wrapped" pdf
+  homometric structures fluctuations diffraction higher order correlations
+  "homometry" "fluctuations" intensity Gaussian
+  "homometric" "intensity moments"
+  "homometric" "wrapped normal"
+  "homometric" "Gaussian" "fourth" intensity
+  "mixed Poisson" "factorial cumulants" "identifiability"
+  "photon" "calibration" "third" "factorial cumulants"
+  "photon counting" "factorial cumulant" "background" "calibration"
+  "factorial cumulants" "unknown" "gain"
+  "wrapped normal" "intensity" "skewness"
+  "Time-Integrated Fluorescence Cumulant Analysis" "pdf"
+  "Cumulant analysis in fluorescence fluctuation spectroscopy" pdf
+  site:groups.spa.umn.edu/2-photon/publications "Cumulant Analysis" "2004"
+
+Some narrow queries returned sparse or irrelevant results. They cannot
+support a negative priority conclusion. Search-result dates were not used
+as publication dates when primary article metadata was available.
+
+The direct PMC pages for the two older fluorescence papers presented a
+browser check; public author-hosted university PDFs supplied the inspected
+full texts. No login, subscription, paywall, or purchase was bypassed.
+
+The older notes' full-text gaps for Barakat 1981, 1983, 1988 and Grunbaum-
+Moore 1995 remain open. This pass did not convert their earlier abstract
+comparisons into full-text reviews. It did not search every patent,
+conference proceeding, thesis, non-English source, or citation descendant.
+
+5. Resulting priority position and next concrete comparison
+----------------------------------------------------------
+The exact finite homometric measurement-selection theorem and its explicit
+Gaussian-phase calibration map remain candidates for a specific contribution.
+There is no basis here for claiming priority for the broad fluctuation idea,
+the bispectral invariant, random-phasor moment computation, Poisson-mixture
+identifiability, or factorial-cumulant inference.
+
+The next priority check is concrete: obtain Ainsleigh's full article and the
+remaining Barakat full texts through legitimate access; specialize their
+moment formulas to W^*(a a^*)W at sum_j z_j=0; compare surviving fourth-
+intensity-moment invariants and coefficients; then check whether the project's
+family-specific three-cumulant inversion already follows from a cited special
+case. Record exact theorem/equation matches and any assumptions that differ.
+Only after this comparison should the final theorem's novelty wording be
+settled with a qualified external reviewer.

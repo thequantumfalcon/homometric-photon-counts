@@ -1,0 +1,186 @@
+CONTINUOUS OU EXPOSURES WITHOUT INDEPENDENT RESETS
+2026-10-20 (America/Denver)
+
+New result and scope
+====================
+This extends the finite-exposure score test to gates on ONE continuously
+evolving stationary Gaussian path at each site. Neither the paths nor the
+latent intensities are reset between observations. Two exact finite sample
+designs are certified: every consecutive gate, and narrow gates separated
+by one correlation time. All statements remain conditional mathematical
+guarantees; no physical model validation or practical acquisition claim is
+made. Original and sealed-audit files are unchanged.
+
+1. Model
+========
+There are 63 independent stationary centered Gaussian OU processes with
+covariance E theta_j(u)theta_j(v)=s exp(-|u-v|/tau), s,tau>0. A continuous
+version can be used. Phasors z_G,j have unit modulus and sum zero. Define
+
+ I_G(u)=|sum_j z_G,j exp(i theta_j(u))|^2,
+ J_i=(1/D) integral_(iH)^(iH+D) I_G(u)du,
+ N_i | all phase paths ~ independent Poisson(b+eta J_i), i=0,...,m-1.
+
+Gate width D>0 and stride H>=D are fixed in advance. Thus gates do not
+overlap; consecutive gates touch only at endpoints of measure zero. The
+conditional Poisson independence is an explicit detector assumption.
+The marginal count law is the same for every gate by stationarity, but
+the count sequence is not independent. eta,b are TOTAL per-gate parameters,
+held fixed in this mathematical design, not physical rates held fixed as D
+changes. The Gaussian family, tau, gain and phase width are known inputs.
+
+2. Whole-gate covariance bound from the OU Markov semigroup
+==========================================================
+Let Z_i=h(N_i) be any bounded real statistic, and let g_i=E[Z_i|phase paths].
+Each g_i is a bounded measurable function of the path inside gate i.
+Conditional emission independence gives Cov(Z_0,Z_k)=Cov(g_0,g_k), k>=1.
+Write X_t for the standardized 63-dimensional OU phase vector. Its stationary
+law is standard Gaussian and its transition over time l has correlation
+r=exp(-l/tau). (Projecting away common phase could reduce the dimension;
+the following dimension-free bound makes that unnecessary.)
+
+For centered square-integrable f,h under the standard Gaussian law,
+
+ |E[f(X_t)h(X_(t+l))]| <= exp(-l/tau)||f||_2||h||_2.       (C1)
+
+To prove this, expand f,h in normalized multivariate Hermite polynomials.
+The OU transition multiplies a coefficient of total degree a by r^a;
+constants are absent because functions are centered. Cauchy-Schwarz bounds
+the resulting sum by r||f||_2||h||_2. The covariance identity for Hermites
+follows directly from the joint Gaussian exponential generating function,
+and L2 completeness extends it from polynomials to general f,h. This is the
+same Gaussian semigroup principle used for snapshot dependence in the
+archive, applied here to conditional expectations of entire gate paths.
+
+Define f(X_D)=E[g_0|X_D] and h(X_(kH))=E[g_k|X_(kH)]. By the OU Markov
+property, the future gate is conditionally independent of the past given its
+starting state, and the intervening transition links X_D to X_(kH).
+Consequently
+
+ Cov(g_0,g_k)=Cov(f(X_D),h(X_(kH))).
+
+This identity also holds when H=D,k=1, where the gap is zero. Conditional
+expectation contracts centered L2 norm, and stationarity gives equal
+Var(g_i). Applying (C1), then total variance, gives
+
+ |Cov(Z_0,Z_k)| <= exp(-(kH-D)/tau) Var(g_0)
+                <= exp(-(kH-D)/tau) Var(Z_0).             (C2)
+
+No false independence between adjacent gates is used. Summing the covariance
+expansion of the sample mean gives, with V any marginal variance upper bound,
+
+ Var(m^-1 sum_i Z_i) <= kappa(H,D) V/m,
+ kappa(H,D)=1+2 exp(D/tau)/(exp(H/tau)-1).                 (C3)
+
+The finite-m sum includes factors 1-k/m; replacing it by the infinite
+positive geometric sum gives (C3). This is a sufficient variance bound,
+not an asymptotic independence assertion. Keeping the emission noise term
+separate could improve it, but is unnecessary for validity.
+
+3. One-gate exposure bounds and score moments
+===========================================
+Use s=2 log(2), eta=1/28, b=0, and the archived fixed rational score w for
+bins N=0,1,2,N>=3. The existing finite-gate coupling, which does not require
+resets for a single observation, proves
+
+ TV(P_D,G,P_0,G) <= eta C sqrt(D/tau),
+ C^2 < Cbar^2=74088/5.                                   (C4)
+
+For completeness, E|F(u)-F(0)|^2 equals
+2*63[1-exp(-s(1-exp(-u/tau)))], because centered site increments have
+independent cross terms. The clean null gives E|F|^2=63(1-exp(-s)).
+Cauchy-Schwarz and integration over a gate imply
+E|J_D-I(0)| <= (4sqrt(2)/3)*63*sqrt(s(1-exp(-s)))*sqrt(D/tau).
+The additive Poisson coupling bounds TV by eta times this expectation.
+At this s, exp(-s)=1/4 and s<7/5, giving Cbar^2 as above.
+
+Choose the following exact fixed gate width and allowance:
+
+ q=D/tau=10^-18,
+ delta=1/200000000=5*10^-9.
+
+The verifier checks eta^2 Cbar^2 q < delta^2, so both one-gate TV distances
+are strictly below delta. No product-law TV comparison is made.
+
+For any bounded function v, changes of expectation are bounded by
+osc(v)*TV, where osc(v)=max(v)-min(v). This follows by subtracting the
+minimum and applying the layer-cake formula to a [0,1]-valued function.
+Use v=w and v=w^2. The archived probability intervals and exact normalization
+give rational enclosures [a_G,b_G] of E_0,G w and an upper bound t_G on
+E_0,G w^2. Therefore
+
+ E_D,G w belongs to M_G=[a_G-osc(w)delta,b_G+osc(w)delta],
+ E_D,G w^2 <= t_G+osc(w^2)delta,
+ Var_D,G(w) <= V_G := t_G+osc(w^2)delta-min_(x in M_G) x^2. (C5)
+
+All four count bins remain in the statistic. There is no cutoff tail.
+The expectation enclosures use exact probability normalization:
+sum_j p_j v_j=v_3+sum_(j<3) p_j(v_j-v_3), selecting the correct interval
+endpoint for each signed coefficient. This retains cancellations crucial
+to the tiny mean differences. The verifier proves the exposed intervals
+remain separated, M_A.lower>M_B.upper.
+
+Define the exact fixed decision threshold and drift
+
+ theta=(M_A.lower+M_B.upper)/2,
+ d0=(M_A.lower-M_B.upper)/2>0.
+
+Choose A iff sum_i w(N_i)>=m theta. Under A the mean exceeds theta by
+at least d0; under B it is below theta by at least d0.
+
+4. Finite conditional errors without independent gates
+======================================================
+Cantelli's inequality and (C3) give under each geometry
+
+ error_G <= kappa V_G/(kappa V_G+m d0^2).                 (C6)
+
+Thus any integer m>19 kappa V_G/d0^2 for both G has error strictly below
+1/20 under each structure. The tie convention is included: under B the
+upper-tail event includes equality, and Cantelli applies to that closed
+event; under A the open lower-tail event is contained in its closed version.
+The test and sample size are fixed before observation. No CLT, independent
+products, optional stopping, or unbudgeted selection is used.
+
+5. Two explicit acquisition designs on a continuous path
+========================================================
+Consecutive gates, H=D:
+ kappa=1+2/(1-exp(-q)) <= 3+2/q.
+Indeed exp(q)>=1+q implies exp(-q)<=1/(1+q), and inversion gives
+1/(1-exp(-q))<=1+1/q. Use the exact rational upper bound 3+2/q.
+The elapsed span from the first gate start to the last gate end is mD,
+or mq in units tau. All gates during this span are used.
+
+One gate per correlation time, H=tau:
+ kappa=1+2exp(q)/(exp(1)-1) < 1+6/[5(1-q)].
+For 0<q<1, exp(q)<=1/(1-q) by positive power series; exp(1)>8/3 by a
+finite positive partial sum. The elapsed span in units tau is m-1+q.
+The OU paths continue to evolve during unrecorded gaps; no reset is assumed.
+
+For each design the verifier chooses
+ m=max_G (floor(19*kappa_upper*V_G/d0^2)+1)
+and directly checks both exact rational error bounds are below 1/20.
+The exact counts, moment bounds, threshold, and time spans are in
+continuous_exposure_verification.json. The very large counts and spans
+are sufficient guarantees, not practical recommendations or lower bounds.
+
+6. Dependencies and unresolved questions
+=======================================
+The original detector-gain certificate supplies exact count-probability
+enclosures and rational score weights. Its SHA256 is checked against the
+release manifest. This continuation does not reconstruct those moments or
+reprove the entire original certificate; those are existing independently
+checked dependencies. It rechecks the new moment, width, covariance-bound
+constants, and final sample inequalities by exact rational arithmetic.
+
+The new substantive conclusion is that independent phase resets are not
+necessary for these finite-exposure guarantees under known stationary OU
+motion and conditional independent emissions. Physical adequacy, achievable
+gain at tiny gates, detector dead time, arbitrary motion, unknown tau,
+nonstationary initialization, adaptive stopping, and global optimality
+remain separate. This is a mathematical derivation plus arithmetic verifier,
+not a proof-assistant formalization or external peer review.
+
+The global blind-gain root-count route was also considered. The existing
+non-effective density-sign argument does not supply a computable near-zero
+density expansion or signed remainder uniform enough for tail exclusion.
+No exact global root count or effective cutoff is claimed by this work.

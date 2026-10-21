@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "lower_order": 64,
+  "higher_order": 96,
+  "exact_equalities": 130,
+  "dependency_hashes_match": true,
+  "native_library_hashes_match": true,
+  "tables": {
+    "fixed_t_moments_order_64.json": "ad3f47da0ff0a6d9206eecd971bf3b2afb375a66089465b3a76ddb6362980b92",
+    "fixed_t_moments_order_96.json": "71b22dfb1fe5f485768e2869e1394188d730c7eb986a2e3fd6b1a010d2abacb2"
+  },
+  "source_sha256": "9ec934823e1398b75f8fc1a49d0433ae72e8e1f8a9b4bb1743141938cabd0889"
+}

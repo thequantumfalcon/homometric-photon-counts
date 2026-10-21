@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "optimize_flag": 0,
+  "rebuilt_order_32_this_run": false,
+  "producer_sha256": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68",
+  "reference_sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32",
+  "checks": [
+    "12 exact signed-packing comparisons",
+    "both 63-site geometry multisets",
+    "33 exact nodes certify all-t first-four-moment identities",
+    "66 exact saved-table comparisons",
+    "corrupted B32 table rejected"
+  ]
+}

@@ -1,0 +1,92 @@
+INDEPENDENT DETECTOR-GAIN MATHEMATICAL AND ARITHMETIC REVIEW
+21 October 2026
+
+Reviewer: a separate assistant agent (/root/blind_and_global).
+This is internal independent checking, not an external human mathematical
+review and not an experimental validation.
+
+Conclusion
+----------
+No mathematical or arithmetic defect was found in the stated higher-gain
+four-bin theorem. The independent replay passed for all five candidate
+gains. At eta=1/28, t=1/2, b=0, the recorded rational additive-score test
+has separate error probability strictly below1/20 under each structure
+with303181164969742 iid snapshots. The given full-count TV/Hellinger lower
+bounds and the232383066797468 sufficient equal-prior likelihood-ratio
+budget also pass the independent check.
+
+Scope of mathematical review
+---------------------------
+1. The signs of both Hermite remainders are valid on the whole nonnegative
+intensity axis. The zero-endpoint upper rule uses a SIMPLE zero node and
+DOUBLE positive nodes. All required moment indices are at most32.
+
+2. Interpolation-node optimality is not assumed. The producer retains
+nonzero derivative weights induced by the rational node choices and
+checks the interpolation conditions exactly. The independent replay
+instead computes the linear weights by confluent Newton divided
+differences, not by the producer's cardinal Hermite basis formulas.
+
+3. The replay encloses exp(-x) by a positive Taylor series for exp(x), a
+geometric remainder, and reciprocal bounds, followed by exact squaring.
+The producer uses the alternating series for exp(-x). Their numerical
+paths are therefore different, while their enclosure signs agree.
+
+4. Every independently reconstructed probability interval is contained
+inside the corresponding saved interval. The bin N>=3 is an exact
+complement, so no unbounded tail is omitted. The replay covers every
+candidate operating point, not just the selected one.
+
+5. The component Hellinger lower bound uses a LOWER absolute difference
+and an UPPER denominator. Summing gives a four-bin lower bound and data
+processing transfers it to the full count law. The replay uses dyadic
+bisection for square roots, rather than the producer's integer-root grid.
+It verifies the TV and Hellinger rational lower endpoints independently.
+
+6. The affinity product inequality gives an equal-prior AVERAGE error
+bound. It does not by itself give separate guarantees under both models.
+The report correctly distinguishes that bound from the larger explicit
+score-test budget, which has separate guarantees.
+
+7. The additive score is fully specified by four rational weights on a
+common grid, so its threshold can be evaluated with integers and an exact
+tie rule. Its approximate likelihood-ratio origin is not needed for the
+proof. The replay independently bounds exp(+w) and exp(-w) for each saved
+weight, then independently maximizes expectations over the four interval
+constraints together with exact probability normalization. This capped
+simplex optimization differs from the producer's elimination of the
+last probability. All independently obtained expectation upper bounds
+are no larger than the saved conservative bounds.
+
+8. With the saved downward-rounded contraction d, the replay checks
+m*d>=3 exactly. A nine-term positive Taylor partial sum already proves
+exp(3)>20. Markov's inequality and independence therefore yield separate
+conditional errors strictly below1/20. No Gaussian approximation or
+asymptotic error estimate is used in that theorem.
+
+9. The selected gain1/28 is the best certified budget among the five
+listed candidates for this particular construction. It is NOT a global
+gain or phase-width optimizer. The previous strict gain-ordering theorem
+means actual full-law separation keeps increasing with gain. The old
+fixed-gain optimal-sample integer remains a distinct open problem. The
+factor-over371 comparison changes gain from1/512 to1/28; both the proof
+and certificate make this explicit. The absolute sample count is still
+very large, and neither physical feasibility nor acquisition cost is
+established.
+
+Dependencies and limits
+-----------------------
+The replay pins and reuses the same preserved exact geometric moment
+table. It does not regenerate all geometric moments independently. The
+physical geometry, iid Gaussian motion, conditional Poisson law, known
+calibration, zero background, and independence between snapshots are
+assumptions of this theorem. Earlier premise derivations remain preserved.
+
+Reviewed file hashes
+--------------------
+certify_detector_gain.py: fbeb092c3a01c5cf78d04f640a51302e4057bb4da8afc91ea3ed3c9aee539150
+interpolation_nodes.json: 6f58dae55972b20bce7628b759b2bb1e292aec94bf8e5060aa4c180d23b26389
+detector_gain_certificate.json: 825760f102f2a84d206dee9a86ad457f1d90e3bf27cc5a4e873b1d38676ac119
+detector_gain_proof.txt: 64b889cd30c24971be786cafc80bb88c9a65beef330a1c75f5dcec764b86e9f0
+independent_detector_gain_replay.py: d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e
+independent_detector_gain_replay.json: 3e489de72a172acca0629ba57776ca43e398d3d606a79690305e16455a01addc

@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: repository-check
+        name: repository and evidence checks
+        entry: python tools/project.py check
+        language: system
+        pass_filenames: false
+      - id: ruff-check
+        name: lint maintained tooling
+        entry: ruff check tools tests
+        language: system
+        pass_filenames: false
+      - id: ruff-format
+        name: check maintained tooling format
+        entry: ruff format --check tools tests
+        language: system
+        pass_filenames: false
+      - id: gitleaks
+        name: scan staged source for secrets
+        entry: gitleaks git --pre-commit --staged --redact --no-banner
+        language: system
+        pass_filenames: false

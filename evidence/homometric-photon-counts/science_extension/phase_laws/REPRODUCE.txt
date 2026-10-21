@@ -1,0 +1,35 @@
+PHASE-LAW EXTENSION — REPRODUCTION
+
+Read phase_law_proofs.txt for the complete mathematical argument and its
+scope. Run from this directory with Python 3 and assertions enabled:
+
+  python phase_law_extension.py
+  python verify_cross_family.py
+
+Only the standard library is required. The accompanying exact_phase_algebra.py
+contains the exact geometry and number-field arithmetic. The script takes
+about 25 seconds in the working environment and writes phase_law_results.json
+beside itself. It performs no network access and changes no earlier records.
+
+The checks include:
+
+* Reconstructing the 63 clean phases for each structure.
+* Verifying the common clean null and the needed homometric power magnitudes.
+* Computing Poisson-kernel intensity moment polynomials through order seven.
+* Proving identical polynomials through order six and the exact seventh gap.
+* Independently recomputing all moments through seven by direct site
+  convolution at r=1/2, without cumulants or structural power sums.
+* Checking the fully complex general phase-law formula with a three-atom
+  asymmetric law whose relevant coefficient is nonreal.
+* Checking equal-probability two-point phases and a biased two-point law
+  whose fourth-moment difference has the reversed sign.
+* Independently rebuilding the Gaussian and Cauchy first-three-moment
+  polynomials and checking that their sole interior second-moment collision
+  has a strictly nonzero third-moment difference. This identifies the phase
+  family and width from population moments within the stated two-family
+  model, independently of which geometry generated the data.
+
+The analytic argument proves the all-parameter statements. The exact
+computational checks test their coefficients and concrete geometry.
+These are internal checks, not external peer review or a proof-assistant
+formalization. The scripts share the same exact arithmetic primitives.

@@ -1,0 +1,196 @@
+HIGHER-GAIN FINITE COUNT TEST WITH EXACT RATIONAL SCORES
+21 October 2026
+
+Result and limits
+=================
+At the same Gaussian phase width s=2 log(2), or t=1/2, but at zero-background
+Poisson gain eta=1/28 instead of eta=1/512, an explicit test using four count
+bins has error strictly below 1/20 under EACH of the two structures with
+
+  m = 303181164969742 independent snapshots.
+
+The four bins are N=0, N=1, N=2, and N>=3. No observation is discarded and
+no unbounded-count tail is dropped. The test is an exact rational weighted
+sum of the four bin multiplicities. Its weights and all bounds are saved
+in detector_gain_certificate.json. This is a known-calibration result.
+
+The full one-snapshot count laws obey
+
+  TV(P_A,P_B) >= 1.3618598454351179908e-7,
+  h^2(P_A,P_B) >= 1.9817192635699361486e-14,
+
+where h^2=sum_k(sqrt(p_k)-sqrt(q_k))^2. The exact lower rational endpoints
+are in the certificate; the shortened values above are rounded DOWN.
+The optimal equal-prior likelihood-ratio test for these four bins has
+average success at least95% with 232383066797468 snapshots, by affinity.
+The larger303181164969742 bound supplies a fixed rational score and the
+stronger separate error guarantee under each structure.
+
+The preceding fixed-gain necessary bound at eta=1/512 was
+112606153000000001. The new explicit sufficient count is over371 times
+smaller. This comparison changes the detector gain; it does NOT improve
+the enclosure of the exact optimal integer at the OLD operating point.
+The absolute number remains extremely large and is not called practical.
+
+Eta=1/28 is a convenient certified operating point. Five rational gains
+were considered, and it gave the smallest proved budget with this chosen
+interpolation and score construction. It is NOT a global detector optimum.
+The already proved strict gain ordering means that the actual full-law
+separation increases further at every larger finite gain. A weakening
+numerical lower bound at larger gain reflects the certificate's looseness.
+The best phase width, full latent maximum, and physical detector capability
+are not determined by this calculation.
+
+1. Preserved model and input
+===========================
+The intensities are those of the supplied63-site homometric pair with iid
+Gaussian phases at t=1/2. Their range is[0,3969]. Conditional on intensity,
+N~Poisson(eta I), with b=0. Snapshots are independent. Every other model
+assumption, including unit site weights and the exact geometry, is retained.
+
+Input moments mu_G,r=E_G I^r through order32 are the exact rational table
+science_extension/finite_detection/fixed_t_moments.json, SHA256
+538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32.
+The producer pins its bytes and evaluates new inequalities. It does not
+claim another independent regeneration of all geometric moments. Earlier
+derivations and their check scope are preserved in the complete record.
+
+2. One-sided interpolation bounds for the count probabilities
+===========================================================
+For k=0,1,2, define the positive measure dnu_G,k(u)=u^k dP_G(u).
+Then p_G,k=eta^k/k! times integral exp(-eta u)dnu_G,k(u).
+
+Given n distinct positive rational nodes x_j, let H match f(u)=exp(-eta u)
+and its first derivative at all nodes, with degree at most2n-1. The usual
+Hermite remainder, obtained by repeated Rolle's theorem, is
+
+ f(u)-H(u)=f^(2n)(xi) product_j(u-x_j)^2/(2n)! >=0.
+
+If J additionally matches f at the simple node0, its degree is at most2n
+and
+
+ f(u)-J(u)=f^(2n+1)(xi) u product_j(u-x_j)^2/(2n+1)! <=0
+
+for every u>=0. Thus integrating H and J against nu bounds its Laplace
+transform from below and above. No optimal quadrature theorem is needed.
+
+The nodes in interpolation_nodes.json are rounded numerical design choices.
+The final certificate uses only their exact rational values, checks that
+they are distinct and positive, and verifies the defining interpolation
+conditions exactly. Its validity does not depend on how the nodes were
+suggested or on their being close to orthogonal-polynomial zeros.
+
+Every expectation of a basis polynomial is a rational linear combination
+of the pinned moments. The derivative weights remain in the calculation:
+one does not drop them as though the nodes were exact quadrature roots.
+The resulting expressions are sums of(a_j-eta b_j)exp(-eta x_j).
+All required moment indices are checked to be at most32.
+
+Exponentials are enclosed by rational arithmetic. Repeated halving reduces
+z>=0 to z<=1. The even Taylor partial sum through90 bounds exp(-z) from
+above, and the odd sum through91 bounds it from below. Square the positive
+interval to undo each halving. Rounding is outward on grid10^-80. No
+floating-point exponential or quadrature value establishes a bound.
+
+3. Four bins retain the entire count sample
+==========================================
+The first three probability intervals enclose P(N=0),P(N=1),P(N=2).
+The last bin has probability exactly
+
+ p_G,3plus=1-p_G,0-p_G,1-p_G,2.
+
+Its interval is computed by this normalization, not by a factorial tail
+bound. All four true probabilities sum exactly to1; their interval boxes
+need not form a Cartesian product of probability distributions.
+
+For any component with p in[a,b] and q in[c,d], put
+delta=max(0,a-d,c-b). Since
+
+ (sqrt(p)-sqrt(q))^2=(p-q)^2/(p+q+2sqrt(pq)),
+
+a valid lower bound is delta^2/(b+d+2sqrt(bd)), with the denominator rounded
+UP. A square-root upper bound is obtained by an integer square root with
+a rational outward increment. Summing these four lower bounds gives a
+lower bound on the four-bin squared Hellinger distance. Coarsening is a
+common Markov map, so this is also a lower bound on the full count distance.
+The analogous summed absolute-gap lower bound yields full-count TV.
+
+4. A finite optimal-test bound without computing enormous products
+=================================================================
+For the exact four-bin laws write rho=sum_j sqrt(p_Aj p_Bj)=1-h^2/2.
+For m independent observations, their affinity is rho^m. Their optimal
+equal-prior average error satisfies
+
+ error_*=(1/2)sum_data min(P_A^m(data),P_B^m(data))
+          <=rho^m/2 <= exp(-m h^2/2)/2.
+
+The rational number2.30259 exceeds log(10), established by a finite exact
+positive Taylor lower bound showing exp(2.30259)>10. Substituting the
+certified Hellinger lower bound and rounding up therefore gives
+232383066797468 as a sufficient m for average success at least19/20.
+This is a sufficient bound, not an assertion that this integer is optimal.
+
+5. Explicit rational score and separate95% guarantees
+=====================================================
+An implementable test need not know the exact count probabilities. The
+producer chooses rational score weights w_j close to half-log likelihood
+ratios of the interval midpoints. The midpoint tail is defined by exact
+normalization. Rational square-root and short logarithm-series calculations
+produce the choices, rounded to the fixed grid10^-50. Their proximity to
+the ideal likelihood ratio motivates them but is not an assumption in the
+proof: the resulting four w_j are fixed rational numbers, verified below.
+
+For bin multiplicities c_j with sum_j c_j=m, choose
+
+ A if sum_j c_j w_j>=0; otherwise B.
+
+This comparison uses four integer multiplicities and rational arithmetic.
+It does not require materializing a product of m rational factors, and has
+an exact tie convention. The same weights work for every m at least the
+stated sufficient budget.
+
+Let a_j be rigorous rational upper bounds on exp(-w_j), and b_j upper
+bounds on exp(w_j), obtained by the same exponential enclosure and positive
+reciprocals. Then E_A exp(-w(N))<=sum_j p_Aj a_j and
+E_B exp(w(N))<=sum_j p_Bj b_j.
+
+Exact normalization is essential to keep these expectations sharp. For
+any four fixed numbers v_j,
+
+ sum_j p_j v_j=v_3+sum_(j=0)^2 p_j(v_j-v_3).
+
+Use the upper probability endpoint when(v_j-v_3)>=0 and the lower endpoint
+when it is negative. This gives an upper bound for every true probability
+vector in the recorded intervals, without pretending its entries vary
+independently while retaining normalization. It also avoids paying an
+unnecessary first-order sum of interval widths near the common value1.
+
+The certificate establishes, for both geometries,
+
+ E_A exp(-w(N))<=1-d,
+ E_B exp(w(N))<=1-d,
+ d>=9.8950737929231446303e-15>0.
+
+The exact saved d is rounded downward. Independence multiplies the moment
+generating functions. Markov's inequality gives
+
+ Pr_A(sum w<0)<=(1-d)^m<=exp(-md),
+ Pr_B(sum w>=0)<=(1-d)^m<=exp(-md).
+
+The selected m is ceil(3/d). An exact positive Taylor partial sum proves
+exp(3)>20, so exp(-3)<1/20. Both conditional errors are therefore strictly
+below1/20. No central limit or asymptotic approximation is used.
+
+6. Reproduction and audit boundaries
+====================================
+Run:
+ python3 science_advance/detector_gain/certify_detector_gain.py
+
+The script uses only Python's standard library, reads the pinned moment
+table and rational node choices, verifies interpolation conditions, and
+reproduces detector_gain_certificate.json. The exploratory node-design
+script is excluded from the proof record; it is not needed for reproduction.
+The independent review/replay verifies the probability expectations using
+a different polynomial interpolation representation and independently
+checks the score and sample inequalities. Neither calculation is an
+external human review or a physical test.

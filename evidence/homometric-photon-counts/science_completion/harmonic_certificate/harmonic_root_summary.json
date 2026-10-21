@@ -1,0 +1,115 @@
+{
+  "schema": "fresh-harmonic-root-summary-v1",
+  "status": "complete_exact_global_count_and_simple_root_localization",
+  "theorem": "For the reconstructed harmonic Gaussian model K_H=63*C/tau, Delta_H(v) has exactly one positive root, which is simple; it is positive before the root and negative after it. The origin is a simple zero.",
+  "scope": "A fresh computer-assisted mathematical proof for the explicitly reconstructed model, independent of historical root certificates. Not a proof-assistant verification, experimental validation, or literature-novelty claim.",
+  "common_coordinate": "x=7*pi^2*v/62",
+  "root_harmonic_v_interval": {
+    "lower_numerator": "12889240143128702804440293442745467632003952297677755946480003493139350262208427",
+    "upper_numerator": "12889240143128702804440293442745467632082128274115546583415802004394340556634489",
+    "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+    "decimal_lower": "111.3136504231491219344800952076923753980843",
+    "decimal_upper": "111.3136504231491219344800952076923753987596"
+  },
+  "root_x_interval": {
+    "lower_numerator": "14362611430697496107032050699092103229990393608656921005202266735996434642894848",
+    "upper_numerator": "14362611430697496107032050699092103230077505894588681251848890635498967305027584",
+    "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+    "decimal_lower": "124.0379332068297490529270708138608804638393",
+    "decimal_upper": "124.0379332068297490529270708138608804645917"
+  },
+  "root_x_rational_bracket": {
+    "lower": "164874693357817570256198287827465271493/1329227995784915872903807060280344576",
+    "upper": "82437346678908785128099143913732635747/664613997892457936451903530140172288",
+    "width": "1/1329227995784915872903807060280344576"
+  },
+  "global_regions": [
+    {
+      "region": "0<x<=1/32",
+      "proof": "degree-24 origin Taylor division",
+      "strict_bound": "F(x)/x>3/1000"
+    },
+    {
+      "region": "1/32<=x<=124",
+      "proof": "13 gap-free positive degree-12 Taylor cells"
+    },
+    {
+      "region": "124<=x<=125",
+      "proof": "strictly negative derivative, opposite endpoint signs; unique simple root"
+    },
+    {
+      "region": "125<=x<=512",
+      "proof": "4 gap-free negative degree-12 Taylor cells"
+    },
+    {
+      "region": "x>=512",
+      "proof": "constant plus all positive tail terms evaluated at 512",
+      "strict_bound": "F(x)<-6/1000"
+    }
+  ],
+  "exact_group_construction": {
+    "signed_unordered_pairs": 3906,
+    "nonzero_groups": 203,
+    "A_rate_groups": 101,
+    "B_rate_groups": 102,
+    "slowest_rate": "1953/60785",
+    "slowest_coefficient": "-3/5",
+    "second_rate": "1953/60743",
+    "second_coefficient": "3/5"
+  },
+  "certification_arithmetic": {
+    "standard_library_only": true,
+    "integer_endpoint_denominator": "2^256",
+    "float_or_Decimal_sign_decisions": false,
+    "exponential_truncations": [
+      80,
+      81
+    ],
+    "pi_arctangent_terms": 96,
+    "root_bisections": 120
+  },
+  "reproduction": {
+    "files_together_in_one_directory": true,
+    "commands": [
+      "python3 build_harmonic_groups.py",
+      "python3 certify_harmonic_root.py"
+    ],
+    "dependencies": "Python standard library; input_model.json supplied in this set. No historical files, network, or third-party packages. Do not use Python -O or PYTHONOPTIMIZE, because assertions implement gates.",
+    "outputs_are_rewritten_by_regeneration": true
+  },
+  "binding_and_result_structure_checks_passed": true,
+  "files": [
+    {
+      "name": "build_harmonic_groups.py",
+      "bytes": 8259,
+      "sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440"
+    },
+    {
+      "name": "certify_harmonic_root.py",
+      "bytes": 18674,
+      "sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07"
+    },
+    {
+      "name": "harmonic_groups.json",
+      "bytes": 45062,
+      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+    },
+    {
+      "name": "harmonic_root_certificate.json",
+      "bytes": 262857,
+      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+    },
+    {
+      "name": "harmonic_root_proof.txt",
+      "bytes": 14490,
+      "sha256": "bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658"
+    },
+    {
+      "name": "input_model.json",
+      "bytes": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+    }
+  ],
+  "summary_hash_location": "Supplied separately by the parent manifest or delivery record; not self-referential.",
+  "no_prior_deliverables_modified": true
+}

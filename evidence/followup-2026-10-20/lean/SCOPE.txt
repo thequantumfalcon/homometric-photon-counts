@@ -1,0 +1,86 @@
+ADDITIONAL FORMAL MOMENT-TRANSFER BRIDGE
+
+This supplement preserves all earlier archives and proof packages. Its four
+new modules compile with Lean 4.35.0 and eight printed theorem audits contain
+only propext, Classical.choice, and Quot.sound. The combined fresh-kernel check
+passed, as recorded in verified_receipt.json, and the default receipt-validation
+and recompilation replay passed, as recorded in default_replay_receipt.json.
+Checked logs and exact fresh-checked compiled objects are preserved in checked/;
+the default compilation logs are preserved in default_checked/. No sorry or
+custom axioms occur in the audited theorem dependency closures.
+
+New checked results:
+
+PhotonMomentTransfer.affine_fourth_moment proves the actual Bochner-integral
+expansion of E[(eta I+b)^4] for a probability measure, given integrability of
+the four intensity powers. common_background_cancellation derives
+  E_A[(eta I+b)^4] - E_B[(eta J+b)^4]
+    = eta^4 (E_A[I^4] - E_B[J^4])
+from equality of the first three moments. Both spaces may differ. No
+assumption of this final cancellation identity appears in either proof.
+
+PhotonPoissonSeries.factorial_moment_hasSum proves, for every natural k and
+real r, the convergent-series identity
+  sum_n exp(-r) r^n/n! (n descending-factorial k) = r^k.
+Its proof cancels factorials, shifts the exponential series by k, and proves
+the omitted prefix is zero. Nonnegative r gives the probability interpretation.
+The short real/series-exponential identification follows the existing local
+mathlib proof in Analysis/SpecialFunctions/Exponential.lean (Apache-2.0,
+Anatole Dedecker and Eric Wieser); unused calculus imports are avoided.
+
+PhotonPoissonMeasure constructs an explicit measure on the natural numbers
+as the sum of exp(-r)r^n/n!-weighted Dirac measures, for r in nonnegative reals.
+poissonLaw_probability proves normalization. poissonLaw_factorial_integrable
+proves integrability for every k. poissonLaw_factorial_moment proves its
+factorial integral is r^k. This uses the same defining expression as the local
+mathlib Poisson measure, but does not import or claim a checked identification
+with the separate mathlib constant.
+
+PhotonMixtureBridge.integrated_factorial_series proves pointwise replacement
+of the proved series under an integral. count_gap_and_distinct_laws composes
+the actual Poisson factorial-integral theorem with background cancellation.
+Given intensity moment matching through order three, the specified fourth
+intensity gap D4(exp(-s)), eta>0, s>0, nonnegative rates satisfying
+rate=eta I+b, and the two explicit tower identities below, it derives both
+  factorialFourth(A)-factorialFourth(B)=eta^4 D4(exp(-s))
+and A != B. The prior polynomial positivity result is imported from the
+sealed PhotonAlgebra source and recompiled in the isolated replay.
+
+THE REMAINING EXPLICIT TOWER PREMISE, FOR EACH STRUCTURE:
+  integral_n (n descending-factorial 4) dA
+    = integral_omega [integral_n (n descending-factorial 4)
+        d poissonLaw(rate(omega))] dmu.
+This is conditional total expectation expressed as integrals. It is NOT
+assumed to equal a rate moment or the desired final difference: those steps
+are proved here. However, constructing a measurable Poisson kernel/joint law
+and deriving this tower identity from that construction remain unformalized.
+No Tonelli/interchange proof is claimed by integrated_factorial_series.
+
+Other remaining links:
+- reconstruction of the physical geometries and Gaussian phase model;
+- derivation of the first-three-moment matching and the exact D4 intensity gap;
+- verifying the concrete intensity integrability and rate representation;
+- connecting numerical MGF certificates to the actual detector scores;
+- physical/model validity, calibration, dependence, feasibility and optimality.
+The separate global-four-root certificate is not a Lean theorem here.
+
+The conclusion applies mathematically to measures A and B satisfying its
+premises. Their use as observed probability laws requires the modeling link;
+the separate single-rate Poisson construction itself is proved normalized.
+No complete geometry-to-decision formalization, human peer review, or
+independently implemented proof-kernel verification is claimed. Lean's fresh
+checker uses the same Lean kernel implementation.
+
+Runtime: the existing pinned Lean 4.35.0/mathlib v4.35.0 distribution and exact
+dependency commits under tool-runtime. All work was local. One additional
+already-downloaded support source, Topology/MetricSpace/CauSeqFilter.lean,
+was compiled in 11 seconds; its 1572 prerequisite build jobs were reused.
+No network requests, downloads, global settings, or sealed-file edits occurred.
+
+Replay:
+  python followup-2026-10-20/lean/replay_local.py --output <fresh-output-dir>
+The default validates the pinned successful fresh receipt and recompiles all
+five modules (four new plus PhotonAlgebra) with thirteen axiom audits.
+Add --fresh-kernel to repeat the expensive combined imported-environment check.
+Both modes require existing local runtime/library assets and refuse output
+inside preserved evidence or runtime folders. The large runtime is not bundled.

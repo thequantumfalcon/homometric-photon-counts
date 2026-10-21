@@ -1,0 +1,401 @@
+EFFICIENT FINITE-SAMPLE CALIBRATION WITH STRUCTURAL IDENTIFICATION
+21 October 2026
+
+Result and scope
+----------------
+This note gives a fully finite, exact-arithmetic sufficient sample count for
+jointly estimating phase width, gain, and Poisson background while deciding
+between the retained homometric structures. At the previously used reference
+point x=1/4, eta=1/512, b=1/100, with a known conditional-rate upper bound B=8,
+the total sufficient number of independent observations is
+
+  10^10 + 10^18 + 10^20 = 101000000010000000000.
+
+The unconditional probability of identifying the correct structure AND
+covering all three true calibration parameters is at least 19/20, for either
+true structure. This improves the previous sufficient bound of 10^36 by a
+factor about 9.90*10^15. Both calculations use the same true reference point
+and known rate bound; neither is an optimal-sample claim. The count remains
+astronomically large and does not establish experimental feasibility.
+
+The procedure receives three prespecified count groups and B. It does not
+receive the true width, gain, background, or structure. A background cap and
+a local design box are fixed internally in advance, then guarded by data.
+The procedure has valid unconditional coverage/error control over the whole
+specified model, but the stated finite identification guarantee is local to
+the reference point. Outside the design region, an unresolved result is
+intended and may persist even with unlimited data. This is not a uniform
+sample bound over all widths or gains.
+
+The input groups may be consecutive. Independence between groups is not
+used separately: each concentration inequality is unconditional. Independent
+observations within the iid model provide the variance-of-average bounds.
+The same calculation also applies to the specified stationary Gaussian AR(1)
+model when its separately proved variance inflation factor is inserted.
+No physical measurements or stochastic simulated data are claimed here.
+
+1. Retained model and population identities
+------------------------------------------
+For G in {A,B},
+
+  F_G(s)=sum_(j=1)^63 z_Gj exp(i sqrt(s) Z_j),
+  I_G=|F_G(s)|^2,
+  N conditional on I_G ~ Poisson(Lambda), Lambda=b+eta I_G,
+
+where the within-snapshot Z_j are independent standard normal variables,
+0<s<infinity, eta>0, b>=0, and sum_j z_Gj=0. All site phasors have modulus
+one. The geometry and its exact retained moment polynomials are fixed.
+Let x=exp(-s), so 0<x<1, and let f_r=E[(N)_r].
+
+The retained calibration theorem proves
+
+  c2=f2-f1^2 = eta^2(1-x)^2 V(x),
+  c3=f3-3f2 f1+2f1^3 = eta^3(1-x)^3 C(x),
+  Q(x)=C(x)^2/V(x)^3,
+
+with Q strictly increasing on [0,1]. The exact V,C and H=2C'V-3CV' are in
+science_frontier/calibration/calibration_proof.txt; all coefficients of
+C,V,H are positive. Thus Q'=CH/V^4>0. The global inverse, gain, and background
+are reconstructed from the first three factorial moments as in that proof.
+The fourth factorial-moment difference at common calibration is
+
+  Delta=eta^4*(455015761/20000)*x^4*(1-x)^5
+              *(x^3+3x^2+6x+6)>0.                         (E1)
+
+The Gaussian full-support property gives ess sup I=3969. Consequently a
+valid known bound Lambda<=B implies eta<=B/3969 and b<=B. This implication
+uses full support, not only the pointwise inequality I<=3969.
+
+All historical files are retained unchanged. The new producer pins the
+retained calibration code and fixed-t moment table by their SHA256 hashes.
+It imports the old exact inversion/interval routines, but adds the variance
+bounds, guards, profiled decision, and all certificates proved below.
+
+2. A uniform intensity-moment bound without unknown calibration inputs
+---------------------------------------------------------------------
+Write m=E exp(i sqrt(s)Z)=sqrt(x), and
+
+  X_j=z_Gj(exp(i sqrt(s)Z_j)-m).
+
+Then E X_j=0, |X_j|<=2, E|X_j|^2=1-x<=1, the X_j are independent, and
+F_G=sum_j X_j because sum_j z_Gj=0. Expand
+(sum X_j)^r(sum conjugate(X_j))^r into its 2r labeled positions.
+Any term in which a site occurs only once has expectation zero. If there
+are k distinct sites and each appears at least twice, the absolute value
+of the expectation is at most
+
+  product_(blocks B) E|X|^(|B|) <= 2^(2r-2k).
+
+Here E|X|^d<=2^(d-2)E|X|^2<=2^(d-2) for d>=2. There are S_{>=2}(2r,k)
+set partitions into k blocks without singletons, and (63)_k injective
+assignments of those blocks to sites. Therefore, simultaneously for both
+structures and every 0<x<1,
+
+  E I^r <= U_r
+    := sum_(k=1)^r (63)_k S_{>=2}(2r,k) 2^(2r-2k),  U_0=1. (E2)
+
+The recurrence used to compute the partition counts is
+
+  S_{>=2}(a,k)=k S_{>=2}(a-1,k)+(a-1)S_{>=2}(a-2,k-1),
+
+with S(0,0)=1 and inadmissible entries zero. The distinguished last position
+either enters one of k existing nonsingleton blocks or forms a two-element
+block with one of the other a-1 positions. The certificate retains the
+whole finite recurrence table through a=16.
+
+If b<=b_* and eta<=eta_*, set
+
+  L_r=sum_(k=0)^r binom(r,k)b_*^(r-k) eta_*^k U_k.
+
+Then f_r=E Lambda^r<=L_r. The elementary overlap identity
+
+  (n)_r^2=sum_(j=0)^r binom(r,j)^2 j! (n)_(2r-j)
+
+counts the j shared positions in two ordered samples without replacement.
+It implies the variance bound
+
+  Var((N)_r) <= E[(N)_r^2]
+     <= W_r:=sum_(j=0)^r binom(r,j)^2 j! L_(2r-j).         (E3)
+
+These bounds use all observations directly. There is no cutoff, truncation
+tail, or bounded-range penalty. Finite variance follows from the bounded
+mixed-Poisson rate. For b_*=1/8 and eta_*=8/3969, the coarse W_r are about
+0.347986, 0.481108, 2.107892, and 22.272841 for r=1,2,3,4.
+
+3. A fixed local design box and rigorous local high-moment bounds
+----------------------------------------------------------------
+The fixed internal box is
+
+  X=[249/1000,251/1000],
+  E=[195/100000,196/100000],
+  D=[9/1000,11/1000].                                     (E4)
+
+This box is not assumed to contain the unknown truth. The second group
+must certify that its outer confidence box is wholly inside (E4) before
+the procedure uses the local variance bounds. If it cannot, the procedure
+returns unresolved and makes no final parameter exclusions.
+
+The retained fixed-t table gives exact E_G I^r at x0=1/4 for r through 32;
+only r through 8 are needed here. Couple a general x in X and x0 with the
+same standard normals. Since |exp(iu)-exp(iv)|<=|u-v|, Minkowski gives
+
+  ||F_G(s)||_(2r) <= ||F_G(s0)||_(2r)
+         +63 |sqrt(s)-sqrt(s0)| ||Z||_(2r).                (E5)
+
+The rational positive-series estimate recorded in the certificate proves
+exp(1)<3, while max X<1/3. Hence s,s0>1. The mean-value theorem for log
+then yields
+
+  |sqrt(-log x)-sqrt(-log x0)|
+   = |log x-log x0|/(sqrt(-log x)+sqrt(-log x0))
+   <= |x-x0|/(2 min X) <= 1/498.                          (E6)
+
+Furthermore E|Z|^(2r)=(2r)!/(2^r r!). Exact rational upper roots of the
+reference intensity moments and these Gaussian moments, on the grid
+10^-6, are verified by integer powers. Raising the right side of (E5)
+to 2r gives a rational uniform upper bound on E_G I^r for x in X.
+For orders 1 through 5, exact interval evaluation of the retained moment
+polynomials provides a second bound; the smaller upper bound is used.
+
+Substituting b_*=11/1000 and eta_*=196/100000 into (E3), now with these
+local intensity bounds, gives the four main-stage variance bounds.
+All reference moments, roots, polynomial bounds, selected bounds, and
+resulting count variances are retained exactly in the certificate.
+No new moment formula is guessed and no numerical quadrature is used.
+
+4. The three prescribed groups and confidence event
+----------------------------------------------------
+The error allocation is
+
+  alpha0=1/200,
+  alpha1=1/200 for each of three calibration moments,
+  alpha2=3/400 for each of four main moments.
+
+The total is alpha0+3alpha1+4alpha2=1/20. A sample mean of a statistic with
+variance at most W has, by Chebyshev,
+
+  Pr(|sample mean - population mean| > sqrt(W/(alpha n)))
+       <= alpha.                                         (E7)
+
+The implementation uses exact upper square-root enclosures with 220 binary
+bits. Replacing the exact radius by a larger certified radius preserves
+the probability guarantee. The three steps are as follows.
+
+Group 0: Compute the ordinary count mean. Since
+Var N=E Lambda+Var Lambda<=B+B^2/4, use
+e0=sqrt((B+B^2/4)/(alpha0 n0)). Continue only when sample mean+e0<=1/8.
+On its concentration event, E N<=1/8 and hence b<=1/8.
+
+Group 1: Use the coarse W_1,W_2,W_3 from (E2)-(E3), b_*=1/8,
+eta_*=B/3969. For each r=1,2,3 construct
+
+  J_r=[max(0,hat f_r-e_r), min(B^r,hat f_r+e_r)].           (E8)
+
+Apply the retained outer interval inversion to J1,J2,J3. Continue only if
+the resulting x,eta,b box is wholly contained in (E4). Otherwise return
+unresolved with no final parameter exclusions. On its concentration event,
+the true calibration is inside that outer box and thus inside (E4).
+
+Group 2: Use the local W_r from Section 3 for r=1,2,3,4, with confidence
+radii sqrt(W_r/(alpha2 n2)). Construct (E8), infer the calibration box,
+and use the profiled fourth-moment decision in Section 5.
+
+Why these data-dependent guards do not invalidate coverage:
+For any fixed true parameter point, if b>1/8, proceeding beyond group 0
+requires a failure of its unconditional concentration event. If b<=1/8,
+the coarse variance bounds are deterministically valid and group 1 has
+the stated unconditional error bound. If the truth is outside (E4),
+passing group 1 then requires its concentration event to fail. If the truth
+is in (E4), the local variance bounds are deterministically valid and
+the main group's four confidence intervals have their stated unconditional
+coverage. A union bound by the allocated errors therefore controls any
+false parameter exclusion or structural decision by 1/20.
+
+No conditional probability statement after selecting a branch is used.
+No independence between the three groups is needed for this argument.
+All group sizes and their assignment are prescribed in advance. Data chosen
+adaptively to form a group, optional stopping, repeated 95% looks, and
+unrecorded discarded counts are outside this guarantee.
+
+5. Profiling out gain and background before the fourth-moment comparison
+------------------------------------------------------------------------
+The earlier construction evaluated f4_G over a Cartesian box in x,eta,b.
+That loses cancellations because the inferred gain and background are
+strongly related to the first three moments. The present construction
+retains those relations algebraically.
+
+Let
+
+  c4=f4-4f3f1-3f2^2+12f2f1^2-6f1^4.
+
+The exact intensity polynomials yield degree-12 rational polynomials S_G
+such that kappa4(I_G)=(1-x)^4 S_G(x). Therefore
+
+  c4/c2^2=R_G(x),  R_G(x)=S_G(x)/V(x)^2.
+
+The producer verifies the division by (1-x)^4 exactly and saves both S_G
+polynomials. For any first-three-moment vector u=(u1,u2,u3) in the smooth
+inverse domain, put
+
+  a=u2-u1^2, d=u3-3u2u1+2u1^3,
+  x(u)=Q^(-1)(d^2/a^3).
+
+The predicted raw fourth factorial moment is the single function
+
+  T_G(u)=a^2 R_G(x(u))
+       +4u3u1+3u2^2-12u2u1^2+6u1^4.                     (E9)
+
+At the true first three moments, T_G equals that structure's true fourth
+factorial moment at its uniquely calibrated x,eta,b. Formula (E9) removes
+gain and background rather than treating their inferred intervals as
+independent degrees of freedom.
+
+For a whole moment rectangle to be used below, interval calculations must
+certify a>0, d>0, and Q(0)<d^2/a^3<Q(1) throughout it. If this is not
+certified, the procedure returns unresolved. This ensures that T_G is
+smooth at every point of the rectangle and along every connecting segment.
+
+Define
+
+  J_G(x)=R_G'(x)/Q'(x)
+        =V(x)[S_G'(x)V(x)-2S_G(x)V'(x)]/[C(x)H(x)],
+
+  A=2aR_G-3(d/a)^2 J_G,
+  D=2(d/a)J_G.
+
+Direct differentiation gives
+
+  partial_1 T_G =4u3-24u2u1+24u1^3-2u1 A+D(-3u2+6u1^2),
+  partial_2 T_G =6u2-12u1^2+A-3u1 D,
+  partial_3 T_G =4u1+D.                                  (E10)
+
+The code evaluates (E10) using outward rational interval arithmetic over
+the whole observed rectangle, obtaining nonnegative absolute bounds L_i.
+If u_bar is the rectangle's midpoint and h_i its coordinate radii, then
+the multivariate mean-value theorem proves
+
+  T_G(rectangle) subset
+     T_G(u_bar)+[-sum_i L_i h_i, sum_i L_i h_i].             (E11)
+
+The central value T_G(u_bar) is itself enclosed using 160 exact rational
+bisections of Q. Thus the returned interval is rigorous. A structure is
+rejected only when its predicted interval is disjoint from J4. Exactly
+one survivor means identified, both means unresolved, and none means
+model_inconsistent. The true model survives on the joint confidence event.
+
+For completeness, finite bisection error has a uniform explicit bound.
+Write A_S=sum_k |S_k|, L_S=sum_k k|S_k|, L_V=sum_k k|V_k|,
+v_min=V(0)>0, and v_max=V(1). Interval Horner evaluation of a polynomial
+on a subinterval of [0,1] with width delta has width at most the sum of
+k times its absolute coefficient, multiplied by delta. Since a<=B^2,
+the width of the central interval in (E11) is at most
+
+  rho_G=B^4 [L_S/v_min^2
+             +2 A_S v_max L_V/v_min^4] 2^-160.            (E12)
+
+This is retained exactly; it is many orders smaller than the structural
+exclusion margin. The proof uses the width, not an assumption that a
+floating-point inverse is exact.
+
+6. Certification for every dataset on the concentration event
+--------------------------------------------------------------
+For the reference point only, take
+
+  x=1/4, eta=1/512, b=1/100, B=8,
+  n0=10^10, n1=10^18, n2=10^20.
+
+These true values are used to prove the design's guarantee, not passed
+to infer_histograms. For the pilot, the certificate verifies
+f1+2e0<1/8. Hence every good-event pilot passes the first guard.
+
+For the calibration group, its actual confidence interval J_r is contained
+in the population-centered envelope [f_r-2e_r,f_r+2e_r]. Apply the retained
+inclusion-preserving inverse to these larger envelopes. The certified box
+is wholly inside (E4). Thus every good-event calibration dataset passes
+the second guard; this is not a check on one favorable synthetic dataset.
+
+For the main group, let E be the analogous population-centered first-three
+envelope. Certify all smooth-inverse domain inequalities over E and compute
+L_i over E for each wrong structure. Every actual data rectangle J lies
+inside E. Its midpoint is within e_i of the true first-three moment, and
+its radius is at most e_i. Inclusion-preserving derivative interval bounds
+computed over J are no larger than those over E. Consequently every point
+of the returned wrong-structure prediction interval is within
+
+  2 sum_(i=1)^3 L_i e_i + rho_G
+
+of T_G evaluated at the true first-three moments. Every point of J4 is
+within 2e4 of the true f4. Therefore the sufficient rejection inequality is
+
+  Delta - 2e4 - 2 sum_i L_i e_i - rho_wrong >0.            (E13)
+
+The certificate proves (E13) exactly for both possible truths. The margins
+are approximately
+
+  true A, reject B: 4.3085903303737744e-10;
+  true B, reject A: 4.3060039707540859e-10.
+
+The shared positive fourth-moment gap itself is about 2.364013201862662e-9.
+The main calibration confidence boxes, on the same good event, have widths
+
+  width(x)          < 0.000015372387,
+  width(eta)        < 3.923102e-8,
+  width(background) < 0.000003746810.
+
+For phase variance s=-log x, the reported x interval converts monotonically
+to [-log x_upper,-log x_lower]. These width statements are analytic bounds,
+not experimentally measured precision. The method identifies G jointly with
+covering all parameters with probability at least 95%; it does not assert
+95% conditional coverage given that identification happened.
+
+The old m=10^36 example used the same x,eta,b and B. The reduction comes from
+variance control, certified local high-moment bounds after guarded pilot
+calibration, and the profiled fourth-moment formula. It must not be called
+an optimized rate or compared as an unknown-calibration optimum with the
+separate known-calibration likelihood-ratio sample bracket at b=0.
+
+7. Specified temporal dependence
+--------------------------------
+The separately supplied temporal theorem assumes stationary Gaussian AR(1)
+site phases with common autoregression coefficient a, independent sites,
+the same marginal N(0,s) phases, and conditionally independent Poisson count
+noise across times. If |a|<=a0<1 is known, any single-snapshot statistic Z
+with finite variance satisfies
+
+  Var(mean of n consecutive Z) <= kappa Var(Z)/n,
+  kappa=(1+a0)/(1-a0).
+
+Insert kappa under each square root in (E7). The unconditional guard proof
+is unchanged. At a0=1/2, kappa=3, so multiplying all three group sizes by
+three yields exactly the same rational confidence radii and every preceding
+margin. The resulting total is
+
+  303000000030000000000 observations.
+
+The certificate verifies the equality of all eight radii under this
+transformation. The histogram CLI accepts ar1_abs_bound as an exact string
+or integer; when absent it uses the iid model. This option assumes the
+specified AR(1) model and a valid known coefficient bound. Histograms cannot
+verify temporal order or that model, and arbitrary dependence is not covered.
+
+8. Reproduction, interpretation, and boundaries
+-----------------------------------------------
+Run certify_efficient_calibration.py with no arguments to regenerate the
+certificate. The code uses only Python's standard library, exact fractions,
+integer root comparisons, and the pinned retained calibration routine.
+The preserved moment table is an input from the earlier verified engine;
+this note does not claim an independent reconstruction of all 32 moments.
+
+The three histogram inputs contain exact nonnegative integer multiplicities,
+including zeros in their respective group sizes. Counts above a cutoff are
+not discarded because there is no cutoff. Floats and booleans are rejected
+where exact integer or rational inputs are required. JSON decimal strings
+are recommended for counts exceeding ordinary floating-point integer precision.
+
+The guarantee requires the stated Gaussian phase family, unit site weights,
+the fixed geometry candidates and clean null, known valid B, Poisson detector
+law, and the iid or explicitly specified AR(1) temporal model. Geometry
+errors and unequal site noise need their own robustness/error allocation;
+the present calibration intervals do not silently absorb them. This is a
+new rigorous sufficient bound within the saved model, not a physical test,
+an external review, a proof of research priority, or a minimal sample count.

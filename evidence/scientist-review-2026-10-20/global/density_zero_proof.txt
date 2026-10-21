@@ -1,0 +1,121 @@
+Effective terminal-gain certificate, t=1/2
+=========================================
+
+Scope and conventions. S_G is the sum of the 63 independent unit phasors
+specified by the preserved geometry; I_G=|S_G|^2. Each phase error has Fourier
+coefficients E exp(in theta)=2^(-n^2). F4(eta)=E_A[I^4 exp(-eta I)] minus
+E_B[I^4 exp(-eta I)], corresponding to zero background b=0. The producer
+certify_density_zero.py and its JSON
+certificate establish an explicit positive tail, not an exact global root
+count by themselves. Arithmetic is rigorous Arb ball arithmetic, conditional
+on the usual correctness of Python, python-flint/Arb, and the host machine.
+
+1. A uniform single-site characteristic bound
+
+Write w(theta)=(1+2 sum_{n>=1}2^(-n^2) cos(n theta))/(2 pi).
+Let W=sup |w| and V=integral_0^{2pi}|w'|. Since
+sum_{n>=1}2^(-n^2)<=1/2+sum_{n>=2}4^(-n)=7/12,
+W<=13/(12 pi)<13/36<3/8. Also
+sum_{n>=1}n 2^(-n^2)<=1/2+1/8+sum_{n>=3}n 8^(-n)
+=5/8+11/1568, so V<=991/784<13/10.
+
+The single-site characteristic in any direction is an integral of
+w(theta-shift) exp(i r cos(theta)). For r>=4, put d=2/sqrt(r)<=1.
+The neighborhoods of the stationary points 0 and pi have total length 4d
+and contribute at most 4dW. Integrating by parts on [d,pi-d] and
+[pi+d,2pi-d] bounds the boundary terms by 4W/(r sin d), the w' terms
+by V/(r sin d), and the derivative of 1/sin(theta) by 4W/(r sin d).
+Thus the whole modulus is at most
+4dW+(8W+V)/(r sin d).
+Since sin d>=d-d^3/6>=5d/6, its coefficient of r^(-1/2) is at most
+64W/5+3V/5 < 24/5+39/50 =279/50<6.
+For r<4 use the trivial characteristic bound 1. Consequently each site
+satisfies |phi_j(r,angle)|<=min(1,6/sqrt(r)). Independence gives
+|Phi_G(r,angle)|<=B(r)=min(1,6^63 r^(-63/2)).
+
+2. Density normalization and the anchored Lipschitz estimate
+
+Define psi_G(r)=(1/(2pi)) integral Phi_G(r,angle) d angle.
+The planar Fourier inversion convention is
+p_G(x)=(2pi)^(-2) integral_R2 Phi_G(k) exp(-i k.x) dk.
+Absolute integrability follows from B, as does integrability after two
+derivatives. The intensity density is
+h_G(u)=(1/2) integral_0^{2pi} p_G(sqrt(u) omega_angle) d angle
+      =(1/2) integral_0^infinity r psi_G(r) J0(r sqrt(u)) dr.
+This explicitly accounts for both the planar Fourier normalization and
+the polar change of variable u=|x|^2. It also defines h at u=0 continuously.
+
+Put Delta psi=psi_A-psi_B and delta=h_A(0)-h_B(0). The real Bessel
+integral representation and 1-cos(v)<=v^2/2 imply
+|J0(v)-1|<=v^2/4. Since |Delta psi|<=2B,
+|h_A(u)-h_B(u)-delta|<=L u,
+L=(1/4) integral_0^infinity r^3 B(r) dr
+ = (1/4)6^8(1/4+2/55)=63*6^8/880.
+Only this estimate anchored at zero is needed; no unproved radial Hessian
+conversion is used. The densities vanish beyond the bounded physical
+support, and the estimate remains valid there by the same inversion formula.
+
+3. Certified Fourier and radial truncations
+
+The integer-order Jacobi-Anger expansion gives a site's Laurent polynomial
+sum_{n=-K}^K i^n J_n(r) 2^(-n^2) z^n q^n, K=7.
+Its omitted real-r tail is bounded, uniformly in angle and unit z, by
+eps=2*2^(-(K+1)^2)/(1-2^(-(2K+3))), because |J_n(r)|<=1.
+The 63-site product error is at most E=63 eps(1+eps)^62, by a telescoping
+product bound. Each true single-site factor has modulus at most 1.
+
+The 21-site base has the six phases and multiplicities encoded in the
+producer: rho*(+/-sqrt(222)+i sqrt(3))/15, each five times;
+(+/-sqrt(573)-i sqrt(3))/24, each four times; +1 twice and -1 once,
+where rho=(1+i sqrt(3))/2. Structure A uses rotations 0,1,3 and B uses
+0,2,3. The producer extracts the Laurent constant coefficient of
+B(q)B(-q)[B(rho q)-B(rho^2 q)]. A constant Laurent coefficient is precisely
+the angular average. The shifted ordinary polynomial has offset 21K;
+the final constant coefficient is index 63K. Exact geometry correspondence
+is independently checked in the adjoining geometry audit.
+
+On [0,10], Arb integrates r Delta psi_truncated(r)/2. Every integer-order
+Bessel J_n is entire, and the remaining operations are polynomial. The
+callback therefore is analytic throughout every complex integration ball;
+ignoring the callback's analytic flag does not assert a false branch or
+domain property. The returned ball, rather than the requested tolerance,
+is used as the enclosure. Algebraic phase parameters are themselves balls.
+The external Fourier error is 50E.
+
+On [10,100], the producer checks an exhaustive adjacent interval cover for
+|J0(r)|+2 sum_{n=1}^7 2^(-n^2)|J_n(r)|+eps <3/5.
+Thus this omitted radial contribution is bounded by
+(3/5)^63 (100^2-10^2)/2.
+On [100,infinity], use B to obtain
+integral_100^infinity r B(r) dr =2*6^63/(59*10^59).
+Adding these absolute errors to the inner integral yields the certificate
+3/100000000 < delta < 1/25000000.
+
+4. Consequence for large gain
+
+Integrating the anchored estimate against u^4 exp(-eta u) gives
+|F4(eta)-24 delta/eta^5|<=120L/eta^6.
+Hence F4(eta)>0 whenever eta>5L/delta. The certificate checks exactly that
+30000000000000 > 5L/(3/100000000), proving
+F4(eta)>0 for every eta>=30000000000000.
+
+5. Compactified representation for further certificates
+
+For y>0 define G(y)=F4(1/y)/(24 y^5); set G(0)=delta.
+The elementary Laplace-Bessel identity, differentiated four times, gives
+integral_0^infinity u^4 exp(-eta u) J0(r sqrt(u)) du
+=24 eta^(-5) exp(-v)L4(v), v=r^2/(4eta).
+Fubini is justified by the integrable B bound. Thus
+G(y)=(1/2) integral_0^infinity r Delta psi(r) exp(-v)L4(v) dr,
+v=r^2 y/4, including y=0 by dominated convergence.
+L4(v)=1-4v+3v^2-(2/3)v^3+v^4/24.
+Its exponentially weighted derivative is exp(-v)P(v), where
+P(v)=-5+10v-5v^2+(5/6)v^3-v^4/24.
+For v>=0, exp(-v)v^j/j!<=1 gives the safe uniform bounds
+|exp(-v)L4(v)|<=16 and |exp(-v)P(v)|<=31.
+Since integral r^3 B(r) is finite, differentiation under the integral is
+valid on every closed y>=0 interval, including the right derivative at 0.
+A certified negative derivative on [0,6], together with opposite endpoint
+signs, would prove exactly one simple root above gain 1/6. This last step
+requires its own interval certificate and is not implied by the density
+certificate alone.

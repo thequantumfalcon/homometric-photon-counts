@@ -1,0 +1,111 @@
+Exactly one remaining positive-gain root at t=1/2
+================================================
+
+Read with density_zero_proof.txt for the model, Fourier normalization,
+uniform characteristic bound, and entire-integrand justification. This
+certificate concerns t=1/2, zero background b=0, and independent
+wrapped-Gaussian site phases.
+It does not assert that the global count is four at every phase width.
+
+1. Compactification
+
+For y>0 put G(y)=F4(1/y)/(24 y^5), with G(0)=delta. The Fourier identity
+proved in density_zero_proof.txt is
+G(y)=1/2 integral_0^infinity r Delta psi(r) K(r^2 y/4) dr,
+where K(v)=exp(-v)L4(v). For y>=0, |K(v)|<=16 and |K'(v)|<=31.
+Consequently G is continuously differentiable from the right at zero and
+throughout y>=0, with
+G'(y)=1/8 integral_0^infinity r^3 Delta psi(r) K'(r^2 y/4) dr.
+The dominator r^3 min(1,6^63 r^(-63/2)) is integrable. This gives a
+well-defined compact interval [0,6] corresponding to all gains >=1/6,
+including the positive infinite-gain limit through y=0.
+
+2. Uniform single-site tail certificates
+
+With K=7 Fourier terms on each side, the real-r single-site characteristic
+is J0(r)+2 sum_{n=1}^7 i^n J_n(r)2^(-n^2)cos(n theta), plus error eps.
+The magnitude is pi-periodic: theta->theta+pi conjugates the expression,
+and the same holds for its infinite series. Thus theta in [0,pi] suffices.
+
+The producer covers all radial/angular rectangles exhaustively, bisecting
+only rectangles whose interval bound has not closed. For each real radial
+interval [a,b], J_n(r) lies in J_n((a+b)/2)+[-(b-a)/2,(b-a)/2].
+The bound |J_n'|<=1 follows by differentiating the integer-order integral
+representation; equivalently use J_n'=(J_{n-1}-J_{n+1})/2 and |J_n|<=1.
+All cosine factors are evaluated on their full Arb angular intervals.
+Adding eps to the computed magnitude yields the strict certified bounds
+  |single-site characteristic| <5/8 for 2<=r<=3;
+  |single-site characteristic| <1/2 for 3<=r<=10;
+  |single-site characteristic| <9/20 for 10<=r<=200.
+The third bound uses the angular-independent Bessel absolute sum.
+The certificate records all 288, 2050, and 872 leaves, respectively.
+An independent verifier checks exact partition coverage and re-evaluates
+these inequalities. The main producer always regenerates them; it never
+loads a preexisting numerical tail cache as evidence.
+
+If a segment [a,b] has single-site bound q, independence gives
+|Delta psi|<=2q^63. Its omitted G contribution is at most
+16 q^63 (b^2-a^2)/2, and its omitted G' contribution is at most
+31 q^63 (b^4-a^4)/16.
+
+For r>200 use the global characteristic bound 6^63 r^(-63/2), and
+enlarge the tail to r>196=14^2 for rational convenience. Its contributions
+are bounded by 32*6^63/(59*14^59) and 31*6^63/(110*14^55), respectively.
+
+3. Inner integrals and interval parameters
+
+Let E=63 eps(1+eps)^62 be the per-structure Fourier-product error from the
+density proof. Integrating on [0,2] gives external Fourier errors at most
+32E for G and 31E for G'. All errors above are added as centered Arb balls
+after numerical integration. The JSON contains their exact rational sums.
+
+For each candidate inverse-gain interval [a,b], the callback uses the whole
+real Arb ball Y=[a,b] in v=r^2Y/4 and in exp(-v)P(v), with
+P(v)=-5+10v-5v^2+(5/6)v^3-v^4/24.
+For every fixed y in Y this is an entire function of complex r, and every
+returned callback ball encloses its value. Arb's rigorous integration thus
+encloses the integral for every y in Y, rather than just the midpoint.
+The resulting real ball plus all external errors has strictly negative
+upper endpoint on each of the 24 intervals [j/4,(j+1)/4], j=0,...,23.
+The code separately checks that the sorted accepted intervals join exactly
+and cover [0,6]. It records exact rational endpoints of each result ball;
+the approximate display string is not used as proof of a sign.
+
+The expensive Fourier base callback is cached only in memory. The key
+contains precision and exact dyadic midpoint/radius pairs for both real
+and imaginary parts of the complex radial ball. This is not a decimal
+approximation key, so distinct argument balls cannot collide. The cached
+value is independent of y; only the inexpensive kernel depends on y.
+The analytic flag does not affect the base value because it is entire.
+
+4. Root existence, uniqueness, and simplicity
+
+The final strict enclosures give G(0)>0 and G(6)<0. Continuity provides
+a root in (0,6); strict negativity of G' on all [0,6] gives exactly one,
+and it is simple. For finite positive eta, the multiplying factor 24y^5
+is nonzero and the map y=1/eta has nonzero derivative. Therefore F4 has
+exactly one simple root for eta>1/6. The endpoint eta=1/6 is not a root.
+
+For a narrower bracket the producer integrates the two rational gain
+endpoints 2934841/10000000 and 1467421/5000000 using radial cutoff 3 and
+absolute integration tolerance 1e-17. The [2,3] tail is then removed;
+the Fourier error is 72E (16E times 3^2/2). The tails from 3 onward are
+unchanged. The exact sign checks place the unique root strictly between
+these gains, i.e. 0.2934841 < eta_4 < 0.2934842.
+
+Combining this independent inverse-gain certificate with the preserved
+order-96 certificate of exactly three simple roots on (0,1/6] establishes
+exactly FOUR simple positive roots globally at t=1/2. No infinite domain
+is left unchecked. This conclusion remains conditional on the stated
+mathematical model and the standard software/hardware arithmetic trust
+boundary; it is not a claim of experimental proof or a fully formal Lean
+verification of Arb itself.
+
+Reproduction:
+  python certify_compact_gain.py --output <new-directory>/compact_gain.json
+The optional PHOTON_FLINT_RUNTIME environment variable selects a local
+python-flint package; otherwise the local pinned runtime is preferred,
+with normal installed-package import as fallback. The output records the
+actual runtime package/version, producer SHA256, and imported density
+producer SHA256. The final calculation has no network requirement and
+does not modify the preserved research archive or sealed audit folders.

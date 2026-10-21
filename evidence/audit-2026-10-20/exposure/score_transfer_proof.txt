@@ -1,0 +1,124 @@
+FINITE-EXPOSURE SCORE TRANSFER: STRONGER SUFFICIENT GATE BOUND
+2026-10-20 (America/Denver)
+
+Result
+======
+Under exactly the stationary Gaussian within-gate motion, total-per-gate
+Poisson normalization, and fresh independent trajectory assumptions in
+finite_exposure_proof.txt, the archived rational four-bin score achieves
+error strictly below 1/20 under EACH structure with
+
+ m = 606362329939484 independent exposure counts
+
+whenever D/tau is at most the exact rational threshold in
+score_transfer_verification.json, approximately 1.2823026243008677e-17.
+The decimal is display-only; use the exact rational for the guarantee.
+
+This improves the sufficient exposure ratio from the general m-fold TV
+argument by approximately 5.569250835966764e16 at the same sample count.
+It exploits the particular score's small oscillation. It is not a necessary
+condition or physical feasibility claim. No original certificate is changed.
+
+1. Existing one-observation coupling
+===================================
+At s=2 log(2), eta=1/28, b=0, the preceding finite-exposure theorem gives
+
+ TV(P_D,G, P_0,G) <= eta C sqrt(D/tau), G=A,B,
+ C^2 < Cbar^2 := 74088/5.
+
+Both models use the same total per-gate gain and background. The exposure
+process has independent stationary N(0,s) sites, covariance
+s exp(-|u-v|/tau), and the clean phasor null. Its count law given the path
+is Poisson(eta D^-1 integral_0^D I(u)du). The reference law is its time-zero
+snapshot count law.
+
+2. Bounded expectations contract with oscillation times TV
+=========================================================
+For any bounded real function f with L<=f<=U,
+
+ |E_P f-E_Q f| <= (U-L) TV(P,Q).
+
+If U=L the claim is immediate. Otherwise g=(f-L)/(U-L) belongs to [0,1],
+and the layer-cake identity E g=integral_0^1 Pr(g>v)dv bounds the difference
+by TV. This proves the result in the TV=sup_events convention without an
+extra factor two.
+
+Let w_j, j=0,1,2,3, be the archived rational score for bins N=0,1,2,N>=3.
+Let Uplus_j and Uminus_j be the archived certified upper bounds on exp(w_j)
+and exp(-w_j). Positivity gives
+
+ 1/Uminus_j <= exp(w_j) <= Uplus_j,
+ 1/Uplus_j <= exp(-w_j) <= Uminus_j.
+
+Thus a rigorous simultaneous upper bound for both oscillations is
+
+ R = max(max_j Uplus_j - min_j 1/Uminus_j,
+         max_j Uminus_j - min_j 1/Uplus_j).
+
+All these numbers are rational and the archived score has R>0. No count
+tail is removed: every N>=3 receives the fourth score. The exact certificate
+gives R approximately 3.178065721383697e-7.
+
+3. Transfer one-count exponential moments before taking products
+===============================================================
+The archived contraction d>0 satisfies
+
+ E_0,A exp(-w(N)) <= 1-d,
+ E_0,B exp( w(N)) <= 1-d.
+
+If both exposure laws have one-count TV distance at most delta from their
+snapshot laws, section 2 implies
+
+ E_D,A exp(-w(N)) <= 1-d+R delta,
+ E_D,B exp( w(N)) <= 1-d+R delta.
+
+Require delta<=d/(2R). Then both exposure exponential moments are at most
+1-d/2. Independence of entire trajectories between gates AND conditional
+independent emissions make the exposure counts iid. Therefore for S=sum w,
+with the unchanged rule choosing A if S>=0 and B otherwise, Markov gives
+
+ Pr_D,A(S<0) <= (1-d/2)^m <= exp(-m d/2),
+ Pr_D,B(S>=0) <= (1-d/2)^m <= exp(-m d/2).
+
+Take m=ceil(6/d), so m d/2>=3. A finite exact positive Taylor sum proves
+exp(3)>20, hence both errors are strictly below 1/20. The ties are assigned
+to A exactly as in the archived test; the B event includes equality.
+
+This avoids comparing the entire m-count path laws, whose TV bound may
+already be uninformative at this exposure ratio. Only the bounded scalar
+exponential moments need to be close.
+
+4. Exact sufficient ratio
+=========================
+Define
+
+ Q_gate = [d/(2R)]^2 / [eta^2 Cbar^2],
+ eta=1/28, Cbar^2=74088/5.
+
+If 0<D/tau<=Q_gate, the one-observation coupling gives delta<=d/(2R),
+so section 3 applies. The exact rational Q_gate, d, R, and m are recorded
+by verify_score_transfer.py. For orientation only,
+
+ d              approximately 9.895073792923145e-15,
+ R              approximately 3.178065721383697e-7,
+ d/(2R)         approximately 1.5567761431653043e-8,
+ Q_gate         approximately 1.2823026243008677e-17.
+
+The verifier checks the rational ceiling, both saved contractions, positive
+exponential bounds, reciprocal range construction, the exact threshold
+identity, and exp(3)>20. It independently rechecks the log(2) enclosure
+used in Cbar^2. It pins the archived certificate against its release manifest.
+It relies on the already independently replayed exponential enclosures and
+geometry/count certificate; it is not a new moment reconstruction.
+
+5. Scope retained
+=================
+The count budget remains extremely large and the sufficient exposure ratio
+extremely small. Neither is claimed optimal or necessary. The theorem uses
+fresh stationary independent realizations between observations; a single
+continuous OU trajectory requires separate dependence control. Keeping total
+eta=1/28 while shortening D requires changing physical rate or flux. No
+achievable source brightness, reset schedule, detector linearity, or absence
+of detector memory has been demonstrated. This conditional bridge neither
+validates the physical model nor substitutes for measurements or external
+review. The verification is exact arithmetic, not proof-assistant formalization.

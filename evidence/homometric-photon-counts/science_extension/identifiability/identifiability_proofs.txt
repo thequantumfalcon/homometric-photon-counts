@@ -1,0 +1,202 @@
+DETECTOR IDENTIFIABILITY BEYOND FIXED CALIBRATION
+20 October 2026
+
+Scope. These are population-distribution theorems for the exact 63-site
+Gaussian-phase model already documented in science_completion. They do not
+give a stable numerical reconstruction from a finite sample, an experimental
+calibration, or a new general deconvolution principle. Compact-support
+analyticity and Poisson-mixture identifiability are established methods.
+
+Notation. G is A or B, n=63, s is a finite positive phase variance, and
+
+  I_G(s) = |sum_{j=1}^n z_{G,j} exp(i sqrt(s) Z_j)|^2,
+
+where the Z_j are independent standard Gaussians and |z_{G,j}|=1. The
+observation frequency is the common clean null q0=pi/3. The established
+identities are
+
+  0 <= I_G(s) <= n^2,
+  E I_G(s) = n(1-exp(-s)),
+  E I_A(s)^k = E I_B(s)^k,  k=1,2,3,
+  D4(s) = E I_A(s)^4-E I_B(s)^4 > 0.
+
+The explicit positive D4 factorization is in the preceding proof record.
+
+1. ANY COMMON INDEPENDENT ADDITIVE ERROR PRESERVES DISTINCTNESS
+
+Theorem 1. Let P and Q be probability measures with compact support on R,
+and let R be any probability measure on R. If P*R=Q*R, then P=Q. There are
+no density, moment, symmetry, or nonvanishing-characteristic-function
+assumptions on R.
+
+Proof. Write characteristic functions phi_P, phi_Q, phi_R. Continuity and
+phi_R(0)=1 imply phi_R(t) is nonzero on some real interval about zero.
+Equality of the convolutions gives phi_P(t)=phi_Q(t) on that interval.
+Compact support makes phi_P(z)-phi_Q(z) an entire function of complex z:
+on every bounded subset of C its power series is dominated by an
+exponential using the common finite bound on the supports. The identity
+theorem therefore makes this entire function identically zero. Uniqueness
+of characteristic functions implies P=Q. QED.
+
+Application. For every fixed finite s>0, I_A(s) and I_B(s) remain different
+after addition of any common independent error law, including Cauchy errors
+or other errors without a fourth moment. The prior finite-fourth-moment
+assumption was sufficient for a simple moment proof but was unnecessary for
+identifiability. This result supplies no uniform separation bound over all
+error laws.
+
+2. FULL SUPPORT OF THE INTENSITY
+
+Lemma 2. For every finite s>0, the support of the law of I_G(s) is exactly
+the closed interval [0,n^2].
+
+Proof. A Gaussian reduced modulo 2pi has a strictly positive density on the
+whole circle. Independence therefore gives full support on the n-torus
+for the random phase vector; multiplication by the fixed z_{G,j} is a
+torus translation and preserves that property. The continuous function
+
+  (theta_1,...,theta_n) -> |sum_j exp(i theta_j)|^2
+
+has a compact connected image, hence a closed interval. Its maximum n^2
+is attained by aligned phases. Its minimum zero is attained by the n-th
+roots of unity (n>=2). Its image is therefore [0,n^2]. Every neighborhood
+of an attained value has a nonempty open preimage and consequently positive
+probability under the full-support phase law. QED.
+
+This lemma needs finite positive s. At s=0 the common-null intensity is
+identically zero. The limiting fully uniform phase law also needs separate
+treatment for A/B identification, because it erases the fixed phases.
+
+3. UNKNOWN GAUSSIAN READOUT PARAMETERS CANNOT CREATE AN EXACT A/B ALIAS
+
+Theorem 3. Consider the family of observation laws
+
+  Y = b + eta I_G(s) + sigma Z,
+
+where Z is a standard Gaussian independent of the intensity, b is any real
+offset, eta>0, sigma>=0, 0<s<infinity, and n and the two candidate structures
+are known. The complete law of Y uniquely identifies G, s, b, eta, and
+sigma. In particular two parameter tuples, even with different nuisance
+parameters under A and B, cannot give the same observation law.
+
+Proof. Put V=b+eta I_G(s), whose support is [b,b+eta n^2] by Lemma 2. Its
+moment generating function M_V(t) is finite for every real t. For t>0,
+
+  b t <= log M_V(t) <= (b+eta n^2)t.
+
+Since M_Y(t)=exp(sigma^2 t^2/2) M_V(t), the observed law determines
+
+  sigma^2 = lim_{t -> +infinity} 2 log M_Y(t) / t^2.
+
+It then determines phi_V(t)=phi_Y(t) exp(sigma^2 t^2/2). Characteristic
+function uniqueness determines the law of V. Its support endpoints give
+
+  b = inf supp(V),
+  eta = [sup supp(V)-inf supp(V)] / n^2.
+
+The intensity law follows by the inverse affine transformation. Its mean
+uniquely identifies
+
+  s = -log(1-E[I]/n),
+
+because n(1-exp(-s)) is strictly increasing on (0,infinity). Finally,
+at that same s the two candidate intensity laws have different fourth
+moments. This identifies G and completes the proof. QED.
+
+This is identification from the exact population law. It is not a claim
+that high-order tails, deconvolution, or support endpoints can be accurately
+estimated with a modest finite sample. It does not license applying the
+previous known-parameter sample-count formulas to estimated parameters
+without a further analysis.
+
+4. UNKNOWN POISSON BACKGROUND AND GAIN ARE ALSO IDENTIFIABLE
+
+Lemma 4 (compact Poisson-mixture injectivity). A Poisson mixture whose
+mixing law is supported on a finite interval in [0,infinity) uniquely
+determines that mixing law, even when the support bound is not known.
+
+Proof. If Lambda is the mixing variable, the count probability generating
+function for 0<=z<=1 is
+
+  E[z^N] = E[exp(-(1-z)Lambda)].
+
+Equality of count distributions gives equality of the Laplace transforms
+of the two mixing laws on 0<=t<=1. Each transform extends to an entire
+function because each support is bounded. Their difference therefore
+vanishes identically. Evaluate on the imaginary axis and use uniqueness
+of characteristic functions to recover equality of the mixing laws. QED.
+
+Theorem 5. In the family
+
+  N | I_G(s) ~ Poisson(b + eta I_G(s)),
+
+where b>=0, eta>0, 0<s<infinity, and n and the candidate structures are
+known, the complete count law uniquely identifies G, s, b, and eta.
+
+Proof. Lemma 4 identifies the law of Lambda=b+eta I_G(s). Lemma 2 shows
+that its exact support is [b,b+eta n^2]. Its two endpoints identify b and
+eta. Transforming back gives the intensity law, whose mean identifies s
+and whose fourth moment identifies G, as in Theorem 3. QED.
+
+The theorem includes b=0. It does not require that gain and background
+have been calibrated externally for population identifiability, but the
+finite-sample guarantees derived elsewhere still assume known models and
+known detector parameters.
+
+5. WHY THESE IDENTIFIABILITY THEOREMS DO NOT GIVE UNIFORM FINITE-SAMPLE
+   PERFORMANCE
+
+Gaussian example. For common b, eta and sigma>0, let P_sigma and Q_sigma
+be the two Gaussian-readout laws. Couple arbitrary intensity realizations
+x,y in [0,n^2]. The total variation between equal-variance normal laws is
+
+  2 Phi(|eta(x-y)|/(2sigma))-1
+  <= |eta(x-y)|/(sigma sqrt(2pi)).
+
+The inequality follows by bounding the standard-normal density by its
+maximum 1/sqrt(2pi). Convexity of total variation under mixing gives
+
+  TV(P_sigma,Q_sigma) <= min(1, eta n^2/(sigma sqrt(2pi))).
+
+For m independent observations, the elementary product bound gives
+TV(P_sigma^m,Q_sigma^m)<=m TV(P_sigma,Q_sigma). Therefore, for every fixed
+finite m, the optimal equal-prior success probability tends to 1/2 as
+sigma tends to infinity. There can be no uniform finite sample size for
+all allowed Gaussian noise scales.
+
+Poisson example. For lambda>=mu, couple Poisson(lambda) to Poisson(mu)
+by adding an independent Poisson(lambda-mu) variable. This gives
+
+  TV(Poisson(lambda),Poisson(mu))
+  <= 1-exp(-|lambda-mu|) <= |lambda-mu|.
+
+Mixing and |I_A-I_B|<=n^2 give TV(N_A,N_B)<=min(1,eta n^2). Hence at any
+fixed finite m the optimal success tends to 1/2 as eta tends to zero.
+Strict identifiability at every positive gain does not prevent this limit.
+
+6. AN UNRESTRICTED UNKNOWN ADDITIVE ERROR LAW IS A REAL OBSTRUCTION
+
+Theorem 1 assumes the SAME error law is used in the two comparisons. If an
+arbitrary unknown error law can vary as a nuisance parameter between the
+candidate explanations, A/B identification from a single output law can
+fail, even with independent, zero-mean errors of finite support.
+
+Proof by construction. Fix s>0 and let mu=E I_A(s)=E I_B(s). In model A,
+take an independent error E_A with law I_B(s)-mu. In model B, take an
+independent error E_B with law I_A(s)-mu. Both observed laws are then
+the law of I_A(s)+I_B(s)-mu with independent summands. The error means
+are zero, and their variances also agree because the first two intensity
+moments agree. Thus knowing only zero mean and variance of the errors
+does not remove this exact ambiguity. QED.
+
+This obstruction does not contradict Theorem 1: E_A and E_B are different
+laws. It also does not contradict Theorems 3 and 5, whose specified
+Gaussian or Poisson detector families supply the extra structure needed
+for joint identifiability.
+
+STATUS
+
+All claims above are analytic mathematical deductions from the explicit
+model and standard uniqueness principles. They do not rely on simulation.
+A separate review must assess the assumptions and deductions before these
+claims are marked reviewed in the assembled extension record.

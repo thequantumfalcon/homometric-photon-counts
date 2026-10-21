@@ -1,0 +1,9 @@
+{
+  "positive_exit_code": 0,
+  "positive_stdout": "PASS: 66 exact rational equalities",
+  "mutation": "Add exactly one to B moment 32 in a separate copied table",
+  "negative_exit_code": 1,
+  "negative_diagnostic": "Exact mismatch: B, moment 32",
+  "archive_bytes_unchanged": true,
+  "archive_sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32"
+}

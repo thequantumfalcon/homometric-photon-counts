@@ -1,0 +1,357 @@
+FRESH GLOBAL CERTIFICATE FOR THE HARMONIC MEAN CONTRAST
+=====================================================
+
+Theorem and scope
+-----------------
+For the reconstructed 63-node A/B model below, with centered Gaussian
+covariance v*K_H and K_H=63*C/tau, the mean-intensity contrast
+
+  Delta_H(v) = E[I_A,H(v)] - E[I_B,H(v)]
+
+has exactly one positive zero. This zero is simple. The contrast is strictly
+positive before the zero and strictly negative after it. At v=0 the contrast
+also vanishes, with multiplicity exactly one.
+
+The unique positive zero is enclosed by
+
+  111.3136504231491219344800952076923753980843
+       <= v_H <=
+  111.3136504231491219344800952076923753987596.
+
+These decimal endpoints are rounded outward. They summarize exact integer
+interval endpoints in harmonic_root_certificate.json. The rational root
+enclosure in the common x coordinate has width exactly 2^(-120).
+
+This is a new proof from the exact reconstructed model. No historical root
+count, historical bracketing result, numerical plot, or sampled-sign assertion
+is a premise. It proves a mathematical property of this fixed Gaussian model;
+it does not establish experimental validity, measurement feasibility, or
+novelty relative to the literature. It is a transparent computer-assisted
+proof using Python integer/Fraction arithmetic, not a proof-assistant theorem.
+
+1. Exact geometry and graph model
+--------------------------------
+Put n=63 and omega=pi/3. Let
+
+  theta = asin(1/(5*sqrt(3))),  phi = -asin(1/(8*sqrt(3))),
+  a = 3*theta/pi,               b = 3*phi/pi.
+
+The 21-point set U consists, for j=0,...,9, of
+
+  3*j+1+(-1)^j*a,
+  3*j+epsilon_j,
+
+where epsilon_0=epsilon_1=0 and epsilon_j=(-1)^j*b for j>=2,
+together with the point 30. The 63-point configurations are the ordered sets
+
+  A = U + {0,31,63},    B = U + {0,32,63}.
+
+The graph connects distinct mean positions whose separation is less than
+5/2. It is fixed on the mean positions; the graph is not rebuilt after noise.
+
+Because t<tan(t) for 0<t<pi/2 and pi>3,
+
+  |a| < 1/sqrt(74) < 1/8,
+  |b| < 1/sqrt(191) < 1/8.
+
+All integer bases are distinct. Thus their order is the coordinate order.
+An integer base gap <=2 gives a coordinate gap <9/4<5/2, and a base gap
+>=3 gives a coordinate gap >11/4>5/2. Exact enumeration therefore gives
+the path 0--1--...--62 plus chord (20,22) for A, or chord (41,43) for B.
+
+Let L be the unit-edge graph Laplacian. Both graphs are connected. The builder
+reconstructs C=L^+ from the path pseudoinverse and the one-chord update. If
+R_i=sum_j |i-j| and C0 is the path pseudoinverse, then
+
+  C0_ij = (R_i+R_j)/(2*n) - |i-j|/2 - (n^2-1)/(6*n).
+
+For chord (p,q), let w_i=C0_ip-C0_iq. Its update denominator is exactly 3:
+
+  C_ij = C0_ij - w_i*w_j/3.
+
+The code does not rely only on the update identity. It verifies with exact
+rationals that C is symmetric, C*1=0 and L*C=I-11^T/n. These identities
+identify the pseudoinverse of this connected symmetric Laplacian uniquely.
+It also verifies equality with every supplied entry of input_model.json.
+
+The traces are
+
+  tau_A = 121486/189,    tau_B = 121570/189.
+
+The covariance K_H=63*C/tau has trace 63 and kernel span(1). The actual
+displacement vector is a centered Gaussian with covariance v*K_H. The noise
+parameter v is the average centered coordinate variance, not automatically
+an experimentally calibrated temperature.
+
+2. Exact phases and the exponential polynomial
+----------------------------------------------
+For each ordered coordinate q_i, put z_i=exp(i*omega*q_i). Phases are rebuilt
+from the integer base and the signed offset, using sixth roots of unity and
+
+  exp(+/-i*theta) = sqrt(222)/15 +/- i*sqrt(3)/15,
+  exp(+/-i*phi)   = sqrt(573)/24 -/+ i*sqrt(3)/24.
+
+Their real and imaginary parts lie in
+
+  Q(sqrt(3),sqrt(74),sqrt(191)).
+
+The eight basis elements are indexed by bit masks m=0,...,7; bit k includes
+sqrt(RAD[k]), with RAD=(3,74,191). Products are reduced exactly: overlapping
+bits contribute their rational radicands and the remaining mask is XOR.
+These eight basis elements are linearly independent over Q: the three
+square classes represented by 3,74,191 are independent. Hence a zero vector
+is an exact zero field element, not a floating tolerance test.
+
+The builder checks each phase against the supplied exact phase, checks
+|z_i|^2=1 for every i, and checks sum_i z_i=0 for both configurations.
+
+For I(v)=|sum_i z_i exp(i*omega*X_i)|^2, the Gaussian characteristic function
+gives
+
+  E[I(v)] = n + sum_{i<j} 2*Re(conj(z_i)*z_j)
+                * exp[-omega^2*v*(K_ii+K_jj-2*K_ij)/2].
+
+Set x=7*pi^2*v/62. With K=63*C/tau the corresponding pair rate is exactly
+
+  r_ij = 31*(C_ii+C_jj-2*C_ij)/tau.
+
+All pair resistances C_ii+C_jj-2*C_ij are checked strictly positive. Their
+minimum is 2/3 in each graph. The diagonal terms cancel in the A-minus-B
+contrast. Aggregating 3906 signed unordered pairs gives 203 distinct rates
+and 203 nonzero coefficients:
+
+  D_H(x) = sum_{i=0}^{202} c_i exp(-r_i*x),
+  Delta_H(v) = D_H(7*pi^2*v/62).
+
+Every rate is rational; every coefficient is an exact field vector. A has
+101 distinct pair rates and B has 102. Exact summation gives D_H(0)=0.
+The total absolute coefficient mass is at most 7812 by the triangle
+inequality applied to the 3906 pair coefficients of magnitude at most 2.
+The global root certificate does not require this coarse mass bound.
+
+Sort rates increasingly and let
+
+  r0 = 1953/60785,       c0 = -3/5,
+  r1 = 1953/60743,       c1 = +3/5,
+  lambda_i = r_i-r0,
+  F(x) = exp(r0*x)*D_H(x) = sum_i c_i exp(-lambda_i*x).
+
+Here lambda_0=0 and every other lambda_i is positive. The multiplying
+factor is everywhere positive and analytic, so F and D_H have the same
+zeros, multiplicities and signs on the real axis.
+
+3. Arithmetic enclosure rules
+-----------------------------
+All certification endpoints are integers divided by S=2^256. Rational
+conversion uses floor and ceiling, multiplication uses all four endpoint
+products with outward division by S, and reciprocal reverses the positive
+endpoints before outward division. Negative reciprocals use sign reversal.
+Squares explicitly include zero when an interval crosses zero. Radicals
+are enclosed with integer square roots of radicand*S^2. None of the sign
+decisions uses binary floating point, Decimal arithmetic, library exp, or
+library pi.
+
+For exp(-u), u>=0, the code reduces by powers of two until the exact reduced
+argument is at most 1/8. Its outward fixed-point enclosure lies in [0,1].
+The alternating exponential series then gives a degree-81 lower bound and
+a degree-80 upper bound, since its term magnitudes decrease on [0,1].
+Interval evaluation encloses both truncations. Repeated outward squaring
+restores the original argument. An interval argument is handled by the
+monotonicity of exp(-u).
+
+For u>=7*256/10, the shortcut [0,1/S] is valid. Indeed,
+
+  exp(7/10) > 1+7/10+(7/10)^2/2+(7/10)^3/6 > 2,
+
+so exp(-u)<2^(-256) at and beyond that threshold.
+
+Pi is enclosed using Machin's identity
+
+  pi = 16*atan(1/5) - 4*atan(1/239).
+
+Each arctangent uses 96 alternating terms and the magnitude of the next
+term as a one-sided remainder. Rational signs are preserved during the
+subtraction. This gives, with outward rounding,
+
+  3.1415926535897932384626433832795028841971 <= pi <=
+  3.1415926535897932384626433832795028841972.
+
+4. Centered Taylor enclosures
+----------------------------
+For a cell [a,b], write m=(a+b)/2 and h=(b-a)/2. The exact Taylor
+coefficients are
+
+  A_k(m) = sum_i c_i*(-lambda_i)^k*exp(-lambda_i*m)/k!.
+
+The code encloses every coefficient and uses the following nonnegative
+remainder bound, valid throughout [a,b]:
+
+  B_q(a) = sum_i |c_i|*lambda_i^q*exp(-lambda_i*a)/q!.
+
+Because all lambda_i>=0, the left endpoint a gives the largest exponential
+factor anywhere in the cell. For a degree-p value expansion,
+
+  |F(x)-sum_{k=0}^p A_k(m)*(x-m)^k| <= B_{p+1}(a)*h^(p+1).
+
+The derivative expansion through degree p has coefficients (k+1)A_{k+1},
+and remainder at most
+
+  (p+2)*B_{p+2}(a)*h^(p+1).
+
+These formulas follow directly from Taylor's theorem and hold without any
+sign pattern assumption on the coefficients. Summing absolute Taylor
+radii gives whole-cell value and derivative enclosures. If the derivative
+range has a strict sign, the whole-cell value range is intersected with the
+ordered endpoint bounds. Both are valid ranges, so their intersection
+remains a valid enclosure.
+
+Adaptive bisection accepts a cell only when its entire F enclosure has the
+requested strict sign. Exact rational endpoint comparisons prove that all
+accepted cells form a gap-free cover of the requested interval. Failed
+classification never counts as a sign proof.
+
+5. Origin: positive on (0,1/32], simple zero at zero
+--------------------------------------------------
+The exact sum of coefficients is zero. The degree-24 Taylor expansion of
+F at zero therefore starts with A_1*x. Its enclosed linear coefficient is
+
+  0.0035952279192547094235587299889987786547 <= F'(0) <=
+  0.0035952279192547094235587299889987786548.
+
+The exact field representation of this derivative is recorded in
+harmonic_groups.json and harmonic_root_certificate.json. For 0<x<=1/32,
+
+  F(x)/x >= A_1
+       - sum_{k=2}^{24} |A_k|*(1/32)^(k-1)
+       - B_25(0)*(1/32)^24.
+
+The exact rational lower endpoint computed by the code is greater than
+3/1000 (approximately 0.0033626210462666503). Thus F(x)>0 on the whole
+punctured interval and F'(0)>0, proving a simple zero at zero. No argument
+about a sampled sufficiently small point is used.
+
+6. Finite positive region and unique simple crossing
+----------------------------------------------------
+The certificate's 13 positive cells cover [1/32,124] exactly, with no gaps.
+Their ordered endpoints are
+
+  1/32,
+  4223/8192,
+  4095/4096,
+  12157/8192,
+  4031/2048,
+  3999/1024,
+  3983/512,
+  11933/1024,
+  3975/256,
+  3971/128,
+  11909/256,
+  3969/64,
+  11905/128,
+  124.
+
+Every entire cell has a strictly positive lower F endpoint. These signs
+are established by degree-12 Taylor enclosures, sometimes strengthened by
+the certified derivative sign as described above. Each complete jet,
+remainder coefficient, cell range and endpoint value is stored in the JSON.
+
+On [124,125], a degree-20 Taylor derivative enclosure gives
+
+  -0.0000451512391914369468974723925180484461 <= F'(x) <=
+  -0.0000440209297461513571676354999080817049 < 0.
+
+The endpoint enclosures give F(124)>0 and F(125)<0; approximately their
+values are +0.000001711908594976277 and -0.00004287645213350531.
+Continuity gives a zero in (124,125), and the strict derivative bound
+proves uniqueness in that interval and simplicity of that zero.
+
+7. Remaining finite region and the entire infinite tail
+-------------------------------------------------------
+Four degree-12 cells cover [125,512] exactly, with endpoints
+
+  125, 1387/8, 887/4, 637/2, 512.
+
+Each cell's entire F range has a strictly negative upper endpoint.
+
+For x>=512, discard all negative summands except the constant c0. Every
+positive summand is decreasing, and all nonconstant lambdas are positive.
+Consequently
+
+  F(x) <= c0 + sum_{i>=1,c_i>0} c_i*exp(-lambda_i*512).
+
+Every coefficient's sign is itself checked with a strict field enclosure.
+The resulting uniform upper bound is enclosed in
+
+  [-0.0061985613928279837673117680253270154826,
+   -0.0061985613928279837673117680253270154825].
+
+It is strictly negative. This one inequality proves that no zero exists
+anywhere in [512,infinity). In addition F(x) tends to -3/5 as x tends to
+infinity; D_H(x) tends to zero from below.
+
+The regions (0,1/32], [1/32,124], [124,125], [125,512] and [512,infinity)
+cover the entire positive axis. Exactly one region contains a zero, and
+that region contains exactly one simple zero. This completes the global
+count, independently of subsequent high-precision localization.
+
+8. Root localization and conversion to v
+----------------------------------------
+After proving the global count, the engine uses a degree-48 Taylor jet at
+x=249/2, with its uniform remainder on [124,125]. It bisects rational
+intervals and accepts only strictly certified signs at every midpoint.
+After 120 bisections the enclosure is
+
+  164874693357817570256198287827465271493
+       /1329227995784915872903807060280344576
+      <= x_H <=
+  82437346678908785128099143913732635747
+       /664613997892457936451903530140172288.
+
+Its width is exactly 1/1329227995784915872903807060280344576 = 2^(-120).
+Outward decimal endpoints are
+
+  [124.0379332068297490529270708138608804638393,
+   124.0379332068297490529270708138608804645917].
+
+The positive monotone change of variables v=62*x/(7*pi^2), using the
+enclosed pi interval and outward arithmetic, gives the v bracket in the
+theorem. Simplicity transfers because dx/dv=7*pi^2/62>0 and the exponential
+factor in F is never zero.
+
+9. Reproduction, binding, and limitations
+----------------------------------------
+Keep the following seven files together in one directory:
+
+  input_model.json
+  build_harmonic_groups.py
+  harmonic_groups.json
+  certify_harmonic_root.py
+  harmonic_root_certificate.json
+  harmonic_root_proof.txt
+  harmonic_root_summary.json
+
+From any working directory, run the two scripts in this order, passing
+their actual paths:
+
+  python3 build_harmonic_groups.py
+  python3 certify_harmonic_root.py
+
+The scripts locate inputs beside their own source files. They need only
+the Python standard library and no network service, historical files,
+third-party numerical package, or absolute workspace path. Both scripts
+write regenerated JSON into their own directory. Do not run Python with
+-O or PYTHONOPTIMIZE set, because assertions implement certificate gates.
+
+The group JSON binds its builder source and the exact model input. The
+certificate binds its own source, the groups, the builder, and the model.
+The summary binds the complete scientific input/source/result/proof set.
+Hashes establish file identity, not mathematical validity. Mathematical
+validity rests on the exact model checks, enclosure rules, full-axis cover
+and explicit inequalities above; independent review of these remains
+valuable. The code has not been translated into a proof assistant.
+
+No prior continuation or original/star root-certificate file was changed.
+The original and star controls require their separate proof; this file
+establishes only the harmonic contrast defined above. Its result closes
+the previously uncertified historical harmonic-root claim for the freshly
+reconstructed model without recovering or vouching for any lost record.

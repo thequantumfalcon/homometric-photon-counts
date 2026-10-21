@@ -1,0 +1,39 @@
+INDEPENDENT REVIEW OF THE CONTINUOUS-EXPOSURE EXTENSION
+
+Reviewer: root agent, separate from the derivation agent. This is internal
+mathematical review, not external peer review or proof-assistant checking.
+
+Reviewed continuous_exposure_proof.txt and verify_continuous_exposure.py.
+Replayed the exact verifier successfully on 20 October 2026 local date.
+
+The essential dependence step is valid. For disjoint OU path segments,
+conditioning the earlier segment on its final state and the later segment
+on its initial state reduces their covariance to a stationary OU transition.
+The contraction factor is exp(-(kH-D)/tau); it is one for touching gates.
+Conditional expectations contract centered L2 norms. Conditional Poisson
+independence removes cross-gate emission covariance. Thus the use of the
+marginal score variance as an upper bound is conservative and valid.
+
+Summing the geometric covariance bounds gives exactly
+1+2 exp(D/tau)/(exp(H/tau)-1), with no independence assumption on gates.
+The finite-exposure coupling is a marginal argument and survives replacing
+independent resets by one stationary path. The total gate gain is fixed;
+no claim about fixed flux as D tends to zero is implied.
+
+The score expectation bounds use the sum of probabilities equal to one,
+and subtract the fourth score before interval evaluation. This preserves
+the cancellation needed here. Subtracting the minimum square over the
+certified mean interval from the second-moment upper bound is a valid
+variance upper bound. The same TV allowance transfers both score and
+squared-score expectations using their oscillations.
+
+The deterministic threshold lies strictly between the two exposed mean
+intervals. Cantelli bounds each conditional error, including the stated tie
+rule. Taking floor(19*kappa*V/d0^2)+1 enforces the strict error target <1/20.
+Both rational bounds for kappa and the elapsed-span calculations check out.
+
+Result: no mathematical or arithmetic defect found in this extension.
+Its limits remain material: known stationary independent-site OU motion,
+known parameters, conditional independent emissions, fixed total gate gain,
+very small gate width and very large sufficient acquisition times. It
+supplies a conditional theorem, not practical feasibility or optimality.

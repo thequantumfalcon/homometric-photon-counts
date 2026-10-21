@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "date": "2026-10-20",
+  "report": "science_frontier/science_frontier_report.pdf",
+  "report_sha256": "2393d56386f709e819fb5b9ca8b1cc2b777c17083da2d6f34a55700a41e1a29d",
+  "source_sha256": "3fbcb91399b55a7570810ec13ee1647d030a1498defbbd8121462733808cedfe",
+  "pages": 13,
+  "renderer": "native pdfLaTeX; three passes; shell escape disabled",
+  "renderer_sha256": "212ee3d64935f6174912812eee8f4dd24a8b7a8a033346b79a719d79ea1887e1",
+  "render_resolution_dpi": 130,
+  "all_pages_reviewed_in_contact_sheets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "additional_full_resolution_pages_reviewed": [
+    7,
+    8,
+    11
+  ],
+  "checks": [
+    "All new pages visually reviewed; no clipped text, overlapping objects, missing mathematical glyphs, or illegible tables found.",
+    "Extra contents spill page removed; contents and numbered footer sequences checked.",
+    "Critical sample integer enclosure, calibration polynomials/inversion, and robustness table inspected at full rendered size.",
+    "Native TeX log has no Warning, Error, Overfull, Underfull, or missing-character diagnostics.",
+    "All 13 pages contain substantive selectable text.",
+    "Preceding 31 readable pages are unchanged; assembly independently verifies their page streams, text, links, and embedded source bytes."
+  ],
+  "scope": "Presentation review only. Scientific proof and numerical correctness are addressed by the separate proof/certificate/review files."
+}

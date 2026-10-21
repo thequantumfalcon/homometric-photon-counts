@@ -1,0 +1,107 @@
+FINITE-EXPOSURE TRANSFER UNDER SPECIFIED GAUSSIAN MOTION
+20 October 2026 (America/Denver)
+
+Scope
+-----
+This is an additional conditional mathematical result, not physical evidence.
+It quantifies one bridge from the archived instantaneous-count model to a
+time-integrating detector. No original certificate is changed. The bound is
+conservative; its existence does not establish an achievable exposure time.
+
+Model
+-----
+Let z_1,...,z_n have modulus one and sum zero. Each site has an independent
+stationary centered Gaussian process theta_j(u), with covariance
+E theta_j(u) theta_j(v) = s exp(-|u-v|/tau), s,tau>0. Put
+
+ F(u)=sum_j z_j exp(i theta_j(u)), I(u)=|F(u)|^2,
+ J_D=(1/D) integral_0^D I(u) du, D>0.
+
+The exposure count has conditional law Poisson(b+eta J_D), where b>=0 and
+eta>0 are TOTAL per-gate background and gain. This normalization matters:
+for a physical rate model these parameters ordinarily depend on D. Holding
+eta fixed while reducing D requires a corresponding change in rate/flux.
+No claim about the feasibility of that change is made here.
+
+Assume emissions are conditionally independent given the relevant paths.
+For the explicit iid test below, entire trajectories are independent between
+observations (fresh stationary realizations). A single continuously evolving
+trajectory is not iid; its dependence must be controlled separately.
+
+Theorem
+-------
+For either fixed geometry, if P_D is its exposure-count law and P_0 its
+archived snapshot-count law at the same s,eta,b, then
+
+ TV(P_D,P_0) <= min(1, eta C sqrt(D/tau)),
+ C=(4 sqrt(2)/3) n sqrt(s(1-exp(-s))).                    (1)
+
+For m independent observations,
+
+ TV(P_D^m,P_0^m) <= min(1, m eta C sqrt(D/tau)).           (2)
+
+Consequently any fixed snapshot decision rule with conditional error at
+most alpha under each geometry has exposure error at most alpha+epsilon
+under each geometry whenever m eta C sqrt(D/tau)<=epsilon.
+
+Proof
+-----
+The common clean null and independent sites give E|F(u)|^2=n(1-exp(-s)).
+Write W_j(u)=exp(i theta_j(u)). Stationarity gives
+E[W_j(u)-W_j(0)]=0. Independence across sites therefore kills all distinct-
+site cross terms in the squared amplitude increment. The Gaussian
+characteristic function and increment variance 2s(1-exp(-u/tau)) give
+
+ E|F(u)-F(0)|^2=2n[1-exp(-s(1-exp(-u/tau)))].
+
+Use ||a|^2-|b|^2|<=|a-b|(|a|+|b|), Cauchy-Schwarz, and
+E(|F(u)|+|F(0)|)^2<=4n(1-exp(-s)). Thus
+
+ E|I(u)-I(0)|
+ <=2 sqrt(2) n sqrt((1-exp(-s))[1-exp(-s(1-exp(-u/tau)))])
+ <=2 sqrt(2) n sqrt(s(1-exp(-s)) u/tau).
+
+The last step uses 1-exp(-v)<=v twice. Integrating and applying the
+triangle inequality to J_D-I(0) proves E|J_D-I(0)|<=C sqrt(D/tau).
+
+For deterministic rates lambda,mu, couple the smaller-rate Poisson count
+to the larger by adding an independent Poisson(|lambda-mu|) count.
+They disagree with probability 1-exp(-|lambda-mu|)<=|lambda-mu|.
+Condition on the shared phase path and average. The mixture coupling
+proves (1), without claiming that J_D itself has a Gaussian-phase snapshot
+distribution. Independent product couplings and a union bound prove (2).
+Every decision event changes probability by at most total variation.
+
+The product bound can also be replaced by 1-(1-delta)^m, with delta any
+single-observation bound in [0,1]. The simpler m delta is used below.
+
+Explicit reference-point consequence
+-----------------------------------
+Use the archived four-bin rational score at s=2 log(2), eta=1/28, b=0.
+Its certified exponential-moment contraction is d>0. With m=ceil(6/d),
+the snapshot conditional error is at most exp(-6)<1/400. This follows
+from the same Markov argument as the original certificate, with a larger
+sample budget. An exact Taylor partial sum proves exp(3)>20.
+
+Since exp(-s)=1/4 and 2 log(2)<7/5,
+
+ C^2=(32/9)63^2 s(3/4) < (32/9)63^2(21/20)=74088/5.
+
+Choose epsilon=1/25. It suffices that
+
+ D/tau <= (1/25)^2 / [m^2 (1/28)^2 (74088/5)].           (3)
+
+Then each exposure-test error is strictly below
+1/400+1/25=17/400<1/20. The exact m and rational threshold are generated
+by verify_finite_exposure.py from the archived certified d.
+
+What this closes and what remains
+--------------------------------
+Equation (3) is an explicit nonzero exposure condition under the model
+above. It replaces an unquantified snapshot approximation for this one
+specified family. It does not prove model adequacy, physical independence,
+detector linearity, achievable flux, or an experimentally useful bound.
+It does not establish that these extremely short gates are necessary.
+Other within-gate motion laws, dead time, saturation, and afterpulsing need
+their own bounds. This is a human-readable derivation plus rational
+arithmetic verification, not a proof-assistant formalization.

@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.240212678909302,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonAlgebra.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonAlgebra.lean"
+      ],
+      "log_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "olean_sha256": "7ba7faa455588e6a477b4eea674bf6b142d4390839d8feeb55ea518364e8999a"
+    },
+    {
+      "module": "PhotonMomentTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.635083436965942,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonMomentTransfer.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonMomentTransfer.lean"
+      ],
+      "log_sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "olean_sha256": "335cf47985bb65da3119bd5b86e8bdf09728dcc98647dd8fa10253084c897977"
+    },
+    {
+      "module": "PhotonPoissonSeries",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 19.93575429916382,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonPoissonSeries.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonPoissonSeries.lean"
+      ],
+      "log_sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "olean_sha256": "cdc6fa7ee4b10adfd37bbaa7bfcf197f696675a9c50374aac1752618a3dd5a29"
+    },
+    {
+      "module": "PhotonPoissonMeasure",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.81665301322937,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonPoissonMeasure.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonPoissonMeasure.lean"
+      ],
+      "log_sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "olean_sha256": "8470d3d75be0d4dbbf23f083c0d925414906b541cc47c0acb5cfdafbd4397ad1"
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.264296293258667,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonMixtureBridge.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\followup-lean-fresh-2026-10-20\\PhotonMixtureBridge.lean"
+      ],
+      "log_sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "olean_sha256": "55a06f78f2edeb20b7e34382e8c52b5c7e5879c5621fa39e56b811f4d9b5d5b2"
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 411.88724875450134,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "leanchecker",
+        "--fresh",
+        "--verbose",
+        "PhotonMixtureBridge"
+      ],
+      "log_sha256": "e76a0073928df5647d03507f9071e51258e209a44dd4fbc40bfde857a28be62b"
+    }
+  ],
+  "scope": "Eight new conditional moment-transfer theorems; tower identities and geometry remain premises. See SCOPE.txt.",
+  "fresh_kernel_performed": true,
+  "fresh_kernel_receipt_reused": false,
+  "proof_manifest_sha256": "ad3e0db6ce653542785f8119fa664b06c0450a318e1cafcd319015e0633300c3"
+}

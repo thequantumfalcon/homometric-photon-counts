@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "archived_certificate_sha256": "825760f102f2a84d206dee9a86ad457f1d90e3bf27cc5a4e873b1d38676ac119",
+  "source_sha256": "5d25fa6bb1237fef627888e12650b884dba98a05b066f76c38bde2e828340040",
+  "proof_sha256": "344a77b16318be8413da6a990c9c1ed7b290133bb975c186deb936e69d2c40a9",
+  "m": 606362329939484,
+  "contraction_lower_bound": "494753689646157231516030120478193403007855252793065658483813328691/50000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "snapshot_error_strict_upper": "1/400",
+  "transfer_allowance": "1/25",
+  "exposure_error_strict_upper_per_structure": "17/400",
+  "C_squared_upper": "74088/5",
+  "maximum_D_over_tau_sufficient": "1/4343164187941368418534394575149000",
+  "maximum_D_over_tau_float_display_only": 2.302468791708272e-34,
+  "scope": "Conditional finite-exposure OU/reset model in companion proof; sufficient only. No physical data, rate/flux feasibility, necessity, or formal-kernel verification."
+}

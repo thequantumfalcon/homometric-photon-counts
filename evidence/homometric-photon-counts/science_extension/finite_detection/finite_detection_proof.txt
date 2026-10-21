@@ -1,0 +1,350 @@
+FINITE PHOTON-COUNT CERTIFICATES AND A FOUR-COUNT BLIND GAIN
+20 October 2026
+
+Scope
+-----
+These results extend the saved homogeneous Gaussian-motion theorem for the
+specified 63-site pair. They are mathematical results for calibrated models,
+not experimental observations or publication-priority claims. The notation is
+
+  F_G = sum_j z_Gj exp(i sqrt(s) Z_j),   I_G = |F_G|^2,
+  G in {A,B},  Z_j iid N(0,1),  n=63,  0 <= I_G <= n^2=3969,
+  t=exp(-s/2),  N given I ~ Poisson(eta I),  eta>0.
+
+The detector background is zero throughout this supplement. Snapshots are
+independent conditional on the unknown configuration. Equal priors are used
+for the stated optimal classification probabilities. The gain eta multiplies
+the UNNORMALIZED intensity. The illustrative gain values below must not be
+transferred to another intensity normalization without conversion.
+
+Write mu_G,k=E[I_G^k] and D_k=mu_A,k-mu_B,k. The established exact result gives
+D_0=D_1=D_2=D_3=0 and
+
+  D_4 = (455015761/20000) t^8 (1-t^2)^5
+                    (t^6+3t^4+6t^2+6) > 0,  0<t<1.
+
+Every intensity moment is finite. Its calculation below is exact, using the
+geometric phases, not Monte Carlo data or a fitted approximation.
+
+MAIN NEW RESULTS
+----------------
+1. Finite count-probability, total-variation, and Hellinger intervals are now
+   certified at s=2 log 2, eta=1/512. They imply explicit necessary and sufficient
+   sample-count bounds for 95% equal-prior success.
+2. At that point, retaining only whether N=4 reduces squared Hellinger separation
+   by a factor between 107.8652543852 and 107.8652544348.
+3. At the same phase variance, there is a certified positive gain at which the
+   four-count indicator has EXACTLY THE SAME law under A and B. A simple zero
+   is isolated near eta=0.00165929160405052585. Full count distributions remain
+   different there. Thus the earlier small-s optimality of the four-count
+   indicator does not extend uniformly to arbitrary finite s and gain.
+4. A bound involving only the first six intensity moments gives a genuinely
+   finite-s sufficient sample bound with the sharp s^-6 asymptotic order.
+
+1. EXACT MOMENTS AND RIGOROUS COUNT-PROBABILITY INTERVALS
+------------------------------------------------------
+For a single Gaussian phase factor W=exp(i sqrt(s) Z),
+
+  E[W^a conjugate(W)^b] = t^((a-b)^2).
+
+For fixed rational t, these are rational numbers. Define single-site mixed
+cumulants kappa_ab by the usual moment-cumulant recurrence. Independence gives
+the field cumulants K_G,ab=kappa_ab M_G,a-b, where
+M_G,k=sum_j z_Gj^k. The recurrence obtained by selecting the block containing a
+distinguished positive slot is, for a>0,
+
+  E[F^a conjugate(F)^b]
+    = sum_{i=1..a,j=0..b} binom(a-1,i-1) binom(b,j)
+             K_ij E[F^(a-i) conjugate(F)^(b-j)].
+
+For a=0, select a distinguished negative slot instead. This recurrence is a
+partition identity; it includes every partition exactly once and requires no
+limiting or Gaussian-field approximation. The adjacent unchanged engine uses
+exact arithmetic in Q(sqrt(3),sqrt(74),sqrt(191),i), rebuilding all unit phases
+from the point-set definition. All diagonal moments here reduce to rationals.
+
+The supplied fixed_t_moments.json contains mu_G,k for k=0,...,32 at t=1/2.
+The script can rebuild it from the geometric phases. A separate direct
+site-convolution calculation agrees through order five. Every retained moment
+is also checked for positivity, the support bound
+
+  mu_G,k+1 <= 3969 mu_G,k,
+
+and moment log-convexity
+
+  mu_G,k^2 <= mu_G,k-1 mu_G,k+1.
+
+Those latter checks are consistency checks; the partition identity is the
+justification for the higher-order calculation.
+
+Put R_G,k(eta)=E[I_G^k exp(-eta I_G)]. Taylor's theorem gives, for every x>=0,
+
+  sum_{j=0..2r+1} (-x)^j/j! <= exp(-x)
+       <= sum_{j=0..2r} (-x)^j/j!.
+
+The sign follows from the Lagrange remainder and holds even when successive
+Taylor terms are not decreasing. Multiply by I^k and take expectations. Every
+odd partial sum is a lower bound for R_G,k, and every even partial sum is an
+upper bound. The calculation takes the largest available lower bound and the
+smallest available upper bound, also imposing 0<=R_G,k<=mu_G,k.
+
+The count probabilities then satisfy
+
+  p_G(k) = eta^k R_G,k(eta)/k!.
+
+Thus rational eta and rational t give rational enclosures without quadrature.
+The output uses outward rational rounding to a grid of spacing 10^-90; this
+rounding only widens the inequalities. Descriptive decimal strings are not
+used as premises of any assertion.
+
+For a cutoff K, the remaining mass has the exact upper bound
+
+  P_G(N>=K+1) <= eta^(K+1) mu_G,K+1/(K+1)!.
+
+Indeed 1{N>=K+1} <= (N)_(K+1)/(K+1)!, and Poisson factorial moments conditional
+on I equal (eta I)^(K+1). This controls the entire infinite count tail.
+
+2. FINITE TV AND HELLINGER CERTIFICATION
+--------------------------------------
+Use the convention
+
+  h^2(P,Q)=sum_k (sqrt(p(k))-sqrt(q(k)))^2,
+  rho(P,Q)=sum_k sqrt(p(k)q(k))=1-h^2/2,
+  TV(P,Q)=(1/2)sum_k |p(k)-q(k)|.
+
+For intervals a=[a_lo,a_hi], b=[b_lo,b_hi] enclosing one pair of probabilities,
+the signed gap lies in [a_lo-b_hi,a_hi-b_lo]. Its absolute value lies between
+max(0,a_lo-b_hi,b_lo-a_hi) and max(|a_lo-b_hi|,|a_hi-b_lo|).
+
+To enclose each Hellinger summand, use
+
+  (sqrt(p)-sqrt(q))^2=(p-q)^2/(p+q+2sqrt(pq)).
+
+The denominator is increasing in both p and q. Rational square-root bounds
+are obtained by integer square root on a grid of spacing 2^-200. Squaring each
+endpoint verifies the bounds exactly. If the denominator lower bound is zero,
+the valid upper bound p+q is used instead.
+
+Sum the enclosures for k=0,...,K. The omitted Hellinger contribution is at most
+P_A(N>K)+P_B(N>K), and the omitted TV contribution is at most half that sum.
+
+At t=1/2, s=2 log 2, eta=1/512, and K=24, the sum of the two tail bounds is
+less than 1.030e-26. The exact output supplies the following outward summaries:
+
+  2.40263644590220e-17 < h^2(full counts) < 2.40263644700612e-17,
+  3.65527413391791e-10 < TV(full counts)  < 3.65527413391793e-10.
+
+These are enclosures of the full count-distribution distances at a specified
+FINITE positive phase variance. They are not just leading small-noise terms
+or selected-moment lower bounds.
+
+For Y=1{N=4}, the Bernoulli squared Hellinger distance has two terms, for Y=1
+and Y=0. Applying the same interval calculation gives
+
+  2.22744243231592e-19 < h^2(four-count indicator) < 2.22744243231593e-19.
+
+The full-count/four-count h^2 ratio is enclosed by
+
+  107.8652543852 < ratio < 107.8652544348.
+
+This is a ratio of the specified squared Hellinger separations. It is not a
+claim about mutual information or a universal efficiency ratio.
+
+3. NECESSARY AND SUFFICIENT FINITE SAMPLE BOUNDS
+----------------------------------------------
+With equal priors and m independent observations, optimal success equals
+(1+TV(P^m,Q^m))/2. Product affinity is rho^m. The elementary bounds
+
+  1-rho^m <= TV(P^m,Q^m) <= sqrt(1-rho^(2m))
+
+follow respectively from min(p,q)<=sqrt(pq) and Cauchy--Schwarz applied to
+|p-q|=|sqrt(p)-sqrt(q)|(sqrt(p)+sqrt(q)).
+
+Suppose L<=h^2<=U with 0<L<=U<2. To attain success at least 19/20, the right
+bound requires rho^(2m)<=19/100. Since rho>=1-U/2, and
+-log(1-x)<=x/(1-x) for 0<=x<1, a necessary condition is
+
+  m >= [log(100/19) (1-U/2)]/U.
+
+Since rho<=1-L/2<=exp(-L/2), a sufficient condition for the optimal rule is
+
+  m >= 2 log(10)/L.
+
+The implementation uses rational constants
+
+  830365/500000 < log(100/19),
+  log(10) < 230259/100000.
+
+Both are certified by rational Taylor bounds for the exponential, so no
+floating-point logarithm controls an integer threshold. Taking ceilings gives:
+
+  Data retained        Necessary m at least       Sufficient m
+  -------------------------------------------------------------------------
+  Full photon counts   69,121,152,393,630,388       191,671,944,702,842,206
+  Only 1{N=4}          7,455,770,689,765,032,714   20,674,743,073,884,456,509
+
+The necessary bound in the second row concerns FOUR-COUNT-ONLY observations;
+it must not be applied to an observer retaining the full counts. The first
+row concerns the full distributions. These intervals do not determine the
+exact optimal sample count. They also do not predict an acquisition time.
+
+The large counts are a consequence of this illustrative mathematical operating
+point. They do not establish that all operating points are similarly difficult,
+and no practical experiment is recommended on their basis.
+
+An explicit simple rule, with no exact likelihood ratio required
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At this operating point p_A(4)<p_B(4). Put
+
+  theta=(upper_bound(p_A(4))+lower_bound(p_B(4)))/2,
+
+whose value is about 0.0000462384885924556627812842839232. Given m snapshots,
+choose B when the observed fraction of N=4 exceeds theta and A otherwise.
+Let d be the certified positive lower bound for p_B(4)-p_A(4), and let u bound
+both probabilities from above. Each hypothesis is separated from theta by at
+least d/2. For a centered Bernoulli variable X, |X|<=1 and E[X^2]<=u. Since
+k!>=2*3^(k-2) for k>=2,
+
+  log E exp(lambda X) <= u lambda^2/[2(1-lambda/3)],  0<=lambda<3.
+
+This follows by expanding the exponential, bounding higher absolute moments
+by E[X^2], and applying log(1+y)<=y. The Chernoff optimization then yields
+
+  P(error | either configuration)
+    <= exp[-m d^2/(8u+4d/3)].
+
+The exact integer 26,937,971,154,603,499,910 makes the exponent at least 3.
+A rational Taylor lower bound proves exp(3)>20. Thus EACH conditional error
+is below 1/20. This concrete test has a somewhat larger sufficient count than
+the optimal likelihood-ratio guarantee, as expected.
+
+4. A CERTIFIED FOUR-COUNT BLIND GAIN
+----------------------------------
+Fix t=1/2. Define
+
+  F(eta)=R_A,4(eta)-R_B,4(eta),
+  p_A(4)-p_B(4)=eta^4 F(eta)/24.
+
+Because intensities are bounded, these functions are real analytic in eta.
+At eta=0, F(0)=D_4>0. The exact interval computation gives a positive count-four
+gap at eta=1/640 and a negative gap at eta=1/512. At the latter point,
+
+  -6.418373913380575e-12 < p_A(4)-p_B(4) < -6.418373913380574e-12.
+
+Continuity therefore gives a positive blind gain between those endpoints.
+Rational bisection and the moment bounds isolate a zero in the exact interval
+
+  [61217055127150107/36893488147419103232,
+   38260659454468817/23058430092136939520],
+
+which is contained in the outward decimal interval
+
+  [0.0016592916040505258470, 0.0016592916040505258525].
+
+This zero is also SIMPLE and UNIQUE WITHIN THE EXACT RATIONAL INTERVAL above;
+the decimal interval is only an outward display. Differentiate:
+
+  F'(eta)=-R_A,5(eta)+R_B,5(eta).
+
+Each R_G,5 decreases in eta because its derivative is -R_G,6<=0. For an interval
+[a,b], evaluating R_G,5 at a and b therefore gives a uniform enclosure of F'
+throughout the interval, without assuming F' itself is monotone. The saved
+certificate establishes the strict uniform bounds
+
+  -41829.301943402 < F'(eta) < -41829.301943351 < 0.
+
+The strict endpoint signs plus F'<0 establish exactly one simple zero there.
+No claim is made about the number of zeros elsewhere on the positive gain axis.
+
+At this gain, Y=1{N=4} has EXACTLY identical Bernoulli distributions for A and B.
+Any number of independent Y observations is therefore uninformative: equal-
+prior success cannot exceed 1/2. The full count distributions remain different,
+because their fourth factorial moments differ by eta^4 D_4>0. Thus there is no
+conflict with full-detector identifiability.
+
+This result precisely limits the earlier four-count conclusion. That conclusion
+was an s->0 theorem with fixed gain. The blind point occurs at fixed finite s
+while gain varies; uniform finite-parameter optimality would be false.
+
+5. A FINITE-s SIX-MOMENT GUARANTEE WITH THE SHARP SMALL-s POWER
+-------------------------------------------------------------
+The scalar inequality
+
+  1-x <= exp(-x) <= 1-x+x^2/2,  x>=0,
+
+gives the following exact lower bound for the four-count probability difference:
+
+  p_A(4)-p_B(4) >= L(s),
+
+  L(s) = eta^4/24 [D_4(s)-eta D_5(s)-eta^2 mu_B,6(s)/2].
+
+For the difference, the A remainder is nonnegative and the B remainder is at
+most eta^2 mu_B,6/2, which is why only the B sixth moment appears in this lower
+bound. A corresponding upper bound uses +eta^2 mu_A,6/2. Also,
+
+  p_A(4),p_B(4) <= U(s) = eta^4 max(mu_A,4,mu_B,4)/24.
+
+Whenever L(s)>0, the four-count Hellinger contribution satisfies
+
+  h^2 >= (sqrt(p_A(4))-sqrt(p_B(4)))^2
+       >= L(s)^2/[4 U(s)].
+
+The same lower bound applies to full counts by retaining this one nonnegative
+summand. Therefore an entirely nonasymptotic sufficient sample number is
+
+  m >= ceil[8 U(s) log(10)/L(s)^2]
+
+for 95% equal-prior success of the optimal four-count test. The implementation
+replaces log(10) by its proved rational upper bound.
+
+As s->0 with fixed eta>0, the established moment facts give
+
+  D_4=c5 s^5+O(s^6),  c5=455015761/1250,
+  D_5=O(s^6),  mu_B,6=O(s^6),
+  mu_G,4=m4 s^4+O(s^5),  m4=75408578015121/160000.
+
+Thus L(s)>0 eventually and
+
+  L(s)^2/[4 U(s)]
+    = eta^4 c5^2/(96 m4) s^6 + O(s^7).
+
+The finite-s bound therefore recovers the same leading Hellinger coefficient
+as the previously proved exact small-s asymptotic, and its sample guarantee
+has the sharp s^-6 order. It does not merely use a variance-insensitive
+Hoeffding bound, which would lose this power for rare four-count events.
+
+For a concrete finite point, choose t=999/1000, s=-2 log(999/1000), eta=1/512.
+Exact moments through order six prove the outward summaries
+
+  L(s) > 1.46925051894049e-21,
+  U(s) < 4.55932474093031e-15,
+  h^2(four-count) > 1.18367149197977e-28.
+
+The integer 38,905,896,029,459,193,642,493,650,866 is sufficient under this
+conservative six-moment bound for 95% optimal four-count success. This is a
+proof of a finite parameter guarantee, not a practical sample recommendation.
+
+REPRODUCTION AND PROOF SCOPE
+----------------------------
+Run from this directory:
+
+  python certify_finite_detection.py
+
+The default rebuilds both moment tables through order 32 and all certificates.
+It also repeats the direct-site check through order five. The optional
+--reuse-moments flag is for inspecting an already computed exact table; it
+does not independently regenerate the higher moments. The source and input
+hashes are retained in the certificate. Hashes bind bytes, not mathematical
+truth.
+
+Only the Python standard library is required. Do not run with python -O,
+because the executable proof checks use assertions. No web service, numerical
+library, external scientific data, or stochastic simulation is needed.
+
+The unchanged moment engine accompanies the supplement. The full proof record
+defines the geometry and proves the common-null and fourth-moment premises.
+This supplement proves the count transformation, finite enclosures, sample
+inequalities, and blind-gain statements. It does not establish physical
+calibration, independent laboratory snapshots, publication priority, external
+peer review, exact optimal sample counts, or a global optimum over detector
+parameters.

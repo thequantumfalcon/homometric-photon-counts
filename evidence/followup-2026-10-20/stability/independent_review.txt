@@ -1,0 +1,32 @@
+INDEPENDENT DERIVATION REVIEW OF THE LOCAL STABILITY ARGUMENT
+
+This is an additional AI mathematical review, not external peer review or a
+machine-checked proof. The exact constant checker validates rational inequalities;
+the analytic argument also requires Fourier inversion, dominated differentiation,
+Taylor's theorem, compactness, and the analytic implicit function theorem.
+
+The review checked the phase-density geometric-series bounds, the single-site
+integration-by-parts estimate, all Fourier normalization factors, and the product
+derivative envelope. In particular, the difference of two products cancels the
+1/2 in the intensity-density inversion, giving
+  |delta'| <= 63*8*7^4*(1/2+1/29).
+The Bessel remainder gives
+  L = (1/4)*integral r^3 B_63(r) dr = 63*7^8/880.
+These integral exponents and constants agree with direct splitting at r=49.
+
+The large-gain bound is global in the intensity variable, including u>3969,
+because it follows from Fourier inversion there too. Substituting v=eta*u
+therefore bounds the entire integral by the two stated exponential moments.
+B(b)<=5*A(b) holds coefficientwise for all nonnegative b; the chosen R exceeds
+5*L/(2e-8). At small gain the fifth derivative bound includes all five polynomial
+coefficients, and both laws contribute to the remainder 10*eta*M^5.
+
+On the remaining compact interval, disjoint simple-root intervals preserve
+derivative sign and opposite endpoint signs. The complement has strictly
+positive minimum absolute reference value. Uniform continuity excludes any
+other roots there, while the endpoint estimates exclude escaping roots.
+
+The existence claim for a sufficiently small rectangle in (t,b) is justified
+conditional on the sealed reference root and density-gap certificates. The
+explicit 1e-14 t-band is NOT a computed radius for that full rectangle. The
+argument does not settle the root count at arbitrary phase variance/background.

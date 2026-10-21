@@ -1,0 +1,40 @@
+HOMOGENEOUS IID GAUSSIAN CONTROL
+
+Files:
+
+  homogeneous_control_proof.txt
+    Complete general theorem, proof, concrete 63-site construction,
+    exact factorization, finite-noise witnesses, total-variation bounds,
+    small/high-noise limits, and a fifth-moment bound.
+
+  homogeneous_control.py
+    Self-contained exact computation and independent verification.
+    Requires Python 3.10 or later and its standard library only.
+
+  homogeneous_control_results.json
+    Exact phase power sums, mixed cumulants, intensity moments through
+    order five, sums/differences, witness values, and verification record.
+
+Reproduce from this directory:
+
+  python homogeneous_control.py
+
+The script overwrites only homogeneous_control_results.json beside itself.
+It does not import any earlier project result. The elapsed-seconds field
+changes between runs; all certified mathematical outputs are deterministic.
+
+Main conclusion for this model:
+
+  Every site in either structure has identical iid raw Gaussian motion.
+  Optional centering gives the same entire displacement covariance matrix.
+  Mean intensities agree at every frequency and every noise variance.
+  At omega=pi/3 the first three intensity moments agree for all noise levels.
+  The fourth intensity moment is strictly larger for A at every finite
+  positive noise variance, with exact gap
+
+    (455015761/20000) t^8 (1-t^2)^5 (t^6+3t^4+6t^2+6),
+
+  where t=exp(-s/2) and s is raw Gaussian phase variance.
+
+This certifies different ideal intensity laws. It does not by itself prove
+experimental practicality, an efficient classifier, or scientific priority.

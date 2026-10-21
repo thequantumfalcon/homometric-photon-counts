@@ -1,0 +1,248 @@
+TARGETED PRIORITY AND IDENTIFIABILITY LITERATURE UPDATE
+Date: 20 October 2026
+Scope: follow-up to science_completion/literature/
+       iid_gaussian_homometry_novelty_comparison.txt
+Status: source comparison; not an external peer review or priority certificate.
+
+OUTCOME
+
+This pass closes one earlier full-text access gap: Webster et al. (2003) is
+available on an author's university site and its relevant assumptions and
+bispectral measurement equation were inspected. It also adds accessible
+primary proofs for classical Poisson-mixture identifiability and identifies
+the established Gaussian deconvolution setting relevant to the new detector
+extension. The Barakat 1981/1983/1988 full-text gaps remain unresolved.
+
+The precise homogeneous-noise homometry theorem still has unresolved
+publication priority. None of the newly inspected passages states the exact
+comparison of two finite homometric point sets at a common amplitude null,
+with equality of intensity moments one through three and a fourth-moment
+gap selected by Re[M4 conjugate(M2)^2]. This records what was inspected; it
+does not prove that no earlier equivalent theorem or construction exists.
+
+1. WEBSTER ET AL. 2003: PREVIOUS ABSTRACT-ONLY GAP CLOSED
+
+Mark A. Webster, Kevin J. Webb, Andrew M. Weiner, Junying Xu, Hui Cao,
+"Temporal response of a random medium from speckle intensity frequency
+correlations," JOSA A 20(11), 2057-2070 (2003).
+DOI: https://doi.org/10.1364/JOSAA.20.002057
+Author-hosted full text: https://www.eng.yale.edu/caolab/papers/josaa03.pdf
+Read: sections 2A-2C, section 3, and relevant Appendix A assumptions.
+
+The model explicitly passes to large N, uses independent uniformly
+distributed phases, and obtains jointly circular complex Gaussian fields.
+Section 3 relates a THIRD intensity correlation at MULTIPLE frequencies to
+twice the real bispectrum of a temporal response. Equation (33) gives the
+usual product of two Fourier amplitudes and a conjugate at their sum.
+This confirms strong precedent for accessing phase invariants through
+intensity fluctuations. Its inspected derivation uses different assumptions
+and observable from the project's finite-N, single-frequency fourth raw
+intensity moment. It cannot be cited as experimental verification of the
+project's constructed geometries or Gaussian displacement model.
+
+2. SHIMIZU 2025: FINITE PHASOR FRAMEWORK CONFIRMED
+
+Kenji Shimizu, Ocean Science 21, 2233-2253 (2025).
+DOI: https://doi.org/10.5194/os-21-2233-2025
+Full text:
+https://os.copernicus.org/articles/21/2233/2025/os-21-2233-2025.html
+Read in this pass: introduction's finite/nonidentical model scope; Appendix A,
+especially equations A3 and A14; explanatory discussion of wrapped-normal
+versus von Mises phases.
+
+Appendix A handles a finite number of independent waves with individual
+deterministic phase offsets and phase spreads. Equation A14 supplies a
+Fourier-Bessel characteristic function with wrapped-normal Fourier
+coefficients exp(-k^2 sigma_j^2/2); equation A3 combines component laws.
+Setting all amplitudes to one, all variances equal, and phase offsets to the
+structural phases specializes this framework to our random-phasor model.
+At the common null the total centering shift cancels. That specialization is
+our inference from the displayed formulas. It rules out a claim that finite
+wrapped-normal phasor calculation is a new general method of this project.
+No homometric moment-selection theorem was identified in the passages read.
+
+3. ABDI, HASHEMI AND NADER-ESFAHANI 2000: ADDITIONAL FINITE-SUM PRECEDENT
+
+Ali Abdi, Homayoun Hashemi, Said Nader-Esfahani, "On the PDF of the Sum of
+Random Vectors," IEEE Transactions on Communications 48(1), 7-12 (2000).
+DOI: https://doi.org/10.1109/26.818866
+Author-hosted version: https://web.njit.edu/~abdi/srv.pdf
+Read: introduction's assumptions/classification; derivation scope;
+conclusion and bibliography relevant to Barakat.
+
+The paper organizes prior finite-random-vector methods and develops exact
+envelope representations and moment-based Laguerre calculations. Its main
+development explicitly focuses on deterministic N and uniform phase laws.
+Consequently its general phrase "random vectors" does not by itself
+establish the project's nonuniform-phase selection rule. The inspected
+paper provides another reason to treat moment recurrences, exact finite
+phasor sums, and alternatives to Monte Carlo as established techniques.
+
+4. BARAKAT FULL-TEXT ACCESS STATUS
+
+BA81: "Direct derivation of intensity and phase statistics of speckle
+produced by a weak scatterer from the random sinusoid model," JOSA 71,
+86-90 (1981). DOI: https://doi.org/10.1364/JOSA.71.000086
+Publisher: https://opg.optica.org/josa/abstract.cfm?uri=josa-71-1-86
+The searched publisher full-text endpoint returned a retrieval error.
+The earlier abstract-only comparison is retained; no formula is upgraded
+to fully checked on the basis of this retry.
+
+BA83: "Onefold photoelectron-counting statistics for non-Gaussian light:
+scattering from an arbitrary number of weak scatterers," JOSA 73,
+1138-1142 (1983). DOI: https://doi.org/10.1364/JOSA.73.001138
+Publisher: https://opg.optica.org/josa/abstract.cfm?uri=josa-73-9-1138
+Exact-title searches found citations and related publisher articles, but
+no accessible author/institutional full text of this article. Its earlier
+abstract-only status remains. Do not confuse it with Barakat and Blake's
+1976 polydisperse-suspension paper with a similar title.
+
+BA88: "Probability density functions of sums of sinusoidal waves having
+nonuniform random phases and random numbers of multipaths," JASA 83,
+1014-1022 (1988). DOI: https://doi.org/10.1121/1.396046
+The publisher's direct PDF URL was located:
+https://pubs.aip.org/asa/jasa/article-pdf/83/3/1014/12233516/1014_1_online.pdf
+It redirected to a purchase-only abstract page. The abstract confirms finite
+sinusoidal sums, von Mises phases, and moments with deterministic or random N.
+It does not settle nonidentical-offset generality or the present selection
+rule. Full text was not accessed.
+
+BA74: "First-order Statistics of Combined Random Sinusoidal Waves with
+Applications to Laser Speckle Patterns," Optica Acta 21, 903-921 (1974).
+DOI: https://doi.org/10.1080/713818862
+The publisher PDF URL was found but returned a retrieval error. It remains
+a reference lead, not a fully inspected source. No paywall or login was
+bypassed, no purchase was made, and no author was contacted.
+
+5. POISSON MIXTURE INJECTIVITY IS ESTABLISHED
+
+Theofanis Sapatinas, "Identifiability of mixtures of power-series
+distributions and related characterizations," Annals of the Institute of
+Statistical Mathematics 47(3), 447-459 (1995).
+DOI: https://doi.org/10.1007/BF00773394
+Official full text: https://www.ism.ac.jp/editsec/aism/pdf/047_3_0447.pdf
+Read: section 2, Theorems 2.1 and 2.2, Note 1, and applicable remarks.
+
+The paper proves identifiability criteria for arbitrary power-series
+mixtures and explicitly identifies Poisson mixtures as satisfying them.
+The argument also subsumes finite and countable mixing laws. This is an
+accessible primary proof of the principle used by the project's Poisson
+detector extension. Recoverability of the mixing-rate distribution from
+the complete count law is not a new theorem claimed by this project.
+
+For historical orientation, Henry Teicher, "Identifiability of Mixtures,"
+Ann. Math. Statist. 32(1), 244-248 (1961),
+https://doi.org/10.1214/aoms/1177705155, establishes identifiability for
+additively closed families in its publisher abstract. Its direct full-text
+routes were blocked by an unavailable page during this pass. We do not
+attribute an unread detailed proof to it. Sapatinas supplies the inspected
+primary mathematical support needed here.
+
+6. UNKNOWN GAUSSIAN READOUT: ESTABLISHED DECONVOLUTION SETTING
+
+Catherine Matias, "Semiparametric deconvolution with unknown noise variance,"
+ESAIM: Probability and Statistics 6, 271-292 (2002).
+DOI: https://doi.org/10.1051/ps:2002015
+Author full text: https://cmatias.perso.math.cnrs.fr/Docs/psns5.pdf
+Read: pages 272-275, model definition, no-Gaussian-component restriction,
+and compact-support discussion; not a complete audit of every minimax proof.
+
+The paper studies independent centered Gaussian measurement error with
+unknown variance. Its signal class excludes a Gaussian convolution
+component, which makes that variance identifiable. Compact support is a
+particularly transparent way to exclude such a component. Therefore the
+project's compact-support argument identifying Gaussian variance is an
+elementary specialization of established deconvolution reasoning. Its
+application to the complete structural/nuisance parameter family still
+requires the project's separate support and intensity calculations.
+
+Alexander Meister, "Deconvolving compactly supported densities,"
+Mathematical Methods of Statistics 16, 63-76 (2007),
+https://doi.org/10.3103/S106653070701005X, further confirms the established
+role of compact support in relaxing noise Fourier-transform assumptions.
+Only its publisher abstract was available in this pass. This is background,
+not the source of an uninspected claim of arbitrary-noise injectivity.
+
+7. UNKNOWN ARBITRARY NOISE: DO NOT CONFUSE TWO EXPERIMENTS
+
+Jeremie Capitao-Miniconi, Elisabeth Gassiat and Luc Lehericy,
+"Deconvolution of repeated measurements corrupted by unknown noise,"
+arXiv:2409.02014v1 (3 September 2024).
+Full author preprint: https://arxiv.org/pdf/2409.02014
+Read: introduction, section 2 assumptions and Theorem 1; analytic-function
+observation immediately preceding the theorem. The full estimation proof
+was not audited here.
+
+Their experiment makes two noisy measurements of the SAME latent signal,
+with independent error coordinates. Under the stated analytic-tail
+condition on the signal, they establish joint identifiability up to
+translation without nonvanishing restrictions on error characteristic
+functions. Compact support satisfies the signal-tail condition. This
+demonstrates that analytic deconvolution and unknown-noise identifiability
+are active established subjects. It does not license an unknown arbitrary
+noise claim for one readout of each independently changing intensity.
+
+8. WHAT THIS UPDATE CHANGES AND DOES NOT CHANGE
+
+The old statement that Webster 2003 could only be inspected at abstract
+level is superseded. The finite-phasor and bispectral method precedents
+are now more sharply separated from the project's exact theorem. The
+detector extension can cite accessible primary mathematical sources for
+Poisson mixtures and unknown Gaussian variance. No new historical priority
+claim follows from any of these improvements.
+
+The project's own proofs should stand independently: cumulant charge
+classification for moment selection; explicit geometry and invariant;
+support and analytic-transform arguments for nuisance identifiability;
+and probability inequalities for finite-sample bounds. Existing general
+tools should be cited as such. The candidate contribution is the precise
+combination and its explicit examples, pending comparison against the
+remaining closely related full texts and external mathematical review.
+
+This is a targeted follow-up, not an exhaustive systematic review, a patent
+search, experimental validation, or proof of universal priority. No external
+messages were sent.
+
+9. AINSLEIGH 2017: DIRECT PRECEDENT FOR THE MOMENT-COMPUTATION FRAMEWORK
+
+Phillip Ainsleigh, "A Method for Computing Moments of Quadratic Forms
+Involving Wrapped Random Variables," SIAM Journal on Matrix Analysis and
+Applications 38(2), 554-573 (2017).
+DOI: https://doi.org/10.1137/16M1082019
+Publisher: https://epubs.siam.org/doi/10.1137/16M1082019
+Read depth: publisher abstract and bibliography; the publisher-supplied
+first-page preview hosted at
+https://www.researchgate.net/publication/317704412_A_Method_for_Computing_Moments_of_Quadratic_Forms_Involving_Wrapped_Random_Variables
+The page explicitly labels this as a preview supplied by SIAM. It is only
+page 554, not the complete article. No ResearchGate user commentary is used.
+
+The abstract describes analytical higher moments of quadratic forms in
+independent wrapped variables using structured matrices, characteristic
+functions, and symmetries that reduce the computation. It includes wrapped
+normal examples. This is a directly relevant general computational
+predecessor. The full publisher PDF endpoint returned a retrieval error;
+targeted title, DOI, author, arXiv, and institutional-domain searches did not
+locate an accessible author or institutional full text in this pass.
+
+The following specialization is our own algebraic comparison, not a claim
+about an unread equation in Ainsleigh. Write the project phase vector as
+W=(exp(i theta_1),...,exp(i theta_n))^T and the structural coefficients as
+z=(z_1,...,z_n)^T. Let a=conjugate(z), with * denoting conjugate transpose.
+Then
+
+  I=|z^T W|^2=|a^* W|^2=W^* (a a^*) W.
+
+Thus our intensity is exactly a Hermitian positive-semidefinite rank-one
+quadratic form in independent wrapped variables. Its p-th raw moment is a
+higher moment of precisely this type of quadratic form. This makes it
+particularly inappropriate to claim that computing finite wrapped-phase
+intensity moments analytically is itself a new general method.
+
+The algebraic specialization by itself does not establish whether the
+paper contains the common-null, two-structure cancellation theorem. That
+requires full-text comparison. Neither the abstract nor the first-page
+preview establishes or excludes the exact equal-first-three/different-fourth
+homometry result, the diagonal-bispectrum coefficient, or the arbitrary-iid
+phase-law selection formula. This is an additional unresolved full-text
+priority comparison, alongside the Barakat papers. Do not claim the exact
+theorem is absent from the unread sections.

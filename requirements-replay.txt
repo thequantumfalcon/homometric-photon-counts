@@ -1,0 +1,4 @@
+# Verified Windows x86-64 cp310-abi3 wheel; Python 3.11+.
+# Review and add platform wheel hashes before claiming another Arb platform.
+python-flint==0.9.0 \
+    --hash=sha256:8f1059536b7393e48b1444894c3b54ce1b961e4aa4a356e19217b26690f20db0

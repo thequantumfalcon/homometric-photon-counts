@@ -1,0 +1,80 @@
+INDEPENDENT ANALYTIC AND EXACT-CONSTANT REVIEW
+20 October 2026
+Reviewer: /root, separately from the phase-law extension's author.
+
+Conclusion: PASS. No mathematical defect was found in the stated selection,
+counterexample, or two-family population-identifiability claims.
+
+Reviewed proof: phase_law_proofs.txt
+SHA256 f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d
+Main calculation source:
+SHA256 9f893a7ab41fcd05c23953a0f0041b1d70d1d07f5db8bbcb72b8167713b2481c
+
+The complete analytic note and the new cumulant/direct-site implementation
+were read. This review is an internal analytic and computational check, not
+external peer review or proof-assistant verification.
+
+1. General arbitrary-phase theorem. Cumulant scaling by M_(a-b) is correct
+for deterministic unit phases. The common-null condition kills every
+charge-one block even for asymmetric laws. The charge patterns through
+intensity order four are complete. The two orientations contribute complex
+conjugates, requiring 6 Re[kappa40 conj(kappa20)^2 T]; a product of real
+parts would be incorrect. The stated asymmetric example tests that issue.
+
+2. Wrapped-Cauchy theorem. I independently derived
+
+  E[conj(W) exp(uW)] / E exp(uW)
+    = 1/r + (r-1/r)exp(-ru),
+
+and hence kappa_(a,1)=(-1)^(a+1)r^(a-1)(1-r^2). Pure cumulants of order
+>=2 vanish because the pure generating function is exp(ru). With mixed
+blocks required, a charge q needs at least |q|+2 slots. A nonpairing
+three-block pattern first costs 14 slots; four charged blocks cost at
+least 16. This proves equality through moment six and exhausts the new
+patterns at moment seven. The 21*7*20=2940 count per orientation and the
+coefficient 5880 agree with a separate factorial count. The magnitude
+assumptions through k=5 are exactly sufficient for all matched pairs
+through moment seven.
+
+3. Endpoint and sign claims. The factor r^8(1-r^2)^3 is strictly positive
+only in the stated interior. Uniform phases erase all fixed site phases
+at one frequency; deterministic phases give the common clean null. The
+symmetric and biased two-point cumulants and their signs are correct.
+The text correctly refrains from asserting full-law equality at the
+exceptional biased value m^2=1/3. It also correctly distinguishes the
+signs of fourth and seventh moments from stochastic ordering of full laws.
+
+4. Bounded witness. The shifted Chebyshev construction is bounded in [0,1],
+and its leading degree-seven coefficient is 4096. Lower moments cancel,
+so the TV inequality and its exact r=1/2 value follow. The polynomial
+x^4(1-x)^3 has its unique interior maximum at x=4/7. This optimizes the
+stated moment witness, not full TV or a detector.
+
+5. Phase-family identification. I independently derived the second-moment
+formula using n*kappa22 + 2*n^2*kappa11^2 + R*abs(kappa20)^2 at the null.
+For a common r and x=r^2, the Gaussian-minus-Cauchy difference is
+
+  x^2(1-x)[(R-3n)-(R-n)x].
+
+The sole interior zero is 53587/103987. The supplied separately generated
+third-moment polynomial has the stated strictly negative rational value
+there. This suffices to identify the phase family from the first three
+population moments. The mean then identifies its width and the proved
+fourth/seventh gap identifies A/B. No phase-angle location or arbitrary
+noise family is being identified.
+
+6. Independent arithmetic. independent_phase_review.py imports neither
+the phase producer nor either moment engine. It checks all admissible
+minimal charged patterns, independently rebuilds the complex T difference
+from explicit low power sums using pair arithmetic, computes the
+asymmetric coefficient directly from atomic moments, verifies the
+partition count and seventh-gap/witness constants, and evaluates the
+third-moment collision sign. Its output is independent_phase_review.json.
+
+Dependency limit. The explicit low structural power sums and the supplied
+third-moment polynomial are premises of this separate replay. Their
+reconstruction is covered by the original exact geometry checks and the
+new two-engine polynomial calculation. This review does not claim a third
+independent derivation of every site coordinate or every seventh moment.
+The analytic charge-budget and coefficient proofs supply the all-parameter
+claims; the rational-point checks alone would not do so.

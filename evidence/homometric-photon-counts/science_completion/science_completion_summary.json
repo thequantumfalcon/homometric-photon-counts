@@ -1,0 +1,106 @@
+{
+  "schema": "scientific-completion-record-v1",
+  "date": "2026-10-20",
+  "scope": "Fresh mathematical completion and stronger homogeneous control for the fixed 63-site construction; no historical certificate recovery or experimental validation.",
+  "report": {
+    "file": "science_completion_report.pdf",
+    "pages": 18,
+    "sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6"
+  },
+  "completed_claims": [
+    {
+      "claim": "Original and marginal-preserving mean contrasts each have exactly two simple positive roots; origin multiplicity two; signs positive, negative, positive.",
+      "evidence": "root_certificate/two_root_certificate.json",
+      "review": "root_certificate/independent_root_review.txt"
+    },
+    {
+      "claim": "Harmonic mean contrast has exactly one simple positive root; origin simple; signs positive then negative.",
+      "evidence": "harmonic_certificate/harmonic_root_certificate.json",
+      "review": "harmonic_certificate/independent_harmonic_review.txt"
+    },
+    {
+      "claim": "Identical iid Gaussian motion and identical centered covariance across A and B preserve all-frequency mean diffraction and first three intensity moments at the common null, while the fourth moments differ for every finite positive phase variance.",
+      "evidence": "homogeneous_control/homogeneous_control_proof.txt"
+    },
+    {
+      "claim": "General fourth-moment selection theorem isolates a real diagonal bispectral invariant with coefficient 6*kappa40*kappa20^2.",
+      "evidence": "homogeneous_control/homogeneous_control_proof.txt"
+    },
+    {
+      "claim": "Common additive measurement noise with finite fourth moment preserves the fourth-moment distinction; Gaussian readout and Poisson count TV have positive s^5 leading terms.",
+      "evidence": "detector_proofs.tex"
+    },
+    {
+      "claim": "Sharp independent-sample orders are Theta(s^-10) for fixed Gaussian readout or positive-background Poisson, Theta(s^-6) for zero-background Poisson, and Theta(s^-9) for zero-background parity-only observations.",
+      "evidence": "sample_complexity_proofs.tex"
+    },
+    {
+      "claim": "The bounded degree-at-most-four polynomial witness has the optimal factor64; its unique maximum is interval-certified.",
+      "evidence": "measurement_and_optimization_results.json"
+    }
+  ],
+  "sharp_sampling": {
+    "squared_Hellinger_convention": "h^2(P,Q)=integral (sqrt(p)-sqrt(q))^2; affinity rho=1-h^2/2",
+    "R": "129187/400",
+    "m4": "75408578015121/160000",
+    "m4_formula": "24*n^4+72*n^2*R+9*R^2",
+    "m4_verified_against_both_exact_fourth_moment_polynomials": true,
+    "Gaussian_readout": {
+      "h_squared": "c5^2/(96*sigma^8)*s^10+o(s^10), fixed sigma>0",
+      "coefficient_at_sigma_1": "207039342758409121/150000000",
+      "minimum_independent_sample_order": "Theta(s^-10)"
+    },
+    "Poisson_positive_background": {
+      "h_squared": "c5^2*eta^8/(96*b^4)*s^10+o(s^10), fixed b>0, eta>0",
+      "coefficient_at_b1_eta1": "207039342758409121/150000000",
+      "minimum_independent_sample_order": "Theta(s^-10)"
+    },
+    "Poisson_zero_background": {
+      "h_squared": "eta^4*c5^2/(96*m4)*s^6+O(s^7), fixed eta>0",
+      "coefficient_at_eta_1": "414078685516818242/141391083778351875",
+      "minimum_independent_sample_order": "Theta(s^-6)",
+      "four_count_indicator": "Retaining only 1{N=4} has the same leading squared Hellinger coefficient and the same optimal sample order."
+    },
+    "Poisson_zero_background_parity_only": {
+      "h_squared": "c5^2*eta^7/(36*n)*s^9+O(s^10), fixed eta>0",
+      "coefficient_at_eta_1": "207039342758409121/3543750000",
+      "minimum_independent_sample_order": "Theta(s^-9)",
+      "scope": "One-observation total-variation optimality does not imply efficient repeated inference after count magnitudes are discarded."
+    },
+    "product_affinity_bounds": "1-rho^m <= TV(P^m,Q^m) <= sqrt(1-rho^(2m))",
+    "conditions": "Any fixed target success a in (1/2,1), equal priors, independent observations, known competing models, fixed calibrated detector parameters as s tends to zero.",
+    "not_claimed": "Exact finite-noise sample counts, the optimal sample-count prefactor, joint detector-parameter limits, experimental independence, or calibrated physical performance."
+  },
+  "originality": {
+    "status": "unresolved_for_precise_theorem",
+    "established_prior_frameworks": [
+      "iid mean-scattering transformation",
+      "homometry and higher intensity statistics",
+      "bispectral invariants",
+      "finite nonuniform-phase and wrapped-normal phasor calculations",
+      "photon-counting mixtures",
+      "Taylor and Hellinger hypothesis-testing methods"
+    ],
+    "specific_candidate": "Exact common-null moment-selection theorem, concrete homogeneous-noise example, and the specialized detector/sampling consequences.",
+    "record": "literature/iid_gaussian_homometry_novelty_comparison.txt"
+  },
+  "remaining_limits": [
+    "No external peer review or proof-assistant verification.",
+    "No physical measurement or calibrated detector validation.",
+    "No universal world-first or publication guarantee.",
+    "No exact global optimization of full intensity TV or detector performance.",
+    "No exact finite-noise sample number or optimal sample-count prefactor.",
+    "No joint asymptotics in background, gain, readout noise, or frequency.",
+    "No exact global count or optimum of standardized mean-contrast maxima."
+  ],
+  "review_scope": "Separate internal AI derivations and exact computational replay; not external validation.",
+  "record_assembly": {
+    "report_science_review_hash_current": true,
+    "previously_pending_harmonic_review_now_present": true,
+    "all_18_PDF_pages_visually_reviewed": true,
+    "unchanged_reconstruction_sources_and_inputs_included": true,
+    "rolling_ZIP_created_or_updated": false
+  },
+  "saving_note": "The initial automatic upload failed because upload-service authentication was unavailable; a subsequent retry successfully saved the complete-record PDF on 2026-10-20. The PDF preserves the readable report and all 45 embedded proof-record files, including the manifest. No automatic-review rejection occurred.",
+  "portable_record": "science_completion_complete_record.pdf"
+}

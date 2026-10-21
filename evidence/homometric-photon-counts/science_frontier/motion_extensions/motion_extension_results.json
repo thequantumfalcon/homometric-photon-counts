@@ -1,0 +1,110 @@
+{
+  "schema": "motion-extensions-exact-v1",
+  "status": "PASS",
+  "source_dependencies": {
+    "foundation_engine": "science_completion/homogeneous_control/homogeneous_control.py",
+    "foundation_engine_sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a",
+    "foundation_results": "science_completion/homogeneous_control/homogeneous_control_results.json",
+    "foundation_results_sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142"
+  },
+  "reference": {
+    "n": 63,
+    "q0": "pi/3",
+    "s": "log(2)",
+    "x": "1/2",
+    "moments_0_to_4": {
+      "A": {
+        "0": "1",
+        "1": "63/2",
+        "2": "12804787/6400",
+        "3": "125851935527/655360",
+        "4": "933840736464644496547/37748736000000"
+      },
+      "B": {
+        "0": "1",
+        "1": "63/2",
+        "2": "12804787/6400",
+        "3": "125851935527/655360",
+        "4": "933824172434893661347/37748736000000"
+      }
+    },
+    "fourth_gap": "35946245119/81920000"
+  },
+  "dependence_theorems": {
+    "common_mode": "Multiplying all site phasors by any common unit factor leaves every intensity realization unchanged, regardless of that factor's dependence on the residual phases.",
+    "gaussian_sufficient_parameters": "(P mu, P C P), P=I-11^T/n; this pair determines the full intensity law for fixed geometry.",
+    "equicorrelation": "For P mu=0 (including centered phases), C=s*((1-rho)*I+rho*11^T), -1/62<=rho<=1, has the iid-Gaussian intensity law at variance s_eff=s*(1-rho).",
+    "rigid_endpoint": "rho=1 and P mu=0 give I=0 at the exact common null.",
+    "phase_parameter_limit": "s and rho are not separately identifiable from intensity under this centered-phase extended model; only s*(1-rho) is."
+  },
+  "two_site_examples": {
+    "one_based_labels": [
+      21,
+      42
+    ],
+    "coordinates_A": [
+      30,
+      61
+    ],
+    "coordinates_B": [
+      30,
+      62
+    ],
+    "pair_cosines": {
+      "A": "1/2",
+      "B": "-1/2"
+    },
+    "pair_sum_norm_squared": {
+      "A": "3",
+      "B": "1"
+    },
+    "unequal_mean_general_gap": "2*d^2, when both selected site phase means change from common m to m+d in both structures",
+    "unequal_mean_example_m": "1/2",
+    "unequal_mean_example_d": "1/4",
+    "unequal_mean_example_outputs": {
+      "A": "749/16",
+      "B": "747/16"
+    },
+    "geometry_general_mean_gap": "8*exp(-s)*sin(epsilon/2)^2, rotating both selected site geometry phases by the same epsilon",
+    "geometry_example_epsilon": "pi/3",
+    "geometry_example_s": "log(2)",
+    "geometry_example_outputs": {
+      "A": "33",
+      "B": "32"
+    }
+  },
+  "L8_robustness": {
+    "amplitude_L8_radius": "42/5",
+    "radius_to_eighth": "9682651996416/390625",
+    "per_structure_coupling_budget": "1/200000",
+    "per_structure_fourth_moment_loss": "302173144401640652230396988731471027213440001/2560000000000000000000000000000000000000000",
+    "fourth_gap_lower_exact": "259486935582734347769603011268528972786559999/1280000000000000000000000000000000000000000",
+    "fourth_gap_lower_decimal": "202.72416842401120919500235255353825998949999921875",
+    "simple_lower_bound": "strictly greater than 202",
+    "geometry_only_uniform_phase_error": "1/12600000",
+    "geometry_only_uniform_position_error": "1/(4200000*pi), in the coordinate units with q0=pi/3",
+    "unequal_gaussian_std_uniform_error": "1/25200000",
+    "unequal_gaussian_variance_uniform_error": "1/31500000",
+    "contrast_covariance_Frobenius_error": "1/4000000",
+    "combined_geometry_covariance_budget": "sum_j |epsilon_j+(P mu)_j| + 20*||P C P-log(2)*P||_F <= 1/200000, separately for each geometry",
+    "scope": "All are sufficient conservative tolerances. Fourth-moment distinctness survives; lower-moment equalities need not. Alternative rows are not additive budgets unless the stated combined inequality holds."
+  },
+  "TV_robustness": {
+    "arbitrary_joint_phase_law_TV_each": "1/10000000000000",
+    "joint_fourth_gap_lower_exact": "62266525029486203/160000000000000",
+    "joint_fourth_gap_lower_decimal": "389.16578143428876875",
+    "independent_nonidentical_site_law_TV_each": "1/100000000000000",
+    "nonidentical_fourth_gap_lower_exact": "100896523480573207/800000000000000",
+    "nonidentical_fourth_gap_lower_decimal": "126.12065435071650875",
+    "scope": "Reference is the full iid Gaussian phase-vector law at s=log(2); geometry is exact. Joint-TV result allows arbitrary within-snapshot dependence."
+  },
+  "verification_scope": [
+    "Exact reference moments rebuilt with the foundation cumulant engine and compared to its saved witness.",
+    "Heterogeneous and geometry mean examples checked by direct exact sums of site phases.",
+    "Robustness radii, budgets, and margins certified with rational arithmetic.",
+    "General distributional and norm arguments are analytic proofs in the companion note.",
+    "No simulation, external experiment, external human peer review, or formal proof-assistant verification.",
+    "Between-snapshot residual dependence is not analyzed; these extensions concern the single-snapshot intensity law."
+  ],
+  "elapsed_seconds": 0.092
+}

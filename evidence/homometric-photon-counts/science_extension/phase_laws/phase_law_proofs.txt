@@ -1,0 +1,455 @@
+PHASE-LAW EXTENSION: WHEN THE FIRST DISTINGUISHING MOMENT CHANGES
+20 October 2026
+
+Status: exact ideal-model theorems and reproducible internal verification.
+This document makes no publication-priority or experimental-realization claim.
+The geometry is the same 63-site homometric pair used in the completed record.
+
+MAIN FINDINGS
+
+1. The first three intensity moments agree at the common clean null for ANY
+   common iid unit-circle phase law, without Gaussianity or reflection symmetry.
+   The exact fourth-moment difference is a real part of a complex cumulant
+   coefficient times a structural Fourier invariant.
+
+2. The first differing moment depends on the noise law. Symmetric two-point
+   phases distinguish this pair at intensity moment four. Poisson-kernel
+   (wrapped-Cauchy) phases match exactly through moment six and first differ
+   at moment seven, at every nondegenerate finite parameter 0<r<1.
+
+3. For wrapped-Cauchy phases, the exact seventh-moment difference is
+
+       -(22295772289/1000) r^8 (1-r^2)^3 < 0,  0<r<1.
+
+   The sign is opposite to the fourth-moment difference under Gaussian phases.
+   This does not compare the signs of the SAME statistic: the moments are
+   different, so no ordering between the full intensity laws is implied.
+
+4. Uniform independent phases remove all geometric information from the full
+   intensity distribution at one frequency, for any point configurations with
+   the same number of unit-weight sites. No universal claim that arbitrary
+   independent noise distinguishes homometry is therefore possible.
+
+1. NOTATION AND ASSUMPTIONS
+
+Let z_(G,j) be unit complex clean phases, G=A or B, j=1,...,n. Put
+
+  M_(G,k) = sum_j z_(G,j)^k,  M_(G,0)=n,
+  T_G = M_(G,4) conjugate(M_(G,2))^2.
+
+Let W_1,...,W_n be independent copies of the same unit-circle random variable W.
+Use exactly the same law of W at every site of either configuration. Define
+
+  F_G = sum_j z_(G,j) W_j,   I_G = |F_G|^2.
+
+All moments exist and 0<=I_G<=n^2. Assume the common clean null
+
+  M_(A,1)=M_(B,1)=0.
+
+Clean homometry at every frequency implies |M_(A,k)|=|M_(B,k)| for every integer
+k. The individual theorems below need only the explicitly stated finite subset
+of these magnitude equalities. They do not require Gaussian phase errors.
+
+Define joint cumulants kappa_(a,b) of a copies of W and b copies of conjugate(W)
+through the formal moment-cumulant relation, equivalently the coefficients of
+
+  log E exp(u W+v conjugate(W)).
+
+The logarithm exists near u=v=0 because W is bounded. Deterministic scaling
+and independence give the cumulants of the field sum:
+
+  K_(G,a,b) = kappa_(a,b) M_(G,a-b).
+
+Complex conjugation gives kappa_(b,a)=conjugate(kappa_(a,b)). A mixed cumulant
+has charge a-b. In a partition contributing to E[F_G^p conjugate(F_G)^p],
+all charges sum to zero. A charge +1 or -1 block vanishes at the clean null.
+
+2. GENERAL IID PHASE-LAW SELECTION THEOREM
+
+THEOREM 1. If |M_(A,k)|=|M_(B,k)| for k=2,3,4, then
+
+  E I_A^p = E I_B^p, p=0,1,2,3,
+
+and, without any symmetry assumption on W,
+
+  E I_A^4 - E I_B^4
+    = 6 Re[ kappa_(4,0) conjugate(kappa_(2,0))^2 (T_A-T_B) ].       (1)
+
+In terms of the circular Fourier moments a_k=E W^k,
+
+  kappa_(2,0) = a_2-a_1^2,
+  kappa_(4,0) = a_4-4a_3a_1-3a_2^2+12a_2a_1^2-6a_1^4.           (2)
+
+Under the stated structural assumptions, the right side of (1) being nonzero
+is a necessary and sufficient condition for separation by the fourth moment.
+If it is zero, (1) does not decide equality of the full intensity laws.
+
+PROOF. At p<=3, the nonzero charge multiset can only be empty, (+2,-2), or
+(+3,-3), apart from zero-charge blocks. Their structural factors depend only
+on n, |M_2|^2, and |M_3|^2. The cumulant coefficients depend on the common law
+of W and are identical in the two models, so every contribution agrees.
+
+At p=4 the complete list of nonzero charge multisets is
+
+  empty; (+2,-2); (+3,-3); (+4,-4);
+  (+2,+2,-2,-2); (+4,-2,-2); (-4,+2,+2).
+
+The first five depend only on common magnitudes. For (+4,-2,-2), all four
+positive slots are in one block and the four negative slots are paired into
+two unordered blocks. There are three such pairings. The resulting term is
+
+  3 kappa_(4,0) kappa_(0,2)^2 T_G.
+
+The opposite orientation contributes its complex conjugate. Subtracting A and
+B proves (1). Expanding ordinary second and fourth cumulants proves (2).
+
+If the law of W is invariant under complex conjugation, every a_k and every
+kappa_(a,b) is real. Then (1) reduces to
+
+  Delta_4 = 6 kappa_(4,0) kappa_(2,0)^2 D,
+  D = Re(T_A-T_B).                                               (3)
+
+A common rotation of the phase law does not change intensity: replacing W
+by exp(i alpha)W multiplies the entire field by exp(i alpha). Formula (1)
+reflects this, because kappa_(4,0) and conjugate(kappa_(2,0))^2 acquire
+opposite phase factors.
+
+3. THE CONCRETE STRUCTURAL INVARIANT
+
+For the existing 63-site pair at q0=pi/3, exact reconstruction gives
+
+  D = -455015761/120000,
+
+and the FULL complex difference is
+
+  T_A-T_B = -455015761/120000
+            + i sqrt(3) (28907930179/4800000).                    (4)
+
+Thus a general asymmetric phase law can couple to the imaginary structural
+invariant as well as the real one. Dropping the complex conjugates or replacing
+the right side of (1) by a product of real parts would in general be wrong.
+
+The reproducibility script rebuilds every clean phase in the exact field
+Q(sqrt(3),sqrt(74),sqrt(191),i). It checks the common null and the needed
+power-sum magnitudes, then computes (4). For an asymmetric three-atom law
+supported on 1, i, and -1 with probabilities 1/2, 1/3, and 1/6, the coefficient
+kappa_(4,0) conjugate(kappa_(2,0))^2 is genuinely nonreal. Both the cumulant
+formula and a separate site-by-site convolution reproduce (1) exactly,
+including the resulting sqrt(3) contribution.
+
+4. SYMMETRIC TWO-POINT PHASES: THE FOURTH MOMENT STILL DISTINGUISHES
+
+Let epsilon be equally likely +1 or -1 and put W=exp(i theta epsilon), for any
+real theta. Since W=cos(theta)+i sin(theta) epsilon and M_1=0,
+
+  F_G = i sin(theta) sum_j z_(G,j) epsilon_j.
+
+The ordinary Rademacher cumulants are kappa_2(epsilon)=1 and
+kappa_4(epsilon)=-2. Therefore
+
+  kappa_(2,0)(W)=-sin(theta)^2,
+  kappa_(4,0)(W)=-2 sin(theta)^4.
+
+Equation (3) yields the exact identity
+
+  Delta_4 = -12 sin(theta)^8 D
+          = (455015761/10000) sin(theta)^8.                      (5)
+
+The first three moments agree, and the fourth differs whenever sin(theta)!=0.
+When sin(theta)=0, W is deterministic and both intensities are zero at the null.
+In the small-angle parameter s=theta^2, (5) has leading order s^4. Gaussian
+phase variance s instead gave a fifth-power gap. Equal variance of site noise
+alone therefore does not determine the information-loss power.
+
+4.1 A biased two-point law can reverse the fourth-moment sign
+
+Let W take the real values +1 and -1 with probabilities (1+m)/2 and
+(1-m)/2, respectively, for -1<=m<=1. Its pure cumulants are
+
+  kappa_(2,0)=1-m^2,
+  kappa_(4,0)=-2(1-m^2)(1-3m^2).
+
+Substituting in (3) gives
+
+  Delta_4=-12(1-m^2)^3(1-3m^2)D.                               (5b)
+
+The first three moments still agree. For this pair with D<0, the fourth gap
+is positive when m^2<1/3, negative when 1/3<m^2<1, and zero when m^2=1/3
+or m^2=1. The special value m^2=1/3 cancels this fourth-moment test; it does
+not prove equality of the full laws. No higher-moment conclusion is made
+at that exceptional value. The reproducibility script checks the reversed
+sign exactly at m=3/4, using probabilities 7/8 and 1/8.
+
+5. POISSON-KERNEL / WRAPPED-CAUCHY PHASES
+
+For 0<=r<1, give Theta in [-pi,pi) the density
+
+  f_r(theta)=(1-r^2)/(2 pi (1-2r cos(theta)+r^2)),
+  W=exp(i Theta).
+
+The absolutely convergent geometric series gives
+
+  (1-r^2)/(1-2r cos(theta)+r^2)
+      = sum_(k in Z) r^|k| exp(i k theta).
+
+Integrating term by term therefore proves
+
+  E W^k = r^|k|,  k in Z.                                       (6)
+
+The density is conventionally called the Poisson kernel on the circle or the
+wrapped-Cauchy phase density. All conclusions below are derived directly from
+(6). No property of an unwrapped Cauchy displacement variance is assumed.
+The parameter r is not the Gaussian phase variance s from the earlier report.
+
+5.1 Pure and minimally mixed cumulants
+
+For every a>=0, E W^a=r^a, so E exp(uW)=exp(ru). Its logarithm is linear.
+Consequently all pure cumulants of order at least two vanish:
+
+  kappa_(a,0)=kappa_(0,a)=0, a>=2.                              (7)
+
+For r>0, differentiation of the bivariate cumulant generating function once
+with respect to v at v=0 gives
+
+  [d/dv log E exp(uW+v conjugate(W))]_(v=0)
+     = E[conjugate(W) exp(uW)] / E exp(uW)
+     = 1/r + (r-1/r) exp(-ru).
+
+Taking a derivatives in u at zero proves
+
+  kappa_(a,1)=(-1)^(a+1) r^(a-1)(1-r^2), a>=1.                 (8)
+
+The polynomial identity extends to r=0. In particular,
+
+  kappa_(3,1)=kappa_(1,3)=r^2(1-r^2),
+  kappa_(5,1)=kappa_(1,5)=r^4(1-r^2).                          (9)
+
+5.2 A charge-budget proof of equality through order six
+
+THEOREM 2. Suppose the common clean null holds and |M_(A,k)|=|M_(B,k)| for
+k=2,3,4,5. Under the common iid phase law (6), the first six intensity moments
+agree. The seventh-moment difference is exactly
+
+  Delta_7 = E I_A^7-E I_B^7 = 5880 r^8(1-r^2)^3 D.             (10)
+
+PROOF. A surviving charged block must have |charge|>=2, because charge-one
+blocks vanish at the common null. By (7), it must also contain both signs of
+slots. If its charge is q!=0, it therefore uses at least |q|+2 slots.
+
+Suppose a partition has k charged blocks and total positive charge L, which
+also equals the absolute total negative charge. These blocks use at least
+2L+2k slots. Thus a necessary budget is
+
+  p >= L+k.                                                    (11)
+
+For a single matched pair (+q,-q), the structural factor is |M_q|^2 and
+therefore agrees across A and B. The budget permits only q<=p-2.
+
+A non-pairing pattern with three charged blocks has L>=4, with the minimal
+pattern (+4,-2,-2) or its conjugate. Equation (11) requires p>=7. A pattern
+with four charged blocks requires L>=4 and hence p>=8. Five or more blocks
+require still more slots. Therefore at p<=6 every surviving structural factor
+is a common magnitude or a product of charge-zero factors. The moments agree.
+
+At p=7, the only potentially different patterns are (+4,-2,-2) and its
+conjugate. Their minimal slot budget is exactly saturated, so there are no
+additional zero-charge blocks, and the blocks have mixed sizes
+
+  (5,1), (1,3), (1,3),
+
+or the conjugate arrangement. For one orientation the number of labeled-slot
+partitions is
+
+  (7! 7!) / [5! (3!)^2 2!] = 2940.
+
+An independent direct count is: choose the five positive and one negative
+slots in the first block, in 21*7 ways. Two positive and six negative slots
+remain. Fix the smaller label of the two positive slots and choose its three
+negative partners in C(6,3)=20 ways; the other mixed block is then determined.
+This gives 21*7*20=2940 without imposing an ordering on the two blocks.
+
+The two orientations together contribute
+
+  5880 kappa_(5,1) kappa_(1,3)^2 Re(T_G).
+
+Equation (9), followed by subtraction, proves (10). Other allowed matched
+pairs use q<=5, exactly the magnitudes assumed in the theorem.
+
+5.3 Exact sign and the first distinguishing moment for this pair
+
+Substituting (4) into (10) gives
+
+  Delta_7=-(22295772289/1000) r^8(1-r^2)^3.                     (12)
+
+For every 0<r<1 the right side is strictly negative. Since moments through
+order six agree, the first differing raw intensity moment is exactly seven.
+This is the fourteenth field moment, not a seventh spatial correlation.
+
+At r=1/2 the exact gap is
+
+  Delta_7=-601985851803/16384000.
+
+The exact polynomial calculation reproduces the identity for every r, and a
+separate direct-site convolution checks both seventh moments at r=1/2. The
+direct method uses no cumulants or structural power sums.
+
+Since the lower moments agree, the seventh central moments and seventh
+cumulants also differ by exactly Delta_7.
+
+The absolute raw moment gap has a unique interior maximum. Setting x=r^2
+reduces its r-dependent factor to x^4(1-x)^3, whose derivative is
+
+  x^3(1-x)^2(4-7x).
+
+It is positive for 0<x<4/7 and negative for 4/7<x<1. Therefore the unique
+maximum occurs at r^2=4/7. This maximizes this raw moment difference, not the
+full total variation distance or the performance of any physical detector.
+
+6. ENDPOINTS AND A NECESSARY LIMIT ON THE GENERAL CLAIM
+
+At r=0, the phase is uniform on the circle. For any fixed unit z_j, the product
+z_j W_j is again uniform, and independence is preserved. Hence the field-sum
+law, and therefore the entire intensity law, depends only on n. It is exactly
+the same for every geometry with n unit-weight sites, even without homometry.
+
+At r=1, understood as the point-mass limit W=1, F_G=M_(G,1)=0. Both intensities
+are zero at the clean null. A deterministic common phase rotation has the same
+effect on intensity.
+
+Thus the strict separation in (12) holds precisely in the nondegenerate
+interior 0<r<1 for this pair. It does not extend to the endpoints. More broadly,
+the Gaussian result cannot be strengthened to the statement that every common
+iid phase law separates the pair, or that every such law first separates it
+at moment four. Uniform phases are a full-law counterexample, and the
+wrapped-Cauchy family is an exact higher-moment counterexample.
+
+6.1 An explicit bounded seventh-degree distinguishing statistic
+
+Let y=I/n^2, so 0<=y<=1, and define
+
+  g_7(y) = (1+T_7(2y-1))/2
+         = 4096y^7-14336y^6+19712y^5-13440y^4
+           +4704y^3-784y^2+49y.
+
+Here T_7(cos theta)=cos(7 theta), so 0<=g_7<=1 on [0,1]. Equality of the
+first six moments gives exactly
+
+  |E g_7(I_A/n^2)-E g_7(I_B/n^2)| = 4096 |Delta_7| / n^14.
+
+By the bounded-test characterization of total variation, this is a lower
+bound on the full intensity-law distance. At r=1/2 for n=63 it equals
+
+  455015761/46910259941745934556172000
+      approximately 9.699706665e-18.
+
+This conservative bound certifies a positive distinction; it is not an
+estimate of the actual distance or an experimental feasibility claim.
+Its maximum over r occurs at the same r^2=4/7 as the raw seventh-moment gap.
+
+6.2 Identifying which of the two phase families generated the data
+
+For this concrete geometry, suppose the phase family is known to be either
+centered wrapped Gaussian with t=exp(-s/2) in (0,1), or centered wrapped
+Cauchy with r in (0,1). The first three POPULATION intensity moments identify
+the family and its width parameter, even though the geometry A/B is unknown.
+A common mean-angle rotation cannot be identified from intensity and is
+irrelevant here.
+
+PROOF. In both geometries the mean is n(1-t^2) for Gaussian phases or
+n(1-r^2) for Cauchy phases. Equal means force t=r. Set x=t^2=r^2 and
+R=|M_2|^2=129187/400, n=63. Exact expansion of the second moments gives
+
+  E I_Gaussian^2 - E I_Cauchy^2
+     = x^2(1-x) [(R-3n)-(R-n)x].                              (13)
+
+The only interior zero is
+
+  x0=(R-3n)/(R-n)=53587/103987.
+
+The exact third-moment difference polynomial is
+
+  H(x) = (29268063/400)x^2
+         -(11491316033/40000)x^3
+         +(14125382499/40000)x^4
+         -(22229052597/160000)x^5
+         +(51630667/40000)x^6
+         -(107619801/80000)x^7
+         -(5721533/160000)x^9.
+
+At the sole interior second-moment collision,
+
+  H(x0) = -25087690453913212850809554872899594124966635200
+          /1421711387011936544792839799933222941958356627
+        approximately -17.646120501743283 < 0.                 (14)
+
+Therefore the two families cannot match all first three moments at any
+interior width. Within each family these first three moments agree across
+A and B, so the family selection is unaffected by which of the two
+geometries generated the data. The mean then identifies s=-log(x) or
+r=sqrt(x). Once the family is known, the fourth Gaussian moment or seventh
+Cauchy moment identifies A/B by the preceding strict-gap theorems.
+
+The accompanying verify_cross_family.py reconstructs both families' first
+three moment polynomials from the geometry and cumulant recursions. It
+imports no previously calculated moment outputs and checks (13)-(14) using
+exact fractions. This closes population-moment identifiability within this
+specific two-family model; it supplies neither a finite-sample guarantee
+nor identification among every possible phase law. The uniform and
+deterministic endpoints are excluded, as required by their shared laws.
+
+7. REPRODUCIBILITY AND VERIFICATION SCOPE
+
+Run, with assertions enabled:
+
+  python phase_law_extension.py
+
+For the cross-family identifiability certificate, also run
+
+  python verify_cross_family.py
+
+The script uses only Python's standard library and the accompanying
+exact_phase_algebra.py. It recreates the geometry from its exact definition;
+no rounded coordinates or sampled parameter grid are proof premises.
+
+The output phase_law_results.json contains the exact intensity-moment
+polynomials through order seven, the zero differences through order six, the
+factored seventh difference, exact direct-site moments at r=1/2, asymmetric
+and symmetric finite-law checks, and source hashes. Hashes identify the
+checked bytes; they are not mathematical proofs of correctness.
+
+The cross_family_results.json output separately records the first-three
+moment polynomials for both families, the unique second-moment collision,
+and the exact nonzero third-moment difference there.
+
+The algebra dependency retains the previously reviewed exact geometry and
+number-field arithmetic. The new cumulant recursion and the separate direct
+site convolution independently compute the moments, but share those geometry
+and arithmetic primitives. This is internal computational cross-checking,
+not external peer review or a formal proof-assistant certification.
+
+8. PRIMARY-SOURCE CONTEXT AND READ DEPTH
+
+The phase family and the general task of calculating wrapped-variable
+quadratic-form moments are established. The selection identities proved
+here are exact consequences for the stated homometric setting. Their
+historical priority has not been established by this calculation or search.
+
+Shogo Kato and M. C. Jones (2013), "An extended family of circular
+distributions related to wrapped Cauchy distributions via Brownian motion,"
+Bernoulli 19(1), 154-171, DOI 10.3150/11-BEJ397.
+Primary author/reprint PDF: https://arxiv.org/pdf/1302.0098
+Read: title/metadata, introduction, and Equation (1), which defines the
+wrapped-Cauchy density used above. Formula (6) and the cumulant/selection
+proofs in this note were derived directly; they are not attributed to that
+paper. This source is cited to identify the established phase family.
+
+Phillip Ainsleigh (2017), "A Method for Computing Moments of Quadratic Forms
+Involving Wrapped Random Variables," SIAM Journal on Matrix Analysis and
+Applications 38(2), 554-573, DOI 10.1137/16M1082019.
+Official page: https://epubs.siam.org/doi/10.1137/16M1082019
+Read: official abstract and publication metadata; full text was not read.
+The abstract describes analytic higher moments of quadratic forms in
+independent wrapped variables and complex phase data. The field intensity
+|sum_j z_j W_j|^2 is such a quadratic form. This is direct prior framework;
+the abstract does not determine whether our precise common-null homometry
+selection rule or the seventh-moment wrapped-Cauchy example appeared there.

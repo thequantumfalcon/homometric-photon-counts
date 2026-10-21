@@ -1,0 +1,33 @@
+NEW BLIND-GAIN RESULTS
+
+1. Read additional_blind_gains_proof.txt for the analytical theorem.
+   At every finite s>0 and zero background there are at least four distinct
+   positive sign-changing four-count blind gains. This conclusion uses
+   exact moment orthogonality on the whole positive gain axis.
+
+2. Rebuild the exact finite-interval certificate (standard Python only):
+   python3 certify_additional_blind_gains.py
+
+3. Replay without changing that certificate:
+   python3 certify_additional_blind_gains.py --verify-only
+
+4. Independently reconstruct the arithmetic by a different method:
+   python3 replay_additional_blind_gains.py
+
+The scripts resolve their preserved inputs relative to this directory;
+run them from any current working directory after extracting the whole
+complete science record with its relative paths intact.
+
+Certified at t=1/2, s=2 log(2), b=0:
+- exactly two positive four-count blind gains on (0,1/32]; both simple;
+- first root retained from the prior certificate near0.00165929160405;
+- second root lies between329181481/30198988800 and164590741/15099494400,
+  approximately0.01090041402313444 to0.01090041405624814;
+- at least two more positive sign-changing roots lie above1/32.
+
+The exact global number, locations of all later roots, and an effective
+last-root cutoff are NOT certified. The independent replay is independent
+arithmetic within this work, not an external human mathematical review.
+
+Exploratory files beginning tmp_ are not proof deliverables and are not
+required for any reproduction step.

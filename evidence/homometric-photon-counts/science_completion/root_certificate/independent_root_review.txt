@@ -1,0 +1,254 @@
+INTERNAL INDEPENDENT AI REVIEW OF THE GLOBAL TWO-ROOT CERTIFICATE
+Review date: 2026-10-20
+Reviewer: separate assistant agent /root/phasor_novelty_review
+
+VERDICT
+
+No mathematical or implementation blocker was found. The supplied proof and
+certificate form a complete computer-assisted proof that the specified
+2005-term exponential polynomial D has exactly two simple roots on the
+positive real axis, with a double zero at the origin and sign sequence
+positive, negative, positive. The change of parameter to the reconstructed
+original and marginal-preserving star controls is consistent with their
+exact raw Gaussian variance definitions.
+
+This is an internal independent AI source/proof review and exact replay.
+It is not external mathematical validation, human peer review, formal
+verification in a proof assistant, or experimental validation of the model.
+The interval replay uses the certificate author's arithmetic implementation;
+that implementation was separately checked at the level of its formulas
+and rounding directions. The model-to-input regeneration used a separate
+calculation and did not accept the grouped terms merely from their hashes.
+
+FILES REVIEWED AND IDENTITY
+
+certify_two_roots.py
+  SHA256 d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631
+two_root_certificate.json
+  SHA256 5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07
+two_root_proof.txt
+  SHA256 5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667
+input_premises.json
+  SHA256 0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e
+two_root_summary.json
+  SHA256 28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1
+
+The exact reconstructed model bound to the input has SHA256
+  4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288.
+
+All five reviewed files were hashed before and after the audit and were
+unchanged. This review file is the only file written by this audit. Python
+bytecode writes were disabled. The audit ran with assertions enabled under
+Python 3.12.14; the proof-record replay completed in approximately 59.15
+seconds, in addition to the exact model/input regeneration.
+
+1. EXACT INPUT PREMISES AND MODEL CONSISTENCY: PASS
+
+The copied input_premises.json is byte-for-byte identical to the earlier
+rebuild_independent_premises.json. Its model hash and both reconstruction
+source hashes match the available files. These bindings were checked, but
+the audit did not treat hash agreement as mathematical evidence by itself.
+
+For both structures the audit independently rebuilt the motif/translation
+records from the supplied point-set definition, sorted the integer bases,
+and reconstructed each exact complex phase. Every phase record matched
+the exact reconstructed model, without using the decimal coordinates.
+
+For the path-plus-chord graphs, it checked the specified edge set against
+the integer-base gap criterion and checked, using rational arithmetic:
+
+  C=C^T,  C*1=0,  L*C=Id-11^T/63.
+
+The graphs are connected because they contain the full path. These identities
+therefore establish the supplied C as the Laplacian pseudoinverse. The trace
+tau and all h_i=63*C_ii/tau were recomputed and matched the model exactly.
+
+All raw original variances d05_i=63*h_i/62 and star variances
+dstar_i=(63/61)*(h_i-1/62) were reconstructed and matched the input model.
+Both profiles are positive and both sums equal 3969/62. The corresponding
+centered mean square displacement normalization is therefore consistent.
+
+The audit regenerated all 3906 signed unordered-pair contributions with
+rate (h_i+h_j)/2 and coefficient 2*Re(conjugate(z_i)*z_j), positive for A
+and negative for B. Exact equal-rate grouping and exact zero cancellation
+produced precisely the 2005 supplied terms, coefficient by coefficient in
+the stated radical basis.
+
+The analytic offset bound in the premise proof is adequate for the graph
+criterion: |a|,|b|<1/8 implies a pair with integer base gap <=2 has actual
+gap <9/4, while base gap >=3 gives actual gap >11/4. Thus the 5/2 threshold
+has a rigorous gap. No rounded coordinate comparison is needed.
+
+2. OUTWARD INTERVAL ARITHMETIC: PASS
+
+Every interval endpoint is an integer multiple of 2^-256. Rational conversion
+uses floor at the lower endpoint and ceiling at the upper endpoint, including
+negative values. Interval multiplication uses all four corner products with
+outward rescaling. Reciprocal correctly reverses the endpoint order on a
+positive interval and treats a negative interval by reflection. Squaring
+uses zero as the lower bound when the input straddles zero. Addition and
+subtraction are exact on the shared grid.
+
+The real embedding of each radical uses integer square root of q*2^512
+and its next integer when necessary. Multiplication by a signed rational
+coefficient is handled by interval multiplication, so negative coefficients
+receive the correct reversed bounds. The certificate excludes zero from
+every coefficient interval before using its sign in the tail argument.
+
+The decimal displays are outward roundings of the authoritative rational
+endpoints. They are not used for sign decisions. A displayed zero caused
+by decimal shortening does not invalidate a strict nonzero integer bound.
+
+3. EXPONENTIAL AND PI ENCLOSURES: PASS
+
+For a nonnegative exact argument, binary range reduction places the reduced
+argument inside [0,1]. On this interval the alternating exponential series
+has decreasing term magnitudes. The degree-81 odd partial sum is a lower
+bound and the degree-80 even partial sum is an upper bound. Recursive term
+evaluation and summation use outward interval operations. Subsequent
+squaring is valid because the enclosed reduced exponential is positive.
+The source's stricter reduction target of approximately 1/8 is compatible
+with this argument, including its one-unit endpoint rounding.
+
+For an argument interval, evaluating the lower exponential bound at the
+upper argument and the upper bound at the lower argument respects the
+decreasing exponential function.
+
+The small-exponential shortcut is rigorous. The exact rational polynomial
+1+7/10+(7/10)^2/2+(7/10)^3/6 exceeds 2, hence log(2)<7/10. Therefore an
+argument at least 256*(7/10) has exponential less than 2^-256. The returned
+interval is [0,2^-256], not the unjustified point value zero. Its nonzero
+upper bound is propagated through the Taylor remainders and tail sum.
+
+The pi enclosure uses Machin's identity. Ninety-six arctangent terms end
+with a negative term and yield a lower partial-sum bound; adding the next
+positive term gives an upper bound. Interval operations correctly handle
+the negative coefficient in 16*atan(1/5)-4*atan(1/239). The replayed pi
+interval exactly matched the certificate.
+
+4. ORIGIN DIVIDED-FUNCTION POSITIVITY: PASS
+
+The source recomputes sum c_i=0 and sum r_i*c_i=0 exactly in each field
+basis coefficient. Thus D(0)=D'(0)=0 and, after positive rescaling,
+F(0)=F'(0)=0. These exact equalities justify discarding the constant and
+linear terms when studying F(x)/x^2; merely observing interval containment
+of zero would not have been sufficient.
+
+For 0<x<=1, the Taylor expansion through degree 24 yields the valid lower
+bound C_2(lower)-sum_{k=3}^{24}|C_k|(upper)-B_25(upper). Dividing the remainder
+by x^2 gives B_25*x^23<=B_25, so no factor is missing. Recomputed Taylor
+coefficients and the exact lower bound matched the saved record. The lower
+bound is strictly greater than 17/1000. This proves positivity arbitrarily
+close to zero and establishes an origin zero of exactly multiplicity two.
+
+5. FINITE-CELL VALUE AND DERIVATIVE BOUNDS: PASS
+
+For a cell [a,b] centered at m, each derivative remainder is bounded using
+exp(-lambda_i*a), since every Taylor intermediate point is at least a and
+all shifted rates are nonnegative. The source correctly sums absolute
+termwise remainders.
+
+For the value expansion of degree p, the remainder coefficient is B_(p+1).
+For the derivative expansion of degree p, it is (p+2)*B_(p+2). The source
+includes this essential p+2 factor and uses the degree-(p+1) centered
+coefficient to bound the derivative's degree-p term.
+
+The symmetric Taylor-radius enclosure is valid for the whole cell. When
+the derivative enclosure has one strict sign, the endpoint-monotonicity
+enclosure is also valid. Intersecting these two valid ranges is legitimate.
+The left and right endpoint evaluations themselves retain the signed
+Taylor displacement and an outward absolute remainder.
+
+The audit recomputed every stored Taylor coefficient, remainder, endpoint
+bound, value range, derivative range, and intersection method in all three
+positive cells and all nine negative cells. Each reconstructed record
+matched the stored record exactly. Every positive cell has a strictly
+positive lower value bound and every negative cell a strictly negative
+upper value bound.
+
+Their exact rational endpoints form gap-free closed covers of [1,10] and
+[11,2048]. The review checked the endpoints and adjacency directly. It
+replayed accepted proof cells; the discarded adaptive search cells are
+irrelevant to the completed cover and were not needed for the conclusion.
+
+6. FIRST ROOT WINDOW: PASS
+
+The entire degree-20 record for [10,11] was recomputed and matched exactly.
+Its upper derivative bound is strictly negative, its value at 10 is
+strictly positive, and its value at 11 is strictly negative. Continuity
+and strict decrease therefore give one and only one root in this window.
+The nonzero derivative proves simplicity.
+
+7. INFINITE TAIL MONOTONICITY AND UNIQUENESS: PASS
+
+For F=sum c_i exp(-lambda_i*x), with lambda_0=0, the normalized derivative is
+
+  exp(lambda_1*x)F'(x)
+    = -c_1*lambda_1
+      + sum_{i>=2}(-c_i*lambda_i)exp(-(lambda_i-lambda_1)*x).
+
+The first coefficient is negative and all shifted rate gaps for i>=2 are
+positive. Terms with c_i<0 are positive and may be discarded in a lower
+bound. Terms with c_i>0 are negative, and their absolute values decrease
+with x. Evaluating their magnitudes at 2048 bounds them uniformly on the
+entire infinite tail. This reasoning and the source agree.
+
+The audit independently selected every negative derivative term from the
+certified coefficient signs and recomputed every one of their stored
+bounds. The full list, its sum, the positive leading term, and the final
+uniform lower bound all matched the certificate. The normalized derivative
+lower bound is strictly greater than 1/1000.
+
+Thus F'(x)>0 for every x>=2048. The last negative finite cell proves
+F(2048)<0, and lambda_i>0 for i>0 gives limit F(x)=c_0>0. The intermediate
+value theorem and strict increase give exactly one root on the entire
+tail. Its derivative is nonzero. The tail monotonicity statement concerns
+the rescaled F, as required by the proof; positive rescaling preserves
+the zeros and their multiplicities in D.
+
+8. ROOT LOCALIZATION AND PARAMETER TRANSFER: PASS
+
+Both root-isolation procedures were replayed, including their endpoint sign
+tests, degree-48 Taylor jets, remainder bounds, and every bisection decision.
+Each output record exactly matched the saved certificate. Each exact x
+bracket has width 2^-120, strictly below 10^-36. The second bracket lies
+strictly above 2180. The original-v and star-v enclosures, including the
+outward pi conversion, matched both the full certificate and its summary.
+
+The exact Gaussian pair-variance formulas give
+
+  Delta_original(v)=D(7*pi^2*v/62),
+
+  Delta_star(v)=exp(7*pi^2*v/(62*61))*D(7*pi^2*v/61).
+
+Equivalently, in original x coordinates the star rates are
+(62*r_i-1)/61. The audit verified this affine rate relation for every raw
+pair before grouping. The common exponential factor is positive and the
+argument change has positive slope. Therefore root counts, signs, and
+simplicity transfer correctly. The star roots are exactly 61/62 times
+the original-v roots.
+
+9. COMPLETENESS AND PRACTICAL LIMITS
+
+The adjacent regions (0,1], [1,10], [10,11], [11,2048], and
+[2048,infinity) exhaust the positive real axis. The shared boundaries
+have certified nonzero signs. The finite covers exclude all roots outside
+the two monotone crossing regions, and the infinite tail proof excludes
+any hidden later crossings. There is no grid-only argument and no finite
+cutoff standing in for infinity.
+
+The approximate original-v roots are 9.5030721329631257 and
+1956.78819341629318; the corresponding star-v roots are
+9.3497967759798495 and 1925.22709352248200. The much tighter authoritative
+intervals remain in the full certificate. No new rounded root value is
+substituted for those interval records.
+
+This closes the positive-axis mean-contrast root-count and simplicity
+question for the exact reconstructed original and star controls at the
+specified frequency. It does not establish a root count for other noise
+mechanisms, scientific novelty, experimental validity, detectable signal
+strength, or the count/locations of standardized-contrast maxima. The
+homogeneous iid control proved in a separate artifact has identically
+matching means and is a different scientific statement.
+
+FINAL REVIEW STATUS: PASS; NO BLOCKERS FOUND.

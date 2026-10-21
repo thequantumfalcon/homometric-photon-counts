@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "precision_bits": 512,
+  "python_flint_version": "0.9.0",
+  "source_sha256": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e",
+  "lower_bound_certificate_sha256": "cca4c8ed55a0b7e61f9e8bd599c7c5188f4fc680b1f45c1276d6d1a498575fb0",
+  "probability_certificate_sha256": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
+  "necessary_integer_verified": 28091647285174,
+  "real_threshold_enclosure_display": "[28091647285174.211586275412831723793228588037036338328705553786455601999828376241048941290423655648486630255510786979801435377133771728959142 +/- 1.97e-127]",
+  "loss_enclosure_display": "[2.95591637963164611661462269075938357145686426129055377304991211072626056383788769704240841027604977643596236930614089639054430353571371589986436165913093e-14 +/- 4.59e-167]",
+  "controls_rejected": [
+    "halved_loss_bound",
+    "million_larger_sample_lower_bound"
+  ],
+  "scope": "Fresh Arb reconstruction and transcendental evaluation, no producer imports or positive-series logarithm implementation. Shares the probability intervals and analytic affinity/TV argument. The new theorem concerns only the fixed 13-bin iid experiment."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "EXPLORATORY ONLY; not a sign certificate",
+  "fourier_modes": 8,
+  "angular_points": 512,
+  "results": [
+    {
+      "radius": 10,
+      "estimate": 3.5410649086721466e-08,
+      "scipy_error_estimate_not_rigorous": 2.2854996598892327e-17
+    },
+    {
+      "radius": 25,
+      "estimate": 3.541064908505647e-08,
+      "scipy_error_estimate_not_rigorous": 8.337315934266098e-16
+    },
+    {
+      "radius": 50,
+      "estimate": 3.541064908505647e-08,
+      "scipy_error_estimate_not_rigorous": 8.337315934266098e-16
+    },
+    {
+      "radius": 100,
+      "estimate": 3.541064908505647e-08,
+      "scipy_error_estimate_not_rigorous": 8.337315934266098e-16
+    },
+    {
+      "radius": 200,
+      "estimate": 3.541064908505647e-08,
+      "scipy_error_estimate_not_rigorous": 8.337315934266098e-16
+    }
+  ],
+  "seconds": 1.2029999999940628
+}

@@ -1,0 +1,650 @@
+{
+  "schema": "complete-scientific-proof-record-v2",
+  "date": "2026-10-20",
+  "assembled_at_utc": "2026-10-20T23:39:41.359462+00:00",
+  "file_count": 125,
+  "total_bytes": 6308261,
+  "scope": "Complete preserved foundation and extension payloads, their unchanged manifests, and new frontier proof payloads. This active master, the portable container, and the self-referential verification sidecar are excluded from self-hashing. Hashes establish byte identity, not scientific truth.",
+  "preservation_strategy": "Keep every predecessor manifest row and corresponding payload byte-for-byte, embed the exact predecessor master under its science_extension path, and add the current user-facing frontier inventory without editing old sources.",
+  "predecessor_manifest_sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b",
+  "predecessor_payload_files_preserved": 87,
+  "predecessor_manifest_embedded_as": "science_extension/complete_science_manifest.json",
+  "original_manifest_sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0",
+  "original_files_preserved": 44,
+  "original_manifest_embedded_as": "science_completion/science_completion_manifest.json",
+  "frontier_files_included": 37,
+  "master_manifest_sidecar": "science_frontier/complete_science_manifest.json",
+  "embedded_master_manifest_name": "complete_science_manifest.json",
+  "readable_page_order": [
+    "science_frontier/science_frontier_report.pdf",
+    "science_extension/science_extension_report.pdf",
+    "science_completion/science_completion_report.pdf"
+  ],
+  "files": [
+    {
+      "path": "science_completion/READ_ME_FIRST.txt",
+      "bytes": 7218,
+      "sha256": "0595646c65fdee97d3766828f0afc9dfd385e3a8f9ea6c205a8f31a4084c97d6"
+    },
+    {
+      "path": "science_completion/detector_proofs.tex",
+      "bytes": 8012,
+      "sha256": "f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b"
+    },
+    {
+      "path": "science_completion/extract_proof_files.py",
+      "bytes": 2271,
+      "sha256": "556030215de90383fed5f70ad4742382172453a55b4056b9c15fcb1bbc13d509"
+    },
+    {
+      "path": "science_completion/figures/homogeneous_fourth_moment_and_sampling.pdf",
+      "bytes": 61265,
+      "sha256": "ac75ea9f379950d4724a4a3abfe64ff38e42faeb6a638c2fadd347f1f374a5eb"
+    },
+    {
+      "path": "science_completion/figures/homogeneous_fourth_moment_and_sampling.png",
+      "bytes": 603513,
+      "sha256": "d2551edf4225d72ee7c7734a630c27854c5772cad6c87d044df8a02fd0c0e9be"
+    },
+    {
+      "path": "science_completion/figures/homogeneous_fourth_moment_and_sampling.svg",
+      "bytes": 173580,
+      "sha256": "32f794afa24ab7a94da0402ab51a9d3214bce36f01c20e75e37fd5c75a9df398"
+    },
+    {
+      "path": "science_completion/figures/homogeneous_fourth_moment_and_sampling_caption.txt",
+      "bytes": 3281,
+      "sha256": "14eab1aa92e6c7eb89205d7f9199450d09401216c7fb3a81c25fd83c893b0d89"
+    },
+    {
+      "path": "science_completion/figures/homogeneous_fourth_moment_and_sampling_metadata.json",
+      "bytes": 3462,
+      "sha256": "1791480ecf02c1b7efdd4f4b30f95b3b442ee1bd904bc23b29f09291332ae748"
+    },
+    {
+      "path": "science_completion/figures/plot_homogeneous_gap.py",
+      "bytes": 16362,
+      "sha256": "4208d2e337a28e89aea87a217c834aa86f57cdbc7727250117eef111ab99ddc1"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/build_harmonic_groups.py",
+      "bytes": 8259,
+      "sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/certify_harmonic_root.py",
+      "bytes": 18674,
+      "sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/harmonic_groups.json",
+      "bytes": 45062,
+      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/harmonic_root_certificate.json",
+      "bytes": 262857,
+      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/harmonic_root_proof.txt",
+      "bytes": 14490,
+      "sha256": "bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/harmonic_root_summary.json",
+      "bytes": 4704,
+      "sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/independent_harmonic_review.txt",
+      "bytes": 15244,
+      "sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41"
+    },
+    {
+      "path": "science_completion/harmonic_certificate/input_model.json",
+      "bytes": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+    },
+    {
+      "path": "science_completion/homogeneous_control/REPRODUCE.txt",
+      "bytes": 1609,
+      "sha256": "c8389ebf8a12c972d07a9a76c7e52c3de218e0c34b12077c3d918794047f505a"
+    },
+    {
+      "path": "science_completion/homogeneous_control/homogeneous_control.py",
+      "bytes": 18195,
+      "sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a"
+    },
+    {
+      "path": "science_completion/homogeneous_control/homogeneous_control_proof.txt",
+      "bytes": 17015,
+      "sha256": "e0c7f8ff0937efc71c815fa7b1bf54c5305a6dc6424d33d5d260f11b558c0de7"
+    },
+    {
+      "path": "science_completion/homogeneous_control/homogeneous_control_results.json",
+      "bytes": 25584,
+      "sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142"
+    },
+    {
+      "path": "science_completion/independent_completion_review.txt",
+      "bytes": 13740,
+      "sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296"
+    },
+    {
+      "path": "science_completion/literature/iid_gaussian_homometry_novelty_comparison.txt",
+      "bytes": 20817,
+      "sha256": "a247b86411ef6907eb7372e081dd95a0d2d4c32f1262818b6bf9beb15e3e1ca6"
+    },
+    {
+      "path": "science_completion/literature/iid_gaussian_homometry_references.bib",
+      "bytes": 5849,
+      "sha256": "09f67e20548a59f1c9a13b50176c416ba510b415235b14d0001c75ec648460d4"
+    },
+    {
+      "path": "science_completion/measurement_and_optimization.py",
+      "bytes": 13154,
+      "sha256": "14155afb90b32760ce9b962e042a7df8b3480d73cf8db24b9b8a88d10d21375e"
+    },
+    {
+      "path": "science_completion/measurement_and_optimization_results.json",
+      "bytes": 12536,
+      "sha256": "1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8"
+    },
+    {
+      "path": "science_completion/model_reconstruction/rebuild_independent.py",
+      "bytes": 13289,
+      "sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627"
+    },
+    {
+      "path": "science_completion/model_reconstruction/rebuild_independent_model.json",
+      "bytes": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+    },
+    {
+      "path": "science_completion/model_reconstruction/rebuild_independent_premises.json",
+      "bytes": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+    },
+    {
+      "path": "science_completion/model_reconstruction/rebuild_independent_premises.py",
+      "bytes": 6769,
+      "sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4"
+    },
+    {
+      "path": "science_completion/render_science_pdf.py",
+      "bytes": 4382,
+      "sha256": "7a355218ad1691e9fc24d44ff5c09a2ac2b212043d29ec58aee087a20f62ff65"
+    },
+    {
+      "path": "science_completion/report_science_review.txt",
+      "bytes": 5751,
+      "sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428"
+    },
+    {
+      "path": "science_completion/root_certificate/certify_two_roots.py",
+      "bytes": 19185,
+      "sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631"
+    },
+    {
+      "path": "science_completion/root_certificate/independent_root_review.txt",
+      "bytes": 13058,
+      "sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223"
+    },
+    {
+      "path": "science_completion/root_certificate/input_premises.json",
+      "bytes": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+    },
+    {
+      "path": "science_completion/root_certificate/two_root_certificate.json",
+      "bytes": 590553,
+      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+    },
+    {
+      "path": "science_completion/root_certificate/two_root_proof.txt",
+      "bytes": 13512,
+      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+    },
+    {
+      "path": "science_completion/root_certificate/two_root_summary.json",
+      "bytes": 3298,
+      "sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1"
+    },
+    {
+      "path": "science_completion/sample_complexity_proofs.tex",
+      "bytes": 9755,
+      "sha256": "4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf"
+    },
+    {
+      "path": "science_completion/science_completion_manifest.json",
+      "bytes": 8104,
+      "sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0"
+    },
+    {
+      "path": "science_completion/science_completion_render_review.json",
+      "bytes": 1103,
+      "sha256": "35d46f441cb53767c8ce76f39a62d4ffa4e732170e3afbf63e0960a42c1a255c"
+    },
+    {
+      "path": "science_completion/science_completion_report.pdf",
+      "bytes": 470043,
+      "sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6"
+    },
+    {
+      "path": "science_completion/science_completion_report.tex",
+      "bytes": 33623,
+      "sha256": "7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92"
+    },
+    {
+      "path": "science_completion/science_completion_summary.json",
+      "bytes": 6275,
+      "sha256": "1e2a47f6c52536466ef596eb1ae256c1e3a718c8435d9b8ae136ee6a6b0bf30c"
+    },
+    {
+      "path": "science_completion/verify_completion_record.py",
+      "bytes": 1447,
+      "sha256": "6199288aa30b98590036b73d83837bc79387f26107421f9f3ab8049762ab0329"
+    },
+    {
+      "path": "science_extension/START_HERE.txt",
+      "bytes": 13150,
+      "sha256": "1a9583814353c41ec1be414e2bd1e1158f21454ca24ac2e854c7a9e04ad5d500"
+    },
+    {
+      "path": "science_extension/assemble_complete_science.py",
+      "bytes": 25940,
+      "sha256": "c41fa89f6191c0e17a37b099748581d76d0b732d6231ff20957da57000781d7a"
+    },
+    {
+      "path": "science_extension/complete_science_manifest.json",
+      "bytes": 17622,
+      "sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b"
+    },
+    {
+      "path": "science_extension/extract_complete_science.py",
+      "bytes": 2562,
+      "sha256": "4c876c0eb41991c64454212de87b490828e18beba411df943aabc02bdffde93d"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain.pdf",
+      "bytes": 32653,
+      "sha256": "058eb39e8f93af28c76a238054e360148663822a009c5ceb750a9166df14b249"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain.png",
+      "bytes": 284853,
+      "sha256": "5e74b0f1f6745ed39a5f9dbc7ac9b7a3c81dbfe948b074d4303ec66db117f091"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain.svg",
+      "bytes": 117279,
+      "sha256": "c48533909cfdcc1c97d21812824c6a1379709483b89547b1c06627077d3f278a"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain_caption.txt",
+      "bytes": 1728,
+      "sha256": "be851e2182a8ce6842f94e9cd74737bf5fd99f8eb036da88d2847032df352149"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain_data.json",
+      "bytes": 37300,
+      "sha256": "96277c19171d1f55891fb2e4d0c1ffcc969b7b2de79d7c34f6c363a2a72aa8f9"
+    },
+    {
+      "path": "science_extension/figures/four_count_blind_gain_metadata.json",
+      "bytes": 1402,
+      "sha256": "fccf27d628a88c88a20d0ffa919fdabab60232e83358602fdb7776f5033c07cf"
+    },
+    {
+      "path": "science_extension/figures/plot_four_count_blind_gain.py",
+      "bytes": 11216,
+      "sha256": "b2ff0a6aea630520144c0844e67dd53d3b8fe1407e6e1f7486237159bcc53336"
+    },
+    {
+      "path": "science_extension/finite_detection/certify_finite_detection.py",
+      "bytes": 15169,
+      "sha256": "e368349ee2326b35964bf05fa780e7e58f54d0b4a89efeb0bc3c2214f1f2531c"
+    },
+    {
+      "path": "science_extension/finite_detection/finite_detection_certificate.json",
+      "bytes": 61725,
+      "sha256": "6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8"
+    },
+    {
+      "path": "science_extension/finite_detection/finite_detection_proof.txt",
+      "bytes": 15057,
+      "sha256": "cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e"
+    },
+    {
+      "path": "science_extension/finite_detection/fixed_t_moments.json",
+      "bytes": 36770,
+      "sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32"
+    },
+    {
+      "path": "science_extension/finite_detection/homogeneous_moment_engine.py",
+      "bytes": 18195,
+      "sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a"
+    },
+    {
+      "path": "science_extension/finite_detection/independent_certificate_replay.json",
+      "bytes": 21521,
+      "sha256": "96d4a9e0664bfacb5eb79a371b5388946725c9f5150b32d62f5dec812ad49637"
+    },
+    {
+      "path": "science_extension/finite_detection/independent_certificate_replay.py",
+      "bytes": 9544,
+      "sha256": "824272d4548a74d245d3fc152c18474c61e4347b2a85c5abba8e871bcb242054"
+    },
+    {
+      "path": "science_extension/finite_detection/independent_finite_detection_review.txt",
+      "bytes": 11953,
+      "sha256": "07c2480de4a020b35043b1a093cbe8718417b02ec5c63f26aab25a4c72e4f81d"
+    },
+    {
+      "path": "science_extension/identifiability/identifiability_proofs.txt",
+      "bytes": 9057,
+      "sha256": "2902025ac51cb17d419bcf5c254b599961cabdb14394a717886ff4a75cf56f6b"
+    },
+    {
+      "path": "science_extension/identifiability/independent_identifiability_review.txt",
+      "bytes": 10418,
+      "sha256": "0168a2ed114244f097fa00143f26d39dcc280db55c4fd06de6d85ba65a77a5ef"
+    },
+    {
+      "path": "science_extension/identifiability/independent_phase_robustness_review.txt",
+      "bytes": 2947,
+      "sha256": "c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33"
+    },
+    {
+      "path": "science_extension/identifiability/phase_robustness_proof.txt",
+      "bytes": 3058,
+      "sha256": "599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0"
+    },
+    {
+      "path": "science_extension/identifiability/phase_robustness_results.json",
+      "bytes": 1046,
+      "sha256": "89d39a8e60174c675b216f73af209d6f97db56897774f4c3e770a67ea88657e3"
+    },
+    {
+      "path": "science_extension/identifiability/verify_phase_robustness.py",
+      "bytes": 2842,
+      "sha256": "c20290f9f8fe63d08407785edde998f63483c5dfe605b538938284b26aca980f"
+    },
+    {
+      "path": "science_extension/literature/extension_references.bib",
+      "bytes": 3024,
+      "sha256": "f1d197266ce63730d9a0fb25ec611d1bcd4cc065ee74fb639492bad48741b82f"
+    },
+    {
+      "path": "science_extension/literature/targeted_priority_update.txt",
+      "bytes": 13812,
+      "sha256": "5a2ac5b90638c5c208938320bd696d002f52c53ad8ce6744628bc4e48f59e844"
+    },
+    {
+      "path": "science_extension/phase_laws/REPRODUCE.txt",
+      "bytes": 1897,
+      "sha256": "8f6cba743a625fa1b423ab01979fd9d1d7595d9610aae8921ad2a0f8daf68623"
+    },
+    {
+      "path": "science_extension/phase_laws/cross_family_results.json",
+      "bytes": 2756,
+      "sha256": "ee1c34d302956624701a88a5c168c1df92faa1c69803534aa1fb650c6c96f2d4"
+    },
+    {
+      "path": "science_extension/phase_laws/exact_phase_algebra.py",
+      "bytes": 5294,
+      "sha256": "4467dfb0cc9851c5c819f31f278f86d336faca75d27cd345cde0348466acb8f2"
+    },
+    {
+      "path": "science_extension/phase_laws/independent_phase_review.json",
+      "bytes": 1591,
+      "sha256": "8d468c1d8641aa17d64573fe0a73a04531b994327df1f5dad2531ce2f5a801ab"
+    },
+    {
+      "path": "science_extension/phase_laws/independent_phase_review.py",
+      "bytes": 5087,
+      "sha256": "4b5a020193a1c1486e83144ebfc6be84ff7901d59b98ae67688002109452084a"
+    },
+    {
+      "path": "science_extension/phase_laws/independent_phase_review.txt",
+      "bytes": 4289,
+      "sha256": "d28c787a83f926544dd8a4f81357fc7197f37d094e8f3739be604711e2c12c7b"
+    },
+    {
+      "path": "science_extension/phase_laws/phase_law_extension.py",
+      "bytes": 12770,
+      "sha256": "9f893a7ab41fcd05c23953a0f0041b1d70d1d07f5db8bbcb72b8167713b2481c"
+    },
+    {
+      "path": "science_extension/phase_laws/phase_law_proofs.txt",
+      "bytes": 19460,
+      "sha256": "f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d"
+    },
+    {
+      "path": "science_extension/phase_laws/phase_law_results.json",
+      "bytes": 30268,
+      "sha256": "58d6c632902a243463f26fe806b40ee2b2fba141392f44676dd042c1a2455848"
+    },
+    {
+      "path": "science_extension/phase_laws/verify_cross_family.py",
+      "bytes": 3966,
+      "sha256": "aeb14aba57f745e03c43f1506600e5f1e5fba4eed3960a4c84af40945956d9e7"
+    },
+    {
+      "path": "science_extension/render_science_extension.py",
+      "bytes": 4379,
+      "sha256": "f3996958361844008d5015b0071c29b749f487ad83230df2780f1ad9214b9c6f"
+    },
+    {
+      "path": "science_extension/report_science_review.txt",
+      "bytes": 15775,
+      "sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d"
+    },
+    {
+      "path": "science_extension/science_extension_render_review.json",
+      "bytes": 2011,
+      "sha256": "0b7832d8e08f0b5850f619d7e766a3f0e34b461c123cd7dd51b4f9ba0172a729"
+    },
+    {
+      "path": "science_extension/science_extension_report.pdf",
+      "bytes": 411034,
+      "sha256": "6d9397ae5e10b3b7570099a7b75bae842d24ec984d7a5dbdd07881ba8b5c1c25"
+    },
+    {
+      "path": "science_extension/science_extension_report.tex",
+      "bytes": 36749,
+      "sha256": "18708979fef329c7b11a58dd1b8b74f50f9b0556b1e52a0e1a5fbf6a8a0376af"
+    },
+    {
+      "path": "science_extension/science_extension_summary.json",
+      "bytes": 18721,
+      "sha256": "c328bbe5c33a7f51abf7750e9e71cd884e9a31639470584f8519e3517ca579cf"
+    },
+    {
+      "path": "science_frontier/README.txt",
+      "bytes": 7151,
+      "sha256": "9f48b2026bbd85bc2d5676c802216f00f04c80b3019289935d6a95aa9d4f1c99"
+    },
+    {
+      "path": "science_frontier/assemble_complete_science.py",
+      "bytes": 21660,
+      "sha256": "e9179db103458a172b37bba93ec36a94b325e79b28aaaf9a66b465dfd92e9560"
+    },
+    {
+      "path": "science_frontier/calibration/REPRODUCE.txt",
+      "bytes": 2056,
+      "sha256": "be64801992aeaee5abdc69575f56e0974a6606877d983e63dde5c95f3d0beb04"
+    },
+    {
+      "path": "science_frontier/calibration/calibration_certificate.json",
+      "bytes": 43050,
+      "sha256": "f0529051dc70054902b15a37f8a0e287e1ffa298fa1f034037b4f0116910d385"
+    },
+    {
+      "path": "science_frontier/calibration/calibration_proof.txt",
+      "bytes": 11530,
+      "sha256": "8ebd704bfccf33a93eebc858de43c25fb94c8a166abdee05e82986347cf22101"
+    },
+    {
+      "path": "science_frontier/calibration/certify_calibration.py",
+      "bytes": 15281,
+      "sha256": "d6c22ba84f56826a0c9d9783d2df6221ac37e2adc2132d1605c21ef11fa46de7"
+    },
+    {
+      "path": "science_frontier/calibration/independent_calibration_replay.json",
+      "bytes": 11061,
+      "sha256": "33e9bc36975cac8ac670ec75256f74c9432916cd0a0b09383ba007fa3d6f6049"
+    },
+    {
+      "path": "science_frontier/calibration/independent_calibration_replay.py",
+      "bytes": 12511,
+      "sha256": "6927f1f0ba66a2e73b43302737173a9fec965b303c63351d3726a9c402d09a45"
+    },
+    {
+      "path": "science_frontier/calibration/independent_calibration_review.txt",
+      "bytes": 14334,
+      "sha256": "89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073"
+    },
+    {
+      "path": "science_frontier/final_review.txt",
+      "bytes": 3902,
+      "sha256": "4393227691bdd4c5dd4c21333d83a90f9013bbf307c152659c2c0b7171cab253"
+    },
+    {
+      "path": "science_frontier/global_separation/blind_interval_certificate.json",
+      "bytes": 15600,
+      "sha256": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548"
+    },
+    {
+      "path": "science_frontier/global_separation/certify_global_blind_interval.py",
+      "bytes": 9256,
+      "sha256": "16130e0a2b24d7e85f1dffebe80e5005860582f4e0d6366adc297c35d5fbda83"
+    },
+    {
+      "path": "science_frontier/global_separation/global_blind_gain_proofs.txt",
+      "bytes": 13416,
+      "sha256": "6203bb8277d61c3f05582732a33c50b19974330f476276aaedf93fcfb4e57861"
+    },
+    {
+      "path": "science_frontier/global_separation/global_detector_and_width_proofs.txt",
+      "bytes": 13722,
+      "sha256": "dc1ed848d11ad0f2c76378fa642bb3eb20ea3a2dcd830a82066de0cf4d71c16d"
+    },
+    {
+      "path": "science_frontier/global_separation/independent_blind_interval_replay.json",
+      "bytes": 1368,
+      "sha256": "2b099fce0afee2315bfda00a77ffd606a925f7116c7fd8f21bee08a2ce66635e"
+    },
+    {
+      "path": "science_frontier/global_separation/independent_blind_interval_replay.py",
+      "bytes": 4579,
+      "sha256": "206d2fec0e59e82b81576bd6f18725a49eca23766f1284e8d04239ca9f879b2b"
+    },
+    {
+      "path": "science_frontier/global_separation/independent_global_theory_review.txt",
+      "bytes": 10634,
+      "sha256": "8b0541dadea668f98de18718f2c15adb9dcac8b3c06ce5a92fe16f035435b8b0"
+    },
+    {
+      "path": "science_frontier/motion_extensions/REPRODUCE.txt",
+      "bytes": 901,
+      "sha256": "84b88b4bb40b8364f0790c757a1a9672744c52018d5aa1da041408521c5efe53"
+    },
+    {
+      "path": "science_frontier/motion_extensions/independent_motion_replay.json",
+      "bytes": 1667,
+      "sha256": "7883f92f5f0cfae74420ccdb5226f632108ed3ca9ceb1a2ab866b089e40cd717"
+    },
+    {
+      "path": "science_frontier/motion_extensions/independent_motion_replay.py",
+      "bytes": 3395,
+      "sha256": "30af9b503f9815a1e2c17e464b639821cf6f42f9c6abfdc8351a78071e575a74"
+    },
+    {
+      "path": "science_frontier/motion_extensions/independent_motion_review.txt",
+      "bytes": 4394,
+      "sha256": "262c67bfdb2f2aaee04a5acc51e2fc334b0c3284c8bbf284af39a652001081bb"
+    },
+    {
+      "path": "science_frontier/motion_extensions/motion_extension_proofs.txt",
+      "bytes": 18860,
+      "sha256": "38e35aeb046e429ff8b86a5c30efa3a00f6b025f42dfb6e01d38d6a17cb1835a"
+    },
+    {
+      "path": "science_frontier/motion_extensions/motion_extension_results.json",
+      "bytes": 5141,
+      "sha256": "36d5070a5e835c8ef17cdd6ad5d537480e7541a3ebad522316fe06751083b08f"
+    },
+    {
+      "path": "science_frontier/motion_extensions/verify_motion_extensions.py",
+      "bytes": 11068,
+      "sha256": "492b76db0b2e7a0fdb7081230c6121df6f297d1def9011d790e67ece87618ec7"
+    },
+    {
+      "path": "science_frontier/render_science_frontier.py",
+      "bytes": 4376,
+      "sha256": "212ee3d64935f6174912812eee8f4dd24a8b7a8a033346b79a719d79ea1887e1"
+    },
+    {
+      "path": "science_frontier/report_consistency_review.txt",
+      "bytes": 5408,
+      "sha256": "8b6f6a01c0e6db205756aa234c8a1ef69f9243cd006211f2fec5e44adaa7f6a4"
+    },
+    {
+      "path": "science_frontier/review_and_experiment/external_review_and_physical_test.txt",
+      "bytes": 17600,
+      "sha256": "796abe69a7b1eb72ce632b8b22b4e6b0135a57289023c1a5adf8fc55ada1ec49"
+    },
+    {
+      "path": "science_frontier/review_and_experiment/priority_update.txt",
+      "bytes": 13859,
+      "sha256": "74fda0ed8e2c56f07ef86857066e5d8d0ad94779030f085495e112f6e123a9de"
+    },
+    {
+      "path": "science_frontier/science_frontier_report.pdf",
+      "bytes": 363877,
+      "sha256": "2393d56386f709e819fb5b9ca8b1cc2b777c17083da2d6f34a55700a41e1a29d"
+    },
+    {
+      "path": "science_frontier/science_frontier_report.tex",
+      "bytes": 40124,
+      "sha256": "3fbcb91399b55a7570810ec13ee1647d030a1498defbbd8121462733808cedfe"
+    },
+    {
+      "path": "science_frontier/tighter_testing/certify_tighter_testing.py",
+      "bytes": 16618,
+      "sha256": "627985c384f1a53f97c3f0a113de06568df6e5c8d65ed1989d56d1d7918f144d"
+    },
+    {
+      "path": "science_frontier/tighter_testing/independent_tighter_testing_replay.json",
+      "bytes": 43544,
+      "sha256": "4957e4f8c82a6ee05033724f3598eedadb9856eb4dc5b80e06b417f35e71f872"
+    },
+    {
+      "path": "science_frontier/tighter_testing/independent_tighter_testing_replay.py",
+      "bytes": 16132,
+      "sha256": "023cfc1b774e321b3d9ff07429ba75fe6ad3ab7b982d1a02e63c8b357030731b"
+    },
+    {
+      "path": "science_frontier/tighter_testing/independent_tighter_testing_review.txt",
+      "bytes": 16319,
+      "sha256": "10f796c8f83ba18275dc5c2358857d4d1cbe305c972d9f656e9611f1223c8d67"
+    },
+    {
+      "path": "science_frontier/tighter_testing/tighter_testing_certificate.json",
+      "bytes": 79764,
+      "sha256": "33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1"
+    },
+    {
+      "path": "science_frontier/tighter_testing/tighter_testing_proof.txt",
+      "bytes": 12463,
+      "sha256": "464b76809c6c350e2651bb7eb530eff396d6cf121e14b890d31f731dc7829303"
+    },
+    {
+      "path": "science_frontier/visual_review.json",
+      "bytes": 1522,
+      "sha256": "067223c25aff917055f699f02af44915f67c002a0089f716c406c922d4c122bd"
+    }
+  ]
+}

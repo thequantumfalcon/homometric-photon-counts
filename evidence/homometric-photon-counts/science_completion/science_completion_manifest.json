@@ -1,0 +1,229 @@
+{
+  "schema": "science-completion-manifest-v1",
+  "date": "2026-10-20",
+  "file_count": 44,
+  "total_bytes": 4054124,
+  "scope": "Complete delivered proof record. This manifest and the portable PDF containing it are excluded from self-hashing. Temporary rendering/upload files are excluded. Hashes establish byte identity, not scientific truth.",
+  "files": [
+    {
+      "path": "READ_ME_FIRST.txt",
+      "bytes": 7218,
+      "sha256": "0595646c65fdee97d3766828f0afc9dfd385e3a8f9ea6c205a8f31a4084c97d6"
+    },
+    {
+      "path": "detector_proofs.tex",
+      "bytes": 8012,
+      "sha256": "f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b"
+    },
+    {
+      "path": "extract_proof_files.py",
+      "bytes": 2271,
+      "sha256": "556030215de90383fed5f70ad4742382172453a55b4056b9c15fcb1bbc13d509"
+    },
+    {
+      "path": "figures/homogeneous_fourth_moment_and_sampling.pdf",
+      "bytes": 61265,
+      "sha256": "ac75ea9f379950d4724a4a3abfe64ff38e42faeb6a638c2fadd347f1f374a5eb"
+    },
+    {
+      "path": "figures/homogeneous_fourth_moment_and_sampling.png",
+      "bytes": 603513,
+      "sha256": "d2551edf4225d72ee7c7734a630c27854c5772cad6c87d044df8a02fd0c0e9be"
+    },
+    {
+      "path": "figures/homogeneous_fourth_moment_and_sampling.svg",
+      "bytes": 173580,
+      "sha256": "32f794afa24ab7a94da0402ab51a9d3214bce36f01c20e75e37fd5c75a9df398"
+    },
+    {
+      "path": "figures/homogeneous_fourth_moment_and_sampling_caption.txt",
+      "bytes": 3281,
+      "sha256": "14eab1aa92e6c7eb89205d7f9199450d09401216c7fb3a81c25fd83c893b0d89"
+    },
+    {
+      "path": "figures/homogeneous_fourth_moment_and_sampling_metadata.json",
+      "bytes": 3462,
+      "sha256": "1791480ecf02c1b7efdd4f4b30f95b3b442ee1bd904bc23b29f09291332ae748"
+    },
+    {
+      "path": "figures/plot_homogeneous_gap.py",
+      "bytes": 16362,
+      "sha256": "4208d2e337a28e89aea87a217c834aa86f57cdbc7727250117eef111ab99ddc1"
+    },
+    {
+      "path": "harmonic_certificate/build_harmonic_groups.py",
+      "bytes": 8259,
+      "sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440"
+    },
+    {
+      "path": "harmonic_certificate/certify_harmonic_root.py",
+      "bytes": 18674,
+      "sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07"
+    },
+    {
+      "path": "harmonic_certificate/harmonic_groups.json",
+      "bytes": 45062,
+      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+    },
+    {
+      "path": "harmonic_certificate/harmonic_root_certificate.json",
+      "bytes": 262857,
+      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+    },
+    {
+      "path": "harmonic_certificate/harmonic_root_proof.txt",
+      "bytes": 14490,
+      "sha256": "bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658"
+    },
+    {
+      "path": "harmonic_certificate/harmonic_root_summary.json",
+      "bytes": 4704,
+      "sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5"
+    },
+    {
+      "path": "harmonic_certificate/independent_harmonic_review.txt",
+      "bytes": 15244,
+      "sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41"
+    },
+    {
+      "path": "harmonic_certificate/input_model.json",
+      "bytes": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+    },
+    {
+      "path": "homogeneous_control/REPRODUCE.txt",
+      "bytes": 1609,
+      "sha256": "c8389ebf8a12c972d07a9a76c7e52c3de218e0c34b12077c3d918794047f505a"
+    },
+    {
+      "path": "homogeneous_control/homogeneous_control.py",
+      "bytes": 18195,
+      "sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a"
+    },
+    {
+      "path": "homogeneous_control/homogeneous_control_proof.txt",
+      "bytes": 17015,
+      "sha256": "e0c7f8ff0937efc71c815fa7b1bf54c5305a6dc6424d33d5d260f11b558c0de7"
+    },
+    {
+      "path": "homogeneous_control/homogeneous_control_results.json",
+      "bytes": 25584,
+      "sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142"
+    },
+    {
+      "path": "independent_completion_review.txt",
+      "bytes": 13740,
+      "sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296"
+    },
+    {
+      "path": "literature/iid_gaussian_homometry_novelty_comparison.txt",
+      "bytes": 20817,
+      "sha256": "a247b86411ef6907eb7372e081dd95a0d2d4c32f1262818b6bf9beb15e3e1ca6"
+    },
+    {
+      "path": "literature/iid_gaussian_homometry_references.bib",
+      "bytes": 5849,
+      "sha256": "09f67e20548a59f1c9a13b50176c416ba510b415235b14d0001c75ec648460d4"
+    },
+    {
+      "path": "measurement_and_optimization.py",
+      "bytes": 13154,
+      "sha256": "14155afb90b32760ce9b962e042a7df8b3480d73cf8db24b9b8a88d10d21375e"
+    },
+    {
+      "path": "measurement_and_optimization_results.json",
+      "bytes": 12536,
+      "sha256": "1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8"
+    },
+    {
+      "path": "model_reconstruction/rebuild_independent.py",
+      "bytes": 13289,
+      "sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627"
+    },
+    {
+      "path": "model_reconstruction/rebuild_independent_model.json",
+      "bytes": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+    },
+    {
+      "path": "model_reconstruction/rebuild_independent_premises.json",
+      "bytes": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+    },
+    {
+      "path": "model_reconstruction/rebuild_independent_premises.py",
+      "bytes": 6769,
+      "sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4"
+    },
+    {
+      "path": "render_science_pdf.py",
+      "bytes": 4382,
+      "sha256": "7a355218ad1691e9fc24d44ff5c09a2ac2b212043d29ec58aee087a20f62ff65"
+    },
+    {
+      "path": "report_science_review.txt",
+      "bytes": 5751,
+      "sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428"
+    },
+    {
+      "path": "root_certificate/certify_two_roots.py",
+      "bytes": 19185,
+      "sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631"
+    },
+    {
+      "path": "root_certificate/independent_root_review.txt",
+      "bytes": 13058,
+      "sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223"
+    },
+    {
+      "path": "root_certificate/input_premises.json",
+      "bytes": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+    },
+    {
+      "path": "root_certificate/two_root_certificate.json",
+      "bytes": 590553,
+      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+    },
+    {
+      "path": "root_certificate/two_root_proof.txt",
+      "bytes": 13512,
+      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+    },
+    {
+      "path": "root_certificate/two_root_summary.json",
+      "bytes": 3298,
+      "sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1"
+    },
+    {
+      "path": "sample_complexity_proofs.tex",
+      "bytes": 9755,
+      "sha256": "4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf"
+    },
+    {
+      "path": "science_completion_render_review.json",
+      "bytes": 1103,
+      "sha256": "35d46f441cb53767c8ce76f39a62d4ffa4e732170e3afbf63e0960a42c1a255c"
+    },
+    {
+      "path": "science_completion_report.pdf",
+      "bytes": 470043,
+      "sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6"
+    },
+    {
+      "path": "science_completion_report.tex",
+      "bytes": 33623,
+      "sha256": "7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92"
+    },
+    {
+      "path": "science_completion_summary.json",
+      "bytes": 6275,
+      "sha256": "1e2a47f6c52536466ef596eb1ae256c1e3a718c8435d9b8ae136ee6a6b0bf30c"
+    },
+    {
+      "path": "verify_completion_record.py",
+      "bytes": 1447,
+      "sha256": "6199288aa30b98590036b73d83837bc79387f26107421f9f3ab8049762ab0329"
+    }
+  ]
+}

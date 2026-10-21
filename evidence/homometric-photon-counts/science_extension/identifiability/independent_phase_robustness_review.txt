@@ -1,0 +1,60 @@
+INDEPENDENT INTERNAL REVIEW: COMMON PHASE-LAW ROBUSTNESS
+20 October 2026
+Reviewer: /root/phase_law_extension
+
+Conclusion: PASS. I read the analytic proof and accompanying exact-arithmetic
+script/results. No incorrect bound or unsupported scope claim was found.
+This is an internal AI review, not external peer review or formal verification.
+
+Analytic checks
+
+1. For |W|=1 and m=E W, |kappa20|=|E(W-m)^2|<=E|W-m|^2=1-|m|^2<=1.
+2. Since |W-m|<=2, E|W-m|^4<=4E|W-m|^2<=4. Hence
+   |kappa40|<=E|W-m|^4+3|kappa20|^2<=7.
+3. Telescoping products of unit-disk Fourier moments gives the stated
+   coefficient bounds: kappa20 changes by at most 3*delta; kappa40 changes
+   by at most (1+8+6+36+24)*delta=75*delta.
+4. For alpha=kappa40*conj(kappa20)^2, changing kappa40 first and then the
+   squared second cumulant bounds the change by 75*delta+7*2*3*delta
+   =117*delta. The complex conjugation is correctly retained.
+5. The general phase-law selection theorem then gives
+   |Delta4(mu)-Delta4(nu)|<=6*117*|T|*delta=702*|T|*delta.
+6. For a signed difference of probability measures, its total mass variation
+   is 2*TV. Since |W^k|=1, Fourier errors are at most 2*TV, including for
+   complex Fourier moments. The claimed sufficient single-site TV tolerance
+   is therefore valid.
+7. The first-three-moment equalities survive exactly because the structural
+   null and magnitude conditions are fixed and the new law remains common
+   and iid across all sites. This would not cover unrelated site-wise errors.
+
+Separate exact arithmetic
+
+Without importing the root verification script or its geometry engine, I used
+pairs (a,b) representing a+i*sqrt(3)*b and multiplied the four explicitly
+reported clean power sums M_A2, M_B2, M_A4, M_B4. This independently gives
+
+  T = -455015761/120000 + i*sqrt(3)*(28907930179/4800000).
+  |T|^2 = 2838268230115271509723/23040000000000.
+  11200^2-|T|^2 = 51869369884728490277/23040000000000 > 0.
+
+Substitution into the exact Gaussian fourth-gap factorization at x=1/2 gives
+reference gap 35946245119/81920000. Subtracting 702*11200/100000 gives
+
+  certified margin = 29505367039/81920000
+                   = 360.17293748779296875 > 0.
+
+The arithmetic checks the constants independently; it takes the exact clean
+power sums from the established structural calculation. It does not amount to
+a new independent geometric reconstruction.
+
+Scope
+
+The tolerance is conservative and concerns a common iid phase law at fixed
+geometry/frequency. It is not a maximal tolerance, a detector calibration
+budget, or a claim about independent geometric perturbations. The proof
+correctly states those limitations.
+
+Reviewed file hashes (SHA-256)
+  phase_robustness_proof.txt: 599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0
+  verify_phase_robustness.py: c20290f9f8fe63d08407785edde998f63483c5dfe605b538938284b26aca980f
+  phase_robustness_results.json: 89d39a8e60174c675b216f73af209d6f97db56897774f4c3e770a67ea88657e3

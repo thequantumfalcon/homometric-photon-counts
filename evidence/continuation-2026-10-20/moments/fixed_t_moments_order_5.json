@@ -1,0 +1,160 @@
+{
+  "attenuation_t": "1/2",
+  "maximum_moment": 5,
+  "moments": {
+    "A": {
+      "0": "1",
+      "1": "189/4",
+      "2": "456350283/102400",
+      "3": "26389491909098787/41943040000",
+      "4": "32480878290897653705607723/274877906944000000",
+      "5": "31903682137655764020614099675038323/1152921504606846976000000"
+    },
+    "B": {
+      "0": "1",
+      "1": "189/4",
+      "2": "456350283/102400",
+      "3": "26389491909098787/41943040000",
+      "4": "32480833635950815555258923/274877906944000000",
+      "5": "31903472266302627788392934988497523/1152921504606846976000000"
+    }
+  },
+  "method": "Exact direct site generating-function product; pinned engine with MPIR integer multiplication",
+  "comparisons_through_order32": {
+    "A": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "B": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    }
+  },
+  "shape_checks": {
+    "A": {
+      "positive": true,
+      "support_upper_3969": true,
+      "log_convex": true
+    },
+    "B": {
+      "positive": true,
+      "support_upper_3969": true,
+      "log_convex": true
+    }
+  },
+  "seconds": 0.031000000002677552,
+  "operations": [
+    {
+      "label": "theta rational square",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "theta radical square",
+      "seconds": 0.0,
+      "bytes_per_digit": 38,
+      "bound_bits": 296
+    },
+    {
+      "label": "theta pairs x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 351
+    },
+    {
+      "label": "theta pairs x4",
+      "seconds": 0.0,
+      "bytes_per_digit": 46,
+      "bound_bits": 364
+    },
+    {
+      "label": "theta pairs x5",
+      "seconds": 0.0,
+      "bytes_per_digit": 46,
+      "bound_bits": 363
+    },
+    {
+      "label": "phi rational square",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "phi radical square",
+      "seconds": 0.0,
+      "bytes_per_digit": 37,
+      "bound_bits": 294
+    },
+    {
+      "label": "phi pairs x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 351
+    },
+    {
+      "label": "phi pairs x4",
+      "seconds": 0.0,
+      "bytes_per_digit": 46,
+      "bound_bits": 364
+    },
+    {
+      "label": "unit sites x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "unit sites +1,+1,-1",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 345
+    },
+    {
+      "label": "18 nontrivial sites",
+      "seconds": 0.0,
+      "bytes_per_digit": 48,
+      "bound_bits": 378
+    },
+    {
+      "label": "21-site base",
+      "seconds": 0.0,
+      "bytes_per_digit": 47,
+      "bound_bits": 373
+    },
+    {
+      "label": "shared shifts 0,3",
+      "seconds": 0.0,
+      "bytes_per_digit": 49,
+      "bound_bits": 390
+    },
+    {
+      "label": "A 63-site structure",
+      "seconds": 0.0,
+      "bytes_per_digit": 50,
+      "bound_bits": 395
+    },
+    {
+      "label": "B 63-site structure",
+      "seconds": 0.01600000000325963,
+      "bytes_per_digit": 50,
+      "bound_bits": 395
+    }
+  ],
+  "dependencies": {
+    "LOCAL_WORKSPACE\\audit-2026-10-20\\moments\\reconstruct.py": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68",
+    "LOCAL_WORKSPACE\\continuation-2026-10-20\\moments\\extend_moments.py": "b6a274ada742ce0debecf4f70f85b15f9679241158cfbd2c934fe12f9e9effa2",
+    "LOCAL_WORKSPACE\\continuation-2026-10-20\\moments\\native_integer.py": "a902b0a7e41d252a604080ddc158285f52032e94359af95cf4f4a9befe0501b4",
+    "LOCAL_WORKSPACE\\audit-2026-10-20\\moments\\reconstructed_order_32.json": "72b95cd2c0293ca1c4f0f2921446b963292738671dd1e59a792d719c79b5c1d4"
+  },
+  "native_library": "LOCAL_USER_HOME\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\symengine\\lib\\mpir.dll",
+  "native_sha256": "08d901b97a987dd23023ef4273d26fc6e0ff7fcddcdba6b6e39dc057931af994"
+}

@@ -1,0 +1,274 @@
+FOUR-COUNT BLIND GAINS: A GLOBAL LOWER BOUND AND A SECOND CERTIFIED ROOT
+2026-10-21
+
+Status
+------
+A new elementary theorem proves that there are at least four positive,
+sign-changing four-count blind gains at EVERY finite positive Gaussian
+phase variance. This is stronger than merely establishing a first blind
+gain. At t=exp(-s/2)=1/2, a new exact rational certificate establishes
+EXACTLY TWO zeros on (0,1/32], both simple. At least two more positive
+blind gains therefore lie above 1/32.
+
+The exact global number is still unknown. The previously proved global
+finiteness result is retained, but is not needed for the new lower bound.
+Nothing in this document is an observed physical measurement or a claim
+of independent external mathematical review.
+
+1. Model and previously verified inputs
+--------------------------------------
+The two existing 63-site structures have intensity laws P_A,P_B on [0,3969].
+At fixed 0<s<infinity, site phases are iid centered Gaussian with variance s.
+Intensity is a nonconstant real analytic phase function and its input has
+a smooth positive density. Its law is absolutely continuous; in particular
+P_G(I=0)=0. The first three raw intensity moments agree. The fourth gap is
+
+ D4(s) = (455015761/20000) t^8 (1-t^2)^5
+         * (t^6+3t^4+6t^2+6) > 0,  t=exp(-s/2).
+
+Define, with zero background,
+
+ F_k(eta)=E_A[I^k exp(-eta I)]-E_B[I^k exp(-eta I)],
+ P_A(N=k)-P_B(N=k)=eta^k F_k(eta)/k!,  eta>0.
+
+Thus zeros of F_4 are precisely four-count blind gains. The full count
+laws remain different at every eta>0, since their fourth factorial moments
+differ by eta^4 D4(s). A blind single count channel does not mean that the
+whole detector has lost structure information.
+
+2. A global orthogonality identity
+---------------------------------
+For j=0,1,2,3 and I>0, a change of variable u=eta I gives
+
+ integral_0^infinity eta^j I^4 exp(-eta I) d eta
+       = j! I^(3-j).
+
+All four integrals are finite after expectation: for j<3 the right-hand
+side is bounded because I<=3969; for j=3 it is 3!=6 almost surely. Tonelli's
+theorem applies separately to each nonnegative model integral. Subtracting,
+
+ integral_0^infinity eta^j F_4(eta) d eta
+       = j! [E_A I^(3-j)-E_B I^(3-j)] = 0.             (1)
+
+Moreover integral eta^j |F_4| is bounded by the sum of the two model
+integrals, so each signed integral is absolutely convergent. The j=3 case
+uses the absence of an atom at zero (or, more generally, equal such atoms).
+
+F_4 is nonzero: F_4(0)=D4(s)>0. Bounded intensity makes F_4 entire, hence
+real analytic on the positive axis. Its zeros are isolated there unless
+it is identically zero, which has just been excluded.
+
+3. Orthogonality forces at least four sign changes
+------------------------------------------------
+LEMMA. Let f be a nonzero real analytic function on (0,infinity). Suppose
+integral_0^infinity x^j |f(x)| dx < infinity and
+integral_0^infinity x^j f(x) dx = 0 for j=0,...,r-1.
+Then f has at least r distinct positive sign-changing zeros.
+
+PROOF. If there are already at least r sign changes, there is nothing to
+show. Otherwise let a_1<...<a_m be all its sign-changing zeros, with m<r.
+Zeros which do not change sign do not affect the following argument.
+The polynomial q(x)=product_(i=1)^m (x-a_i) has the same sign alternation
+as f. Multiplying q by -1 if needed makes q(x) f(x)>=0 everywhere away
+from isolated zeros, and strictly positive on a nonempty interval since
+f is nonzero and continuous. The absolute moment conditions make q f
+integrable. Therefore integral q f>0. But deg q=m<=r-1, so the assumed
+orthogonality implies integral q f=0. This contradiction proves the lemma.
+It also covers the possibility of infinitely many sign changes, in which
+case the desired lower bound is immediate.
+
+THEOREM 1. At every fixed finite s>0 there are at least FOUR distinct
+positive sign-changing four-count blind gains.
+
+Apply the lemma with r=4 to (1). Sign-changing does not by itself mean
+simple: an odd zero of multiplicity three or higher is allowed. We claim
+simplicity only for the two zeros separately certified below.
+
+Together with the retained qualitative finiteness proof, this yields
+
+ 4 <= number of distinct positive four-count blind gains < infinity.
+
+The upper bound here is qualitative; it is not a computed integer.
+
+4. General count-channel consequence
+-----------------------------------
+The same argument has a useful general form. Suppose two distinct bounded
+nonnegative intensity laws have equal zero atoms and agree in moments
+0,...,r-1, while their r-th moments differ. For every integer k>=1, the
+k-count channel has at least min(k,r) distinct positive sign-changing
+blind gains.
+
+For 1<=k<r, integrate eta^j F_k for j=0,...,k-1; the results are
+j! times differences of moments of orders k-j-1, all zero. Apply the lemma
+with r replaced by k. For k>=r, set g(eta)=eta^(k-r) F_k(eta) and integrate
+eta^j g for j=0,...,r-1. The results are
+
+ (k-r+j)! [E_A I^(r-j-1)-E_B I^(r-j-1)] = 0.
+
+The positive prefactor eta^(k-r) does not alter positive-axis zeros or
+signs. Absolute integrability follows exactly as before.
+
+These functions are nonzero. Let H(eta)=E_A exp(-eta I)-E_B exp(-eta I).
+Its r-th derivative at zero is nonzero. If F_k=(-1)^k H^(k) were identically
+zero, H would be a polynomial of degree at most k-1. But H is bounded on
+the positive axis and tends to the difference of zero atoms, namely zero.
+The only such polynomial is zero, a contradiction.
+
+For the current pair, every count channel k>=4 has at least four blind
+gains; channels k=1,2,3 have at least one, two, three respectively. There
+is no analogous positive-root lower bound here for the zero-count channel.
+These are statements about varying detector gain at one fixed s and b=0.
+
+5. Why the new finite-interval certificate reaches farther
+---------------------------------------------------------
+The retained certificate used Taylor polynomials in eta and exact moments
+through order 32. Its guaranteed exclusion stopped at eta=1/128.
+The new certificate uses the SAME exact moments with Hermite interpolation
+in intensity. This changes the remainder control substantially.
+
+Let nu_r be the positive measure I^r dP_G(I), and let
+R_G,r(eta)=integral exp(-eta u) dnu_r(u).
+Choose n distinct positive rational nodes x_1,...,x_n.
+
+LOWER POLYNOMIAL. Let H interpolate f(u)=exp(-eta u) and f'(u) at every
+node (2n interpolation conditions, degree at most 2n-1). The Hermite
+remainder is
+
+ f(u)-H(u)=f^(2n)(xi)/(2n)! * product_j (u-x_j)^2 >= 0.
+
+The intermediate xi is between u and the interpolation nodes. The sign
+holds for every u>=0, because f^(2n) is nonnegative.
+
+UPPER POLYNOMIAL. Add the simple node 0 and keep all n positive nodes
+double. The interpolant J has degree at most 2n. Its remainder is
+
+ f(u)-J(u)=f^(2n+1)(xi)/(2n+1)! * u product_j (u-x_j)^2 <= 0
+
+for u>=0. At interpolation nodes these identities extend by continuity.
+These remainder formulas follow by applying Rolle's theorem with
+multiplicities to the interpolation residual minus a suitable multiple
+of the node polynomial, so no distributional quadrature theorem is needed.
+
+Integrating with respect to the positive measure nu_r yields
+
+ integral H dnu_r <= R_G,r(eta) <= integral J dnu_r.  (2)
+
+The nodes only need to be distinct positive rationals. They are convenient
+approximations to Gaussian-quadrature nodes, but no assertion of optimality,
+root accuracy, or exact orthogonality is used in the proof. This avoids
+having to certify algebraic quadrature nodes. The derivative interpolation
+weights are retained exactly; they are not discarded as if the nodes were
+exact Gaussian nodes.
+
+For order r=4, the certificate uses 14 double nodes for the lower bound
+(degree27, needs moments through31), and zero plus14 double nodes for the
+upper bound (degree28, needs moments through32).
+For r=5, it uses 14 double nodes below (degree27, through32), and zero plus
+13 double nodes above (degree26, through31).
+
+6. Exact Hermite basis and exponential evaluation
+------------------------------------------------
+For the lower interpolant define
+
+ L_j(u)=product_(l!=j) (u-x_l)/(x_j-x_l),
+ h_j(u)=[1-2 L'_j(x_j)(u-x_j)] L_j(u)^2,
+ k_j(u)=(u-x_j) L_j(u)^2.
+
+Then H=sum_j [f(x_j) h_j+f'(x_j) k_j]. All polynomial coefficients and
+all their integrals against nu_r are rational because the nodes and
+input moments are rational. Since f'(x_j)=-eta exp(-eta x_j), the
+expectation has the form
+
+ sum_j (a_j-eta b_j) exp(-eta x_j).
+
+For the upper rule set
+
+ g_j(u)=(u/x_j) L_j(u)^2,
+ d_j=1/x_j+2 sum_(l!=j) 1/(x_j-x_l),
+ h_j(u)=[1-d_j(u-x_j)] g_j(u),
+ k_j(u)=(u-x_j) g_j(u),
+ h_0(u)=product_j (1-u/x_j)^2.
+
+The upper interpolant is f(0)h_0+sum_j[f(x_j)h_j+f'(x_j)k_j]. This is
+verified directly by its values and first derivatives at all nodes.
+
+For every rational z>=0, exp(-z) is enclosed rationally: halve z until
+0<=z<=1; the Taylor polynomial through degree90 is an upper bound and
+through91 a lower bound; then square the nonnegative interval repeatedly.
+Every rounding is outward onto the rational grid 10^-95. The code does
+not use a floating-point exponential. Exact polynomial weights are rounded
+outward onto grid10^-65 only after their exact evaluation, and all interval
+operations preserve these enclosures.
+
+7. Certifying entire gain intervals
+----------------------------------
+The lower/upper bounds in (2) are finite exponential polynomials. For any
+such E(eta)=sum_j(a_j-eta b_j) exp(-x_j eta), the code bounds E on [a,b]
+by a degree12 Taylor polynomial at a, plus an explicit order13 remainder.
+
+Its k-th derivative term is
+
+ [(-x_j)^k(a_j-eta b_j)-k b_j(-x_j)^(k-1)] exp(-x_j eta).
+
+The zero-node term is affine and has zero order13 derivative. For x_j>0,
+writing A_j=max|a_j| and B_j=max|b_j| over their rational intervals, an
+absolute order13 derivative bound on [a,b] is
+
+ exp(-x_j a) [x_j^13(A_j+b B_j)+13 B_j x_j^12].
+
+Multiply the sum by (b-a)^13/13! for the Taylor remainder. The Taylor
+polynomial is expressed in the Bernstein basis on [a,b]; its range lies
+between the smallest lower and largest upper Bernstein coefficients.
+All interval endpoints, coefficients, remainders, and sign comparisons
+are rational. Adaptive subdivision is used only to make those exact
+bounds sharp enough. Every leaf interval and its bounds are stored and
+rechecked, with a contiguous-cover check.
+
+For F_4=R_A,4-R_B,4 the upper bound is upper_A4-lower_B4; its lower bound
+is lower_A4-upper_B4. For F'_4=-R_A,5+R_B,5, the lower bound is
+lower_B5-upper_A5. One must bound the actual derivative this way; simply
+differentiating a one-sided bound for F_4 would not justify a derivative
+inequality.
+
+8. What the certificate establishes
+----------------------------------
+The retained certificate already proves exactly one simple root on
+(0,1/128], with F_4 negative from that root through1/128. The new exact
+calculation certifies all three statements
+
+ F_4<0 on [1/128,1/100],
+ F'_4>0 on [1/100,1/90],
+ F_4>0 on [1/90,1/32].
+
+Its endpoint enclosures include F_4(1/100)<0 and F_4(1/90)>0. Thus there
+is exactly one additional root in (1/100,1/90); it is simple. Deterministic
+rational bisection supplies the sharper bracket in the JSON certificate.
+No roots occur in the two side intervals.
+
+THEOREM 2. At t=1/2, s=2 log(2), b=0, exactly two four-count blind gains
+lie in (0,1/32], and both are simple. At least two other positive
+sign-changing blind gains lie strictly above1/32, by Theorem1.
+
+The exact global number, the locations of all further roots, and an
+effective gain cutoff beyond the final root remain open. The interval
+certificate cannot close those claims: its upper/lower bounds become
+wider at larger gains. No numerical scan is used to infer absence of
+additional roots outside the certified interval.
+
+9. Reproduction and source preservation
+--------------------------------------
+Run from any directory:
+
+ python3 /workspace/scratch/2851ca5c1a13/science_advance/global/certify_additional_blind_gains.py
+ python3 /workspace/scratch/2851ca5c1a13/science_advance/global/certify_additional_blind_gains.py --verify-only
+
+Only Python's standard library is required. The input moment table is
+science_extension/finite_detection/fixed_t_moments.json. Its retained
+SHA256 is 538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32.
+The new certificate also hashes the old interval certificate. The old
+moment table, code, proofs, and certificates are not modified.
+
+The analytical lower bound is a proof, not a consequence of sampling a
+numerical graph. The code certifies the finite gain interval and concrete
+root brackets. Independent human review and a physical test remain
+separate tasks.

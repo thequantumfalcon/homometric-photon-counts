@@ -1,0 +1,13 @@
+Adapted mathematical proof code
+
+PhotonPoissonSeries.lean uses the proof of the real exponential/series
+identification from mathlib's Analysis/SpecialFunctions/Exponential.lean,
+with unused calculus imports avoided. Original source credit: Anatole
+Dedecker and Eric Wieser. mathlib is distributed under Apache License 2.0;
+the complete license is in LICENSES/Apache-2.0.txt.
+
+The public capsule does not bundle Lean, mathlib, FLINT/Arb, GMP, MPFR,
+SymEngine, NumPy, or their runtime binaries. Optional separately installed
+dependencies remain governed by their own licenses. Scientific citations
+in the archived proof notes are references, not claims of ownership of
+the referenced research.

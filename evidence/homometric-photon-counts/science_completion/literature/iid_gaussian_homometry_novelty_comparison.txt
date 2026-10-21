@@ -1,0 +1,360 @@
+TARGETED LITERATURE COMPARISON: IID GAUSSIAN JITTER AND FINITE HOMOMETRY
+Prepared: 2026-10-20
+Status: research note; not a proof certificate or a priority determination.
+
+1. QUESTION UNDER INVESTIGATION
+
+Let A and B be fixed, finite, equally weighted point sets with the same complete
+clean diffraction, |F_A(q)|^2 = |F_B(q)|^2 for every frequency q. Apply independent,
+identically distributed, homogeneous Gaussian displacements to every point of
+either set. At a selected common clean null F_A(q0) = F_B(q0) = 0, investigate
+whether the first three single-frequency intensity moments agree exactly for all
+noise variances while the fourth differs through
+
+    T_G = Re[M_4(G) conjugate(M_2(G))^2],
+    M_k(G) = sum_j exp(i k q0 . r_j).
+
+The project initially supplied this as a candidate direction. A subsequent
+internal AI proof review checked the general moment identity and independently
+rebuilt the exact 63-site power sums, clean null, and nonzero T_A-T_B. See
+../independent_completion_review.txt and the homogeneous_control proof files.
+This literature note assesses priority separately from that mathematical review;
+neither is external peer review or experimental validation.
+
+Overall assessment: the mean-scattering identity, random-phasor formulation,
+finite Gaussian phasor calculations [S25], bispectral phase invariant, and
+principle that higher statistics can distinguish homometric systems are
+established. The possible contribution is the exact
+finite example and the selection rule identifying the first distinguishing
+single-frequency intensity moment under identical Gaussian displacement laws.
+Priority for that precise combination remains unverified. A search that does not
+find the same theorem cannot establish that it has never appeared.
+
+2. DEFINITIONS THAT MUST NOT BE CONFLATED
+
+Write S = sum_j z_j w_j, z_j = exp(i q0 . r_j), I = |S|^2, and
+w_j = exp(i sigma X_j), with independent standard normal X_j. Here sigma^2 is
+the variance of the projected phase q0 . u_j, not necessarily the raw spatial
+displacement variance. In one dimension with displacement variance v it is
+q0^2 v; in d dimensions it is q0^T C q0 for displacement covariance C.
+
+Gaussian PHASE errors do not make S exactly complex Gaussian for finite n.
+Replacing S by a Gaussian approximation can erase the finite higher cumulants
+that the candidate theorem depends on. The labels below refer to different
+objects:
+
+  - Fourth intensity moment: E[I^4] = E[S^4 conjugate(S)^4].
+  - Eighth field moment: another description of that same expectation.
+  - Third-order structural Fourier invariant: F(2q0)^2 conjugate(F(4q0)).
+  - Fourth spatial density correlation: a different observable, usually a
+    function of several spatial offsets, not E[I(q0)^4].
+
+For the usual structural bispectrum B(q1,q2) = F(q1) F(q2)
+conjugate(F(q1+q2)), the proposed T_G equals Re[B(2q0,2q0)]. The complex
+conjugation convention changes its imaginary part, not its real part. Therefore
+the invariant itself is a familiar diagonal bispectrum. Translation invariance
+follows because the three frequencies sum to zero. Reflection conjugates the
+bispectrum and leaves this real part unchanged. These are direct algebraic
+observations, not claims that a cited source studied this exact measurement.
+
+3. COMPARISON MATRIX
+
+Columns: source | assumptions | established conclusion | implication for this
+project | result not established by that source.
+
+Gabrielli 2004 [G04] | Stationary point processes, stochastic displacement fields
+independent of the original process, both correlated and uncorrelated cases |
+Exact transformations of pair correlations and power spectra | The general
+displacement-to-mean-diffraction calculation is established | Finite homometric
+pair, common clean null, equality through E[I^3], and separation in E[I^4].
+
+Klatt, Kim, Torquato 2020 [KKT20] | IID displacement of lattices; arbitrary
+displacement density; finite-volume calculation before an infinite limit |
+Mean structure-factor identity; uniformly perturbed examples with hidden order
+visible in g4 but not g3 | Direct precedent for the iid mean identity and a
+correlation-order distinction | Gaussian fixed finite homometric pair and the
+specific single-frequency intensity-moment hierarchy.
+
+Ravy 2013 [R13] | Diffuse-homometric binary sequences, coherent scattering,
+Rudin-Shapiro versus random sequences, and disorder variations | Different
+speckle intensity statistics reveal information absent from average diffraction |
+The broad phenomenon is established | Identical Gaussian displacement kernels on
+two finite exactly clean-homometric geometries, with exact moment cancellations.
+
+Jaming, Kolountzakis 2003 [JK03] | Higher correlations/k-decks of sets and
+functions on abelian groups | Fourier characterization by products at frequencies
+summing to zero; reconstruction results and limitations | T_G is a standard
+bispectral invariant | Which raw intensity moment accesses T_G in this jitter
+experiment, and the corresponding coefficient in noise variance.
+
+Beckmann 1962 [B62] | Many random planar vectors; nonidentical distributions
+permitted within a central-limit regime | Amplitude/phase laws from the limiting
+bivariate field distribution | Arbitrary phase distributions and phasor statistics
+have old foundations | Exact finite-n eighth-field-moment distinction; a Gaussian
+field approximation is insufficient to infer this distinction.
+
+Metz, Bonatto, Prado 2024 [MBP24] | Random number of scatterers, arbitrary common
+phase distribution, large-system and large-mean-number limits | Analytic amplitude
+laws extending classical speckle distributions | Modern, broad random-phasor theory
+is relevant background | The finite n=63 identity: the paper's principal laws are
+explicitly asymptotic and do not supply this finite homometry comparison.
+
+Webster et al. 2003 [W03] | Circular complex Gaussian scattered field and
+multi-frequency speckle intensity correlations | Third intensity correlations
+recover Fourier phase information through bispectral techniques | Phase-sensitive
+intensity statistics are established | A single-frequency fourth intensity moment
+of a finite sum with Gaussian phase errors and a common clean null.
+
+Bojer et al. 2023 [BEKRV23] | Incoherent diffraction from quantum emitters;
+higher photon correlation functions at multiple detector vectors | Closure-phase
+information at third order and additional phase relations at fourth order |
+Higher intensity/photon correlations can encode phase invariants | This is a
+different statistical model and does not prove the proposed Gaussian-jitter
+selection rule.
+
+Shimizu 2025 [S25] | Finite independent waves with nonidentical phase offsets,
+wrapped-normal noise, and constant or random amplitudes | Appendix A3/A14
+provides finite-N characteristic functions, PDFs, and moments | Our Gaussian
+phasor model is a constant-amplitude, equal-variance specialization; at our null
+the mean-subtraction shift cancels (our inference) | No homometric common-null
+selection theorem was identified in the passages read; its priority remains
+unresolved. Exact finite Gaussian phasor calculation is an established method.
+
+Barakat 1983 [BA83] | Arbitrary numbers of independent nonuniform-phase weak
+scatterers | Photoelectron-count distributions and moments | Direct predecessor
+for finite-phasor counting statistics | The abstract does not establish whether
+the specific homogeneous-Gaussian homometry theorem or its small-noise testing
+exponents occur in the paper. Full text was inaccessible.
+
+4. WHAT THE EXISTING RESULTS ALREADY IMPLY
+
+The iid mean identity is a direct specialization of established displacement
+theory [G04, KKT20]. For n fixed points and iid displacements with characteristic
+function phi(q), separating the diagonal j=k terms yields exactly
+
+    E I_G(q) = n + |phi(q)|^2 (|F_G(q)|^2 - n).
+
+Thus identical clean diffraction remains identical in the ensemble mean under
+the same iid displacement distribution. Gaussianity is not necessary. For the
+Gaussian projected phase variance sigma^2, |phi(q)|^2 = exp(-sigma^2).
+
+The candidate higher-moment calculation can also be formulated with completely
+standard finite algebra. If alpha and beta range over nonnegative integer n-tuples
+with |alpha| = |beta| = p, multinomial expansion and the Gaussian characteristic
+function give
+
+  E I^p = sum_(alpha,beta) [p!/alpha!][p!/beta!]
+          z^(alpha-beta) exp[-(sigma^2/2) ||alpha-beta||_2^2].
+
+This formula is an independent derivation in this note. It is a way to compute or
+prove the candidate identity, not evidence of a new probability principle. Its
+combinatorial terms can be regrouped into structural Fourier invariants. The
+common clean null M_1=0 removes terms containing M_1 or its conjugate. Equality
+of complete clean diffraction supplies |M_k(A)| = |M_k(B)| for every integer k.
+The charge classification in the completed proof establishes the exact equality
+through intensity order three and the fourth-order difference. This was checked
+by a separate internal AI review and independent exact power-sum arithmetic.
+
+The bispectral identification [JK03] also does not automatically prove that this
+particular real diagonal bispectrum differs for the supplied pair. A full
+bispectrum contains information at many frequency pairs; the project uses one
+specific real-valued sample. No general phase-retrieval theorem guarantees that
+this sample alone determines either set or distinguishes every homometric pair.
+
+5. INTERNAL PROOF CROSS-CHECK, NOT EXTERNAL REVIEW
+
+An independent cumulant argument gives the following checked coefficient.
+At M_1=0, let x = exp(-sigma^2). For w = exp(i sigma X), ordinary non-conjugate
+cumulants are
+
+  kappa_2(w) = x^2 - x,
+  kappa_4(w) = x^2 (x-1)^3 (x^3 + 3x^2 + 6x + 6).
+
+In the partition expansion of E[S^4 conjugate(S)^4], the partitions with charges
+(4,-2,-2) and (-4,2,2) contribute
+
+  6 kappa_4(w) kappa_2(w)^2 Re[M_4 conjugate(M_2)^2]
+  = -6 x^4 (1-x)^5 (x^3 + 3x^2 + 6x + 6) T_G.
+
+The coefficient is nonzero for every 0 < sigma^2 < infinity. Charge-one blocks
+vanish at the clean null. The remaining balanced charge patterns use only n and
+magnitudes |M_2|, |M_3|, |M_4|, as verified by the complete charge classification.
+The exact difference of fourth intensity moments is consequently that
+coefficient times T_A-T_B. Independent exact arithmetic recovers
+T_A=-455015761/240000 and T_B=+455015761/240000 for the supplied instance.
+These are internally checked mathematical results, not experimental findings.
+
+A precise way to position the result is therefore:
+an exact finite measurement-selection theorem, using a known bispectral
+invariant, with a demonstrable example under a common homogeneous noise law.
+Novelty and mathematical correctness are separate assessments.
+
+6. SOURCE DETAILS AND READ DEPTH
+
+[G04] Andrea Gabrielli (2004), "Point processes and stochastic displacement
+fields," Physical Review E 70, 066131.
+DOI: https://doi.org/10.1103/PhysRevE.70.066131
+Primary full author preprint: https://arxiv.org/pdf/cond-mat/0409594
+Official metadata: https://journals.aps.org/pre/abstract/10.1103/PhysRevE.70.066131
+Read: abstract, introduction, definitions; publication date verified as
+23 December 2004. Mean-law formula additionally verified directly in [KKT20].
+
+[KKT20] Michael A. Klatt, Jaeuk Kim, and Salvatore Torquato (2020), "Cloaking the
+underlying long-range order of randomly perturbed lattices," Physical Review E
+101, 032118.
+DOI: https://doi.org/10.1103/PhysRevE.101.032118
+Primary full author preprint: https://arxiv.org/pdf/2001.08161
+Read: introduction, Appendix A (finite-volume derivation and generality), main
+text discussion of Appendix D. Crucial distinction: g3 and g4 refer to spatial
+density correlation functions, not third/fourth raw moments of I(q0).
+
+[R13] Sylvain Ravy (2013), "Homometry in the light of coherent beams," Acta
+Crystallographica A 69, 543-548.
+DOI: https://doi.org/10.1107/S0108767313022733
+Primary full author preprint: https://arxiv.org/html/1303.3792v3
+Official date: https://journals.iucr.org/a/issues/2013/06/00/
+Read: complete relevant theoretical and numerical discussion. The HTML's
+regenerated 2026 body date is misleading; original publication is 2013.
+
+[JK03] Philippe Jaming and Mihail N. Kolountzakis (2003), "Reconstruction of
+functions from their triple correlations," New York Journal of Mathematics
+9, 149-164. Published 23 October 2003.
+Primary full journal PDF: https://nyjm.albany.edu/j/2003/9-12.pdf
+Metadata: https://nyjm.albany.edu/j/2003/9-12.html
+Read: introduction; section 2.1 Fourier characterization; section 3.4 context.
+The section 2.1 identity is the relevant source for bispectral identification;
+do not import a uniqueness theorem without checking its group and support
+assumptions against the finite point-set model.
+
+[B62] Petr Beckmann (1962), "Statistical distribution of the amplitude and phase
+of a multiply scattered field," Journal of Research of the National Bureau of
+Standards D 66D(3), 231-240.
+DOI: https://doi.org/10.6028/jres.066D.027
+Primary full government PDF:
+https://nvlpubs.nist.gov/nistpubs/jres/66D/jresv66Dn3p231_A1b.pdf
+Read: abstract and stated assumptions. The central-limit restriction is explicit;
+this is not a finite-n proof of all phase-sensitive cumulants.
+
+[MBP24] Fernando L. Metz, Cristian Bonatto, and Sandra D. Prado (2024),
+"Statistical properties of speckle patterns for a random number of scatterers
+and nonuniform phase distributions," Physical Review A 109, 013501.
+DOI: https://doi.org/10.1103/PhysRevA.109.013501
+Primary full author preprint: https://arxiv.org/html/2310.07425v2
+Read: abstract, introduction, final remarks, and Appendix A limiting procedure
+(N to infinity followed by mean scatterer number to infinity). Do not infer
+finite-n exactness from the abstract's broad description.
+
+[W03] Mark A. Webster, Kevin J. Webb, Andrew M. Weiner, Junying Xu, and Hui Cao
+(2003), "Temporal response of a random medium from speckle intensity frequency
+correlations," Journal of the Optical Society of America A 20(11), 2057-2070.
+DOI: https://doi.org/10.1364/JOSAA.20.002057
+Primary journal abstract:
+https://opg.optica.org/josaa/abstract.cfm?uri=josaa-20-11-2057
+Read: publisher abstract and metadata. Full text was access-restricted; no
+unread coefficient, finite-n formula, or theorem is attributed to it here.
+
+[BEKRV23] M. Bojer, J. Eckert, S. Karl, S. Richter, and J. von Zanthier (2023),
+"Phase Retrieval in Incoherent Diffractive Imaging using higher-order photon
+correlation functions," arXiv:2312.12168. Submitted 19 December 2023.
+Primary author preprint record: https://arxiv.org/abs/2312.12168
+DOI: https://doi.org/10.48550/arXiv.2312.12168
+Read: abstract. Used only for the stated higher-correlation/closure-phase scope,
+not as a full-text verification of a theorem related to Gaussian jitter.
+
+[S25] Kenji Shimizu (2025), "Process-based modelling of nonharmonic internal
+tides using adjoint, statistical, and stochastic approaches - Part 1:
+Statistical model and analysis of observational data," Ocean Science 21,
+2233-2253. Published 7 October 2025.
+DOI: https://doi.org/10.5194/os-21-2233-2025
+Official full text: https://os.copernicus.org/articles/21/2233/2025/os-21-2233-2025.html
+Read: section 2.2 and Appendix A, including A3 and A14.
+
+7. ADDITIONAL PRIMARY LEADS WITH INCOMPLETE FULL-TEXT ACCESS
+
+[BA83] Richard Barakat (1983), "Onefold photoelectron-counting statistics for
+non-Gaussian light: scattering from an arbitrary number of weak scatterers,"
+Journal of the Optical Society of America 73(9), 1138-1142. Published 1 September.
+DOI: https://doi.org/10.1364/JOSA.73.001138
+Official URL: https://opg.optica.org/josa/abstract.cfm?uri=josa-73-9-1138
+Read: publisher abstract and metadata; full article explicitly inaccessible.
+
+[BA81] Richard Barakat (1981), "Direct derivation of intensity and phase
+statistics of speckle produced by a weak scatterer from the random sinusoid
+model," Journal of the Optical Society of America 71(1), 86-90. Published
+1 January. DOI: https://doi.org/10.1364/JOSA.71.000086
+Official URL: https://opg.optica.org/josa/abstract.cfm?uri=josa-71-1-86
+Read: publisher abstract and metadata. It describes finite N phasors with
+von Mises phases and intensity/phase formulas, also random N. Full text was
+inaccessible; no uninspected formula is attributed to it here.
+
+[BA88] Richard Barakat (1988), "Probability density functions of sums of
+sinusoidal waves having nonuniform random phases and random numbers of
+multipaths," Journal of the Acoustical Society of America 83(3), 1014-1022.
+DOI: https://doi.org/10.1121/1.396046
+Publisher result describes finite sums and moments for von Mises phases, with
+fixed or random numbers of waves. This is an important finite-n predecessor,
+but the full text was not retrieved. Whether it accommodates deterministic
+nonidentical phase offsets and subsumes the exact Gaussian-jitter coefficient
+is UNVERIFIED. It must be checked before a strong method-priority claim.
+Publisher URL:
+https://pubs.aip.org/asa/jasa/article-abstract/83/3/1014/657772/Probability-density-functions-of-sums-of
+
+[GM95] F. A. Grunbaum and C. C. Moore (1995), "The use of higher-order invariants
+in the determination of generalized Patterson cyclotomic sets," Acta
+Crystallographica A 51(3), 310-323.
+DOI: https://doi.org/10.1107/S0108767394009827
+Publisher metadata and abstract establish a discrete Fourier/higher-invariant
+reconstruction study. The full paper was not retrieved from its official source
+in this review. Detailed theorems were not independently checked here.
+Official URL: https://onlinelibrary.wiley.com/doi/abs/10.1107/S0108767394009827
+
+8. REMAINING NOVELTY WORK
+
+Before publication, compare the final audited theorem, not a changing project
+description, against the finite nonuniform-phase literature; inspect
+[BA81, BA83, BA88] and their cited predecessors in full; follow the references in
+[MBP24]; and check whether a general exact moment/cumulant theorem already gives
+the claim as a direct corollary. Search equivalent descriptions: Gaussian
+position jitter, wrapped-normal phase noise, homometric arrays, partially
+developed speckle, bispectral invariants, k-decks, and null-depth statistics.
+
+The result can still be valuable if its ingredients are standard. An explicit,
+transparent, reproducible example can establish a useful limitation of ordinary
+diffraction and show exactly which additional measurement resolves it. Such
+value does not require claiming a new invariant or a new physical law.
+
+This note records a targeted search of primary publications and author
+preprints. It is not an exhaustive systematic review, a patent search, a
+guarantee of publication, or proof that no earlier equivalent construction
+exists. No external contacts were made.
+
+9. DETECTOR CONSEQUENCES ADDED AFTER THE INITIAL SEARCH
+
+The completed internal proof also shows that common independent additive noise
+with a finite fourth absolute moment preserves the fourth-moment distinction.
+For a fixed Gaussian readout density g_sigma, the measured total variation is
+(c5/48)||g_sigma^(4)||_1 s^5+O(s^6). For fixed-gain Poisson counts with background
+b, its coefficient is (c5 eta^4/48)||(S-Id)^4 p_b||_1. At zero background this
+is c5 eta^4/3, and the even/odd count decision rule is asymptotically optimal
+for one observation with equal priors, in the ratio of advantages above chance.
+Here c5=455015761/1250, and s denotes phase variance, not phase standard deviation.
+
+The subsequent sample_complexity_proofs.tex establishes sharp sample ORDERS for
+these calibrated models. With h^2=int(sqrt(p)-sqrt(q))^2, the leading coefficients
+are c5^2/(96 sigma^8) times s^10 for Gaussian readout,
+c5^2 eta^8/(96 b^4) times s^10 for fixed positive Poisson background, and
+c5^2 eta^4/(96 m4) times s^6 for zero background, where
+m4=75408578015121/160000. Product affinity yields minimum independent sample
+orders Theta(s^-10), Theta(s^-10), and Theta(s^-6), respectively, for any fixed
+target success strictly between 1/2 and 1 under equal priors. The exactly-four-
+count indicator retains the zero-background leading Hellinger term; parity
+alone instead has sample order Theta(s^-9). These statements were independently
+checked in the internal review.
+
+These detector statements are consequences of the established moment identity
+and classical binomial, Taylor, weighted-Hilbert-space, Poisson, affinity-product,
+and binary-testing methods. The present search has not settled priority for
+their exact specialization or for the selection theorem itself. Do not present
+them as a new invariant, a universal classification algorithm, an optimized
+finite-noise experimental design, or experimentally validated performance.
+For definitions, constants, and scope, consult ../independent_completion_review.txt.

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "data_status": "Artificial deterministic software fixtures only; no measurements or Monte Carlo simulation.",
+  "models": {
+    "A": {
+      "iid_status": "identified",
+      "iid_structures": [
+        "A"
+      ],
+      "iid_group_sizes": [
+        10000000000,
+        1000000000000000000,
+        100000000000000000000
+      ],
+      "ar1_group_sizes": [
+        30000000000,
+        3000000000000000000,
+        300000000000000000000
+      ],
+      "exact_same_radii_and_calibration_box_after_tripling": true,
+      "true_reference_parameters_covered": true,
+      "fixture_sha256": "a2d52373c3b5307c4408eba830443848c5dfb94ae8ea1570e6d6f04108840905"
+    },
+    "B": {
+      "iid_status": "identified",
+      "iid_structures": [
+        "B"
+      ],
+      "iid_group_sizes": [
+        10000000000,
+        1000000000000000000,
+        100000000000000000000
+      ],
+      "ar1_group_sizes": [
+        30000000000,
+        3000000000000000000,
+        300000000000000000000
+      ],
+      "exact_same_radii_and_calibration_box_after_tripling": true,
+      "true_reference_parameters_covered": true,
+      "fixture_sha256": "526065b7d22f0557fa29b4d4e52b3b88e02ca27742cea021aaed16a10f78a1b6"
+    }
+  },
+  "invalid_inputs_rejected": [
+    "boolean multiplicity",
+    "float multiplicity",
+    "nonstationary absolute AR bound"
+  ],
+  "producer_sha256": "0b2d56d568413a154a193205be4df982f489b46d91b404983157783e92464a2f",
+  "verification_source_sha256": "a20e682a09e38fee42a3814c9a040d58c924a4dcd559d5a4da81974e5197486a"
+}

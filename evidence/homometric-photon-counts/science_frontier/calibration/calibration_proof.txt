@@ -1,0 +1,260 @@
+FINITE-SAMPLE JOINT CALIBRATION AND STRUCTURE IDENTIFICATION
+20 October 2026
+
+Status and scope
+----------------
+This file proves population identifiability from only four photon-count
+factorial moments and supplies a computable finite-sample confidence procedure.
+The first three moments calibrate the Gaussian phase variance, gain, and
+background. The fourth distinguishes the two supplied 63-site geometries.
+All statements assume the specified model. No measurements were supplied to
+this calculation; the finite example is an analytic, worst-case guarantee.
+
+The model is independent snapshots of
+
+  I_G = |sum_(j=1)^63 z_Gj exp(i theta_j)|^2,
+  theta_j independent N(0,s), 0<s<infinity,
+  N conditional on I_G ~ Poisson(b+eta I_G), eta>0, b>=0.
+
+The site phasors are the exact A/B construction already documented in the
+foundation. Intensities are unnormalized: 0<=I<=M=3969. The Gaussian phase
+family, the geometry candidates, and a valid upper bound on the conditional
+Poisson rate are model inputs. The method does not identify an arbitrary
+unknown phase law or arbitrary site-specific covariance from four moments.
+
+1. Exact population inversion
+-----------------------------
+Put x=exp(-s), so 0<x<1. The foundation's exact moment polynomials give
+
+  E I = 63(1-x),
+  Var(I) = (1-x)^2 V(x),
+  kappa_3(I) = (1-x)^3 C(x),
+
+where both structures share
+
+  V(x)=3906+126x+(103987/400)x^2,
+
+  C(x)=476532+46305x+(945333/10)x^2
+       +(124102867/40000)x^3+(311961/200)x^4
+       +(17164599/160000)x^5+(5721533/160000)x^6.
+
+Let f_r=E[(N)_r], with (N)_r=N(N-1)...(N-r+1). Conditional Poisson
+factorial moments are E[(N)_r|I]=(b+eta I)^r. Consequently the first
+three factorial cumulants are
+
+  c1=f1=b+eta E I,
+  c2=f2-f1^2=eta^2 Var(I)>0,
+  c3=f3-3 f2 f1+2 f1^3=eta^3 kappa_3(I)>0.
+
+The calibration-invariant ratio is
+
+  Q=c3^2/c2^3=C(x)^2/V(x)^3.
+
+Its derivative equals C(x)H(x)/V(x)^4, where
+H=2C'V-3CV'. The exact coefficients of H, in ascending order, are
+
+  181605564,
+  36392842647/50,
+  364718852253/10000,
+  15247747953/20000,
+  41383879047/8000,
+  206539212561/80000,
+  2433716998413/16000000,
+  1784895156213/32000000.
+
+All are positive; C and V have positive coefficients. Therefore Q is
+strictly increasing on [0,1]. It has a unique inverse on its image, and
+
+  x=Q^{-1}(c3^2/c2^3),
+  eta=sqrt(c2/[(1-x)^2 V(x)]),
+  b=f1-63 eta(1-x),
+  s=-log x.                                                  (C1)
+
+These equations establish global population identifiability of (s,eta,b)
+throughout the stated interior parameter domain. They are not merely a
+local Jacobian test. Boundary cases s=0, s=infinity, or eta=0 are excluded
+and can destroy this conclusion.
+
+At those identified calibration parameters the fourth factorial moments
+differ by
+
+  f4_A-f4_B=eta^4 D4(x),
+  D4(x)=(455015761/20000)x^4(1-x)^5(x^3+3x^2+6x+6)>0.           (C2)
+
+Thus the first four factorial moments jointly identify the geometry and
+all three calibration parameters within this Gaussian-phase model.
+
+This proof depends on the previously verified intensity moment polynomials
+in science_completion/homogeneous_control/homogeneous_control_results.json.
+The new program checks the polynomial identities, positive coefficients,
+and gap factorization exactly using rational arithmetic. It records the
+source hash; it does not pretend to be a new derivation of all original
+geometry moments independent of that input.
+
+2. Finite confidence intervals for the moments
+----------------------------------------------
+Assume a known deterministic rate bound 0<=Lambda=b+eta I<=B almost surely.
+The Gaussian phase density has full support on the phase torus, and all
+phasors can be aligned arbitrarily closely with positive probability.
+Hence ess sup I=M. The rate bound implies b+eta M<=B, in particular
+eta<=B/M. This last implication uses full support, not merely I<=M.
+
+Fix an integer sample size m, a cutoff K, and a positive integer q with
+K>=q+3. Define Z_r=(N)_r 1{N<=K}, for r=1,2,3,4. Then
+0<=Z_r<=(K)_r. Write z_r=E Z_r and hat z_r for the sample average.
+
+For N>=K+1,
+
+  (N)_r <= (N)_(r+q)/(K+1-r)_q.
+
+Taking expectations and using E[(N)_(r+q)]=E Lambda^(r+q)<=B^(r+q)
+gives the fully explicit truncation bound
+
+  0<=f_r-z_r<=T_r=B^(r+q)/(K+1-r)_q.                           (C3)
+
+Let epsilon=sqrt(51/(20m)), or any rational upper enclosure thereof, and
+e_r=(K)_r epsilon. Hoeffding's bounded-sum inequality and a union bound
+over the four moments imply
+
+  Pr(all r: |hat z_r-z_r|<=e_r)
+    >=1-8 exp(-2m epsilon^2)
+    >=1-8 exp(-51/10)>19/20.                                 (C4)
+
+The last strict inequality is certified without floating-point evaluation:
+the positive Taylor sum of exp(51/10) through degree 19 exceeds 160.
+No independence between the four statistics within a snapshot is needed.
+Independence between snapshots is needed for this Hoeffding argument.
+
+On that one simultaneous event, every true factorial moment belongs to
+
+  J_r=[max(0,hat z_r-e_r), min(B^r,hat z_r+e_r+T_r)].           (C5)
+
+The intervals may be wide. This does not compromise coverage. A conclusion
+of 'unresolved' is an intended possible output of the procedure.
+
+3. Computable joint confidence set and decision
+----------------------------------------------
+From J1,J2,J3, use outward rational interval arithmetic to enclose c2,c3.
+If the lower bound on c2 is nonpositive, return unresolved unless another
+bound already proves that the assumed model is inconsistent. With a
+strictly positive c2 lower bound, intersect the c3 interval with the
+positive half-line and enclose Q=c3^2/c2^3. Intersect its range with
+[Q(0),Q(1)] and invert by monotone rational bisection. The implementation
+uses 160 bisections; their enclosing endpoints are retained exactly.
+
+For the gain interval, Var(I) is strictly decreasing on [0,1]. Indeed
+
+  Var'(x)=(1-x)[-2V(x)+(1-x)V'(x)],
+
+and an upper bound on the bracket over [0,1] is -7544.065<0. The
+coefficient of x in that bracket is positive; the proof uses the constant
+plus all positive coefficients, rather than falsely claiming every
+coefficient is negative. Endpoints therefore enclose Var(I), and rational
+square-root bounds enclose eta in (C1). Intersect with [0,B/M]. Enclose b
+using (C1), intersecting with [0,B].
+
+The resulting Cartesian box is an outer confidence set, not an assertion
+that all combinations in the box are simultaneously feasible. In
+particular the box safely overestimates uncertainty caused by dependencies
+between estimated moments and parameters.
+
+For each geometry G, enclose
+
+  f4_G(x,eta,b)=sum_(k=0)^4 binom(4,k)b^(4-k)eta^k E_G[I^k]
+
+over the calibration box by rational polynomial interval evaluation.
+Reject G only if that prediction interval is disjoint from J4. Retain all
+surviving structures. Report 'identified' if exactly one survives;
+'unresolved' if both survive; and 'model_inconsistent' if none survive.
+
+On the event (C4), the true parameter vector remains in every outer set
+and its geometry survives. Therefore the chance of falsely excluding the
+true parameters or true structure is less than 5%. Conditional confidence
+given that a structure is selected is not asserted; the guarantee is the
+unconditional simultaneous coverage/error statement just proved.
+
+This is a fixed-sample procedure. Repeated inspection at data-dependent
+stopping times is not covered without a separate sequential correction.
+
+4. A certified finite example with three unknown calibration parameters
+-----------------------------------------------------------------------
+For the existence calculation only, take true parameters
+
+  x=1/4, s=2 log 2, eta=1/512, b=1/100,
+  B=8, K=64, q=32, m=10^36.
+
+These true parameter values are NOT supplied to the inference procedure.
+The procedure takes a count histogram, the known B, and its preset K,q.
+The exact inequality b+eta M<B is checked.
+
+For either true structure, consider population-centered envelope intervals
+
+  E_r=[max(0,f_r-2e_r-T_r), min(B^r,f_r+2e_r+T_r)].            (C6)
+
+On event (C4), every actual data-derived interval J_r is contained in E_r:
+write f_r=z_r+delta_r with 0<=delta_r<=T_r and use
+hat z_r in [z_r-e_r,z_r+e_r] in both endpoints of (C5).
+
+All inversion and prediction steps above are inclusion-preserving. The
+program applies them to the larger intervals E_r and verifies, exactly,
+that the calibration box contains the true parameters and the fourth
+moment interval rejects the wrong geometry. This works for both A and B.
+It follows for every possible dataset on event (C4), not just a favorable
+sample or a Monte Carlo realization, that the procedure identifies the
+true geometry and covers the true calibration. Thus m=10^36 is an explicit
+sufficient finite sample size for at least 95% joint success at these
+parameters.
+
+The envelope calibration widths are less than
+
+  width(x)   <1.108249e-8,
+  width(eta) <2.816290e-11,
+  width(b)   <2.694363e-9.
+
+These are worst-case confidence-set calculations with exact rational
+endpoints. They are not measured precision from a physical experiment.
+The sample size is deliberately conservative and extraordinarily large;
+this closes a constructive finite-existence question, not optimality or
+practical feasibility. It must not be compared as an optimized rate to the
+known-calibration likelihood-ratio result at b=0.
+
+5. Consistency and limits of the method
+--------------------------------------
+Fixed K and q leave a positive deterministic tail enclosure. For a
+consistency statement one must let the cutoff and arithmetic precision
+increase. Consider the theoretical variant with square-root precision
+and inverse-bisection depth both at least ceil(log2(m)) plus a fixed
+positive constant. For example,
+take q=1 and K_m=max(4,floor(m^(1/16))). The largest range error is
+O(K_m^4/sqrt(m))=O(m^(-1/4)), and each tail bound is
+O(1/K_m). Both tend to zero. Exact model moments are then separated by
+(C2), and the continuous inverse (C1) yields identification on the
+concentration event for all sufficiently large m at every fixed interior
+parameter point. Growing precision removes the otherwise fixed rounding
+floor. The delivered finite-example implementation uses 220 square-root
+bits and 160 inversion bisections, which suffice for its certified m=10^36
+but do not implement this unbounded-m consistency variant.
+This is pointwise, not a uniform guarantee over widths
+approaching either endpoint or gains approaching zero.
+
+No claim is made of a minimal m, shortest confidence sets, performance
+under arbitrary temporal dependence, identification of an unknown phase
+family, or correctness when the detector is not conditionally Poisson.
+For centered equicorrelated Gaussian site motion, the procedure identifies only
+s_eff=s(1-rho); s and rho separately are not identifiable from this law.
+
+6. Reproduction and primary source
+----------------------------------
+See REPRODUCE.txt in this directory. The accompanying independent replay
+does not import the producer's arithmetic functions. Its written review
+states its input dependencies and review limits.
+
+Hoeffding, Wassily (1963), 'Probability inequalities for sums of bounded
+random variables,' Journal of the American Statistical Association 58(301),
+13-30, Theorem 2. DOI: 10.1080/01621459.1963.10500830.
+Primary article scan:
+https://www.csee.umbc.edu/~lomonaco/f08/643/hwk643/Hoeffding.pdf
+
+The bounded-variable inequality is established prior mathematics. The
+explicit polynomial inversion and its application to this particular
+geometry pair are established here, without asserting historical priority.

@@ -1,0 +1,106 @@
+REPORT SCIENTIFIC CONSISTENCY REVIEW
+===================================
+
+Reviewer: /root/independent_model_rebuild, author of the original/star and
+harmonic root-certificate engines. This is a report-to-evidence consistency
+review, not a new independent implementation or external peer review.
+
+Reviewed report snapshot
+------------------------
+science_completion_report.tex
+Bytes: 33623
+SHA256: 7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92
+
+The complete source at this hash was read. The included detector and sample
+proof fragments were also read for consistent definitions and claim scope.
+Their detailed mathematics has a separate review; no numerical engine was
+rerun for this report check. No report or scientific result file was edited.
+
+Conclusion
+----------
+No mathematical inconsistency or unsupported root/scaling claim was found
+in the reviewed snapshot. The report faithfully presents the freshly
+established global root counts: two simple positive roots for original and
+star, one for harmonic, with signs +,-,+ and +,- respectively. The origin
+multiplicities, displayed rounded locations, harmonic long enclosure,
+finite-cover partitions, and infinite-tail inequalities match the held
+certificates. The following checks are material to that conclusion.
+
+1. Covariance and graph definitions. The threshold graph is explicitly fixed
+on the mean positions. The chords (20,22) and (41,43) use zero-based ordinal
+indices. C=L^+, tau_G=tr(C), h_i=63*C_ii/tau_G, K_H=63*C/tau_G,
+K_0=P*diag(63*h/62)*P and
+K_star=P*diag[(63/61)*(h-1/62)]*P agree with the exact model. All have trace
+63; v*K therefore has average centered variance v. Star's equality of
+diagonals with harmonic is correctly restricted to each configuration.
+The report correctly treats identical A/B covariance tau^2*P in the new
+homogeneous model as a separate stronger condition.
+
+2. Noise units. In the homogeneous model v=(62/63)*tau^2 and q0=pi/3, so
+s=q0^2*tau^2=7*pi^2*v/62 is correct. All sampling powers are explicitly
+powers of phase variance s, with fixed detector parameters. The attenuation
+x=exp(-s) differs from the nonnegative root coordinate y=7*pi^2*v/62.
+The local use of y=I/n^2 in the bounded-witness subsection is separately
+defined and does not enter the root formulas. The trace parameter tau_G is
+distinguished by its subscript from the homogeneous raw standard deviation
+tau; no erroneous identification of these parameters is made.
+
+3. Root transfer and harmonic rates. The report's identity
+Delta_star(v)=exp[7*pi^2*v/(62*61)]*D_0(7*pi^2*v/61)
+is exact and transfers roots by 61/62, preserving multiplicity and sign.
+The harmonic rate 31*(C_ii+C_jj-2*C_ij)/tau_G is correct in coordinate y.
+The 2005-term and 203-term group counts, slowest coefficients/rates,
+Taylor remainder formulas and derivative-tail lower bound match the
+certificate definitions. Strict inequalities in the displayed harmonic
+decimal bracket are justified by strict endpoint signs and outward rounding.
+
+4. Scope and correction of the earlier report. The supplement correctly
+replaces the former missing-proof status with fresh proofs for the
+reconstructed model, without claiming recovery of historical certificate
+bytes. It does not claim an exact number of standardized-contrast maxima;
+the earlier at-least-three result remains an existence theorem. It keeps
+the homogeneous bounded-witness TV lower bound distinct from actual TV,
+and its optimum distinct from optimal experimental design. Calibration,
+independent observations, physical validation and literature priority
+remain explicit limitations. No prior AI agreement or hash is presented as
+proof of mathematical correctness.
+
+Corrections observed during review
+----------------------------------
+An earlier abstract phrase could have said the noise coefficient itself
+was positive, although 6*kappa40*kappa20^2 is negative. The reviewed snapshot
+now correctly says that the resulting fourth-moment gap factors into
+strictly positive terms. The fixed-mean-graph clarification was also added.
+The supplied figure filename and Shimizu page range are corrected in this
+snapshot: homogeneous_fourth_moment_and_sampling.pdf and 2233--2253.
+
+One completion-status item remains to check at assembly time: the report
+says that the harmonic certificate has a separate review record. At this
+review's filesystem check that record had not yet appeared, although the
+parent had assigned it. Include the completed record before final delivery,
+or change that sentence to describe its actual status. The existing
+original/star independent_root_review.txt supports the separate replay
+claim for that certificate. This item concerns the completeness of the
+delivered review trail, not a detected mathematical gap in the harmonic
+proof.
+
+Pending presentation work
+--------------------------
+The parent is rendering and visually reviewing the final PDF. This review
+does not certify page layout, successful figure inclusion, or future edits.
+Layout-only edits will change the source hash; retain this snapshot identity
+and record the final source hash separately. Scientific changes require a
+corresponding update to the consistency review.
+
+Evidence hashes checked/read
+----------------------------
+root_certificate/two_root_certificate.json
+  5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07
+harmonic_certificate/harmonic_root_certificate.json
+  83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912
+detector_proofs.tex
+  f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b
+sample_complexity_proofs.tex
+  4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf
+independent_completion_review.txt
+  80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296

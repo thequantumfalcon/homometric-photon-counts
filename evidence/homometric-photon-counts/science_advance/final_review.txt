@@ -1,0 +1,54 @@
+FINAL ADVANCE REVIEW — 21 OCTOBER 2026
+
+Status: PASS for inclusion in the complete proof record.
+
+The final report was checked against the exact certificates and mathematical
+notes. Separate internal reviews and independently implemented arithmetic
+replays passed for the blind-gain, higher-gain testing, calibration, and
+temporal-dependence results. The final report consistency review corrected
+one statement: local intensity moments through order eight supply the four
+needed variance bounds W_1 through W_4. The rendered final report includes
+that correction and passed visual inspection.
+
+Main findings retained with their exact scope:
+1. At least four distinct positive sign-changing four-count blind gains at
+   every finite positive Gaussian width, with zero background. At the fixed
+   reference width exactly two simple gains lie in (0,1/32], so at least two
+   more lie above 1/32. The global total is still not known.
+2. At gain 1/28, known calibration and zero background, the saved rational
+   additive four-bin score gives each conditional error below 5 percent
+   with 303181164969742 independent observations. Gain has changed from
+   the earlier 1/512 experiment; its near-exact optimal-count bracket is
+   preserved rather than superseded by this result.
+3. At the original unknown-calibration reference point and rate bound B=8,
+   101000000010000000000 independent observations suffice for at least
+   95 percent joint identification and parameter coverage. Error control
+   is unconditional and uniform within the stated model; guaranteed power
+   is local to the guarded region. The procedure receives observations and
+   a rate bound, not the true calibration parameters.
+4. For the specified stationary Gaussian AR(1) phase model with known
+   |a|<=1/2 and conditionally independent time-local Poisson emissions,
+   regular sampling every 63rd observation preserves the old reference
+   equal-prior bracket. Separate consecutive-observation testing and
+   calibration guarantees are proved. Arbitrary dependence is not covered.
+
+The exact global phase-width optimizer and full-distance value, exact
+total blind-gain count, exact optimal sample integer, complete priority
+comparison, external human mathematical review, and calibrated physical
+experiment remain open. No artificial software fixture is represented as
+physical or Monte Carlo evidence. Numerical sufficiency is not a claim
+of feasible experimental sample collection.
+
+The supplied mathematical proofs are conditional on their explicit input
+model and assumptions. Exact rational checks establish the stated arithmetic
+inequalities; replay independence does not by itself regenerate every input
+moment from geometry. Those dependencies and their reconstruction records
+are preserved in the predecessor science directories. Hashes establish byte
+identity, not scientific truth. These are internal reviews, not external
+peer review or proof-assistant verification.
+
+All predecessor scientific sources and manifests remain unchanged. A new
+assembler records their exact bytes and the advance payloads, preserves
+the 44 preceding report pages and their links, and adds the 10-page report.
+The later user-requested final repository ZIP is a separate reproducibility
+deliverable; no rolling ZIP process has been resumed.

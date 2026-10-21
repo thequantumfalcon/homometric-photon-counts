@@ -1,0 +1,246 @@
+COMPLETE SCIENTIFIC RECORD: START HERE
+20 October 2026
+
+This edition contains the new extension followed by the unchanged 18-page
+foundation report. Extension page numbers begin E-. The foundation retains
+its original page numbers and historical text. Read the extension first for
+the current status of the results and their limitations.
+
+The original three global positive mean-crossing counts remain COMPLETE:
+
+  Original control:             exactly 2 simple positive crossings.
+  Marginal-preserving control:  exactly 2 simple positive crossings.
+  Harmonic control:             exactly 1 simple positive crossing.
+
+Those counts belong to the specific reconstructed models in the foundation.
+They have not been replaced by a new conjecture or left open by this extension.
+
+KEEP AND EXTRACT THE COMPLETE RECORD
+
+The complete PDF is the portable record. Its embedded attachments retain the
+reports, mathematical proofs, source code, exact results, certificates,
+literature notes, and internal reviews under two sibling directory prefixes:
+
+  science_extension/
+  science_completion/
+
+The master inventory is complete_science_manifest.json at the extraction
+root. It records each listed file's relative path, byte count, and SHA-256.
+Use the current helper science_extension/extract_complete_science.py for
+this whole PDF. After exporting that helper from a PDF reader's attachments
+panel, run:
+
+  python extract_complete_science.py complete_record.pdf extracted_record
+
+Replace complete_record.pdf with the actual filename of this complete PDF.
+The helper requires Python and the pypdf package. Its output directory must
+be absent or empty. It checks the attachment names, byte counts, and hashes
+before extracting the listed files, preserving both sibling directories.
+It DOES NOT execute the embedded scientific programs. Ordinary PDF previews
+may show the readable pages without exposing the attachments panel.
+
+The foundation's READ_ME_FIRST.txt, extract_proof_files.py, manifest, and
+summary are frozen historical context for its earlier standalone edition.
+Their old attachment counts, saving notes, and extraction instructions do
+not describe this combined edition. Use this START_HERE, the current helper,
+and complete_science_manifest.json for the complete record. Hashes establish
+byte integrity, not mathematical correctness or physical validation.
+
+No rolling ZIP has been created or resumed for this edition.
+
+WHAT THE EXTENSION HAS CLOSED
+
+1. The common-null cancellation is broader than Gaussian motion. For any
+   common iid unit-circle phase law, the first three intensity moments of
+   the specified homometric pair agree exactly. The fourth gap is
+
+     Delta4 = 6 Re[kappa40 conjugate(kappa20)^2 (T_A-T_B)],
+     T_G = M_G,4 conjugate(M_G,2)^2.
+
+   The complex conjugation matters for asymmetric phase laws. Exact
+   asymmetric and two-point examples check the formula. A biased two-point
+   law can reverse the fourth-gap sign; its exceptional fourth-gap zero
+   does not by itself prove equality of the full intensity laws.
+
+2. Wrapped-Cauchy phases give a different selection order. The first six
+   intensity moments agree, and the first difference is exactly moment seven:
+
+     Delta7 = -(22295772289/1000) r^8 (1-r^2)^3 < 0,  0<r<1.
+
+   The all-parameter statement has an analytic charge-budget proof and exact
+   polynomial checks. Uniform phases erase the complete single-frequency
+   distinction for equal site counts. The seventh-moment theorem excludes
+   that endpoint and the deterministic endpoint.
+
+3. Within the two specified centered phase families, the first three
+   population intensity moments identify Gaussian versus wrapped Cauchy
+   and its width parameter. The sole interior second-moment collision is
+   resolved by a strictly nonzero third-moment difference. After identifying
+   the family, moment four or seven identifies which structure generated
+   the law. A common phase rotation remains unobservable in intensity.
+
+4. A quantified neighborhood of the Gaussian law preserves the result.
+   At Gaussian phase variance s=log(2), any common iid phase law whose first
+   four circular moments differ by at most 1/100000 retains exact equality
+   through intensity order three and a fourth gap at least
+
+     29505367039/81920000 = 360.17293748779296875 > 0.
+
+   A sufficient stronger condition is single-site phase-law total variation
+   at most 1/200000. These are conservative tolerances with fixed geometry
+   and frequency, not maximal tolerances or instrument error budgets.
+
+5. Any COMMON independent additive error preserves distinctness of bounded
+   intensity laws, even if that error has no moments. Within Gaussian
+   readout Y=b+eta I+sigma Z, the complete law identifies offset, positive
+   gain, Gaussian noise scale, phase family/width, and structure. Within
+   Poisson readout N|I~Poisson(b+eta I), it identifies nonnegative background,
+   positive gain, phase family/width, and structure. These statements use
+   exact population laws and the full intensity support [0,3969].
+
+   An unrestricted unknown additive-error family is different: two distinct
+   independent zero-mean errors with equal variance can make the competing
+   outputs identical. No finite sample size works uniformly over all allowed
+   Gaussian noise scales or arbitrarily small positive Poisson gains.
+
+6. A finite zero-background Poisson point now has rigorous FULL count-law
+   bounds: Gaussian phase variance s=2 log(2), t=1/2, gain eta=1/512.
+   The full-count squared Hellinger distance is about 2.402636446e-17.
+   At equal priors, 95% optimal success requires at least
+   69,121,152,393,630,388 independent snapshots, while
+   191,671,944,702,842,206 are sufficient. The exact optimal sample count
+   lies between these bounds and is not determined. Keeping only whether
+   N=4 loses a factor of about 107.865 in squared Hellinger separation at
+   this point; that is not an exact sample-count ratio.
+
+7. The four-count statistic has a certified blind gain near
+   0.00165929160405052585 at the same Gaussian phase variance. A simple zero
+   is unique INSIDE the exact rational interval recorded in the certificate.
+   At that gain the Bernoulli four-count laws are exactly identical, so any
+   number of those binary observations has equal-prior success at most one
+   half. The full count laws remain distinct by their fourth factorial
+   moments. Global uniqueness of the blind gain is not claimed.
+
+8. A six-intensity-moment inequality now gives a genuinely finite-s
+   four-count sample guarantee whenever its certified lower gap is positive.
+   It recovers the earlier sharp s^-6 sample order at fixed positive gain
+   as s tends to zero. Its finite demonstration is conservative and requires
+   an enormous number of samples; it is not an experiment recommendation.
+
+MODEL RESTRICTIONS
+
+The construction has two fixed known 63-site structures, unit scattering
+weights, and common observation frequency q0=pi/3. Intensity means
+I=|sum_j z_j W_j|^2 without division by n or n^2, so 0<=I<=3969. The phase
+variables are independent copies of one law, used identically in both
+structures. Gaussian s is phase variance and t=exp(-s/2); wrapped-Cauchy r
+is a concentration parameter, not a displacement variance.
+
+Joint detector identification applies to finite positive Gaussian s or
+0<r<1 in the wrapped-Cauchy family, known n and geometry candidates,
+positive gain, and the specified independent Gaussian or conditional
+Poisson readout. Gaussian sigma may be zero and Poisson background may be
+zero. It does not identify an arbitrary unknown phase law or a common
+phase angle. The finite sample numbers use Gaussian phases, zero Poisson
+background, known competing calibrated models, and independent snapshots
+conditional on the unknown structure. Unknown-parameter population
+identifiability does not supply finite-sample calibration guarantees.
+
+REPRODUCE THE PROOFS AND CERTIFICATES
+
+Run from the extracted root containing both science_extension/ and
+science_completion/. Use Python 3.10 or later with assertions enabled;
+do not use python -O. The mathematical proof scripts use the standard
+library. Extraction additionally needs pypdf; optional plotting/rendering
+uses the dependencies documented with those presentation scripts.
+
+Extension calculations:
+
+  python science_extension/phase_laws/phase_law_extension.py
+  python science_extension/phase_laws/verify_cross_family.py
+  python science_extension/phase_laws/independent_phase_review.py
+  python science_extension/identifiability/verify_phase_robustness.py
+  python science_extension/finite_detection/certify_finite_detection.py
+  python science_extension/finite_detection/independent_certificate_replay.py
+
+The default finite-detection command reconstructs the exact moments through
+order 32 from the geometric phases, then rebuilds probability, tail,
+distance, root, and sample certificates. For a faster replay using the
+saved high-order moment table, run:
+
+  python science_extension/finite_detection/certify_finite_detection.py --reuse-moments
+
+Reuse mode does not regenerate that high-order table. The producer separately
+checks Gaussian moments through order five by direct site convolution.
+The independent finite-certificate replay imports neither producer nor
+moment engine, but ACCEPTS THE EXACT MOMENT TABLE as its input. Its alternate
+square-root method checks the downstream bounds, not every high-order
+moment independently. The phase-law package has a separate direct check
+through order seven at r=1/2; that is a different calculation.
+
+The analytic detector-identifiability proofs and their reviews are read
+directly; simulation is not a premise of those theorems. Reproduction writes
+generated JSON beside its script. Extraction verifies the saved bytes before
+these programs are run; retain an untouched extraction for byte comparisons.
+
+Foundation replay, including the original three crossing counts:
+
+  python science_completion/homogeneous_control/homogeneous_control.py
+  python science_completion/measurement_and_optimization.py
+  python science_completion/root_certificate/certify_two_roots.py
+  python science_completion/harmonic_certificate/build_harmonic_groups.py
+  python science_completion/harmonic_certificate/certify_harmonic_root.py
+
+See the foundation's proof notes for its reconstruction dependencies and
+scope. Keeping both sibling folders preserves the packaged relative paths.
+
+REVIEW STATUS AND REMAINING QUESTIONS
+
+The sources, analytic arguments, constants, and certificates received
+separate internal AI-assisted reviews with their input dependencies stated.
+The finite-detection replay used an independently written interval method.
+These are not external human peer review or formal proof-assistant
+verification. Hashes identify reviewed bytes; they are not proofs of truth.
+
+Historical priority remains unresolved for the precise selection hierarchy
+and its concrete combination of results. General finite wrapped-phase
+moment methods, bispectral invariants, Gaussian deconvolution, Poisson
+mixture injectivity, and Hellinger testing methods are established. The
+literature note records a newly inspected Webster full text and remaining
+material full-text gaps for Barakat and Ainsleigh. Nonfinding is not proof
+of novelty.
+
+No physical realization, calibrated detector validation, or acquisition-time
+claim has been established. Still open are the exact optimal finite sample
+counts, global optimization of full distribution separation and detector
+performance, the global count of blind gains, and finite-sample procedures
+with estimated nuisance parameters. The results also do not settle general
+dependent snapshots, nonidentical site motion, geometry errors, or arbitrary
+unknown phase and detector laws. Some overly broad identification claims
+are disproved by the uniform-phase and unrestricted-error counterexamples.
+
+FILE MAP
+
+  science_extension/science_extension_report.tex
+      Readable extension source; the complete PDF supplies its rendered pages.
+  science_extension/science_extension_summary.json
+      Structured current status and exact key quantities.
+  science_extension/phase_laws/
+      General and wrapped-Cauchy proofs, exact algebra, family identification,
+      results, reproduction notes, and independent review.
+  science_extension/identifiability/
+      Detector identification and phase-law robustness proofs and reviews.
+  science_extension/finite_detection/
+      Moment table, finite-count certificates, proofs, independent replay
+      and review, and the accompanying unchanged moment engine.
+  science_extension/literature/
+      Source comparisons, access limitations, and bibliography.
+  science_extension/figures/
+      The blind-gain illustration, certified plotting data, and source.
+  science_extension/report_science_review.txt
+      Report consistency review with its stated snapshot and scope.
+  science_completion/
+      Unchanged foundation reports, three global crossing certificates,
+      exact reconstruction, detector asymptotics, and historical reviews.
+
+Use complete_science_manifest.json as the authoritative embedded-file list.

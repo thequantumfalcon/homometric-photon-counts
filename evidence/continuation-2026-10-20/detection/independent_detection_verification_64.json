@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "certificate_sha256": "481065a9cf5c89f791fcd742eb7452f8bfa109a147b7ec1bf0e964c88ce43423",
+  "independent_implementation_sha256": "d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e",
+  "wrapper_sha256": "816662715e7662f0a7dccc7e402dd556bc8b6c2197b31edc81e70ab6e2a9f2aa",
+  "checks": [
+    {
+      "eta": "1/10",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 180179050114182
+    }
+  ],
+  "elapsed_seconds": 17.436999999990803,
+  "method": "Confluent Newton rather than cardinal Hermite weights; positive exponential series with reciprocal; capped-simplex score maximization. No detector producer import.",
+  "scope": "Independent arithmetic representation, not independent external human review."
+}

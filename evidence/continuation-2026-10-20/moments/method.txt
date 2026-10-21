@@ -1,0 +1,102 @@
+EXACT HIGHER-ORDER MOMENT EXTENSION
+
+This directory extends the sealed audit's direct site generating-function
+construction beyond order 32. The mathematical algorithm, phase pairing,
+integer scaling, truncation rule, and deterministic no-carry bounds remain
+those proved in audit-2026-10-20/moments/proof.txt. The source is loaded
+read-only, with bytecode writes disabled. Neither archive nor sealed audit
+is edited.
+
+Acceleration and trust boundary
+
+Each large signed integer multiplication is delegated to the installed
+SymEngine 0.13.0 distribution's MPIR library through its GMP-compatible C ABI.
+Integer operands are imported as unsigned little-endian bytes, multiplied
+exactly, exported as bytes, and their signs restored. No floating-point
+approximation or probabilistic modular identity is used. Native arithmetic
+is a computational dependency, just as CPython's bigint implementation was
+in the sealed audit; this is not a formally verified machine-code proof.
+
+The exact DLL path and SHA256 are recorded in each output. benchmark.py
+compares native results with Python exact products at six operand sizes up
+to 10,000,000 bits and checks zero and sign boundaries. The native multiplication
+benchmark at 10,000,000 bits took 0.156 seconds versus 3.532 seconds for Python on
+this machine. A complete order 5 reconstruction verifies integration before
+the high-order run. Every extension is compared exactly against all available
+sealed moments through order 32, and positivity, support upper bound 3969,
+and moment log-convexity are checked throughout the extended table.
+
+The original cumulant producer uses dense rational recurrences with O(P^4)
+terms and number-field arithmetic. It was inspected as an alternative;
+no new long run of that producer is needed for this extension. The packed
+product route is the practical implementation here.
+
+Usage
+
+  python continuation-2026-10-20/moments/benchmark.py
+  python continuation-2026-10-20/moments/extend_moments.py --order 64
+
+An optional further accelerator is extend_parallel.py. It runs the three
+independent integer products for each quadratic-field convolution in three
+threads and uses MPIR's squaring path when operands are equal. Each thread
+owns its integer objects. Its source hash is added to outputs. The parallel
+route has been integrated through order 6 and checked against the sealed
+exact moments before any larger use.
+
+Both entry points explicitly reject optimized Python (-O/-OO), because
+the imported engine uses assertions for arithmetic consistency checks.
+Outputs include reconstructed rational values, all lower-order comparisons,
+new shape checks, timings, and hashes of every source/input dependency.
+
+Higher-order moments strengthen downstream quadrature/Taylor certificates;
+their generation alone is not a certificate of additional roots or a
+global blind-gain count. Those require the separate downstream inequalities.
+
+Recorded order 64 result
+
+The complete order 64 run produced 130 exact moments in 319.50 seconds.
+Every one of the 66 sealed order 32 entries matched exactly, and all
+positivity, support, and log-convexity checks passed. Its sources remain
+unchanged. fixed_t_moments_order_64.json contains the complete evidence.
+
+Further extension and resource check
+
+A representative order 128 integer multiplication was benchmarked against
+the exact closed-form identity
+  (2^n-u)(2^n-v)=2^(2n)-(u+v)2^n+uv.
+At n=5,300,000,000 bits it took 135.41 seconds and matched exactly; observed
+working set was approximately 10.5 GB during the run. This projects a
+35-45 minute order 128 extension even with parallelism and squaring, so
+that full extension was not launched. Order 96 is the next selected target.
+
+extend_checkpointed.py adds resumability to the parallel implementation.
+Each polynomial product is saved in a binary integer format with a SHA256
+sidecar and headers binding the order, label, source hashes, and DLL hash.
+It does not use pickle or execute checkpoint content. Writing and restoring
+all 16 checkpoints was tested at order 7; both executions matched the
+sealed moments. Source changes invalidate checkpoints. These directories
+are local computation caches and need not be included in a results package.
+The corruption test flips one byte in the generated order 7 cache, requires
+rejection, restores the original bytes, and requires successful resumption:
+
+  python continuation-2026-10-20/moments/extend_checkpointed.py --order 7
+  python continuation-2026-10-20/moments/test_checkpoint_integrity.py
+
+  python continuation-2026-10-20/moments/extend_checkpointed.py --order 96
+  python continuation-2026-10-20/moments/compare_extensions.py
+
+The second command compares all 130 order 64 values against the prefix of
+the order 96 output and checks recorded dependency hashes. Trusted generated
+rationals can exceed Python's default decimal-digit limit; these entry
+points disable that conversion limit explicitly for this local calculation.
+
+Recorded order 96 result
+
+The complete fresh order 96 run produced 194 exact moments in 593.14 seconds.
+Every one of the 66 sealed order 32 entries matched. A separate cross-order
+comparison then verified exact equality of all 130 entries shared with the
+serial native order 64 reconstruction; recorded source and DLL hashes also
+matched. Positivity, support, and log-convexity checks passed throughout.
+All 16 product checkpoints were freshly computed in this order 96 run.
+Evidence: fixed_t_moments_order_96.json, comparison_64_96.json, and order96.log.
+No full order 128 calculation was performed.

@@ -1,0 +1,196 @@
+FOCUSED INDEPENDENT CHALLENGE REVIEW: GLOBAL FINITENESS AND SMALL-NOISE TV
+20 October 2026
+
+VERDICT
+=======
+No material gap found in the reviewed qualitative finiteness theorem, its
+Laplace-transform multiplicity lemma, or the small-noise total-variation
+argument. The conclusions follow with the stated scope and accepted inputs.
+No producer text was changed. This is a separate in-session review, not
+external peer review or a proof-assistant verification.
+
+Reviewed files:
+
+  global_blind_gain_proofs.txt
+  SHA256 6203bb8277d61c3f05582732a33c50b19974330f476276aaedf93fcfb4e57861
+
+  global_detector_and_width_proofs.txt
+  SHA256 dc1ed848d11ad0f2c76378fa642bb3eb20ea3a2dcd830a82066de0cf4d71c16d
+
+The review focuses on Sections 1--3 of the first file and Sections 4--5
+of the second. It does not repeat the numerical root certificates. Existing
+exact geometric identities, including sum z_j=0, common |sum z_j^2|^2,
+and D4(s)>0 for every finite positive s, are accepted inputs here.
+
+1. FIXED-s DEFINABILITY: THE WRAPPED-GAUSSIAN DENSITY IS ALLOWED
+============================================================
+For every fixed s>0, the Fourier series for the wrapped Gaussian converges
+uniformly on each bounded complex strip: the Gaussian decay in k dominates
+the factor exp(|k|*|Im theta|). Its restriction to the compact phase cube
+therefore extends analytically to a neighborhood of that cube. The same
+is true of the finite product density and the intensity map.
+
+After a linear rescaling of the cube, each such restriction is a restricted
+analytic function. The fact that the density was initially described by
+an infinite Fourier series is no obstacle: R_an contains every analytic
+restriction of this kind, not only finite elementary formulas. Real
+constants and parameters fixed by the chosen s are permitted.
+
+The indicator of the cube, and the indicator of the restricted-analytic
+sublevel set f_G(theta)<=u, are globally subanalytic functions. Multiplying
+by the restricted density and extending by zero outside the cube preserves
+that property. The integrand is bounded and compactly supported in theta,
+so it is Lebesgue integrable for every u in the parameter domain [0,M].
+
+Cluckers--Miller Theorem 1.3 thus applies exactly as used and makes the CDF
+H_G(u) constructible. A constructible function is definable in R_an,exp,
+because positive logarithms are definable using exponentiation. The cited
+o-minimality theorem then applies to the CDF and its definable derivative.
+
+Crucially, this is a fixed-s argument. It does not assert that the density
+is jointly restricted analytic as s approaches 0, or that the entire
+Laplace transform is definable for unrestricted eta. No unproved closure
+of general R_an,exp-definable functions under integration is being used.
+The proof correctly separates the CDF integration step from the subsequent
+elementary Laplace-transform step.
+
+2. ABSOLUTE CONTINUITY AND FINITELY MANY SIGN BLOCKS
+=================================================
+The intensity map is nonconstant real analytic on connected R^63. Hence
+some partial derivative is not identically zero. The zero set of that
+analytic partial derivative has Lebesgue measure zero, and the critical
+set is a subset of it. The input phase distribution is absolutely
+continuous, so the critical set has probability zero.
+
+Near a regular point, use f_G itself as one coordinate, together with
+62 appropriate original coordinates. The inverse function theorem gives
+a local diffeomorphism. Change of variables followed by Fubini shows
+that a one-dimensional null set has zero pushforward probability in
+this chart. A countable chart cover of the regular set establishes
+absolute continuity of the entire intensity law. Cube-boundary points
+and critical points do not create hidden atoms.
+
+Consequently H_G is an absolutely continuous CDF. Finite differentiability
+holds almost everywhere. For a definable H_G, both the domain and graph
+of its finite derivative are definable by the epsilon-delta formula.
+The exceptional set is a definable null subset of the real line, hence
+finite by o-minimality. Endpoints can simply be included in that finite
+exceptional set. Assigning zero there gives a definable density version.
+
+The signed density u^4(h_A-h_B) is integrable. Its positive and negative
+sets each have finitely many connected components, so only finitely many
+nonzero sign blocks remain after zero intervals and null sets are ignored.
+The density is not zero almost everywhere because its integral is the
+accepted positive fourth-moment gap. This supplies precisely the input
+needed for the next lemma, without requiring a bounded density near
+critical values.
+
+3. LAPLACE ZERO COUNT: MULTIPLICITIES ARE HANDLED CORRECTLY
+========================================================
+For bounded support, differentiation of the Laplace transform under the
+integral is valid to every order. A zero of multiplicity r at eta gives
+orthogonality to u^k exp(-eta u), k=0,...,r-1. If there were more than m
+zeros counting multiplicity, one could select exactly m+1 such conditions.
+
+The associated real exponential-polynomial space has dimension m+1.
+Independence follows by selecting the largest real exponent with a nonzero
+polynomial coefficient and comparing growth as u tends to positive
+infinity. The stated zero bound on this space is valid with multiplicity:
+divide by one exponential, differentiate, and reduce the total allowed
+polynomial dimension by one. Rolle's theorem gives at least R-1 derivative
+zeros from R zeros counted with multiplicity. If the derivative vanishes
+identically, the original divided function is a nonzero constant and
+already has no zeros. This covers the induction's possible degenerate case.
+
+Choose one cut between each pair of successive opposite nonzero sign
+blocks, placing it in a zero gap if one is present. There is a nonzero
+space element vanishing at the m cuts by linear algebra. The zero bound
+forces these prescribed zeros to be simple and excludes all additional
+real zeros. Its signs therefore alternate exactly at those cuts.
+
+After one global sign choice, the product with the signed density is
+nonnegative almost everywhere and positive on a set of positive measure.
+Its integral is strictly positive; boundedness of the space element on
+the compact support guarantees integrability. The same integral is zero
+by the selected transform-derivative conditions, a contradiction.
+
+This proves the at-most-m real zero bound including multiplicities, not
+merely a bound on distinct sign-crossing roots. It therefore implies the
+stated finiteness of positive four-count blind gains. The positive value
+F_s(0)=D4(s) also ensures the entire transform is not identically zero.
+
+The conclusion remains non-effective: this proof does not evaluate m,
+locate the last positive root, bound the count uniformly in s, or exclude
+additional roots above the numerically certified interval.
+
+4. THE TOTAL-VARIATION DELTA LEMMA IS STRONG ENOUGH
+=================================================
+The full-rank hypothesis permits invertible linear coordinates (u,v)
+in which the limiting linear map is projection onto u. The transformed
+input has a smooth integrable density g. A compact smooth subdensity can
+be obtained explicitly as g_R=g*psi_R with a smooth cutoff 0<=psi_R<=1;
+its omitted mass tends to zero.
+
+On a fixed compact set containing this support, the C^1 convergence of
+f_epsilon to projection makes both the displacement and its derivative
+small. Multiplying the displacement by another smooth cutoff that equals
+one around the support yields a globally defined perturbation of identity
+with derivative norm strictly less than one for small epsilon.
+
+The global inverse used in the proof exists: the equation x=y-H_epsilon(x)
+is a contraction for each y. Injectivity follows from the same Lipschitz
+bound. The inverse function theorem provides its C^1 inverse since
+I+DH_epsilon is invertible everywhere. No unstated global injectivity
+assumption on the original f_epsilon is needed.
+
+The cutoff perturbation tends uniformly to zero; its inverse does too.
+Its Jacobian determinant converges uniformly to one, and the images of
+the compact subdensity support remain in a fixed compact set. The explicit
+change-of-variables densities thus converge in L1. Projecting to u
+contracts total variation and agrees with f_epsilon on the retained
+subdensity's support. The omitted mass produces an arbitrarily small
+error under either pushforward. One then lets the retained mass tend
+to one. This proves genuine TV convergence, not only weak convergence.
+
+5. APPLICATION TO THE SMALL-NOISE INTENSITY LIMIT
+==============================================
+At epsilon=sqrt(s), sum z_j=0 gives the exact identity
+
+  I_G(s)/s = |sum_j z_Gj*(exp(i epsilon Z_j)-1)/epsilon|^2.
+
+The normalized amplitude converges in C^1 on every compact Z-set to
+i*sum_j z_Gj Z_j. Its real two-dimensional covariance eigenvalues are
+(63 +/- |sum z_Gj^2|)/2. The accepted common value
+|sum z_Gj^2|^2=129187/400 is strictly below 63^2, so both limiting linear
+maps have full rank two and the lemma applies.
+
+The Gaussian covariance matrices may have different orientations, but
+their eigenvalues coincide. Orthogonal rotations preserve squared norm,
+so the limiting squared-norm distributions are identical. Measurable
+squared norm contracts TV. A common positive rescaling preserves TV
+exactly. Therefore the triangle inequality around that common limiting
+law proves TV(P_A(s),P_B(s))->0 as s decreases to zero. The inequality
+h^2<=2*TV supplies the corresponding squared-Hellinger limit.
+
+There is no inference of TV convergence merely from convergence to a
+point mass. The full-rank normalized amplitude and the explicit TV lemma
+are the necessary additional steps, and both are present and valid.
+
+PRIMARY SOURCES CHECKED
+=======================
+The following source statements were separately opened and checked:
+
+  Cluckers and Miller (2011), Definition 1.2 and Theorem 1.3,
+  published pp. 313--314:
+  https://rcluckers.perso.math.cnrs.fr/prints/MillerStab.pdf
+
+  van den Dries, Macintyre and Marker (1994), Corollary 5.13,
+  published p. 204:
+  https://www.math.ens.psl.eu/~zchatzid/papiers/o-min-21/DMM.pdf
+
+The first theorem supplies the parameter-integration result for the
+bounded globally subanalytic integrand. The second supplies o-minimality
+of R_an,exp. Their complete published proofs are accepted dependencies;
+this focused review checks their hypotheses and use here rather than
+reproving those general theorems. The Laplace multiplicity and TV-delta
+arguments were checked directly as given above.

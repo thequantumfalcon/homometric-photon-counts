@@ -1,0 +1,12 @@
+LOCAL_WORKSPACE\reproduce-output\scientist-lean-fresh-2026-10-20-02\PhotonProofs.lean:66:5: warning: Variable name `hd0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'PhotonProofs.delta4_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonProofs.delta4_exp_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonProofs.count_laws_distinct_of_moment_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonProofs.exp_neg_three_lt_one_twentieth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonProofs.independent_score_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonProofs.selected_independent_score_error' depends on axioms: [propext, Classical.choice, Quot.sound]

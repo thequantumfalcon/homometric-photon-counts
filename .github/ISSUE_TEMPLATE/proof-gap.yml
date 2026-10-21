@@ -1,0 +1,17 @@
+name: Proof gap or counterexample
+description: Identify a specific mathematical claim or failed implication.
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: Exact statement and assumptions
+      description: Include the model, evidence path, and relevant parameter values.
+    validations:
+      required: true
+  - type: textarea
+    id: argument
+    attributes:
+      label: Argument or counterexample
+      description: Explain the failed implication or reproducible contradiction.
+    validations:
+      required: true

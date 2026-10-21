@@ -1,0 +1,334 @@
+RIGOROUSLY TIGHTER FINITE SAMPLE COUNTS FOR THE FULL PHOTON LAW
+20 October 2026
+
+RESULT
+======
+For the same fixed Gaussian phase and zero-background Poisson detector point
+as the preceding record,
+
+  n=63, t=1/2, s=2 log 2, eta=1/512, b=0,
+  I=|sum of 63 unit phasors|^2, 0<=I<=3969,
+  N conditional on I ~ Poisson(eta I),
+
+let m_* be the smallest number of independent snapshots for which the
+optimal equal-prior A/B decision has success probability at least 19/20.
+The competing models and detector parameters are known. Then
+
+  112,606,153,000,000,001 <= m_* <= 112,608,396,000,000,000.
+
+The width divided by the lower endpoint is less than
+
+  0.000019918983 = 0.0019918983 percent.
+
+The earlier certified interval was
+
+  69,121,152,393,630,388 <= m_* <= 191,671,944,702,842,206.
+
+The new interval is a rigorous finite-sample enclosure. It is not a normal
+approximation declared exact, and it does not determine the exact optimal
+integer m_*. The large observation count is unchanged in practical scale.
+
+A concrete test with rational weights attains the new sufficient bound.
+All weights and its exact threshold are in tighter_testing_certificate.json.
+If every count is at most 24, it compares the weighted count sum with the
+specified rational threshold. If any count exceeds 24, it chooses A.
+The complete count tail and its accumulation over approximately 10^17
+snapshots are included in the guarantee.
+
+1. INPUT DEPENDENCY AND NOTATION
+==============================
+The calculation accepts the exact count-probability intervals and
+order-32 intensity-moment table retained in:
+
+  science_extension/finite_detection/finite_detection_certificate.json
+  science_extension/finite_detection/fixed_t_moments.json
+
+Their SHA-256 values are pinned in the source and copied into the result.
+No old producer or moment engine is imported. This continuation does not
+independently regenerate the high-order geometric moments. The original
+record supplies their derivation and its declared independent-check scope.
+
+Let P and Q denote the full photon-count distributions for A and B. Let
+K=24 and define tail probabilities tau_G=P_G(N>K). The retained factorial
+moment bound is
+
+  tau_G <= T_G = eta^25 E_G[I^25]/25!.
+
+This follows from 1{N>=25} <= (N)_25/25! and the conditional Poisson
+factorial moment E[(N)_25 | I]=(eta I)^25. The sum T_A+T_B is reproduced
+exactly from the retained moments and agrees with the old certificate.
+It is less than 1.030e-26.
+
+Define the CONDITIONAL laws on the 25-element alphabet {0,...,24}:
+
+  R_G(k)=P_G(k)/(1-tau_G).
+
+These are conditional laws, not censored laws with an additional tail
+symbol. If l_Gk<=P_G(k)<=u_Gk, then
+
+  l_Gk <= R_G(k) <= u_Gk/(1-T_G).
+
+All these probabilities are strictly positive. The executable uses these
+enclosures, widened by outward rational rounding.
+
+2. EXACT TRANSFER FROM CONDITIONAL TO FULL LAWS
+==============================================
+The m-fold law R_G^m is precisely P_G^m conditioned on all m counts being
+at most K. Consequently
+
+  TV(P_G^m,R_G^m)=1-(1-tau_G)^m <= m*tau_G <= m*T_G.
+
+For any decision rule f, its equal-prior success is an average of one event
+probability under P^m and one under Q^m. Replacing the two laws by their
+conditional counterparts changes that success by at most
+
+  c_m = m*(T_A+T_B)/2.
+
+Taking suprema over rules preserves the bound:
+
+  |S_m^*(P,Q)-S_m^*(R_A,R_B)| <= c_m.
+
+The same error applies to any fixed test, extended arbitrarily to samples
+containing a count above K. The supplied explicit test chooses A in that
+case. At the final two endpoints c_m is approximately 5.7941e-10.
+
+This step is necessary: a small one-observation tail cannot simply be
+discarded when the number of observations is enormous.
+
+3. CONDITIONAL LOG-LIKELIHOOD STATISTIC
+======================================
+Let
+
+  L(k)=log(R_A(k)/R_B(k)).
+
+For equal priors, the optimal test under the conditional models chooses
+A when sum_i L(N_i)>=0 and B otherwise. Choosing A on a tie causes no
+loss in optimal equal-prior success.
+
+For G=A,B define
+
+  mu_G=E_G L,
+  v_G=Var_G L,
+  r_G=E_G |L-mu_G|^3,
+  beta_G=r_G/v_G^(3/2).
+
+The interval calculation establishes mu_A>0>mu_B and v_A,v_B>0.
+The following are descriptive summaries; exact interval endpoints are
+retained in the JSON:
+
+  mu_A in [4.805279388961882668e-17, 4.805279506057441150e-17],
+  mu_B in [-4.805266394766577191e-17,-4.805266277800851049e-17],
+
+  v_A in [9.610585117590239684e-17,9.610585117889689947e-17],
+  v_B in [9.610506450289066217e-17,9.610506450587941191e-17],
+
+  r_A < 8.002690098663927e-22,
+  r_B < 8.002372511968484e-22,
+
+  beta_A < 849.398041208,
+  beta_B < 849.374761648.
+
+These means are about seven orders smaller than some of the individual
+weighted log terms. Ordinary double-precision summation or ratio/log
+evaluation would not safely determine them. All bounds here use exact
+rational interval arithmetic with rigorous logarithm remainders.
+
+4. THE EXTERNAL BERRY--ESSEEN THEOREM USED
+========================================
+The only non-elementary probability inequality newly invoked is
+Shevtsova (2011), Theorem 1:
+
+  sup_x |F_m(x)-Phi(x)|
+      <= (208/625)*(beta_3+429/1000)/sqrt(m).
+
+It holds for iid standardized centered variables with a finite third
+absolute moment beta_3. Here each conditional alphabet is finite, its
+variance is strictly positive, and observations are iid, so all hypotheses
+hold separately under A and B. The paper uses left-continuous distribution
+functions, which directly accommodates the tie convention. Right-continuous
+versions also obey the same bound by limits and continuity of Phi.
+
+Primary source:
+Irina Shevtsova, "On the absolute constants in the Berry--Esseen type
+inequalities for identically distributed summands", arXiv:1111.6554v1,
+28 November 2011, Theorem 1, PDF page 3.
+https://arxiv.org/pdf/1111.6554
+
+This is an established theorem applied here, not a new claim about a
+universal Berry--Esseen constant. Its proof is not re-created by this
+certificate. The finite source-to-result calculation below is re-created.
+
+5. TWO-SIDED FINITE SUCCESS ENCLOSURES
+=====================================
+Put
+
+  a_A(m)=sqrt(m)*mu_A/sqrt(v_A),
+  a_B(m)=sqrt(m)*(-mu_B)/sqrt(v_B),
+  e_G(m)=(208/625)*(beta_G+429/1000)/sqrt(m).
+
+Under A the success event is sum L>=0, and under B it is sum L<0.
+Applying the preceding theorem gives
+
+  S_m^*(R_A,R_B)
+    in [(Phi(a_A)+Phi(a_B))/2 -(e_A+e_B)/2,
+        (Phi(a_A)+Phi(a_B))/2 +(e_A+e_B)/2].
+
+Replacing all quantities by correctly oriented interval endpoints and
+adding/subtracting c_m gives a rigorous enclosure of S_m^*(P,Q).
+The Berry--Esseen errors are about 8.428e-7 per hypothesis near the final
+sample threshold; they are retained, not treated as negligible.
+
+At
+
+  m_0=112,606,153,000,000,000,
+
+the resulting upper bound is
+
+  S_m0^*(P,Q) < 0.949999999536447714877 < 19/20.
+
+Optimal success is nondecreasing in m, because a rule may ignore additional
+observations. Therefore EVERY m<=m_0 is insufficient and
+
+  m_* >= m_0+1.
+
+The conditional likelihood calculation also certifies 95% success at
+112,608,399,000,000,000 observations. The explicit rational-score rule in
+the next section improves that sufficient endpoint slightly.
+
+The source chooses endpoints by integer bisection on a grid of 10^9
+observations. Every endpoint claim is checked independently of any
+monotonicity of the approximate bounding expression. Monotonicity of the
+actual optimal success is the only monotonicity needed for the necessary
+claim about all smaller m.
+
+6. AN EXPLICIT RATIONAL-SCORE TEST
+=================================
+For each retained count k, let [L_k^-,L_k^+] be its certified log-likelihood
+interval. Define a fixed rational weight w_k by taking their midpoint and
+rounding DOWN to the grid 10^-60. This deterministic rounding is part of
+the test definition; no assertion that w_k is the exact log likelihood is
+made.
+
+The source separately bounds, for the now-fixed score w,
+
+  nu_G=E_{R_G} w, V_G=Var_{R_G} w,
+  R3_G=E_{R_G}|w-nu_G|^3.
+
+It chooses the exact rational per-observation threshold
+
+  theta=(lower_bound(nu_A)+upper_bound(nu_B))/2.
+
+The certified mean intervals lie on opposite sides of theta. Given m
+observations:
+
+  - If any count exceeds 24, choose A.
+  - Otherwise choose A when sum_i w_{N_i} >= m*theta, and B otherwise.
+
+Apply the same Berry--Esseen argument to the centered fixed score, using
+drifts nu_A-theta and theta-nu_B. Transfer from conditional to full laws
+with the same c_m.
+
+At
+
+  m_1=112,608,396,000,000,000,
+
+the certified equal-prior success lower bound is
+
+  0.9500000002501716538329 > 19/20.
+
+Thus m_*<=m_1. This is a constructive sufficient result, even though it
+does not identify the exact finite-sample optimal test numerically.
+
+The fixed score has less interval dependency than an interval-valued exact
+log likelihood. It can therefore produce a slightly stronger CERTIFIED
+sufficient endpoint, even though the exact conditional likelihood rule is
+mathematically optimal for the conditional problem. There is no conflict.
+
+The guarantee is for average success with equal priors. It does not assert
+that both conditional success probabilities separately exceed 95%.
+
+7. RIGOROUS TRANSCENDENTAL ENCLOSURES
+====================================
+The source uses fractions and integer arithmetic for every enclosure and
+every decision. Decimal arithmetic is used only to print summaries.
+
+Logarithm:
+For x>0 put u=(x-1)/(x+1), so
+
+  log x = 2 sum_{j>=0} u^(2j+1)/(2j+1).
+
+After j=J the absolute remainder is at most
+
+  2 |u|^(2J+3)/[(2J+3)(1-u^2)].
+
+All needed |u| are below 1/2. The program stops only when this rational
+remainder is below 10^-75 and then rounds outward to a 10^-70 grid.
+
+Square roots:
+For rational x>=0 and integer Q=10^70, let
+
+  n=floor(sqrt(floor(x Q^2))).
+
+Then n/Q <= sqrt(x) <= (n+1)/Q. Both squared inequalities are checked
+exactly after each construction.
+
+Pi:
+The program bounds arctan(1/5) and arctan(1/239) by their alternating
+power sums and uses Machin's identity
+
+  pi = 16 arctan(1/5)-4 arctan(1/239).
+
+For completeness, writing a=arctan(1/5), b=arctan(1/239), the tangent
+addition formulas give tan(4a)=120/119 and tan(4a-b)=1. The angles lie
+in the interval selecting 4a-b=pi/4. Alternating arctangent bounds follow
+by integrating the finite geometric identity for 1/(1+x^2).
+
+Normal CDF:
+For 0<=z<=2,
+
+  Phi(z)=1/2 + (1/sqrt(2 pi))
+          sum_{j>=0} (-1)^j z^(2j+1)/(2^j j! (2j+1)).
+
+The upper sum ends at j=32 and the lower at j=33. These inequalities follow
+by integrating the global even/odd Taylor bounds for exp(-x) with
+x=t^2/2 over 0<=t<=z. They do not depend on a floating-point normal-CDF
+implementation. Negative arguments use Phi(-z)=1-Phi(z).
+
+Interval moment arithmetic:
+Each score interval is multiplied by its probability interval; the second
+raw moment is bounded similarly. The variance is E[L^2]-(E L)^2, with
+interval squaring handled correctly when an interval straddles zero.
+The third centered absolute moment is bounded termwise by the probability
+upper bound times the largest possible |L-mu|^3. All these enclosures may
+be conservative; losing dependency can widen them but cannot invalidate
+their inclusion.
+
+8. WHAT THIS DOES AND DOES NOT CLOSE
+===================================
+Closed here:
+  A much tighter rigorous interval for the optimal finite sample count
+  at the specified previously certified full-count operating point, and
+  an explicit rational-score test meeting its sufficient endpoint.
+
+Still open:
+  The exact integer m_*, the full optimal power curve at all m, all-parameter
+  detector optimization, estimation of unknown detector parameters, and
+  experimental feasibility.
+
+The result assumes iid snapshots, the fixed known candidates, their stated
+common Gaussian phase law, the calibrated zero-background Poisson model,
+and the preserved intensity normalization. It depends on the mathematical
+validity of the retained input tables and the cited external probability
+theorem. It is not external peer review or formal proof-assistant checking.
+
+REPRODUCTION
+============
+From the extracted record root, with science_frontier/ and science_extension/
+as sibling folders, run
+
+  python science_frontier/tighter_testing/certify_tighter_testing.py
+
+Only the Python standard library is required. The script checks its pinned
+input hashes, recreates every stated interval and endpoint, and writes
+tighter_testing_certificate.json next to the script. It modifies no old
+proof file.

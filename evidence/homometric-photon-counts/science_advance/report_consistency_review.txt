@@ -1,0 +1,189 @@
+INDEPENDENT REPORT CONSISTENCY REVIEW
+21 October 2026
+
+Disposition: PASS after one wording correction, now applied by the report
+author. No remaining mathematical, numerical, or scope inconsistency was
+found in the reviewed source.
+
+Reviewed report:
+  science_advance/science_advance_report.tex
+  SHA256 e85d240fc618c1660a322d6e9457f780888f91a67adfefe09eb8d5ce8a9d53d8
+
+This review checks scientific content against the new plain-text proofs,
+exact certificates, and separate review/replay records. It is independent
+of the coordinating report author, but remains an internal assistant-agent
+review, not outside human peer review or a physical validation. PDF layout
+and final attachment assembly are separate checks performed by the root.
+
+Correction made
+---------------
+The first draft said that the local calibration construction supplied
+variance bounds W_r through order eight. It actually supplies intensity
+moments through order eight, from which the four needed factorial-statistic
+variance bounds W_1,...,W_4 follow. The report now says this correctly.
+No certificate, sample number, or mathematical proof required modification.
+
+1. Blind gains and global scope
+-------------------------------
+The abstract, theorem, status table, and open-target list consistently
+assert at least four distinct positive sign-changing four-count blind
+gains at every finite positive Gaussian width and zero background. They
+do not assert exactly four. The gamma-integral orthogonality identities
+have the correct powers and factorial factors. The zero-atom condition
+is correctly retained for the highest integral. Absolute integrability
+justifies subtracting the separate nonnegative expectations.
+
+The sign-change polynomial argument is valid and the report explicitly
+distinguishes sign-changing from simple roots. Simplicity is claimed only
+for the two roots certified numerically on entire intervals. The general
+k-channel consequence has the correct eta^(k-r) multiplier for k>=r and
+the correct min(k,r) lower bound. The complete underlying proof supplies
+the necessary nonvanishing argument for F_k.
+
+The displayed second bracket matches the certificate exactly:
+329181481/30198988800 to 164590741/15099494400. The report labels decimals
+as approximate descriptions and makes the rational endpoints authoritative.
+The first bracket is preserved. The three new whole-interval sign bounds,
+combined with the old exactly-one interval, prove exactly two simple roots
+through1/32. At least two additional roots above1/32 follow. The report
+retains the distinction between qualitative global finiteness and a known
+exact global root count or final-root cutoff.
+
+The one-sided Hermite signs, simple zero endpoint, double positive nodes,
+positive integration measures, and need to bound the actual derivative via
+the r=5 measure are described correctly. The report does not silently
+assume exact Gaussian-quadrature roots or drop derivative weights.
+
+2. Higher-gain probability and sample statements
+------------------------------------------------
+The report's selected operating point is t=1/2, eta=1/28, b=0, and its
+four bins use exact normalization for N>=3. Its displayed TV, squared
+Hellinger, and exponential-contraction lower bounds are rounded downward
+relative to the exact rational certificate.
+
+The two different probability guarantees remain distinct:
+
+  232383066797468 observations: sufficient equal-prior AVERAGE 95%
+  success for the exact four-bin likelihood-ratio experiment, by affinity.
+
+  303181164969742 observations: a fixed rational additive-score test
+  with separate success strictly above95% under EACH structure.
+
+The displayed affinity convention h^2=2-2rho and error bound rho^m/2
+have the correct factors. The score's signs, tie convention, normalized
+moment-generating-function bound, m*d>=3, and exp(-3)<1/20 are consistent
+with the producer and independent replay.
+
+The comparison with the old necessary count112606153000000001 is indeed
+strictly more than371-fold; the exact integer inequality was checked.
+Every relevant paragraph says that this changes the gain from1/512 to1/28.
+It does not present the new sufficient count as a tightened optimum at
+the old gain. It also does not claim that1/28 is a global gain optimum,
+or that the globally best phase width or latent separation is known.
+
+3. Unknown calibration
+-----------------------
+The theorem uses the same reference point and bound as the previous
+unknown-calibration example: x=1/4, eta=1/512, b=1/100, B=8. The exact
+sum of the three group sizes is correctly grouped as
+
+  101000000010000000000 = 10^10+10^18+10^20.
+
+The reduction factor9.900990098*10^15 is consistent with dividing the
+previous10^36 sufficient bound by this total. The report identifies this
+as an improvement in a sufficient bound, not an optimal sample count or
+experimental feasibility claim.
+
+The procedure's inputs omit the true calibration and structure. The
+background cap and local box are fixed design choices whose inclusion is
+guarded by data. The report correctly separates uniform unconditional
+error control from the certified local identification/power guarantee,
+and says that the procedure can remain unresolved outside the guarded
+region. It does not condition its confidence claim on having selected
+one structure. The use of unconditional concentration and union bounds
+is accurately explained; no independence between groups is asserted.
+
+The centered-site moment expansion, nonsingleton-partition recurrence,
+falling-factorial square identity, and full-support reason for eta<=B/3969
+agree with the proof. The corrected local intensity-moment/variance order
+statement is now precise. The error allocation is exactly1/20.
+
+The profiled fourth factorial-moment formula has the correct coefficients
+and uses the same monotone ratio inverse as the retained theorem. The
+smooth-domain guard, whole-rectangle gradient bounds, and finite inverse
+error are not omitted from the explanation of validity. The power proof
+is explicitly for every dataset on the joint event, not a favorable fixture.
+
+The displayed margin lower bounds and width upper bounds are outward
+relative to the exact certificate. In particular the two margins exceed
+4.3085e-10 and4.3060e-10, and the widths are less than1.5372387e-5,
+3.923102e-8, and3.746810e-6. Converting x to s=-log x is monotone with
+reversed endpoints. These are analytic coverage statements, not measured
+precision.
+
+4. Temporal dependence and sample-count meanings
+------------------------------------------------
+The report specifies stationary Gaussian AR(1) phases, independent site
+innovations, common coefficient, and independent time-local Poisson
+emissions conditional on the full phase path. A known bound on |a| is
+treated as an assumption; a point autocorrelation estimate is not promoted
+to a guarantee.
+
+The observable dimension62, path relative entropy, Pinsker factor, and
+rational -log bound agree with the temporal proof. At |a|<=1/2 and
+spacing63, the preserved interval is correctly written as
+
+  112606153000000001 <= m_*(a,63) <=112608396000000000.
+
+The report expressly says that this is equal-prior average success for
+the experiment retaining only regularly sampled observations. It is not
+a lower bound for the experiment that also records intervening times.
+The inclusive base-grid span7094328947999999938 is correct and has no
+claimed physical time unit. The delta and resulting success decimals
+are conservatively shortened relative to the certificate.
+
+The Hermite covariance inequality and kappa=(1+a0)/(1-a0) imply the
+stated variance control for consecutive statistics. With a0=1/2 the
+threefold calibration transfer gives exactly
+
+  303000000030000000000 observations.
+
+The all-consecutive known-calibration score is explicitly a full-space
+statistic with zero score above count24. Its count2372403589637318817
+matches the separate exact replay and gives EACH-geometry95%, not merely
+average success. The report keeps this point at the old gain with b=0.
+Its elapsed-span comparison is descriptive and neither design is called
+optimal. The ordinary-mean rank-two refinement is not extended to higher
+factorial statistics or imperfect geometry.
+
+The frozen-motion argument is correctly restricted: it gives a qualitative
+consistency obstruction and widths at which95% cannot be attained, not a
+numerical95% obstruction at the particular reference width. Arbitrary
+dependence is not claimed solved, and shuffling is not called independence.
+
+5. Review, priority, and record claims
+------------------------------------
+All four new scientific branches have the stated separate reviews/replays.
+Their input dependencies remain explicit and hash-pinned. The higher-gain
+replay really uses a different interpolation representation, exponential
+construction, square-root construction, and capped-simplex expectation
+audit, as the report says. The calibration and temporal replays do not
+import their producers. Finite identity checks are not presented as formal
+proof-assistant verification or a new regeneration of all geometric moments.
+
+The bibliographic and priority discussion agrees with the retained
+claim-by-claim scope notes. It explicitly keeps the Ainsleigh full-text
+comparison, full priority resolution, and external human review open.
+This consistency review does not supply those missing external comparisons.
+
+The report preserves all six major unresolved boundaries: actual global
+width/value optimization, total blind-gain integer, exact optimal sample
+integer, broader dependence/uncertainty guarantees, full priority/external
+review, and a calibrated physical experiment. Its mathematical examples
+are not presented as measurements or simulations. The software fixtures
+are separately labeled artificial in their own retained verification files.
+
+The four scientific producers use only standard-library Python and retained
+source inputs. The final artifact's attachment preservation and byte hashes
+must still pass the separate assembly audit; scientific consistency alone
+does not assert that the PDF has already been saved or assembled.

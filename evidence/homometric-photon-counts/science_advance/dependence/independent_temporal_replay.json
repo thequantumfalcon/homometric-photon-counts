@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "Independent exact arithmetic replay; no producer imports, no observations, no simulation.",
+  "schedules": [
+    {
+      "a_max": "1/4",
+      "spacing": 32,
+      "both_endpoints_pass": true,
+      "previous_spacing_fails_same_bound": true
+    },
+    {
+      "a_max": "1/2",
+      "spacing": 63,
+      "both_endpoints_pass": true,
+      "previous_spacing_fails_same_bound": true
+    },
+    {
+      "a_max": "3/4",
+      "spacing": 150,
+      "both_endpoints_pass": true,
+      "previous_spacing_fails_same_bound": true
+    },
+    {
+      "a_max": "9/10",
+      "spacing": 410,
+      "both_endpoints_pass": true,
+      "previous_spacing_fails_same_bound": true
+    },
+    {
+      "a_max": "99/100",
+      "spacing": 4290,
+      "both_endpoints_pass": true,
+      "previous_spacing_fails_same_bound": true
+    }
+  ],
+  "consecutive_each_geometry_95_percent_count": "2372403589637318817",
+  "independent_determinants": 40,
+  "independent_Hermite_checks": 324,
+  "independent_variance_inflation_checks": 25,
+  "input_sha256": "33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1",
+  "certificate_sha256": "1bbadb89395b663b26c089ecc0910948fb9cbed3a405fb8e475ec8761b7ce091",
+  "producer_sha256": "0546aec9c552963b5035ce9e517564688004baf1482e32fb9aac31929d0f7e3b",
+  "replay_sha256": "a533755e2e467aaf7746d41e99e063112e923e791b264c8bb7be5f3501327279"
+}

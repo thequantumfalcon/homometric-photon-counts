@@ -1,0 +1,143 @@
+{
+  "method": "Exact direct site generating-function product; no cumulants",
+  "attenuation_t": "1/2",
+  "maximum_moment": 5,
+  "moments": {
+    "A": {
+      "0": "1",
+      "1": "189/4",
+      "2": "456350283/102400",
+      "3": "26389491909098787/41943040000",
+      "4": "32480878290897653705607723/274877906944000000",
+      "5": "31903682137655764020614099675038323/1152921504606846976000000"
+    },
+    "B": {
+      "0": "1",
+      "1": "189/4",
+      "2": "456350283/102400",
+      "3": "26389491909098787/41943040000",
+      "4": "32480833635950815555258923/274877906944000000",
+      "5": "31903472266302627788392934988497523/1152921504606846976000000"
+    }
+  },
+  "comparisons": {
+    "A": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "B": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    }
+  },
+  "all_equal": true,
+  "seconds": 0.014999999999417923,
+  "source_sha256": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68",
+  "reference_sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32",
+  "operations": [
+    {
+      "label": "theta rational square",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "theta radical square",
+      "seconds": 0.0,
+      "bytes_per_digit": 38,
+      "bound_bits": 296
+    },
+    {
+      "label": "theta pairs x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 351
+    },
+    {
+      "label": "theta pairs x4",
+      "seconds": 0.014999999999417923,
+      "bytes_per_digit": 46,
+      "bound_bits": 364
+    },
+    {
+      "label": "theta pairs x5",
+      "seconds": 0.0,
+      "bytes_per_digit": 46,
+      "bound_bits": 363
+    },
+    {
+      "label": "phi rational square",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "phi radical square",
+      "seconds": 0.0,
+      "bytes_per_digit": 37,
+      "bound_bits": 294
+    },
+    {
+      "label": "phi pairs x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 351
+    },
+    {
+      "label": "phi pairs x4",
+      "seconds": 0.0,
+      "bytes_per_digit": 46,
+      "bound_bits": 364
+    },
+    {
+      "label": "unit sites x2",
+      "seconds": 0.0,
+      "bytes_per_digit": 43,
+      "bound_bits": 336
+    },
+    {
+      "label": "unit sites +1,+1,-1",
+      "seconds": 0.0,
+      "bytes_per_digit": 44,
+      "bound_bits": 345
+    },
+    {
+      "label": "18 nontrivial sites",
+      "seconds": 0.0,
+      "bytes_per_digit": 48,
+      "bound_bits": 378
+    },
+    {
+      "label": "21-site base",
+      "seconds": 0.0,
+      "bytes_per_digit": 47,
+      "bound_bits": 373
+    },
+    {
+      "label": "shared shifts 0,3",
+      "seconds": 0.0,
+      "bytes_per_digit": 49,
+      "bound_bits": 390
+    },
+    {
+      "label": "A 63-site structure",
+      "seconds": 0.0,
+      "bytes_per_digit": 50,
+      "bound_bits": 395
+    },
+    {
+      "label": "B 63-site structure",
+      "seconds": 0.0,
+      "bytes_per_digit": 50,
+      "bound_bits": 395
+    }
+  ]
+}

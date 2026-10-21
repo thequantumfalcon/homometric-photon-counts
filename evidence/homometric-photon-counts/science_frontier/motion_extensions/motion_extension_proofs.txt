@@ -1,0 +1,453 @@
+DEPENDENT MOTION, UNEQUAL SITE NOISE, AND GEOMETRY ERRORS
+20 October 2026
+
+Scope
+-----
+These are extensions of the fixed 63-site, unit-weight homometric construction
+at q0=pi/3. They concern the intensity law in one snapshot. The extensions to
+dependence below concern dependence BETWEEN SITES inside that snapshot.
+Arbitrary residual dependence BETWEEN SNAPSHOTS is not covered by the earlier
+independent-sample testing rates.
+
+Write z_Gj=exp(i q0 x_Gj), F_G=sum_j z_Gj exp(i theta_j), I_G=|F_G|^2,
+G=A,B, and n=63. The supplied exact construction satisfies sum_j z_Gj=0.
+The reference phase law in the robustness results is iid N(0,log 2) before
+wrapping. Intensities are unnormalized: 0<=I_G<=n^2=3969.
+
+All original proof sources and certificates remain unchanged. The accompanying
+script rebuilds the required reference moments with the foundation's exact
+cumulant engine, checks the two explicit examples directly in its exact
+number field, and certifies the numerical margins with rational arithmetic.
+This is model-level mathematical work, not experimental validation or a claim
+that the sufficient tolerances below are maximal.
+
+1. EXACT INVARIANCE UNDER A COMMON RANDOM PHASE
+---------------------------------------------
+Let U_1,...,U_n be any jointly distributed unit-circle variables. Let V be any
+unit-circle random variable, including one dependent on all the U_j. Put
+W_j=V U_j. Then on every realization,
+
+  |sum_j z_j W_j|^2 = |V|^2 |sum_j z_j U_j|^2
+                   = |sum_j z_j U_j|^2.                       (M1)
+
+Thus an arbitrary common random phase is exactly invisible to every intensity
+statistic. No independence, Gaussianity, or finite unwrapped phase variance
+of V is required. A common deterministic translation of the geometry is
+likewise invisible at the fixed frequency.
+
+In particular, taking all W_j=V gives I_G=|sum_j z_Gj|^2=0 at the common
+null, for BOTH geometries, even if V itself has the Gaussian wrapped marginal
+law used in the reference iid experiment. Equal single-site marginals alone
+therefore cannot replace the site-independence assumption.
+
+This extends the foundation's already recorded observation that subtracting
+the average iid displacement does not change intensity. The common-factor
+argument itself is elementary and is not claimed as a historically new
+general principle.
+
+2. A COMPLETE GAUSSIAN DEPENDENCE CLASS: PROJECTED COVARIANCE
+----------------------------------------------------------
+Let 1 denote the n-vector of ones and define
+
+  P=Id-11^T/n.
+
+For every real phase vector theta,
+
+  theta=P theta + (1^T theta/n)1.
+
+Equation (M1) shows that its intensity equals that of P theta, sample by
+sample. If theta is Gaussian with mean mu and positive semidefinite
+covariance C, then P theta is Gaussian with mean P mu and covariance P C P.
+It follows that:
+
+THEOREM M1. For fixed geometry, the pair (P mu,P C P) determines the entire
+Gaussian-phase intensity distribution. Two Gaussian phase models with equal
+projected mean and projected covariance have identical intensity laws.
+
+This is a sufficient equivalence condition; it does NOT say that intensity
+identifies every entry of P C P. Additional geometric symmetries can create
+further equivalences.
+
+Adding tau 11^T to C leaves P C P unchanged whenever the resulting matrix
+is a valid covariance matrix. More generally, a difference of the form
+1a^T+a1^T is annihilated by P on both sides. The argument needs only validity
+of the two covariance matrices, not a decomposition into independent common
+noise with a nonnegative coefficient.
+
+Equicorrelation, including negative correlations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For centered phases, or more generally P mu=0, consider
+
+  C=s[(1-rho)Id+rho 11^T],      s>0.
+
+Its eigenvalues are s(1-rho), with multiplicity n-1, and
+s[1+(n-1)rho], with multiplicity one. It is positive semidefinite exactly
+when
+
+  -1/(n-1) <= rho <= 1.
+
+Since P C P=s(1-rho)P, Theorem M1 compares this model to independent
+Gaussian phases with variance
+
+  s_eff=s(1-rho).                                           (M2)
+
+COROLLARY M1. For every -1/62<=rho<1 and P mu=0, the full intensity law of the
+equicorrelated 63-site model is exactly the iid Gaussian intensity law at
+variance s_eff. Consequently every foundation identity, every phase-family
+intensity conclusion appropriate to Gaussian motion, and every subsequent
+fixed-detector distribution identity carries over after replacing s by
+s_eff. This includes first-three-moment equality and the strict fourth gap
+for every s_eff>0, not merely the mean.
+
+The rho=1 endpoint is rigid common motion and gives I=0 at the exact common
+null. At rho=-1/62 the phase vector has deterministic zero sum, yet the
+intensity law still equals the iid law with variance 63s/62. Thus a real
+"independent residual plus common Gaussian" construction is not required;
+the projection proof handles the whole admissible negative-correlation
+range as well.
+
+IDENTIFIABILITY LIMIT. Under this enlarged centered-phase model, s and rho are not
+separately identifiable from intensity: any two admissible pairs with the
+same s(1-rho) produce the same full law. An earlier identification statement
+for a single iid phase variance identifies s_eff here, not both parameters.
+
+3. EXACT MEAN FORMULAS AND FAILURE OF LOWER-MOMENT CANCELLATION
+------------------------------------------------------------
+For a general jointly Gaussian phase vector, the characteristic function
+of theta_j-theta_k gives
+
+  E I_G =
+    sum_{j,k} z_Gj conjugate(z_Gk)
+      exp(i(mu_j-mu_k))
+      exp[-(C_jj+C_kk-2C_jk)/2].                            (M3)
+
+This follows by expanding |F_G|^2 and taking the expectation of each
+exp[i(theta_j-theta_k)]. It remains valid for singular Gaussian covariance
+matrices. Clean homometry alone does not require equality of this
+pair-weighted sum when the phase-difference variances vary by indexed pair.
+
+For independent, possibly nonidentical unit-circle phases, put
+m_j=E W_j. Directly separating diagonal and off-diagonal terms gives
+
+  E I_G = sum_j (1-|m_j|^2) + |sum_j z_Gj m_j|^2.            (M4)
+
+Here m_j can be complex. Both models may use exactly the same indexed array
+of site means without sharing the same unweighted null cancellation.
+
+An exact two-site heterogeneity counterexample
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use the natural site labels induced by U+V_G in the foundation construction.
+The last site of U in the first block is label 21, at coordinate 30 in both
+structures. The corresponding site in the second block is label 42:
+coordinate 61 in A and 62 in B. Their fixed-frequency phases satisfy
+
+  z_A,21=z_B,21=1,
+  Re(z_A,21 conjugate(z_A,42))=1/2,
+  Re(z_B,21 conjugate(z_B,42))=-1/2,
+
+and hence
+
+  |z_A,21+z_A,42|^2=3,       |z_B,21+z_B,42|^2=1.          (M5)
+
+Let every site's phase mean initially be a common m, and change the means
+at labels 21 and 42 to m+d, identically for A and B. Take real
+0<m,m+d<1, so that independent centered Gaussian phases realize these
+means using site variances -2 log(m_j).
+
+Because each unweighted structural sum vanishes,
+
+  sum_j z_Gj m_j = d(z_G,21+z_G,42).
+
+The first term in (M4) agrees between models, and (M5) therefore gives
+
+  E I_A-E I_B = 2d^2 >0       when d!=0.                    (M6)
+
+This effect occurs for arbitrarily small nonzero d. Thus the first-three
+moment cancellation is not an open property under unrestricted sitewise
+heterogeneity, even if the same indexed heterogeneity is applied to both
+structures.
+
+For the exact example m=1/2,d=1/4, the 61 unchanged sites have phase
+variance 2 log 2 and the two changed sites have variance -2 log(3/4).
+The means are
+
+  E I_A=749/16,       E I_B=747/16,       difference=1/8.
+
+An exact geometry-error counterexample
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Keep a common iid centered Gaussian phase law, with t^2=exp(-s), but rotate
+the two geometry phases at labels 21 and 42 by the same exp(i epsilon)
+in each structure. These are position perturbations epsilon/q0 at those
+two indexed sites.
+
+Since the old structural sum is zero, the new clean amplitude is
+
+  F_G,clean'=(exp(i epsilon)-1)(z_G,21+z_G,42).
+
+The iid mean formula then yields
+
+  E I_A'-E I_B'
+    = 8 exp(-s) sin^2(epsilon/2).                          (M7)
+
+This is strictly positive for every epsilon not equal to an integer
+multiple of 2pi, including arbitrarily small errors. At s=log 2 and
+epsilon=pi/3 the means are exactly 33 and 32.
+
+Equations (M6)-(M7) distinguish two questions: exact equality of the lower
+moments can fail under arbitrarily small heterogeneity or geometry errors,
+while DISTINCTNESS of the full laws can nevertheless be robust. The next
+theorem proves the latter with an explicit margin.
+
+4. A GENERAL COUPLING BOUND FOR FOURTH-MOMENT ROBUSTNESS
+------------------------------------------------------
+For a complex random amplitude F, write ||F||_8=(E|F|^8)^(1/8).
+Let F' be a perturbed amplitude on a coupling with the reference amplitude,
+and suppose
+
+  ||F'-F||_8 <= d,       ||F||_8 <= R.
+
+The L8 triangle inequality gives | ||F'||_8-||F||_8 |<=d.
+For nonnegative a,b with |a-b|<=d, convexity and monotonicity of x^8 give
+
+  |b^8-a^8| <= (a+d)^8-a^8 <= (R+d)^8-R^8
+
+when a<=R. For b<a the decrement over an interval below a is at most the
+increment over an interval of the same length above a. Thus
+
+  |E(I')^4-E I^4| <= (R+d)^8-R^8.                          (M8)
+
+This argument does not require independence between the perturbation and
+the original phases, or independence across perturbed sites.
+
+Suppose the two reference structures have fourth gap Delta0>0 and satisfy
+the same radius R. If their perturbations admit possibly different couplings
+with budgets d_A,d_B, then
+
+  Delta4' >= Delta0
+             -[(R+d_A)^8-R^8]
+             -[(R+d_B)^8-R^8].                            (M9)
+
+This gives a sufficient condition for distinct perturbed intensity laws,
+even when lower moments no longer match.
+
+Exact reference constants
+~~~~~~~~~~~~~~~~~~~~~~~~
+At s0=log 2 the exact reference moments, rebuilt by the accompanying script,
+are
+
+  E I_A^4 = 933840736464644496547/37748736000000,
+  E I_B^4 = 933824172434893661347/37748736000000,
+  Delta0  = 35946245119/81920000.
+
+Both fourth moments are strictly below (42/5)^8. Set
+
+  R=42/5,       d_A,d_B <= 1/200000.                       (M10)
+
+Then rational arithmetic gives the universal sufficient margin
+
+  Delta4' >= Delta0 - 2[(42/5+1/200000)^8-(42/5)^8]
+          = 259486935582734347769603011268528972786559999
+             /1280000000000000000000000000000000000000000
+          = 202.72416842401120919500235255353825998949999921875
+          > 202.                                         (M11)
+
+The exact fraction, not a floating-point approximation, certifies the sign.
+
+5. EXPLICIT CONSEQUENCES OF THE COUPLING BUDGET
+---------------------------------------------
+Each of the following conditions can be checked separately for each
+structure. Applying one condition to A and another to B is also permitted
+if both satisfy the same budget (M10).
+
+5a. Deterministic geometry errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let z_j'=z_j exp(i epsilon_j) and use the same phase vector in the coupling.
+Then
+
+  |F'-F| <= sum_j |exp(i epsilon_j)-1|
+           <= sum_j |epsilon_j|.
+
+Consequently sum_j |epsilon_j|<=1/200000 is sufficient for (M11).
+For a uniform per-site bound it suffices that
+
+  |epsilon_j| <= 1/12600000   radians, for all 63 sites.    (M12)
+
+With q0=pi/3, the corresponding coordinate error is
+
+  |delta x_j| <= 1/(4200000 pi).
+
+These are bounds in the mathematical coordinate system, not a calibrated
+physical length tolerance. Any common phase rotation can first be removed
+using (M1); a rigid translation of all sites need not consume this budget.
+
+5b. Unequal independent Gaussian site variances
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Assume centered phases for these variance-only conditions. Couple reference
+theta_j=sqrt(s0) Z_j and perturbed theta'_j=sqrt(s_j) Z_j
+using independent standard normal Z_j. The elementary inequality
+|exp(iu)-exp(iv)|<=|u-v| and Minkowski's inequality give
+
+  ||F'-F||_8 <= (E Z^8)^(1/8)
+                 sum_j |sqrt(s_j)-sqrt(s0)|
+              < 2 sum_j |sqrt(s_j)-sqrt(s0)|,              (M13)
+
+because E Z^8=105<2^8. Thus it suffices that
+
+  |sqrt(s_j)-sqrt(log 2)| <= 1/25200000
+
+uniformly. A sufficient bound directly on the variances is
+
+  |s_j-log 2| <= 1/31500000,       s_j>=0.                 (M14)
+
+Indeed, |sqrt(s_j)-sqrt(s0)|<=|s_j-s0|/sqrt(s0), and
+log 2>2/3>16/25 implies 1/sqrt(s0)<5/4. The resulting budget is
+(5/2)*63/31500000=1/200000 exactly.
+
+The arrays s_j may differ between A and B. These sufficient conditions
+preserve fourth-moment distinction, not exact equality of lower moments.
+
+5c. General correlated Gaussian motion, including mean and geometry errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For a target Gaussian phase model (mu,C), define C_perp=P C P and let
+B=sqrt(C_perp) be its positive semidefinite square root. Couple the
+projected target and reference vectors as
+
+  theta_target = P mu+B Z,
+  theta_reference = sqrt(s0) P Z,
+
+where Z has n independent standard normal entries. These projected vectors
+have the correct intensity laws by Theorem M1. Write
+
+  D=B-sqrt(s0)P.
+
+The j-th row of DZ is a centered normal variable with standard deviation
+||D_j,*||_2. With deterministic geometry phase errors epsilon_j,
+
+  ||F'-F||_8
+    <= sum_j |epsilon_j+(P mu)_j|
+       +105^(1/8) sum_j ||D_j,*||_2
+    <= sum_j |epsilon_j+(P mu)_j|
+       +2 sqrt(n) ||D||_F.                                (M15)
+
+Here ||.||_F is the Frobenius matrix norm. The matrices C_perp and P commute,
+because C_perp has zero common-mode row/column component. On the n-1
+dimensional contrast subspace, sqrt(s0)P is a scalar. Diagonalizing there
+and using
+
+  |sqrt(lambda)-sqrt(s0)|
+     =|lambda-s0|/(sqrt(lambda)+sqrt(s0))
+     <=|lambda-s0|/sqrt(s0)
+
+gives
+
+  ||D||_F <= ||C_perp-s0 P||_F/sqrt(s0).                   (M16)
+
+This remains valid if C_perp is singular. Since
+sqrt(63/log 2)<10, equations (M15)-(M16) imply the convenient sufficient
+budget
+
+  sum_j |epsilon_j+(P mu)_j|
+     +20 ||P C P-(log 2)P||_F <= 1/200000.                (M17)
+
+Under (M17), separately for A and B, the fourth gap satisfies (M11).
+With exact geometry and zero projected mean, a sufficient covariance
+tolerance is therefore
+
+  ||P C P-(log 2)P||_F <= 1/4000000.                      (M18)
+
+Arbitrarily large common-mode covariance is allowed because it is projected
+out. The condition controls the part of the covariance that affects relative
+phases.
+
+The geometry-only, variance-only and covariance-only rows are alternative
+sufficient tolerances. They must not be treated as independently available
+budgets and then added without checking the combined inequality.
+
+6. ROBUSTNESS FOR ARBITRARY NEARBY JOINT OR NONIDENTICAL PHASE LAWS
+---------------------------------------------------------------
+The L8 coupling results have an alternative that does not require Gaussian
+perturbations. Let Q0 be the full iid Gaussian phase-vector law at s0=log 2.
+For fixed exact geometry, the function I_G^4 lies in [0,n^8].
+
+For the convention TV(P,Q)=sup_E |P(E)-Q(E)|, a function f in [0,M]
+satisfies |E_P f-E_Q f|<=M TV(P,Q). This follows from the layer-cake formula
+E f=integral_0^M P(f>u)du.
+
+If arbitrary perturbed joint phase laws Q_A,Q_B satisfy
+
+  TV(Q_G,Q0)<=epsilon_G,
+
+then
+
+  Delta4' >= Delta0-n^8(epsilon_A+epsilon_B).              (M19)
+
+No independence within either perturbed phase vector is required. If both
+epsilon_G<=1/10^13, the exact lower margin is
+
+  62266525029486203/160000000000000
+  = 389.16578143428876875 >389.                            (M20)
+
+For independent but nonidentical site laws nu_G,j, telescoping the product
+measures gives
+
+  TV(product_j nu_G,j, product_j mu0)
+      <= sum_j TV(nu_G,j,mu0).
+
+If every one of the 63 site laws in both structures has single-site
+TV distance at most 1/10^14 from the reference phase law, then
+
+  Delta4' >= Delta0-2 n^9/10^14
+          = 100896523480573207/800000000000000
+          = 126.12065435071650875 >126.                    (M21)
+
+These broad tolerances are intentionally conservative; they are not claims
+about the greatest admissible perturbations. In (M19)-(M21) the geometry
+remains exact. The independent product result does not follow from close
+marginals without an independence or joint-distance condition: rigid common
+motion in Section 1 is an explicit counterexample.
+
+7. WHAT THIS CLOSES, AND WHAT IT DOES NOT
+---------------------------------------
+Completed mathematical extensions:
+
+* An exact pathwise common-mode invariance, with arbitrary dependence of
+  the common phase on the residual phase vector.
+* A full-law equivalence theorem for Gaussian projected means/covariances,
+  and the entire admissible equicorrelation family, including negative rho.
+* An exact nonidentifiability result for separate s and rho.
+* Explicit arbitrarily small site-noise and geometry perturbations that
+  destroy exact equality of the first moments.
+* Quantitative positive fourth-gap guarantees for deterministic geometry
+  errors, unequal Gaussian site variances, general Gaussian contrast
+  covariance/mean perturbations, and arbitrary nearby joint phase laws.
+
+The broad phrase "all dependent motion" is not solved by these theorems:
+arbitrary dependence can erase the distinction exactly. Nor do these
+single-snapshot results provide arbitrary temporal-dependence sample bounds.
+All sample-complexity transfers from the foundation still require their
+original independent-observation assumptions, applied to the effective
+residual process. External physical calibration and experimental validation
+are not supplied here.
+
+8. REPRODUCTION AND DEPENDENCIES
+------------------------------
+From the extracted complete-record root, with assertions enabled:
+
+  python science_frontier/motion_extensions/verify_motion_extensions.py
+
+The script uses only the Python standard library and the existing exact
+foundation engine at:
+
+  science_completion/homogeneous_control/homogeneous_control.py
+
+It imports that engine without invoking its main program. It rebuilds the
+reference moments through order four and compares them to the frozen
+foundation witness. The two explicit mean examples are direct exact sums
+of site phases. All sign margins and budgets are rational arithmetic.
+General projection and norm inequalities are proved analytically above;
+finite spot checks are not presented as substitutes for those proofs.
+
+The output motion_extension_results.json records source hashes, exact
+constants, claim scope, and verification results. This is separate internal
+AI-assisted mathematical work. It is not external peer review, formal
+proof-assistant verification, or a priority certification.

@@ -1,0 +1,19 @@
+MOTION EXTENSIONS
+20 October 2026
+
+Read motion_extension_proofs.txt for definitions, analytic arguments, and scope.
+From the extracted record root containing science_completion/ and
+science_frontier/, run with Python assertions enabled:
+
+  python science_frontier/motion_extensions/verify_motion_extensions.py
+
+The standard-library script imports the unchanged foundation exact phase
+engine, rebuilds the reference moments through intensity order four at
+s=log(2), checks the heterogeneous/geometry examples by exact site sums, and
+certifies the rational margins in the norm and total-variation bounds.
+It writes motion_extension_results.json beside itself.
+
+This covers dependence between sites in a snapshot, plus stated geometry
+and nonidentical-noise perturbations. It does not supply bounds for arbitrary
+dependence between successive snapshots. No simulation or measured physical
+data are used.

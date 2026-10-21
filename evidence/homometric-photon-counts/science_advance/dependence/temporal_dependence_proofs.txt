@@ -1,0 +1,470 @@
+FINITE GUARANTEES WITH SPECIFIED TEMPORAL DEPENDENCE
+21 October 2026 UTC
+
+Summary and exact scope
+=======================
+This continuation closes a specified temporal-dependence problem. It does
+not assume that correlated observations become independent after a finite
+waiting period. It bounds their complete joint-law difference, or accounts
+for their covariance directly.
+
+The phase process is a stationary Gaussian AR(1) process, with independent
+innovations across sites and times, and the count detector has independent
+Poisson emissions conditional on the entire phase path. The marginal
+single-snapshot model is exactly the already proved 63-site model.
+
+Two complementary results follow.
+
+1. Full-distribution testing: sampling every 63rd base time step when
+   |a|<=1/2 preserves the previous rigorous interval
+
+     112606153000000001 <= m_*(a,63) <= 112608396000000000
+
+   for the optimal equal-prior average 95% decision at s=2 log 2,
+   eta=1/512, b=0. The sufficient decision rule is the same fixed rational
+   score already saved, with no knowledge of a required. The lower bound
+   even allows the decision rule to know a. Both statements refer to the
+   experiment that keeps only the regularly sampled counts. They are not
+   lower bounds for an experiment that also uses all intervening counts.
+   A second, simpler score rule uses all consecutive counts and guarantees
+   at least 95% under EACH geometry after 2372403589637318817 counts when
+   |a|<=1/2. Its bound is sufficient only, not claimed optimal.
+
+2. Moment inference: all consecutive observations can be used. A valid
+   variance bound for a single-count statistic is inflated by at most
+   (1+a_max)/(1-a_max). At a_max=1/2 this is 3. Thus a fixed-sample
+   Chebyshev calibration procedure, including the three-group fixed-guard
+   procedure developed in the adjacent calibration folder, keeps the same
+   confidence radii and error guarantee after each sample-group size is
+   multiplied by 3. Independence between groups is not required.
+
+These are mathematical guarantees under a specified dependence model.
+No observed or simulated data are used. The AR coefficient upper bound is
+a model input; an autocorrelation point estimate is not such a guarantee.
+The sample budgets remain far too large to be described as practical.
+
+1. Model and the 62-dimensional observable phase
+===============================================
+Let n=63 and let z_Gj be the preserved unit phasors for G=A,B. They satisfy
+sum_j z_Gj=0. At integer base times t>=1 suppose
+
+  theta_1 ~ N(0,s Id_n),
+  theta_(t+1)=a theta_t+sqrt(s(1-a^2)) epsilon_(t+1),          (T1)
+
+where s>0, |a|<1, and the epsilon vectors are independent standard
+n-dimensional Gaussians, independent of theta_1. Thus
+
+  Cov(theta_t,theta_u)=s a^|t-u| Id_n.
+
+Set I_G(t)=|sum_j z_Gj exp(i theta_tj)|^2. Conditional on the entire
+phase path, the counts are independent, with
+
+  N_t | (theta_u)_u ~ Poisson(b+eta I_G(t)),
+  eta>0, b>=0.                                              (T2)
+
+The detector is time-local: its conditional rate uses theta_t only. No
+additional detector memory or afterpulsing is included in this model.
+
+Let P=Id_n-11^T/n. Intensity is unchanged when a scalar common phase is
+added. Choose a matrix U with 62 orthonormal columns spanning 1-perp, so
+UU^T=P. The standardized observable vector
+
+  X_t=U^T theta_t/sqrt(s)
+
+is a 62-dimensional stationary standard Gaussian AR(1) process with
+coefficient a. Intensity depends only on X_t; the discarded common
+coordinate cancels pathwise. This is why the dimension in all path-law
+bounds below is 62, not 63. An arbitrary added common-phase process would
+also cancel, even if it were dependent on the contrast process.
+
+Sampling at times 1,1+ell,...,1+(m-1)ell gives another stationary AR(1)
+sequence of contrast vectors with coefficient r=a^ell. Its single-time
+law is unchanged. The symbol m always counts retained observations.
+
+2. Exact path relative entropy and a full-count TV bound
+=======================================================
+Write P_(m,r) for the joint law of the m standardized contrast vectors,
+and Q_m for m independent standard 62-dimensional Gaussians. With d=62,
+
+  KL(P_(m,r) || Q_m) = -d(m-1) log(1-r^2)/2.                (T3)
+
+All logarithms are natural. Here is a direct derivation. Under P, a new
+vector given the previous vector x has law N(rx,(1-r^2)Id_d), whereas
+under Q its conditional law is N(0,Id_d). Integrating the logarithm of
+these two normal densities gives the conditional relative entropy
+
+  [r^2 |x|^2 - d r^2 - d log(1-r^2)]/2.
+
+The stationary expectation of |x|^2 is d, cancelling the first two
+terms. The first vector has the same law under P and Q, and the log
+likelihood of the remaining Markov path is the sum of m-1 conditional
+log likelihoods. Taking expectations proves (T3). Equivalently the
+m-by-m AR correlation matrix R has determinant (1-r^2)^(m-1).
+
+Our total variation convention is TV(P,Q)=sup_E |P(E)-Q(E)|. Pinsker's
+inequality in this convention is TV(P,Q)<=sqrt(KL(P||Q)/2). A short
+proof is included to fix the constant. Aggregate both laws to a set E
+attaining the positive variation and its complement. Jensen's inequality
+for the convex function x log x shows that the original KL is at least
+the Bernoulli divergence D(p||q), where p-q=TV(P,Q). As a function of p,
+D(p||q) has value and first derivative zero at p=q, and second derivative
+1/[p(1-p)]>=4. Therefore D(p||q)>=2(p-q)^2. The endpoint cases follow
+by limits. This proves the stated form of Pinsker.
+
+Applying the geometry-specific intensity and conditional Poisson Markov
+kernel cannot increase TV. Indeed the difference of probabilities of an
+output event is the integral of a function taking values in [0,1] against
+P-Q, whose absolute value is at most TV(P,Q). Therefore for either G,
+
+  TV(law_G(N_1,N_(1+ell),...,N_(1+(m-1)ell)), P_G^m)
+    <= delta(m,a,ell)
+    := min(1, (1/2)sqrt(d(m-1)[-log(1-a^(2ell))])).          (T4)
+
+Here P_G is the FULL one-count marginal. No count truncation is introduced
+in this step. The discarded-tail error in the previous iid certificate
+has already been paid there.
+
+For a specified bound |a|<=a_max<1, no logarithm evaluation is needed:
+
+  delta^2 <= d(m-1) a_max^(2ell)
+              /[4(1-a_max^(2ell))],                        (T5)
+
+because -log(1-u)=integral_0^u (1-v)^(-1) dv<=u/(1-u).
+Every numerical statement in the executable uses the rational right
+side of (T5) and rigorously enclosed square roots.
+
+A useful extension of the same proof is immediate. If the contrast path
+is jointly Gaussian with covariance R_m tensor Id_d, where R_m is positive
+definite and has diagonal entries 1, its relative entropy to independent
+contrasts is -(d/2)log det R_m. Consequently (T4) is replaced by
+
+  TV <= min(1, (1/2)sqrt(-d log det R_m)).                  (T6)
+
+This extension requires a specified valid Gaussian correlation matrix.
+The delivered numerical certificate uses AR(1), not an unspecified R_m.
+
+3. Transfer of testing and confidence guarantees
+================================================
+For a decision rule f, its equal-prior success is
+
+  S(f)=[Pr_A(f=A)+Pr_B(f=B)]/2.
+
+The two changes of law in (T4) each change the appropriate event
+probability by at most delta. Averaging gives
+
+  |S_dependent(f)-S_iid(f)|<=delta.                        (T7)
+
+This also holds for randomized rules, by conditioning on the auxiliary
+random seed. Taking suprema over rules proves
+
+  |S_dependent^*(m)-S_iid^*(m)|<=delta.                    (T8)
+
+There is no assumption that the iid optimal rule is also the dependent
+optimal rule. In particular, extra information in temporal correlations
+does not invalidate the necessary bound: it is controlled at the level
+of the complete joint data laws before optimizing any decision rule.
+
+Similarly, any fixed-m confidence procedure having failure probability
+at most alpha under iid sampling has failure probability at most
+alpha+delta under this sampled dependent model. One must budget this
+loss; a statement of iid 95% by itself does not remain exactly 95%.
+
+At the preserved detector point s=2 log 2, eta=1/512, b=0, the earlier
+exact certificate supplies
+
+  m0=112606153000000000,
+  S_iid^*(m0)<0.94999999953644771487686387151626;
+
+  m1=112608396000000000,
+  S_iid(f_score,m1)>0.95000000025017165383294509403600.
+
+The exact rational endpoints, not these shortened decimals, are used.
+For |a|<=1/2 and ell=63, (T5) gives
+
+  delta(m1)<1.432390752195073e-10,
+  S_dependent(f_score,m1)>0.9500000001069325786134.
+
+At m0, adding its corresponding delta to the iid optimal-success upper
+bound is still strictly below 19/20. A decision rule for more observations
+can always ignore later observations; the sampled process with fixed ell
+has consistent prefixes. Hence optimal success is nondecreasing in m,
+even with dependence. For every fixed |a|<=1/2 this proves
+
+  m0+1 <= m_*(a,63) <= m1.                                 (T9)
+
+The necessary half permits a to be known to the decision rule. The
+sufficient rational score does not use a and works uniformly over its
+stated range. These are equal-prior AVERAGE success statements; separate
+95% success under each geometry is not claimed.
+
+For m1 retained observations at ell=63, the inclusive base-grid span is
+
+  63(m1-1)+1 = 7094328947999999938 slots.
+
+This is an elapsed-grid span, not a requirement to record all intervening
+counts. It has no physical time unit until the experiment specifies the
+base sampling interval. Using intervening observations could improve
+performance; (T9) makes no claim about that different experiment.
+
+The exact program also certifies these sufficient spacings:
+
+  known a_max       1/4    1/2    3/4    9/10    99/100
+  ell                32     63    150     410      4290
+
+Each is the smallest integer satisfying THIS two-endpoint transfer test
+with the preserved margins. It is not claimed to be the minimum spacing
+with which some other analysis or test could work.
+
+4. Using every observation for finite-variance inference
+=======================================================
+Let Z_t=h(N_t) be any real statistic with finite second moment, and put
+g(X_t)=E[Z_t|X_t]. Conditional detector independence gives, for k>=1,
+
+  Cov(Z_t,Z_(t+k))=Cov(g(X_t),g(X_(t+k))).                  (T10)
+
+For standardized Gaussian vectors with cross-covariance a^k Id_d, the
+Hermite expansion proves
+
+  |Cov(g(X_t),g(X_(t+k)))| <= |a|^k Var(g(X_t)).            (T11)
+
+For completeness, use probabilists' multivariate Hermite polynomials
+H_alpha and their generating function exp(u dot x-|u|^2/2).
+The joint Gaussian exponential moment is exp(a^k u dot v). Matching
+coefficients gives
+
+  E[H_alpha(X_t)H_beta(X_(t+k))]
+    =1_(alpha=beta) alpha! a^(k|alpha|).
+
+Hermite polynomials form a complete orthogonal basis in Gaussian L2.
+Expand g-Eg=sum_(|alpha|>=1) c_alpha H_alpha. Orthogonality, followed by
+L2 convergence, yields
+
+  Cov(g(X_t),g(X_(t+k)))
+    =sum_(|alpha|>=1) c_alpha^2 alpha! a^(k|alpha|).
+
+Taking absolute values and using |a|^(k|alpha|)<=|a|^k gives (T11).
+This is the elementary finite-dimensional form of the established
+Gaussian maximal-correlation inequality; it is not a new general
+probability inequality. The generating-function calculation and complete
+expansion identify exactly which version is used here.
+
+Let a_max be any known upper bound on |a|. Expanding the variance of the
+sample mean and summing the geometric covariance bound gives
+
+  Var(m^(-1)sum_(t=1)^m Z_t)
+    <= [E Var(Z_1|X_1)+kappa Var(g(X_1))]/m
+    <= kappa Var(Z_1)/m,
+
+  kappa=(1+a_max)/(1-a_max).                               (T12)
+
+The finite-m multiplier before enlarging to kappa is
+
+  1+2 sum_(k=1)^(m-1) (1-k/m)a_max^k <= kappa.
+
+This holds for negative a as well, by the absolute covariance bound.
+For a=0 it reduces to the independent variance calculation.
+
+Thus, if V_r is any deterministic valid upper bound on Var(h_r(N)),
+Chebyshev and a union bound give simultaneous fixed-m intervals
+
+  |bar h_r-E h_r| <= sqrt(kappa V_r/(m alpha_r)),
+  all r, with probability at least 1-sum_r alpha_r.        (T13)
+
+The statistics within a count, or distinct sample groups, need not be
+independent. Each marginal tail bound is unconditional, so the union
+bound remains valid. This fact matters for preliminary gates followed by
+main-data calibration: it would be incorrect to invoke a pilot-dependent
+conditional iid law without justification, but no such step is needed
+for the fixed-guard scheme in the adjacent calibration proof.
+
+At a_max=1/2, kappa=3. Replacing an iid group's size m_iid by 3 m_iid and
+using inflation 3 in its radii makes every radius exactly the same as
+before. This applies separately to the preliminary mean, coarse calibration,
+and final inference groups, including consecutive disjoint groups from the
+same stationary process. The adjacent finite certificate uses iid group
+sizes [10^10,10^18,10^20], which become [3*10^10,3*10^18,3*10^20].
+Their total is 303000000030000000000 observations. Its fixed guards and
+unconditional failure-budget argument still apply, so the same reference
+point receives at least 95% joint calibration and identification success.
+The model-uniform variance bounds on the relevant fixed parameter branch
+must still be justified; (T12) supplies dependence control, not a new
+proof of any chosen bound V_r.
+
+5. A further refinement for the ordinary photon mean
+====================================================
+At the exact common null, the centered intensity has no linear Hermite
+component. To see this without assuming that I(theta) is an even
+function, give the phase vector a small mean mu. Direct expansion gives
+
+  E I(theta+mu)
+    = n(1-exp(-s))+exp(-s)|sum_j z_j exp(i mu_j)|^2.
+
+Since sum_j z_j=0, every derivative with respect to mu_j vanishes at
+mu=0. Gaussian integration by parts, valid for this smooth bounded
+intensity with bounded derivatives, gives
+
+  E[theta_j(I-EI)]=s E[partial_j I]=0.
+
+Thus the first nonzero Hermite degree, if any, is at least 2, also after
+projection to the contrast coordinates. Applying the preceding expansion
+with powers |a|^(2k) gives
+
+  Var(mean N) <= [E Lambda+kappa_2 Var Lambda]/m,
+  kappa_2=(1+a_max^2)/(1-a_max^2),
+  Lambda=b+eta I.                                          (T14)
+
+At a_max=1/2, kappa_2=5/3. The Poisson noise contributes E Lambda/m
+without a temporal inflation because emissions are conditionally
+independent. Higher factorial statistics need not have Hermite rank 2;
+the generic kappa bound is used unless their lower Hermite coefficients
+are separately proved to vanish. Geometry errors can also remove the
+exact-null rank cancellation. The delivered calibration transfer uses
+the safe common factor 3 and does not depend on (T14).
+
+6. A concrete score test using every consecutive observation
+==========================================================
+The total-variation transfer in Sections 2-3 leaves many base-time
+observations unused. A separate fixed-sample analysis can use all of them.
+It obtains a different sufficient bound, without applying an iid normal
+approximation to the dependent score sum.
+
+Use the preserved rational weights w_0,...,w_24 from
+science_frontier/tighter_testing/tighter_testing_certificate.json and
+define the bounded statistic
+
+  Z_t=w_(N_t) if N_t<=24, and Z_t=0 if N_t>24.
+
+This is an explicit score on the FULL count space. A count above 24
+contributes zero; there is no conditioning on a no-tail event and no
+unpaid m-fold tail approximation. For each G the pinned input encloses
+the conditional probabilities R_G(k)=P_G(k)/(1-tau_G), with
+0<=tau_G<=T_G. Hence
+
+  (1-T_G) R_G^-(k) <= P_G(k) <= R_G^+(k),  0<=k<=24.
+
+Multiplying each interval by its fixed signed rational weight, then
+summing, encloses mu_G=E_G Z. Summing upper probability bounds times
+w_k^2 encloses E_G Z^2. Subtracting the minimum of mu^2 over the mean
+interval gives a rigorous variance upper bound V_G. The zero tail score
+makes these formulas exact full-law moment identities.
+
+Let mu_G^- and mu_G^+ be the enclosed mean endpoints, and set
+
+  theta=(mu_A^-+mu_B^+)/2,
+  d0=(mu_A^--mu_B^+)/2>0.
+
+The true mean drift is at least d0 on each side of theta. With
+kappa=(1+a_max)/(1-a_max), (T12) gives
+Var(sum Z_t)<=m kappa V_G. Cantelli's one-sided variance inequality now
+bounds the error of the rule "choose A iff sum Z_t>=m theta" by
+
+  error_G <= kappa V_G/(kappa V_G+m d0^2).                 (T15)
+
+For clarity, Cantelli follows by applying Markov's inequality to
+(Y+c)^2 on {Y>=d} for a centered Y, then minimizing
+(Var Y+c^2)/(d+c)^2 over c>=0; the minimizer is c=Var Y/d.
+Apply the same result to -Y for the other tail. No independence is used
+in that step. The preceding variance bound is where temporal dependence
+has already been accounted for.
+
+At s=2 log 2, eta=1/512, b=0, the exact score intervals give approximately
+
+  mu_A in [4.805279447473817e-17,4.805279447538469e-17],
+  mu_B in [-4.805266336319135e-17,-4.805266336255248e-17],
+  V_A<9.610585117708734e-17,
+  V_B<9.610506450407392e-17.
+
+The executable retains the full rational endpoints. With a_max=1/2,
+kappa=3, choosing
+
+  m=max_G ceil(19 kappa V_G/d0^2)
+   =2372403589637318817                                    (T16)
+
+makes each error bound at most 1/20. This proves separate 95% success
+under A and B, and hence also 95% equal-prior average success. The rule
+does not use the true a. It needs the stated uniform bound |a|<=1/2.
+
+This design records approximately 21.07 times as many counts as the
+63-spaced score design, but its elapsed base-grid span is approximately
+one third as long, because it uses consecutive times. Neither design is
+proved optimal for elapsed time, retained-count number, or data-storage
+cost. This comparison does not alter the iid optimal-sample bracket or
+the bracket for the specific thinned experiment in (T9).
+
+7. Why an unrestricted temporal-dependence claim would be false
+==============================================================
+Keep the correct independent Gaussian SITE distribution at each time,
+but freeze the entire phase vector: theta_t=theta_1 for all t. This is
+a stationary temporal process with the correct one-snapshot phase law.
+With independent conditional Poisson emissions, the infinite count
+record reveals at most the one latent intensity I_G(theta_1). In
+particular, for every m, data processing gives
+
+  S_m^* <= [1+TV(law(I_A),law(I_B))]/2.                     (T17)
+
+The two intensity laws have overlap. In fact the wrapped Gaussian
+density is strictly positive on the phase torus. Absorbing the fixed
+phasor arguments into its phase coordinates gives two mutually
+absolutely continuous measures on the same torus and the common map
+phi -> |sum_j exp(i phi_j)|^2. Their pushforwards are mutually absolutely
+continuous, so their TV is strictly less than 1. Thus the upper bound in
+(T17) is strictly less than 1: repeated counts cannot consistently learn
+the structural distribution from one frozen intensity realization.
+
+This does not by itself give a numerical 95% obstruction at the saved
+reference point, and no such number is asserted here. The previously
+proved small-s limit TV(law(I_A),law(I_B))->0 does show that some allowed
+interior phase widths cannot achieve 95% under frozen motion at ANY m.
+Consequently marginal assumptions without temporal control cannot
+support a uniform 95% finite-sample statement across that domain.
+
+Even restricting to |a|<1 without a specified bound away from 1 does not
+give a uniform arbitrarily-high-confidence rate: for any fixed finite m,
+the AR path tends to the frozen path as a increases to 1. Each finite
+count-vector probability then converges by bounded continuity of the
+Poisson mixture kernel, and normalized countable probability masses
+converge in total variation. The frozen obstruction is approached by
+valid AR(1) models. A quantitative a_max<1 is substantive information.
+
+8. Reproducibility, prior work, and remaining scope
+=================================================
+Run
+
+  python3 science_advance/dependence/certify_temporal_dependence.py
+
+The executable pins the complete prior iid endpoint certificate by
+SHA-256, performs all spacing and success inequalities with exact
+rational arithmetic, and encloses square roots using integer arithmetic.
+It also checks small exact AR correlation determinants and Hermite
+covariance identities. Those finite checks supplement, rather than
+replace, the proofs for arbitrary m and Hermite degree above.
+
+The calculation does not rerun the old count-probability or moment
+engines. Their correctness and declared independent-review scope remain
+the retained input dependency. The new contribution is the explicit
+temporal transfer and its application to the saved scientific targets.
+
+Relevant primary sources, read for attribution and normalization:
+
+  Ivan Nourdin, Giovanni Peccati, Xiaochuan Yang (2019),
+  "Berry-Esseen bounds in the Breuer-Major CLT and Gebelein's inequality,"
+  Electronic Communications in Probability 24, paper 34.
+  DOI 10.1214/19-ECP241. Proposition 5.1 and its Hermite proof.
+  https://bura.brunel.ac.uk/bitstream/2438/24526/1/FullText.pdf
+
+  Mark D. Reid and Robert C. Williamson (2009),
+  "Generalised Pinsker Inequalities," arXiv:0906.1244.
+  Equations (6)-(7) define their variational divergence as twice our TV
+  and state KL>=V^2/2, hence KL>=2 TV^2 in our convention.
+  https://arxiv.org/pdf/0906.1244
+
+These principles predate this project. The proof does not claim a novel
+Pinsker or Gaussian maximal-correlation inequality. It supplies explicit
+new consequences for the two fixed structures and retained certificates.
+
+Unknown or nonspecified temporal dependence, nonstationary initialization,
+time-varying phase law, detector memory, optional stopping, actual estimates
+of a with coverage, and physical validation remain separate questions.
+The total-variation transfer method does not license the iid Berry-Esseen
+bound on all consecutive correlated observations. No model assumption is
+claimed experimentally verified by this mathematical continuation.

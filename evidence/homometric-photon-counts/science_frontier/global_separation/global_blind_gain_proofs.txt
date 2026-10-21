@@ -1,0 +1,312 @@
+FOUR-COUNT BLIND GAINS: FINITENESS AND EXACT INTERVAL EXCLUSION
+2026-10-20
+
+Scope and status
+---------------
+We consider the existing two 63-site geometries, independent identically
+distributed Gaussian phase motion at a fixed 0<s<infinity, and zero
+background Poisson detection. The global qualitative finiteness theorem
+below depends on two stated, published mathematical theorems. The interval
+root certificate is an exact rational computation from the previously
+verified moment table at t=exp(-s/2)=1/2.
+
+The exact number of positive blind gains on the whole positive axis is
+NOT determined here.
+
+1. The quantity whose zeros matter
+---------------------------------
+Let P_A,P_B be the two intensity laws on [0,M], M=3969. Define
+
+  F_s(eta) = E_A[I^4 exp(-eta I)] - E_B[I^4 exp(-eta I)].
+
+For N|I ~ Poisson(eta I),
+
+  Pr_A(N=4)-Pr_B(N=4) = eta^4 F_s(eta)/24.
+
+Thus a positive gain is blind to the four-count indicator exactly when
+F_s vanishes. Full count laws still differ at every eta>0, because their
+fourth falling-factorial moments differ by eta^4 D4(s)>0.
+
+Since I is bounded, F_s extends to an entire function of complex eta.
+It is not identically zero: F_s(0)=D4(s)>0.
+
+2. The finite-sign-change property of the intensity density difference
+----------------------------------------------------------------------
+For this section, s is fixed and strictly positive. A circle Gaussian
+phase has density
+
+  w_s(theta) = (1/(2 pi)) sum_(k in Z) exp(-k^2 s/2) exp(i k theta).
+
+This is real analytic on a neighborhood of [-pi,pi]. Indeed its complex
+Fourier series converges uniformly on every bounded complex strip.
+The product density W_s(theta)=product_j w_s(theta_j) is consequently
+analytic on a neighborhood of the compact phase cube C=[-pi,pi]^63.
+
+Each intensity map
+
+  f_G(theta)=|sum_j z_Gj exp(i theta_j)|^2
+
+is real analytic on a neighborhood of C and is nonconstant. It is
+nonconstant even independently of the chosen clean geometry: by changing
+the phase variables one may align all phasors, or instead vary one
+relative phase.
+
+The intensity law is absolutely continuous. To see this, at least one
+partial derivative of f_G is a nonzero analytic function, whose zero set
+has Lebesgue measure zero. Hence the critical set {gradient f_G=0} also
+has measure zero. At every regular point, the inverse function theorem
+gives a local coordinate chart with f_G as its first coordinate.
+In that chart, pushforward of an absolutely continuous input measure
+is absolutely continuous on the first coordinate. A countable collection
+of these charts covers the regular set, and the remaining input set has
+probability zero. This proves the claim.
+
+Let H_G(u)=Pr(f_G(theta)<=u), 0<=u<=M. It is the parameter integral
+
+  H_G(u)=integral_(R^63)
+           W_s(theta) 1_C(theta) 1_{f_G(theta)<=u} dtheta.
+
+The integrand, extended by zero outside the phase cube, is globally
+subanalytic in (u,theta). This follows because the density and intensity
+map are restrictions of analytic functions to a compact cube; interval
+indicators and sublevel sets of these restricted analytic functions are
+definable in the restricted-analytic structure.
+
+EXTERNAL THEOREM A: Cluckers and Miller (2011), Theorem 1.3, proves
+stability of constructible functions under parameter integration.
+Here "constructible" means finite sums of products of globally
+subanalytic functions and logarithms of positive globally subanalytic
+functions. Applying that theorem to the displayed bounded integrand
+shows that H_G is constructible on [0,M].
+
+Such a function is definable in the real field with restricted analytic
+functions and exponentiation, usually denoted R_an,exp, since logarithm
+is definable as the inverse of exponentiation on positive reals.
+
+EXTERNAL THEOREM B: van den Dries, Macintyre and Marker (1994),
+Corollary 5.13, proves that R_an,exp is o-minimal. In particular, every
+definable subset of the real line is a finite union of intervals and
+points.
+
+The set where H_G has a derivative, and that derivative on its domain,
+are definable: the usual epsilon-delta definition of a finite derivative
+is a first-order quantified condition over the real field. Absolute
+continuity implies differentiability almost everywhere. Therefore the
+definable exceptional set has measure zero and, by o-minimality, is
+finite. Define h_G(u)=H'_G(u) where the derivative exists and set h_G=0
+at the exceptional points. It is a definable density of P_G.
+
+Consequently
+
+  w(u)=u^4 [h_A(u)-h_B(u)]
+
+is an integrable, definable signed function on (0,M). Its positive and
+negative sets are finite unions of intervals and points. Ignoring
+isolated points, which do not affect integration, w therefore has only
+finitely many changes of sign. Also w is not zero almost everywhere,
+because integral w = F_s(0)>0.
+
+IMPORTANT LIMITATION OF THIS ARGUMENT. We have not asserted that
+F_s(eta), with unrestricted eta, is itself definable by a general closure
+of R_an,exp under integration. No such closure is used. Only the bounded
+phase integral defining the CDF is treated by Theorem A. The next step is
+a separate, elementary property of Laplace transforms.
+
+3. Elementary variation-diminishing argument
+-------------------------------------------
+LEMMA. If a nonzero integrable signed function w on a compact interval
+has m changes of sign, then its Laplace transform
+
+  F(eta)=integral exp(-eta u) w(u) du
+
+has at most m real zeros, counted with multiplicity.
+
+Here sign changes are counted after zero intervals and sets of measure
+zero are discarded. Choose increasing cut points a_1,...,a_m between
+successive nonzero sign blocks. A cut may be placed anywhere inside a
+zero interval separating opposite signs.
+
+PROOF. Suppose F has real zeros eta_1,...,eta_l with multiplicities
+at least r_1,...,r_l, where sum_i r_i=m+1. If it has more zeros or
+larger multiplicities, simply discard excess conditions. Bounded support
+allows differentiation under the integral, so
+
+  integral u^k exp(-eta_i u) w(u) du = 0,  0<=k<r_i.
+
+The real exponential-polynomial space
+
+  V = span{u^k exp(-eta_i u): 1<=i<=l, 0<=k<r_i}
+
+has dimension R=sum_i r_i=m+1, and every nonzero member has at most
+R-1 real zeros counted with multiplicity. Here is an elementary proof
+of this latter fact. A member is sum_i P_i(u) exp(lambda_i u), with
+distinct real lambda_i and deg P_i<r_i. These functions are linearly
+independent: as u tends to positive infinity, the largest exponent
+with a nonzero coefficient polynomial cannot be cancelled by the
+smaller exponents. For the zero bound, divide by one exponential and
+differentiate. The polynomial attached to that exponent loses one
+degree (or disappears), while each other polynomial retains at most
+its previous degree. The resulting function belongs to a space of
+dimension R-1 of the same form. Induction, starting with R=1, and
+Rolle's theorem with multiplicities give the bound. If the derivative
+is identically zero, the divided function is a nonzero constant and
+has no zeros, which is already the required conclusion.
+
+There is a nonzero g in V vanishing at all m cut points, since these
+are m homogeneous linear conditions on a space of dimension m+1.
+The zero bound shows that its prescribed m zeros are all simple and
+that it has no others. Multiplying g by -1 if necessary, its alternating
+signs match those of w on every nonzero sign block. Hence g(u)w(u)>=0
+almost everywhere and is strictly positive on a set of positive measure.
+Because g is bounded on the compact interval, integral g w>0. But g
+is a linear combination of the displayed functions whose integrals
+against w all vanish, so integral g w=0, a contradiction.
+
+THEOREM 4 (GLOBAL QUALITATIVE FINITENESS). For each fixed finite positive
+Gaussian phase variance s, there are only finitely many positive
+four-count blind gains at zero background.
+
+PROOF. The density construction gives a finite number m_s of sign
+changes of w(u)=u^4(h_A-h_B). Apply the lemma to F_s. In fact the number
+of real zeros, counted with multiplicity, is at most m_s. The entire
+function F_s is nonzero, so every multiplicity is well defined and finite.
+
+This is a non-effective finiteness result. It does not compute m_s,
+give a certified gain after which no zeros occur, or determine the
+integer number of positive roots. It also does not assert a bound
+uniform over all s, nor address positive background.
+
+4. Exact result at t=1/2: one root on the entire (0,1/128]
+--------------------------------------------------------
+Write mu_G,k=E_G[I^k] and D_k=mu_A,k-mu_B,k for the exact rational
+moments at t=1/2. Moments through order 32 are available in
+
+  science_extension/finite_detection/fixed_t_moments.json.
+
+For x>=0, Taylor's theorem gives global one-sided exponential bounds.
+If S_27(x)=sum_(j=0)^27 (-x)^j/j!, then
+
+  0 <= exp(-x)-S_27(x) <= x^28/28!.
+
+Therefore the polynomial
+
+  U(eta)=sum_(j=0)^27 (-1)^j D_(4+j) eta^j/j!
+          + mu_A,32 eta^28/28!
+
+is an upper bound on F(eta), for every eta>=0. Notice that this preserves
+the cancellation between the two structures before bounding the remainder.
+
+Likewise, for the even Taylor polynomial S_26,
+
+  -x^27/27! <= exp(-x)-S_26(x) <= 0.
+
+Since F'(eta)=-E_A[I^5 exp(-eta I)]+E_B[I^5 exp(-eta I)], the polynomial
+
+  V(eta)=sum_(j=0)^26 -(-1)^j D_(5+j) eta^j/j!
+          + mu_A,32 eta^27/27!
+
+is an upper bound on F'(eta), for every eta>=0.
+
+To certify a polynomial p is negative on [a,b], rewrite it in the
+Bernstein basis of degree d:
+
+  p(a+(b-a)y)
+    = sum_(i=0)^d beta_i binom(d,i)y^i(1-y)^(d-i), 0<=y<=1.
+
+These basis functions are nonnegative and sum to one, so
+
+  p([a,b]) <= max_i beta_i.
+
+All coefficients and endpoints here are rational. The exact conversion
+from p(x)=sum_j c_j x^j is
+
+  q_k=(b-a)^k sum_(j=k)^d c_j binom(j,k) a^(j-k),
+  beta_i=sum_(k=0)^i q_k binom(i,k)/binom(d,k).
+
+The new script certify_global_blind_interval.py verifies, by Fraction
+arithmetic, that every Bernstein coefficient is negative for
+
+  V on [0,1/512],
+  U on [1/512,1/128].
+
+The maximum coefficients have the following decimal approximations
+(the certificate stores the exact rational values):
+
+  max Bernstein(V on [0,1/512]) = -30648.2084857291410014352207917...
+  max Bernstein(U on [1/512,1/128]) = -8.67056780351911520895093576857...
+
+It follows that F is strictly decreasing on [0,1/512], and strictly
+negative everywhere on [1/512,1/128].
+
+The script also independently rechecks positive and negative Taylor
+enclosures at the endpoints of the existing rational root bracket
+
+  a = 61217055127150107/36893488147419103232,
+  b = 38260659454468817/23058430092136939520.
+
+These have decimal approximations
+
+  a = 0.00165929160405052584701356133134...
+  b = 0.00165929160405052585243457219377...
+
+with 0<a<b<1/512, F(a)>0 and F(b)<0. Also F(0)=D4>0.
+The intermediate value theorem, the strict derivative bound, and the
+second interval exclusion establish:
+
+THEOREM 5 (EXACT INTERVAL ROOT COUNT). At t=1/2 and b=0, F has exactly
+one zero in (0,1/128]. It is simple and lies in [a,b]. F is positive
+below that root and negative above it through 1/128.
+
+No numerical grid is used to infer this statement. Two exact Bernstein
+convex-hull bounds certify the full intervals.
+
+5. Reproduction and the remaining global question
+-------------------------------------------------
+From the repository/workspace root:
+
+  python science_frontier/global_separation/certify_global_blind_interval.py
+  python science_frontier/global_separation/certify_global_blind_interval.py --verify-only
+
+To recompute the input moments from the original geometric phase engine
+as well as verifying the new result:
+
+  python science_frontier/global_separation/certify_global_blind_interval.py --rebuild-input
+
+The output blind_interval_certificate.json contains the input hashes,
+exact rational bounds, endpoints, and complete certificate coverage.
+Only new files in science_frontier/global_separation are written.
+
+Combining the two new results gives:
+
+  At t=1/2 the global number of positive blind gains is finite and at
+  least one, and exactly one lies in (0,1/128].
+
+Additional roots above 1/128 have not been excluded or certified. The
+exact global integer count remains unresolved. An unproved assertion of
+"only one positive blind gain" would go beyond these results.
+
+6. Primary sources for the two external proof dependencies
+---------------------------------------------------------
+[CM2011] Raf Cluckers and Daniel J. Miller,
+  "Stability under integration of sums of products of real globally
+  subanalytic functions and their logarithms,"
+  Duke Mathematical Journal 156(2) (2011), 311-348.
+  DOI: 10.1215/00127094-2010-213.
+  Definition 1.2 and Theorem 1.3, published pp. 313-314.
+  Author-hosted published article:
+  https://rcluckers.perso.math.cnrs.fr/prints/MillerStab.pdf
+
+[DMM1994] Lou van den Dries, Angus Macintyre and David Marker,
+  "The elementary theory of restricted analytic fields with exponentiation,"
+  Annals of Mathematics 140(1) (1994), 183-205.
+  DOI: 10.2307/2118545.
+  Corollary 5.13, published p. 204.
+  Primary article PDF:
+  https://www.math.ens.psl.eu/~zchatzid/papiers/o-min-21/DMM.pdf
+  Journal record:
+  https://annals.math.princeton.edu/1994/140-1/p05
+
+These established theorems are proof dependencies, not claims of originality.
+The application, root certificate, and exposition have been developed in
+this session; external mathematical review and a full priority comparison
+remain separate tasks.

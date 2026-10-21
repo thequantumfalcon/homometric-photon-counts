@@ -1,0 +1,103 @@
+NECESSARY SAMPLE BOUND FOR THE FIXED 13-BIN OBSERVATION
+
+Result
+
+At the retained reference model s=2 log(2), eta=1/20, b=0, any test of
+m independent observations of the 13 bins (0,...,11,>=12), including a
+randomized test, needs at least 28,091,647,285,174 observations to have
+both misclassification probabilities strictly below 1/20. The retained
+explicit score test suffices at 102,399,876,723,169 observations. Thus the
+optimal sample count for THIS fixed binned experiment lies in that integer
+interval; the sufficient endpoint is less than 3.646 times the necessary
+endpoint. This is a new lower bound, not an optimality proof.
+
+The result is conditional on the archived certified probability intervals.
+It does not apply as a necessary bound to access to individual counts above
+11, other gains or phase widths, changing measurements, or dependent gates.
+The larger observation space could contain information discarded by pooling.
+These are statements within a mathematical model, not experimental results.
+
+Exact input and computation
+
+certify_binned_lower_bound.py reads only the selected row of the sealed
+continuation-2026-10-20/multibin/certificate.json. Its entire file hash is
+pinned. All arithmetic uses Python Fraction and integer arithmetic; there
+are no numerical square roots, logarithms, optimizers, Monte Carlo samples,
+or imports of the original arithmetic implementation. Every lower endpoint
+is positive, every interval is ordered, and each family's box intersects
+the probability simplex. The validity of the inherited enclosures is a
+dependency; these checks alone would not establish their model validity.
+
+Let actual probabilities be p_i and q_i, and their saved interval endpoints
+be l_i^P,u_i^P,l_i^Q,u_i^Q. Set
+ D_i=max(|l_i^P-u_i^Q|,|u_i^P-l_i^Q|),
+ e=sum_i D_i^2/[8 min(l_i^P,l_i^Q)].
+The script rounds e UP to a rational delta on a denominator 10^30 grid,
+checking 0<e<=delta<1 exactly. This is conservative and introduces no
+floating-point decision. The certificate records delta and all final bounds.
+
+Affinity argument
+
+Define a=sum_i sqrt(p_i q_i). Probability normalization gives
+ 1-a = (1/2) sum_i (sqrt(p_i)-sqrt(q_i))^2
+     = sum_i (p_i-q_i)^2/[2(sqrt(p_i)+sqrt(q_i))^2]
+     <= sum_i D_i^2/[8 min(l_i^P,l_i^Q)] <= delta.
+The lower bounds on every probability make all denominators positive.
+
+For any two finite probability vectors r,s, Cauchy-Schwarz gives
+ TV(r,s)=(1/2)sum |sqrt(r)-sqrt(s)|(sqrt(r)+sqrt(s))
+         <= sqrt(1-affinity(r,s)^2).
+Independence gives affinity(P^m,Q^m)=a^m by expanding the finite product.
+Consequently TV(P^m,Q^m)<=sqrt(1-(1-delta)^(2m)).
+
+If a possibly randomized rule decides A with probabilities f(z) in [0,1],
+its errors are alpha=1-E_P f and beta=E_Q f. Splitting the signed mass
+function into its positive and negative parts gives
+ E_P f-E_Q f <= TV(P^m,Q^m), hence alpha+beta>=1-TV.
+Both errors <1/20 therefore require TV>9/10. Combining the two inequalities
+forces (1-delta)^(2m)<19/100, and thus
+ m > log(100/19)/[-2 log(1-delta)].
+
+No transcendental estimate is trusted numerically. For 0<x<1, integration
+of the positive geometric series gives
+ log((1+x)/(1-x))=2 sum_(k>=0) x^(2k+1)/(2k+1).
+The first 100 terms at x=81/119 give an exact rational L<log(100/19).
+Also -log(1-delta)=integral_0^delta 1/(1-t)dt <=delta/(1-delta).
+It follows that m > L(1-delta)/(2delta). Taking the integer floor plus one
+gives the stated necessary endpoint 28,091,647,285,174.
+
+Secondary KL check
+
+An independent information inequality route gives the weaker endpoint
+11,206,322,081,385. With positive q_i, log u<=u-1 yields
+ KL(P||Q)<=sum_i (p_i-q_i)^2/q_i<=sum_i D_i^2/l_i^Q=:U.
+The same upper bound is computed with P,Q reversed. The script rounds
+each U upward exactly on the denominator 10^30 grid.
+
+For the two-valued decision, the relative entropy is at least
+(9/10)log(19) when both errors are <=1/20. This follows by differentiating
+the binary relative entropy in its two probabilities: it increases with
+the first and decreases with the second when the first exceeds the second.
+The log-sum inequality (convexity of u log u) shows that passing the full
+data through a decision cannot increase relative entropy, including for
+a randomized decision. Product expansion gives KL(P^m||Q^m)=m KL(P||Q).
+Therefore mU>(9/10)log(19). A 100-term positive series at x=9/10 bounds
+log(19) from below exactly. This yields the secondary recorded endpoints.
+
+Reproduction and limits
+
+Run from the workspace root, choosing a fresh output file in an existing
+replay directory:
+ python -B followup-2026-10-20/lowerbounds/certify_binned_lower_bound.py --output PATH
+The required --output argument prevents a default evidence overwrite. An
+existing output is rejected, and exclusive creation prevents a write race.
+The three malformed-input controls (missing bin, zero lower bound, reversed
+interval) are rejected. This is an internal AI-assisted derivation and exact
+arithmetic check; neither a newly completed external review nor a Lean proof
+of this added lower bound is claimed.
+
+To extend the lower bound to the unbinned detector, one needs an upper bound
+on full-law statistical distance, including the within-tail information.
+The pooled >=12 mass alone supplies no such upper bound: data processing
+goes the opposite way. Moment reconstruction or more outcome certificates
+and a rigorous residual-tail argument would be additional work.

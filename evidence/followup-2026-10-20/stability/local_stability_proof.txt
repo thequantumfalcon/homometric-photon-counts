@@ -1,0 +1,215 @@
+An open neighborhood with exactly four simple four-count blind gains
+==================================================================
+
+Theorem and scope
+-----------------
+Keep the two verified 63-site geometries fixed. Let their site phase errors
+be independent centered wrapped Gaussians with variance s>0 and put
+t=exp(-s/2). Let the detected count conditional on intensity I be Poisson
+with mean b+eta I, where eta>0 is gain and b>=0 is common background.
+There exist epsilon_t>0 and epsilon_b>0 such that, whenever
+
+  |t-1/2|<epsilon_t and 0<=b<epsilon_b,
+
+the difference Pr_A(N=4)-Pr_B(N=4) has EXACTLY FOUR positive zeros in eta,
+all simple. They can be ordered eta_1(t,b)<...<eta_4(t,b), and each is a
+real-analytic function of (t,b) on a neighborhood of (1/2,0), restricted
+to physical nonnegative b. Equivalently there is an open variance
+neighborhood of s=2 log 2 with this property for sufficiently small b.
+
+This is an existence theorem for a genuine open neighborhood, not a
+numerically specified radius for the full four-root conclusion. Explicit
+endpoint bounds below prevent roots escaping eta=0 or eta=infinity.
+The remaining compact-interval continuation radius is not computed.
+No assertion of exactly four roots at every variance or every background
+is made. The geometry, independence, and common-background model matter.
+
+Inputs inherited from sealed evidence
+------------------------------------
+I lies in [0,M], M=3969. The exact all-t calculation gives D_k(t)=0 for
+k=0,1,2,3, where D_k=E_A[I^k]-E_B[I^k], and
+
+D_4(t)=(455015761/20000)t^8(1-t^2)^5
+       (t^6+3t^4+6t^2+6)>0 for 0<t<1.
+
+The reference t=1/2,b=0 result has exactly four simple positive roots:
+three on (0,1/6], and one on (1/6,infinity). The last root is in
+(0.2934841,0.2934842). A separate rigorous Fourier certificate gives
+delta(1/2)>3/100000000, where delta(t)=h_A,t(0)-h_B,t(0) and h is the
+continuous intensity density. The accompanying exact-constant checker
+records hashes of these inherited inputs; it does not reprove their
+certificates or claim the analytic theorem is machine-formalized.
+
+1. Parameter dependence
+-----------------------
+For 0<t<1 the phase density is
+w_t(theta)=(1/(2pi)) sum_{n in Z} t^(n^2) exp(i n theta).
+Its series, and all derivatives needed here, converge uniformly on each
+compact t interval inside (0,1). The same series is holomorphic for
+complex |t|<1, uniformly on compact disks and real theta. Integration
+over the compact phase cube therefore makes expectations of
+exp(-eta I)(b+eta I)^4 real analytic jointly in (t,b,eta).
+Bounded I justifies all eta and b derivatives. This analyticity also
+holds for real negative b as a mathematical extension of the expression;
+the physical conclusions below use b>=0 only.
+
+2. Uniform Fourier decay on t in [2/5,3/5]
+----------------------------------------
+Put q=3/5 and x=q^2. Let W=sup_theta w_t(theta) and
+V=integral_0^(2pi)|w_t'(theta)| dtheta. Since n^2>=2n for n>=2,
+
+sum_{n>=1} t^(n^2) <= q+x^2/(1-x),
+sum_{n>=1} n t^(n^2) <= q+x^2(2-x)/(1-x)^2.
+
+Using pi>3 gives W<=521/1200. Integrating the Fourier derivative
+termwise and using 4/pi<2 gives V<=7161/3200.
+
+For any single-site characteristic in any direction, integrate
+w_t(theta-shift) exp(i r cos theta). For r>=4 remove neighborhoods of
+0 and pi of total length 4d, where d=2/sqrt(r)<=1. Their contribution
+is at most 4dW. Integration by parts on the two remaining intervals
+gives at most (8W+V)/(r sin d): boundary terms contribute 4W, the
+density derivative V, and the derivative of 1/sin contributes 4W.
+Since sin d>=5d/6, the total bound is
+
+  (64W/5+3V/5)/sqrt(r) <= (331201/48000)/sqrt(r) <7/sqrt(r).
+
+For smaller r use modulus<=1. Independence gives, uniformly in t and
+direction, |Phi_G,t(r,angle)|<=B_63(r), where
+B_m(r)=min(1,7^m r^(-m/2)).
+
+Also a single-site t derivative satisfies
+
+|partial_t phi| <=2 sum_{n>=1} n^2 t^(n^2-1)
+ <=2[1+(x(1+x)/(1-x)^3-x)/q] =35971/5120 <8.
+
+The derivative of the 63-site product is consequently bounded by
+63*8*B_62(r). The integrable envelopes r B_63, r^3 B_63, and r B_62
+justify planar Fourier inversion, its required derivatives, and t
+differentiation of the angularly averaged density-at-zero integral.
+
+3. An explicit neighborhood with a positive density gap
+-----------------------------------------------------
+Write psi_G,t for the angular average of the planar characteristic and
+Delta psi_t=psi_A,t-psi_B,t. Fourier normalization gives
+
+h_A,t(u)-h_B,t(u)=1/2 integral_0^infinity
+                  r Delta psi_t(r) J0(r sqrt(u)) dr.
+
+The difference of two characteristic derivatives contributes a factor
+2, which cancels this 1/2. Therefore
+
+|delta'(t)| <=63*8 integral_0^infinity r B_62(r) dr
+ =63*8*7^4(1/2+1/29)=18756612/29 <1000000.
+
+It follows from the reference lower bound that
+
+  delta(t)>2/100000000 whenever |t-1/2|<=1/10^14.             (A)
+
+This explicit parameter band is only an endpoint-control result; it is
+not a claimed certified radius for the full four-root theorem.
+
+Since |J0(v)-1|<=v^2/4, the same inversion formula gives for every u>=0
+
+|h_A,t(u)-h_B,t(u)-delta(t)| <= L u,
+L=1/4 integral_0^infinity r^3 B_63(r) dr
+ =63*7^8/880=363182463/880.                                 (B)
+
+The density difference is zero beyond M, and the bound still holds
+there: it was obtained from the inversion formula for all u>=0, not by
+extending a local Taylor approximation past its domain.
+
+4. No root can arrive from infinite gain, even with background
+------------------------------------------------------------
+Remove positive factors by defining
+
+Z(t,b,eta)=24 exp(b)[Pr_A(N=4)-Pr_B(N=4)]
+         =Delta E[exp(-eta I)(b+eta I)^4].
+
+Using u=I and then v=eta u in its density integral, (B) implies
+
+|Z-delta(t) A(b)/eta| <= L B(b)/eta^2,
+A(b)=b^4+4b^3+12b^2+24b+24,
+B(b)=b^4+8b^3+36b^2+96b+120.
+
+Here A=int_0^infinity exp(-v)(b+v)^4 dv and
+B=int_0^infinity v exp(-v)(b+v)^4 dv. For b>=0, A>0 and B<=5A
+coefficientwise. In the explicit t band (A),
+
+  eta>=R=200000000000000 implies Z(t,b,eta)>0 for EVERY b>=0,
+
+because R>5L/(2/100000000). The sign is therefore uniform on an entire
+parameter neighborhood and an unbounded gain interval. Roots cannot
+silently appear beyond a finite numerical search range.
+
+5. No root can arrive from zero gain
+----------------------------------
+Let q_b(z)=exp(-z)(b+z)^4. For 0<=b<=1/8 and 0<=z<=1, its fifth
+derivative has modulus at most
+(9/8)^4+20(9/8)^3+120(9/8)^2+240(9/8)+120 <600.
+The first four moment differences D_0,...,D_3 vanish. Taylor's theorem
+therefore gives, for eta<=1/M,
+
+|Z(t,b,eta)/eta^4-D_4(t)L_4(b)| <=10 eta M^5,
+L_4(b)=1-4b+3b^2-(2/3)b^3+b^4/24.
+
+The factor 10 includes both intensity laws: each Taylor remainder is
+at most 600(eta M)^5/5!=5(eta M)^5. For b<=1/8,
+L_4(b)>=1-4/8-(2/3)(1/8)^3=383/768>1/3.
+On the full t interval [2/5,3/5], the exact D_4 polynomial gives
+
+D_4(t)>=d_*=(455015761/20000)(2/5)^8(16/25)^5*6
+           =22901693117104128/2384185791015625 >0.
+
+Set a=min(1/M,d_*/(60 M^5))>0. Then Z/eta^4>=d_*/6>0 for
+0<eta<=a, uniformly for t in [2/5,3/5] and b in [0,1/8]. Thus the
+fourfold algebraic zero of the unnormalized count difference at eta=0
+cannot split into additional positive-gain roots in the physical
+parameter neighborhood under consideration.
+
+6. The remaining compact interval and the four analytic branches
+---------------------------------------------------------------
+Only eta in [a,R] remains. Let the four reference roots be r_1<...<r_4.
+They lie strictly inside this interval by the endpoint positivity just
+proved. At b=0, Z=eta^4 F_t(eta); hence
+partial_eta Z(1/2,0,r_j)=r_j^4 F'_(1/2)(r_j) !=0.
+Choose four disjoint closed intervals U_j around these roots, ordered
+from left to right and lying inside (a,R). They can be chosen so that
+partial_eta Z has a strict constant sign on each reference U_j and its
+two endpoint values have opposite signs. Continuity on these finite
+compact intervals preserves both properties in a parameter neighborhood.
+Thus exactly one simple root persists in each U_j; the analytic implicit
+function theorem gives the real-analytic root branch eta_j(t,b).
+
+The compact set K=[a,R] minus the interiors of the U_j contains no
+reference root. Therefore min_K |Z(1/2,0,eta)| is a strictly positive
+number. Joint continuity, uniformly on K, preserves this nonzero lower
+bound in another parameter neighborhood. There are no other roots in K.
+
+Intersect these finitely many open parameter neighborhoods with
+|t-1/2|<10^(-14) and |b|<1/8, then choose a smaller open rectangle about
+(1/2,0). Restricting that rectangle to b>=0 gives epsilon_t,epsilon_b
+in the theorem. Sections 4 and 5 control both ends of the gain axis;
+the compact argument controls everything between. Root ordering follows
+from the disjoint ordered intervals, and no hidden roots can escape or
+arrive at either endpoint.
+
+7. What this does and does not settle
+------------------------------------
+The reference four-root count is not an isolated single-parameter fact:
+it is stable under sufficiently small phase-variance changes and small
+nonnegative background. This is a new local theorem, conditional on the
+sealed exact reference certificates and the specified model.
+
+The full count laws remain distinct at every positive gain throughout
+this neighborhood, including the four blind gains: their fourth falling
+factorial moment difference is eta^4 D_4(t)>0, since all lower intensity
+moment differences vanish. Blindness here refers only to the four-count
+indicator, not the full distribution.
+
+The proof does not give an explicit usable radius epsilon_t or epsilon_b
+for exact-four behavior, nor an exact global count at all phase widths or
+backgrounds. The explicit 10^(-14) t band controls only the density gap
+and infinite-gain tail; it must still be intersected with the unquantified
+compact-interval stability neighborhood. No experiment or external human
+review is claimed. No network or new dependency is needed for this proof.

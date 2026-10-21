@@ -1,0 +1,202 @@
+INDEPENDENT ANALYTIC REVIEW OF THE DETECTOR IDENTIFIABILITY EXTENSION
+20 October 2026
+
+Review scope: mathematical review by a separate agent in this session. This
+is not external peer review, an empirical validation, or a novelty opinion.
+
+Reviewed file:
+science_extension/identifiability/identifiability_proofs.txt
+SHA-256 of the reviewed snapshot:
+2902025ac51cb17d419bcf5c254b599961cabdb14394a717886ff4a75cf56f6b
+
+VERDICT
+
+All six sections are mathematically sound under the written assumptions.
+No correction is required to their deductions. The theorems establish
+identification from complete population distributions and explicitly avoid
+claiming stable reconstruction or a uniform finite-sample guarantee.
+
+The assumptions that matter are known n=63, unit-modulus site coefficients,
+the common clean null, independent Gaussian phase noise with finite positive
+variance s, positive detector gain, and the previously established strict
+fourth-moment gap for the two specific structures. The review below checks
+the new arguments and independently checks the mean identity. It does not
+repeat the entire exact geometry and cumulant calculation from the earlier
+proof record.
+
+1. PREMISES AND THEIR ROLE
+
+The intensity bound follows from the triangle inequality. For independent
+Gaussian phases, E exp(i sqrt(s) Z)=exp(-s/2). Hence
+
+ E I_G(s) = n + exp(-s) sum_{j!=k} z_{G,j} conjugate(z_{G,k})
+          = n + exp(-s)(|sum_j z_{G,j}|^2-n)
+          = n(1-exp(-s))
+
+at the common null. This verifies the mean used to recover s independently
+of the detector argument. The prior factorization
+
+ D4(s)=(455015761/20000) x^4(1-x)^5(x^3+3x^2+6x+6),
+ x=exp(-s),
+
+is strictly positive because 0<x<1. The present review uses the previously
+proved identity, not a new numerical reconstruction of it. Equality of the
+first three moments is not needed for Gaussian or Poisson joint
+identifiability; the mean formula and strictly nonzero fourth gap suffice.
+The first two common moments are needed for the equal-noise-variance
+counterexample in section 6.
+
+2. THEOREM 1: COMMON ADDITIVE ERROR
+
+The local division of characteristic functions is valid: continuity and
+phi_R(0)=1 guarantee a nonzero interval even when phi_R has zeros elsewhere.
+Each compactly supported signal law has an entire characteristic function.
+The union of two compact supports is bounded, so their difference also has
+the stated entire extension. A real interval contains accumulation points
+in the complex domain, and the complex identity theorem applies. Uniqueness
+of characteristic functions completes the argument.
+
+There is no hidden moment requirement on the error. No fourth moment of the
+observed law is used. The conclusion applies to the same independent error
+distribution under both structural comparisons. It is not joint
+identification of an arbitrary unknown signal/error factorization. Section
+6 correctly states this distinction.
+
+3. LEMMA 2: EXACT INTENSITY SUPPORT
+
+Every wrapped Gaussian with finite positive variance has a strictly
+positive density on the circle, and independence yields full support on
+the torus. Multiplication by deterministic unit phases is a translation
+and does not change that support. The torus is connected and compact.
+Its image under the continuous real-valued intensity map is therefore a
+closed interval. Aligned phases give n^2 and the n-th roots of unity give
+zero for n>=2. The whole image is exactly [0,n^2].
+
+For any image point and any open interval containing it, the preimage is
+nonempty and open and consequently has positive probability. This checks
+the passage from a deterministic image to the probabilistic support,
+including the endpoints. No positive point mass at either endpoint is
+required. The singular limit s=0 and the uniform-phase limiting experiment
+are correctly excluded from structural identification.
+
+4. THEOREM 3: UNKNOWN GAUSSIAN PARAMETERS
+
+For V=b+eta I, the support is exactly [b,b+eta n^2]. The logarithmic MGF
+bounds hold for every real b and every positive t. Consequently log M_V(t)
+is O(t), while the independent Gaussian contributes sigma^2 t^2/2.
+The stated limit recovers sigma^2, including sigma=0. Restricting sigma to
+be nonnegative then recovers sigma itself. All MGFs used are finite for
+every real t in this model.
+
+As an independent check, suppose two decompositions with compact signal
+parts have different Gaussian variances. Dividing their characteristic
+functions implies that one compact signal law is the convolution of the
+other with a nondegenerate Gaussian. That convolution has a positive
+density on the entire real line and cannot have compact support. Thus the
+variances must agree. This confirms the MGF conclusion by a second method.
+
+Once sigma is known, Gaussian deconvolution is exact at the level of
+characteristic functions. The recovered law is uniquely determined; there
+is no requirement that an empirical deconvolution be numerically stable.
+Its minimum support point is b and its support width is eta n^2, so the
+written endpoint recovery is valid because n is known and eta>0. After
+rescaling, the mean lies strictly between zero and n. Therefore
+
+ s=-log(1-E[I]/n)
+
+is well-defined and unique. The recovered common s is the same in any two
+putatively equal observation laws. The strict fourth-moment difference at
+that s then rules out A/B aliasing. This order of argument avoids silently
+assuming equal nuisance parameters under the two hypotheses.
+
+5. LEMMA 4 AND THEOREM 5: POISSON PARAMETERS
+
+The probability-generating-function identity is valid, including z=0 under
+the usual convention 0^0=1. Equality on 0<z<1 alone suffices. Both bounded
+mixing laws have entire Laplace transforms even if their bounds were not
+known in advance. The identity theorem and characteristic-function
+uniqueness therefore recover the mixing law. Nonnegativity ensures each
+conditional Poisson distribution is defined. The theorem includes b=0
+without a boundary problem.
+
+A second check uses factorial moments: the count law determines
+E[(N)_k]=E[Lambda^k] for every k. These are finite for bounded Lambda. If
+two bounded mixing laws have these same moments, choose one compact
+interval containing both supports. Polynomial approximation of continuous
+functions on that interval then implies equality of the measures. This
+gives the same injectivity conclusion independently of the displayed
+analytic-continuation proof.
+
+The exact mixing-law support endpoints recover b and eta just as in the
+Gaussian case. The rescaled mean then recovers s and the fourth moment
+recovers the structural label. The proof correctly uses the complete count
+law, not merely four count moments or the fact that counts are unbounded.
+
+6. TOTAL-VARIATION LIMITS
+
+The convention used is TV(P,Q)=sup_A |P(A)-Q(A)|, ranging from zero to one.
+For equal-variance normals the exact formula is 2 Phi(d/(2 sigma))-1,
+where d is their mean separation. Integrating the normal density over an
+interval of width d/sigma bounds this by d/(sigma sqrt(2 pi)), with the
+constant in the file correct. Mixing over any coupling of the two bounded
+intensities then yields the stated bound. The elementary product inequality
+TV(P^m,Q^m)<=m TV(P,Q) is sufficient. The optimal equal-prior success is
+(1+TV(P^m,Q^m))/2, so it tends to one half as sigma tends to infinity.
+
+For Poisson laws, the independent-increment coupling gives probability of
+a nonzero increment 1-exp(-|lambda-mu|), and TV is at most this coupling
+mismatch probability. The bound by |lambda-mu| is correct. With common
+background and gain the conditional-rate difference is at most eta n^2.
+The same mixture and product arguments show that success tends to one half
+as eta decreases to zero for any fixed finite m.
+
+Both examples prove the claimed lack of a finite sample size that works
+uniformly over the whole allowed parameter space for any fixed desired
+advantage above random guessing. They do not contradict pointwise
+identifiability at each finite sigma and each strictly positive eta. They
+also do not claim these loose bounds are the best available bounds at a
+specified detector setting.
+
+7. UNKNOWN UNRESTRICTED ERROR COUNTEREXAMPLE
+
+Use independent copies of I_A and I_B in the construction. Taking the
+error under A to have law I_B-mu and the error under B to have law I_A-mu
+is allowed by the unrestricted-error model. Convolution commutes, so the
+observed laws agree exactly. Both errors have mean zero, compact support,
+and the same variance. The noise laws themselves are different because
+the signal laws are different and a common translation is injective.
+
+This is an existence counterexample: it demonstrates that zero mean and a
+known common variance alone are insufficient in general. It need not claim
+an alias for every arbitrary preassigned noise variance. It does not use
+dependent noise or vary an error within one fixed model. The explanation
+of why this differs from common-error preservation is correct.
+
+8. HISTORICAL BOUNDARIES AND REMAINING LIMITS
+
+Primary sources inspected in the associated literature work establish that
+the underlying deconvolution principles are already known:
+
+Sapatinas (1995), DOI 10.1007/BF00773394, section 2 and Note 1,
+https://www.ism.ac.jp/editsec/aism/pdf/047_3_0447.pdf
+proves identifiability criteria that include Poisson mixtures. Its scope
+is broader than the bounded-mixing-law lemma proved here.
+
+Matias (2002), DOI 10.1051/ps:2002015, pages 272-275,
+https://cmatias.perso.math.cnrs.fr/Docs/psns5.pdf
+studies Gaussian deconvolution with unknown noise variance and the
+restriction excluding a Gaussian convolution component. A compactly
+supported signal necessarily satisfies that restriction.
+
+The present structural/nuisance conclusion uses those standard ideas
+together with the project's own support and moment properties. Its truth
+does not imply that the underlying measurement-noise principles are novel.
+The associated source note records access depth and unresolved priorities:
+science_extension/literature/targeted_priority_update.txt.
+
+No empirical detector data, estimator performance, experiment feasibility,
+or external mathematical review is supplied by this analytic review. The
+complete-law uniqueness arguments can involve extremely rare tails and
+support endpoints; practical uncertainty under estimated nuisance
+parameters remains a separate statistical problem. The original proof
+already makes this limitation explicit.

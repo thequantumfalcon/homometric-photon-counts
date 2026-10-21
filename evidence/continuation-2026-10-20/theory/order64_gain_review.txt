@@ -1,0 +1,146 @@
+INDEPENDENT REVIEW: ORDER-64 GAIN CERTIFICATION AND NATIVE ARITHMETIC
+2026-10-20 (America/Denver)
+
+Conclusion
+==========
+No mathematical defect found in design_nodes.py, certify_gain_points.py,
+or certify_third_root.py within their declared dependency scope. Independent
+confluent Newton arithmetic reproduces the new point signs and the narrow
+third-root bracket. Independent interval-Horner bounds establish the three
+whole-interval sign claims. Together with the archived exactly-two-root
+certificate, these establish exactly THREE positive four-count blind gains
+on (0,1/12], all simple, at t=1/2 and zero background. The universal lower
+bound of four sign-changing roots then forces at least one above 1/12.
+Neither an exact global root count nor an effective terminal cutoff follows.
+
+1. Numerical nodes versus exact proof
+====================================
+The exploratory node designer normalizes the positive averaged measure
+u^r(dP_A+dP_B)/2 and scales u by 64. Its Stieltjes/Jacobi construction uses
+moments through degree 2n-1 of that measure. The final alpha computation
+requires exactly that last moment; all accesses fit the input table.
+Rounded eigenvalues are only node suggestions. The downstream method does
+not require exact orthogonal-polynomial zeros or numerically accurate
+Gaussian weights. It explicitly checks distinct positive rational nodes.
+Thus mpmath precision or loss of orthogonality can harm sharpness but cannot
+turn the later exact Hermite inequalities into a false proof.
+
+2. Degree accounting and remainder signs
+========================================
+At order 64, the order-4 node set has 30 nodes, the order-5 set has 30,
+and the order-6 set has 29. The four interpolants used are:
+
+ lower R_G,4: 30 double nodes, degree 59, moments through 63;
+ upper R_G,4: zero plus 30 double nodes, degree 60, moments through 64;
+ lower R_G,5: 30 double nodes, degree 59, moments through 64;
+ upper R_G,5: zero plus 29 double nodes, degree 58, moments through 63.
+
+Here R_G,r(eta)=E_G[I^r exp(-eta I)]. For the lower interpolant the
+remainder is f^(2n)(xi)*product(u-x_j)^2/(2n)!, nonnegative for
+f(u)=exp(-eta*u). For the zero-node upper interpolant it is
+f^(2n+1)(xi)*u*product(u-x_j)^2/(2n+1)!, nonpositive for u>=0.
+Integration against the positive measure u^r dP_G preserves these signs.
+
+The code's differences are correctly oriented:
+ F4 lower = lower R_A,4 - upper R_B,4;
+ F4 upper = upper R_A,4 - lower R_B,4;
+ F4' lower = lower R_B,5 - upper R_A,5;
+ F4' upper = upper R_B,5 - lower R_A,5.
+The last two are bounds on the derivative of F4, justified by
+F4'=R_B,5-R_A,5. They are not obtained by an invalid differentiation
+of pointwise upper/lower bounds on F4.
+
+3. Independent downstream arithmetic
+====================================
+The producer uses cardinal Hermite polynomials, alternating exponential
+series, and Taylor/Bernstein interval ranges. The independent replay uses
+the archived confluent Newton divided-difference construction, integrates
+Newton basis polynomials, encloses exp(-x) via a positive exp(x) series and
+reciprocal, and bounds intervals using interval Horner with a proved Taylor
+remainder. The independent process imports no producer arithmetic.
+
+Files in continuation-2026-10-20/gain:
+ independent_order64.py
+ independent_order64_weights.json
+ independent_order64_covers.json
+ independent_third_bracket.py
+ independent_third_bracket.json
+
+The command
+ python continuation-2026-10-20/gain/independent_order64.py --fresh-weights --covers
+reconstructs weights instead of trusting its local cache, verifies every
+saved point, independently checks the narrow third-root endpoints, and
+computes full interval covers. Cache dependencies include this replay's
+own source hash, the Newton implementation, nodes, and exact moments.
+
+The first independent cover run required four positive-Horner leaves on
+[1/32,1/23], one negative-derivative leaf on [1/23,1/22], and five
+negative-Horner leaves on [1/22,1/12]. No sampled grid substitutes for
+the whole-interval bounds. Endpoint signs at 1/23 and 1/22 imply existence;
+the strictly negative derivative throughout their interval implies uniqueness
+and simplicity. The neighboring sign covers exclude further roots through
+1/12. The previously certified root count supplies exactly two below 1/32.
+
+The independently checked tighter bracket is
+ [8615637/192937984, 189544015/4244635648].
+At its left endpoint the independent F enclosure is approximately
+[1.1330006558e-9,2.2194750062e-9]; at its right it is approximately
+[-1.7256943796e-9,-6.3921986182e-10]. Exact rationals, not these displays,
+establish the signs in the replay output.
+
+Shared dependency: producer and independent replay both consume the new
+exact order-64 moment table. This is an independent downstream arithmetic
+check, not a second independent reconstruction of moments 33 through 64.
+The native extension independently agrees with the sealed reconstruction
+through order 32 and follows its site-product derivation above that order.
+
+4. Native integer adapter and packing audit
+===========================================
+native_integer.py imports absolute integers as one-byte words in
+least-significant-word-first order. With size=1, byte endianness within a
+word has no effect. It multiplies unsigned magnitudes, exports them using
+the same order, and restores the sign by exclusive-or of operand signs.
+Zero returns before the ABI call. An export buffer of len(a_bytes)+
+len(b_bytes) bytes is sufficient because the product magnitude has at most
+the sum of the operand bit lengths. Every initialized mpz is cleared in
+a finally block. No product is converted through floating point.
+
+The MPZ ctypes structure assumes the installed library uses two C int
+fields followed by a limb pointer. On this platform its tested size is
+16 bytes with offsets 0,4,8. This is a concrete ABI dependency, not a
+portable theorem for any library named mpir.dll. The exact DLL SHA256 is
+recorded. The parallel engine gives each call independent native integer
+objects; the square shortcut correctly returns a nonnegative product even
+for equal negative operands.
+
+The packed-convolution coefficient bound remains valid after the native
+substitution. If n=P+1, ma and mb bound both real and alpha coefficients,
+each output coefficient has at most n^2 input pairs. For alpha^2=-3 the
+real coefficient bound is 4 n^2 ma mb and the imaginary bound is 2 n^2 ma mb.
+The selected byte width ensures B/2>4 n^2 ma mb, including all product
+coefficients later discarded. Intermediate integer expressions are exact;
+the cross-product trick changes no algebra. Signed decoding therefore has
+the same no-carry guarantee as the sealed Python-integer construction.
+
+Primary API reference checked: GNU MP 6.3.0 manual, Integer Import and
+Export, https://gmplib.org/manual/Integer-Import-and-Export . Its documented
+word ordering, size, sign and destination-buffer contract match the adapter.
+The local MPIR compatibility and concrete ABI remain tested dependencies;
+the GNU MP documentation alone does not verify the installed MPIR binary.
+
+Additional review script check_native_boundaries.py compared 637 native
+products against CPython exact integer multiplication. Cases include zero,
+every sign combination, powers adjacent to byte boundaries, internal null
+bytes, disparate operand sizes, and 80,000/81,000-bit operands. All passed.
+See native_boundary_review.json. These tests supplement the source-level
+argument; they do not formally verify MPIR machine code or all possible
+operands.
+
+5. Claims not licensed
+======================
+Order-64 point enclosures at 1/8 and larger listed gains are unresolved.
+They cannot be used to assert a fourth root location or exclude additional
+roots. The third-root result is local to t=1/2, zero background, and the
+four-count channel. Global optimal gain, exact global blind-gain count,
+experimental model validity, external human review, and proof-assistant
+formalization remain unestablished.

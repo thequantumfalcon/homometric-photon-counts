@@ -1,0 +1,317 @@
+FRESH GLOBAL PROOF: EXACTLY TWO SIMPLE POSITIVE MEAN-CONTRAST ROOTS
+
+1. The theorem and the object being proved
+========================================
+
+Let D(x)=sum_i c_i exp(-r_i x), where the 2005 exact rational rates and
+algebraic real coefficients are the terms in input_premises.json.  This
+input is an unchanged copy of the fresh grouped reconstruction from the
+fixed 63-site model.  Its real embedding uses the positive square roots
+of 3, 74 and 191 and the specified bit-mask basis.
+
+The new certificate proves:
+
+  D has exactly two roots in (0,infinity), and both roots are simple.
+  D has a double zero at the origin.
+  Its signs on the three complementary positive intervals are +, -, +.
+
+For the original control, x=7*pi^2*v/62.  The marginal-preserving control
+has the exact identity
+
+  Delta_star(v)=exp(7*pi^2*v/(62*61))*D(7*pi^2*v/61).
+
+Consequently both controls have exactly two simple positive roots, and
+the star roots are exactly 61/62 times the original-v roots.
+
+This is a fresh proof, not restoration of an earlier certificate's bytes
+or execution history.  No historical root count, interval cover, root
+simplicity claim, or root localization is assumed.  Diagnostic values
+were used only to choose candidate proof regions.  Every accepted region
+and root endpoint is subsequently established by outward arithmetic.
+
+The correspondence between this explicit D and the graph/Gaussian model
+is the exact grouped reconstruction in the earlier continuation.  The
+copied input records and hashes that construction.  The present proof is
+a global root certificate for that exact supplied function; it does not
+claim a root count for other covariance models or other frequencies.
+
+2. Positive rescaling and proof partition
+========================================
+
+Put r0=min_i r_i=121483/242972 and lambda_i=r_i-r0, and define
+
+  F(x)=exp(r0*x)D(x)=sum_i c_i exp(-lambda_i*x).
+
+The lambda_i are strictly increasing, lambda_0=0, and lambda_i>0 for
+i>0.  Multiplication by exp(r0*x) preserves every zero, multiplicity and
+sign.  The first two coefficients and the first positive shifted rate are
+
+  c0=(sqrt(573)-1)/60>0,
+  c1=-146/75,
+  lambda_1=189/242972.
+
+The complete proof uses the following adjacent regions:
+
+  (0,1]       F(x)/x^2 > 17/1000.
+  [1,10]      F(x)>0, certified by three closed interval cells.
+  [10,11]     F'(x)<0, with F(10)>0 and F(11)<0.
+  [11,2048]   F(x)<0, certified by nine closed interval cells.
+  [2048,infinity) F'(x)>0, and F(x) tends to c0>0.
+
+Endpoints are included in the stated finite cells.  Their exact rational
+values are checked for adjacency and full coverage.  There is no uncovered
+gap, and all shared boundaries 1, 10, 11 and 2048 are nonzero points of F.
+
+The first root therefore lies in (10,11) and is unique there by strict
+decrease.  The second lies in (2048,infinity) and is unique there by strict
+increase, the negative left value and the positive limit.  These regions
+exhaust the positive axis.  The derivative signs at both roots prove
+simplicity for F, and hence for D and both positive-factor rescalings in v.
+
+3. Arithmetic enclosures
+========================
+
+All certificate endpoints are integers divided by S=2^256.  Addition,
+subtraction, multiplication, reciprocal and squaring use exact integer
+floor or ceiling in the necessary direction.  The four corner products
+bound interval multiplication; intervals crossing zero use lower bound
+zero when squared.  No floating-point arithmetic or Decimal exponential
+is used for a mathematical decision.
+
+A positive radical sqrt(q) is bounded by
+
+  floor(sqrt(q*S^2))/S and ceil(sqrt(q*S^2))/S,
+
+using integer square root.  Rational field coefficients are then multiplied
+and summed with outward arithmetic.  Every coefficient interval excludes
+zero, so every coefficient's actual real sign is certified.
+
+To bound exp(-u), u>=0, range reduction divides by 2^s until the reduced
+argument lies in [0,1/8], apart from at most one endpoint rounding unit.
+The resulting interval remains within [0,1].  On [0,1], the alternating
+exponential series has decreasing term magnitudes.  Its odd partial sum
+of degree 81 is a lower bound, and its even partial sum of degree 80 is
+an upper bound.  Natural outward interval arithmetic evaluates these
+polynomials, after which s outward squarings undo range reduction.
+For an argument interval, the lower exponential endpoint is obtained at
+the upper argument and the upper exponential endpoint at the lower one.
+
+Very small exponentials are not rounded silently to zero.  The exact
+positive Taylor inequality
+
+  exp(7/10) > 1+7/10+(7/10)^2/2+(7/10)^3/6 > 2
+
+gives log(2)<7/10.  Hence if u>=256*7/10 then exp(-u)<2^-256, and the
+certified interval [0,1]/S is used.  The nonzero upper endpoint propagates
+through every subsequent operation, including derivative remainders.
+
+Pi is enclosed by Machin's identity with 96 terms in each arctangent
+series.  An even number of terms ends at a negative term, so that partial
+sum is a lower bound; adding the next positive term gives an upper bound.
+The final coefficient 16 and negative coefficient -4 are combined with
+the correct outward directions.
+
+4. Taylor enclosure lemma used on every finite cell
+===================================================
+
+For a cell [a,b], let m=(a+b)/2 and h=(b-a)/2.  Define
+
+  C_k(m)=sum_i c_i exp(-lambda_i*m)*(-lambda_i)^k/k!,
+
+and
+
+  B_q(a)=sum_i |c_i| exp(-lambda_i*a)*lambda_i^q/q!.
+
+Since lambda_i>=0, Taylor's theorem gives, for |delta|<=h,
+
+  |F(m+delta)-sum_{k=0}^p C_k(m)*delta^k|
+       <= B_{p+1}(a)*|delta|^(p+1).
+
+Indeed every intermediate point is at least a, and the magnitude of the
+(p+1)-st derivative of each exponential term is bounded by its value at a
+times |c_i|*lambda_i^(p+1).  Summing the absolute remainders proves the
+displayed formula.
+
+For the derivative, the corresponding expansion and remainder are
+
+  F'(m+delta)=sum_{k=0}^p (k+1) C_{k+1}(m)*delta^k + remainder,
+  |remainder| <= (p+2) B_{p+2}(a)*|delta|^(p+1).
+
+The factor p+2 is essential: B_{p+2} has denominator (p+2)!, whereas the
+Taylor remainder for F' has denominator (p+1)!.  The source includes this
+factor explicitly.
+
+The stored coefficient intervals and upper bounds for B therefore give
+whole-cell value and derivative enclosures.  Point evaluations at the
+cell endpoints use the same polynomial with its signed delta and rigorous
+remainder.  If the derivative enclosure has one sign, endpoint monotonicity
+gives a second value enclosure for the entire cell.  Intersecting two valid
+enclosures is valid and improves efficiency.
+
+The finite cover uses p=12.  Failed cells are bisected; they make no claim
+about the function until their children are certified.  A maximum-depth
+failure would terminate the program rather than produce a root count.
+The certificate records every accepted cell, Taylor coefficient, remainder,
+whole-cell range, derivative range and endpoint range.
+
+5. The origin is treated analytically, without division by a tiny interval
+========================================================================
+
+The source recomputes the exact coefficientwise identities
+
+  sum_i c_i=0,   sum_i r_i*c_i=0
+
+using Fraction arithmetic on all eight basis coefficients.  Thus D(0)=0
+and D'(0)=0 exactly; hence F(0)=F'(0)=0 as well.  Interval containment of
+zero is not used to infer an exact identity.
+
+Use the Taylor expansion of F at zero through degree p=24.  For 0<x<=1,
+division by x^2 is justified symbolically by those two exact cancellations:
+
+  F(x)/x^2 >= lower(C_2(0))
+             -sum_{k=3}^24 upper(|C_k(0)|)-upper(B_25(0)).
+
+The last term is valid because the undivided remainder is at most
+B_25(0)*x^25, whose quotient by x^2 is at most B_25(0).  The saved exact
+rational lower bound is strictly greater than 17/1000.  In particular,
+C_2(0)>0 and the origin has multiplicity exactly two.  This handles every
+arbitrarily small positive x, not a grid truncated away from zero.
+
+6. The complete finite cover and first root window
+==================================================
+
+The positive closed cells are
+
+  [1,13/4], [13/4,11/2], [11/2,10].
+
+The negative closed cells are
+
+  [11,4853/256], [4853/256,3445/128],
+  [3445/128,2741/64], [2741/64,2389/32],
+  [2389/32,2213/16], [2213/16,2125/8],
+  [2125/8,2081/4], [2081/4,2059/2], [2059/2,2048].
+
+All three positive value enclosures have strictly positive lower endpoints.
+All nine negative value enclosures have strictly negative upper endpoints.
+Their endpoints match exactly as rational numbers.  These are interval
+inequalities on the full cells, not signs sampled at finitely many points.
+
+On [10,11], a degree-20 enclosure gives
+
+  -0.0176593865546732448331086348766778779953
+     <= F'(x) <=
+  -0.0172382663369010489363948681992512333312.
+
+The decimals above round the underlying integer bounds outward.  Separate
+endpoint enclosures prove F(10)>0 and F(11)<0.  There is exactly one root
+in that window, and it is simple.
+
+7. The infinite tail is proved in one analytic inequality
+========================================================
+
+Differentiate F and remove the first decaying exponential:
+
+  exp(lambda_1*x)F'(x)
+    = -c1*lambda_1
+      +sum_{i>=2} (-c_i*lambda_i)
+                    exp[-(lambda_i-lambda_1)*x].
+
+For c_i<0, the corresponding summand is positive and can be discarded
+in a lower bound.  For c_i>0 it is negative; because lambda_i>lambda_1,
+its magnitude decreases with x.  Therefore, for every x>=2048,
+
+  exp(lambda_1*x)F'(x)
+    >= -c1*lambda_1
+       -sum_{i>=2,c_i>0} c_i*lambda_i
+                    exp[-(lambda_i-lambda_1)*2048].
+
+Every term on the right is enclosed outward.  The certificate's exact
+rational lower bound is greater than 1/1000.  Consequently
+
+  F'(x) > (1/1000)*exp(-lambda_1*x) > 0  (x>=2048).
+
+The last finite negative cell proves F(2048)<0.  Since all lambda_i for
+i>0 are strictly positive and the sum is finite, F(x) tends to c0>0.
+Strict increase and the intermediate value theorem now give exactly one
+simple root on the entire infinite interval.  No finite numerical cutoff
+is being substituted for a proof at infinity.
+
+8. Rigorous root localization and change of coordinate
+======================================================
+
+After the complete count passes, roots are isolated using degree-48 Taylor
+jets centered at 10.5 and 2180.5.  The initial intervals [10,11] and
+[2180,2181] have rigorously opposite endpoint signs.  Every bisection
+decision has an interval that excludes zero; a failed sign decision would
+stop rather than choose a side.  Each final exact x bracket has width
+
+  2^-120 = 1/1329227995784915872903807060280344576 < 10^-36.
+
+The original-v enclosures are
+
+  first:
+  [9.5030721329631257456241425241601195107606,
+   9.5030721329631257456241425241601195114359],
+
+  second:
+  [1956.7881934162931830464011547470401621927635,
+   1956.7881934162931830464011547470401621934387].
+
+The star-v enclosures are
+
+  first:
+  [9.3497967759798495239205273221575369380064,
+   9.3497967759798495239205273221575369386708],
+
+  second:
+  [1925.2270935224820026746850070898298369961060,
+   1925.2270935224820026746850070898298369967703].
+
+These bounds include the outward pi enclosure and the coordinate changes
+v05=62*x/(7*pi^2) and vstar=61*x/(7*pi^2).  The authoritative certificate
+also retains all integer endpoints and the exact rational x brackets.
+Displayed very small function values can round to a decimal lower bound
+of zero; their stored exact integer numerators, not a shortened display,
+are what certify strict signs.
+
+The second x root is freshly enclosed in
+
+  [2180.4689929062580032857201213523820786118488,
+   2180.4689929062580032857201213523820786126012].
+
+It therefore exceeds 2180.  The previous tail-amplitude and full-law bounds
+whose common coordinate is y>=2180 now apply to that crossing and its star
+transfer without a historical localization premise.
+
+9. Reproduction, bindings and limits
+====================================
+
+Place certify_two_roots.py and input_premises.json in one directory and run
+
+  python3 certify_two_roots.py
+
+with assertions enabled.  Only the Python standard library is required.
+The script writes two_root_certificate.json in the same directory.  The
+successful run used Python 3.12, completed with exit status zero in about
+61 seconds, and performed 118290 scalar exponential endpoint requests;
+27462 were rigorously bounded by the tiny-exponential shortcut.
+
+Input identity (unchanged copy of rebuild_independent_premises.json):
+  SHA256 0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e
+Exact reconstructed model identified by that input:
+  SHA256 4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288
+New certificate source:
+  SHA256 d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631
+New full certificate output:
+  SHA256 5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07
+
+Hashes identify the exact inputs, source and outputs; they do not prove
+mathematical correctness.  Correctness rests on the arithmetic enclosure
+arguments, complete coverage, monotonicity bounds and their implementation.
+Independent source/proof review has been requested separately.
+
+The old files are unchanged.  This new work closes the global positive
+root-count and simplicity gap for the explicitly reconstructed original
+and star controls.  It does not prove literature novelty, validate an
+experimental Gaussian model, certify an optimal detector, or establish
+the locations or uniqueness of standardized-contrast maxima.

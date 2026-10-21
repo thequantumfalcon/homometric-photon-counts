@@ -1,0 +1,345 @@
+INDEPENDENT INTERNAL REVIEW OF THE FRESH HARMONIC ROOT CERTIFICATE
+================================================================
+
+Review date: 2026-10-20
+Reviewer: the /root/phasor_novelty_review AI agent, separate from the
+          /root/independent_model_rebuild agent that constructed the package.
+Disposition: PASS. No mathematical or implementation blocker was found.
+
+This report records the audit already completed during this session. Saving
+the report did not rerun testing or alter any input, source, proof, summary,
+or certificate. The seven protected files were read only during the audit,
+and their SHA256 hashes were checked before and after the reconstruction
+and replay. Every hash was unchanged.
+
+1. Precise conclusion and qualification
+--------------------------------------
+For the explicitly reconstructed 63-node Gaussian harmonic model,
+
+  K_H = 63*C/tau,
+  C = L^+,
+  tau = trace(C),
+  Delta_H(v) = E[I_A,H(v)] - E[I_B,H(v)],
+
+the supplied proof establishes exactly one positive zero of Delta_H.
+That zero is simple. The contrast is strictly positive before the zero
+and strictly negative after it. The origin is also a simple zero.
+
+The audited outward decimal enclosure of the positive root is
+
+  111.3136504231491219344800952076923753980843
+       <= v_H <=
+  111.3136504231491219344800952076923753987596.
+
+The underlying exact rational root bracket in x=7*pi^2*v/62 has width
+2^(-120). The localization is supported by a complete global count; it is
+not merely a numerically located crossing or a sampled sign change.
+
+This review is an independent INTERNAL AI review within the same project
+session. It includes a mathematically distinct exact model reconstruction,
+source inspection, and exact replay of the reviewed interval engine. It is
+not external mathematical validation, peer review, or proof-assistant
+verification. The replay uses the package's reviewed arithmetic engine;
+it is not a fully independent second implementation of that entire engine.
+
+The theorem concerns the stated fixed graph, coordinate geometry, selected
+frequency, Gaussian covariance, and normalization. This review does not
+establish experimental calibration, experimental independence, measurement
+feasibility, or novelty relative to the literature. It does not vouch for
+historical files that are not in the reconstructed package.
+
+2. Protected files and exact SHA256 bindings
+-------------------------------------------
+All seven files were in science_completion/harmonic_certificate.
+These are the exact hashes observed both before and after the audit:
+
+build_harmonic_groups.py
+  95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440
+
+certify_harmonic_root.py
+  53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07
+
+harmonic_groups.json
+  e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac
+
+harmonic_root_certificate.json
+  83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912
+
+harmonic_root_proof.txt
+  bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658
+
+harmonic_root_summary.json
+  72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5
+
+input_model.json
+  4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288
+
+The group JSON's builder-source and model-input bindings were checked.
+The certificate's engine, group, builder, and model bindings were checked.
+Every file entry in the summary was checked against its actual byte count
+and SHA256 hash. Hash consistency establishes file identity; the substantive
+mathematical review below is what supports the proof assessment.
+
+3. Independent geometry, graph, and phase reconstruction
+--------------------------------------------------------
+The reviewer rebuilt the 21-point motif from the integer bases and signed
+theta/phi offsets, then rebuilt the two 63-point ordered configurations
+using shifts (0,31,63) for A and (0,32,63) for B. Every coordinate record
+matched the exact supplied model.
+
+The proof's threshold reduction is valid. With
+
+  theta = asin(1/(5*sqrt(3))),
+  phi   = -asin(1/(8*sqrt(3))),
+  a = 3*theta/pi,  b = 3*phi/pi,
+
+the inequalities pi>3 and t<tan(t) for 0<t<pi/2 give
+
+  |a| < 1/sqrt(74) < 1/8,
+  |b| < 1/sqrt(191) < 1/8.
+
+All integer bases are distinct. Consequently an integer base gap at most
+2 remains less than 9/4 in the actual geometry, whereas a base gap at least
+3 remains greater than 11/4. The distance threshold 5/2 therefore selects
+exactly the pairs whose integer base gap is at most 2. Enumeration matched
+the path on vertices 0,...,62 with chord (20,22) for A and chord (41,43)
+for B. It also matched every supplied edge.
+
+Phases were rebuilt independently in the eight-dimensional field basis
+Q(sqrt(3),sqrt(74),sqrt(191)). The reviewer generated sixth roots of unity
+by successive exact complex multiplication from
+
+  exp(i*pi/3) = 1/2 + i*sqrt(3)/2,
+
+then multiplied by the appropriate exact offset phase:
+
+  exp(+/-i*theta) = sqrt(222)/15 +/- i*sqrt(3)/15,
+  exp(+/-i*phi)   = sqrt(573)/24 -/+ i*sqrt(3)/24.
+
+All real and imaginary coefficient vectors matched the supplied model.
+Each phase had exact unit modulus, and each configuration's exact complex
+phase sum was zero. Multiplication used rational coefficients and direct
+radicand reduction, with no floating-point zero tolerances. The square
+classes 3,74,191 are independent, so the eight-element field basis is
+linearly independent over Q and zero coefficient vectors are exact zeros.
+
+4. Independent effective-resistance reconstruction of C
+-------------------------------------------------------
+The package builder uses a path pseudoinverse followed by a rank-one chord
+update. The reviewer used a different reconstruction: the effective
+resistances of the triangle with its two attached path tails.
+
+For a path with the additional chord (p,p+2), the vertices p,p+1,p+2 form
+a unit-resistor triangle. The effective resistance between any distinct
+triangle vertices is 2/3. The attached path tails contribute their series
+resistances. Thus, for i<j, the resistance R_ij is
+
+  j-i-4/3, if i<=p and j>=p+2;
+  j-i-1/3, if i<=p and j=p+1;
+  j-i-1/3, if i=p+1 and j>=p+2;
+  j-i,     otherwise.
+
+Set R_ji=R_ij and R_ii=0. Let R_i=sum_j R_ij and T=sum_i R_i.
+The pseudoinverse reconstructed from these resistances is
+
+  C_ij = [(R_i+R_j)/n - R_ij - T/n^2]/2,
+  n=63,
+
+equivalently C=-(1/2)P R P with P=I-11^T/n.
+
+This reconstruction matched every supplied rational matrix entry for
+both structures. Independently checked exact identities were
+
+  C=C^T,
+  C*1=0,
+  L*C=I-11^T/63,
+  C_ii+C_jj-2*C_ij=R_ij.
+
+For a connected symmetric graph Laplacian these identities identify C=L^+
+uniquely and imply the required nonnegative covariance on the centered
+subspace. The traces matched exactly:
+
+  tau_A = 121486/189,
+  tau_B = 121570/189.
+
+Every off-diagonal resistance is positive. The normalization K_H=63*C/tau
+has trace 63, so covariance v*K_H has average centered coordinate variance
+v. These statements were established from the reconstructed graph and
+exact matrices, rather than accepted solely from JSON check flags.
+
+5. Independent Gaussian rate conversion and pair polynomial
+-----------------------------------------------------------
+For z_i=exp(i*q*q_i), q=pi/3, and centered Gaussian X with covariance
+v*K_H, the Gaussian characteristic function gives the pair contribution
+
+  2*Re(conj(z_i)*z_j)
+    *exp[-q^2*v*(K_ii+K_jj-2*K_ij)/2].
+
+Using K_H=63*C/tau, q^2=pi^2/9 and x=7*pi^2*v/62, its exponent becomes
+
+  -[31*(C_ii+C_jj-2*C_ij)/tau]*x.
+
+The factor 31 in the supplied pair rates is therefore correct. The equal
+diagonal terms cancel from A minus B.
+
+The reviewer reconstructed all 3,906 signed unordered pair contributions
+using the independent phases and resistance matrices. Exact aggregation
+matched every rate and every field coefficient in harmonic_groups.json:
+
+  A has 101 distinct pair rates;
+  B has 102 distinct pair rates;
+  the contrast has 203 nonzero exponential groups.
+
+The four exact derivatives of D_H at x=0 recorded in the groups file,
+of orders 0 through 3, matched independent summation. In particular,
+D_H(0)=0 exactly. The first two groups matched
+
+  r0=1953/60785, c0=-3/5;
+  r1=1953/60743, c1=+3/5.
+
+For F(x)=exp(r0*x)D_H(x), all shifted rates lambda_i=r_i-r0 are nonnegative,
+with only lambda_0=0. The multiplier is positive and analytic, so signs,
+zeros, and multiplicities transfer between F and D_H. Also F'(0)=D_H'(0)
+because D_H(0)=0.
+
+6. Review of the enclosure arithmetic and analytic bounds
+---------------------------------------------------------
+The fixed-point interval kernel uses integer endpoints with denominator
+2^256. Source inspection checked outward rational conversion, multiplication
+from all four endpoint products, signed reciprocal, and squaring across
+zero. Radical intervals use integer square roots of radicand*2^512.
+
+The exponential bounds reduce a nonnegative argument by powers of two,
+use the degree-81 alternating partial sum as a lower bound and degree-80
+sum as an upper bound on the reduced interval, and restore the argument
+with outward squaring. The reduced argument lies within the domain where
+the alternating term magnitudes decrease. Interval evaluation can widen
+these bounds but does not invalidate them.
+
+The tiny-exponential shortcut is justified by the exact rational inequality
+
+  1 + 7/10 + (7/10)^2/2 + (7/10)^3/6 > 2.
+
+It follows that exp(-u)<2^-256 for u>=7*256/10, so [0,2^-256] is a valid
+enclosure. The code does not replace such exponentials by exact zero.
+
+The pi enclosure uses Machin's identity and 96 alternating arctangent terms
+with one-sided remainders. The reviewer independently constructed a tighter
+128-term rational Machin enclosure and verified that it lies within the
+recorded pi interval.
+
+For a degree-p centered Taylor expansion on [a,b], the value remainder
+coefficient is
+
+  B_(p+1)(a)=sum_i |c_i| lambda_i^(p+1) exp(-lambda_i*a)/(p+1)!.
+
+The left endpoint bounds the exponential derivative magnitudes throughout
+the cell. The derivative expansion correctly uses the remainder factor
+(p+2)*B_(p+2)(a), multiplied by the radius to power p+1. The factors and
+orders in the code match Taylor's theorem. Intersecting a whole-cell value
+range with the ordered endpoint bounds after proving a strict derivative
+sign is valid.
+
+All proof decisions use integer/Fraction arithmetic. Floating-point
+elapsed-time reporting does not participate in certification. The supplied
+reproduction instructions correctly warn against Python -O or a set
+PYTHONOPTIMIZE option because assertions implement certificate gates.
+
+7. Complete replay scope and results
+------------------------------------
+The reviewed certificate engine was imported in a Python -B process and
+its read-only functions were called directly. Its writing main() function
+was not invoked. The original package files were not regenerated or edited.
+
+Origin:
+  Recomputed every degree-24 Taylor coefficient at zero and the order-25
+  remainder coefficient. The divided-function radius and lower bound
+  matched the saved records exactly. The bound is stronger than
+
+    F(x)/x > 3/1000,  0<x<=1/32.
+
+  The recorded linear coefficient matched the replay and was consistent
+  with an enclosure of the independently reconstructed exact D_H'(0).
+  It is strictly positive, proving the origin has multiplicity one.
+
+Finite positive region:
+  Replayed all 13 accepted cells covering [1/32,124]. Every saved Taylor
+  jet, value range, derivative range, endpoint value, remainder coefficient,
+  and enclosure method matched the replay exactly. Every full-cell lower
+  value endpoint was strictly positive. Exact rational comparisons checked
+  adjacency and both exterior endpoints, so the cover has no gaps.
+
+Root window:
+  Replayed the degree-20 cell on [124,125] and matched its complete record.
+  Its derivative upper endpoint is strictly negative. The left function
+  endpoint is strictly positive and the right endpoint strictly negative.
+  Continuity plus strict monotonicity proves exactly one root in this
+  window, and the derivative bound proves it is simple.
+
+Remaining finite negative region:
+  Replayed all four accepted cells covering [125,512], with exact record
+  matches and exact adjacency. Every full-cell upper value endpoint was
+  strictly negative.
+
+Infinite negative tail:
+  Recomputed every retained positive coefficient term at x=512 and matched
+  every stored term bound. All coefficient signs are strictly enclosed.
+  The negative nonconstant terms may safely be discarded in an upper bound;
+  the positive nonconstant terms decrease for x>=512. The resulting bound
+
+    F(x) <= c0 + sum_(i>=1,c_i>0) c_i exp(-lambda_i*512)
+
+  matched the stored interval and is strictly less than -6/1000.
+  Hence there is no root anywhere on [512,infinity). The limiting constant
+  is c0=-3/5; D_H tends to zero from below.
+
+Global coverage:
+  The regions (0,1/32], [1/32,124], [124,125], [125,512], and [512,infinity)
+  cover the entire positive axis. Exactly one region contains a root, and
+  that region contains exactly one simple root. This establishes the global
+  count independently of the following fine localization.
+
+Fine localization:
+  Replayed the degree-48 root Taylor expansion and all 120 strict-sign
+  rational bisections. The complete returned root record matched the saved
+  record, including both endpoint function intervals. Its exact bracket is
+
+    lower = 164874693357817570256198287827465271493
+              /1329227995784915872903807060280344576,
+
+    upper = 82437346678908785128099143913732635747
+              /664613997892457936451903530140172288.
+
+  Their difference is exactly 2^-120. The outward x enclosure is
+
+    [124.0379332068297490529270708138608804638393,
+     124.0379332068297490529270708138608804645917].
+
+Parameter transfer:
+  Replayed v=62*x/(7*pi^2) using the enclosed pi and outward interval
+  arithmetic. The full resulting integer-endpoint interval matched the
+  certificate and summary, and yields the decimal v bracket in Section 1.
+  This monotone positive change of variable preserves the global order
+  and simplicity of the root.
+
+The combined independent model/polynomial reconstruction and certificate
+replay completed successfully in 9.009964396002033 seconds in this session.
+The elapsed time is a runtime observation, not a mathematical premise.
+
+8. Assessment and remaining limits
+----------------------------------
+No missing positive-axis interval, incorrect covariance factor, invalid
+tail inequality, sign mismatch, root-multiplicity error, localization
+failure, source-binding inconsistency, or input-reconstruction mismatch
+was found.
+
+The supplied harmonic result can therefore be described as a complete
+transparent computer-assisted proof for the reconstructed mathematical
+model, with a separate internal AI review and exact replay. It should not
+be described as independently externally validated or experimentally
+proven on the strength of this audit. The figure-generation task performed
+by this reviewer is unrelated to, and is not evidence for, this root proof.
+
+No optional testing was repeated when this report was saved. No original,
+star, homogeneous-control, harmonic source, or certificate file was changed,
+and no archive was created.

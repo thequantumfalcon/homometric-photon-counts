@@ -1,0 +1,68 @@
+EXACT FOUR-BIN DETECTION CONTINUATION
+
+Result: under the same known, calibrated iid model at t=1/2 and zero
+background, gain eta=1/10 admits an explicit fixed four-bin test using
+180179050114182 snapshots. Each conditional error is strictly below 1/20.
+The previous sufficient count at gain 1/28 was 303181164969742; this is a
+factor of approximately 1.682666 improvement in sufficient counts.
+The gain changes. Neither count is asserted to be optimal or necessary.
+
+All observations are retained in bins 0, 1, 2, and 3-or-more. The decision
+is A exactly when the sum of the four rational scores times the respective
+bin multiplicities is nonnegative; otherwise it is B. The precise scores,
+probability enclosures, and exponential bounds are in
+detection_certificate_64.json, selected_operating_point.explicit_test.
+
+Candidate gain     Certified sufficient snapshots
+1/20               234136570648163
+1/16               218030401606228
+1/12               196729545525959
+1/10               180179050114182
+
+METHOD
+
+The input is the reconstructed rational table for moments zero through 64
+of both structures (130 values). Its byte hash is pinned in the rational
+node-design file and checked by the exact producer.
+
+Optional mpmath exploration generated rational interpolation nodes using
+weighted moment orders 0,1,2,3, with respectively 32,32,31,31 nodes. These
+are only proposals. All proof decisions use Python standard-library
+Fraction arithmetic; nodes must be distinct and strictly inside (0,3969).
+
+For count k=0,1,2, interpolate exp(-eta*x) at positive double nodes.
+The even-derivative Hermite remainder gives a global lower bound. Add
+a simple node at zero for the odd-derivative upper bound. Multiplying by
+x^k preserves these inequalities for nonnegative x. Integrating the
+polynomials uses moments no higher than 64. Multiplying by eta^k/k!
+gives the exact Poisson-mixture bin probability bounds. Normalization
+gives the fourth bin.
+
+Exact exponential enclosures and probability normalization certify
+ E_A[exp(-score)] <= 1-c, E_B[exp(score)] <= 1-c,
+where c is a positive rational slightly above 1.6650104427228699e-14.
+For independent snapshots the Markov bound on each conditional error
+is at most (1-c)^m <= exp(-m*c) <= exp(-3) < 1/20. The last strict
+inequality follows from an exact positive Taylor partial sum for exp(3).
+No central-limit approximation, Monte Carlo estimate, or asymptotic
+normality claim is used.
+
+REPRODUCTION
+
+Run from any working directory using these script paths:
+ python continuation-2026-10-20/detection/certify_detection_64.py
+ python continuation-2026-10-20/detection/verify_detection_64.py
+ python continuation-2026-10-20/detection/independent_detection_64.py
+
+The first script produces all probability enclosures and the test. The
+second replays the serialized score/MGF inequalities. The third uses
+the archive's independent confluent-Newton implementation, positive-exp
+reciprocal bounds, and capped-simplex maximization, without importing
+the detector producer. It verifies the strongest point only. All reject
+optimized Python because exact internal invariant checks use assertions.
+
+The optional design_detection_nodes.py requires mpmath; it is not needed
+to replay the certificate from the saved rational nodes. The original
+archive and prior audit are read-only dependencies. These checks remain
+conditional on the stated mathematical model and moment reconstruction;
+they do not constitute external review or physical validation.

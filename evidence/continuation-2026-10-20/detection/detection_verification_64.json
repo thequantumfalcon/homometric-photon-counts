@@ -1,0 +1,28 @@
+{
+  "certificate_sha256": "481065a9cf5c89f791fcd742eb7452f8bfa109a147b7ec1bf0e964c88ce43423",
+  "verifier_sha256": "5ffe4d781de3fdcd139d0991c52f945a0d048040040848636a40c18aa2e70d33",
+  "all_passed": true,
+  "checked": [
+    {
+      "eta": "1/20",
+      "sufficient_m": 234136570648163,
+      "passed": true
+    },
+    {
+      "eta": "1/16",
+      "sufficient_m": 218030401606228,
+      "passed": true
+    },
+    {
+      "eta": "1/12",
+      "sufficient_m": 196729545525959,
+      "passed": true
+    },
+    {
+      "eta": "1/10",
+      "sufficient_m": 180179050114182,
+      "passed": true
+    }
+  ],
+  "scope": "Exact serialized-score MGF and per-structure 5-percent inequalities; full producer replay separately regenerates the probability enclosures."
+}

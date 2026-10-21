@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite the exact repository revision and the specific model/certificate used. This candidate is not a peer-reviewed article."
+type: software
+license: MIT
+title: "Homometric photon counts: conditional proofs and reproducible certificates"
+authors:
+  - name: "The Quantum Falcon"
+    website: "https://github.com/thequantumfalcon"
+abstract: "A research capsule for a fixed 63-site homometric pair under independent Gaussian phase motion and conditional Poisson counting. Results have explicit assumptions and include rigorous numerical certificates and focused formal checks."
+keywords:
+  - homometry
+  - photon counting
+  - exact arithmetic
+  - interval arithmetic
+  - formal verification

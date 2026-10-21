@@ -1,0 +1,244 @@
+INDEPENDENT ANALYTIC AND COMPUTATIONAL REVIEW OF FINITE PHOTON DETECTION
+20 October 2026
+
+VERDICT
+
+PASS. The finite-detection proof and executable certificate are valid under
+the specified calibrated model, conditional on the accepted exact intensity
+moments. No mathematical correction is required. The independently written
+replay passed on the final rebuilt source and output files identified below.
+The review confirms a locally unique simple four-count blind gain, not a
+globally unique gain. The very large sample thresholds have the stated
+necessary/sufficient meanings and do not establish a practical experiment.
+
+This is a separate-agent review within this session. It is not external peer
+review, a laboratory result, or a claim about historical publication priority.
+
+REVIEWED SNAPSHOTS: SHA-256
+
+certify_finite_detection.py
+e368349ee2326b35964bf05fa780e7e58f54d0b4a89efeb0bc3c2214f1f2531c
+
+fixed_t_moments.json
+538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32
+
+finite_detection_certificate.json
+6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8
+
+homogeneous_moment_engine.py
+277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a
+
+finite_detection_proof.txt
+cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e
+
+All paths in this review are relative to science_extension/finite_detection.
+The proof filename is singular: finite_detection_proof.txt.
+
+SCOPE AND DEPENDENCY
+
+I read the complete certificate-producing script and the complete prose
+proof. I also read the geometric-phase construction and the fixed-t cumulant
+and direct-convolution routines in the unchanged moment engine. The recurrence
+is the correct distinguished-block moment-cumulant identity: independence
+adds site cumulants, and selecting the block containing one distinguished
+slot counts every partition once. No order-five limitation is built into
+the mathematical recurrence.
+
+The independent computational replay accepts the saved exact moment tables.
+It does not regenerate the 63-site geometry or repeat the expensive order-32
+recurrence. The producer's separate clean rebuild and its direct-convolution
+agreement through order five remain part of the upstream evidence, not a
+second calculation performed by this reviewer. Positivity, support bounds,
+log-convexity, the common first three moments, and the exact fourth gap were
+rechecked against the saved table. These are consistency checks, not a
+substitute for the recurrence's mathematical justification.
+
+For the small-s claims, I checked the common-leading-moment argument in
+science_completion/sample_complexity_proofs.tex. Its assumptions imply
+D5=O(s^6), mu_G,6=O(s^6), and the stated common leading fourth moment.
+The finite-s probability inequalities do not require an asymptotic limit.
+
+INDEPENDENT COMPUTATIONAL METHOD
+
+The new replay script imports neither certify_finite_detection.py nor the
+moment engine. Its companion JSON retains the input hashes and independent
+enclosures. It can be run as
+
+  python independent_certificate_replay.py
+
+The replay uses one Taylor polynomial and its signed remainder to reconstruct
+count-probability bounds. For Hellinger terms it bounds sqrt(p) and sqrt(q)
+separately on a finer rational grid and squares their difference interval.
+It therefore avoids the producer's rationalized gap/denominator formula.
+Every independent Hellinger component enclosure lies inside the corresponding
+saved enclosure. The entire infinite count tail is then included.
+
+The replay verifies all 50 probability intervals for k=0,...,24 under A and B,
+all 25 Hellinger components, the full-count TV interval, the Bernoulli
+complement, the Hellinger ratio, all four necessary/sufficient sample integers,
+the explicit Bernstein threshold rule, the blind-gain signs and derivative,
+and the small-noise six-moment formulas. It also checks the logarithm
+constants using a distinct degree-50 rational exponential enclosure.
+
+1. COUNT PROBABILITIES AND THE INFINITE TAIL
+
+For x>=0, the Lagrange remainder for exp(-x) has the required alternating
+sign for every degree. The odd partial sums are lower bounds and the even
+partial sums are upper bounds even when the individual terms are not yet
+decreasing. Multiplying by nonnegative I^k and taking expectations preserves
+the inequalities. Scaling by eta^k/k! is legitimate because eta>0. Clipping
+with zero, the raw-moment bound, and probability one only strengthens valid
+bounds. The decimal-grid rounding is outward for negative as well as positive
+numbers, since the lower endpoint uses floor and the upper endpoint ceiling.
+
+For counts above K=24, (N)_25 is at least 25! on N>=25. Its expectation equals
+eta^25 E[I^25] under a Poisson mixture. Thus the tail upper bound used in the
+certificate controls every omitted count, not just one next term. The
+Hellinger tail is at most the sum of the two omitted probability masses;
+the TV tail is at most half that sum. These factors are correct.
+
+2. HELLINGER DENOMINATORS AND RATIONAL SQUARE ROOTS
+
+The producer's identity
+
+  (sqrt(p)-sqrt(q))^2=(p-q)^2/(p+q+2sqrt(pq))
+
+is valid except at p=q=0, where its explicitly coded zero case is valid.
+The denominator increases in both probabilities. For a lower bound, the
+smallest absolute gap is squared and divided by a denominator upper bound.
+For an upper bound, the largest absolute gap is squared and divided by a
+denominator lower bound, with p+q supplying a valid bound if that denominator
+vanishes. The directions are correct, including overlapping intervals.
+
+If j=floor(sqrt(x)*2^200), j/2^200 and (j+1)/2^200 enclose sqrt(x).
+Computing j by integer square root of floor(x*2^400) gives the same integer.
+The code verifies both squared inequalities exactly. No floating-point square
+root affects the result. The independent direct-square-root replay confirms
+the producer's denominator calculation without reusing it.
+
+At t=1/2 and eta=1/512, the independent full-count h^2 enclosure is approximately
+
+ [2.4026364459022103063e-17, 2.4026364470053042484e-17],
+
+which is contained in the saved outward interval. The independent four-count
+Bernoulli h^2 enclosure is approximately
+
+ [2.2274424323159241440e-19, 2.2274424323159241507e-19].
+
+The ratio of the two squared Hellinger distances is between the quoted
+107.8652543852 and 107.8652544348. This numerical ratio is specific to the
+stated parameter point and observable; it is not a universal information or
+sample-efficiency ratio.
+
+3. SAMPLE INEQUALITY DIRECTIONS
+
+With h^2 in [L,U], rho=1-h^2/2, and m independent snapshots, the exact product
+affinity is rho^m. Equal-prior optimal success is (1+TV)/2. The two bounds
+
+  1-rho^m <= TV <= sqrt(1-rho^(2m))
+
+give the directions used in the proof. Success at least 19/20 requires
+rho^(2m)<=19/100. Since h^2<=U, this yields the stated necessary lower bound
+after applying -log(1-U/2)<= (U/2)/(1-U/2). Replacing log(100/19) by a smaller
+rational number weakens the necessary bound safely.
+
+For sufficiency, h^2>=L gives rho^m<=exp(-m L/2). Making this at most 1/10
+ensures optimal success at least 19/20. Replacing log(10) by a larger rational
+number strengthens this requirement safely. The rational exponential checks
+and the integer ceilings are correct.
+
+The following exact integers were independently recovered:
+
+  Full counts: necessary at least 69,121,152,393,630,388;
+               sufficient 191,671,944,702,842,206.
+  Four-count indicator only:
+               necessary at least 7,455,770,689,765,032,714;
+               sufficient 20,674,743,073,884,456,509.
+
+The first number in each row excludes every smaller m from achieving the
+specified optimal equal-prior success. The second number guarantees the
+existence of an optimal likelihood-ratio rule with the specified success.
+The exact transition is not located by these inequalities. The necessary
+four-count-only number cannot be imposed on an observer keeping full counts.
+
+The explicit empirical-frequency rule is also valid. Its threshold is midway
+between the upper A probability and lower B probability. Both hypotheses
+are therefore at least d/2 away. Centered Bernoulli variables have magnitude
+at most one and variance at most the probability upper bound u. Applying the
+same bound to either sign of the centered variable gives each conditional
+error at most exp[-m d^2/(8u+4d/3)]. The integer
+26,937,971,154,603,499,910 makes the exponent at least three; exp(3)>20 proves
+the claimed strict error bound. This rule supplies a concrete test without
+computing the full-count likelihood ratio.
+
+4. THE FOUR-COUNT BLIND GAIN
+
+The reconstructed bounds are strictly positive for F at 1/640 and strictly
+negative at 1/512. At the final exact rational endpoints they remain strictly
+positive on the left and strictly negative on the right. Their difference is
+1/184467440737095516160, below 10^-20. Bounded intensity makes F analytic and
+therefore continuous, so the sign change proves an exact zero, independently
+of the displayed approximate decimal.
+
+For a<=eta<=b, R_G,5(b)<=R_G,5(eta)<=R_G,5(a). Hence
+
+ -upper(R_A,5(a))+lower(R_B,5(b)) <= F'(eta)
+ <= -lower(R_A,5(b))+upper(R_B,5(a)).
+
+This confirms the correct derivative directions without assuming F' itself
+is monotone. Independent exact arithmetic gives the same strictly negative
+uniform range, approximately
+
+ [-41829.3019434014557484, -41829.3019433515423953].
+
+There is exactly one simple zero inside the exact rational interval stated
+in the proof. Its outward decimal display is near 0.00165929160405052585.
+The derivative enclosure was proved on the exact rational interval, not the
+slightly wider decimal display. No global uniqueness statement follows.
+
+At this zero the two probabilities of N=4 coincide exactly, so their
+Bernoulli indicators and every finite product of those indicators have the
+same law. Equal-prior classification from only that indicator cannot exceed
+one half. Meanwhile E_A[(N)_4]-E_B[(N)_4]=eta^4 D4>0 proves that the full count
+laws remain distinct. The blindness is caused by discarding the other count
+values; it does not contradict Poisson-mixture injectivity.
+
+5. SIX-MOMENT FINITE-s BOUND
+
+Using 1-x below exp(-x) for A and 1-x+x^2/2 above it for B gives exactly
+
+  p_A(4)-p_B(4) >= eta^4 [D4-eta D5-eta^2 mu_B,6/2]/24.
+
+The negative sixth-moment term belongs to B, as written. The reverse upper
+comparison uses A's sixth moment. The probability upper bound U uses the
+larger fourth moment and exp(-eta I)<=1. Whenever L>0,
+(sqrt(p_A)-sqrt(p_B))^2 >= L^2/(4U), because the denominator is at most 4U.
+The complement contribution is nonnegative. These steps are finite-parameter
+inequalities, not asymptotic substitutions.
+
+Substituting the accepted small-s moment expansions gives
+
+  L^2/(4U) = eta^4 c5^2 s^6/(96 m4)+O(s^7).
+
+The coefficient and s power are correct. The hypotheses ensuring eventual
+L>0 and the common m4 are already in the prior moment proof. At t=999/1000,
+the independently replayed six-moment expressions are positive and yield the
+saved sufficient integer 38,905,896,029,459,193,642,493,650,866.
+
+LIMITATIONS THAT MUST TRAVEL WITH THE RESULT
+
+All finite sample claims assume known competing models, zero background,
+the specified gain multiplying unnormalized intensity, and independent
+snapshots conditional on the structure. Population identifiability of unknown
+nuisance parameters does not remove these assumptions from a finite-sample
+bound. Estimating nuisance parameters would require another analysis.
+
+The proof certifies mathematical separation and explicit sample guarantees.
+The enormous sample integers at the two illustrative points do not justify
+an acquisition-time estimate or a claim of practical feasibility. Conversely,
+they do not prove that every other operating point is equally difficult.
+No global detector optimum or global blind-gain count was established.
+
+Supporting independent artifacts:
+  independent_certificate_replay.py
+  independent_certificate_replay.json

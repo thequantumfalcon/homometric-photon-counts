@@ -1,0 +1,47 @@
+INDEPENDENT REVIEW OF THE MULTI-BIN TEST ARGUMENT
+
+The count partition is {0},...,{cutoff-1},{cutoff or greater}. Every
+observation belongs to exactly one bin. The exact rational scores define
+an implementable sum comparison, including an unambiguous tie decision.
+
+For bin k, P(N=k)=eta^k E[I^k exp(-eta I)]/k! at zero background.
+Positive double-node interpolation of exp(-eta x) has even-order positive
+derivative and nonnegative remainder product, so it bounds from below.
+Adding a simple zero endpoint produces an odd-order negative derivative
+and a nonnegative product on x>=0, giving an upper bound. Multiplication
+by x^k preserves both signs. The node-count constraints ensure every
+integrated polynomial uses only the available moments through order64.
+The final-bin interval follows from exact probability normalization.
+
+For fixed rational scores w and iid observations, choosing A when the
+sum is nonnegative gives
+ P_A(error) <= E_A[exp(-w)]^m,
+ P_B(error) <= E_B[exp(w)]^m.
+A common exact bound of 1-c with c>0 and m*c>=3 therefore bounds each
+conditional error by (1-c)^m < exp(-3) < 1/20. The proof is finite-sample
+and separate for the two structures. No Gaussian approximation to the
+score sum, empirical error estimate, or Monte Carlo result is needed.
+
+The independent verifier uses confluent Newton divided differences to
+integrate the interpolants, whereas the producer uses cardinal Hermite
+bases. It encloses exponentials using a positive Taylor series and a
+reciprocal, whereas the producer uses an alternating negative-exp series.
+It maximizes each MGF over the full capped probability simplex, rather
+than eliminating the final probability and bounding remaining terms
+individually. These provide different arithmetic representations of the
+probability and MGF steps. The verifier checks interval containment in
+the serialized producer bounds and checks all finite-test inequalities.
+
+The inherited independent implementation is pinned by a literal source
+hash. Producer source, arithmetic dependency, nodes, moment input, and
+certificate hashes are checked or recorded. Exact scripts reject Python
+optimization because their internal invariant checks use assertions.
+
+Scope: the independent_verification.json result concerns the selected
+test and its conditional error bound. Selection of the least sufficient
+count among a finite candidate list is not a global optimality theorem
+or a necessary sample bound. The Gaussian phase law, independence across
+snapshots, known calibration, zero background, and reconstructed exact
+moment table remain assumptions/dependencies. Computational independence
+of arithmetic representations does not constitute external human review
+or physical validation.

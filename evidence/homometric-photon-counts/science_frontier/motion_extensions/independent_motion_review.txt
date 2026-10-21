@@ -1,0 +1,73 @@
+INDEPENDENT INTERNAL REVIEW OF MOTION AND GEOMETRY EXTENSIONS
+20 October 2026
+
+Verdict: PASS for the stated model-level claims and sufficient tolerances.
+This is a separate reasoning and arithmetic review within this session,
+not external human peer review or physical validation.
+
+Reviewed material: motion_extension_proofs.txt, verify_motion_extensions.py,
+and motion_extension_results.json. The independent_motion_replay.json file
+records the exact reviewed input hashes and independently replayed checks.
+The replay imports neither the producer nor the foundation moment engine;
+it evaluates the retained foundation polynomial table directly. It therefore
+shares that previously verified table as an explicit dependency.
+
+1. Common-mode invariance is pathwise: multiplying all complex summands by
+one unit factor preserves their squared norm. The factor may depend on the
+residual vector. Subtracting the sample mean of a real phase vector removes
+only such a common factor, so the Gaussian projection statement follows
+without an independence assertion between mean and contrasts.
+
+2. With centered phases, or more generally P mu=0, the covariance eigenvalues give the exact equicorrelation domain
+[-1/62,1]. For every admissible rho, PCP=s(1-rho)P, agreeing with the
+contrast law of independent Gaussian phases at variance s(1-rho). This
+includes negative rho and the singular lower endpoint. The rho=1 case
+collapses to zero intensity at the clean null. Equal projected parameters
+are sufficient for equal laws; the note correctly avoids claiming their
+necessity or separate identification of s and rho. The centered/projected-mean
+qualification was made explicit after the final report review; arbitrary
+nonzero P mu would change the effective geometry and is not included in
+the iid-equivalence statement.
+
+3. The mean formulas follow directly from expanding the intensity. The
+heterogeneous two-site example uses the same indexed perturbation in both
+geometries, so it is a genuine failure of a blanket robustness claim for
+lower-moment equality. Elementary sixth-root arithmetic independently gives
+pair norms 3 and 1, means 749/16 and 747/16, and gap 2d^2. Geometry rotation
+instead gives a clean amplitude factor exp(i epsilon)-1 and mean gap
+8 exp(-s) sin^2(epsilon/2). At epsilon=pi/3, s=log2, the values are 33 and 32.
+
+4. The L8 argument bounds the difference of E|F|^8 by the difference of
+eighth powers of amplitude norms. Minkowski supplies the norm difference;
+convexity bounds either an increase or a decrease by (R+d)^8-R^8. Thus
+subtracting one such loss per geometry is valid even for different or
+dependent couplings. Independently evaluating the retained reference
+polynomials and expanding the increment by the binomial theorem gives
+the reported margin 202.724168424011...>202.
+
+5. For general Gaussian covariance, C_perp and P commute and share the
+one-dimensional null common-mode subspace. On the contrast subspace P is
+the identity times one, so the square-root Frobenius bound reduces to
+the scalar inequality |sqrt(lambda)-sqrt(s0)|<=|lambda-s0|/sqrt(s0).
+This remains valid at singular contrast covariance. The row standard
+deviations sum to at most sqrt(63)||D||_F. Combining the Gaussian L8 factor
+105^(1/8)<2 with sqrt(63/log2)<10 justifies the constant 20. Large common
+covariance cancels exactly and need not be small.
+
+6. The deterministic, standard-deviation, variance, and covariance bounds
+each consume the same 1/200000 amplitude budget. They are alternative
+sufficient bounds; the proof correctly supplies a combined inequality
+when several perturbations coexist. A coordinate tolerance is expressed
+only in the mathematical units of q0=pi/3, not an asserted physical length.
+
+7. For f in [0,M], the layer-cake bound is M*TV, not 2M*TV under the
+stated convention. Applying it to I^4 in [0,63^8] and then to product
+measures gives the claimed exact joint and per-site margins. Close
+marginals alone would not suffice; the rigid-common-motion example
+correctly exposes that failure.
+
+Limits retained: these are single-snapshot statements. Arbitrary temporal
+dependence does not inherit the iid sample guarantees. Perturbations can
+destroy exact lower-moment equality while preserving a positive fourth
+gap. The margins are conservative sufficient conditions, not optimal
+physical tolerances. No unqualified extension to all motion laws is claimed.

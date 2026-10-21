@@ -1,0 +1,21 @@
+REVIEW OF THE STRONGER SCORE-TRANSFER RESULT
+20 October 2026, America/Denver
+
+The primary audit agent read the separately derived score_transfer_proof.txt
+and verify_score_transfer.py and ran the verifier. The oscillation-times-TV
+bound uses TV=sup_events without an extra factor two. Reciprocal lower bounds
+from the saved opposite-sign exponential upper bounds are valid, since all
+exponentials are positive. The resulting R bounds both four-bin functions on
+the complete count space, including N>=3.
+
+Requiring R*delta<=d/2 transfers both one-count exponential expectations to
+at most 1-d/2. With independent entire trajectory realizations and conditional
+independent Poisson emissions, multiplying expectations and applying Markov
+gives the claimed per-structure errors with m=ceil(6/d). Ties agree with the
+original score rule. The exact verifier passed, including the rational gate
+threshold identity and the positive Taylor lower bound exp(3)>20.
+
+The amplitude coupling proof was separately reviewed by the theory audit
+agent (independent_review.txt). These are internal cross-checks by AI agents,
+not external human review or formal verification. No unqualified claim about
+real detectors, continuous non-reset sampling, or practical rate/flux follows.

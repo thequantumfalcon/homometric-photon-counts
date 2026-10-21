@@ -1,0 +1,45 @@
+Independent review of the fixed-bin necessary sample bound
+=========================================================
+
+The lowerbounds/proof.txt argument and its producer were reviewed without
+importing the producer. No mathematical gap was found within its declared
+fixed-model, fixed-gain, iid, 13-bin observation scope. The result does not
+give a necessary bound for unpooled full photon counts or adaptive gains.
+
+The affinity deficit identity uses normalization correctly. The rational
+denominator lower bound 8*min(p_lower,q_lower) has the correct direction.
+The chosen maximum of endpoint cross-differences bounds every difference
+within the two intervals. Tensorization uses independence. Cauchy-Schwarz
+gives TV<=sqrt(1-affinity^2) with the standard TV convention 1/2 L1.
+Both errors strictly below 1/20 imply TV>9/10, so the strict inequalities
+and the producer's integer floor plus one are correct. A randomized rule
+is a function f in [0,1], which includes arbitrary tie handling; the
+expectation-difference inequality still holds. The KL alternative also
+handles randomized tests by data processing. Its two directions are valid.
+Upward rounding of the one-gate loss weakens, rather than strengthens,
+the necessary bound. The saved sufficient test has strictly smaller than
+1/20 errors, so the upper endpoint matches the stated strict target.
+
+An independent exact arithmetic route now checks the integer exclusion
+without using the producer's logarithm series or floor calculation.
+Let delta be its rational upper bound on 1-affinity; recomputing all four
+corners of each pair of probability intervals verifies this upper bound.
+Set m0=28091647285173 and z=2m0*delta/(1-delta). For 0<delta<1,
+
+  log(1-delta)>=-delta/(1-delta),
+  (1-delta)^(2m0)>=exp(-z).
+
+Taylor's theorem for exp(-z), z>0, has a strictly positive remainder after
+odd degree31: the next derivative of exp(-z) is positive. Thus the exact
+rational polynomial sum_(k=0)^31 (-z)^k/k! is a strict lower bound.
+The independent script verifies this polynomial exceeds 19/100. Hence
+affinity(P^m,Q^m)^2>19/100 for every integer m<=m0. The TV bound is then
+strictly below 9/10, making both errors <1/20 impossible. This directly
+establishes the necessary sample endpoint 28091647285174.
+
+This is a second arithmetic check of the stronger affinity bound, not a
+second certification of the physical probability inputs. Source hashes
+pin the inherited probability enclosures and the reviewed lower-bound
+receipt. The analytic inequalities remain ordinary mathematical proofs,
+not Lean formalizations. No network, numerical logarithms, or numerical
+square roots are needed.

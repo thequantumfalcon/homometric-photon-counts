@@ -1,0 +1,54 @@
+{
+  "source_sha256": "18708979fef329c7b11a58dd1b8b74f50f9b0556b1e52a0e1a5fbf6a8a0376af",
+  "renderer_sha256": "f3996958361844008d5015b0071c29b749f487ad83230df2780f1ad9214b9c6f",
+  "presentation_source_sha256": "18708979fef329c7b11a58dd1b8b74f50f9b0556b1e52a0e1a5fbf6a8a0376af",
+  "pdf_sha256": "6d9397ae5e10b3b7570099a7b75bae842d24ec984d7a5dbdd07881ba8b5c1c25",
+  "pdf_bytes": 411034,
+  "engine": "native pdfLaTeX; three passes; shell escape disabled",
+  "format_only_replacements": {},
+  "mathematical_expression_replacements": 0,
+  "tex_log_diagnostic_matches": [],
+  "visual_QA_pending": false,
+  "status": "PASS",
+  "page_count": 13,
+  "page_labels": "E-1 through E-13",
+  "visual_review": {
+    "all_pages_reviewed_on_contact_sheets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "additional_full_resolution_pages": [
+      3,
+      4,
+      6,
+      9,
+      10,
+      11
+    ],
+    "raster_dpi": 140,
+    "figure_source": "figures/four_count_blind_gain.pdf",
+    "result": "PASS: no clipped content, overlaps, missing mathematical glyphs, or unreadable table entries observed; final references fit on E-13.",
+    "pixel_margin_check": "All raster pages retain at least 60 pixels of white below visible content at 140 dpi."
+  },
+  "scientific_review": "report_science_review.txt",
+  "scientific_review_sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d",
+  "layout_edits_after_first_scientific_review": [
+    "Inserted the separately reviewed finite-count figure and caption.",
+    "Moved the unchanged sufficient-sample inequality from inline to displayed mathematics.",
+    "Set bibliography to small type to keep all references on the final page."
+  ],
+  "final_source_reviewed_by_science_agent": true,
+  "foundation_report_unchanged": true,
+  "scope": "Visual and rendering review only; mathematical review is recorded separately. Internal AI-assisted review, not external peer review."
+}

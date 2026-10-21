@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "definitions": {
+    "Gaussian": "E W^k=t^(k^2), t=exp(-s/2), 0<t<1",
+    "Cauchy": "E W^k=r^abs(k), 0<r<1",
+    "matching_mean": "E I=n*(1-t^2) or n*(1-r^2), so matching means force t=r",
+    "x": "t^2=r^2",
+    "R": "129187/400"
+  },
+  "moment_polynomials_in_x": {
+    "wrapped_gaussian": {
+      "0": {
+        "0": "1"
+      },
+      "1": {
+        "0": "63",
+        "1": "-63"
+      },
+      "2": {
+        "0": "7875",
+        "1": "-15624",
+        "2": "3153187/400",
+        "3": "-78787/200",
+        "4": "103987/400"
+      },
+      "3": {
+        "0": "1464813",
+        "1": "-4324320",
+        "2": "1731099663/400",
+        "3": "-67294196033/40000",
+        "4": "14125382499/40000",
+        "5": "-22229052597/160000",
+        "6": "51630667/40000",
+        "7": "-107619801/80000",
+        "9": "-5721533/160000"
+      }
+    },
+    "wrapped_cauchy": {
+      "0": {
+        "0": "1"
+      },
+      "1": {
+        "0": "63",
+        "1": "-63"
+      },
+      "2": {
+        "0": "7875",
+        "1": "-15624",
+        "2": "7749"
+      },
+      "3": {
+        "0": "1464813",
+        "1": "-4324320",
+        "2": "4254579",
+        "3": "-1395072"
+      }
+    }
+  },
+  "Gaussian_minus_Cauchy_moment_polynomials_in_x": {
+    "0": {},
+    "1": {},
+    "2": {
+      "2": "53587/400",
+      "3": "-78787/200",
+      "4": "103987/400"
+    },
+    "3": {
+      "2": "29268063/400",
+      "3": "-11491316033/40000",
+      "4": "14125382499/40000",
+      "5": "-22229052597/160000",
+      "6": "51630667/40000",
+      "7": "-107619801/80000",
+      "9": "-5721533/160000"
+    }
+  },
+  "second_gap_factorization": "x^2*(1-x)*((R-3*n)-(R-n)*x)",
+  "unique_interior_second_moment_collision": "53587/103987",
+  "third_moment_gap_at_collision_exact": "-25087690453913212850809554872899594124966635200/1421711387011936544792839799933222941958356627",
+  "third_moment_gap_at_collision_decimal": "-17.646120501743283",
+  "conclusion": "At every nondegenerate interior parameter, the first three ideal intensity moments identify whether the common iid phase family is wrapped Gaussian or wrapped Cauchy; the mean identifies its parameter. This holds independently of which of the two homometric geometries generated the data.",
+  "scope": "Exact population-moment identifiability with known n and the stated two-family model; no finite-sample classifier, universal noise-family identification, or detector-calibration guarantee is claimed here.",
+  "source_sha256": "aeb14aba57f745e03c43f1506600e5f1e5fba4eed3960a4c84af40945956d9e7",
+  "phase_law_engine_sha256": "9f893a7ab41fcd05c23953a0f0041b1d70d1d07f5db8bbcb72b8167713b2481c",
+  "geometry_arithmetic_sha256": "4467dfb0cc9851c5c819f31f278f86d336faca75d27cd345cde0348466acb8f2"
+}

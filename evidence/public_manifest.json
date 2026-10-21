@@ -1,0 +1,2624 @@
+{
+  "schema": "public-scientific-evidence-v1",
+  "scope": "Selected scientific text/code, with local path redaction and transitive hash rebinding; original local archive retained separately.",
+  "excluded": "Private investigations, external article PDFs, binary runtimes, compiled proof objects, unrelated document inventories and repository settings.",
+  "hash_rewrite_iterations": 7,
+  "files": [
+    {
+      "path": "audit-2026-10-20/exposure/finite_exposure_proof.txt",
+      "size": 4716,
+      "sha256": "344a77b16318be8413da6a990c9c1ed7b290133bb975c186deb936e69d2c40a9",
+      "original_sha256": "344a77b16318be8413da6a990c9c1ed7b290133bb975c186deb936e69d2c40a9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/finite_exposure_verification.json",
+      "size": 997,
+      "sha256": "afdd6c12a5588bd751ce2938aab5838dab1a965e74fa42c48b4f2d1d034eab30",
+      "original_sha256": "afdd6c12a5588bd751ce2938aab5838dab1a965e74fa42c48b4f2d1d034eab30",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/independent_review.txt",
+      "size": 3539,
+      "sha256": "3300cddab1671ee709a1ece00ff1671b3c6e6802b3c3f5ff89b680511baea19e",
+      "original_sha256": "3300cddab1671ee709a1ece00ff1671b3c6e6802b3c3f5ff89b680511baea19e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/score_transfer_proof.txt",
+      "size": 5375,
+      "sha256": "a03434c7da29b7d5eb5db73657b79e44702905314cceee1eb96acf600ce510ce",
+      "original_sha256": "a03434c7da29b7d5eb5db73657b79e44702905314cceee1eb96acf600ce510ce",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/score_transfer_review.txt",
+      "size": 1262,
+      "sha256": "90a62939c4345714b12bc373011020cec710de8632b93215f7f7aee6f12854cf",
+      "original_sha256": "90a62939c4345714b12bc373011020cec710de8632b93215f7f7aee6f12854cf",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/score_transfer_verification.json",
+      "size": 4155,
+      "sha256": "5f6a98fae7adad537cba855f1bf82b14c2b489f5a16fe1c19503846c9a3fe666",
+      "original_sha256": "5f6a98fae7adad537cba855f1bf82b14c2b489f5a16fe1c19503846c9a3fe666",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/verify_finite_exposure.py",
+      "size": 3244,
+      "sha256": "5d25fa6bb1237fef627888e12650b884dba98a05b066f76c38bde2e828340040",
+      "original_sha256": "5d25fa6bb1237fef627888e12650b884dba98a05b066f76c38bde2e828340040",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/exposure/verify_score_transfer.py",
+      "size": 4564,
+      "sha256": "f0a241e7f8f8edf90771e5381890644e489ec8a78383d42a8fc05c77dc00a8bf",
+      "original_sha256": "f0a241e7f8f8edf90771e5381890644e489ec8a78383d42a8fc05c77dc00a8bf",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/arithmetic_validation.json",
+      "size": 443,
+      "sha256": "0cb6297b38009c971e33637a5a4448ea0e6c117b6cfcdc083fa2590973fd3bd5",
+      "original_sha256": "0cb6297b38009c971e33637a5a4448ea0e6c117b6cfcdc083fa2590973fd3bd5",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/audit_validation.json",
+      "size": 515,
+      "sha256": "cf6f97cdb38ecd9a6fc27259d4b33533020528d4940f28adf13c61cd06367ce9",
+      "original_sha256": "cf6f97cdb38ecd9a6fc27259d4b33533020528d4940f28adf13c61cd06367ce9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/compare_moments.py",
+      "size": 1059,
+      "sha256": "321dc2d503ae2a1df64af939004e62cc60de403fa36949f556f7c63f07d971b5",
+      "original_sha256": "321dc2d503ae2a1df64af939004e62cc60de403fa36949f556f7c63f07d971b5",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/corrupted_moment_fixture.json",
+      "size": 36847,
+      "sha256": "33f78465d8a3af50ce8e3949a3f451a080fca9b60570a2c3d13d7b10a961e195",
+      "original_sha256": "33f78465d8a3af50ce8e3949a3f451a080fca9b60570a2c3d13d7b10a961e195",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/mutation_check.json",
+      "size": 380,
+      "sha256": "1ab734e36cb0dbb44a628b2fe00c579de506b23e5c5c7819b457b975dff5f4b2",
+      "original_sha256": "1ab734e36cb0dbb44a628b2fe00c579de506b23e5c5c7819b457b975dff5f4b2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/mutation_check.py",
+      "size": 1866,
+      "sha256": "3ef0d78b77901e0afe4f754c9d149d2bf88c59f70e3c6d3ee477675204d6afc4",
+      "original_sha256": "3ef0d78b77901e0afe4f754c9d149d2bf88c59f70e3c6d3ee477675204d6afc4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/proof.txt",
+      "size": 7733,
+      "sha256": "38c308c7505bd11afb195dab22386d471ec87a9524c46549b2f41ff98d9a9576",
+      "original_sha256": "38c308c7505bd11afb195dab22386d471ec87a9524c46549b2f41ff98d9a9576",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/reconstruct.py",
+      "size": 7878,
+      "sha256": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68",
+      "original_sha256": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/reconstructed_order_32.json",
+      "size": 40739,
+      "sha256": "72b95cd2c0293ca1c4f0f2921446b963292738671dd1e59a792d719c79b5c1d4",
+      "original_sha256": "72b95cd2c0293ca1c4f0f2921446b963292738671dd1e59a792d719c79b5c1d4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/reconstructed_order_5.json",
+      "size": 3324,
+      "sha256": "0e10d7402cb39f7a0b2cf355e082a412f70cc85c24cff28fb9bdc2845510e220",
+      "original_sha256": "0e10d7402cb39f7a0b2cf355e082a412f70cc85c24cff28fb9bdc2845510e220",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/run_audit.py",
+      "size": 2438,
+      "sha256": "de261b100ff632d8c0a4cde4f6b783509e8be56f9035ac98ee4b42d35b39814f",
+      "original_sha256": "de261b100ff632d8c0a4cde4f6b783509e8be56f9035ac98ee4b42d35b39814f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/symbolic_fourth.json",
+      "size": 7880,
+      "sha256": "864d034cea7646b415453c1f505afbf30779668855d3393b9f363268034206b6",
+      "original_sha256": "864d034cea7646b415453c1f505afbf30779668855d3393b9f363268034206b6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/symbolic_fourth.py",
+      "size": 2948,
+      "sha256": "205118f7fcfcac5b094f71e8e80cf7e84b43d66bd7f8f9b902d4c8f6256d4d96",
+      "original_sha256": "205118f7fcfcac5b094f71e8e80cf7e84b43d66bd7f8f9b902d4c8f6256d4d96",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/moments/verify_arithmetic.py",
+      "size": 2998,
+      "sha256": "6e474092c97c97329bb6bee94e217ab674e7649568c2d10e98f0a0ece16887c6",
+      "original_sha256": "6e474092c97c97329bb6bee94e217ab674e7649568c2d10e98f0a0ece16887c6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/theory/analytic-audit.txt",
+      "size": 14609,
+      "sha256": "fb31e99dac3bd3bb7240d67c43e6b764720283e0d69adf4b57004682a375b7a1",
+      "original_sha256": "fb31e99dac3bd3bb7240d67c43e6b764720283e0d69adf4b57004682a375b7a1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "audit-2026-10-20/theory/theory-status.json",
+      "size": 3447,
+      "sha256": "7307749ca9175043f8ae9ffaef87d88a70ea32ce5e79f901aae1bed893fe2c60",
+      "original_sha256": "7307749ca9175043f8ae9ffaef87d88a70ea32ce5e79f901aae1bed893fe2c60",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/continuation_manifest.json",
+      "size": 11089,
+      "sha256": "ccc96f262f89aa2fb6fe8b3b5985227ef9d58455046f3c84d16d018dba80b6a8",
+      "original_sha256": "e769cd42d80408262f870a3b53aae616377957c3d03c775f22e07456fb2dceba",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/detection/certify_detection_64.py",
+      "size": 3863,
+      "sha256": "79153556a2fdb743ccb880a04e5b7aa82339f585f95a8983616fa07367866c68",
+      "original_sha256": "79153556a2fdb743ccb880a04e5b7aa82339f585f95a8983616fa07367866c68",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/detection/design_detection_nodes.py",
+      "size": 1071,
+      "sha256": "d822b443e5c96e4994a0bc6005fc3f30499ac713ca6f351959ba04933b2e3c59",
+      "original_sha256": "d822b443e5c96e4994a0bc6005fc3f30499ac713ca6f351959ba04933b2e3c59",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/detection/detection_certificate_64.json",
+      "size": 44250,
+      "sha256": "481065a9cf5c89f791fcd742eb7452f8bfa109a147b7ec1bf0e964c88ce43423",
+      "original_sha256": "43f02cc5bad8aa14617615b3268ad077f122944e9f624d93a162226dd66a61ee",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/detection/detection_method.txt",
+      "size": 3489,
+      "sha256": "24fbc73df02593a00867a71a51dbb985f3ec4b5e4ba412db4bb0ce81f5b881b2",
+      "original_sha256": "24fbc73df02593a00867a71a51dbb985f3ec4b5e4ba412db4bb0ce81f5b881b2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/detection/detection_nodes_64.json",
+      "size": 5316,
+      "sha256": "d57641d9a6540d83bf805860af5344bdb010c7e08059dbbc7746ae59036db79d",
+      "original_sha256": "fb0ea3ba9fa7ee61a157b238a2cccd9c64673f6fe1759f351fde8b403f1ec9c7",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/detection/detection_verification_64.json",
+      "size": 784,
+      "sha256": "434a3336f6c659166c7c361f6afc989d4f7256c0ad1c5980acf93fc83173e1b6",
+      "original_sha256": "5d6fa00beddeaf753b54948d0aa00b5f0656f1b53ba6b854b7432fb2434ddf11",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/detection/independent_detection_64.py",
+      "size": 2740,
+      "sha256": "816662715e7662f0a7dccc7e402dd556bc8b6c2197b31edc81e70ab6e2a9f2aa",
+      "original_sha256": "816662715e7662f0a7dccc7e402dd556bc8b6c2197b31edc81e70ab6e2a9f2aa",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/detection/independent_detection_verification_64.json",
+      "size": 1059,
+      "sha256": "cf17e22423278b69e0147d2ffa84f158dc6f0485550f730c01f1935b74ee9a01",
+      "original_sha256": "400a275acd0b381a52fec02197f340a055792e24edbba66ce1ee878aeb517ccc",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/detection/independent_nodes_64.json",
+      "size": 8004,
+      "sha256": "45e3103a7ed3557dc2200fcc6e35395f3954b6a990d694c54635014730752f4e",
+      "original_sha256": "45e3103a7ed3557dc2200fcc6e35395f3954b6a990d694c54635014730752f4e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/detection/verify_detection_64.py",
+      "size": 2596,
+      "sha256": "5ffe4d781de3fdcd139d0991c52f945a0d048040040848636a40c18aa2e70d33",
+      "original_sha256": "5ffe4d781de3fdcd139d0991c52f945a0d048040040848636a40c18aa2e70d33",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/certify_gain_points.py",
+      "size": 3896,
+      "sha256": "01810994562435c1ec5ce76fbe64786a5eb507a9a636d45d441ec2eb6667e56e",
+      "original_sha256": "01810994562435c1ec5ce76fbe64786a5eb507a9a636d45d441ec2eb6667e56e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/certify_order96_extension.py",
+      "size": 4126,
+      "sha256": "52301a5fa0c97f80f121b293d6db97e1f222ae1f26ca094b05254781df010961",
+      "original_sha256": "52301a5fa0c97f80f121b293d6db97e1f222ae1f26ca094b05254781df010961",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/certify_third_root.py",
+      "size": 3429,
+      "sha256": "4d72d9d4b98465875f9e960128da347ff10bfe269ac50c2ce5349b1061d0342c",
+      "original_sha256": "4d72d9d4b98465875f9e960128da347ff10bfe269ac50c2ce5349b1061d0342c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/design_nodes.py",
+      "size": 2827,
+      "sha256": "071059bb91b1fea95a8f07bde1350c9fce64875f227c008276f8e6b09822bb04",
+      "original_sha256": "071059bb91b1fea95a8f07bde1350c9fce64875f227c008276f8e6b09822bb04",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/existing_bound_probe.json",
+      "size": 5826,
+      "sha256": "96d31b6c0473881cc5e9376fa33f71fa62e152b9813210de851fa71aa4387cf2",
+      "original_sha256": "96d31b6c0473881cc5e9376fa33f71fa62e152b9813210de851fa71aa4387cf2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/explore_existing_bounds.py",
+      "size": 1426,
+      "sha256": "e0672cb7f7dc581b006c418188d97274f8c6067f483c257909fba9d5276af47d",
+      "original_sha256": "e0672cb7f7dc581b006c418188d97274f8c6067f483c257909fba9d5276af47d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order64.py",
+      "size": 7430,
+      "sha256": "f7d788eb5b440c404ac05e0751f218cd5332bde4dc60ac9c0a1cd97faed6c007",
+      "original_sha256": "f7d788eb5b440c404ac05e0751f218cd5332bde4dc60ac9c0a1cd97faed6c007",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order64_covers.json",
+      "size": 16795,
+      "sha256": "8a13bac6746d6e4f3813b42316dba5ff33fa6264ce966de8e15c3a646334c109",
+      "original_sha256": "2b45db91d72a1eafcf17396a175620ac1201f7a6503272ed4d39cd8e6b2b6bcb",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order64_weights.json",
+      "size": 176893,
+      "sha256": "4007ea639a28584ce33f1733ead1aba7e7d2f83864f340f32a657e13d3074696",
+      "original_sha256": "db542da38865ee02f6e02ccc0a027be81e176fe168d4e251ede798760dafe88b",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order96.py",
+      "size": 8176,
+      "sha256": "182ded0dd96abb0bdc39013a71c554e0f22d37e150419f933e47fb07600e0669",
+      "original_sha256": "182ded0dd96abb0bdc39013a71c554e0f22d37e150419f933e47fb07600e0669",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order96_verification.json",
+      "size": 8767,
+      "sha256": "4be6c783d047186fffd4ec1e06337840aea8c9ac9b39e43006aadc0271ba0f48",
+      "original_sha256": "7afc3202d3770ec213f33fdba83bbc1d3c52cdd4fa2a40da4b21b7ed2b80965a",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_order96_weights.json",
+      "size": 133185,
+      "sha256": "eeb5702eeaa7eb7ed4d763ad300343304c11b18b3d79dbc021c7a0f08b89636c",
+      "original_sha256": "dec89e93f380920348ec981aa9832c908af818a0112ea8adb3c344c35b8ce40f",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_third_bracket.json",
+      "size": 2629,
+      "sha256": "ed95274e1c4f5bca79a29bc9ae6b91049a7e723b65959b25ba1d448f7c72ec9a",
+      "original_sha256": "73558d2c13368d914e91fda016891bc1effffd1159394f0a9b6e6184b008d66d",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/independent_third_bracket.py",
+      "size": 2931,
+      "sha256": "1010462701b5ce508965ec1e7e6139066e2426c9af6825c2189b64b73538ffc6",
+      "original_sha256": "1010462701b5ce508965ec1e7e6139066e2426c9af6825c2189b64b73538ffc6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/nodes_order32.json",
+      "size": 2050,
+      "sha256": "d90329a8ca25abf6f4fa9ef37becd3d26392230577948947f0a52920fa976b9d",
+      "original_sha256": "d90329a8ca25abf6f4fa9ef37becd3d26392230577948947f0a52920fa976b9d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/nodes_order64.json",
+      "size": 3934,
+      "sha256": "4b21675a6c6f6316bffd9e43308c8c2191d54f8d11affeb7cfaac01dae00bea5",
+      "original_sha256": "64795425d413e3088adf9bbf7e606ff4281f8fc42c434d41ea821450664d57ab",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/nodes_order96.json",
+      "size": 5824,
+      "sha256": "2e82cef9d1f3e2e1f2b92dd29ee702a2f6b329a6efe2362fba78917edcbe8f55",
+      "original_sha256": "78a31c81808948106459110b10779fd41dd92f115fedc59dc1ac1e8d16ebd1c1",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/order96_extension_certificate.json",
+      "size": 10530,
+      "sha256": "526ca5f17281fcf433b74fbc8413f7692ed58674912de4f3eadca9f0f42f844b",
+      "original_sha256": "febc6552df7f0d305fadbccbee003c45732a622be9cffc31bda54f8d8091b7b9",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/points_order32.json",
+      "size": 4550,
+      "sha256": "20d75057435443761cec45377c2c405c1e5689789c5ab98311e62fccfbe33697",
+      "original_sha256": "20d75057435443761cec45377c2c405c1e5689789c5ab98311e62fccfbe33697",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/gain/points_order64.json",
+      "size": 14399,
+      "sha256": "88e2f5d2ba40ee4e54ab9aaa0530ef599c6571636062347f917a68c04a94a6fa",
+      "original_sha256": "617223127808562b753228a37f6e3411b3fb4bf13165b010c84d6aae69c2119f",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/third_root_certificate.json",
+      "size": 7240,
+      "sha256": "9307fd02b3c17fe7be45c0c0a2a8d4011bcaf562ef0b4245b8e9f52470eda5de",
+      "original_sha256": "5399c0c3b8b4e6221dd4471a4879f341d188ba8eebcbbb5df8c411fc22508cf5",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/gain/third_root_proof.txt",
+      "size": 3695,
+      "sha256": "8a4f6101e573d27feb3fc72f978f4b95012579fed20e39f1962cbbaf8014430f",
+      "original_sha256": "8a4f6101e573d27feb3fc72f978f4b95012579fed20e39f1962cbbaf8014430f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/benchmark.json",
+      "size": 971,
+      "sha256": "9bc5dc5585652d3bd526e91c6b2fc0ffd053cdaabc6bcb4647f0f9ced4322dce",
+      "original_sha256": "7c743299b6a33c7921890cc65bc614dbfd5f374f355161d424a617ecca937910",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/benchmark.py",
+      "size": 1700,
+      "sha256": "54a97d4e20c909ce2062a48b94a2dc10aa0107955fc4892e2497602b7fbc3877",
+      "original_sha256": "54a97d4e20c909ce2062a48b94a2dc10aa0107955fc4892e2497602b7fbc3877",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/benchmark_5300000000_bits.json",
+      "size": 405,
+      "sha256": "0b4be6427962060d5cc8dd33bc871783b08b6e1147d4497e1e005966ea0ccc6b",
+      "original_sha256": "7f5ec454b1c2432186251920b53065cf79574bc7035680727ceb71a578e2368c",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/benchmark_large.py",
+      "size": 1412,
+      "sha256": "12cee6a937e84431165ce0d1af43ea5b6387ff860e5acf8aa90c2d14763350be",
+      "original_sha256": "12cee6a937e84431165ce0d1af43ea5b6387ff860e5acf8aa90c2d14763350be",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/check_tables.py",
+      "size": 2794,
+      "sha256": "143284c45ad54356a77eb4992d1cb76cfaae63745c928f96d01d9ebf409a3aab",
+      "original_sha256": "143284c45ad54356a77eb4992d1cb76cfaae63745c928f96d01d9ebf409a3aab",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoint_integrity_test.json",
+      "size": 256,
+      "sha256": "4cfcefd4fc180a14d6dfb6632bc3ad36f7110a139ba265cf7f70a41e7082a165",
+      "original_sha256": "4cfcefd4fc180a14d6dfb6632bc3ad36f7110a139ba265cf7f70a41e7082a165",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/18_nontrivial_sites.sha256",
+      "size": 66,
+      "sha256": "678d066d77e4f2c9121304e67ce8fb14f9d0333f7a96ec8ba1e776c133ec8261",
+      "original_sha256": "678d066d77e4f2c9121304e67ce8fb14f9d0333f7a96ec8ba1e776c133ec8261",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/21_site_base.sha256",
+      "size": 66,
+      "sha256": "2f4adf92b81f39a73af21621be0fc654693aaa7d7b8fad60cdfb49cc115ca14e",
+      "original_sha256": "2f4adf92b81f39a73af21621be0fc654693aaa7d7b8fad60cdfb49cc115ca14e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/A_63_site_structure.sha256",
+      "size": 66,
+      "sha256": "ad820fede56d6b0752dd35fea16c702e9e868d89fe63f982623d024598f4882e",
+      "original_sha256": "ad820fede56d6b0752dd35fea16c702e9e868d89fe63f982623d024598f4882e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/B_63_site_structure.sha256",
+      "size": 66,
+      "sha256": "20f60db0508b54df277ee69e991653cf2837db1afa3afb1bc90e0d31ea0ba65c",
+      "original_sha256": "20f60db0508b54df277ee69e991653cf2837db1afa3afb1bc90e0d31ea0ba65c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/phi_pairs_x2.sha256",
+      "size": 66,
+      "sha256": "7fd9629cb67b5df0c8478495705c1846c7136ddc4f6c79df5dc137eb52b9df54",
+      "original_sha256": "7fd9629cb67b5df0c8478495705c1846c7136ddc4f6c79df5dc137eb52b9df54",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/phi_pairs_x4.sha256",
+      "size": 66,
+      "sha256": "cede242bbededc6cc950dbe526fc92494c5665fe563ce112b6c50bc14e873973",
+      "original_sha256": "cede242bbededc6cc950dbe526fc92494c5665fe563ce112b6c50bc14e873973",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/phi_radical_square.sha256",
+      "size": 66,
+      "sha256": "400c777fae280104166ebdd4d4b399eb74b6340670d5ec7a637bf34a2205f355",
+      "original_sha256": "400c777fae280104166ebdd4d4b399eb74b6340670d5ec7a637bf34a2205f355",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/phi_rational_square.sha256",
+      "size": 66,
+      "sha256": "5c90d5340d1da4bd12acb3cbc4edaa9c2759b1b80e05af83c0288ae87616278d",
+      "original_sha256": "5c90d5340d1da4bd12acb3cbc4edaa9c2759b1b80e05af83c0288ae87616278d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/shared_shifts_0_3.sha256",
+      "size": 66,
+      "sha256": "8666bada5ab6320b8ab4772b00b62319d146d18ca381241fe3481ce2f341ebf7",
+      "original_sha256": "8666bada5ab6320b8ab4772b00b62319d146d18ca381241fe3481ce2f341ebf7",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/theta_pairs_x2.sha256",
+      "size": 66,
+      "sha256": "44c71e2fa67d91e2f6d6491bc9ee36278d48338df26f4c23e49727642dd60ddb",
+      "original_sha256": "44c71e2fa67d91e2f6d6491bc9ee36278d48338df26f4c23e49727642dd60ddb",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/theta_pairs_x4.sha256",
+      "size": 66,
+      "sha256": "65ef95ae715a58ded05e90609b7eeee7aaf07236aed71712555c9ffef35bd96e",
+      "original_sha256": "65ef95ae715a58ded05e90609b7eeee7aaf07236aed71712555c9ffef35bd96e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/theta_pairs_x5.sha256",
+      "size": 66,
+      "sha256": "c27aa32244f4abd70c1e6ba71b29eb5c147c19457b03ff0fe277d2d3b80d4b7a",
+      "original_sha256": "c27aa32244f4abd70c1e6ba71b29eb5c147c19457b03ff0fe277d2d3b80d4b7a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/theta_radical_square.sha256",
+      "size": 66,
+      "sha256": "7389cf7f2ea050778f8725508a4cbb7f1fbfada1f592ff1814faf89e22a2b3ca",
+      "original_sha256": "7389cf7f2ea050778f8725508a4cbb7f1fbfada1f592ff1814faf89e22a2b3ca",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/theta_rational_square.sha256",
+      "size": 66,
+      "sha256": "51d0008567486619d1417d1242a003d65370625d4ac6225f5204555a85d0e7bc",
+      "original_sha256": "51d0008567486619d1417d1242a003d65370625d4ac6225f5204555a85d0e7bc",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/unit_sites_1_1_1.sha256",
+      "size": 66,
+      "sha256": "25e3be6ca8dee15b5e4dde63269179aabcd9b64bd0dcd586b910d8c5dbf95ea9",
+      "original_sha256": "25e3be6ca8dee15b5e4dde63269179aabcd9b64bd0dcd586b910d8c5dbf95ea9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_7/unit_sites_x2.sha256",
+      "size": 66,
+      "sha256": "f585c733a2f12db28efb0a62852c16b92feca10ec06924f3db6505fe4a38fa77",
+      "original_sha256": "f585c733a2f12db28efb0a62852c16b92feca10ec06924f3db6505fe4a38fa77",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/18_nontrivial_sites.sha256",
+      "size": 66,
+      "sha256": "465128399f36a5c37621aa1395a5e92678d2b3036599dcb1059948bdf435cb0d",
+      "original_sha256": "465128399f36a5c37621aa1395a5e92678d2b3036599dcb1059948bdf435cb0d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/21_site_base.sha256",
+      "size": 66,
+      "sha256": "727894284271bf8ed60509494182f89ed0afe8ae40900cae76dfbad8276f3957",
+      "original_sha256": "727894284271bf8ed60509494182f89ed0afe8ae40900cae76dfbad8276f3957",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/A_63_site_structure.sha256",
+      "size": 66,
+      "sha256": "18965289af4f3980d1d44b75f02ba5df956012ede4c9f08a24c5629cfb71cd01",
+      "original_sha256": "18965289af4f3980d1d44b75f02ba5df956012ede4c9f08a24c5629cfb71cd01",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/B_63_site_structure.sha256",
+      "size": 66,
+      "sha256": "fcb0b945cc4797ee28db94c6416128ade17e7d1c7219d3924773c71549b770b9",
+      "original_sha256": "fcb0b945cc4797ee28db94c6416128ade17e7d1c7219d3924773c71549b770b9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/phi_pairs_x2.sha256",
+      "size": 66,
+      "sha256": "2e697cbe72778cb9b75bd80e7b9cd3c417990173808a4d05d83a050b2bb2571e",
+      "original_sha256": "2e697cbe72778cb9b75bd80e7b9cd3c417990173808a4d05d83a050b2bb2571e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/phi_pairs_x4.sha256",
+      "size": 66,
+      "sha256": "b406a2eacfe0730d24fb815e7b3610a62e37dfbe7ade5a7b2b9586f56df6772f",
+      "original_sha256": "b406a2eacfe0730d24fb815e7b3610a62e37dfbe7ade5a7b2b9586f56df6772f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/phi_radical_square.sha256",
+      "size": 66,
+      "sha256": "f3850c8f9447bcb0eedb0ff64c94c22173359b8ffa0f5645d9e82bd048cc3c06",
+      "original_sha256": "f3850c8f9447bcb0eedb0ff64c94c22173359b8ffa0f5645d9e82bd048cc3c06",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/phi_rational_square.sha256",
+      "size": 66,
+      "sha256": "2bf1bf46583af6183d8440e7c770554ab7b7e8e8d6134af6d56a8116b94dc973",
+      "original_sha256": "2bf1bf46583af6183d8440e7c770554ab7b7e8e8d6134af6d56a8116b94dc973",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/shared_shifts_0_3.sha256",
+      "size": 66,
+      "sha256": "2e55e0b76b498e304b9a974a37b0b7aba73c462daf382641d744e71967c7fc4a",
+      "original_sha256": "2e55e0b76b498e304b9a974a37b0b7aba73c462daf382641d744e71967c7fc4a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/theta_pairs_x2.sha256",
+      "size": 66,
+      "sha256": "14da941755da69c3388231d13a586c03da9497315fdefaf72ceb8874f248c148",
+      "original_sha256": "14da941755da69c3388231d13a586c03da9497315fdefaf72ceb8874f248c148",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/theta_pairs_x4.sha256",
+      "size": 66,
+      "sha256": "d689d414cc221a5c186a9b28be73a37640aa1f9c3bd3a3b84575646c7831dba0",
+      "original_sha256": "d689d414cc221a5c186a9b28be73a37640aa1f9c3bd3a3b84575646c7831dba0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/theta_pairs_x5.sha256",
+      "size": 66,
+      "sha256": "7d31ff2fc0386eda8b49ae0f434ad06690d150e32d3cb8201172b1f75ef32157",
+      "original_sha256": "7d31ff2fc0386eda8b49ae0f434ad06690d150e32d3cb8201172b1f75ef32157",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/theta_radical_square.sha256",
+      "size": 66,
+      "sha256": "706c2dc20687fdf26d269aa0166d344300296f030f390b5adf0ad230f87082b6",
+      "original_sha256": "706c2dc20687fdf26d269aa0166d344300296f030f390b5adf0ad230f87082b6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/theta_rational_square.sha256",
+      "size": 66,
+      "sha256": "8e400bbb2e20e1851f8b5de8ebea732d5955ea66cbfec9abd94af12954f4b7d1",
+      "original_sha256": "8e400bbb2e20e1851f8b5de8ebea732d5955ea66cbfec9abd94af12954f4b7d1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/unit_sites_1_1_1.sha256",
+      "size": 66,
+      "sha256": "cb369a3d3e8f3b62e91dafe15386cf1a22affdcacc9b8199e2cc9bc775febc82",
+      "original_sha256": "cb369a3d3e8f3b62e91dafe15386cf1a22affdcacc9b8199e2cc9bc775febc82",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/checkpoints_order_96/unit_sites_x2.sha256",
+      "size": 66,
+      "sha256": "d3938e56a0628c197ac30797c57b7f23f3d8f8acb9cb25e901cc4dc5de45d2d9",
+      "original_sha256": "d3938e56a0628c197ac30797c57b7f23f3d8f8acb9cb25e901cc4dc5de45d2d9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/compare_extensions.py",
+      "size": 1940,
+      "sha256": "9ec934823e1398b75f8fc1a49d0433ae72e8e1f8a9b4bb1743141938cabd0889",
+      "original_sha256": "9ec934823e1398b75f8fc1a49d0433ae72e8e1f8a9b4bb1743141938cabd0889",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/comparison_64_96.json",
+      "size": 493,
+      "sha256": "d682aa83e6529deb4445fc16fa3e51e03aa28c3a9ce307841d6f7ce0a10e118d",
+      "original_sha256": "d63933bfbbd7149e83a0dc6f009ca9b9b59a74a76c09108b537c6cab0464b468",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/moments/extend_checkpointed.py",
+      "size": 4110,
+      "sha256": "6e27bc91eb3bcc00dccbb499579a448d8b183a894ef729115f672230bce38c58",
+      "original_sha256": "6e27bc91eb3bcc00dccbb499579a448d8b183a894ef729115f672230bce38c58",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/extend_moments.py",
+      "size": 4010,
+      "sha256": "b6a274ada742ce0debecf4f70f85b15f9679241158cfbd2c934fe12f9e9effa2",
+      "original_sha256": "b6a274ada742ce0debecf4f70f85b15f9679241158cfbd2c934fe12f9e9effa2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/extend_parallel.py",
+      "size": 3154,
+      "sha256": "8fb5f315ac23994dd8b96c0e14ac984f368425f24a9c7f11c0b76c6b3042c573",
+      "original_sha256": "8fb5f315ac23994dd8b96c0e14ac984f368425f24a9c7f11c0b76c6b3042c573",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/fixed_t_moments_order_5.json",
+      "size": 4228,
+      "sha256": "35e514d7576db96c2cd6bbf2336f95c2dfa3574e46cbb7ab0a46b40243f0a57a",
+      "original_sha256": "d0a4faf8b522fa67df492b3f875c8bc37570c926c54f18eab4334249e97e665b",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/fixed_t_moments_order_6.json",
+      "size": 5018,
+      "sha256": "7227d9eae2c3bad9d929de5a74dd5a2d75000fae83aff1402731e4ec6eee0893",
+      "original_sha256": "f8ef4a2e15546f88acb32cda465a96168e15af27a0fa09e3f7703477fd0b5295",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/fixed_t_moments_order_64.json",
+      "size": 255450,
+      "sha256": "ad3f47da0ff0a6d9206eecd971bf3b2afb375a66089465b3a76ddb6362980b92",
+      "original_sha256": "cee91527c12a594381971ac23fb7c228b33b6ed3f696da801a6ee7ea90cc01e6",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/fixed_t_moments_order_7.json",
+      "size": 6033,
+      "sha256": "cede605cec6843e89c3affd0b3904086d07ac0bb24134d4871bb9064dcb8add5",
+      "original_sha256": "15adb84df5e61d21cfdbef010b811868d59c7756718b6b0ebaafacda6a328028",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/fixed_t_moments_order_96.json",
+      "size": 805694,
+      "sha256": "71b22dfb1fe5f485768e2869e1394188d730c7eb986a2e3fd6b1a010d2abacb2",
+      "original_sha256": "f15f05d93defca6ecbe1dda90ae1c5d78a64561609b9c43ad9ce9000e52a946d",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/method.txt",
+      "size": 5554,
+      "sha256": "f8dc802701216e15b45765dd21a0cdacf9fbfa48ed78648b523dc23b4a980080",
+      "original_sha256": "f8dc802701216e15b45765dd21a0cdacf9fbfa48ed78648b523dc23b4a980080",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/native_integer.py",
+      "size": 2504,
+      "sha256": "a902b0a7e41d252a604080ddc158285f52032e94359af95cf4f4a9befe0501b4",
+      "original_sha256": "a902b0a7e41d252a604080ddc158285f52032e94359af95cf4f4a9befe0501b4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/moments/test_checkpoint_integrity.py",
+      "size": 1591,
+      "sha256": "4c5391a8592662f6b88a1537fcbf71d7951116cf69be9d49edb5bec3de0e7641",
+      "original_sha256": "4c5391a8592662f6b88a1537fcbf71d7951116cf69be9d49edb5bec3de0e7641",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/certificate.json",
+      "size": 193350,
+      "sha256": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
+      "original_sha256": "876829cab3524534dc00b6eb8a08ef8e02e55ebe901f4b35b54ac02f681d7912",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/certify.py",
+      "size": 4518,
+      "sha256": "9fae0cfa4ab96813bc5b788fc3bd78f172c7c5cc60005ccfad9de0774c4ed3c2",
+      "original_sha256": "9fae0cfa4ab96813bc5b788fc3bd78f172c7c5cc60005ccfad9de0774c4ed3c2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/design_nodes.py",
+      "size": 1079,
+      "sha256": "48ea929a968bb37564a99b2237b0a0bd81bd1bdfabb654b71965d837b5a6e328",
+      "original_sha256": "48ea929a968bb37564a99b2237b0a0bd81bd1bdfabb654b71965d837b5a6e328",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/independent_proof_review.txt",
+      "size": 2722,
+      "sha256": "4cf28987e4d5a15138a20fab6da48d8d664d8abc22e7e98eff37637bdac9cd5a",
+      "original_sha256": "4cf28987e4d5a15138a20fab6da48d8d664d8abc22e7e98eff37637bdac9cd5a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/independent_verification.json",
+      "size": 1334,
+      "sha256": "ada38f0217e55b69e900b532cf9f38a5d2f483f01710499317e86d4157f53db0",
+      "original_sha256": "d7df36c104587db29fd5ee892020bd9053ff9fedbbdba891816eb00025971c8d",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/independent_verify.py",
+      "size": 5425,
+      "sha256": "55dab2af66f53a28bc1737e1f2515d74aa6b24e7cc825f6ec890a2e67806ba9a",
+      "original_sha256": "55dab2af66f53a28bc1737e1f2515d74aa6b24e7cc825f6ec890a2e67806ba9a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/multibin/nodes.json",
+      "size": 15521,
+      "sha256": "87bd003cce36c5b4b882bd8d4f99e369156c1fc9685d029571c90894d4e7f4d3",
+      "original_sha256": "1bfb137d545d0be8e9c47dc9b30d24d746ef573b456433f9f737bb0469ef4ab4",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "continuation-2026-10-20/theory/check_native_boundaries.py",
+      "size": 2103,
+      "sha256": "4d6352b472882c9ca07721af2bb454bb6a5c2f544fcbcf1d3d6f4622a64ebaf5",
+      "original_sha256": "4d6352b472882c9ca07721af2bb454bb6a5c2f544fcbcf1d3d6f4622a64ebaf5",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/continuous_exposure_proof.txt",
+      "size": 9270,
+      "sha256": "f297546bd9cceab54f89246ea07395e141180db1dc3177ab2cd78990dfc5c03f",
+      "original_sha256": "f297546bd9cceab54f89246ea07395e141180db1dc3177ab2cd78990dfc5c03f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/continuous_exposure_review.txt",
+      "size": 2272,
+      "sha256": "3fe72c6bbe3760fb434a0070f9ab3ed29c25f855c990bed62711e5a0a41d08a0",
+      "original_sha256": "3fe72c6bbe3760fb434a0070f9ab3ed29c25f855c990bed62711e5a0a41d08a0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/continuous_exposure_verification.json",
+      "size": 10658,
+      "sha256": "2ce82564d96a7b5337d03b5309ef17ab1057318fb48347ec2ccee90ecaa405bb",
+      "original_sha256": "2ce82564d96a7b5337d03b5309ef17ab1057318fb48347ec2ccee90ecaa405bb",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/native_boundary_review.json",
+      "size": 821,
+      "sha256": "782acfc14cb4e668a9f680ef9c03e6197b15c77583f313ee5441e00d40be581b",
+      "original_sha256": "6bda4f10a886e9420b806bce627eae0f47d8795719dd6bd0caa82b0748eedf9f",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/order64_gain_review.txt",
+      "size": 7991,
+      "sha256": "0fafb1c22506100f55b63928dabcb9cbeb925ec8129e9d00a560a8e73b498d9c",
+      "original_sha256": "0fafb1c22506100f55b63928dabcb9cbeb925ec8129e9d00a560a8e73b498d9c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/order96_gain_review.txt",
+      "size": 4418,
+      "sha256": "6a9959bc9fafd5f9487e73171c6b944e4cb6a7065080d57b8f9f788fb69e5f01",
+      "original_sha256": "6a9959bc9fafd5f9487e73171c6b944e4cb6a7065080d57b8f9f788fb69e5f01",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "continuation-2026-10-20/theory/verify_continuous_exposure.py",
+      "size": 5793,
+      "sha256": "f457002d9bf095c17960d65a02eadb596eb567f6173924fdb27adf157f6f87e2",
+      "original_sha256": "f457002d9bf095c17960d65a02eadb596eb567f6173924fdb27adf157f6f87e2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/independent_lowerbounds/check_direct_exclusion.py",
+      "size": 3539,
+      "sha256": "e884aa0c29944b96dee857c9ab023531316fee808222281a6c94424310b704a8",
+      "original_sha256": "1a862f8958da0c577fcdacb469ed039b219a012bb8fd22fa54c6a0719d381d0a",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/independent_lowerbounds/direct_exclusion.json",
+      "size": 4711,
+      "sha256": "1bc14db4be3bd8a0f17915d8ad35437922d8adbb5be66b3fe30abf36d624b363",
+      "original_sha256": "f86142d3adf1a6cda3558928b8ea92515fbbe280334a5982f88170eca275c9f9",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/independent_lowerbounds/review.txt",
+      "size": 2642,
+      "sha256": "f6514c96f526d3a8e9d7806e8828c448429c0f5c6ab8061edf2b97e4a696a11e",
+      "original_sha256": "f6514c96f526d3a8e9d7806e8828c448429c0f5c6ab8061edf2b97e4a696a11e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/PhotonMixtureBridge.lean",
+      "size": 3457,
+      "sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "original_sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/PhotonMomentTransfer.lean",
+      "size": 2823,
+      "sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "original_sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/PhotonPoissonMeasure.lean",
+      "size": 1829,
+      "sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "original_sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/PhotonPoissonSeries.lean",
+      "size": 2699,
+      "sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "original_sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/SCOPE.txt",
+      "size": 5131,
+      "sha256": "6e046608f79c5c9c7efcb53150117da8c59bc115ad7e2a088cbc2ab96f385b2b",
+      "original_sha256": "6e046608f79c5c9c7efcb53150117da8c59bc115ad7e2a088cbc2ab96f385b2b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonAlgebra_compile.log",
+      "size": 478,
+      "sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "original_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonMixtureBridge_compile.log",
+      "size": 220,
+      "sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "original_sha256": "a62e75954c3ad60a3ca64be3f2e67543997c30c4672ca2f035f9395dcc82aea1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonMixtureBridge_fresh_kernel.log",
+      "size": 44,
+      "sha256": "e76a0073928df5647d03507f9071e51258e209a44dd4fbc40bfde857a28be62b",
+      "original_sha256": "e76a0073928df5647d03507f9071e51258e209a44dd4fbc40bfde857a28be62b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonMomentTransfer_compile.log",
+      "size": 218,
+      "sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "original_sha256": "650a484d0e297088b820a1eff6cf36ea15e0c36d14d6e6f262aeff3eaf093196",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonPoissonMeasure_compile.log",
+      "size": 332,
+      "sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "original_sha256": "236f60ad8ed5f3e98df0d94f38b7b3de05bf101655dc0e8217de419b8a195ae1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/checked/PhotonPoissonSeries_compile.log",
+      "size": 106,
+      "sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "original_sha256": "a2c659b7aadf4dbf87db6654f039eca743fe44659dcf9026218ba09776ade215",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lean/proof_manifest.json",
+      "size": 6675,
+      "sha256": "ad3e0db6ce653542785f8119fa664b06c0450a318e1cafcd319015e0633300c3",
+      "original_sha256": "68e8a2ec9efeeaecf8190148dcb8313518016c72e1f02d0b709d3c0dad48dde4",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lean/verified_receipt.json",
+      "size": 4892,
+      "sha256": "e44288163a3f30c90bd26bff5fc1684426dcbaee7952988a280848385ecf347d",
+      "original_sha256": "fb1d3cebfed60eb5ca7d71d36b3a9b85b9e8244d7c36eba08dd09a2cb607f802",
+      "path_redacted": true,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/arb_verification.json",
+      "size": 1208,
+      "sha256": "96af28bda384974ed2b6e9d05e073f532d786761d3aefb14b722ca42d3b1af01",
+      "original_sha256": "78d73215f9b5cc6a10c43f018382e70ef61a856bcccef35b0673715630a4b2e1",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/binned_lower_bound.json",
+      "size": 3861,
+      "sha256": "cca4c8ed55a0b7e61f9e8bd599c7c5188f4fc680b1f45c1276d6d1a498575fb0",
+      "original_sha256": "16e5aaff4688a4b53e5f5e52076f6e6cf45629f7b29c3633f1ef7727fdcd1348",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/certify_binned_lower_bound.py",
+      "size": 6075,
+      "sha256": "4ece1a5d969accb72b478b058113d4ed7614511256f1de0a87df4075c1fa63a5",
+      "original_sha256": "f034923ec40f12e3f5b2d41edc7b80f433a332ca9a35e4a7cf80e90398794d1d",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/output_guard_checks.json",
+      "size": 525,
+      "sha256": "01fae06ea3fec784560965d1a947bb8c3c54cdebdca7d18a6ba9d9df26558168",
+      "original_sha256": "50b7de3293df1acef0e8807dfeae8127a827844431e042d730ec8a0832e2f0b2",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/proof.txt",
+      "size": 5405,
+      "sha256": "3653e13645bbfb25d94a7cf556d1b51b9b4662182ec16ccba2cd0a4dee96a21a",
+      "original_sha256": "3653e13645bbfb25d94a7cf556d1b51b9b4662182ec16ccba2cd0a4dee96a21a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/lowerbounds/verify_lower_bound_arb.py",
+      "size": 4221,
+      "sha256": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e",
+      "original_sha256": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/stability/check_constants.py",
+      "size": 4148,
+      "sha256": "99538769203eeb13397a9723cbb9ac6bf75b3164685ad1e3b411d803ff8a708d",
+      "original_sha256": "99538769203eeb13397a9723cbb9ac6bf75b3164685ad1e3b411d803ff8a708d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/stability/endpoint_constants.json",
+      "size": 2001,
+      "sha256": "7723aa7a05a2eea2b1c9b77d05c16118b77e80c76e9e7555a349ee15e8f91079",
+      "original_sha256": "246f999848cbc2484c4824b7c79f9439b0daefa82a3956ac9d721e534b586839",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "followup-2026-10-20/stability/independent_review.txt",
+      "size": 1915,
+      "sha256": "6ebf367d0946ded2ff3be40d783568c11943768c08b1a1f934d63a6e3bc70152",
+      "original_sha256": "6ebf367d0946ded2ff3be40d783568c11943768c08b1a1f934d63a6e3bc70152",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "followup-2026-10-20/stability/local_stability_proof.txt",
+      "size": 9937,
+      "sha256": "091095adfdf36b1d8a9e840d5ced9cecd03e48160dc7605434538d698e4cecdb",
+      "original_sha256": "091095adfdf36b1d8a9e840d5ced9cecd03e48160dc7605434538d698e4cecdb",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/README.txt",
+      "size": 2754,
+      "sha256": "e3c961b7afccd7096d6b5c431964c5fe338ba7ca4bf6cba63e8ae32daf0eadaa",
+      "original_sha256": "e3c961b7afccd7096d6b5c431964c5fe338ba7ca4bf6cba63e8ae32daf0eadaa",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/assemble_complete_science.py",
+      "size": 25775,
+      "sha256": "68e88fdef9e6165a04f84e8f2c20b58b60068911f56f52310f5e680ae025fa5c",
+      "original_sha256": "68e88fdef9e6165a04f84e8f2c20b58b60068911f56f52310f5e680ae025fa5c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/REPRODUCE.txt",
+      "size": 2018,
+      "sha256": "a8b9e122e24ab7cbf5086ec780ec473d74cdc439791228c19a0f2646495829d1",
+      "original_sha256": "a8b9e122e24ab7cbf5086ec780ec473d74cdc439791228c19a0f2646495829d1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/certify_efficient_calibration.py",
+      "size": 19999,
+      "sha256": "0b2d56d568413a154a193205be4df982f489b46d91b404983157783e92464a2f",
+      "original_sha256": "0b2d56d568413a154a193205be4df982f489b46d91b404983157783e92464a2f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/efficient_calibration_certificate.json",
+      "size": 88732,
+      "sha256": "43a52ff1da49eef528b4ab54a59d2a6eb77c891a67ff8bec11c9d5c373ad7521",
+      "original_sha256": "43a52ff1da49eef528b4ab54a59d2a6eb77c891a67ff8bec11c9d5c373ad7521",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/efficient_calibration_proof.txt",
+      "size": 18599,
+      "sha256": "d1b355deab720c9a7826f269b6a4e0162cd72ba20f7e28227d5a023cce6544d9",
+      "original_sha256": "d1b355deab720c9a7826f269b6a4e0162cd72ba20f7e28227d5a023cce6544d9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/histogram_interface_verification.json",
+      "size": 1546,
+      "sha256": "e3e6c3d5dfeef64607c4b0b32580065f0d0d6557867ec500e4c803dfa7b0a345",
+      "original_sha256": "e3e6c3d5dfeef64607c4b0b32580065f0d0d6557867ec500e4c803dfa7b0a345",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/independent_efficient_calibration_replay.json",
+      "size": 10966,
+      "sha256": "2066685734a742c1be1b45cb76c64871a5284e21055f1985f7a0846dd094f060",
+      "original_sha256": "2066685734a742c1be1b45cb76c64871a5284e21055f1985f7a0846dd094f060",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/independent_efficient_calibration_replay.py",
+      "size": 18433,
+      "sha256": "af1a874d1ef56c399d9b76a54cb13bcd3612c72f76d63fbde78a8d586b013219",
+      "original_sha256": "af1a874d1ef56c399d9b76a54cb13bcd3612c72f76d63fbde78a8d586b013219",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/independent_efficient_calibration_review.txt",
+      "size": 9321,
+      "sha256": "4c45893b7e99c36a80e2a39c1fb85b31d2afb8eb04c585a3e52f9f7e74bf8ae1",
+      "original_sha256": "4c45893b7e99c36a80e2a39c1fb85b31d2afb8eb04c585a3e52f9f7e74bf8ae1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/calibration/verify_histogram_interface.py",
+      "size": 4384,
+      "sha256": "a20e682a09e38fee42a3814c9a040d58c924a4dcd559d5a4da81974e5197486a",
+      "original_sha256": "a20e682a09e38fee42a3814c9a040d58c924a4dcd559d5a4da81974e5197486a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/complete_science_manifest.json",
+      "size": 33169,
+      "sha256": "f686ab186bf9d8e7bcbf69e5de8d876e9c7df2b7ee33175ddee2eaa19e2e8ed9",
+      "original_sha256": "f686ab186bf9d8e7bcbf69e5de8d876e9c7df2b7ee33175ddee2eaa19e2e8ed9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/REPRODUCE.txt",
+      "size": 1495,
+      "sha256": "21e954fac45e27f7bab5df9ddc110af568ab6c3c0768a97e1c3cb44031fa1533",
+      "original_sha256": "21e954fac45e27f7bab5df9ddc110af568ab6c3c0768a97e1c3cb44031fa1533",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/certify_temporal_dependence.py",
+      "size": 14378,
+      "sha256": "0546aec9c552963b5035ce9e517564688004baf1482e32fb9aac31929d0f7e3b",
+      "original_sha256": "0546aec9c552963b5035ce9e517564688004baf1482e32fb9aac31929d0f7e3b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/independent_temporal_replay.json",
+      "size": 1394,
+      "sha256": "dc8d36fb1706c2ec6dccea71bac51bf6781cbc859bfb6aaac48bfd6ec3ac4074",
+      "original_sha256": "dc8d36fb1706c2ec6dccea71bac51bf6781cbc859bfb6aaac48bfd6ec3ac4074",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/independent_temporal_replay.py",
+      "size": 8318,
+      "sha256": "a533755e2e467aaf7746d41e99e063112e923e791b264c8bb7be5f3501327279",
+      "original_sha256": "a533755e2e467aaf7746d41e99e063112e923e791b264c8bb7be5f3501327279",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/independent_temporal_review.txt",
+      "size": 7244,
+      "sha256": "1d4ca0fa96e19d98592a6c6ce58a34751d1b447fc28618a42aebc96a6940ee7c",
+      "original_sha256": "1d4ca0fa96e19d98592a6c6ce58a34751d1b447fc28618a42aebc96a6940ee7c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/temporal_dependence_certificate.json",
+      "size": 32313,
+      "sha256": "1bbadb89395b663b26c089ecc0910948fb9cbed3a405fb8e475ec8761b7ce091",
+      "original_sha256": "1bbadb89395b663b26c089ecc0910948fb9cbed3a405fb8e475ec8761b7ce091",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/dependence/temporal_dependence_proofs.txt",
+      "size": 22070,
+      "sha256": "fd10b14d220668d9fcfefdd616d279f18c36b6d5e19c457797005609ca8c50d3",
+      "original_sha256": "fd10b14d220668d9fcfefdd616d279f18c36b6d5e19c457797005609ca8c50d3",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/certify_detector_gain.py",
+      "size": 9743,
+      "sha256": "fbeb092c3a01c5cf78d04f640a51302e4057bb4da8afc91ea3ed3c9aee539150",
+      "original_sha256": "fbeb092c3a01c5cf78d04f640a51302e4057bb4da8afc91ea3ed3c9aee539150",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/detector_gain_certificate.json",
+      "size": 52379,
+      "sha256": "825760f102f2a84d206dee9a86ad457f1d90e3bf27cc5a4e873b1d38676ac119",
+      "original_sha256": "825760f102f2a84d206dee9a86ad457f1d90e3bf27cc5a4e873b1d38676ac119",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/detector_gain_proof.txt",
+      "size": 9438,
+      "sha256": "64b889cd30c24971be786cafc80bb88c9a65beef330a1c75f5dcec764b86e9f0",
+      "original_sha256": "64b889cd30c24971be786cafc80bb88c9a65beef330a1c75f5dcec764b86e9f0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/independent_detector_gain_replay.json",
+      "size": 2726,
+      "sha256": "3e489de72a172acca0629ba57776ca43e398d3d606a79690305e16455a01addc",
+      "original_sha256": "3e489de72a172acca0629ba57776ca43e398d3d606a79690305e16455a01addc",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/independent_detector_gain_replay.py",
+      "size": 7938,
+      "sha256": "d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e",
+      "original_sha256": "d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/independent_detector_gain_review.txt",
+      "size": 5093,
+      "sha256": "7c49b0667ebf2415db06659eb896ba29be4d1f5240cf433110e6178c1cffdb95",
+      "original_sha256": "7c49b0667ebf2415db06659eb896ba29be4d1f5240cf433110e6178c1cffdb95",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/detector_gain/interpolation_nodes.json",
+      "size": 4702,
+      "sha256": "6f58dae55972b20bce7628b759b2bb1e292aec94bf8e5060aa4c180d23b26389",
+      "original_sha256": "6f58dae55972b20bce7628b759b2bb1e292aec94bf8e5060aa4c180d23b26389",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/final_review.txt",
+      "size": 3305,
+      "sha256": "aed4b4cb9d4e2545e5d541ba8d1f63abe973a02676116af8d567098182161e18",
+      "original_sha256": "aed4b4cb9d4e2545e5d541ba8d1f63abe973a02676116af8d567098182161e18",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/REPRODUCE.txt",
+      "size": 1543,
+      "sha256": "83688647eb33fc98e1f9dd944ba45db495b36351365ffd93c9de5a4533690417",
+      "original_sha256": "83688647eb33fc98e1f9dd944ba45db495b36351365ffd93c9de5a4533690417",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/additional_blind_gains_certificate.json",
+      "size": 7876,
+      "sha256": "a6c86b9f8116d47a270a87c125168fe89f7d3120f97a9de31d6b114917005bf6",
+      "original_sha256": "a6c86b9f8116d47a270a87c125168fe89f7d3120f97a9de31d6b114917005bf6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/additional_blind_gains_proof.txt",
+      "size": 12639,
+      "sha256": "26b7d0e19045d99b9e72c3b7cec9c5190b5931eace7f22a5c04625276efe3deb",
+      "original_sha256": "26b7d0e19045d99b9e72c3b7cec9c5190b5931eace7f22a5c04625276efe3deb",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/additional_blind_gains_replay.json",
+      "size": 2926,
+      "sha256": "a00250eb5db470490bfae27955042cb3902ab9b7384020e50ccf31e000077983",
+      "original_sha256": "a00250eb5db470490bfae27955042cb3902ab9b7384020e50ccf31e000077983",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/certify_additional_blind_gains.py",
+      "size": 9103,
+      "sha256": "00cd65606fe1acf14c674cbaf7d27dfebbcdf5cdff2b5e75198b52bd358b5094",
+      "original_sha256": "00cd65606fe1acf14c674cbaf7d27dfebbcdf5cdff2b5e75198b52bd358b5094",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/independent_blind_theory_review.txt",
+      "size": 4069,
+      "sha256": "4c0f0cbd643679633b4b80487eeb3c9ea8badd2ac85b552c99cef70800c31708",
+      "original_sha256": "4c0f0cbd643679633b4b80487eeb3c9ea8badd2ac85b552c99cef70800c31708",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/global/replay_additional_blind_gains.py",
+      "size": 8148,
+      "sha256": "5fc86ae311a6e56de404e5c137ea5d20b78e06ec7d4340a64d0d3ffcad419b0b",
+      "original_sha256": "5fc86ae311a6e56de404e5c137ea5d20b78e06ec7d4340a64d0d3ffcad419b0b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/portable_record_verification.json",
+      "size": 30722,
+      "sha256": "33161667858beea706218e249a545e0bde60c809073c5e71d56d69aa03d74132",
+      "original_sha256": "33161667858beea706218e249a545e0bde60c809073c5e71d56d69aa03d74132",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/render_science_advance.py",
+      "size": 4373,
+      "sha256": "88a54b2f025f33573c6643f3ada1cd616185a9ec5a7c6cf82be0fef67f127bc6",
+      "original_sha256": "88a54b2f025f33573c6643f3ada1cd616185a9ec5a7c6cf82be0fef67f127bc6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/report_consistency_review.txt",
+      "size": 10106,
+      "sha256": "aaa1a868b840833eea2d1a567096f0712868618ffb746160d95e825ce88c83a5",
+      "original_sha256": "aaa1a868b840833eea2d1a567096f0712868618ffb746160d95e825ce88c83a5",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_advance/visual_review.json",
+      "size": 1026,
+      "sha256": "1ffc3262d994ca7fd2f4c1b6212ad8fc7570eeafcc25c530f3233955955c2422",
+      "original_sha256": "1ffc3262d994ca7fd2f4c1b6212ad8fc7570eeafcc25c530f3233955955c2422",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/READ_ME_FIRST.txt",
+      "size": 7218,
+      "sha256": "0595646c65fdee97d3766828f0afc9dfd385e3a8f9ea6c205a8f31a4084c97d6",
+      "original_sha256": "0595646c65fdee97d3766828f0afc9dfd385e3a8f9ea6c205a8f31a4084c97d6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/extract_proof_files.py",
+      "size": 2271,
+      "sha256": "556030215de90383fed5f70ad4742382172453a55b4056b9c15fcb1bbc13d509",
+      "original_sha256": "556030215de90383fed5f70ad4742382172453a55b4056b9c15fcb1bbc13d509",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/figures/homogeneous_fourth_moment_and_sampling_caption.txt",
+      "size": 3281,
+      "sha256": "14eab1aa92e6c7eb89205d7f9199450d09401216c7fb3a81c25fd83c893b0d89",
+      "original_sha256": "14eab1aa92e6c7eb89205d7f9199450d09401216c7fb3a81c25fd83c893b0d89",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/figures/homogeneous_fourth_moment_and_sampling_metadata.json",
+      "size": 3462,
+      "sha256": "1791480ecf02c1b7efdd4f4b30f95b3b442ee1bd904bc23b29f09291332ae748",
+      "original_sha256": "1791480ecf02c1b7efdd4f4b30f95b3b442ee1bd904bc23b29f09291332ae748",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/figures/plot_homogeneous_gap.py",
+      "size": 16362,
+      "sha256": "4208d2e337a28e89aea87a217c834aa86f57cdbc7727250117eef111ab99ddc1",
+      "original_sha256": "4208d2e337a28e89aea87a217c834aa86f57cdbc7727250117eef111ab99ddc1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/build_harmonic_groups.py",
+      "size": 8259,
+      "sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440",
+      "original_sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/certify_harmonic_root.py",
+      "size": 18674,
+      "sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07",
+      "original_sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/harmonic_groups.json",
+      "size": 45062,
+      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac",
+      "original_sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/harmonic_root_certificate.json",
+      "size": 262857,
+      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912",
+      "original_sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/harmonic_root_proof.txt",
+      "size": 14490,
+      "sha256": "bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658",
+      "original_sha256": "bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/harmonic_root_summary.json",
+      "size": 4704,
+      "sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5",
+      "original_sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/independent_harmonic_review.txt",
+      "size": 15244,
+      "sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41",
+      "original_sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+      "size": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "original_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/homogeneous_control/REPRODUCE.txt",
+      "size": 1609,
+      "sha256": "c8389ebf8a12c972d07a9a76c7e52c3de218e0c34b12077c3d918794047f505a",
+      "original_sha256": "c8389ebf8a12c972d07a9a76c7e52c3de218e0c34b12077c3d918794047f505a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control.py",
+      "size": 18195,
+      "sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a",
+      "original_sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_proof.txt",
+      "size": 17015,
+      "sha256": "e0c7f8ff0937efc71c815fa7b1bf54c5305a6dc6424d33d5d260f11b558c0de7",
+      "original_sha256": "e0c7f8ff0937efc71c815fa7b1bf54c5305a6dc6424d33d5d260f11b558c0de7",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_results.json",
+      "size": 25584,
+      "sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142",
+      "original_sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/independent_completion_review.txt",
+      "size": 13740,
+      "sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296",
+      "original_sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/literature/iid_gaussian_homometry_novelty_comparison.txt",
+      "size": 20817,
+      "sha256": "a247b86411ef6907eb7372e081dd95a0d2d4c32f1262818b6bf9beb15e3e1ca6",
+      "original_sha256": "a247b86411ef6907eb7372e081dd95a0d2d4c32f1262818b6bf9beb15e3e1ca6",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/measurement_and_optimization.py",
+      "size": 13154,
+      "sha256": "14155afb90b32760ce9b962e042a7df8b3480d73cf8db24b9b8a88d10d21375e",
+      "original_sha256": "14155afb90b32760ce9b962e042a7df8b3480d73cf8db24b9b8a88d10d21375e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/measurement_and_optimization_results.json",
+      "size": 12536,
+      "sha256": "1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8",
+      "original_sha256": "1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent.py",
+      "size": 13289,
+      "sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627",
+      "original_sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent_model.json",
+      "size": 336739,
+      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "original_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent_premises.json",
+      "size": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "original_sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent_premises.py",
+      "size": 6769,
+      "sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4",
+      "original_sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/render_science_pdf.py",
+      "size": 4382,
+      "sha256": "7a355218ad1691e9fc24d44ff5c09a2ac2b212043d29ec58aee087a20f62ff65",
+      "original_sha256": "7a355218ad1691e9fc24d44ff5c09a2ac2b212043d29ec58aee087a20f62ff65",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/report_science_review.txt",
+      "size": 5751,
+      "sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428",
+      "original_sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/certify_two_roots.py",
+      "size": 19185,
+      "sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631",
+      "original_sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/independent_root_review.txt",
+      "size": 13058,
+      "sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223",
+      "original_sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/input_premises.json",
+      "size": 405925,
+      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "original_sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/two_root_certificate.json",
+      "size": 590553,
+      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07",
+      "original_sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/two_root_proof.txt",
+      "size": 13512,
+      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667",
+      "original_sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/root_certificate/two_root_summary.json",
+      "size": 3298,
+      "sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1",
+      "original_sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/science_completion_manifest.json",
+      "size": 8104,
+      "sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0",
+      "original_sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/science_completion_render_review.json",
+      "size": 1103,
+      "sha256": "35d46f441cb53767c8ce76f39a62d4ffa4e732170e3afbf63e0960a42c1a255c",
+      "original_sha256": "35d46f441cb53767c8ce76f39a62d4ffa4e732170e3afbf63e0960a42c1a255c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/science_completion_summary.json",
+      "size": 6275,
+      "sha256": "1e2a47f6c52536466ef596eb1ae256c1e3a718c8435d9b8ae136ee6a6b0bf30c",
+      "original_sha256": "1e2a47f6c52536466ef596eb1ae256c1e3a718c8435d9b8ae136ee6a6b0bf30c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_completion/verify_completion_record.py",
+      "size": 1447,
+      "sha256": "6199288aa30b98590036b73d83837bc79387f26107421f9f3ab8049762ab0329",
+      "original_sha256": "6199288aa30b98590036b73d83837bc79387f26107421f9f3ab8049762ab0329",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/START_HERE.txt",
+      "size": 13150,
+      "sha256": "1a9583814353c41ec1be414e2bd1e1158f21454ca24ac2e854c7a9e04ad5d500",
+      "original_sha256": "1a9583814353c41ec1be414e2bd1e1158f21454ca24ac2e854c7a9e04ad5d500",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/assemble_complete_science.py",
+      "size": 25940,
+      "sha256": "c41fa89f6191c0e17a37b099748581d76d0b732d6231ff20957da57000781d7a",
+      "original_sha256": "c41fa89f6191c0e17a37b099748581d76d0b732d6231ff20957da57000781d7a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/complete_science_manifest.json",
+      "size": 17622,
+      "sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b",
+      "original_sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/extract_complete_science.py",
+      "size": 2562,
+      "sha256": "4c876c0eb41991c64454212de87b490828e18beba411df943aabc02bdffde93d",
+      "original_sha256": "4c876c0eb41991c64454212de87b490828e18beba411df943aabc02bdffde93d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/figures/four_count_blind_gain_caption.txt",
+      "size": 1728,
+      "sha256": "be851e2182a8ce6842f94e9cd74737bf5fd99f8eb036da88d2847032df352149",
+      "original_sha256": "be851e2182a8ce6842f94e9cd74737bf5fd99f8eb036da88d2847032df352149",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/figures/four_count_blind_gain_data.json",
+      "size": 37300,
+      "sha256": "96277c19171d1f55891fb2e4d0c1ffcc969b7b2de79d7c34f6c363a2a72aa8f9",
+      "original_sha256": "96277c19171d1f55891fb2e4d0c1ffcc969b7b2de79d7c34f6c363a2a72aa8f9",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/figures/four_count_blind_gain_metadata.json",
+      "size": 1402,
+      "sha256": "fccf27d628a88c88a20d0ffa919fdabab60232e83358602fdb7776f5033c07cf",
+      "original_sha256": "fccf27d628a88c88a20d0ffa919fdabab60232e83358602fdb7776f5033c07cf",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/figures/plot_four_count_blind_gain.py",
+      "size": 11216,
+      "sha256": "b2ff0a6aea630520144c0844e67dd53d3b8fe1407e6e1f7486237159bcc53336",
+      "original_sha256": "b2ff0a6aea630520144c0844e67dd53d3b8fe1407e6e1f7486237159bcc53336",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/certify_finite_detection.py",
+      "size": 15169,
+      "sha256": "e368349ee2326b35964bf05fa780e7e58f54d0b4a89efeb0bc3c2214f1f2531c",
+      "original_sha256": "e368349ee2326b35964bf05fa780e7e58f54d0b4a89efeb0bc3c2214f1f2531c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/finite_detection_certificate.json",
+      "size": 61725,
+      "sha256": "6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8",
+      "original_sha256": "6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/finite_detection_proof.txt",
+      "size": 15057,
+      "sha256": "cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e",
+      "original_sha256": "cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/fixed_t_moments.json",
+      "size": 36770,
+      "sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32",
+      "original_sha256": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/homogeneous_moment_engine.py",
+      "size": 18195,
+      "sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a",
+      "original_sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/independent_certificate_replay.json",
+      "size": 21521,
+      "sha256": "96d4a9e0664bfacb5eb79a371b5388946725c9f5150b32d62f5dec812ad49637",
+      "original_sha256": "96d4a9e0664bfacb5eb79a371b5388946725c9f5150b32d62f5dec812ad49637",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/independent_certificate_replay.py",
+      "size": 9544,
+      "sha256": "824272d4548a74d245d3fc152c18474c61e4347b2a85c5abba8e871bcb242054",
+      "original_sha256": "824272d4548a74d245d3fc152c18474c61e4347b2a85c5abba8e871bcb242054",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/finite_detection/independent_finite_detection_review.txt",
+      "size": 11953,
+      "sha256": "07c2480de4a020b35043b1a093cbe8718417b02ec5c63f26aab25a4c72e4f81d",
+      "original_sha256": "07c2480de4a020b35043b1a093cbe8718417b02ec5c63f26aab25a4c72e4f81d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/identifiability_proofs.txt",
+      "size": 9057,
+      "sha256": "2902025ac51cb17d419bcf5c254b599961cabdb14394a717886ff4a75cf56f6b",
+      "original_sha256": "2902025ac51cb17d419bcf5c254b599961cabdb14394a717886ff4a75cf56f6b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/independent_identifiability_review.txt",
+      "size": 10418,
+      "sha256": "0168a2ed114244f097fa00143f26d39dcc280db55c4fd06de6d85ba65a77a5ef",
+      "original_sha256": "0168a2ed114244f097fa00143f26d39dcc280db55c4fd06de6d85ba65a77a5ef",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/independent_phase_robustness_review.txt",
+      "size": 2947,
+      "sha256": "c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33",
+      "original_sha256": "c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/phase_robustness_proof.txt",
+      "size": 3058,
+      "sha256": "599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0",
+      "original_sha256": "599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/phase_robustness_results.json",
+      "size": 1046,
+      "sha256": "89d39a8e60174c675b216f73af209d6f97db56897774f4c3e770a67ea88657e3",
+      "original_sha256": "89d39a8e60174c675b216f73af209d6f97db56897774f4c3e770a67ea88657e3",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/identifiability/verify_phase_robustness.py",
+      "size": 2842,
+      "sha256": "c20290f9f8fe63d08407785edde998f63483c5dfe605b538938284b26aca980f",
+      "original_sha256": "c20290f9f8fe63d08407785edde998f63483c5dfe605b538938284b26aca980f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/literature/targeted_priority_update.txt",
+      "size": 13812,
+      "sha256": "5a2ac5b90638c5c208938320bd696d002f52c53ad8ce6744628bc4e48f59e844",
+      "original_sha256": "5a2ac5b90638c5c208938320bd696d002f52c53ad8ce6744628bc4e48f59e844",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/REPRODUCE.txt",
+      "size": 1897,
+      "sha256": "8f6cba743a625fa1b423ab01979fd9d1d7595d9610aae8921ad2a0f8daf68623",
+      "original_sha256": "8f6cba743a625fa1b423ab01979fd9d1d7595d9610aae8921ad2a0f8daf68623",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/cross_family_results.json",
+      "size": 2756,
+      "sha256": "ee1c34d302956624701a88a5c168c1df92faa1c69803534aa1fb650c6c96f2d4",
+      "original_sha256": "ee1c34d302956624701a88a5c168c1df92faa1c69803534aa1fb650c6c96f2d4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/exact_phase_algebra.py",
+      "size": 5294,
+      "sha256": "4467dfb0cc9851c5c819f31f278f86d336faca75d27cd345cde0348466acb8f2",
+      "original_sha256": "4467dfb0cc9851c5c819f31f278f86d336faca75d27cd345cde0348466acb8f2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/independent_phase_review.json",
+      "size": 1591,
+      "sha256": "8d468c1d8641aa17d64573fe0a73a04531b994327df1f5dad2531ce2f5a801ab",
+      "original_sha256": "8d468c1d8641aa17d64573fe0a73a04531b994327df1f5dad2531ce2f5a801ab",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/independent_phase_review.py",
+      "size": 5087,
+      "sha256": "4b5a020193a1c1486e83144ebfc6be84ff7901d59b98ae67688002109452084a",
+      "original_sha256": "4b5a020193a1c1486e83144ebfc6be84ff7901d59b98ae67688002109452084a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/independent_phase_review.txt",
+      "size": 4289,
+      "sha256": "d28c787a83f926544dd8a4f81357fc7197f37d094e8f3739be604711e2c12c7b",
+      "original_sha256": "d28c787a83f926544dd8a4f81357fc7197f37d094e8f3739be604711e2c12c7b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/phase_law_extension.py",
+      "size": 12770,
+      "sha256": "9f893a7ab41fcd05c23953a0f0041b1d70d1d07f5db8bbcb72b8167713b2481c",
+      "original_sha256": "9f893a7ab41fcd05c23953a0f0041b1d70d1d07f5db8bbcb72b8167713b2481c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/phase_law_proofs.txt",
+      "size": 19460,
+      "sha256": "f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d",
+      "original_sha256": "f7f9b9b1b2160c484415d5b02491c264e74f6a85aaf4039acbd93a040437188d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/phase_law_results.json",
+      "size": 30268,
+      "sha256": "58d6c632902a243463f26fe806b40ee2b2fba141392f44676dd042c1a2455848",
+      "original_sha256": "58d6c632902a243463f26fe806b40ee2b2fba141392f44676dd042c1a2455848",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/phase_laws/verify_cross_family.py",
+      "size": 3966,
+      "sha256": "aeb14aba57f745e03c43f1506600e5f1e5fba4eed3960a4c84af40945956d9e7",
+      "original_sha256": "aeb14aba57f745e03c43f1506600e5f1e5fba4eed3960a4c84af40945956d9e7",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/render_science_extension.py",
+      "size": 4379,
+      "sha256": "f3996958361844008d5015b0071c29b749f487ad83230df2780f1ad9214b9c6f",
+      "original_sha256": "f3996958361844008d5015b0071c29b749f487ad83230df2780f1ad9214b9c6f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/report_science_review.txt",
+      "size": 15775,
+      "sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d",
+      "original_sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/science_extension_render_review.json",
+      "size": 2011,
+      "sha256": "0b7832d8e08f0b5850f619d7e766a3f0e34b461c123cd7dd51b4f9ba0172a729",
+      "original_sha256": "0b7832d8e08f0b5850f619d7e766a3f0e34b461c123cd7dd51b4f9ba0172a729",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_extension/science_extension_summary.json",
+      "size": 18721,
+      "sha256": "c328bbe5c33a7f51abf7750e9e71cd884e9a31639470584f8519e3517ca579cf",
+      "original_sha256": "c328bbe5c33a7f51abf7750e9e71cd884e9a31639470584f8519e3517ca579cf",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/README.txt",
+      "size": 7151,
+      "sha256": "9f48b2026bbd85bc2d5676c802216f00f04c80b3019289935d6a95aa9d4f1c99",
+      "original_sha256": "9f48b2026bbd85bc2d5676c802216f00f04c80b3019289935d6a95aa9d4f1c99",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/assemble_complete_science.py",
+      "size": 21660,
+      "sha256": "e9179db103458a172b37bba93ec36a94b325e79b28aaaf9a66b465dfd92e9560",
+      "original_sha256": "e9179db103458a172b37bba93ec36a94b325e79b28aaaf9a66b465dfd92e9560",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/REPRODUCE.txt",
+      "size": 2056,
+      "sha256": "be64801992aeaee5abdc69575f56e0974a6606877d983e63dde5c95f3d0beb04",
+      "original_sha256": "be64801992aeaee5abdc69575f56e0974a6606877d983e63dde5c95f3d0beb04",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/calibration_certificate.json",
+      "size": 43050,
+      "sha256": "f0529051dc70054902b15a37f8a0e287e1ffa298fa1f034037b4f0116910d385",
+      "original_sha256": "f0529051dc70054902b15a37f8a0e287e1ffa298fa1f034037b4f0116910d385",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/calibration_proof.txt",
+      "size": 11530,
+      "sha256": "8ebd704bfccf33a93eebc858de43c25fb94c8a166abdee05e82986347cf22101",
+      "original_sha256": "8ebd704bfccf33a93eebc858de43c25fb94c8a166abdee05e82986347cf22101",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/certify_calibration.py",
+      "size": 15281,
+      "sha256": "d6c22ba84f56826a0c9d9783d2df6221ac37e2adc2132d1605c21ef11fa46de7",
+      "original_sha256": "d6c22ba84f56826a0c9d9783d2df6221ac37e2adc2132d1605c21ef11fa46de7",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/independent_calibration_replay.json",
+      "size": 11061,
+      "sha256": "33e9bc36975cac8ac670ec75256f74c9432916cd0a0b09383ba007fa3d6f6049",
+      "original_sha256": "33e9bc36975cac8ac670ec75256f74c9432916cd0a0b09383ba007fa3d6f6049",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/independent_calibration_replay.py",
+      "size": 12511,
+      "sha256": "6927f1f0ba66a2e73b43302737173a9fec965b303c63351d3726a9c402d09a45",
+      "original_sha256": "6927f1f0ba66a2e73b43302737173a9fec965b303c63351d3726a9c402d09a45",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/calibration/independent_calibration_review.txt",
+      "size": 14334,
+      "sha256": "89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073",
+      "original_sha256": "89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/complete_science_manifest.json",
+      "size": 25726,
+      "sha256": "15dc6eafac0d2f2d3cb87d526170aa49b8ebec136f3c93e75ad8e08e6fc305ee",
+      "original_sha256": "15dc6eafac0d2f2d3cb87d526170aa49b8ebec136f3c93e75ad8e08e6fc305ee",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/final_review.txt",
+      "size": 3902,
+      "sha256": "4393227691bdd4c5dd4c21333d83a90f9013bbf307c152659c2c0b7171cab253",
+      "original_sha256": "4393227691bdd4c5dd4c21333d83a90f9013bbf307c152659c2c0b7171cab253",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/blind_interval_certificate.json",
+      "size": 15600,
+      "sha256": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548",
+      "original_sha256": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/certify_global_blind_interval.py",
+      "size": 9256,
+      "sha256": "16130e0a2b24d7e85f1dffebe80e5005860582f4e0d6366adc297c35d5fbda83",
+      "original_sha256": "16130e0a2b24d7e85f1dffebe80e5005860582f4e0d6366adc297c35d5fbda83",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/global_blind_gain_proofs.txt",
+      "size": 13416,
+      "sha256": "6203bb8277d61c3f05582732a33c50b19974330f476276aaedf93fcfb4e57861",
+      "original_sha256": "6203bb8277d61c3f05582732a33c50b19974330f476276aaedf93fcfb4e57861",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/global_detector_and_width_proofs.txt",
+      "size": 13722,
+      "sha256": "dc1ed848d11ad0f2c76378fa642bb3eb20ea3a2dcd830a82066de0cf4d71c16d",
+      "original_sha256": "dc1ed848d11ad0f2c76378fa642bb3eb20ea3a2dcd830a82066de0cf4d71c16d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/independent_blind_interval_replay.json",
+      "size": 1368,
+      "sha256": "2b099fce0afee2315bfda00a77ffd606a925f7116c7fd8f21bee08a2ce66635e",
+      "original_sha256": "2b099fce0afee2315bfda00a77ffd606a925f7116c7fd8f21bee08a2ce66635e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/independent_blind_interval_replay.py",
+      "size": 4579,
+      "sha256": "206d2fec0e59e82b81576bd6f18725a49eca23766f1284e8d04239ca9f879b2b",
+      "original_sha256": "206d2fec0e59e82b81576bd6f18725a49eca23766f1284e8d04239ca9f879b2b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/global_separation/independent_global_theory_review.txt",
+      "size": 10634,
+      "sha256": "8b0541dadea668f98de18718f2c15adb9dcac8b3c06ce5a92fe16f035435b8b0",
+      "original_sha256": "8b0541dadea668f98de18718f2c15adb9dcac8b3c06ce5a92fe16f035435b8b0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/REPRODUCE.txt",
+      "size": 901,
+      "sha256": "84b88b4bb40b8364f0790c757a1a9672744c52018d5aa1da041408521c5efe53",
+      "original_sha256": "84b88b4bb40b8364f0790c757a1a9672744c52018d5aa1da041408521c5efe53",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/independent_motion_replay.json",
+      "size": 1667,
+      "sha256": "7883f92f5f0cfae74420ccdb5226f632108ed3ca9ceb1a2ab866b089e40cd717",
+      "original_sha256": "7883f92f5f0cfae74420ccdb5226f632108ed3ca9ceb1a2ab866b089e40cd717",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/independent_motion_replay.py",
+      "size": 3395,
+      "sha256": "30af9b503f9815a1e2c17e464b639821cf6f42f9c6abfdc8351a78071e575a74",
+      "original_sha256": "30af9b503f9815a1e2c17e464b639821cf6f42f9c6abfdc8351a78071e575a74",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/independent_motion_review.txt",
+      "size": 4394,
+      "sha256": "262c67bfdb2f2aaee04a5acc51e2fc334b0c3284c8bbf284af39a652001081bb",
+      "original_sha256": "262c67bfdb2f2aaee04a5acc51e2fc334b0c3284c8bbf284af39a652001081bb",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/motion_extension_proofs.txt",
+      "size": 18860,
+      "sha256": "38e35aeb046e429ff8b86a5c30efa3a00f6b025f42dfb6e01d38d6a17cb1835a",
+      "original_sha256": "38e35aeb046e429ff8b86a5c30efa3a00f6b025f42dfb6e01d38d6a17cb1835a",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/motion_extension_results.json",
+      "size": 5141,
+      "sha256": "36d5070a5e835c8ef17cdd6ad5d537480e7541a3ebad522316fe06751083b08f",
+      "original_sha256": "36d5070a5e835c8ef17cdd6ad5d537480e7541a3ebad522316fe06751083b08f",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/motion_extensions/verify_motion_extensions.py",
+      "size": 11068,
+      "sha256": "492b76db0b2e7a0fdb7081230c6121df6f297d1def9011d790e67ece87618ec7",
+      "original_sha256": "492b76db0b2e7a0fdb7081230c6121df6f297d1def9011d790e67ece87618ec7",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/render_science_frontier.py",
+      "size": 4376,
+      "sha256": "212ee3d64935f6174912812eee8f4dd24a8b7a8a033346b79a719d79ea1887e1",
+      "original_sha256": "212ee3d64935f6174912812eee8f4dd24a8b7a8a033346b79a719d79ea1887e1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/report_consistency_review.txt",
+      "size": 5408,
+      "sha256": "8b6f6a01c0e6db205756aa234c8a1ef69f9243cd006211f2fec5e44adaa7f6a4",
+      "original_sha256": "8b6f6a01c0e6db205756aa234c8a1ef69f9243cd006211f2fec5e44adaa7f6a4",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/review_and_experiment/external_review_and_physical_test.txt",
+      "size": 17600,
+      "sha256": "796abe69a7b1eb72ce632b8b22b4e6b0135a57289023c1a5adf8fc55ada1ec49",
+      "original_sha256": "796abe69a7b1eb72ce632b8b22b4e6b0135a57289023c1a5adf8fc55ada1ec49",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/review_and_experiment/priority_update.txt",
+      "size": 13859,
+      "sha256": "74fda0ed8e2c56f07ef86857066e5d8d0ad94779030f085495e112f6e123a9de",
+      "original_sha256": "74fda0ed8e2c56f07ef86857066e5d8d0ad94779030f085495e112f6e123a9de",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/certify_tighter_testing.py",
+      "size": 16618,
+      "sha256": "627985c384f1a53f97c3f0a113de06568df6e5c8d65ed1989d56d1d7918f144d",
+      "original_sha256": "627985c384f1a53f97c3f0a113de06568df6e5c8d65ed1989d56d1d7918f144d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/independent_tighter_testing_replay.json",
+      "size": 43544,
+      "sha256": "4957e4f8c82a6ee05033724f3598eedadb9856eb4dc5b80e06b417f35e71f872",
+      "original_sha256": "4957e4f8c82a6ee05033724f3598eedadb9856eb4dc5b80e06b417f35e71f872",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/independent_tighter_testing_replay.py",
+      "size": 16132,
+      "sha256": "023cfc1b774e321b3d9ff07429ba75fe6ad3ab7b982d1a02e63c8b357030731b",
+      "original_sha256": "023cfc1b774e321b3d9ff07429ba75fe6ad3ab7b982d1a02e63c8b357030731b",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/independent_tighter_testing_review.txt",
+      "size": 16319,
+      "sha256": "10f796c8f83ba18275dc5c2358857d4d1cbe305c972d9f656e9611f1223c8d67",
+      "original_sha256": "10f796c8f83ba18275dc5c2358857d4d1cbe305c972d9f656e9611f1223c8d67",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/tighter_testing_certificate.json",
+      "size": 79764,
+      "sha256": "33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1",
+      "original_sha256": "33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/tighter_testing/tighter_testing_proof.txt",
+      "size": 12463,
+      "sha256": "464b76809c6c350e2651bb7eb530eff396d6cf121e14b890d31f731dc7829303",
+      "original_sha256": "464b76809c6c350e2651bb7eb530eff396d6cf121e14b890d31f731dc7829303",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "homometric-photon-counts/science_frontier/visual_review.json",
+      "size": 1522,
+      "sha256": "067223c25aff917055f699f02af44915f67c002a0089f716c406c922d4c122bd",
+      "original_sha256": "067223c25aff917055f699f02af44915f67c002a0089f716c406c922d4c122bd",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/arb/engine.py",
+      "size": 7036,
+      "sha256": "2c96fb9e6f602b81c93b7d8432ca41a2eb17b30241aa72e0cd954122fc6d6d58",
+      "original_sha256": "95e58aa8621acbb1b411671564fe8b736d1397fde7107dde3debaab9d2d754bd",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/arb/verification.json",
+      "size": 65703,
+      "sha256": "532a40928d55bb0cbc1ea9e248f5985f9e68fd68c03fee69b93f8e26fa1e1b4f",
+      "original_sha256": "b3af2957a233b6e3523b6c702d4e49203dd9fc62499545aa40a8fbd06976ba9f",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/arb/verify_arb.py",
+      "size": 6901,
+      "sha256": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d",
+      "original_sha256": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/all_width_finiteness_review.txt",
+      "size": 2734,
+      "sha256": "4d97f7ce9795a2019b6b08f7f2bac3d088593950aa10d04b0adec2452ef8be60",
+      "original_sha256": "4d97f7ce9795a2019b6b08f7f2bac3d088593950aa10d04b0adec2452ef8be60",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/certified_roots.json",
+      "size": 2741,
+      "sha256": "c5af01547af0712da591d885363f988fef196d2aafe1841b98236e33490c1e16",
+      "original_sha256": "e8daf0fcb954eb6bb28eae635309f7653e7fe07360fa63d45c7a6027aff2e154",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/certify_compact_gain.py",
+      "size": 8540,
+      "sha256": "4c0eb01d3c1373c1c53848a96dbe068ef397101ca0c307fc531a987b1580e9ac",
+      "original_sha256": "4c0eb01d3c1373c1c53848a96dbe068ef397101ca0c307fc531a987b1580e9ac",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/certify_density_zero.py",
+      "size": 6206,
+      "sha256": "cd63f4e4d0b04a91304323da3519a8641edebeef0872e167aed116fae748e608",
+      "original_sha256": "cd63f4e4d0b04a91304323da3519a8641edebeef0872e167aed116fae748e608",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/compact_gain_certificate.json",
+      "size": 338149,
+      "sha256": "ed4eb69fa068eff3adce534998d4f20ce8d854c63a0ca0d360e62752c6c9f706",
+      "original_sha256": "186cbda9f83c4b1caaa552330bd065249a4994ffcaa7233b0f3504c625a0fec8",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/compact_gain_probe.json",
+      "size": 2759,
+      "sha256": "2adb70120fb138d993c6e48a7e5af6b10f385b4f282b81839cecce304ceb4f6c",
+      "original_sha256": "2adb70120fb138d993c6e48a7e5af6b10f385b4f282b81839cecce304ceb4f6c",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/compact_gain_proof.txt",
+      "size": 6066,
+      "sha256": "d7d73b82797ccfd262c5de8beced88b7db17c27494d71005f1f8c09502da2590",
+      "original_sha256": "d7d73b82797ccfd262c5de8beced88b7db17c27494d71005f1f8c09502da2590",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/compact_gain_tails.json",
+      "size": 289589,
+      "sha256": "eb0d394facd2226c8945dcfc6210e80063357ae38d739538f3d97f2487615ff0",
+      "original_sha256": "eb0d394facd2226c8945dcfc6210e80063357ae38d739538f3d97f2487615ff0",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/density_zero_certificate.json",
+      "size": 18820,
+      "sha256": "630542c1c72eeae13885d62a550141c30f4d51c8756c0c9d7062d7a6faf0f0cc",
+      "original_sha256": "79b1c3123b5b416b76c1bc9f749854951a5d8763233880d9f509106bedba0abc",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/density_zero_probe.json",
+      "size": 890,
+      "sha256": "9c844eceb021af4fa7d7a7ff0e9d8b72186ea5aeffabe8d255e06a0806eeae10",
+      "original_sha256": "9c844eceb021af4fa7d7a7ff0e9d8b72186ea5aeffabe8d255e06a0806eeae10",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/density_zero_proof.txt",
+      "size": 6069,
+      "sha256": "d73a8ae4e25bb2d4051ed8949c335ca971f8d77c2a091fdb05bab12b50979146",
+      "original_sha256": "d73a8ae4e25bb2d4051ed8949c335ca971f8d77c2a091fdb05bab12b50979146",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/probe_compact_gain.py",
+      "size": 1650,
+      "sha256": "43d04d17b3a36053f231208322702bd3affbb4ba115da7751a77c20a5578973d",
+      "original_sha256": "43d04d17b3a36053f231208322702bd3affbb4ba115da7751a77c20a5578973d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/probe_density_zero.py",
+      "size": 2188,
+      "sha256": "0bf0232c4e4d400ef39904737813556df4da83bc7e6e6343d442f0255cdf4307",
+      "original_sha256": "0bf0232c4e4d400ef39904737813556df4da83bc7e6e6343d442f0255cdf4307",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/global/summarize_roots.py",
+      "size": 3330,
+      "sha256": "68328493569cc7c00e348b86f7d7b8726075f120d2cd2825db01f60ad6e09f8e",
+      "original_sha256": "68328493569cc7c00e348b86f7d7b8726075f120d2cd2825db01f60ad6e09f8e",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/PhotonAlgebra.lean",
+      "size": 2471,
+      "sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "original_sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/PhotonProofs.lean",
+      "size": 4966,
+      "sha256": "5c09574589c8c16ae928aa2f76232240b817082e648a723f07e0f5fd41410ca2",
+      "original_sha256": "5c09574589c8c16ae928aa2f76232240b817082e648a723f07e0f5fd41410ca2",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/SCOPE.txt",
+      "size": 4755,
+      "sha256": "0174dd6be86381cb9661f3758d8028e9c9738c403e1167cd4574ab930f29c461",
+      "original_sha256": "0174dd6be86381cb9661f3758d8028e9c9738c403e1167cd4574ab930f29c461",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/checked/PhotonAlgebra_compile.log",
+      "size": 478,
+      "sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "original_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/checked/PhotonProofs_compile.log",
+      "size": 1003,
+      "sha256": "9fbac919b75f677447cdfeab32737a710505a96b730fd3543588a116eafccb01",
+      "original_sha256": "849682c1e42ac4a07d201eced8975436274e71245d157d5259fd7ec33e0ab6d9",
+      "path_redacted": true,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/checked/PhotonProofs_fresh_kernel.log",
+      "size": 37,
+      "sha256": "9746531ec99a67a0fc0e79cd2e3905e0298c4e611d9a54a12058deaa21e25d1d",
+      "original_sha256": "9746531ec99a67a0fc0e79cd2e3905e0298c4e611d9a54a12058deaa21e25d1d",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/proof_manifest.json",
+      "size": 5484,
+      "sha256": "0a4556f29d6fcfe6fadee129750725584c1757a42ebc109f9b02243b9ff8cc2e",
+      "original_sha256": "b3aba191bf5f5414c752464e204289017c56b7b85bd3b8bfc23517783fbd806f",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/lean/verified_receipt.json",
+      "size": 2758,
+      "sha256": "ab7686238a9a7ec1f8f7d9a4364da3213887d10b41494cd5a3fe9bb254aba5f1",
+      "original_sha256": "3a88c59a57eb1ea9e621b9241d72036f91855705e1d59a9ee7d2e6c81b96ddc2",
+      "path_redacted": true,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/review/ai_assistance_and_limitations.txt",
+      "size": 3640,
+      "sha256": "32814d8c2ce628c7d2c733988df718324bd57a2b41e65fbabf2775461a761172",
+      "original_sha256": "32814d8c2ce628c7d2c733988df718324bd57a2b41e65fbabf2775461a761172",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/review/independent_compact_gain.py",
+      "size": 9266,
+      "sha256": "f750d26eec54fb7d98cd37d577b4627502e1ae7f434f4fe9f407d5fe8c5a0167",
+      "original_sha256": "f750d26eec54fb7d98cd37d577b4627502e1ae7f434f4fe9f407d5fe8c5a0167",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/review/independent_compact_verification.json",
+      "size": 14616,
+      "sha256": "9afddf9c5e9b2dc2de8f75ad32d38e89c87ef3c27c79241a28aeac29187d7e53",
+      "original_sha256": "ba7ac9fd60bc3abe49688b3dd1e53b17302e05faca390f18f35cde20eb614780",
+      "path_redacted": false,
+      "dependent_hash_rebound": true
+    },
+    {
+      "path": "scientist-review-2026-10-20/review/verify_compact_tail_cover.py",
+      "size": 6461,
+      "sha256": "75981e69a2bf5ae9c0d10a0dbdf6e0b485c05c812d02f11d4fc4e77c53ee9861",
+      "original_sha256": "75981e69a2bf5ae9c0d10a0dbdf6e0b485c05c812d02f11d4fc4e77c53ee9861",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    },
+    {
+      "path": "scientist-review-2026-10-20/review/verify_density_phasors.py",
+      "size": 4383,
+      "sha256": "e63bda94d101ccbebce80ca91287d11d37c700a18f7c24b79c7df12335f47f94",
+      "original_sha256": "e63bda94d101ccbebce80ca91287d11d37c700a18f7c24b79c7df12335f47f94",
+      "path_redacted": false,
+      "dependent_hash_rebound": false
+    }
+  ]
+}

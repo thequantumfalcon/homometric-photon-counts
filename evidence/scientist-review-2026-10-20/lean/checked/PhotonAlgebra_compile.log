@@ -1,0 +1,5 @@
+'PhotonAlgebra.delta4_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonAlgebra.reference_delta4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonAlgebra.endpoint_delta4_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonAlgebra.selected_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonAlgebra.laws_distinct_of_moment_identity' depends on axioms: [propext, Classical.choice, Quot.sound]

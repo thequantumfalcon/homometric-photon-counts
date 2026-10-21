@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "source_sha256": "1010462701b5ce508965ec1e7e6139066e2426c9af6825c2189b64b73538ffc6",
+  "dependencies": {
+    "continuation-2026-10-20\\gain\\third_root_certificate.json": "9307fd02b3c17fe7be45c0c0a2a8d4011bcaf562ef0b4245b8e9f52470eda5de",
+    "homometric-photon-counts\\science_advance\\global\\replay_additional_blind_gains.py": "5fc86ae311a6e56de404e5c137ea5d20b78e06ec7d4340a64d0d3ffcad419b0b",
+    "continuation-2026-10-20\\gain\\independent_order64.py": "f7d788eb5b440c404ac05e0751f218cd5332bde4dc60ac9c0a1cd97faed6c007",
+    "continuation-2026-10-20\\gain\\independent_order64_weights.json": "4007ea639a28584ce33f1733ead1aba7e7d2f83864f340f32a657e13d3074696",
+    "continuation-2026-10-20\\gain\\independent_order64_covers.json": "8a13bac6746d6e4f3813b42316dba5ff33fa6264ce966de8e15c3a646334c109",
+    "continuation-2026-10-20\\moments\\fixed_t_moments_order_64.json": "ad3f47da0ff0a6d9206eecd971bf3b2afb375a66089465b3a76ddb6362980b92",
+    "continuation-2026-10-20\\gain\\nodes_order64.json": "4b21675a6c6f6316bffd9e43308c8c2191d54f8d11affeb7cfaac01dae00bea5",
+    "homometric-photon-counts\\science_advance\\global\\additional_blind_gains_certificate.json": "a6c86b9f8116d47a270a87c125168fe89f7d3120f97a9de31d6b114917005bf6"
+  },
+  "bracket": {
+    "left": {
+      "eta": "8615637/192937984",
+      "F": [
+        "1416250819770453638678728412216648915194738789477520654273707/1250000000000000000000000000000000000000000000000000000000000000000000",
+        "22194750061536530402852272535435210934414120439769347066100043/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "F_float_display_only": [
+        1.133000655816363e-09,
+        2.219475006153653e-09
+      ]
+    },
+    "right": {
+      "eta": "189544015/4244635648",
+      "F": [
+        "-17256943795718586924122282773668026500052326139318025289812917/10000000000000000000000000000000000000000000000000000000000000000000000",
+        "-3196099309085191687107024454341124461058018159375323028164313/5000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "F_float_display_only": [
+        -1.7256943795718587e-09,
+        -6.392198618170384e-10
+      ]
+    }
+  },
+  "claim": "Given the archived exactly-two-root theorem through 1/32, independent new point and whole-interval bounds establish exactly three roots through 1/12, with new root simple in the stated narrow bracket.",
+  "scope": "Independent downstream interpolation/exponential/range arithmetic; shared order64 moment input and already-certified two-root theorem."
+}

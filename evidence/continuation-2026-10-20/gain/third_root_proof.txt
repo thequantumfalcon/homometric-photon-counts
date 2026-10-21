@@ -1,0 +1,78 @@
+THIRD SIMPLE FOUR-COUNT BLIND GAIN
+
+Fix the archive's two 63-site structures, independent Gaussian phases with
+s=2 log(2), t=1/2, zero detector background, and positive total gain eta.
+Let I be intensity, supported in [0,3969], and define
+
+ F(eta)=E_A[I^4 exp(-eta I)]-E_B[I^4 exp(-eta I)].
+
+The difference of probabilities of exactly four counts is eta^4 F(eta)/24.
+Thus its positive zeros, multiplicities, and signs coincide with those of F.
+Bounded support allows differentiation under the expectation at every eta.
+
+New input
+
+The continuation reconstructs moments through order64 directly from the
+site generating-function product, using exact integer multiplication.
+All66 moment values through order32 agree exactly with the sealed earlier
+reconstruction. The higher64 values are new output of the same proven
+construction. Native integer arithmetic is an explicit computational
+dependency, not a machine-code formal proof.
+
+Optional high-precision orthogonal-polynomial quadrature suggests rational
+interpolation nodes. Their approximate origin does not enter validity.
+The certificate verifies that they are distinct and inside the support,
+and uses exact rational Hermite weights and exponential enclosures only.
+
+For exp(-eta x), interpolation at n positive double nodes has error of
+sign positive, since its 2n-th derivative is positive and the node product
+is a square. Adding a simple node at0 makes the error nonpositive on the
+support, since the next derivative is negative and x>=0. Integrating
+against x^r dP produces lower and upper bounds using moments through
+r+2n-1 or r+2n. No claim that the suggested nodes are exact Gaussian nodes
+is required. This is the same Hermite remainder argument used in the
+preserved archive, now with more exact moments.
+
+Combining structure bounds gives lower/upper bounds for F and for
+F'=E_B[I^5 exp(-eta I)]-E_A[I^5 exp(-eta I)].
+
+Interval exclusion and the new root
+
+The new producer proves, with exact rational Taylor/Bernstein bounds:
+
+  F>0  on [1/32,1/23]          (2 interval leaves),
+  F'<0 on [1/23,1/22]          (1 interval leaf),
+  F<0  on [1/22,1/12]          (5 interval leaves).
+
+Continuity and the endpoint signs give a root in (1/23,1/22). Strictly
+negative derivative makes it unique there and simple. The adjacent covers
+exclude all other roots between1/32 and1/12. Combining this with the
+archive's exactly two simple roots on (0,1/32] gives exactly THREE simple
+roots on (0,1/12]. This counts roots everywhere on the interval, not merely
+sign changes on a finite grid.
+
+The third root belongs to the exact rational interval
+
+ [8615637/192937984, 189544015/4244635648]
+ = [0.04465495503467062245..., 0.04465495527026210378...].
+
+Both endpoint signs are certified; their complete rational enclosures and
+all interval leaves appear in third_root_certificate.json.
+
+Independent verification
+
+independent_order64.py uses the archived confluent Newton interpolation
+implementation, positive exponential series followed by reciprocation,
+and interval Horner covers. This differs from the producer's cardinal
+Hermite basis, alternating exponential series, and Bernstein bounds.
+It checks the same exact moment input; it is not a second derivation of
+the moments from geometry. Independent covers and point checks are saved
+beside the producer certificate.
+
+Scope
+
+The previously proved universal four-sign-change theorem implies at least
+one additional sign-changing root above1/12. The new finite-interval result
+does not prove an exact global count or an effective last-root cutoff.
+At a blind gain only the four-count probability agrees: the full count
+laws need not agree. No experimental or external-review claim is made.

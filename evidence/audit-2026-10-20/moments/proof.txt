@@ -1,0 +1,142 @@
+INDEPENDENT EXACT MOMENT RECONSTRUCTION
+
+Scope: both fixed 63-site structures; independent Gaussian site phases at
+t=exp(-s/2)=1/2; intensity moments E[I^k], 0 <= k <= 32. This is an exact
+computational proof under that model, with a mathematical reduction below.
+It is not a proof-assistant formalization or a physical validation.
+
+1. Geometry input and exact pairing
+
+Write alpha=i sqrt(3), r=(1+alpha)/2, r^6=1. The 21-site base in the archive
+has, for j=0,...,9, phases
+  r^(3j+1) (sqrt(222)+(-1)^j alpha)/15,
+  r^(3j)                                  if j=0,1,
+  r^(3j) (sqrt(573)-(-1)^j alpha)/24        if j=2,...,9,
+and the final site r^30=1.
+
+This equals the following multiset:
+  five copies of the pair r*(+sqrt(222)+alpha)/15,
+                           r*(-sqrt(222)+alpha)/15;
+  four copies of the pair (+sqrt(573)-alpha)/24,
+                          (-sqrt(573)-alpha)/24;
+  sites +1,+1,-1.
+Every phase has modulus one. Structure A is the union of base rotations
+0,31,63 (equivalently 0,1,3); B has rotations 0,32,63 (equivalently 0,2,3).
+The paired representation follows by separating even and odd j. The separate
+verify_arithmetic.py checks equality of the exact 63-element phase multisets
+for both geometries in addition to the argument above.
+
+2. Independent product formula
+
+For independent Gaussian phases w_j, E[w_j^a conjugate(w_j)^b]=2^(-(a-b)^2).
+For a unit phasor z define the truncated bivariate exponential generating
+polynomial
+  F_z(X,Y)=sum_{0<=a,b<=P} z^(a-b) 2^(-(a-b)^2) X^a Y^b/(a! b!).
+Independence and multiplication of exponential generating functions imply
+  E[I^k]=(k!)^2 [X^k Y^k] product_j F_zj(X,Y).
+Every exponent is nonnegative, so discarding terms with either exponent
+greater than P after any intermediate multiplication does not affect any
+requested coefficient. No cumulants, moment-to-cumulant recurrence, saved
+power sums, or saved higher moment coefficients are used.
+
+3. Eliminate the extra radicals before long products
+
+Within a pair let c=sqrt(222) or sqrt(573). Decompose the first site factor
+as U+c V, where U,V have coefficients in Q(alpha). Its paired site replaces
+c by -c and has factor U-c V. Their product is U^2-c^2 V^2 and belongs to
+Q(alpha). Raising the pair factors to powers five and four, including the
+three real sites, and rotating by sixth roots of unity therefore requires
+only arithmetic in Q(alpha), alpha^2=-3. A rotation by r^h multiplies the
+(a,b) coefficient by r^(h(a-b)).
+
+4. Integer scaling: no floating point and no denominator approximations
+
+Set L=lcm(1,...,P) and H=120 L 2^P. Substitute X=H x,Y=H y.
+For an unrotated site z let w=120 z. The coefficient becomes the vector
+for w^|a-b| (complex-conjugated for a<b), multiplied by
+  120^(a+b-|a-b|) L^(a+b)/(a! b!) * 2^(P(a+b)-(a-b)^2).
+All factors are integers: a! divides L^a, b! divides L^b, and
+(a-b)^2 <= P |a-b| <= P(a+b). Arithmetic in the pair fields has integral
+structure constants alpha^2=-3 and c^2 in {222,573}. Exact rotation divisions
+by 2 are checked. The final moments are the diagonal integer coefficients
+times (k!)^2/H^(2k), reduced with Python Fraction. The alpha coefficient on
+every diagonal is required to be exactly zero.
+
+5. Deterministic signed Kronecker multiplication
+
+For rectangular polynomials with exponents through P, substitute y=x^(2P+1)
+and x=B, where B is a power of 256. A product has x exponent at most 2P,
+so this stride does not identify different bivariate product coefficients.
+Let m_A,m_B be the largest absolute real/alpha integer coefficients of the
+two inputs. A product coefficient is bounded in absolute value by
+  C=4(P+1)^2 m_A m_B,
+because real multiplication is ac-3bd and imaginary multiplication is ad+bc,
+and at most (P+1)^2 pairs contribute to any bivariate coefficient. Choose
+B/2>C. This covers every product coefficient, including discarded ones.
+Each integer multiplication is exact. Signed base-B coefficients are decoded
+by adding the integer whose every digit is B/2 and subtracting B/2 from each
+decoded digit. Since |coefficient|<B/2, the shifted digits are in [0,B), so
+there is no carry ambiguity. This is deterministic exact arithmetic; there
+is no modular-probability argument, floating-point FFT, or tolerance test.
+
+6. Dependency boundary and reproducibility
+
+reconstruct.py imports only the Python standard library. It opens the saved
+fixed_t_moments.json only AFTER constructing every moment for both structures.
+All comparisons use exact rational equality. The result records source and
+input hashes, per-multiplication bounds, timings, all reconstructed rational
+values and individual comparisons. verify_arithmetic.py compares the packed
+convolution with an ordinary four-loop convolution on signed coefficients,
+including 129-bit values, and verifies the 63-site multiset reductions.
+
+Commands from the workspace root:
+  python audit-2026-10-20/moments/run_audit.py --rebuild
+To verify existing reconstructed artifacts without the approximately eight-
+minute high-order rebuild, omit --rebuild. This wrapper is the supported
+audit entry point: it rejects -O, -OO, and PYTHONOPTIMIZE modes that disable
+the producer's internal assertions. It also checks source/input hashes and
+performs an explicit-raise exact comparison independent of all_equal flags.
+Raw component scripts must be run with ordinary, nonoptimized Python.
+
+This closes the specific previously stated dependency gap of independently
+rebuilding the full order-32 table from geometry. It does not by itself prove
+the downstream analytic inequalities: those still require their documented
+proof arguments and certificate replays. It also does not settle the unknown
+global optimizer, exact global root count, exact optimal sample integer,
+physical validity, external peer review, or priority over all prior work.
+
+7. Additional all-t identity certificate
+
+symbolic_fourth.py uses the same independent site-product construction with
+the Gaussian characteristic moment t^((a-b)^2), evaluated exactly at the
+33 distinct integer nodes t=1,...,33. Values above one are formal polynomial
+evaluations; they are not claimed to represent Gaussian distributions.
+
+Every term contributing to E[I^k] allocates nonnegative a_j,b_j with
+sum_j a_j=sum_j b_j=k. Its power of t is
+  sum_j (a_j-b_j)^2
+  <= sum_j a_j^2 + sum_j b_j^2
+  <= (sum_j a_j)^2 + (sum_j b_j)^2 = 2k^2.
+Thus the fourth-moment polynomial has degree at most 32, and lower moments
+have smaller degree bounds. At every one of the 33 nodes the exact product
+calculation establishes D_0=D_1=D_2=D_3=0 and
+  D_4(t)=455015761/20000 * t^8 (1-t^2)^5 (t^6+3t^4+6t^2+6).
+The target has degree 24. A polynomial of degree at most 32 that vanishes
+at 33 distinct nodes is identically zero. These are therefore identities
+for every t, not numerical samples or a grid-based approximation.
+All displayed factors of D_4 are strictly positive for 0<t<1; this is exactly
+every finite positive Gaussian phase variance under t=exp(-s/2).
+
+The all-t verifier does not open the archive moment table. It records all
+33 exact evaluations in symbolic_fourth.json. Its scaling H=240 L q^P for
+t=p/q uses the additional integer factor p^((a-b)^2) and an exact denominator
+factor q^(P(a+b)-(a-b)^2), so all intermediate computations remain integral.
+
+8. Deliberate corruption test
+
+compare_moments.py checks every required rational coefficient explicitly and
+raises an error on mismatch. mutation_check.py runs that checker on the
+original table, then on a separate copy with one added to B's 32nd moment.
+It requires success on the original and failure at the modified entry,
+and checks that the archived bytes were unchanged. The intentionally false
+copy is named corrupted_moment_fixture.json and is test data, not evidence.

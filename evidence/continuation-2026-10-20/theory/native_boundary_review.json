@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "cases": 637,
+  "adapter_source_sha256": "a902b0a7e41d252a604080ddc158285f52032e94359af95cf4f4a9befe0501b4",
+  "review_source_sha256": "4d6352b472882c9ca07721af2bb454bb6a5c2f544fcbcf1d3d6f4622a64ebaf5",
+  "native_library": "LOCAL_USER_HOME\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\symengine\\lib\\mpir.dll",
+  "native_sha256": "08d901b97a987dd23023ef4273d26fc6e0ff7fcddcdba6b6e39dc057931af994",
+  "ctypes_layout": {
+    "MPZ_size": 16,
+    "int_size": 4,
+    "pointer_size": 8,
+    "allocated_offset": 0,
+    "size_offset": 4,
+    "limbs_offset": 8
+  },
+  "scope": "Deterministic signed, zero, byte-boundary and internal-null-byte comparisons against CPython integer multiplication. Supports tested installed ABI; not formal machine-code verification."
+}

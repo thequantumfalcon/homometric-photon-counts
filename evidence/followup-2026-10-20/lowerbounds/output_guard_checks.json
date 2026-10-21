@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "source_sha256": "4ece1a5d969accb72b478b058113d4ed7614511256f1de0a87df4075c1fa63a5",
+  "checks": [
+    {
+      "name": "missing_output",
+      "rejected": true,
+      "exit_code": 2,
+      "sentinel_preserved": true
+    },
+    {
+      "name": "existing_output",
+      "rejected": true,
+      "exit_code": 1,
+      "sentinel_preserved": true
+    },
+    {
+      "name": "missing_parent",
+      "rejected": true,
+      "exit_code": 1,
+      "sentinel_preserved": true
+    }
+  ]
+}

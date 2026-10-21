@@ -1,0 +1,255 @@
+{
+  "schema": "scientific-extension-complete-record-v1",
+  "date": "2026-10-20",
+  "status": "Analytic model-level results and exact certificates internally reviewed; publication priority and experimental validation remain unresolved.",
+  "complete_record": {
+    "layout": "Extension pages labeled E-* precede the unchanged 18-page foundation report with its original page numbering.",
+    "foundation_pages": 18,
+    "embedded_directory_prefixes": ["science_extension/", "science_completion/"],
+    "master_manifest": "complete_science_manifest.json",
+    "current_extractor": "science_extension/extract_complete_science.py",
+    "extractor_usage_after_exporting_helper": "python extract_complete_science.py complete_record.pdf extracted_record",
+    "pdf_argument_note": "Replace complete_record.pdf with the actual delivered complete-PDF filename.",
+    "extractor_dependency": "pypdf",
+    "extractor_behavior": "Requires an absent or empty output directory; checks attachment names and every listed file's byte count and SHA-256 before writing both sibling folders; does not execute scientific programs.",
+    "historical_material": "science_completion/READ_ME_FIRST.txt, extract_proof_files.py, science_completion_manifest.json, and science_completion_summary.json describe the frozen earlier standalone edition. Use the current helper and master manifest for this whole PDF.",
+    "integrity_scope": "Hashes bind bytes, not mathematical truth or physical validity.",
+    "rolling_zip_created_or_resumed": false
+  },
+  "retained_foundation_results": {
+    "global_positive_mean_crossings": {
+      "original_control": 2,
+      "marginal_preserving_control": 2,
+      "harmonic_control": 1,
+      "status": "All three global counts remain proved for the specified reconstructed models; positive roots are simple.",
+      "evidence": [
+        "science_completion/root_certificate/two_root_certificate.json",
+        "science_completion/root_certificate/two_root_proof.txt",
+        "science_completion/harmonic_certificate/harmonic_root_certificate.json",
+        "science_completion/harmonic_certificate/harmonic_root_proof.txt"
+      ]
+    },
+    "iid_gaussian_homometry": "All-frequency mean diffraction agrees; at the common null the first three intensity moments agree and the fourth gap is strictly positive for every finite s>0.",
+    "gaussian_fourth_gap": "(455015761/20000)*exp(-4*s)*(1-exp(-s))^5*(exp(-3*s)+3*exp(-2*s)+6*exp(-s)+6)",
+    "sharp_fixed_parameter_small_s_sample_orders": {
+      "gaussian_readout_positive_sigma": "Theta(s^-10)",
+      "poisson_positive_background": "Theta(s^-10)",
+      "poisson_zero_background": "Theta(s^-6)",
+      "poisson_zero_background_parity_only": "Theta(s^-9)",
+      "scope": "Known calibrated models, independent observations, equal priors and any fixed success target in (1/2,1); detector parameters fixed as s tends to zero. Four-count leading efficiency is an asymptotic statement, not uniform finite-parameter optimality."
+    }
+  },
+  "model": {
+    "structures": "The two fixed known 63-site homometric structures A and B reconstructed in the foundation.",
+    "n": 63,
+    "frequency_q0": "pi/3",
+    "intensity": "I_G=|sum_j z_Gj W_j|^2, |z_Gj|=1",
+    "intensity_support_bound": "0<=I_G<=3969",
+    "normalization": "Unnormalized intensity; gain multiplies I_G directly.",
+    "common_null": "M_A,1=M_B,1=0",
+    "phase_assumption": "Independent copies of one unit-circle law, identical across the sites and the two structures.",
+    "gaussian_phase": "W=exp(i*sqrt(s)*Z), Z standard normal, 0<s<infinity, t=exp(-s/2)",
+    "wrapped_cauchy_phase": "E[W^k]=r^abs(k), 0<r<1; r is concentration, not displacement variance.",
+    "R": "129187/400",
+    "T_A_minus_T_B": "-455015761/120000 + i*sqrt(3)*(28907930179/4800000)",
+    "common_phase_rotation": "Unobservable in intensity; not an identified parameter."
+  },
+  "newly_closed_results": [
+    {
+      "id": "general_common_iid_phase_selection",
+      "claim": "For every common iid unit-circle phase law, intensity moments one through three agree; Delta4=6*Re[kappa40*conjugate(kappa20)^2*(T_A-T_B)].",
+      "restriction": "Common clean null and matching structural power magnitudes through order four; fixed geometry and frequency.",
+      "evidence": "science_extension/phase_laws/phase_law_proofs.txt",
+      "review": "science_extension/phase_laws/independent_phase_review.txt"
+    },
+    {
+      "id": "phase_law_counterexamples_and_signs",
+      "claim": "Equal-probability two-point phases give Delta4=(455015761/10000)*sin(theta)^8. Biased real phases can reverse its sign; the exceptional fourth-gap zero alone does not prove full-law equality. Uniform iid phases erase the entire single-frequency geometry distinction for equal site counts.",
+      "evidence": "science_extension/phase_laws/phase_law_results.json"
+    },
+    {
+      "id": "wrapped_cauchy_seventh_selection",
+      "claim": "Moments one through six agree and moment seven is the first difference for every 0<r<1.",
+      "seventh_gap": "-(22295772289/1000)*r^8*(1-r^2)^3",
+      "gap_at_r_half": "-601985851803/16384000",
+      "bounded_witness_TV_lower_at_r_half": "455015761/46910259941745934556172000",
+      "witness_optimizer": "r^2=4/7 uniquely maximizes the absolute seventh-moment gap and its stated bounded-witness lower bound, not full TV or detector performance.",
+      "restriction": "Common null and matching power magnitudes through order five; uniform and deterministic endpoints excluded.",
+      "evidence": "science_extension/phase_laws/phase_law_proofs.txt"
+    },
+    {
+      "id": "two_phase_family_population_identification",
+      "claim": "The first three population intensity moments identify centered Gaussian versus wrapped-Cauchy phases and their width throughout the interior of these two families, independently of the structural label.",
+      "matching_mean_parameter": "x=t^2=r^2",
+      "second_moment_difference": "x^2*(1-x)*((R-3*n)-(R-n)*x)",
+      "only_interior_second_moment_collision": "53587/103987",
+      "third_moment_gap_at_collision": "-25087690453913212850809554872899594124966635200/1421711387011936544792839799933222941958356627",
+      "subsequent_structure_identification": "Fourth moment for Gaussian phases; seventh moment for wrapped-Cauchy phases.",
+      "evidence": "science_extension/phase_laws/cross_family_results.json"
+    },
+    {
+      "id": "common_phase_law_robustness",
+      "claim": "At Gaussian reference s=log(2), a common iid phase law with max_{1<=k<=4}|a_k-b_k|<=1/100000 preserves the exact first-three equality and a positive fourth gap.",
+      "general_gap_perturbation_bound": "|delta Delta4|<=702*|T_A-T_B|*delta",
+      "certified_fourth_gap_lower": "29505367039/81920000",
+      "sufficient_single_site_TV_tolerance": "1/200000",
+      "scope": "Conservative common-law perturbation tolerance; not maximal, not geometric perturbation or a detector calibration budget.",
+      "evidence": "science_extension/identifiability/phase_robustness_results.json",
+      "review": "science_extension/identifiability/independent_phase_robustness_review.txt"
+    },
+    {
+      "id": "arbitrary_common_additive_error",
+      "claim": "If compactly supported P,Q satisfy P*H=Q*H for any common independent error law H, then P=Q. No error moment, density, symmetry, or globally nonvanishing characteristic-function assumption is needed.",
+      "scope": "This is preservation under the same error law, not joint recovery of an unrestricted unknown error distribution.",
+      "evidence": "science_extension/identifiability/identifiability_proofs.txt",
+      "review": "science_extension/identifiability/independent_identifiability_review.txt"
+    },
+    {
+      "id": "joint_structural_and_detector_identification",
+      "claim": "Within either or both specified interior phase families, the complete output law identifies the structure, phase family and width, and detector nuisance parameters.",
+      "gaussian_detector": "Y=b+eta*I+sigma*Z; b real, eta>0, sigma>=0, independent standard normal Z. Identifies b, eta, sigma.",
+      "poisson_detector": "N|I~Poisson(b+eta*I); b>=0, eta>0. Identifies b and eta.",
+      "key_support_fact": "The exact intensity support is [0,3969] for both interior phase families.",
+      "scope": "Exact population laws, known n and candidate structures. No finite-sample calibration or nuisance-estimation guarantee follows.",
+      "evidence": ["science_extension/identifiability/identifiability_proofs.txt", "science_extension/science_extension_report.tex"],
+      "review": ["science_extension/identifiability/independent_identifiability_review.txt", "science_extension/report_science_review.txt"]
+    },
+    {
+      "id": "identifiability_obstructions",
+      "claim": "An unrestricted error nuisance family can produce exact A/B aliases using different independent zero-mean equal-variance errors. No fixed finite sample size works uniformly over unbounded Gaussian noise scales or gains approaching zero.",
+      "counterexample": "Under A use error with law I_B-mu; under B use error with law I_A-mu, with independent copies and their common intensity mean mu.",
+      "evidence": "science_extension/identifiability/identifiability_proofs.txt"
+    },
+    {
+      "id": "finite_count_certificates",
+      "claim": "Exact rational probability intervals through count 24 plus a factorial-moment bound on the infinite tail certify full count-law Hellinger and TV distances, and necessary/sufficient finite sample thresholds at a specified finite operating point.",
+      "evidence": "science_extension/finite_detection/finite_detection_certificate.json",
+      "review": "science_extension/finite_detection/independent_finite_detection_review.txt"
+    },
+    {
+      "id": "four_count_blind_gain",
+      "claim": "At fixed Gaussian s=2*log(2), there is a simple four-count blind gain locally unique in the certified rational interval. The binary indicator has identical laws there, while full counts remain distinct.",
+      "scope": "Local uniqueness only; not a global blind-gain count or detector optimum.",
+      "evidence": "science_extension/finite_detection/finite_detection_proof.txt"
+    },
+    {
+      "id": "finite_s_six_moment_guarantee",
+      "claim": "A six-moment finite-s inequality certifies a positive four-count gap where its lower bound is positive and recovers the sharp s^-6 sufficient sample order with the correct leading Hellinger coefficient.",
+      "gap_lower_L": "eta^4*(D4-eta*D5-eta^2*mu_B,6/2)/24",
+      "probability_upper_U": "eta^4*max(mu_A,4,mu_B,4)/24",
+      "h_squared_lower": "L^2/(4*U), when L>0",
+      "sufficient_samples_95": "ceil(8*U*log(10)/L^2), with the certified rational log upper bound used computationally",
+      "small_s_h_squared_coefficient": "eta^4*c5^2/(96*m4), c5=455015761/1250 and m4=75408578015121/160000",
+      "evidence": "science_extension/finite_detection/finite_detection_proof.txt"
+    }
+  ],
+  "finite_operating_point": {
+    "phase_family": "Gaussian",
+    "t": "1/2",
+    "s": "2*log(2)",
+    "gain_eta": "1/512",
+    "background_b": "0",
+    "h_squared_convention": "sum_k (sqrt(p_A(k))-sqrt(p_B(k)))^2; affinity=1-h_squared/2",
+    "full_count_h_squared_outward": ["2.40263644590220e-17", "2.40263644700612e-17"],
+    "full_count_TV_outward": ["3.65527413391791e-10", "3.65527413391793e-10"],
+    "four_indicator_h_squared_outward": ["2.22744243231592e-19", "2.22744243231593e-19"],
+    "full_to_four_h_squared_ratio_outward": ["107.8652543852", "107.8652544348"],
+    "tail_cutoff": 24,
+    "sum_of_two_tail_masses_upper": "1.030e-26",
+    "success_target": "19/20, equal priors",
+    "full_count_samples": {
+      "necessary_at_least_exact": "69121152393630388",
+      "sufficient_exact": "191671944702842206"
+    },
+    "four_indicator_samples": {
+      "necessary_at_least_exact": "7455770689765032714",
+      "sufficient_exact": "20674743073884456509"
+    },
+    "explicit_four_indicator_rule_each_error_below_1_over_20_sufficient_exact": "26937971154603499910",
+    "sample_scope": "Known calibrated competing models and independent snapshots; bounds enclose the unknown exact optimal count. The binary necessary bound applies only when other count values have been discarded. No acquisition time or practical feasibility is claimed.",
+    "blind_gain": {
+      "exact_interval": ["61217055127150107/36893488147419103232", "38260659454468817/23058430092136939520"],
+      "interval_width": "1/184467440737095516160",
+      "approximation": "0.00165929160405052585",
+      "derivative_outward_bounds": ["-41829.301943402", "-41829.301943351"],
+      "uniqueness_domain": "Only the exact rational interval, not the full positive gain axis or its outward decimal display.",
+      "full_count_distinction": "Fourth factorial-moment difference eta^4*D4 remains strictly positive."
+    },
+    "separate_small_noise_example": {
+      "t": "999/1000",
+      "s": "-2*log(999/1000)",
+      "eta": "1/512",
+      "b": "0",
+      "sufficient_samples_95_exact": "38905896029459193642493650866",
+      "scope": "Conservative six-moment finite-parameter demonstration, not a recommended experiment."
+    }
+  },
+  "reproduction": {
+    "working_directory": "The extraction root containing both sibling folders.",
+    "python": "Python 3.10 or later, assertions enabled; do not use python -O.",
+    "mathematical_script_dependencies": "Python standard library",
+    "extension_commands": [
+      "python science_extension/phase_laws/phase_law_extension.py",
+      "python science_extension/phase_laws/verify_cross_family.py",
+      "python science_extension/phase_laws/independent_phase_review.py",
+      "python science_extension/identifiability/verify_phase_robustness.py",
+      "python science_extension/finite_detection/certify_finite_detection.py",
+      "python science_extension/finite_detection/independent_certificate_replay.py"
+    ],
+    "finite_default_mode": "Reconstructs exact moments through order 32 from geometric phases and rebuilds the downstream certificates.",
+    "finite_reuse_command": "python science_extension/finite_detection/certify_finite_detection.py --reuse-moments",
+    "finite_reuse_mode": "Uses the saved order-32 table; recomputes probabilities, tail bounds, distances, blind-gain and sample certificates. Does not independently regenerate the high-order table.",
+    "independent_finite_replay_dependency": "Accepts the exact saved intensity moment tables. Imports neither producer nor engine; independently checks downstream intervals using direct square-root differences. It does not independently rederive every high-order moment.",
+    "direct_convolution_scope": "Gaussian finite-count producer independently checks moments through order five. The separate wrapped-Cauchy package directly checks through order seven at r=1/2.",
+    "foundation_commands": [
+      "python science_completion/homogeneous_control/homogeneous_control.py",
+      "python science_completion/measurement_and_optimization.py",
+      "python science_completion/root_certificate/certify_two_roots.py",
+      "python science_completion/harmonic_certificate/build_harmonic_groups.py",
+      "python science_completion/harmonic_certificate/certify_harmonic_root.py"
+    ],
+    "write_behavior": "Producers write regenerated JSON beside their scripts. Extraction checks saved bytes before execution; retain an untouched extraction for byte comparisons.",
+    "presentation_dependencies": "Optional plotting and PDF rendering have additional dependencies documented with their source files."
+  },
+  "review_scope": {
+    "type": "Separate internal AI-assisted analytic checks and exact computational replay, with dependency limits declared in each review.",
+    "external_peer_review": false,
+    "formal_proof_assistant_verification": false,
+    "experimental_validation": false,
+    "reviews": [
+      "science_extension/phase_laws/independent_phase_review.txt",
+      "science_extension/identifiability/independent_phase_robustness_review.txt",
+      "science_extension/identifiability/independent_identifiability_review.txt",
+      "science_extension/finite_detection/independent_finite_detection_review.txt",
+      "science_extension/report_science_review.txt"
+    ],
+    "cross_family_detector_extension": "The report consistency review covers extending the earlier Gaussian-phase detector-identification proof to either or both of the two interior phase families.",
+    "integrity_note": "Consult the final master manifest and individual review snapshot hashes; no final assembly hash or total attachment count is asserted in this summary."
+  },
+  "originality": {
+    "status": "Unresolved for the precise selection theorems, explicit examples, and combination of consequences.",
+    "established_frameworks": [
+      "Exact finite wrapped-phase phasor and quadratic-form moments",
+      "Homometry and bispectral phase invariants",
+      "Poisson-mixture identifiability",
+      "Compact-support and unknown-Gaussian-variance deconvolution",
+      "Taylor bounds, probability distance inequalities and Hellinger hypothesis testing"
+    ],
+    "newly_closed_read_depth_gap": "Webster et al. 2003 author full text inspected; its multi-frequency circular-Gaussian-field setting distinguished from this finite single-frequency theorem.",
+    "remaining_material_full_text_gaps": ["Barakat 1981", "Barakat 1983", "Barakat 1988", "Ainsleigh 2017 beyond publisher abstract and first-page preview"],
+    "record": "science_extension/literature/targeted_priority_update.txt",
+    "bibliography": "science_extension/literature/extension_references.bib",
+    "nonfinding_limit": "Failure to find an equivalent theorem is not proof of novelty or world-first priority."
+  },
+  "remaining_gaps": [
+    "External human peer review and formal proof-assistant verification.",
+    "Physical realization, detector calibration, independent experimental snapshots and acquisition-time validation.",
+    "Publication priority for the precise selection hierarchy and examples, including unread closely related full texts.",
+    "Exact optimal finite sample counts and optimal sample-count prefactors.",
+    "Global optimization of full intensity/count distribution separation and detector performance.",
+    "Global count of all four-count blind gains.",
+    "Finite-sample classification and calibration guarantees with estimated nuisance parameters.",
+    "General joint parameter limits, dependence between snapshots, nonidentical site motion and geometry errors.",
+    "Identification outside the specified phase and detector families; uniform phases and unrestricted unknown additive errors give explicit failures of broader claims."
+  ]
+}

@@ -1,0 +1,45 @@
+Independent review of the qualitative all-width finiteness argument
+==================================================================
+
+Reviewed preserved global_blind_gain_proofs.txt and its independent
+theory review, alongside the new fixed-t inverse-gain calculation.
+No hidden gap was found in the qualitative finite-root argument when
+read with its stated fixed positive finite width assumption.
+
+For each fixed width s>0, the wrapped-Gaussian phase density is analytic
+on a neighborhood of the compact phase cube. Restricting an analytic
+function to such a compact box makes it globally subanalytic; no claim
+of a uniform globally subanalytic family over all s>0 is required.
+Intensity is analytic, nonconstant, and has a null critical set. The
+coarea/absolute-continuity argument therefore produces an absolutely
+continuous intensity law. Integrating the bounded globally subanalytic
+CDF integrand over its compact phase domain produces a constructible
+function by the parameter-integration theorem. Constructible functions
+are definable in R_an,exp. Taking the derivative on the differentiability
+set preserves definability. In one real variable the exceptional null
+set and the boundaries of the positive/negative sign sets are finite.
+Thus the density difference has only finitely many sign blocks.
+
+The classical Laplace variation-diminishing argument then bounds the
+number of positive zeros of the exponentially tilted fourth-moment
+difference by a finite number of sign changes of u^4 times the density
+difference. Its proof uses exponential-polynomial Chebyshev systems and
+can count multiplicities; it does not require the Laplace transform to
+be definable. Nonidentity follows from the already proved nonzero
+fourth-moment difference for positive finite width.
+
+Relevant primary theorem statements consulted during the earlier review:
+R. Cluckers and D. Miller, Stability under integration of sums of products
+of real globally subanalytic functions and their logarithms, Theorem1.3:
+https://rcluckers.perso.math.cnrs.fr/prints/MillerStab.pdf
+L. van den Dries, A. Macintyre, and D. Marker, The elementary theory of
+restricted analytic fields with exponentiation, Corollary5.13:
+https://www.math.ens.psl.eu/~zchatzid/papiers/o-min-21/DMM.pdf
+No network access is needed to replay the new numerical certificates.
+
+This argument proves finiteness separately at each fixed positive finite
+width; it supplies neither a uniform finite count across all widths nor
+the number four at arbitrary width. The new compactified Fourier proof
+settles the exact global count FOUR at t=1/2 only. An exact all-width
+count would require additional parameter-uniform sign or variation
+control, which has not been supplied by this review.

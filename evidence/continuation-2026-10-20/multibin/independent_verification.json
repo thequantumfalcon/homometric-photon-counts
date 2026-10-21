@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "certificate_sha256": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
+  "verifier_sha256": "55dab2af66f53a28bc1737e1f2515d74aa6b24e7cc825f6ec890a2e67806ba9a",
+  "independent_implementation_sha256": "d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e",
+  "moments_sha256": "ad3f47da0ff0a6d9206eecd971bf3b2afb375a66089465b3a76ddb6362980b92",
+  "nodes_sha256": "87bd003cce36c5b4b882bd8d4f99e369156c1fc9685d029571c90894d4e7f4d3",
+  "selected_eta": "1/20",
+  "selected_cutoff": 12,
+  "selected_m_sufficient": 102399876723169,
+  "checks": {
+    "all_probability_bounds_independently_enclosed": true,
+    "rational_score_mgfs_verified_by_capped_simplex": true,
+    "positive_contraction_verified": true,
+    "m_times_contraction_at_least_3": true,
+    "exp_3_greater_than_20": true,
+    "each_conditional_error_below_1_over_20": true,
+    "selected_minimum_among_saved_passing_candidates": true
+  },
+  "method": "No producer import; exact confluent Newton rather than cardinal Hermite weights, positive-exponential reciprocal enclosures, and capped-simplex score maximization.",
+  "seconds": 54.45299999999406,
+  "scope": "Selected test verified under calibrated iid model; no global optimum, necessary count, external human review, or physical validation."
+}

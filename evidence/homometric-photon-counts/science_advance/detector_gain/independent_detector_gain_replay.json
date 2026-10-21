@@ -1,0 +1,62 @@
+{
+  "verified_probabilities_affinity_and_rational_score": true,
+  "certificate_sha256": "825760f102f2a84d206dee9a86ad457f1d90e3bf27cc5a4e873b1d38676ac119",
+  "replay_source_sha256": "d88733004ebb3e0edd62dc759946eac1dd127f6bc9b27e85536cec10a7071b3e",
+  "method": "No detector producer import; confluent Newton weights, positive exponential series and reciprocal, dyadic-bisection square roots; score expectations independently maximized over the capped probability simplex.",
+  "point_checks": [
+    {
+      "eta": "1/32",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 334627697810476
+    },
+    {
+      "eta": "1/30",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 313989307720309
+    },
+    {
+      "eta": "1/28",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 303181164969742
+    },
+    {
+      "eta": "1/26",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 321005884618419
+    },
+    {
+      "eta": "1/24",
+      "all_probability_bounds_enclosed": true,
+      "TV_and_h_squared_lower_bounds_verified": true,
+      "coarse_likelihood_ratio_sample_bound_verified": true,
+      "rational_score_exponentials_verified": true,
+      "score_contraction_verified_by_capped_simplex_maximization": true,
+      "separate_error_sample_bound_verified": true,
+      "m": 536058138283046
+    }
+  ],
+  "selected_gain": "1/28",
+  "selected_fixed_score_budget": 303181164969742,
+  "comparison_factor_over_371_verified": true,
+  "scope": "Independent computational replay by another assistant agent, not external human review."
+}

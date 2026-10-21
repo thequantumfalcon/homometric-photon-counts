@@ -1,0 +1,92 @@
+{
+  "runtime_relative_path": "tool-runtime/lean-4.35.0/lean-4.35.0-windows",
+  "mathlib_relative_path": "tool-runtime/lean-4.35.0/mathlib4",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "official_archive_sha256": "5fc033e93e1a7bc59c5ebf311103d2c9cd18d4b3eddda4ffa3414e8adb0ef79e",
+  "modules": [
+    "PhotonAlgebra",
+    "PhotonProofs"
+  ],
+  "fresh_kernel_module": "PhotonProofs",
+  "axiom_audit_count": {
+    "PhotonAlgebra": 5,
+    "PhotonProofs": 6
+  },
+  "scope": "Focused implications only; see SCOPE.txt for unformalized links.",
+  "git_dependencies": [
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4",
+      "commit": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/plausible",
+      "commit": "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/LeanSearchClient",
+      "commit": "d6b4c7be5be75ec4917c873ac50c756dc1436372"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/importGraph",
+      "commit": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/proofwidgets",
+      "commit": "df72b022e558978a1c50264cfc4d7fec86fa8e04"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/aesop",
+      "commit": "4a174c490d8707121c4a9290800489f105d85e07"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Qq",
+      "commit": "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/batteries",
+      "commit": "66e469188fe07963e5cf666c7d4433f45b8131c5"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Cli",
+      "commit": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  ],
+  "input_sha256": {
+    "scientist-review-2026-10-20/lean/PhotonAlgebra.lean": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+    "scientist-review-2026-10-20/lean/PhotonProofs.lean": "5c09574589c8c16ae928aa2f76232240b817082e648a723f07e0f5fd41410ca2",
+    "scientist-review-2026-10-20/lean/replay_local.py": "74b9321824866246a4e8951cca932359bb857ccd03b0b4ad0dabdf713d2672e1",
+    "scientist-review-2026-10-20/lean/check_selected_binding.py": "5bde5e4b4256395d3bfaa686478afa465ec5466abed30262d4538dea9aadc069",
+    "scientist-review-2026-10-20/lean/local_environment.py": "455580c6cf774c0d434d2f017c1177f5f6d5f4b57b8b3c93321cdcfd60c74555",
+    "continuation-2026-10-20/multibin/certificate.json": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows.zip": "5fc033e93e1a7bc59c5ebf311103d2c9cd18d4b3eddda4ffa3414e8adb0ef79e",
+    "tool-runtime/lean-4.35.0/release_metadata.json": "d14eca37de4bf193829876e957eeb2151a63d0a49bf672da11f16f99a4a66ff2",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "selected_certificate_binding": {
+    "binding_passed": true,
+    "d": "2929691026982676683576014631598600390325842740183259345033812474797/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "m": 102399876723169,
+    "eta": "1/20",
+    "cutoff": 12,
+    "certificate": "continuation-2026-10-20/multibin/certificate.json"
+  },
+  "network_during_replay": false
+}

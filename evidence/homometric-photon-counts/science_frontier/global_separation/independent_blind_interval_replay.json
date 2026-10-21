@@ -1,0 +1,14 @@
+{
+  "result": "All exact rational replay checks passed.",
+  "independence": "Does not import the builder; uses Bernstein-product Horner conversion rather than affine power conversion.",
+  "input_moment_status": "The builder was also run with --rebuild-input in this session and matched all 0..32 moments to the original geometry engine. This replay verifies the saved table by its recorded hash.",
+  "root_count_scope": "Exactly one simple root on (0,1/128]; no root-count claim above 1/128.",
+  "files_sha256": {
+    "science_extension/finite_detection/fixed_t_moments.json": "538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32",
+    "science_frontier/global_separation/blind_interval_certificate.json": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548",
+    "science_frontier/global_separation/certify_global_blind_interval.py": "16130e0a2b24d7e85f1dffebe80e5005860582f4e0d6366adc297c35d5fbda83",
+    "science_frontier/global_separation/global_blind_gain_proofs.txt": "6203bb8277d61c3f05582732a33c50b19974330f476276aaedf93fcfb4e57861",
+    "science_frontier/global_separation/global_detector_and_width_proofs.txt": "dc1ed848d11ad0f2c76378fa642bb3eb20ea3a2dcd830a82066de0cf4d71c16d",
+    "science_frontier/global_separation/independent_blind_interval_replay.py": "206d2fec0e59e82b81576bd6f18725a49eca23766f1284e8d04239ca9f879b2b"
+  }
+}

@@ -1,0 +1,262 @@
+INTERNAL AI ADVERSARIAL PROOF REVIEW
+Date: 2026-10-20
+Reviewer: a separate AI agent in the same working session.
+This is an internal mathematical/code review, not external peer review,
+experimental replication, a proof-assistant certificate, or a novelty ruling.
+
+VERDICT
+
+No mathematical defect was found in the homogeneous-control theorem or the
+stated fixed-parameter detector results. The signs, moment orders, total-
+variation normalization, and one-observation parity optimality statement check
+out. The review independently rebuilt the required structural power sums and
+checked the exact low-order Taylor cancellations from the saved polynomials.
+
+1. HOMOGENEOUS CONTROL
+
+The full centered covariance really is common: raw iid displacements with
+covariance sigma^2 Id become sigma^2 P, P=Id-11^T/n, after centering. P does
+not depend on the geometry or labeling of the n sites. Centering changes the
+field only by a phase of modulus one, for each realization, and therefore does
+not change intensity. The iid mean identity holds at every frequency.
+
+The cumulant proof is complete through intensity order four. At a common
+clean null, charge-one blocks vanish. For p<=3 only zero-charge factors and
+matched charges (+2,-2) or (+3,-3) survive. At p=4 the only new phase-sensitive
+charge patterns are (+4,-2,-2) and its conjugate. Three pairings on each side
+give the factor 6. With x=exp(-s), the multiplying coefficient is
+
+  -6 x^4(1-x)^5(x^3+3x^2+6x+6).
+
+It is strictly negative for 0<x<1. Under the theorem's assumptions, the FOURTH
+MOMENT differs if and only if the displayed diagonal-invariant difference is
+nonzero. This does not characterize equality of the full intensity laws when
+the invariant vanishes; the proof correctly avoids that stronger claim.
+
+The supplied motif was independently evaluated using paired-angle binomial
+identities, not the supplied radical-field multiplication code. This recovers
+M1,...,M5 exactly over Q(i sqrt(3)), including both clean nulls, and gives
+
+  T_A = -455015761/240000,
+  T_B = +455015761/240000.
+
+Thus D4(s)>0 for every finite s>0. Its factorization and the coefficient
+c5=455015761/1250 are correct. The common leading Gaussian radial law depends
+on n and |M2|. The actual two-dimensional covariance matrices need not coincide
+in a fixed real/imaginary coordinate frame; their eigenvalues coincide, which
+is what is needed for the squared-modulus law. In complex covariance notation,
+E|G|^2=n is common while E[G^2] can differ in phase.
+
+2. FIFTH-MOMENT ORDER AND EXACT ARITHMETIC
+
+The analytic argument for D5(s)=O(s^6) is valid. At a clean null,
+I_G(s)/s converges pointwise under the Gaussian coupling to a squared complex
+Gaussian modulus. The bound I_G(s)/s <= n ||PZ||^2 supplies an integrable
+dominating variable in every fixed moment. The fifth leading coefficients
+therefore agree. Each intensity moment is a finite exponential polynomial in
+s, so analyticity upgrades o(s^5) to O(s^6).
+
+Independently substituting t^k=exp(-ks/2) into the saved exact polynomials gives
+
+  D4(s) = (455015761/1250)s^5 - (54146875559/20000)s^6 + O(s^7),
+  D5(s) = (28665992943/50)s^6 + O(s^7).
+
+All earlier coefficients vanish exactly. Independent remainder constants are
+
+  A4 = 66213438524959/144000,
+  A5 = 347797653430767447163/192000000,
+  B5 = 2474316747472711680,
+  B6 = 11223500766536220180480.
+
+Here Aj=sum_m |a_jm| m^6/720 for D_j(s)=sum_m a_jm exp(-ms).
+All exponents m are nonnegative, so the stated Taylor-remainder bounds hold
+for all s>=0, not merely asymptotically. The Bp chi-square calculation is also
+correct. These deliberately large bounds are certificates, not tight estimates.
+
+3. ADDITIVE READOUT
+
+Common independent additive noise with finite fourth absolute moment preserves
+the first three moment equalities and exactly preserves D4 by the binomial
+expansion. All relevant moments exist. This proves distinction at every finite
+s>0, but does not provide a noise-uniform classification guarantee.
+
+For fixed Gaussian readout standard deviation sigma>0, the L1 Taylor expansion
+of g_sigma(y-I) has fourth term D4 g_sigma^(4)/24 and fifth term
+-D5 g_sigma^(5)/120. The sixth-order remainder is bounded by
+B6 s^6 ||g_sigma^(6)||_1/720. With TV=(1/2)||p-q||_1, the leading constant is
+therefore correctly c5 ||g_sigma^(4)||_1/48.
+
+The exact Hermite-integral expression for ||g_sigma^(4)||_1 and every displayed
+Gaussian remainder/upper-bound factor were checked. The nonzero leading
+function plus an O(s^6) L1 remainder implies the equality asymptotic for TV;
+this is stronger than a bound from one statistic and needs no unproved exchange
+of a pointwise expansion with integration. Constants can depend on fixed sigma.
+
+4. PHOTON COUNTS AND PARITY
+
+For fixed b>=0 and eta>0, the Poisson factorial-moment argument is correct.
+The first three factorial moments match and the fourth difference is eta^4 D4.
+The Banach-space derivative identity eta^j(S-Id)^j p_lambda is valid also at
+zero background, with norm at most (2 eta)^j on nonnegative intensities.
+
+The leading TV coefficient is correctly
+
+  (c5 eta^4/48) ||(S-Id)^4 p_b||_1.
+
+At b=0 the coefficient vector is (1,-4,6,-4,1), whose L1 norm is 16. Thus the
+coefficient becomes c5 eta^4/3. The explicit zero-background remainder and
+the simpler all-s upper bound have the correct factors 1/3, 2/15, and 2/45.
+
+The even-count probability contrast has the same positive leading coefficient
+as TV. The parity rule's success probability is 1/2 plus half this contrast;
+the optimal equal-prior one-observation success probability is 1/2 plus TV/2.
+Their ADVANTAGES above 1/2 have ratio tending to one. The proof correctly states
+that the absolute advantage tends to zero and does not claim exact finite-s,
+positive-background, or multiple-observation optimality.
+
+The m-observation upper bound from TV tensorization is valid. Its resulting
+Omega(s^-5) necessary sample count is not claimed to be a sharp rate; no
+sufficiency or achievability conclusion follows from that argument.
+
+5. SHARP HELLINGER AND INDEPENDENT-SAMPLE ORDERS
+
+The completed sample_complexity_proofs.tex was read in full, not only its
+outline. Its definition is h^2=int(sqrt(p)-sqrt(q))^2=2(1-rho). All three
+leading coefficients and the corresponding sharp sample orders are correct:
+
+  Gaussian, fixed sigma>0:
+    h^2 ~ c5^2/(96 sigma^8) s^10;
+  Poisson, fixed b>0 and eta>0:
+    h^2 ~ c5^2 eta^8/(96 b^4) s^10;
+  Poisson, b=0 and fixed eta>0:
+    h^2 = eta^4 c5^2/(96 m4) s^6 + O(s^7).
+
+The common Gaussian radial limit, moment domination, and analyticity of each
+fixed intensity moment give D_k=O(s^(k+1)) for every fixed k, including the
+needed D6=O(s^7). Independently expanding the real Gaussian component moments
+confirms m4=24 n^4+72 n^2 R+9 R^2=75408578015121/160000.
+
+The later measurement-results additions record this m4, the unit-parameter
+Hellinger constants, and the sharp sample orders consistently. Their exact
+rational values and current source/input hashes were independently checked.
+
+In the Gaussian proof, subtracting the common mean makes Jensen's denominator
+lower bound uniform in the observation. The centered intensities remain
+bounded in absolute value by n^2. Compactness gives uniform sixth-derivative
+bounds in the weighted Hilbert space, and their sixth absolute moments are
+O(s^6). The Taylor remainder therefore has the claimed weighted-L2 order.
+The passage to Hellinger uses L1 convergence of the weighted squared density
+gap and a uniformly bounded reciprocal denominator tending pointwise to 1/4;
+this step is justified. The kernel identity gives the exact 4!/sigma^8 norm.
+
+For positive-background counts, the kernel identity exp(uv/b), compact kernel
+derivative bounds, and the uniform likelihood-ratio lower bound exp(-eta n^2)
+provide the analogous complete argument. The derivative norm 4!/b^4 and the
+factor 1/4 from the square-root denominator give the stated constant. The
+proof explicitly excludes a joint b-to-zero limit.
+
+For zero background, the k=4 probability is eta^4 m4 s^4/24+O(s^5) and its
+contrast is eta^4 c5 s^5/24+O(s^6); this gives the leading s^6 Hellinger term.
+Counts k=0,1,2,3 contribute O(s^10), O(s^9), O(s^8), O(s^7), respectively;
+k=5 and k=6 contribute O(s^7) and O(s^8). The factorial-moment bound on the
+entire k>=7 tail is O(s^7), so no nonuniform infinite-series argument is used.
+
+The binary indicator of exactly four counts retains the full leading
+Hellinger coefficient; its complementary-event contribution is O(s^10).
+Its empirical frequency is sufficient for that Bernoulli experiment and can
+therefore attain the same sample-order scaling under the calibrated model.
+By contrast, parity alone has h^2=c5^2 eta^7 s^9/(36n)+O(s^10). This correctly
+distinguishes one-observation TV optimality from information retained for
+many observations. No finite-noise detector optimum follows.
+
+The product-affinity bounds 1-rho^m <= TV(P^m,Q^m) <= sqrt(1-rho^(2m))
+give matching necessary and sufficient orders for any fixed target success
+strictly between 1/2 and 1. The logarithm signs and ceilings in the source
+are correct. Hence the minimum independent sample count is Theta(s^-10) for
+fixed Gaussian readout or fixed positive-background counts, Theta(s^-6) for
+full zero-background counts (also the four-count indicator), and Theta(s^-9)
+for parity-only zero-background observations. These are sharp exponents,
+not sharp optimal prefactors or finite experimental acquisition times.
+
+Exact coefficient cross-checks at unit detector parameters are
+
+  c5^2/96 = 207039342758409121/150000000,
+  c5^2/(96 m4) = 414078685516818242/141391083778351875,
+  c5^2/(36 n) = 207039342758409121/3543750000.
+
+6. ROOT-CERTIFICATE SPOT/SOURCE REVIEW
+
+A separate full root-certificate audit was assigned elsewhere. Within this
+review, the fixed-point arithmetic, alternating-series exponential enclosure,
+and Taylor remainder formulas were inspected. In particular the derivative
+remainder for a degree-d approximation to F' is correctly
+(d+2) times the order-(d+2) remainder coefficient for F, multiplied by h^(d+1).
+There is no missing factorial in the implementation.
+
+The tail argument is sound: after multiplying F' by exp(lambda_1 x), retain
+the positive -c1 lambda1 term, discard other positive terms, and bound every
+negative term at x=2048. All rate gaps are positive, so that negative bound
+decreases thereafter. Combined with the negative finite cover and c0>0 limit,
+strict positivity of the bound yields exactly one simple tail root.
+
+The saved source/input SHA-256 values match the reviewed files. The saved
+positive and negative covers are gap-free, with respectively 3 and 9 accepted
+cells and strictly correct signs. The origin and first-window derivative
+bounds have the required signs. This check is conditional on the stated exact
+input polynomial; it does not independently rederive its physical/model origin
+or count as a second full execution of the entire certificate generator.
+
+7. MEASUREMENT-CONSTANT AND WITNESS-OPTIMIZATION AUDIT
+
+The subsequently completed measurement_and_optimization.py and its results JSON
+were read and independently checked. Their source/input hashes match. A4, A5,
+B5, B6 agree with the independent values above, resolving the earlier temporary
+artifact-completeness issue. The saved Taylor cancellations, exact optimizer
+bracket, maximum-gap enclosures, and finite Poisson example also check out.
+
+For C=455015761/20000 and x=exp(-s), differentiating the factorized gap gives
+
+  D4'(x)=2 C x^3(1-x)^4 H(x),
+  H(x)=12-12x-21x^2-13x^3-6x^4.
+
+H is strictly decreasing on (0,1), H(0)=12 and H(1)=-40. Consequently it has
+one zero there, and the gap has one global maximum. The saved rational bracket
+has width at most 2^-160 and correct strict endpoint signs. The independently
+checked maximum-gap enclosure is approximately 445.0968532418531, giving the
+maximum degree-at-most-four bounded-polynomial TV witness approximately
+1.1479159815165071e-10. Its x coordinate is approximately
+0.4718312065944693. The Chebyshev extremal-leading-coefficient proof correctly
+establishes the factor 64 within the stated polynomial class; it establishes
+neither an optimum of full TV nor an optimum of experimental performance.
+
+The rational positive-factor interval construction, decimal outward enclosures,
+and zero-background Poisson error coefficient/example were checked directly
+against the saved fractions. The logarithmic s and pi-dependent v values are
+correctly labeled descriptive approximations, not interval certificates.
+
+8. DOCUMENTATION AND NOVELTY
+
+The detector conclusions follow from the exact moment result and standard
+binomial, Taylor, weighted-Hilbert-space, Poisson, affinity-product, and
+binary-testing arguments. Their
+derivation in this project is checked here; publication priority is unresolved.
+The literature note is updated accordingly. Neither internal AI agreement nor
+successful arithmetic constitutes external validation or a 100% real-world
+scientific guarantee.
+
+REVIEWED SNAPSHOT SHA-256
+
+detector_proofs.tex:
+f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b
+homogeneous_control/homogeneous_control_proof.txt:
+e0c7f8ff0937efc71c815fa7b1bf54c5305a6dc6424d33d5d260f11b558c0de7
+homogeneous_control/homogeneous_control_results.json:
+aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142
+root_certificate/certify_two_roots.py:
+d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631
+measurement_and_optimization.py:
+14155afb90b32760ce9b962e042a7df8b3480d73cf8db24b9b8a88d10d21375e
+measurement_and_optimization_results.json:
+1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8
+sample_complexity_proofs.tex:
+4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf

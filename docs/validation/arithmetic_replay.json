@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "extended": true,
+  "steps": [
+    {
+      "name": "endpoint-constants",
+      "returncode": 0,
+      "seconds": 0.15699999999196734,
+      "source": "followup-2026-10-20/stability/check_constants.py",
+      "source_sha256": "99538769203eeb13397a9723cbb9ac6bf75b3164685ad1e3b411d803ff8a708d"
+    },
+    {
+      "name": "necessary-samples",
+      "returncode": 0,
+      "seconds": 0.13999999999941792,
+      "source": "followup-2026-10-20/lowerbounds/certify_binned_lower_bound.py",
+      "source_sha256": "4ece1a5d969accb72b478b058113d4ed7614511256f1de0a87df4075c1fa63a5"
+    },
+    {
+      "name": "independent-exclusion",
+      "returncode": 0,
+      "seconds": 0.17200000000593718,
+      "source": "followup-2026-10-20/independent_lowerbounds/check_direct_exclusion.py",
+      "source_sha256": "e884aa0c29944b96dee857c9ab023531316fee808222281a6c94424310b704a8"
+    },
+    {
+      "name": "exact-phasors",
+      "returncode": 0,
+      "seconds": 0.7029999999940628,
+      "source": "scientist-review-2026-10-20/review/verify_density_phasors.py",
+      "source_sha256": "e63bda94d101ccbebce80ca91287d11d37c700a18f7c24b79c7df12335f47f94"
+    },
+    {
+      "name": "independent-arb",
+      "returncode": 0,
+      "seconds": 0.21899999999732245,
+      "source": "followup-2026-10-20/lowerbounds/verify_lower_bound_arb.py",
+      "source_sha256": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e"
+    },
+    {
+      "name": "arb-probabilities-and-bounded-roots",
+      "returncode": 0,
+      "seconds": 33.71800000000803,
+      "source": "scientist-review-2026-10-20/arb/verify_arb.py",
+      "source_sha256": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d"
+    },
+    {
+      "name": "independent-fourier-tails",
+      "returncode": 0,
+      "seconds": 0.7029999999940628,
+      "source": "scientist-review-2026-10-20/review/verify_compact_tail_cover.py",
+      "source_sha256": "75981e69a2bf5ae9c0d10a0dbdf6e0b485c05c812d02f11d4fc4e77c53ee9861"
+    },
+    {
+      "name": "density-at-zero",
+      "returncode": 0,
+      "seconds": 135.01600000000326,
+      "source": "scientist-review-2026-10-20/global/certify_density_zero.py",
+      "source_sha256": "cd63f4e4d0b04a91304323da3519a8641edebeef0872e167aed116fae748e608"
+    },
+    {
+      "name": "global-four-roots",
+      "returncode": 0,
+      "seconds": 31.60899999999674,
+      "source": "scientist-review-2026-10-20/global/certify_compact_gain.py",
+      "source_sha256": "4c0eb01d3c1373c1c53848a96dbe068ef397101ca0c307fc531a987b1580e9ac"
+    },
+    {
+      "name": "independent-global-four-roots",
+      "returncode": 0,
+      "seconds": 104.75,
+      "source": "scientist-review-2026-10-20/review/independent_compact_gain.py",
+      "source_sha256": "f750d26eec54fb7d98cd37d577b4627502e1ae7f434f4fe9f407d5fe8c5a0167"
+    }
+  ],
+  "evidence_manifest_sha256": "a7dd9a003d88f193eac09bfb9def36a40ad5088b3729bc257f06ca7027258b24"
+}

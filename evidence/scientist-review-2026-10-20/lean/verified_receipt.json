@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "scope": "Focused implications only; see SCOPE.txt for unformalized links.",
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 14.712014198303223,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02\\PhotonAlgebra.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02\\PhotonAlgebra.lean"
+      ],
+      "log_sha256": "93550a7148e18e58572470ed786ed893349b2bb17da1a85358923d8644667495",
+      "olean_sha256": "7ba7faa455588e6a477b4eea674bf6b142d4390839d8feeb55ea518364e8999a"
+    },
+    {
+      "module": "PhotonProofs",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.27889657020569,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "lean",
+        "-R",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02",
+        "-o",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02\\PhotonProofs.olean",
+        "LOCAL_WORKSPACE\\reproduce-output\\scientist-lean-fresh-2026-10-20-02\\PhotonProofs.lean"
+      ],
+      "log_sha256": "9fbac919b75f677447cdfeab32737a710505a96b730fd3543588a116eafccb01",
+      "olean_sha256": "3d633b43862e9cfa2f990d2869b6fb05cf197baa8c9e9fb4265e24f5d1ba1b87"
+    },
+    {
+      "module": "PhotonProofs",
+      "kind": "fresh_kernel",
+      "returncode": 0,
+      "seconds": 592.7873437404633,
+      "command": [
+        "LOCAL_WORKSPACE\\tool-runtime\\lean-4.35.0\\lean-4.35.0-windows\\bin\\lake.exe",
+        "--no-cache",
+        "env",
+        "leanchecker",
+        "--fresh",
+        "--verbose",
+        "PhotonProofs"
+      ],
+      "log_sha256": "9746531ec99a67a0fc0e79cd2e3905e0298c4e611d9a54a12058deaa21e25d1d"
+    }
+  ],
+  "selected_certificate_binding": {
+    "binding_passed": true,
+    "d": "2929691026982676683576014631598600390325842740183259345033812474797/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "m": 102399876723169,
+    "eta": "1/20",
+    "cutoff": 12,
+    "certificate": "continuation-2026-10-20/multibin/certificate.json"
+  },
+  "fresh_kernel_performed": true,
+  "fresh_kernel_receipt_reused": false,
+  "proof_manifest_sha256": "0a4556f29d6fcfe6fadee129750725584c1757a42ebc109f9b02243b9ff8cc2e"
+}

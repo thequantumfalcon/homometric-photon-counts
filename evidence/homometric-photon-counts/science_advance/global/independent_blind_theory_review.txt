@@ -1,0 +1,71 @@
+INDEPENDENT MATHEMATICAL INSPECTION OF THE NEW BLIND-GAIN CLAIMS
+21 October 2026
+
+Disposition: PASS within the stated zero-background intensity model.
+This is a separate internal mathematical inspection by the coordinating
+agent, not external human peer review or proof-assistant verification.
+
+Materials inspected: additional_blind_gains_proof.txt, the complete
+certify_additional_blind_gains.py producer, its stored certificate, and
+the independent-representation replay report. Preserved model assumptions
+and the old first-root exclusion are explicit input dependencies.
+
+1. Global lower bound.
+The gamma-integral identity is correct for powers j=0,1,2,3. Separate
+Tonelli applications justify subtraction, and absolute integrability
+follows by bounding the signed integrand by the two nonnegative ones.
+At j=3, the zero atom matters; it vanishes for this analytic Gaussian
+intensity model. The first three moment equalities and total mass one
+therefore give orthogonality to every cubic polynomial. F4 is not zero,
+because its value at zero is the positive fourth-moment gap.
+
+If there are fewer than four sign changes, their complete list is finite.
+The product of their linear factors has the same sign alternation as F4;
+zeros of even multiplicity do not interfere. Its product with F4 can be
+made nonnegative and positive on an interval. The moment bounds make its
+integral finite, while orthogonality forces that integral to vanish.
+This proves four distinct positive sign-changing zeros. It does not
+prove simplicity or exact total count. The argument also covers infinitely
+many changes by immediate exclusion of the contrary fewer-than-four case.
+
+2. General channel statement.
+For k>=r the multiplier eta^(k-r) produces exactly the claimed moment
+orders r-1 down to0. For k<r, integrating powers0 throughk-1 produces
+moments k-1 down to0. Nonvanishing of Fk follows from the Laplace
+difference: if its kth derivative were zero, it would be a polynomial,
+bounded and tending to zero on the positive axis, hence zero. This
+contradicts the differing rth moment. Equal zero atoms are retained.
+
+3. Interpolation and uniform gain covers.
+The lower Hermite remainder has an even derivative and squared node
+polynomial. The upper remainder includes the simple zero endpoint and
+an odd derivative, so the asserted signs hold for all nonnegative
+intensities. All required moment indices lie within the retained32.
+Rational approximate nodes are valid because derivative weights are
+retained; no quadrature-root optimality is assumed.
+
+The producer's exponential-polynomial kth derivative formula is correct,
+including the term -k*b*(-x)^(k-1). Its order13 absolute remainder
+bound uses eta<=right and exp(-x eta)<=exp(-x left), with x>0;
+the zero node has no such remainder. The Bernstein coefficients are the
+proper power-to-Bernstein transform on the finite interval. Interval
+rounding is outward. Contiguous leaf checks cover the entire stated
+intervals, not merely their endpoints. F4' is bounded with order5
+positive measures, not by differentiating an inequality.
+
+4. Root count and claims.
+The previous exactly-one interval through1/128, negative continuation
+to1/100, positive derivative through1/90, and positive continuation to
+1/32 together imply exactly two roots through1/32. The endpoint signs
+give existence in the second bracket and the positive derivative gives
+uniqueness and simplicity there. The global four-root lower bound then
+forces at least two more above1/32. None of these statements asserts
+that the total is exactly four or that an uncertified gain scan excludes
+additional roots. The full count law remains different at every positive
+gain by its nonzero fourth falling-factorial moment gap.
+
+The independent numerical replay uses different interpolation,
+exponential, and interval-range implementations and reports PASS. This
+review accepts the exact retained moment table and old finite-interval
+certificate as dependencies; it does not independently reconstruct
+all32 geometric moments or reprove the earlier definability theorem.

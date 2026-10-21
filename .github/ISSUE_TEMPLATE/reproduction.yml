@@ -1,0 +1,17 @@
+name: Reproduction failure
+description: Report a concrete failure of a documented command.
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and environment
+      description: Include Python/dependency versions and the repository revision.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected and observed output
+      description: Remove credentials, personal paths, and private data.
+    validations:
+      required: true

@@ -1,0 +1,71 @@
+{
+  "schema": "homogeneous-fourth-moment-scientific-figure-v1",
+  "analytic_not_Monte_Carlo": true,
+  "n": 63,
+  "s": "Raw iid Gaussian phase variance at q=pi/3.",
+  "centered_MSD_conversion": "v=62*s/(7*pi^2)",
+  "fourth_moment_gap": "(455015761/20000)*exp(-4*s)*(1-exp(-s))^5*(exp(-3*s)+3*exp(-2*s)+6*exp(-s)+6)",
+  "strict_positivity": "D4(s)>0 for every finite s>0; each factor is positive.",
+  "small_s_asymptotic_coefficient": "455015761/1250",
+  "large_s_exp_minus_4s_coefficient": "1365047283/10000",
+  "s_star_approximate": 0.7511339705027228,
+  "x_star_exact_bracket": {
+    "lower": "344791040490816188827788948033434140847079810111/730750818665451459101842416358141509827966271488",
+    "upper": "689582080981632377655577896066868281694159620223/1461501637330902918203684832716283019655932542976"
+  },
+  "optimizer_exact_bracket_signs_rechecked": true,
+  "D4_star_approximate": 445.09685324185307,
+  "TV_bound_star_approximate": 1.1479159815165068e-10,
+  "TV_bound_factor": "64/248155780267521",
+  "TV_bound_scope": "Lower bound on latent intensity-law TV, not the TV itself.",
+  "maximizer_scope": "Unique maximum of D4 and the degree<=4 bounded-polynomial witness gap. No optimization of full TV, detector TV, Fisher information, or experimental design.",
+  "panel_A_s_range": [
+    0,
+    4
+  ],
+  "panel_A_evaluation_points": 1602,
+  "panel_B": {
+    "horizontal_variable": "r=s/s_ref in [0.1,1]; s_ref is a conceptual small-noise reference.",
+    "curves": [
+      "r^-10",
+      "r^-6"
+    ],
+    "normalization": "Each power separately equals 1 at r=1; unknown prefactors are suppressed.",
+    "meaning": "Illustration of the sharp asymptotic powers only, not exact ratios m(s)/m(s_ref).",
+    "Gaussian": "sigma>0 fixed, independent additive N(0,sigma^2) readout noise; Theta(s^-10).",
+    "positive_background_Poisson": "b>0, eta>0 fixed, N|I~Poisson(b+eta I); Theta(s^-10).",
+    "zero_background_Poisson": "b=0, eta>0 fixed, full count retained; Theta(s^-6).",
+    "conditions": "Any fixed target success a in (1/2,1), equal priors, independent observations, known competing models, fixed calibrated detector parameters as s tends to zero.",
+    "limitations": "Exact finite-noise sample counts, the optimal sample-count prefactor, joint detector-parameter limits, experimental independence, or calibrated physical performance."
+  },
+  "rendering": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "figure_inches": [
+      14.6,
+      7.5
+    ],
+    "png_dpi": 300
+  },
+  "input_sha256": "1214876efe8275d401d8173127d12b467b37eb6b272753c91dced5c6b44bced8",
+  "script_sha256": "4208d2e337a28e89aea87a217c834aa86f57cdbc7727250117eef111ab99ddc1",
+  "sample_complexity_proof_sha256": "4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf",
+  "outputs": {
+    "homogeneous_fourth_moment_and_sampling.png": {
+      "bytes": 603513,
+      "sha256": "d2551edf4225d72ee7c7734a630c27854c5772cad6c87d044df8a02fd0c0e9be"
+    },
+    "homogeneous_fourth_moment_and_sampling.svg": {
+      "bytes": 173580,
+      "sha256": "32f794afa24ab7a94da0402ab51a9d3214bce36f01c20e75e37fd5c75a9df398"
+    },
+    "homogeneous_fourth_moment_and_sampling.pdf": {
+      "bytes": 61265,
+      "sha256": "ac75ea9f379950d4724a4a3abfe64ff38e42faeb6a638c2fadd347f1f374a5eb"
+    },
+    "homogeneous_fourth_moment_and_sampling_caption.txt": {
+      "bytes": 3281,
+      "sha256": "14eab1aa92e6c7eb89205d7f9199450d09401216c7fb3a81c25fd83c893b0d89"
+    }
+  }
+}

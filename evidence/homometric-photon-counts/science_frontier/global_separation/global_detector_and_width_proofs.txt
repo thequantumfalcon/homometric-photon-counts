@@ -1,0 +1,326 @@
+GLOBAL DETECTOR OPTIMIZATION AND EXISTENCE OF AN INTERIOR NOISE OPTIMUM
+2026-10-20
+
+Scope and status
+---------------
+These are mathematical results for the existing two 63-site geometries under
+independent, identically distributed Gaussian phase motion and the stated
+Poisson observation model. They are not experimental validation, a proof of
+scientific priority, or a numerical determination of the best phase variance.
+All new arguments are given below. Existing exact geometric moment identities
+are inputs and remain in their original files.
+
+1. Model, conventions, and inputs
+--------------------------------
+Let G be A or B. Write z_Gj for its 63 unit phasors and
+
+  I_G(s) = |sum_j z_Gj exp(i sqrt(s) Z_j)|^2,
+  Z_j independent N(0,1),  0 < s < infinity.
+
+Then 0 <= I_G <= M = 3969. Put t = exp(-s/2). The previously established
+geometric identities needed here are
+
+  sum_j z_Gj = 0,
+  |sum_j z_Gj^2|^2 = 129187/400, for both G,
+
+and the first three intensity moments agree while
+
+  D4(s) = E_A[I^4] - E_B[I^4]
+        = (455015761/20000) t^8 (1-t^2)^5
+          (t^6 + 3t^4 + 6t^2 + 6) > 0.
+
+The detector is N | I ~ Poisson(b + eta I), with eta > 0 and b >= 0.
+Write P_G(s) for the latent intensity law and Q_G(s,eta,b) for the count law.
+
+Our distance conventions are
+
+  TV(P,Q) = (1/2) integral |p-q| dmu,
+  h^2(P,Q) = integral (sqrt(p)-sqrt(q))^2 dmu
+           = 2 - 2 rho(P,Q),
+  rho(P,Q) = integral sqrt(p q) dmu,
+
+where mu dominates both laws. Thus 0 <= TV <= 1 and 0 <= h^2 <= 2.
+
+Both count laws have strictly positive mass at every nonnegative integer.
+Indeed, the intensity is a nonconstant real analytic function of the phases,
+so its zero set has phase probability zero. Hence b+eta I > 0 almost surely.
+The two count laws are distinct: their fourth falling-factorial moments differ
+by eta^4 D4(s), since E[(N)_4] = E[(b+eta I)^4] and the lower intensity
+moments agree.
+
+2. Strict ordering of all finite gains and backgrounds
+----------------------------------------------------
+THEOREM 1. At each fixed 0 < s < infinity, both TV and h^2 of the full
+count distributions strictly increase with eta and strictly decrease with b.
+
+PROOF, GAIN. Fix 0 < eta1 < eta2 and set r = eta1/eta2. Starting with a
+count at gain eta2 and background b, independently retain each count with
+probability r, then add an independent Poisson((1-r)b) count. Conditional
+on I, the result is Poisson(b+eta1 I). This is the same Markov kernel K
+under both structures.
+
+Let p_j and q_j be the high-gain count probabilities and Delta_j=p_j-q_j.
+For TV, summing the triangle inequality
+
+  |sum_j K(k|j) Delta_j| <= sum_j K(k|j) |Delta_j|
+
+proves contraction. There is at least one positive and one negative Delta_j,
+because the laws are distinct probability laws. Furthermore,
+
+  K(0|j) = exp(-(1-r)b) (1-r)^j > 0
+
+for every finite j. Therefore the inequality for output k=0 is strict.
+Summing over outputs gives strict TV contraction.
+
+For Hellinger affinity, Cauchy-Schwarz gives, at each output k,
+
+  sqrt[(sum_j K(k|j)p_j)(sum_j K(k|j)q_j)]
+      >= sum_j K(k|j) sqrt(p_j q_j).
+
+At k=0, every input has positive weight. Equality would force p_j/q_j to
+be constant for all j. Positivity and normalization would then imply p=q,
+contrary to the fourth factorial moment. Affinity therefore strictly
+increases, which means h^2 strictly decreases.
+
+PROOF, BACKGROUND. For b2>b1, add an independent Poisson(b2-b1) count.
+The resulting kernel has K(k|j)>0 whenever k>=j. Choose one index with
+Delta_j>0 and one with Delta_j<0, then choose a finite k at least as large
+as both. The TV triangle inequality is strict at that output. For affinity,
+choose two indices where p_j/q_j differ, and again an output at least as
+large as both. Cauchy-Schwarz is strict there. This proves the theorem.
+
+This is a direct, strict data-processing proof. The general statistical
+comparison via a common random transformation is usually called Blackwell
+ordering; no external theorem about strictness is being assumed here.
+
+CONSEQUENCES.
+
+(a) If eta is constrained to (0,eta_max] and b to [b_min,infinity), with
+    eta_max finite, the maximizer in these two detector coordinates is
+    eta=eta_max, b=b_min, for either distance and every fixed s.
+
+(b) If gain is unrestricted, no finite gain maximizes either distance,
+    even if s and b are also allowed to vary.
+
+(c) At every fixed finite gain, b=0 is the maximizing allowed background.
+    All fixed finite backgrounds nevertheless have the same infinite-gain
+    limiting separation.
+
+These statements concern separation per observed count snapshot. They do
+not optimize acquisition time, total dose, saturation, detector cost, or any
+other penalty, because such constraints are not present in this model.
+
+3. The infinite-gain supremum is exactly the latent separation
+-------------------------------------------------------------
+THEOREM 2. At fixed s and fixed finite b,
+
+  lim_(eta->infinity) TV(Q_A,Q_B) = TV(P_A,P_B),
+  lim_(eta->infinity) h^2(Q_A,Q_B) = h^2(P_A,P_B).
+
+PROOF. For either structure, construct I and N conditionally as in the model.
+Then
+
+  E[(N/eta-I)^2]
+    = E[I]/eta + b/eta^2 + b^2/eta^2 -> 0.
+
+Consequently the law of N/eta converges weakly to the intensity law. The
+same holds for the other structure. Scaling the integer count support by
+1/eta is one-to-one and does not change either distance between the two
+count laws. Joint lower semicontinuity of TV and h^2 under weak convergence
+therefore gives
+
+  D(P_A,P_B) <= liminf D(Q_A,Q_B),  D in {TV,h^2}.
+
+On the other hand, the count laws are obtained from the intensity laws
+through a common Poisson kernel, so data processing gives
+
+  D(Q_A,Q_B) <= D(P_A,P_B).
+
+The two bounds prove the claimed limit.
+
+For completeness, the lower-semicontinuity fact follows from the variational
+representations, on a Polish space,
+
+  TV(P,Q) = sup_{f continuous, 0<=f<=1} |integral f d(P-Q)|,
+
+  h^2(P,Q) =
+    sup_{f continuous bounded, inf f>0}
+      [2 - integral f dP - integral (1/f) dQ].
+
+For the second identity, the pointwise arithmetic-geometric mean inequality
+gives the upper bound. Approximate sqrt(q/p) by its positive bounded
+truncations and then by positive continuous functions in L1(P+Q), with
+their lower and upper bounds preserved, to obtain equality. The first
+identity follows similarly by approximating a Hahn-set indicator using
+regularity of finite Borel measures. Each expression inside either
+supremum is continuous under joint weak convergence; a supremum of
+continuous functions is lower semicontinuous.
+
+WARNING ABOUT THE MODE OF CONVERGENCE. Each N/eta law is discrete; the
+intensity law here is absolutely continuous. Their individual TV distance
+is therefore one at every finite eta. The proof uses weak convergence of
+each individual law and lower semicontinuity of the distance BETWEEN THE
+TWO COMPETING LAWS. It does not assert TV convergence of a discrete law
+to a continuous law.
+
+4. A total-variation delta lemma at a full-rank linear limit
+----------------------------------------------------------
+LEMMA. Suppose Z in R^n has a smooth probability density. Suppose
+f_epsilon:R^n->R^d converges in C^1 on every compact set to a linear map
+L of rank d as epsilon->0. Then
+
+  TV(law(f_epsilon(Z)), law(LZ)) -> 0.
+
+PROOF. Choose invertible linear coordinates Z=S(u,v), with u in R^d,
+such that L S(u,v)=u. The transformed density g(u,v) is smooth and
+integrable. It can be approximated in L1 arbitrarily well by a smooth
+compactly supported nonnegative subdensity g_R.
+
+Choose a smooth compactly supported cutoff chi which equals one on a
+neighborhood of the support of g_R. Set
+
+  T_epsilon(u,v)
+    = (u + chi(u,v)[f_epsilon(S(u,v))-u], v).
+
+The perturbation T_epsilon-identity is compactly supported and has
+derivative converging uniformly to zero. For sufficiently small epsilon,
+it has Lipschitz constant less than one. Thus T_epsilon is a global
+C^1 diffeomorphism: injectivity follows from the Lipschitz inequality,
+and, for each target y, the equation x=y-(T_epsilon(x)-x) has a unique
+solution by the contraction theorem. The inverse derivative exists
+because the derivative perturbation has norm less than one.
+
+The image of g_R under T_epsilon has density
+
+  g_R(T_epsilon^{-1}(y)) /
+  |det DT_epsilon(T_epsilon^{-1}(y))|.
+
+This converges in L1 to g_R. In fact all supports lie in one compact
+set, inverse maps converge uniformly to the identity, and Jacobians
+converge uniformly to one. Project onto the u coordinate; projection
+cannot increase TV. On the support of g_R this projection is exactly
+f_epsilon(S(u,v)). Finally, pushforward cannot increase the L1 error
+between g and g_R. Let that error tend to zero. This proves the lemma.
+
+5. Both latent endpoints vanish, with a rigorous small-noise argument
+-------------------------------------------------------------------
+THEOREM 3. For D either TV or h^2, let
+
+  d_D(s) = D(P_A(s), P_B(s)).
+
+Then d_D is continuous and strictly positive on (0,infinity), and
+
+  lim_(s->0) d_D(s) = lim_(s->infinity) d_D(s) = 0.
+
+PROOF OF POSITIVITY. D4(s)>0, so the two bounded intensity laws differ.
+Both distances are zero exactly when the laws agree.
+
+PROOF OF CONTINUITY FOR s>0. On the circle, a Gaussian phase modulo
+2 pi has density
+
+  w_s(theta) = (1/(2 pi))
+               [1 + 2 sum_(k>=1) exp(-k^2 s/2) cos(k theta)].
+
+On every compact positive s interval the series converges uniformly.
+Hence w_s varies continuously in L1, as does its 63-fold product density.
+Each geometry's fixed measurable map from phases to intensity contracts
+TV. The triangle inequality gives continuity of the TV distance between
+the two intensity laws. For Hellinger, h=sqrt(h^2) is a metric and
+h^2 <= 2 TV, which gives the corresponding continuity.
+
+PROOF AT s->infinity. The phase density converges in L1 to uniform
+measure on the circle. The 63-fold product also converges in TV. Adding
+fixed site phases to independent uniform phases leaves that product
+measure unchanged, so both geometries have the same uniform-phase
+limiting intensity law. Triangle inequalities give convergence to zero
+for TV and therefore for h^2. One explicit, though not sharp, TV bound is
+
+  TV(P_A(s),P_B(s)) <= 2*63*sum_(k>=1) exp(-k^2 s/2).
+
+PROOF AT s->0. Put epsilon=sqrt(s). Using sum_j z_Gj=0, define the
+normalized complex amplitude, regarded as an R^2-valued map,
+
+  f_G,epsilon(Z)
+    = sum_j z_Gj [exp(i epsilon Z_j)-1]/epsilon.
+
+It converges in C^1 on compact sets to
+
+  L_G Z = i sum_j z_Gj Z_j.
+
+The covariance eigenvalues of this centered complex Gaussian, viewed as
+a real two-dimensional Gaussian, are
+
+  (63 + |M_G2|)/2 and (63 - |M_G2|)/2,
+  M_G2 = sum_j z_Gj^2.
+
+They are positive because |M_G2|^2=129187/400 < 63^2. The lemma therefore
+proves convergence of each normalized amplitude law in TV to L_G Z.
+The two covariance matrices may have different orientations, but have
+the same eigenvalues. Consequently |L_A Z|^2 and |L_B Z|^2 have identical
+laws. Squared norm is a measurable map, so
+
+  TV(law(I_G(s)/s), law(|L_G Z|^2)) -> 0.
+
+A common positive rescaling preserves TV. Applying the triangle
+inequality to the common limiting squared-norm law gives
+
+  TV(P_A(s),P_B(s))
+    = TV(law(I_A(s)/s),law(I_B(s)/s)) -> 0.
+
+Again h^2 <= 2 TV completes the argument.
+
+It would have been invalid to infer this small-s TV limit merely from
+the weak convergence of both unscaled intensities to zero. The normalized
+amplitude argument and the rank-two covariance condition are essential.
+
+6. What global optimization is now closed, and what remains
+----------------------------------------------------------
+COROLLARY. For either distance, there exists at least one
+s_star in (0,infinity) attaining
+
+  max_(0<s<infinity) D(P_A(s),P_B(s)) > 0.
+
+PROOF. Choose any s0>0, where the distance is positive. The two endpoint
+limits imply that outside some compact [a,b] subset of (0,infinity),
+the distance is less than half its value at s0. Continuity gives an
+attained maximum on [a,b], which is also a global maximum.
+
+For fixed finite eta>0 and b>=0, the count distance also has a positive
+global maximum at a finite interior s. Continuity follows from contraction
+of the continuous phase distributions through the common intensity and
+Poisson kernels. Both endpoint limits follow by data processing from
+Theorem 3. The fourth factorial moment gives positivity.
+
+For unrestricted detector gain and nonnegative background,
+
+  sup_(s>0, eta>0, b>=0) D(Q_A(s,eta,b),Q_B(s,eta,b))
+       = max_(s>0) D(P_A(s),P_B(s)).
+
+The upper bound is data processing; the lower bound follows from
+Theorem 2 at any maximizing s_star and b=0. No finite eta attains this
+supremum, by the strict gain ordering.
+
+STILL UNRESOLVED:
+
+* The numerical or exact maximizing phase variance for the full latent
+  TV or Hellinger separation.
+* Its value, the number of maximizing widths, and uniqueness.
+* Maximizers for resource-constrained detector objectives, which require
+  the resource model to be specified.
+
+Nothing in these arguments identifies the maximizer of the fourth-moment
+gap with the maximizer of full-distribution TV or Hellinger distance.
+
+7. Proof provenance
+-------------------
+The moment identities and unit phasors are inputs from the existing
+exact geometry and moment-engine record, including:
+
+  science_extension/finite_detection/homogeneous_moment_engine.py
+  science_extension/finite_detection/fixed_t_moments.json
+  science_extension/identifiability/identifiability_proofs.txt
+
+The strict data-processing, gain-limit, and endpoint arguments above are
+provided explicitly rather than attributed as new general theorems.
+Their application to the present pair does not by itself establish
+scientific priority. Independent review outside this session remains open.

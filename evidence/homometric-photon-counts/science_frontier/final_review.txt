@@ -1,0 +1,53 @@
+FINAL SCIENTIFIC AND PRESENTATION REVIEW
+20 October 2026
+
+Status: READY FOR VERIFIED ASSEMBLY. All new numerical and analytic claims
+have their stated proof/replay/review records. Final container preservation
+and saved-version writeback are separate operations.
+
+Scientific review scope:
+- Exact known-calibration sample endpoints independently reproduced in 170 checks.
+- Calibration inversion and finite confidence example independently reproduced in 64 checks.
+- Motion margins and concrete examples independently reproduced in 36 checks.
+- Blind-gain intervals rebuilt from original moments and checked by a second Bernstein implementation.
+- Global finiteness, Laplace multiplicity, and small-noise TV arguments separately challenge-reviewed.
+- Strict gain/background ordering and high-gain variational argument reviewed by the primary agent.
+- All shared moment inputs, published-theorem dependencies, and model assumptions remain explicit.
+
+Final report consistency corrections:
+- Equicorrelation equivalence and variance-only robustness explicitly require the stated centered/projected-mean conditions.
+- The calibration consistency variant increases numerical resolution with sample size.
+- The exact optimal sample integer is not claimed known.
+- A nonzero L1 signed density is required by the Laplace zero-count lemma.
+- Gaussian phase-factor means are explicitly restricted to admissible values.
+- Fixed-sample simultaneous coverage is not described as conditional-on-selection or sequential validity.
+
+Open boundaries retained: maximizing phase width/value/uniqueness; total positive blind-gain integer; exact optimal sample integer and efficient unknown-calibration rates; arbitrary temporal dependence; full historical priority; external human mathematical review; physical validation.
+
+Primary-source comparison records prior cumulant and wrapped-variable methods.
+No earlier general method is claimed new merely because it was derived here.
+No experiment, observed physical dataset, external reviewer endorsement, or
+proof-assistant verification is claimed. No rolling ZIP is produced.
+
+Presentation: 13 new pages, all visually reviewed. Critical formula/table pages
+were also reviewed at full resolution. No TeX layout diagnostics remain.
+
+Reviewed report source SHA256: 3fbcb91399b55a7570810ec13ee1647d030a1498defbbd8121462733808cedfe
+Reviewed report PDF SHA256: 2393d56386f709e819fb5b9ca8b1cc2b777c17083da2d6f34a55700a41e1a29d
+
+Supporting review snapshot hashes:
+global_separation/independent_global_theory_review.txt  8b0541dadea668f98de18718f2c15adb9dcac8b3c06ce5a92fe16f035435b8b0
+global_separation/independent_blind_interval_replay.json  2b099fce0afee2315bfda00a77ffd606a925f7116c7fd8f21bee08a2ce66635e
+tighter_testing/independent_tighter_testing_review.txt  10f796c8f83ba18275dc5c2358857d4d1cbe305c972d9f656e9611f1223c8d67
+tighter_testing/independent_tighter_testing_replay.json  4957e4f8c82a6ee05033724f3598eedadb9856eb4dc5b80e06b417f35e71f872
+calibration/independent_calibration_review.txt  89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073
+calibration/independent_calibration_replay.json  33e9bc36975cac8ac670ec75256f74c9432916cd0a0b09383ba007fa3d6f6049
+motion_extensions/independent_motion_review.txt  262c67bfdb2f2aaee04a5acc51e2fc334b0c3284c8bbf284af39a652001081bb
+motion_extensions/independent_motion_replay.json  7883f92f5f0cfae74420ccdb5226f632108ed3ca9ceb1a2ab866b089e40cd717
+report_consistency_review.txt  8b6f6a01c0e6db205756aa234c8a1ef69f9243cd006211f2fec5e44adaa7f6a4
+visual_review.json  067223c25aff917055f699f02af44915f67c002a0089f716c406c922d4c122bd
+
+The complete assembler must preserve all 87 predecessor payloads and their
+exact master manifest before adding the new files. Its own PASS record is
+the authority for final page/link/payload preservation. Hashes attest byte
+identity only; scientific validity depends on the supplied arguments.

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "report": "science_advance/science_advance_report.pdf",
+  "report_sha256": "394cfe7532299e8103db4b67882d9a7bf03ee1833f56193749dbab2213032bc7",
+  "pages": 10,
+  "method": "Poppler rasterization of the final corrected PDF at 130 dpi, visual inspection of all ten pages in three contact sheets, and full-size inspection of the corrected calibration page A-6. Earlier full-size checks covered critical mathematical pages.",
+  "findings": {
+    "all_pages_visible_and_complete": true,
+    "no_visible_clipping_or_overlap": true,
+    "equations_and_tables_readable": true,
+    "page_numbers_and_hierarchy_consistent": true,
+    "contents_and_reference_links_present": true,
+    "corrected_moment_and_variance_statement_verified": true,
+    "native_TeX_warning_error_overfull_underfull_or_missing_glyph_diagnostics": 0
+  },
+  "scope": "Visual and document-layout inspection. Mathematical verification is recorded separately in proof, certificate, replay, and internal review files."
+}

@@ -1,0 +1,57 @@
+{
+  "audit_date_local": "2026-10-20",
+  "timezone": "America/Denver",
+  "scope": "Independent agent analytic audit; not external peer review or formal proof-assistant verification",
+  "archived_files_modified": false,
+  "reviewed_claims": [
+    {
+      "claim": "Finitely many positive four-count blind gains for each finite positive Gaussian variance at zero background",
+      "status": "reasoning_checked_with_primary_theorem_premises",
+      "external_dependencies": ["Cluckers-Miller 2011 Theorem 1.3", "van den Dries-Macintyre-Marker 1994 Corollary 5.13"],
+      "limitations": ["No numerical upper bound", "No effective tail cutoff", "No exact global count"]
+    },
+    {
+      "claim": "At least four distinct positive sign-changing four-count blind gains",
+      "status": "elementary_derivation_checked",
+      "dependencies": ["Equal first three intensity moments", "Different fourth moments", "Equal zero atoms", "Bounded intensity"],
+      "limitations": ["Sign-changing does not imply simple", "No exact global count"]
+    },
+    {
+      "claim": "Uniform finite zero-count bound on any compact positive finite variance interval, simultaneously over all zero-background count channels",
+      "status": "new_scoped_analytic_derivation",
+      "proof_location": "analytic-audit.txt section 3",
+      "dependencies": ["Joint analyticity on compact variance intervals", "Constructible parameter integration", "O-minimal cell decomposition", "Laplace variation-diminishing argument"],
+      "limitations": ["Non-effective", "Not uniform up to s=0 or s=infinity", "No positive-background claim", "No external review"]
+    },
+    {
+      "claim": "Guarded calibration has unconditional model-wide error control and a local finite identification guarantee",
+      "status": "analytic_guard_and_profile_derivative_chains_checked",
+      "limitations": ["Reference-point sufficient budget is local", "No conditional-on-selection coverage", "Prespecified groups required", "No optional stopping"]
+    },
+    {
+      "claim": "AR(1) total-variation and variance-inflation transfer",
+      "status": "KL_constants_Hermite_and_union_bound_derivations_checked",
+      "limitations": ["Stationary Gaussian AR(1) required", "Known valid coefficient bound required", "Conditional independent Poisson emissions required", "No physical validation"]
+    }
+  ],
+  "rejected_hypotheses": [
+    {
+      "hypothesis": "Histogram string alias 01 overwrites canonical 1",
+      "resolution": "Canonical-string validator rejects 01 before conversion; not an identified bug"
+    }
+  ],
+  "not_established": [
+    "Exact total blind-gain count",
+    "Global gain or sample-size optimization",
+    "Physical assumptions from measurements",
+    "Priority against all literature",
+    "External peer review",
+    "Proof-assistant formalization",
+    "100 percent certainty"
+  ],
+  "sources": [
+    {"url": "https://rcluckers.perso.math.cnrs.fr/prints/MillerStab.pdf", "checked": "Definition 1.2, Theorem 1.3, integration convention; PDF text"},
+    {"url": "https://www.math.ens.psl.eu/~zchatzid/papiers/o-min-21/DMM.pdf", "checked": "Corollary 5.13, published page 204; PDF text"},
+    {"url": "https://perso.univ-rennes1.fr/michel.coste/polyens/OMIN.pdf", "checked": "Theorem 3.12 and proof beginning in search-indexed author-hosted excerpt; direct fetch returned 403", "role": "Additional exposition; report also gives direct cell-decomposition argument"}
+  ]
+}

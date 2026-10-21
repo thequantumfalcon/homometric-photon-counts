@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "bits": 1,
+      "python_seconds": 0.0,
+      "native_seconds": 0.0
+    },
+    {
+      "bits": 10,
+      "python_seconds": 0.0,
+      "native_seconds": 0.0
+    },
+    {
+      "bits": 1000,
+      "python_seconds": 0.0,
+      "native_seconds": 0.0
+    },
+    {
+      "bits": 100000,
+      "python_seconds": 0.0,
+      "native_seconds": 0.0
+    },
+    {
+      "bits": 1000000,
+      "python_seconds": 0.11000000000058208,
+      "native_seconds": 0.014999999999417923
+    },
+    {
+      "bits": 10000000,
+      "python_seconds": 3.5320000000065193,
+      "native_seconds": 0.15600000000267755
+    }
+  ],
+  "native_library": "LOCAL_USER_HOME\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\symengine\\lib\\mpir.dll",
+  "native_sha256": "08d901b97a987dd23023ef4273d26fc6e0ff7fcddcdba6b6e39dc057931af994",
+  "memory_total": 102756511744,
+  "memory_available": 76369973248
+}

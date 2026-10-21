@@ -1,0 +1,67 @@
+{
+  "schema": "four-reference-blind-gain-brackets-v1",
+  "model": {
+    "t": "1/2",
+    "s": "2 log(2)",
+    "b": "0",
+    "count_event": "N=4"
+  },
+  "root_count": 4,
+  "all_simple": true,
+  "roots": [
+    {
+      "root": 1,
+      "strict_lower": "61217055127150107/36893488147419103232",
+      "strict_upper": "38260659454468817/23058430092136939520",
+      "lower_decimal_approximation": "0.0016592916040505258470135613313445",
+      "upper_decimal_approximation": "0.0016592916040505258524345721937721",
+      "endpoint_signs": [
+        1,
+        -1
+      ],
+      "certificate": "homometric-photon-counts/science_frontier/global_separation/blind_interval_certificate.json",
+      "certificate_sha256": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548"
+    },
+    {
+      "root": 2,
+      "strict_lower": "329181481/30198988800",
+      "strict_upper": "164590741/15099494400",
+      "lower_decimal_approximation": "0.010900414023134443495008680555556",
+      "upper_decimal_approximation": "0.010900414056248135036892361111111",
+      "endpoint_signs": [
+        -1,
+        1
+      ],
+      "certificate": "homometric-photon-counts/science_advance/global/additional_blind_gains_certificate.json",
+      "certificate_sha256": "a6c86b9f8116d47a270a87c125168fe89f7d3120f97a9de31d6b114917005bf6"
+    },
+    {
+      "root": 3,
+      "strict_lower": "208405848013693162755/4667026250648516558848",
+      "strict_upper": "4736496545765753699/106068778423829921792",
+      "lower_decimal_approximation": "0.044654955172950588158943050272414",
+      "upper_decimal_approximation": "0.044654955172950588159157319476462",
+      "endpoint_signs": [
+        1,
+        -1
+      ],
+      "certificate": "continuation-2026-10-20/gain/order96_extension_certificate.json",
+      "certificate_sha256": "526ca5f17281fcf433b74fbc8413f7692ed58674912de4f3eadca9f0f42f844b"
+    },
+    {
+      "root": 4,
+      "strict_lower": "2934841/10000000",
+      "strict_upper": "1467421/5000000",
+      "lower_decimal_approximation": "0.2934841",
+      "upper_decimal_approximation": "0.2934842",
+      "endpoint_signs": [
+        -1,
+        1
+      ],
+      "certificate": "scientist-review-2026-10-20/global/compact_gain_certificate.json",
+      "certificate_sha256": "ed4eb69fa068eff3adce534998d4f20ce8d854c63a0ca0d360e62752c6c9f706"
+    }
+  ],
+  "source_sha256": "68328493569cc7c00e348b86f7d7b8726075f120d2cd2825db01f60ad6e09f8e",
+  "scope": "Summary of source-bound certified brackets and their analytic root-count conclusions. Does not repeat the numerical proofs. Decimal strings are approximations, not directed endpoints; the exact rational fractions are authoritative."
+}

@@ -1,0 +1,61 @@
+AI ASSISTANCE AND LIMITATIONS
+
+This informal research note and its supporting artifacts were developed
+with substantial assistance from AI systems. AI tools contributed ideas,
+mathematical arguments and proofs, code, computational checks, alternative
+implementations, literature investigation, and documentation. Human input
+set the direction, posed challenges, requested revisions and additional
+checks, and decided what work to pursue. The record does not establish that
+a human independently derived or manually verified every step, program,
+or claim. It does not attribute personal execution of the recorded tests
+to the user.
+
+The reported calculations and replays took place within this AI-assisted
+workflow. Alternative arithmetic implementations and successful isolated
+reproductions are useful supporting evidence. They share some inputs and
+dependencies and are not independent external human mathematical review.
+The word "independent" in a computational report should be read with the
+specific implementation and shared dependencies that report identifies.
+
+Selected Lean claims passed compilation and a fresh kernel check, as
+recorded in lean/verified_receipt.json. Formal verification has a narrower
+scope: only those exact checked statements may be called formally checked.
+These include conditional implications whose moment identity and true
+one-observation MGF premises must still be established outside Lean.
+That status does not transfer automatically to the complete mathematical
+model, all generated moments, every numerical certificate, literature
+priority, or physical applicability. A proposed formalization, an unchecked
+source file, and a successful arithmetic replay are not interchangeable
+with a completed formal check.
+
+The results concern the fixed geometries, phase laws, detector assumptions,
+and artifacts stated in the note. The strongest 13-bin count budget assumes
+known calibration and independent snapshots; the continuous OU exposure
+result is a separate theorem with a different score and sample bound.
+Physical adequacy, practical feasibility, complete scientific priority,
+exact global blind-gain counts outside the certified reference width,
+and global optimality remain open. At the reference width, the new
+certificate establishes exactly four positive simple blind gains, with
+its analytical and computational dependencies stated separately.
+
+AI systems are not human authors and cannot take scientific accountability.
+No author identity, affiliation, publication record, or redistribution
+license is assigned by this notice. Anyone choosing to share or rely on
+the material should assess the claims and their evidence in context.
+This is an informal research record, not a claim that all questions have
+been settled or a guarantee of fitness for a particular purpose.
+
+Errors, omissions, and AI generation artifacts may remain. Independent
+inspection, reproduction, criticism, counterexamples, and corrections are
+welcome. The purpose of making the reasoning and checks inspectable is
+to make those challenges concrete.
+
+Short notice
+
+Substantial parts of the ideas, proofs, code, checks, and documentation
+were developed with AI assistance under human direction. Not every step
+was independently derived or manually verified by a human. Internal
+alternative implementations are supporting evidence, not external human
+review. Any formally checked results are limited to the exact statements
+listed in the formal-check receipt. Results apply to the stated models;
+broader validity, novelty, and practical feasibility remain open.

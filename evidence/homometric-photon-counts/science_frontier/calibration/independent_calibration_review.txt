@@ -1,0 +1,308 @@
+INDEPENDENT INTERNAL REVIEW OF JOINT CALIBRATION AND STRUCTURE IDENTIFICATION
+Review date: 2026-10-20
+Reviewer: separate /root/tighter_testing mathematical-work agent.
+
+VERDICT
+
+PASS, conditional on the stated exact model and the existing exact moment
+polynomial source. I found no substantive mathematical error in the population
+identification theorem or the finite-example certificate. A separate rational
+replay passed 64 checks without importing or executing the producer. This is an
+internal independent derivation/replay, not external peer review or physical
+validation. The example proves existence of a finite procedure with a stated
+coverage guarantee; 10^36 observations is not a practical sample requirement.
+
+Files reviewed and exact dependencies:
+
+1. certify_calibration.py
+   SHA256 d6c22ba84f56826a0c9d9783d2df6221ac37e2adc2132d1605c21ef11fa46de7
+2. calibration_certificate.json
+   SHA256 f0529051dc70054902b15a37f8a0e287e1ffa298fa1f034037b4f0116910d385
+3. science_completion/homogeneous_control/homogeneous_control_results.json
+   SHA256 aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142
+
+4. calibration_proof.txt
+   SHA256 8ebd704bfccf33a93eebc858de43c25fb94c8a166abdee05e82986347cf22101
+5. REPRODUCE.txt
+   SHA256 be64801992aeaee5abdc69575f56e0974a6606877d983e63dde5c95f3d0beb04
+
+The accompanying proof and reproduction instructions were read during the
+follow-up review. Their explanation of full support, joint event coverage,
+the population-envelope argument, fixed sample size, and conservative finite
+sample scope agrees with the audit below.
+
+The final wording explicitly restricts the equicorrelated Gaussian statement
+to centered site motion. This qualification is correct: arbitrary site means
+would change the deterministic relative phases and need not preserve the
+supplied moment formulas. The centered effective-variance conclusion remains
+s_eff=s(1-rho). This wording update changes no producer or certificate bytes
+and does not require rerunning the rational replay.
+
+The independent replay is independent_calibration_replay.py and its complete
+check record is independent_calibration_replay.json. Reproduce with ordinary
+Python, with assertions enabled:
+
+  python science_frontier/calibration/independent_calibration_replay.py
+
+The replay reads the saved moment polynomials. It does not reconstruct those
+polynomials from the site geometry or independently prove the earlier moment
+enumeration. That earlier, pinned exact source remains a dependency.
+
+1. POPULATION IDENTIFICATION
+
+Let x=exp(-s) be in (0,1), with independent Gaussian phase motions of common
+variance s, the specified unit-weight 63-site candidate geometry, positive gain
+eta, and constant background b>=0. Let M_r be the exact intensity moments from
+the source. Its powers of t=exp(-s/2) are all even; the replay explicitly checks
+this before converting them to powers of x.
+
+The replay independently forms M_2-M_1^2 and M_3-3M_2M_1+2M_1^3 by dense
+polynomial convolution. It verifies the identities
+
+  Var(I) = (1-x)^2 V(x),
+  kappa_3(I) = (1-x)^3 C(x),
+
+where, in increasing powers of x,
+
+  V = [3906, 126, 103987/400],
+
+  C = [476532, 46305, 945333/10, 124102867/40000,
+       311961/200, 17164599/160000, 5721533/160000].
+
+The independently recomputed coefficients of H=2C'V-3CV' are
+
+  [181605564, 36392842647/50, 364718852253/10000,
+   15247747953/20000, 41383879047/8000, 206539212561/80000,
+   2433716998413/16000000, 1784895156213/32000000].
+
+All coefficients of V, C, and H are strictly positive. Thus
+
+  Q(x)=C(x)^2/V(x)^3,
+  Q'(x)=C(x)H(x)/V(x)^4 > 0
+
+throughout [0,1]. The endpoint values are exactly
+
+  Q(0)=7442/1953,
+  Q(1)=24774567701488718400/5059985217815055403.
+
+For N|I ~ Poisson(b+eta I), its factorial moments equal the ordinary moments
+of b+eta I. The second and third factorial cumulants are eta^2 Var(I) and
+eta^3 kappa_3(I). Therefore their squared standardized ratio identifies x
+globally in the open parameter domain. Then eta is the positive square root
+of k_2/Var(I)(x), and b=f_1-eta M_1(x). This proves identification of all three
+nuisance parameters from the first three factorial moments. Positivity of the
+third cumulant also ensures that squaring its ratio loses no sign information.
+
+The replay verifies that the fourth intensity moment difference is exactly
+
+  D_4(x)=(455015761/20000) x^4 (1-x)^5
+         * (x^3+3x^2+6x+6),
+
+which is strictly positive on (0,1). Equality of the first three factorial
+moments forces equality of x, eta, and b. At that common tuple, the difference
+of fourth factorial moments is eta^4 D_4(x)>0. Hence the first four factorial
+moments globally identify the nuisance tuple and A/B structure under this
+Gaussian-phase model.
+
+This is not an endpoint theorem: s=0, x=1, eta=0, or the limit x=0 removes
+some identification arguments. It also is not a theorem for an unspecified
+phase distribution or arbitrary geometry.
+
+2. SUPPORT BOUND AND MONOTONICITY USED BY THE INTERVAL INVERSION
+
+The replay verifies
+
+  d Var(I)/dx = (1-x)D(x),
+  D(x)=-7686+(28387/200)x-(103987/100)x^2.
+
+For 0<=x<=1, D(x)<=-7686+28387/200=-1508813/200<0.
+Evaluating the variance at the reversed endpoints of an x interval therefore
+gives a valid enclosing variance interval.
+
+The program also uses eta<=B/3969 from the known rate bound B. This deserves
+an explicit model argument: an upper bound I<=3969 by itself would not imply
+that ceiling on eta. Under the stated Gaussian phase model with finite s>0,
+every site phase has positive density on the entire circle. Independence gives
+positive probability to every neighborhood of a configuration in which all
+63 phasors align. Consequently the essential supremum of I is exactly 3969.
+An almost-sure rate bound b+eta I<=B thus implies b+3969 eta<=B, and b>=0 gives
+eta<=B/3969. The ceiling is valid here because of this support property.
+
+All inspected interval operations enclose their inputs: four-corner products,
+positive powers, interval subtraction, Horner polynomial evaluation, dyadic
+square-root bounds, and monotone binary inversion of Q. Clipping intensity
+moments to [0,3969^r] and nuisance coordinates to their known nonnegative
+ranges preserves the true values. Inverting at a ratio endpoint or clipping
+to x=0 or x=1 is conservative when the admissible domain is open.
+
+3. FINITE-SAMPLE COVERAGE AND THE CUTOFF TAIL
+
+For independent identically distributed observations, define
+
+  Z_r=(N)_r 1_{N<=K},  r=1,2,3,4,  K=64.
+
+Then 0<=Z_r<=(K)_r. The truncation is applied to the entire factorial variable;
+counts above K contribute zero. For any integer q with K>=r+q-1, when N>K,
+
+  (N)_{r+q}=(N)_r (N-r)_q
+             >=(N)_r (K+1-r)_q.
+
+Taking expectations and using the mixed-Poisson identity gives the exact
+one-sided tail bound
+
+  0<=f_r-E[Z_r]<=T_r=B^(r+q)/(K+1-r)_q.
+
+There is no missing probability factor, division by sample size, or dependence
+on an unobserved cutoff event. Large counts remain part of the statistical
+experiment through this bounded statistic and its bias bound. For B=8, q=32,
+the independently recomputed T_1,...,T_4 are approximately
+
+  1.31439052718566868753094750093e-24,
+  2.10302484349706990004951600149e-23,
+  3.41911135845975235362889053145e-22,
+  5.65293077932012389133309901200e-21.
+
+The program uses an outward rational upper bound epsilon on sqrt(51/(20m)).
+Hoeffding's bounded-variable inequality gives, for each order r,
+
+  P(|mean(Z_r)-E[Z_r]|>(K)_r epsilon)
+      <=2 exp(-2m epsilon^2)<=2 exp(-51/10).
+
+Independence is needed across observations. Independence between the four
+statistics on the same observation is not needed: the union bound applies
+regardless of their dependence. It gives a simultaneous failure bound
+8 exp(-51/10)<1/20.
+
+For completeness, the bounded-variable inequality can be justified without
+relying on a numerical table. For Y in [0,1], the second derivative of the
+log moment-generating function under exponential tilting is a variance, at
+most 1/4. Subtract its mean and integrate twice to get
+log E exp(u(Y-EY))<=u^2/8. Independence, Markov's inequality, optimization in
+u, and the same argument for -Y give the two-sided bound above. This is the
+classical inequality of Hoeffding (1963), cited below.
+
+The replay verifies the exact certificate
+
+  sum_{k=0}^{19} (51/10)^k/k!
+    =1788863970297045668376476900157793/
+     10906255360000000000000000000000
+    >160.
+
+Hence it even gives the conservative rational failure upper bound
+
+  87250042880000000000000000000000/
+  1788863970297045668376476900157793
+  =0.0487739953002194437213999968003...
+
+The data intervals
+
+  C_r=[max(0, mean(Z_r)-e_r),
+       min(B^r, mean(Z_r)+e_r+T_r)],
+  e_r=(K)_r epsilon,
+
+therefore contain all four true factorial moments jointly with probability
+greater than 95%. This confidence guarantee assumes a predetermined sample
+size. Optional stopping or repeatedly rerunning a 95% rule until success is
+not covered by the stated bound.
+
+4. WHY THE POPULATION-CENTERED EXAMPLE CERTIFIES ACTUAL DATA PROCEDURES
+
+The certificate is not a simulated dataset and does not claim that measured
+moments equal their expectations. On the simultaneous concentration event,
+write E[Z_r]=f_r-delta_r with 0<=delta_r<=T_r. Then
+
+  mean(Z_r) lies in [f_r-delta_r-e_r, f_r-delta_r+e_r],
+
+which implies
+
+  C_r is a subset of
+  [max(0,f_r-2e_r-T_r), min(B^r,f_r+2e_r+T_r)].
+
+This is the larger population-centered envelope used in finite_example().
+The interval operations in infer() are inclusion-preserving. This includes
+the ratio construction with a positive k_2 lower bound, monotone inversion
+of Q, reversing endpoints for the decreasing variance, dyadic square roots,
+and interval polynomial prediction of the fourth factorial moment. At the
+certified finite point the envelope has positive k_2 and k_3 lower bounds,
+so every narrower good-event data interval follows the same valid branch.
+
+The true parameter tuple survives on the good event. Its true fourth moment
+belongs to both the true-label prediction and the measured-moment interval.
+If the larger envelope excludes the opposite label, every contained data
+interval also excludes it. Thus the envelope calculation proves correct
+identification and simultaneous nuisance coverage for all good-event datasets.
+No assumption that four empirical moments are independent is used.
+
+5. INDEPENDENT FINITE-EXAMPLE REPLAY
+
+For either true candidate, x=1/4, eta=1/512, b=1/100, and B=8, the exact maximum
+rate is 99353/12800=7.761953125<8. With m=10^36, K=64, and q=32, the replay
+recomputes all factorial moments, the truncation constants, the population
+envelopes, cumulant intervals, the ratio interval, inverse-bracket containment,
+variance and gain bounds, background bounds, and both fourth-moment prediction
+intervals. Each agrees exactly with the stored certificate.
+
+The gap between the wrong candidate's predicted fourth-moment interval and
+the confidence envelope is strictly positive:
+
+  true A: 2.10467666169865967259156875179e-9,
+  true B: 2.10467642605856138383013372884e-9.
+
+Exact rational margins are in independent_calibration_replay.json. The
+population-envelope nuisance widths, which bound the widths of every
+good-event data-derived interval, are
+
+  x:    1.10824855354817374570364762577e-8,
+  eta:  2.81628998565838263681324948829e-11,
+  b:    2.69436263939653513005333373092e-9.
+
+The inference procedure receives the known model family and rate bound; the
+true nuisance tuple is used only to prove the stated example's performance.
+No nuisance estimate is assumed to be correct in advance.
+
+6. LIMITATIONS AND SMALL IMPLEMENTATION NOTE
+
+The population theorem is global on the stated open nuisance domain. The
+finite identification sample count is a sufficient bound for the specified
+interior example, not a uniform 10^36 bound for all x, eta, and b, and not an
+optimal sample count. Near degeneracy or at very weak gain, the procedure may
+remain unresolved. Confidence coverage remains valid when an unresolved
+result is returned; unresolved output is not a structural decision.
+
+The result assumes the Gaussian phase family, exact candidate geometry,
+independent observations, the specified within-shot motion model, and a valid
+known rate support bound. It does not validate these assumptions against an
+experiment, allow arbitrary dependent shots, establish historical priority,
+or replace external mathematical review.
+
+The follow-up review found one qualification needed in the proof's asymptotic
+paragraph, and it has been corrected in the proof snapshot listed above. If
+K grows without bound, fixed 220-bit square-root rounding would eventually
+give a nonvanishing epsilon floor, and fixed 160-step inversion would leave
+a resolution floor. The asymptotic argument is now explicitly a theoretical
+variant with precision and inversion depth at least ceil(log2(m))+constant.
+For q=1 and K_m=max(4,floor(m^(1/16))), the ideal range error is
+O(K_m^4/sqrt(m))=O(m^(-1/4)); the extra arithmetic error is at most
+O(K_m^4/m)=O(m^(-3/4)); and the tail bound is O(1/K_m). All vanish, giving
+the stated pointwise good-event identification at each fixed interior tuple.
+The delivered 220/160-bit implementation is explicitly limited to its finite
+certificate and does not purport to implement that unbounded-m variant.
+
+The minor input-validation issue found in the first review has been fixed in
+the reviewed producer snapshot. Its canonical integer parser rejects floats,
+booleans, negative values, and noncanonical decimal keys instead of silently
+coercing them. Positive tail order is now checked explicitly. The independent
+replay was rerun against the regenerated certificate and again passed all 64
+exact mathematical checks; all numerical conclusions above are unchanged.
+This review does not modify the producer. Regenerate the source hash and
+replay after any further producer modification.
+
+SOURCE FOR THE CLASSICAL CONCENTRATION INEQUALITY
+
+Hoeffding, W. (1963). Probability Inequalities for Sums of Bounded Random
+Variables. Journal of the American Statistical Association 58(301), 13-30.
+DOI: https://doi.org/10.1080/01621459.1963.10500830
+Primary paper scan:
+https://www.cs.rpi.edu/academics/courses/spring06/random/hoefding.pdf
+Accessed 2026-10-20. The concentration application and all new model-specific
+algebra and certificate conclusions are explicitly derived in this review.

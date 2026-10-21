@@ -1,0 +1,356 @@
+INDEPENDENT IMPLEMENTATION REVIEW OF THE TIGHTER FINITE-SAMPLE CERTIFICATE
+20 October 2026
+
+VERDICT
+=======
+PASS, conditional on the explicitly retained input certificates and the
+published Berry--Esseen theorem stated below. No material mathematical or
+implementation error was found in the reviewed new argument. A separate
+implementation reproduced both decisive strict endpoint inequalities using
+different logarithm, square-root, pi, and normal-CDF enclosures. It neither
+imported nor executed the producer. All 170 targeted exact-arithmetic checks
+passed.
+
+For the stated known-model, equal-prior, independent-snapshot experiment,
+the accepted conclusion is
+
+  112,606,153,000,000,001 <= m_* <= 112,608,396,000,000,000,
+
+where m_* is the least integer for which optimal A/B average success is at
+least 19/20. The left endpoint follows from a strict upper bound below 19/20
+at the preceding integer. The right endpoint follows from a concrete
+rational-score rule with a strict lower bound above 19/20.
+
+This is a separate in-session mathematical/code review, not external peer
+review, a proof-assistant verification, or a physical validation. It does
+not determine the exact optimal integer. It does not give a separate 95%
+success guarantee under each candidate.
+
+1. IDENTIFIED REVIEW TARGETS AND ACCEPTED DEPENDENCIES
+====================================================
+The following producer files were inspected without modification:
+
+  certify_tighter_testing.py
+  SHA256 627985c384f1a53f97c3f0a113de06568df6e5c8d65ed1989d56d1d7918f144d
+
+  tighter_testing_proof.txt
+  SHA256 464b76809c6c350e2651bb7eb530eff396d6cf121e14b890d31f731dc7829303
+
+  tighter_testing_certificate.json
+  SHA256 33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1
+
+The retained input files are accepted as mathematical inputs, with their
+identity checked by SHA256:
+
+  science_extension/finite_detection/finite_detection_certificate.json
+  SHA256 6348680416b51afade64477f131e5f77c747f23c1412f005b29c4820602614a8
+
+  science_extension/finite_detection/fixed_t_moments.json
+  SHA256 538aee114c16e712496fe526486e6ac96ef344d2ff92e6d3014f7f47223feb32
+
+Specifically, this review accepts the old exact photon-count probability
+intervals for k=0,...,24 and the old exact order-25 intensity moments. It
+does not regenerate those probabilities from geometric moment enumeration,
+independently prove the old high-order moment engine, or certify the physical
+model. Hash agreement identifies the dependencies; it is not itself a proof
+of their mathematical validity.
+
+The fixed point is the retained n=63, Gaussian phase t=1/2 (s=2 log 2),
+eta=1/512, b=0 conditional-Poisson model. The unnormalized intensity satisfies
+0<=I<=3969. The two candidate distributions and calibration parameters are
+treated as known, and successive snapshots are independent.
+
+The new non-elementary external ingredient is Theorem 1 in:
+
+  Irina Shevtsova, On the absolute constants in the Berry--Esseen type
+  inequalities for identically distributed summands,
+  arXiv:1111.6554v1, 28 November 2011.
+  https://arxiv.org/pdf/1111.6554
+
+The primary PDF was separately read. Its page-3 Theorem 1 states
+
+  sup_x |F_m(x)-Phi(x)| <= 0.3328*(beta_3+0.429)/sqrt(m).
+
+The producer's rational constants are exact:
+0.3328=208/625 and 0.429=429/1000. The paper's page-1 convention is a
+left-continuous CDF, P(standardized sum < x), which is compatible with the
+test's choice of A on a tie. The theorem applies to iid centered, unit-
+variance summands with finite third absolute moment. All these hypotheses
+hold after standardizing the finite-alphabet scores separately under A and
+B. This review applies the theorem; it does not independently prove its
+universal numerical constant.
+
+2. CONDITIONING AND THE FULL-COUNT TAIL
+====================================
+The 25-bin model is correctly defined by conditioning, not by silently
+discarding mass or by adding a censored tail bin. With tau_G=P_G(N>=25),
+
+  R_G(k)=P_G(k)/(1-tau_G),  k=0,...,24.
+
+The factorial-moment inequality is valid pointwise for integer N:
+
+  1{N>=25} <= (N)_25/25!.
+
+Conditional Poisson factorial moments give
+
+  tau_G <= T_G = E_G[I^25]/(512^25*25!).
+
+The separate replay recomputed both T_G values from the retained moment
+table and matched the old and new tail sums exactly. The sum is below
+1.030e-26. Because 0<=tau_G<=T_G<1, the probability enclosures
+
+  p_G(k)^- <= R_G(k) <= p_G(k)^+/(1-T_G)
+
+are correctly oriented. They are not required individually to form a
+normalized vector: interval moments include the one actual normalized
+vector. Loss of dependence between interval entries only widens the bounds.
+The replay additionally checked that the sum intervals contain 1.
+
+For m independent observations, R_G^m is the full law P_G^m conditioned on
+all observations being at most 24. Thus the exact total-variation distance is
+
+  TV(P_G^m,R_G^m)=1-(1-tau_G)^m <= m*T_G.
+
+For any fixed binary decision rule, equal-prior average success changes by
+at most
+
+  c_m = m*(T_A+T_B)/2.
+
+The same bound applies to the two optimal successes: if every fixed-rule
+success changes by at most c_m, taking suprema over those rules preserves
+that bound. This argument also permits any extension of a finite-alphabet
+rule to samples containing a tail observation. Choosing A on every such
+sample is therefore a legitimate explicit rule.
+
+The exact tail transfers at the audited endpoints are approximately
+
+  m_0: 5.7940804788906076257e-10,
+  m_1: 5.7941958910787333637e-10.
+
+They were included in the independently recomputed success intervals. The
+accumulation of tiny one-snapshot tail probabilities over roughly 10^17
+snapshots is handled explicitly and with the correct factor of one half.
+
+3. LIKELIHOOD, TIES, AND THE NECESSARY BOUND
+=========================================
+On the conditional alphabet, let L(k)=log(R_A(k)/R_B(k)). The equal-prior
+optimal test chooses A when sum L>=0, B otherwise. On a zero likelihood-
+ratio sum, the two joint probabilities agree, so choosing A is optimal.
+
+Write mu_G=E_G L, v_G=Var_G L, r_G=E_G|L-mu_G|^3, and
+beta_G=r_G/v_G^(3/2). The producer and replay rigorously establish
+mu_A>0>mu_B and v_A,v_B>0. The conditional alphabet is finite and each
+retained probability is positive, so all score moments exist.
+
+Under A, success is the complement of the strict lower-tail event at
+-sqrt(m)*mu_A/sqrt(v_A). Under B, success is the strict lower-tail event at
+sqrt(m)*(-mu_B)/sqrt(v_B). With the left-continuous CDF convention, both
+success probabilities consequently lie within e_G of Phi(a_G), where
+
+  a_A=sqrt(m)*mu_A/sqrt(v_A),
+  a_B=sqrt(m)*(-mu_B)/sqrt(v_B),
+  e_G=(208/625)*(beta_G+429/1000)/sqrt(m).
+
+No unaccounted lattice-atom or tie error is needed. A right-continuous
+Berry--Esseen statement would give the same inequalities by one-sided
+limits because Phi is continuous.
+
+The producer averages the two conditional success enclosures and widens
+them by c_m. This rigorously bounds optimal full-count average success.
+Near the endpoints the per-hypothesis Berry--Esseen errors are about
+8.428e-7; these are retained. The normal approximation is not asserted to
+be exact.
+
+At m_0=112,606,153,000,000,000, the independent replay obtains
+
+  optimal full success <=
+  0.9499999995364477148768638715162573211181
+
+  19/20 - this upper bound =
+  4.635522851231361284837426788819e-10 > 0.
+
+The actual optimal success is nondecreasing in the sample size, since a
+rule can ignore extra observations. Therefore every integer m<=m_0 is
+insufficient, which proves m_*>=m_0+1. Strictness matters at precisely this
+step, and was checked with rational arithmetic.
+
+The producer selects candidate endpoints by bisection on a 10^9 grid.
+It need not prove that every approximate lower/upper bounding expression
+is monotone: it recomputes and verifies the selected endpoint inequality.
+The necessary bound on every smaller sample size uses monotonicity of
+the actual optimal success, not of a numerical approximation. The replay
+does not repeat that bisection; it independently verifies its selected
+endpoints directly.
+
+4. THE EXPLICIT RATIONAL RULE AND THE SUFFICIENT BOUND
+====================================================
+The certificate fixes 25 rational weights w_k. Each is the midpoint of
+the producer's certified log-likelihood interval, rounded down to a 10^-60
+grid. The replay checks every exact weight against that definition. There
+is no need to assert that any weight equals an exact logarithm.
+
+The rational threshold is also part of the fixed test definition:
+
+  theta=(saved lower bound for E_A w + saved upper bound for E_B w)/2.
+
+The replay checks this identity and independently recalculates score
+moments using the exact saved weights and the independently reconstructed
+conditional probability intervals. The newly obtained means satisfy
+
+  lower(E_A w) > theta > upper(E_B w).
+
+The test chooses A if any observation exceeds 24. Otherwise it chooses A
+when sum_i w_{N_i}>=m*theta, and B otherwise. For this fixed rule the same
+Berry--Esseen argument applies with drifts E_A w-theta and theta-E_B w.
+The full-law lower bound follows after subtracting c_m.
+
+At m_1=112,608,396,000,000,000, the independent replay obtains
+
+  explicit-rule full average success >=
+  0.9500000002501716538329450940360010574721
+
+  this lower bound - 19/20 =
+  2.501716538329450940360010574721e-10 > 0.
+
+An explicit rule achieving this success establishes the same sufficient
+bound for optimal success. This result is constructive; it does not claim
+that the rational rule is exactly optimal at finite sample size.
+
+The conditional-likelihood rule also has an independently verified
+sufficient point at 112,608,399,000,000,000, with full optimal success lower
+bound 0.9500000004439620539356800052670440986014. The rational rule's slightly
+smaller certified sufficient point is consistent with conditional
+likelihood optimality. The rational score's interval calculation loses
+less dependence; a tighter certificate for a particular rule can exceed
+a looser lower certificate for the optimal rule.
+
+The guarantee concerns the average of the A and B success probabilities.
+For example, the independently certified A-side conditional lower bound
+for the rational rule is approximately 0.9499996537, while the B-side lower
+bound is approximately 0.9500003480. These individual lower bounds do not
+prove that both hypotheses separately attain 95%. The proof and result
+correctly avoid that stronger claim.
+
+5. AUDIT OF THE PRODUCER'S INTERVAL ARITHMETIC
+===========================================
+The code uses fractions and integer arithmetic for all decisions.
+Decimal rendering is descriptive only. The following operations were
+checked both structurally and against the independent replay:
+
+  - Positive probability intervals are divided with the correct endpoint
+    orientation. Conditional probabilities are rounded outward.
+
+  - Logarithms use 2*atanh((x-1)/(x+1)) with a valid absolute geometric
+    remainder. The series stopping test is rational. Outward rounding
+    preserves the enclosure.
+
+  - Integer square-root bounds enclose sqrt(x) because the square of the
+    lower endpoint is at most x and that of the upper endpoint is at least
+    x. Both inequalities are checked exactly.
+
+  - Machin's pi identity and alternating arctangent remainders correctly
+    enclose pi; reciprocals and square roots correctly enclose 1/sqrt(2pi).
+
+  - The normal-CDF lower and upper sums follow by integrating the global
+    odd/even Taylor bounds for exp(-t^2/2). Their validity does not require
+    an unsupported assumption that all initial alternating terms decrease.
+    Negative arguments use exact symmetry. Argument intervals use CDF
+    monotonicity with the correct endpoint orientation.
+
+  - Mean and second raw moments use interval products. Variance is raw
+    second moment minus the square of the mean interval, with zero-crossing
+    intervals squared correctly. The computed variance lower bounds are
+    positive.
+
+  - For the third absolute centered moment, each probability upper endpoint
+    multiplies the largest possible absolute centered score cubed. Dividing
+    its upper bound by a lower bound on v^(3/2) gives a valid beta upper
+    bound. All relevant signs are known.
+
+  - Standardized drifts divide positive quantities by positive standard
+    deviations. Berry--Esseen errors use an upper numerator and lower
+    sqrt(m). Success intervals and tail widening are correctly oriented.
+
+The likelihood means are about 4.805e-17, obtained by cancellation of
+larger signed terms. Using ordinary floating-point cancellation as the
+decision criterion would be insufficient. Both implementations avoid it.
+
+6. HOW THE SEPARATE REPLAY DIFFERS
+================================
+The separate source is independent_tighter_testing_replay.py. It does not
+import or execute certify_tighter_testing.py. It uses the same mathematical
+input probability intervals, but applies distinct transcendental enclosure
+formulas and finer interval-moment grids:
+
+Logarithms:
+For x>=1, use the alternating series for log(1+u), u=x-1. For x<1, use
+log(x)=-log(1/x). Every required u lies in (0,1/2). Successive alternating
+partial sums enclose the answer; the next term must be below 10^-100.
+Results are rounded outward to a 10^-90 grid.
+
+Square roots:
+Use an integer square-root enclosure on the binary grid 2^340, rather
+than the producer's decimal grid. Verify the two square inequalities.
+
+Pi:
+Use pi=8*atan(1/3)+4*atan(1/7), with 100-term alternating bounds. The tangent
+of 2*atan(1/3) is 3/4; adding atan(1/7) gives tangent 1 in the correct
+quadrant. This differs from the producer's Machin identity.
+
+Normal CDF:
+Use the positive-series representation, for z>=0,
+
+  Phi(z)=1/2 + exp(-z^2/2)/sqrt(2pi)
+                 * sum_{k>=0} z^(2k+1)/(2k+1)!!.
+
+This follows by solving R'=1+zR, R(0)=0, for
+R(z)=exp(z^2/2)*integral_0^z exp(-t^2/2)dt. Retain k=0,...,60. The positive
+tail is bounded by the next term divided by 1-z^2/125, because subsequent
+term ratios decrease. Bound exp(z^2/2) using its positive Taylor series
+through degree 80 and the geometric remainder with ratio at most
+(z^2/2)/82. Invert the positive exponential enclosure for exp(-z^2/2).
+All arguments lie in [-2,2]. Round CDF arguments and output outward to a
+10^-40 grid, still far finer than the approximately 10^-10 decisive margins.
+
+The replay checks that its independently recomputed probability, log,
+mean, variance, standard-deviation, and normalizing-constant intervals lie
+inside the producer's saved intervals, and that its upper bounds on third
+moments and Berry--Esseen numerators are no greater than the saved ones.
+For each of the three audited endpoints it also checks inclusion of the
+standardized-drift, normal-CDF, and final full-success intervals and exact
+agreement of the tail-transfer quantity. It recomputes the final endpoint
+inequalities using its different CDF method. The output is saved in
+independent_tighter_testing_replay.json.
+
+7. QUANTITATIVE CONCLUSION AND REMAINING SCOPE
+===========================================
+The independently reproduced necessary/sufficient interval has width
+
+  2,242,999,999,999 observations,
+
+and width divided by the necessary endpoint
+
+  2242999999999 / 112606153000000001
+  < 0.000019918983,
+
+or less than 0.0019918983 percent. This is a narrow mathematical enclosure
+relative to the sample scale; it is not an experimental feasibility result.
+
+The following remain outside this review and outside what the new result
+closes: the exact optimal integer, global detector-parameter optimization,
+unknown-parameter calibration, arbitrary temporal dependence, correctness
+of the physical assumptions, an actual calibrated experiment, and external
+mathematical review. The producer's stated limitations are appropriate.
+
+No amendment to the reviewed producer, proof, or certificate was required.
+
+REPRODUCTION
+============
+From the workspace or extracted record root, with science_frontier/ and
+science_extension/ as siblings:
+
+  python science_frontier/tighter_testing/independent_tighter_testing_replay.py
+
+Only the Python standard library is required. The replay verifies pinned
+input/producer hashes, performs 170 targeted exact checks, and writes its
+own JSON next to its source. It changes no producer or old proof file.

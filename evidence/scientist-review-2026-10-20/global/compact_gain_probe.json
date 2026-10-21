@@ -1,0 +1,122 @@
+{
+  "status": "EXPLORATORY ONLY; sampled signs and floating quadrature are not root-count evidence",
+  "definition": "G(y)=F4(1/y)/(24*y^5), with G(0)=density gap",
+  "radial_cutoff": 10,
+  "results": [
+    {
+      "quadrature_order": 256,
+      "candidate_inverse_gains": [
+        3.407339078063927
+      ],
+      "candidate_gains": [
+        0.2934841461590628
+      ],
+      "sampled_values": [
+        {
+          "inverse_gain": 0.0,
+          "G": 3.541064908536276e-08
+        },
+        {
+          "inverse_gain": 0.1,
+          "G": 3.351503248882372e-08
+        },
+        {
+          "inverse_gain": 0.2,
+          "G": 3.169251127822436e-08
+        },
+        {
+          "inverse_gain": 0.5,
+          "G": 2.663847166820439e-08
+        },
+        {
+          "inverse_gain": 1.0,
+          "G": 1.945549498515858e-08
+        },
+        {
+          "inverse_gain": 2.0,
+          "G": 8.859246000506455e-09
+        },
+        {
+          "inverse_gain": 3.0,
+          "G": 1.9998170469892835e-09
+        },
+        {
+          "inverse_gain": 4.0,
+          "G": -2.27114579190004e-09
+        },
+        {
+          "inverse_gain": 5.0,
+          "G": -4.765900204286754e-09
+        },
+        {
+          "inverse_gain": 6.0,
+          "G": -6.057853985627292e-09
+        }
+      ],
+      "sign_change_brackets": [
+        [
+          3.4,
+          3.41
+        ]
+      ]
+    },
+    {
+      "quadrature_order": 512,
+      "candidate_inverse_gains": [
+        3.4073390780625883
+      ],
+      "candidate_gains": [
+        0.29348414615917817
+      ],
+      "sampled_values": [
+        {
+          "inverse_gain": 0.0,
+          "G": 3.5410649085495663e-08
+        },
+        {
+          "inverse_gain": 0.1,
+          "G": 3.3515032488951783e-08
+        },
+        {
+          "inverse_gain": 0.2,
+          "G": 3.169251127834763e-08
+        },
+        {
+          "inverse_gain": 0.5,
+          "G": 2.6638471668313573e-08
+        },
+        {
+          "inverse_gain": 1.0,
+          "G": 1.9455494985245295e-08
+        },
+        {
+          "inverse_gain": 2.0,
+          "G": 8.859246000551748e-09
+        },
+        {
+          "inverse_gain": 3.0,
+          "G": 1.9998170469973854e-09
+        },
+        {
+          "inverse_gain": 4.0,
+          "G": -2.2711457919253535e-09
+        },
+        {
+          "inverse_gain": 5.0,
+          "G": -4.76590020434209e-09
+        },
+        {
+          "inverse_gain": 6.0,
+          "G": -6.0578539857095865e-09
+        }
+      ],
+      "sign_change_brackets": [
+        [
+          3.4,
+          3.41
+        ]
+      ]
+    }
+  ],
+  "seconds": 0.8429999999934807
+}

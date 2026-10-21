@@ -1,0 +1,77 @@
+AN EXPLICIT NEIGHBORHOOD OF PHASE-LAW ROBUSTNESS
+20 October 2026
+
+This result uses the arbitrary-iid-phase selection identity proved in
+phase_laws. It concerns a COMMON phase law used at every site of both exact
+structures. It does not permit unrelated site-specific perturbations.
+
+Write mu_k=E[W^k], |W|=1, and let nu_k be the corresponding moments of a
+second common phase law. Suppose
+
+  max_{1<=k<=4} |mu_k-nu_k| <= delta.
+
+Let k2(mu)=mu2-mu1^2 and
+
+  k4(mu)=mu4-4mu3*mu1-3mu2^2+12mu2*mu1^2-6mu1^4.
+
+For either phase law, |k2|<=1: the modulus of E[(W-EW)^2] is bounded by
+E|W-EW|^2=1-|EW|^2. Moreover |k4|<=7, because
+
+  k4=E[(W-EW)^4]-3 k2^2,
+  E|W-EW|^4 <=4 E|W-EW|^2 <=4.
+
+Products of d factors, each of modulus at most one, change by at most
+d*delta when the individual moments change by delta; telescope the product
+one factor at a time. Hence
+
+  |k2(mu)-k2(nu)| <=3 delta,
+  |k4(mu)-k4(nu)| <=(1+8+6+36+24)delta=75 delta.
+
+For alpha=k4*conjugate(k2)^2 this gives
+
+  |alpha(mu)-alpha(nu)| <=75 delta +7*2*3 delta=117 delta.
+
+The fixed structural quantity is
+
+  T = M_A4 conjugate(M_A2)^2 - M_B4 conjugate(M_B2)^2
+    = -455015761/120000
+      + i sqrt(3) * 28907930179/4800000.
+
+The general phase-law theorem states D4(mu)=6 Re[alpha(mu) T]. Thus
+
+  |D4(mu)-D4(nu)| <=702 |T| delta.                 (R1)
+
+This bound is valid for asymmetric as well as symmetric phase laws.
+
+For an explicit finite margin, take the reference phase law to be Gaussian
+with phase variance s=log 2. Then x=exp(-s)=1/2 and
+
+  D4(reference)=35946245119/81920000.
+
+Exact rational arithmetic proves |T|<11200. Consequently any common phase
+law satisfying delta<=1/100000 preserves the strict distinction with
+
+  D4(perturbed) >= 35946245119/81920000 - 702*11200/100000
+                = 29505367039/81920000
+                = 360.17293748779296875 >0.         (R2)
+
+The rational constant in (R2) is independently checked by the accompanying
+script; the fraction is authoritative if a displayed decimal is rounded.
+
+The exact first-three-moment equalities also survive, because the general
+selection theorem holds for every common iid phase law with these fixed
+structural power sums. This is therefore a quantitative robustness
+statement for both the cancellation pattern and the nonzero fourth gap.
+
+As a sufficient condition in a familiar probability metric, if the total
+variation distance between the reference and perturbed SINGLE-SITE phase
+laws is at most 1/200000, then |mu_k-nu_k|<=2 TV<=1/100000 for every k.
+The moment inequality follows from integration against a signed measure
+whose total mass variation is 2 TV and from |W^k|=1. The Fourier-moment
+condition is more general than this sufficient TV condition.
+
+Limitations. The constants are conservative guarantees, not a maximal
+tolerance or a calibrated experimental error budget. The theorem keeps
+the geometry, common frequency, iid property, and equality of the phase
+law across both structures fixed. It addresses misspecification of that
+common phase law, not arbitrary structural or detector errors.

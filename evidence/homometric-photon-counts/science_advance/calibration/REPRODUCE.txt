@@ -1,0 +1,50 @@
+EFFICIENT CALIBRATION: REPRODUCTION
+
+From the workspace root:
+
+  python3 science_advance/calibration/certify_efficient_calibration.py
+
+This regenerates efficient_calibration_certificate.json using exact rational
+arithmetic. No observations are supplied in certificate mode.
+
+For actual prespecified observed count groups:
+
+  python3 science_advance/calibration/certify_efficient_calibration.py \
+    --histograms your_grouped_counts.json --output your_inference.json
+
+Input schema:
+
+  {
+    "lambda_max": "8",
+    "pilot_histogram": {"0": "...", "1": "..."},
+    "calibration_histogram": {"0": "...", "1": "..."},
+    "main_histogram": {"0": "...", "1": "..."}
+  }
+
+Replace ellipses with exact nonnegative integer multiplicities; additional
+count bins are allowed and all supplied counts are used. Empty groups are
+rejected. The known lambda_max is a bound on the conditional Poisson rate,
+not a bound on the observed count and not the largest observed count.
+Do not discard zero counts or detector windows without a prespecified
+scientific rule. JSON strings preserve large exact integers.
+
+For the separately proved stationary Gaussian AR(1) model, add
+
+  "ar1_abs_bound": "1/2"
+
+This changes the variance inflation to 3. It is an asserted known bound on
+the specified temporal model, not a dependence estimate from histograms.
+
+The optimized finite certificate uses fixed internal guards around the
+reference regime. If a guard cannot be certified, unresolved is the correct
+result; the procedure does not request the unknown true parameters. Read
+efficient_calibration_proof.txt for assumptions, the probability guarantee,
+and the reason the sample count is sufficient but not optimal or practical.
+
+The producer intentionally imports and pins:
+
+  science_frontier/calibration/certify_calibration.py
+  science_extension/finite_detection/fixed_t_moments.json
+
+It also reads the original homogeneous-control moment polynomials. Preserve
+the existing relative directory structure when extracting the complete record.

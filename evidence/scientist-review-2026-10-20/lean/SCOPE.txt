@@ -1,0 +1,77 @@
+FOCUSED FORMALIZATION: CLAIM BOUNDARIES
+
+Both modules below compiled successfully with Lean 4.35.0. The combined
+leanchecker --fresh PhotonProofs run, including PhotonAlgebra and all imports,
+returned zero. verified_receipt.json pins the source manifest, compiled objects,
+and checked logs. All eleven printed theorem audits contain only propext,
+Classical.choice, and Quot.sound; no sorry or custom axioms occur in their
+dependency closures. A source file alone is not evidence of these checks.
+The default local-only replay also passed: it verified the pinned fresh receipt
+and recompiled both modules, as recorded in default_replay_receipt.json.
+
+PhotonAlgebra.lean formalizes these algebraic statements over the real numbers:
+1. The supplied factored polynomial
+   D4(x) = (455015761/20000) x^4 (1-x)^5 (x^3+3x^2+6x+6)
+   is strictly positive whenever 0 < x < 1.
+2. D4(1/4)=54510433152039/335544320000, and D4 vanishes at both endpoints.
+3. The exact selected detector's rational d and m=102399876723169 satisfy
+   0<d<=1 and m*d>=3. This is arithmetic, not a proof that d bounds a true MGF.
+4. For any real-valued functional of laws, an assumed difference equal to
+   eta^4 D4(x), eta>0 and 0<x<1, implies the two laws are unequal.
+   This implication is general and does not itself define probability laws.
+
+PhotonProofs.lean formalizes the following additional bridges:
+1. D4(exp(-s)) > 0 whenever s>0.
+2. The assumed fourth-factorial-moment integral identity implies that the two
+   count measures on the natural numbers differ.
+3. For independent measurable scores, integrable exponentials and individual
+   MGF bounds E exp(X_i) <= 1-d, 0<=d<=1, the budget card(s)*d>=3 implies
+   P(sum X_i >= 0) < 1/20. The proof uses mathlib's independence product and
+   exponential Markov theorems, plus a rational Taylor lower bound exp(3)>20.
+   It does not assume the desired bound for the full score sum.
+4. The same implication instantiated at the exact selected d and m above.
+
+The compiler emits one harmless unused-variable warning for the explicit hd0
+nonnegativity premise in the general score theorem. That premise remains in
+the theorem interface; the proof is accepted without using it.
+
+Explicit links outside this formalization:
+- reconstructing the 63-site geometries and phasors from the archived inputs;
+- deriving the Gaussian intensity moments and the displayed D4 identity;
+- proving first-three-moment matching and the Poisson factorial-moment identity,
+  including normalization, common background, and integrability in that model;
+- embedding the exact JSON rational enclosures and selected detector score into
+  the one-observation MGF premises of the theorem;
+- the physical validity of independent observations, conditional emissions,
+  stationarity, calibration, temporal dependence, and finite exposure models;
+- global blind-gain root counts, sample-size optimality, and practical feasibility.
+  The separate review package closes the global count of four positive blind
+  gains at the reference s=2 log(2), b=0 using arithmetic/Fourier certificates.
+  That new exact-count result is not among the Lean-formalized theorems here.
+
+For a two-structure score classifier, apply the generic upper-tail theorem to
+the score under one structure and to its negative under the other. That modeling
+specialization and tie convention must be supplied; they are not silently assumed.
+
+No full geometry-to-decision chain is claimed formally verified. No human peer
+review or external proof-kernel verification is claimed. Lean's fresh checker
+reuses the Lean kernel; it is a further check against environment manipulation,
+not an independent implementation of that kernel.
+
+Runtime provenance:
+Lean 4.35.0 official Windows release, matching mathlib v4.35.0 and its exact
+manifest-pinned source dependencies, is isolated under workspace/tool-runtime.
+The official release asset digest matched the downloaded archive. Downloads
+were completed before the user's later local-only instruction. A cache command
+was stopped while building its executable; subsequent library compilation uses
+local source and lake --no-cache. No global PATH or client settings were changed.
+An abandoned 4.19 setup exists separately under tool-runtime and is never used
+in the formal proof, manifest, or replay.
+
+Primary source references consulted before the local-only instruction:
+https://github.com/leanprover/lean4/releases/tag/v4.35.0
+https://github.com/leanprover-community/mathlib4/tree/v4.35.0
+https://lean-lang.org/doc/reference/latest/ValidatingProofs/
+https://github.com/leanprover/lean4checker
+The last repository's deprecation notice explains that leanchecker is included
+in Lean releases starting with v4.28.0. No external checker package is needed.

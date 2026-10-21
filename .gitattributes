@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.sh text eol=lf
+*.png -text
+*.svg text eol=lf
+# Scientific inventories identify exact bytes. Never normalize their payloads.
+/evidence/** -text
+/docs/** linguist-documentation

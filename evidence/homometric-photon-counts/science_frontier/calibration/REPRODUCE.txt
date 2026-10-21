@@ -1,0 +1,46 @@
+Run from the directory containing science_completion and science_frontier:
+
+  python3 science_frontier/calibration/certify_calibration.py
+  python3 science_frontier/calibration/independent_calibration_replay.py
+
+The first command verifies the exact polynomial identities and the analytic
+finite-sample example and writes calibration_certificate.json. It does not
+generate or claim observed data.
+
+For an actual histogram, create a JSON file with this schema:
+
+  {
+    "histogram": {"0": "INTEGER_MULTIPLICITY", "1": "INTEGER_MULTIPLICITY"},
+    "lambda_max": "8",
+    "cutoff": 64,
+    "tail_order": 32
+  }
+
+Replace all placeholder multiplicities with nonnegative integers or
+canonical decimal integer strings. Include every observed count value,
+including counts above the cutoff. Multiplicities of absent counts may be
+omitted. lambda_max must be a justified upper bound on the conditional
+Poisson rate, provided as an exact integer or rational/decimal string.
+It is a model/calibration input, not the largest count observed in the data.
+
+Then run:
+
+  python3 science_frontier/calibration/certify_calibration.py \
+    --histogram YOUR_HISTOGRAM.json --output YOUR_INFERENCE.json
+
+The output reports simultaneous moment intervals, calibration intervals,
+and surviving structure candidates. All interval endpoints are rational
+strings. 'unresolved' means the data and bound have not identified a unique
+structure. 'model_inconsistent' can result from model failure or the
+less-than-5-percent concentration failure event under the assumed model;
+it is not itself proof of a particular alternative model.
+
+For phase variance, transform an x interval [xL,xU] to
+[-log(xU),-log(xL)] using outward numerical rounding; xL=0 gives an infinite
+upper endpoint and xU=1 gives a zero lower endpoint. The certificate keeps
+x itself exact and does not label an ordinary floating-point logarithm as
+a certified endpoint.
+
+The complete assumptions and fixed-sample guarantee are in
+calibration_proof.txt. No actual physical measurement file accompanied
+this calculation.

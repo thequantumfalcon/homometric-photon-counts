@@ -1,0 +1,337 @@
+EXTERNAL REVIEW AND PHYSICAL TEST: CONCRETE HANDOFF
+20 October 2026
+
+Current status
+--------------
+The mathematics has internal AI-assisted derivations and reproducible exact
+arithmetic certificates. No external mathematical review has been performed.
+No physical measurements, apparatus selection, or physical calibration have
+been performed in this work. This document is a review and experimental
+protocol specification, not a report that those activities occurred.
+
+No messages have been sent and no resources have been committed. The
+documents below are ready to give to reviewers or an experimental team if
+the user later authorizes that handoff.
+
+PART A. EXTERNAL MATHEMATICAL REVIEW
+===================================
+
+1. Review package
+-----------------
+Provide the unmodified foundation, the exact phase/geometry definitions,
+moment-engine source and input hashes, and these focused new files:
+
+  science_frontier/calibration/calibration_proof.txt
+  science_frontier/tighter_testing/tighter_testing_proof.txt
+  science_frontier/global_separation/global_detector_and_width_proofs.txt
+  science_frontier/global_separation/global_blind_gain_proofs.txt
+  science_frontier/global_separation/blind_interval_certificate.json
+  science_frontier/motion_extensions/motion_extension_proofs.txt
+  science_frontier/review_and_experiment/priority_update.txt
+
+Include their generators and independent arithmetic replays. Reviewers
+should rebuild the input moments from the geometric definitions, rather
+than treating agreement between two scripts using the same cached moments
+as an independent derivation of those moments.
+
+2. Questions for a mathematical/statistical reviewer
+----------------------------------------------------
+R1. Reconstruct the clean homometry, common null, and exact structural
+power sums from the site coordinates. Check that the first-three-moment
+equality and fourth-moment coefficient follow for all finite positive
+Gaussian phase variances, not merely sampled widths. Check the distinction
+between a fourth intensity moment and a fourth spatial correlation.
+
+R2. Independently derive the shared Var(I) and kappa_3(I) polynomials.
+Check positivity of c2,c3, the derivative of C^2/V^3, all coefficients of
+2C'V-3CV', and the global inversion domain. Check the recovery of eta and b,
+the excluded boundary cases, and the fourth-factorial-moment structural gap.
+Under equicorrelated Gaussian motion, verify that only s_eff=s(1-rho) is
+identified, not s and rho separately.
+
+R3. Audit the finite-sample coverage event, falling-factorial tail bound,
+parameter-box inclusion, and structure rejection rule. Confirm that reuse
+of the same data for calibration and structure selection is covered by the
+single simultaneous event. Check the distinction between unconditional
+coverage/error control and conditional correctness after selection. Verify
+the finite existence example without describing m=10^36 as an optimal or
+practically realistic sample count.
+
+R4. Audit the tighter testing bounds against their precise experiment:
+known nuisance parameters, equal priors where stated, independent snapshots,
+finite count truncation with a rigorous tail, and outward numerical bounds.
+Identify exactly which results bound the optimal sample count and which
+would be needed to determine its exact integer value.
+
+R5. Check strict gain/background ordering and the infinite-gain argument.
+In particular, distinguish weak convergence of N/eta from the false claim
+of individual TV convergence to a continuous latent law. Audit the
+nondegenerate C^1 normalized-amplitude lemma used at small noise and the
+matching limiting covariance eigenvalues.
+
+R6. Independently replay the exact Bernstein interval certificate. For the
+global finiteness proof, check restricted analyticity at FIXED s, applicability
+of Cluckers-Miller Theorem 1.3 to the bounded sublevel integrand, absolute
+continuity of the intensity law, derivative definability, o-minimal finite
+sign changes, and the exponential-polynomial zero bound with multiplicity.
+Do not substitute arbitrary R_an,exp integration closure. Confirm that the
+proof gives no numeric global root count or effective final root cutoff.
+
+R7. Check projected-covariance equivalence, the complete admissible
+equicorrelation range, the two exact counterexamples to lower-moment
+cancellation, and the L8/TV robustness margins. Distinguish site dependence
+within a snapshot from temporal dependence across snapshots.
+
+R8. Compare the frozen claims with the primary literature, especially the
+full Ainsleigh and Barakat papers. Specify any theorem that already implies
+the exact result. Mathematical correctness and publication priority should
+receive separate assessments.
+
+Requested return format: for each R1-R8, report checked scope, a proof or
+counterexample for any disputed step, required changes, unresolved questions,
+and whether the reviewer independently ran the arithmetic. A reviewer may
+accept one component and leave another unresolved. An internal rerun or
+another AI response must not be relabeled external peer review.
+
+PART B. MEASUREMENTS AND MODEL CHECKS
+====================================
+
+3. Define the physical realization before choosing an apparatus
+--------------------------------------------------------------
+The mathematical observable is
+
+  I_G=|sum_(j=1)^63 z_Gj exp(i theta_j)|^2, 0<=I_G<=3969,
+  N | I_G ~ Poisson(b+eta I_G).
+
+The unit amplitudes, known structural phases, Gaussian residual phase law,
+and count kernel are substantive assumptions. The experimental team must
+state what physical quantity implements each term.
+
+Record whether the realization is a controlled phasor-sum demonstration,
+a displaced-scatterer system, or another specified platform. A successful
+phasor demonstration would validate that realization and its measurement
+model; it would not alone establish applicability to arbitrary materials.
+No particular platform, hardware, length scale, cost, or acquisition
+duration is assumed here.
+
+The foundation uses q0=pi/3 in its coordinate convention. For a spatial
+realization, supply the map from those coordinates to physical positions
+and the actual wavevector. The relevant phase error is
+
+  epsilon_j = q_actual . r_actual,j - q0 . r_target,j,
+
+after a removable common phase has been accounted for. A dimensionless
+coordinate tolerance is not a physical length tolerance until that map
+and its uncertainty are supplied.
+
+4. Required records
+-------------------
+Geometry/amplitudes:
+  Target and measured site coordinates or phases; site labels; complex
+  amplitude weights and their uncertainty; wavevector and acceptance
+  bandwidth; illuminated sites; and the measured clean-null residual.
+  Verify matching clean diffraction within stated resolution/uncertainty,
+  using a predetermined scan or equivalent calibrated characterization.
+  A finite scan supplies evidence within its coverage, not proof of an
+  exact all-frequency mathematical identity.
+
+Motion:
+  Site-resolved phase or displacement records where available; commanded
+  and achieved phase distributions; projected means and covariances;
+  site-to-site variation; time correlations; and changes during each
+  exposure. A common phase is unobservable in intensity. The relevant
+  Gaussian covariance is P C P with P=Id-11^T/63.
+
+Detector:
+  Raw nonnegative integer counts; timestamps; count-gate lengths; dead-time,
+  afterpulse, clipping and overflow flags if present; dark/reference runs;
+  gain and background calibration records with uncertainty; and evidence
+  for the permitted conditional rate range.
+
+Run organization:
+  Structure/control code, condition code, acquisition order, run/reset
+  identifier, external calibration version, source/intensity-monitor
+  information where available, and all exclusions with their reasons.
+  Preserve ordered raw observations; histograms alone lose temporal checks.
+
+5. Checks that distinguish the intended experiment from a different model
+------------------------------------------------------------------------
+5a. Equal amplitudes and common null.
+Determine whether measured unequal weights, phase offsets, or wavevector
+spread fit inside a justified perturbation model. The mathematical
+counterexamples show that arbitrarily small site-specific noise or geometry
+errors can create lower-moment differences. Observing such a difference
+does not by itself demonstrate the ideal fourth-order selection mechanism.
+
+The existing explicit robustness margin at s=log(2) applies to its stated
+coupling budget and preserves a fourth-moment distinction. It does not
+preserve exact lower-moment equality. Do not transfer its numeric tolerance
+unchanged to the t=1/2 reference, which has s=2 log(2).
+
+5b. Gaussian phase law and dependence.
+Compare measured circular Fourier coefficients E exp(i k theta_j) with
+exp(-k^2 s/2), with prespecified uncertainty bands and harmonic orders.
+For moments through I^4, individual phase harmonics through order four are
+directly relevant, but matching those marginals alone does not establish
+the joint law. Check cross-site dependence and projected covariance.
+Pure common motion is a decisive negative control: it leaves the clean-null
+intensity identically zero in the ideal model.
+
+If phase measurements are available only after wrapping, do not silently
+treat an arbitrary unwrapping as measured Gaussian covariance. State the
+circular model or justified phase-tracking procedure. If motion is
+equicorrelated, report an effective residual variance unless an independent
+measurement separates the common component.
+
+5c. Counts conditional on a fixed intensity.
+Use reference conditions with known or independently monitored fixed
+intensity to check mean-response linearity and the complete conditional
+count distribution over the intended range. The fluctuating signal's
+unconditional count variance can exceed its mean under the valid model;
+that alone is not evidence against conditional Poisson detection.
+Characterize background variation and dependence on the signal.
+
+A dark-count mean should not simply be subtracted from every integer count
+and then treated as a background-free Poisson observation. Use the actual
+Poisson-background model, or a separately derived valid transformation.
+The certified four-count blind gain assumes b=0; positive background
+requires a new prediction, not reuse of that number.
+
+5d. Motion during a gate and temporal independence.
+A detector generally responds to intensity integrated over its count gate.
+If the phase configuration changes appreciably during the gate, the latent
+variable is the integrated intensity rather than the snapshot I in the
+current theorem. Specify a regime justifying the frozen-snapshot model or
+derive the time-integrated replacement before interpreting moment ratios.
+Finite integration effects are an established issue in photon cumulant
+analysis [WM05 in priority_update.txt, equations 1-3].
+
+Check ordered phase and count records for serial dependence and drift.
+Use independently generated/reset snapshots when that independence is part
+of the procedure's justification. Shuffling a correlated sequence does not
+make the original information content independent. A fitted effective
+sample size or an insignificant autocorrelation test is not a replacement
+for a finite-sample bound under a specified dependence model.
+
+5e. Bounds used by the confidence procedure.
+The truncation procedure requires a justified deterministic rate bound B.
+With exact unit amplitudes, an independently justified range eta<=eta_max,
+b<=b_max gives B=b_max+3969 eta_max. A finite pilot's maximum observed
+count is not such a bound, because Poisson counts are unbounded.
+Uncertainty in any asserted calibration bound must be propagated or given
+its own coverage allocation.
+
+PART C. PREANALYSIS PROTOCOL
+============================
+
+6. Pilot and freezing the analysis
+---------------------------------
+Use pilot/calibration observations to assess whether the actual device can
+resolve the predicted gap and whether the count/motion model is adequate.
+Select the final regime using that pilot, then freeze the confirmatory
+protocol before viewing the structure comparison or blinded labels.
+
+The concrete reference t=1/2 (s=2 log 2), eta=1/512, b=0 is an exact
+mathematical benchmark, not an assertion that a device can attain it.
+Use measured feasible settings and regenerate prediction bounds for those
+settings. Do not call the benchmark globally optimal.
+
+Freeze the geometry/phase files and hashes; candidate models; physical-unit
+mapping; phase-width and gain ranges; gate length and reset schedule;
+calibration dataset; sample counts per condition; exclusion rules; count
+cutoff K and tail rule; exact/software precision; confidence allocation;
+model-check/equivalence margins; and stopping rule.
+
+An experimentalist must supply the attainable parameter range and noise/
+systematic-error budget before a realistic sample requirement can be
+computed. The mathematical m=10^36 existence certificate supplies no
+practical feasibility claim.
+
+7. Primary inference
+---------------------
+Prespecify the primary task as joint calibration and A/B identification
+for an independent blinded confirmatory sequence. Use the simultaneous
+four-factorial-moment confidence construction in calibration_proof.txt.
+Report the full parameter box and the surviving candidate set:
+
+  {A}: A retained alone;
+  {B}: B retained alone;
+  {A,B}: unresolved;
+  empty set: inconsistent with the tested model/confidence set.
+
+Do not force a binary decision when the prescribed procedure is unresolved.
+For each sequence, fit phase width/gain/background through moments 1-3 and
+use moment 4 for the structural check exactly as specified by the method.
+The mathematical confidence proof already handles dependence among the
+four estimated moments from the same observations.
+
+Use an overall prespecified false-exclusion budget, for example 0.05 for
+the family of confirmatory claims. If multiple structures, settings, or
+formal diagnostics receive inferential claims, allocate budgets alpha_j
+with sum alpha_j<=0.05 before acquisition. For the four bounded moment
+statistics in one sequence, the generic Hoeffding choice is
+
+  epsilon_j >= sqrt(log(8/alpha_j)/(2m_j)),
+
+with a rigorous upward enclosure, and the same stated truncation bounds.
+The existing hard-coded 95% example must be recomputed if its allocation
+changes. Do not combine several separate 95% outputs and call the joint
+result 95%.
+
+Use a fixed sample size. Optional continuation after inspecting a result
+requires a separately validated sequential procedure; ordinary fixed-sample
+coverage does not automatically survive repeated stopping decisions.
+
+8. Distribution and mechanism checks
+-------------------------------------
+Retain all count bins, including a declared overflow/tail bin. Calculate
+predicted bin probabilities across the nuisance confidence set and compare
+with simultaneous observed-bin intervals, with their own prespecified
+coverage allocation. A valid composite-model compatibility check retains
+the model if at least one admissible parameter vector fits all selected
+constraints; separate marginal interval overlaps alone need not imply a
+jointly feasible fit. Conservative outer boxes can yield 'unresolved'.
+
+For A/B comparison controls, randomize acquisition order and blind the
+analysis labels. Require the nuisance regime to be matched or model its
+differences explicitly. Test the predicted positive fourth-factorial-moment
+gap after that calibration. For the first three moments, define practical
+equivalence margins from metrology/model uncertainty beforehand. A
+nonsignificant difference does not prove exact equality.
+
+Prespecified secondary controls may include:
+  * repeated acquisition of the same geometry;
+  * no residual motion and a pure common-phase perturbation;
+  * a second calibrated finite phase width;
+  * a gain change that leaves the latent configuration and gate model fixed;
+  * the four-count sign change near its certified gain, only after the
+    actual background and gain uncertainty have been incorporated.
+
+These controls must not be selected post hoc for a favorable outcome.
+Changing exposure time can change the latent integrated-intensity law;
+the gain-monotonicity theorem alone does not justify that intervention.
+
+9. Interpretation and report
+----------------------------
+Publish or hand off the predetermined analysis, ordered raw observations,
+calibration records, exact model predictions and numerical error bounds,
+all exclusions, and results for every planned condition.
+
+Keep separate conclusions:
+
+* Mathematical result: the theorem follows under its stated assumptions.
+* Model adequacy: measured controls are compatible or incompatible with
+  specified tolerances; finite data cannot prove an exact distributional
+  assumption or arbitrary independence.
+* Identification: the calibrated confidence procedure retained one, both,
+  or neither structure at the declared error budget.
+* Physical scope: the tested realization, parameter range, and uncertainty.
+* Priority: the literature/referee comparison, independently of whether an
+  experiment agreed with the prediction.
+
+A successful physical result would be agreement within the planned
+uncertainties, including the discriminating distribution/moment prediction
+and the required controls. It would strengthen evidence for the specified
+model in that realization. It would not constitute a 100% universal proof,
+establish historical priority, or settle the unresolved global optimum and
+global blind-gain integer count.

@@ -1,0 +1,81 @@
+INDEPENDENT REVIEW AND REPLAY OF ORDER96 ROOT-COUNT EXTENSION
+2026-10-20 (America/Denver)
+
+Conclusion: PASS. The independent fresh-weight replay establishes all new
+point signs, both tightened third-root endpoint signs, and complete connected
+negative covers extending the prior exactly-three-root theorem to eta=1/6.
+Consequently there are exactly three positive four-count blind gains on
+(0,1/6], all simple, at t=1/2 and b=0. At least one further sign-changing
+blind gain is strictly above 1/6 by the existing four-root lower bound.
+No fourth root has been located and the exact global count remains unknown.
+
+Command actually run:
+ python continuation-2026-10-20/gain/independent_order96.py --fresh-weights
+
+The independent implementation uses the archived confluent Newton weights,
+positive exponential series followed by reciprocal enclosures, and interval
+Horner range bounds. It imports no producer arithmetic. Fresh weights were
+reconstructed from the order96 table and rational nodes for this run, then
+saved in a cache with hashes of moments, nodes, Newton source, and the new
+replay's own source. Default execution also reconstructs fresh weights.
+
+Connected negative interval checks
+==================================
+The independent Horner replay checked the producer's interval partition and
+refined it as needed. It verified:
+ [1/12,1/10]: 1 independent leaf;
+ [1/10,1/8]: 2 independent leaves;
+ [1/8,3/20]: 2 independent leaves;
+ [3/20,1/6]: 1 independent leaf.
+Every independent upper bound is strictly negative on its complete leaf.
+The verifier explicitly checks adjacency, endpoint coverage, and equality
+between the final covered endpoint and the claimed endpoint 1/6. Pointwise
+sign sampling is not used to fill gaps between covered intervals.
+
+The prior exactly-three theorem already covers (0,1/12]. The new intervals
+therefore add no roots and exclude roots at every newly included endpoint.
+Simplicity of the first three roots is inherited from their earlier local
+derivative certificates. There is no assertion that differentiating a
+pointwise interpolation bound produces a bound on the target derivative.
+
+Third-root bracket
+==================
+The new bracket is nested inside the already certified unique simple-root
+interval. Its decimal display is
+ [0.04465495517295058815894305027,
+  0.04465495517295058815915731948].
+The exact rational endpoints and independently evaluated signed F enclosures
+are recorded in gain/independent_order96_verification.json. The verifier
+requires a strictly positive lower bound at the left endpoint and a strictly
+negative upper bound at the right endpoint. Those checks passed.
+
+Point checks and limitations
+============================
+All nine saved point-enclosure signs were independently reproduced. Signs
+are strictly negative at 1/12,1/10,1/8,3/20,1/6. Enclosures at
+1/5,1/4,1/3,1/2 remain unresolved. No sign or root claim follows at those
+unresolved points. The producer's bounded subdivision strategy is a search
+limit, not a mathematical assertion of absence outside its proved cover.
+
+The producer lower F bound is lower R_A,4 minus upper R_B,4; its upper bound
+is upper R_A,4 minus lower R_B,4, where R_G,4=E_G[I^4 exp(-eta I)].
+At order96 the lower interpolant has 46 double nodes, degree91 and moments
+through95; the upper has zero plus46 double nodes, degree92 and moments
+through96. Hermite remainder signs are global on nonnegative intensity, so
+rational node approximation quality affects sharpness only.
+
+Shared dependency: both downstream calculations use the same exact order96
+moment table and the prior root-count certificate. This replay changes the
+interpolation, exponential and interval-range arithmetic; it does not supply
+a second independent moment derivation through order96. It is not external
+human peer review, experimental validation, or proof-assistant formalization.
+
+Reproduction integration
+========================
+The isolated continuation runner includes this fresh-weight independent
+replay whenever the preserved order96 extension certificate exists. It
+checks preserved integrity before and after, saves regenerated outputs, and
+restores only disposable producer-certificate input bytes after comparing
+their mathematical fields so downstream provenance pins remain valid.
+Optional rebuilt order96 moment comparison explicitly lifts CPython's digit
+conversion limit for the trusted exact rational strings.

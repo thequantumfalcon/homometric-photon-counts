@@ -1,0 +1,439 @@
+HOMOGENEOUS IID GAUSSIAN DISPLACEMENT: AN EXACT DISTRIBUTION-LEVEL CONTROL
+Date: 2026-10-20
+
+STATUS AND SCOPE
+
+This is a new exact derivation for the point-set definitions below. It does
+not rely on a recovered historical certificate. It establishes a mathematical
+statement inside an ideal scattering model, not an experimental observation
+or publication-priority claim. Its conclusions were checked with exact
+rational arithmetic, including two independent moment-computation methods.
+
+The central result is stronger than a control that assigns different local
+variance profiles to the two structures. Here every raw displacement has the
+same Gaussian distribution, every centered displacement has the same marginal
+variance, and the entire centered displacement covariance matrix is identical
+for the two structures. The clean homometry preserves the mean intensity at
+every frequency and every noise level. At the selected clean amplitude null,
+the first three raw intensity moments also match exactly. Nevertheless, the
+fourth intensity moment differs at every finite positive noise level.
+
+1. GENERAL THEOREM
+
+Let A and B be finite point sets with the same number n of unit-weight sites.
+For a real observation frequency q, define
+
+  z_(X,j) = exp(i q x_(X,j)),
+  M_(X,k) = sum_j z_(X,j)^k,
+  F_X(s) = sum_j z_(X,j) exp(i sqrt(s) Z_j),
+  I_X(s) = |F_X(s)|^2,
+
+where X is A or B, s>=0, and the Z_j are independent N(0,1) variables. The
+displacement mechanism is identical at every site of both structures. Put
+
+  t = exp(-s/2).
+
+Assume:
+
+  (i)  M_(A,1)=M_(B,1)=0;
+  (ii) |M_(A,k)|=|M_(B,k)| for k=2,3,4.
+
+Condition (ii) follows, in particular, when the clean point sets are
+homometric at all frequencies. Define
+
+  D = Re[M_(A,4) conjugate(M_(A,2))^2]
+      - Re[M_(B,4) conjugate(M_(B,2))^2].
+
+Then, exactly for all s>=0,
+
+  E[I_A(s)^p] = E[I_B(s)^p],  p=0,1,2,3,
+
+and
+
+  E[I_A(s)^4] - E[I_B(s)^4]
+    = 6 kappa_(4,0)(t) kappa_(2,0)(t)^2 D,
+
+where
+
+  kappa_(2,0)(t) = t^4 - t^2,
+
+  kappa_(4,0)(t)
+    = t^16 - 4 t^10 - 3 t^8 + 12 t^6 - 6 t^4
+    = t^4 (t^2-1)^3 (t^6+3t^4+6t^2+6).
+
+Consequently, if D is nonzero, the intensity distributions are different for
+every finite s>0. The sign of the fourth-moment difference is -sign(D).
+This is a sufficient condition, not a characterization of every homometric
+pair. A pair with D=0 might still differ in higher moments or at other
+frequencies; this theorem does not decide that case.
+
+The invariant in D is a real diagonal bispectral invariant of the CLEAN
+structure. With Fourier convention M_k=F_clean(kq), it is the real part of
+the conjugate of M_2^2 conjugate(M_4). It is third order in structural Fourier
+amplitudes. The observed statistic I^4 is the fourth intensity moment and
+the eighth field moment. These orders must not be conflated.
+
+2. PROOF OF THE GENERAL THEOREM
+
+2.1 Single-site moments and cumulants
+
+Let w=exp(i sqrt(s) Z), Z~N(0,1). The Gaussian characteristic function gives
+
+  mu_(a,b) = E[w^a conjugate(w)^b]
+           = exp[-s(a-b)^2/2] = t^((a-b)^2).
+
+Use the formal bivariate cumulants kappa_(a,b) defined by the coefficients of
+log E[exp(u w + v conjugate(w))]. Because |w|=1, the generating function
+exists near the origin and the usual moment-cumulant identities apply.
+
+For a deterministic unit complex number z, the mixed cumulant of a copies
+of zw and b copies of conjugate(zw) is
+
+  z^(a-b) kappa_(a,b).
+
+Independence makes cumulants additive. Thus the sum F_X has mixed cumulants
+
+  K_(X,a,b) = kappa_(a,b) M_(X,a-b),
+
+where M_(X,0)=n and M_(X,-k)=conjugate(M_(X,k)). Since each mu_(a,b) is real
+and symmetric in a,b, so is kappa_(a,b).
+
+The pure second and fourth cumulants are the ordinary algebraic cumulants
+of w:
+
+  kappa_(2,0)=mu_(2,0)-mu_(1,0)^2=t^4-t^2;
+
+  kappa_(4,0)=mu_(4,0)-4 mu_(3,0)mu_(1,0)-3 mu_(2,0)^2
+             +12 mu_(2,0)mu_(1,0)^2-6 mu_(1,0)^4.
+
+Substitution gives the formulas in the theorem, including the displayed
+factorization. The factorization can be verified by multiplying out.
+
+2.2 Classification of all structural factors through intensity order four
+
+Expand E[F_X^p conjugate(F_X)^p] by partitions of p labelled positive slots
+and p labelled negative slots. A block with a positive and b negative slots
+contributes kappa_(a,b) M_(X,a-b). Call a-b its charge.
+
+All charges sum to zero. A block of charge +1 or -1 contributes zero because
+M_(X,1)=0. Charge-zero blocks contribute the common factor n. The total
+positive charge is at most p, since it cannot exceed the total number of
+positive slots. The same statement holds for the absolute negative charge.
+
+For p<=3, nonzero surviving charges are only a matched pair (+2,-2) or
+(+3,-3), with possible additional zero-charge blocks. The structural factors
+therefore depend only on n, |M_2|^2, and |M_3|^2. They agree for A and B.
+
+For p=4, the complete list of nonzero charge multisets is
+
+  empty;
+  (+2,-2), (+3,-3), (+4,-4);
+  (+2,+2,-2,-2);
+  (+4,-2,-2), (-4,+2,+2).
+
+Zero-charge blocks may occur where the slot budget permits. The first five
+types depend only on n and magnitudes |M_k| and thus cancel in A minus B.
+
+For charge multiset (+4,-2,-2), all eight slots have already been used:
+the +4 block contains the four positive slots, and the two -2 blocks split
+the four negative slots into two unordered pairs. There are exactly three
+such pairings. Its contribution is
+
+  3 kappa_(4,0) kappa_(0,2)^2 M_4 conjugate(M_2)^2.
+
+The conjugate charge multiset contributes its complex conjugate. Their sum
+is 6 kappa_(4,0) kappa_(2,0)^2 Re[M_4 conjugate(M_2)^2].
+Subtracting the two structures proves the identity.
+
+For 0<t<1, kappa_(2,0)^2>0 and kappa_(4,0)<0. Hence D!=0 gives a strictly
+nonzero fourth-moment gap for every finite positive s. The intensities lie
+in [0,n^2], so identical laws would have identical fourth moments. This proves
+distributional nonidentity.
+
+3. THE CONCRETE 63-SITE HOMOMETRIC PAIR
+
+Set
+
+  theta = arcsin(1/(5 sqrt(3))),
+  phi   = -arcsin(1/(8 sqrt(3))),
+  a = 3 theta/pi,  b = 3 phi/pi.
+
+Define the 21-site motif U by
+
+  U = {3j+1+(-1)^j a : j=0,...,9}
+      union {3j+delta_j : j=0,...,9}
+      union {30},
+
+where delta_0=delta_1=0 and delta_j=(-1)^j b for j=2,...,9. Let
+
+  V_A = {0,31,63},  V_B = {0,32,63}=63-V_A,
+  A=U+V_A,  B=U+V_B.
+
+The motif lies in [0,30]; its listed sites are distinct. The translates are
+disjoint, so each point set has n=63 sites. One can see the distinctness
+without numerical rounding: 0<a<1/4 and -1/4<b<0, and the base positions
+within U have integer spacing at least one.
+
+For any real q, let F_S(q)=sum_(x in S) exp(i q x). Then
+
+  F_A(q)=F_U(q) F_VA(q),
+  F_B(q)=F_U(q) exp(i 63q) conjugate(F_VA(q)),
+
+so |F_A(q)|=|F_B(q)| for every real q. This proves clean homometry directly.
+
+Now choose omega=pi/3 and define M_(X,k)=F_X(k omega). Exact phase arithmetic
+uses
+
+  cos(theta)=sqrt(222)/15, sin(theta)=sqrt(3)/15,
+  cos(phi)=sqrt(573)/24,   sin(phi)=-sqrt(3)/24,
+
+and the sixth roots of unity for the integer base positions. The required
+power sums simplify to the smaller field Q(i sqrt(3)):
+
+  M_(A,1)=M_(B,1)=0;
+
+  M_(A,2)=71/40 + i (413/40) sqrt(3),
+  M_(B,2)=131/8 + i (171/40) sqrt(3);
+
+  M_(A,3)=-1 + i (1183/400) sqrt(3),
+  M_(B,3)= 1 - i (1183/400) sqrt(3);
+
+  M_(A,4)=123901/48000 - i (470783/48000) sqrt(3),
+  M_(B,4)=6145/384 - i (173441/48000) sqrt(3).
+
+In particular |M_(A,2)|^2=|M_(B,2)|^2=129187/400. Multiplying the exact
+expressions gives
+
+  Re[M_(A,4) conjugate(M_(A,2))^2] = -455015761/240000,
+  Re[M_(B,4) conjugate(M_(B,2))^2] = +455015761/240000,
+
+and therefore
+
+  D = -455015761/120000.
+
+This real invariant is unchanged by any common spatial translation or
+reflection of a point set: translation phases cancel, and reflection
+conjugates the product without changing its real part. Its unequal values
+also give an exact certificate that A and B are not related by a translation
+or reflection.
+
+The general theorem now gives the explicit, strictly positive factorization
+
+  Delta_4(t) := E[I_A^4]-E[I_B^4]
+    = (455015761/20000) t^8 (1-t^2)^5 (t^6+3t^4+6t^2+6),
+
+for every 0<t<1. This is the first differing raw intensity moment at the
+chosen frequency: moments of orders one, two, and three are exactly equal.
+Since the first three raw moments agree, the fourth central moments and
+the fourth cumulants differ by the same amount.
+
+4. WHY THE DISPLACEMENT CONTROL IS IDENTICAL
+
+Give every site, in either structure, an independent displacement
+xi_j~N(0,sigma^2), using the same sigma^2. Optional centering is
+
+  u_j=xi_j-bar(xi),  P=Id-11^T/n.
+
+Its covariance is sigma^2 P in either structure. Every marginal is
+N(0,sigma^2(n-1)/n), every off-diagonal covariance is -sigma^2/n, and the
+centered mean square displacement parameter is
+
+  v=trace(Cov(u))/n=sigma^2(n-1)/n.
+
+Centering multiplies the complex field by exp(-i q bar(xi)), whose modulus
+is one, so it leaves the intensity unchanged for every realization.
+
+At omega=pi/3 and n=63,
+
+  s=omega^2 sigma^2 = (7 pi^2/62) v,
+  t=exp(-s/2)=exp(-7 pi^2 v/124).
+
+For any observation frequency q, the independent-noise characteristic
+function yields
+
+  E[I_X(q)] = n(1-exp(-q^2 sigma^2))
+              + exp(-q^2 sigma^2) |F_X(q)|^2.
+
+Clean homometry therefore gives exactly equal ensemble means for ALL real
+frequencies and ALL nonnegative noise variances. At omega the null reduces
+the common mean to n(1-t^2).
+
+This theorem isolates a difference in clean structural phase information
+under one common noise law. It does not attribute the gap to different
+local variance profiles, to graph-dependent covariance, or to differing
+centered single-site marginals: none of those differences is present here.
+
+5. EXPLICIT FINITE-NOISE WITNESSES AND TOTAL-VARIATION LOWER BOUNDS
+
+Use total variation TV(P,Q)=sup_E |P(E)-Q(E)|. For any measurable f taking
+values in [0,1], |E_P f-E_Q f|<=TV(P,Q). Since 0<=I<=n^2, f(I)=I^4/n^8
+gives the exact lower bound
+
+  TV(Law(I_A),Law(I_B)) >= Delta_4(t)/n^8 > 0.
+
+The equality of the first three moments gives an improved bounded
+polynomial witness. Put y=I/n^2 in [0,1] and
+
+  f(y)=(1+T_4(2y-1))/2
+      =64 y^4-128 y^3+80 y^2-16 y+1,
+
+where T_4(x)=8x^4-8x^2+1=cos(4 arccos(x)) on [-1,1]. Thus 0<=f<=1. The
+lower-order moment terms cancel, giving
+
+  TV(Law(I_A),Law(I_B)) >= 64 Delta_4(t)/n^8.
+
+The factor 64 is optimal WITHIN the class of polynomials of degree at most
+four taking values in [0,1] on the full allowed normalized intensity interval
+[0,1]. To prove this, let g(y) have leading coefficient a_4 and put
+p(x)=2g((x+1)/2)-1, so |p(x)|<=1 on [-1,1] and its leading coefficient is
+a_4/8. Suppose first a_4>64. Then alpha=a_4/64>1 and
+h(x)=p(x)-alpha T_4(x) has degree at most three. At the five successive
+extrema x_j=cos(j pi/4), T_4(x_j)=(-1)^j and |p(x_j)|<=1<alpha. Thus h
+alternates strictly in sign at these five points and must have at least
+four distinct zeros, a contradiction. Replacing p by -p handles a_4<-64.
+Therefore |a_4|<=64. The expectation contrast of g is a_4 Delta_4/n^8
+because its lower-order terms cancel. The displayed Chebyshev polynomial
+attains the bound. This is NOT optimality over all bounded test functions,
+over the full total variation, or over physical experiments.
+
+At t=1/sqrt(2), equivalently
+
+  s=log(2),  v=62 log(2)/(7 pi^2),
+
+the exact gap is
+
+  Delta_4 = 35946245119/81920000 = 438.79693748779296875,
+
+and the improved total-variation bound is
+
+  TV >= 35946245119/317639398742426880000
+     approximately 1.1316683403039915 * 10^(-10).
+
+At t=1/2, equivalently s=2 log(2) and v=124 log(2)/(7 pi^2),
+
+  Delta_4 = 54510433152039/335544320000
+          = 162.45375022899806499481201171875,
+
+  TV >= 224322770173/5354119247938191360000
+     approximately 4.1897230858162913 * 10^(-11).
+
+The second point was additionally checked by direct site-by-site exact
+moment convolution, independently of the cumulant calculation. The first
+point is an exact rational evaluation of the independently checked moment
+polynomial because it contains only even powers of t.
+
+These bounds are deliberately interpreted as certificates of nonidentity.
+Their numerical size does not certify practical detectability, a useful
+classification accuracy, or an affordable sample size. They are lower
+bounds, not estimates of the actual total variation.
+
+6. SMALL-NOISE AND HIGH-NOISE LIMITS
+
+Writing x=t^2=exp(-s),
+
+  Delta_4(s)=(455015761/20000) exp(-4s) (1-exp(-s))^5
+             * [exp(-3s)+3exp(-2s)+6exp(-s)+6].
+
+Therefore
+
+  Delta_4(s)=(455015761/1250) s^5 + O(s^6), as s down to zero,
+
+and
+
+  Delta_4(s)=(1365047283/10000) exp(-4s) [1+o(1)], as s to infinity.
+
+Both endpoint gaps vanish. Strict positivity holds at every finite s>0,
+which is compatible with equality of the limiting distributions.
+
+In particular the leading small-noise distribution is the SAME for A and B
+in this homogeneous control. The linearized complex field has covariance
+n and pseudocovariance of modulus |M_2|. Homometry makes |M_2| equal, so
+both limits are the same weighted two-degree Gaussian square law. The new
+distinction occurs beyond that leading Gaussian approximation; the fourth
+moment gap is of order s^5 while each fourth moment begins at order s^4.
+
+At high noise the independent wrapped Gaussian phases approach independent
+uniform phases, giving the same finite-n uniform-phasor intensity law for
+both structures. There is no contradiction with a nonzero gap at all finite
+positive s.
+
+7. FIFTH-MOMENT CONTROL FOR SUBSEQUENT DETECTOR ANALYSIS
+
+At a clean null, centering the phase vector changes no intensity. For a
+standard real Gaussian vector Z in R^n,
+
+  I(s)=|sum_j z_j [exp(i sqrt(s) (PZ)_j)-1]|^2
+      <= n sum_j |exp(i sqrt(s) (PZ)_j)-1|^2
+      <= n s ||PZ||^2.
+
+The first inequality is Cauchy-Schwarz, and the second uses
+|exp(i x)-1|<=|x|. Since P is an orthogonal projector of rank n-1,
+||PZ||^2 has the chi-square distribution with n-1 degrees of freedom. Its
+fifth raw moment is product_(j=0)^4(n-1+2j). Consequently each structure
+satisfies
+
+  E[I_X(s)^5] <= n^5 s^5 product_(j=0)^4(n-1+2j).
+
+The sum for A and B is bounded by twice this expression. This elementary
+bound uses the same s=raw Gaussian phase variance as the exact factorization.
+
+The accompanying JSON also records exact individual intensity-moment
+polynomials through order five, their sums and differences, and evaluations
+at both finite-noise witnesses. No detector theorem is asserted here; that
+analysis should state its observation model separately.
+
+The exact fifth-moment sum has small-noise expansion
+
+  E[I_A(s)^5]+E[I_B(s)^5]
+    = (1081761176507823/3200) s^5 + O(s^6).
+
+All coefficients of s^0 through s^4 vanish exactly. The leading coefficient
+also equals 240 n^5+1200 n^3 R+450 n R^2 with n=63 and R=129187/400,
+as obtained from the common Gaussian linearization.
+
+For assessing the particular Chebyshev witness, the JSON additionally
+records exact intensity moments through order eight at t=1/2 and the exact
+mean and variance of f(I/n^2). These were calculated by fixed-t cumulant
+recursion. The moments through order five additionally agree with the
+independent direct-site method. The higher moments are not represented as
+an independent experimental or sampling verification.
+
+8. REPRODUCTION AND VERIFICATION
+
+Run:
+
+  python homogeneous_control.py
+
+Only the Python standard library is required. The script writes
+homogeneous_control_results.json beside itself. It does all of the following
+with exact Fraction arithmetic:
+
+  * Rebuilds all 63 phases for each point set from the displayed definition.
+  * Verifies unit modulus, exact amplitude nulls, and equal |M_k| through k=5.
+  * Evaluates the diagonal bispectral invariants exactly.
+  * Generates single-site mixed cumulants from mu_(a,b)=t^((a-b)^2).
+  * Reconstructs all intensity moments through order five by the
+    distinguished-block moment-cumulant recursion.
+  * Checks that differences through order three vanish as polynomials.
+  * Checks the fourth-moment difference against its claimed factorization.
+  * Checks every computed moment through order five at t=1/2 using a second
+    method: direct convolution of all individual-site mixed moments.
+
+The direct method expands (F+zw)^a(conjugate(F)+conjugate(z)conjugate(w))^b
+at each added site. It does not use cumulants or the precomputed power sums.
+Agreement is exact, not a floating-point tolerance test or Monte Carlo fit.
+
+For reference, the recursion used for the first method is, for a>=1,
+
+  H_(a,b) = sum_(i=1)^a sum_(j=0)^b
+            binom(a-1,i-1) binom(b,j) K_(i,j) H_(a-i,b-j),
+
+where H_(0,0)=1 and H_(a,b)=E[F^a conjugate(F)^b]. If a=0, use the
+one-variable version with a distinguished negative slot. Solving the same
+identity for the single-site cumulant yields the kappa recursion. Every
+factor and combinatorial multiplicity follows from the block containing
+one fixed labelled slot.
+
+All reported polynomials, exact rational witness values, and the source
+SHA-256 are retained in the JSON. Decimal values describe already certified
+rational numbers; the proof of positivity is the exact factorization.

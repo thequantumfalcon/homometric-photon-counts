@@ -1,0 +1,19 @@
+{
+  "signed_packing_matches_direct_convolution": true,
+  "cases": 12,
+  "orders": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "coefficient_bit_sizes": [
+    3,
+    30,
+    129
+  ],
+  "exact_geometry_multiset_A": true,
+  "exact_geometry_multiset_B": true,
+  "verifier_sha256": "6e474092c97c97329bb6bee94e217ab674e7649568c2d10e98f0a0ece16887c6",
+  "engine_sha256": "06e37a3d0e08340fcc23e6461e7e35a65b9e5943ada1cab87088164f5ddf8a68"
+}

@@ -1,0 +1,107 @@
+REPORT CONSISTENCY REVIEW
+20 October 2026
+
+VERDICT: PASS after the wording corrections recorded below.
+
+Reviewed report:
+  science_frontier/science_frontier_report.tex
+  SHA256 3fbcb91399b55a7570810ec13ee1647d030a1498defbbd8121462733808cedfe
+
+This review checks scientific consistency with the detailed frontier proofs,
+certificates, and separate reviews. It is not a new computational test,
+layout inspection, external peer review, or proof-assistant verification.
+No report text was modified by this reviewer.
+
+REFERENCE POINTS
+---------------
+The report correctly distinguishes the parameterizations
+t=exp(-s/2) and x=exp(-s)=t^2. The blind-interval and known-calibration
+sample certificates use t=1/2, x=1/4, s=2 log 2. The joint-calibration
+finite example has the same width and gain, but background b=1/100 rather
+than zero. The motion-robustness certificate instead uses s0=log 2,
+x=1/2. These reference points and their numerical constants are not
+conflated.
+
+GLOBAL CLAIMS
+-------------
+The detector ordering is stated for ideal Poisson separation per snapshot,
+without an unstated physical resource objective. The infinite-gain result
+is a supremum, unattained at finite gain; the interior-width result is an
+existence theorem, not a computed maximizing width, value, or uniqueness
+theorem. The small-noise TV argument retains its normalized amplitude and
+rank-two hypotheses. It does not infer TV convergence from weak convergence
+to a point mass.
+
+The global blind-gain result is correctly stated as finiteness at each
+fixed positive Gaussian variance and zero background. The exactly-one
+result is restricted to (0,1/128] at t=1/2. Additional roots above that
+interval and the total global integer remain explicitly unresolved.
+The report keeps the integration-stability and o-minimality dependencies
+separate from the elementary Laplace-transform argument.
+
+KNOWN-CALIBRATION SAMPLE CLAIMS
+------------------------------
+The exact integer endpoints agree with the independently replayed
+certificate:
+
+  112606153000000001 <= m_* <= 112608396000000000.
+
+The displayed decimal success bounds round in the safe direction. The
+lower endpoint follows from strict failure at the preceding integer and
+monotonicity of actual optimal success. The upper endpoint is attained
+as a guarantee by the supplied rational-score rule. The tail transfer,
+Berry--Esseen allowance, known-model assumption, independent snapshots,
+and equal-prior average-success target are retained. The exact optimal
+integer remains unknown; separate 95% guarantees for each structure are
+not asserted.
+
+CALIBRATION SCOPE
+-----------------
+The first-three-moment inversion is a global population result within
+the stated centered Gaussian phase family and nondegenerate domain.
+It does not identify arbitrary phase laws or site-specific noise.
+The finite confidence procedure assumes a justified known rate ceiling,
+uses one simultaneous event, and may report unresolved. Its guarantee is
+unconditional and for a fixed sample size, not conditional-on-selection
+confidence or optional-stopping validity.
+
+The m=10^36 certificate is correctly restricted to the stated interior
+example, with B=8, K=64, q=32, x=1/4, eta=1/512, b=1/100. The true
+calibration is used to certify performance, not supplied to the inference
+algorithm. Its conservative sample scale is not described as optimal or
+practical. The displayed parameter-width bounds agree with the detailed
+certificate. The asymptotic variant explicitly increases both cutoff and
+arithmetic resolution; fixed finite-example precision is not presented
+as an unlimited-sample implementation.
+
+MOTION AND ROBUSTNESS
+--------------------
+The report distinguishes dependence between sites from dependence across
+snapshots. Projected Gaussian parameters are sufficient distributional
+descriptors, not a claim that all covariance entries are identifiable.
+The equicorrelation equivalence now explicitly requires centered phases
+or P mu=0. The lower-moment counterexamples and the conservative positive
+fourth-moment margins match the detailed motion proof. Robust distinction
+is not confused with preservation of exact lower-moment equality.
+
+CORRECTIONS FOUND AND OBSERVED RESOLVED
+-------------------------------------
+1. Replaced wording that called the approximately 1.126e17 sample count
+   exact with wording describing the certified sample requirement.
+2. Added centered-phase / P mu=0 qualifications to equicorrelation and
+   effective-variance calibration, with corresponding detailed motion
+   and calibration-proof clarification.
+3. Added the nonzero-almost-everywhere premise to the compressed Laplace
+   zero-count lemma. The actual signed density meets it because D4>0.
+4. Clarified that the heterogeneous means are phase-factor means, and
+   that 0<m,m+d<1 permits their realization by centered Gaussian site
+   variances.
+5. Explicitly restricted the variance/stddev robustness rows to centered
+   Gaussian phases, consistent with their coupling proof.
+
+All five corrections were observed in the report snapshot identified
+above. They clarify assumptions and claim strength; none changes a
+certified numerical conclusion. No remaining material inconsistency was
+found within this review's scope. The report appropriately leaves the
+unresolved mathematical optimization/count questions, external human
+review, complete historical priority, and physical validation open.

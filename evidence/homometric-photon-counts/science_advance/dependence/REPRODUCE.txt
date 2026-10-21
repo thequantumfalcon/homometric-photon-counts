@@ -1,0 +1,28 @@
+From the workspace root:
+
+  python3 science_advance/dependence/certify_temporal_dependence.py
+
+Python standard library only. No random seed, simulation, or observed data.
+The producer reads and pins, but never rewrites, the saved iid certificate:
+  science_frontier/tighter_testing/tighter_testing_certificate.json
+  SHA256 33d9ba4b07a859d6d84a28e3c8b47884c6e266b7098447f19840b634b43fc3e1
+
+Output:
+  temporal_dependence_certificate.json
+
+Read temporal_dependence_proofs.txt for the general path-KL and covariance
+proofs. The numerical certificate covers the listed five AR coefficient
+bounds and transfers BOTH iid endpoints to the indicated thinned
+experiments. It does not determine the exact optimal sample integer.
+It also certifies a separate all-consecutive bounded-score rule with
+2372403589637318817 observations sufficient for at least 95% success
+under each geometry when |a|<=1/2. Its exact new midpoint threshold is
+in the output; its weights are the saved iid weights with score zero
+assigned to counts exceeding 24. This bound is not claimed optimal.
+
+For consecutive-data calibration, apply the adjacent calibration code's
+fixed-sample variance-inflation option to all three groups. In the specified
+AR(1) model a_max=1/2 gives inflation 3; multiplying both group sizes by 3
+preserves the iid radii. The final certificate's iid sizes are
+[10^10,10^18,10^20], giving [3*10^10,3*10^18,3*10^20] for this dependent
+model and a total of 303000000030000000000 consecutive observations.

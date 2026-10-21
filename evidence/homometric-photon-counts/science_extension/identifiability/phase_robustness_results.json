@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reference_phase_variance": "log(2)",
+  "complex_structural_difference": {
+    "real": "-455015761/120000",
+    "imaginary_sqrt3_coefficient": "28907930179/4800000"
+  },
+  "squared_modulus": "2838268230115271509723/23040000000000",
+  "strict_modulus_upper_bound": 11200,
+  "maximum_single_site_fourier_moment_error_orders_1_to_4": "1/100000",
+  "reference_fourth_moment_gap": "35946245119/81920000",
+  "certified_perturbed_gap_lower_bound": "29505367039/81920000",
+  "exact_decimal_lower_bound": "360.17293748779296875",
+  "sufficient_single_site_total_variation_bound": "1/200000",
+  "analytic_coefficient_lipschitz_bound": "117*delta",
+  "gap_lipschitz_bound": "702*abs(T)*delta",
+  "scope": "Exact arithmetic under the analytically proved common-iid-phase perturbation bound; not a maximal tolerance or an experimental error budget.",
+  "source_sha256": "c20290f9f8fe63d08407785edde998f63483c5dfe605b538938284b26aca980f",
+  "geometry_engine_sha256": "277f479dd170493e1977ab2a3aedcbe658ecdf22bcbe34a39ea6891a0c0aa13a"
+}

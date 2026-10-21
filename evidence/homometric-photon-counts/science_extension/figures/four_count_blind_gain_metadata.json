@@ -1,0 +1,37 @@
+{
+  "schema": "scientific-figure-render-metadata-v1",
+  "matplotlib_version": "3.10.8",
+  "exact_data_file": "four_count_blind_gain_data.json",
+  "exact_data_sha256": "96277c19171d1f55891fb2e4d0c1ffcc969b7b2de79d7c34f6c363a2a72aa8f9",
+  "source_sha256": "b2ff0a6aea630520144c0844e67dd53d3b8fe1407e6e1f7486237159bcc53336",
+  "figure_size_inches": [
+    10.6,
+    4.65
+  ],
+  "PNG_dpi": 300,
+  "grid_sample_count": 51,
+  "visual_inspection": "PASS: producing agent inspected the complete final PNG after moving the finite-gain annotation clear of the blind-gain line; axes, signs, labels, log-scale panel, ratio, and explanatory scope note are readable without overlap.",
+  "scientific_scope": "The parent finite-detection proof and certificate establish the claims; plotting does not supply a new proof.",
+  "outputs": {
+    "png": {
+      "file": "four_count_blind_gain.png",
+      "bytes": 284853,
+      "sha256": "5e74b0f1f6745ed39a5f9dbc7ac9b7a3c81dbfe948b074d4303ec66db117f091"
+    },
+    "pdf": {
+      "file": "four_count_blind_gain.pdf",
+      "bytes": 32653,
+      "sha256": "058eb39e8f93af28c76a238054e360148663822a009c5ceb750a9166df14b249"
+    },
+    "svg": {
+      "file": "four_count_blind_gain.svg",
+      "bytes": 117279,
+      "sha256": "c48533909cfdcc1c97d21812824c6a1379709483b89547b1c06627077d3f278a"
+    }
+  },
+  "PNG_dimensions_pixels": [
+    3180,
+    1395
+  ],
+  "PDF_pages": 1
+}

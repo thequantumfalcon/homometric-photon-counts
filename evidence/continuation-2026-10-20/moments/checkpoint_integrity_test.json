@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "negative_exit_code": 1,
+  "diagnostic": "Checkpoint digest mismatch",
+  "restored_exact_original_bytes": true,
+  "positive_exit_code": 0,
+  "cache_sha256": "f90b20aca5103d69f8b4cef2f3edca961818751cde63f8cae35e71fe944b5af5"
+}
