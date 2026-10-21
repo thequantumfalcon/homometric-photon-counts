@@ -6,6 +6,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Use a supported math macro for the Poisson distribution in GitHub's README renderer.
 - Canonicalize the extraction root before checking ZIP member containment, so Windows temporary-directory aliases do not reject safe packaged files. Traversal checks remain enforced before extraction.
 
 ### Added

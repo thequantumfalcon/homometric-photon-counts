@@ -21,7 +21,7 @@ For the longer Arb reconstruction, follow the [reproduction guide](docs/reproduc
 
 Write $t=\exp(-s/2)$, where $s>0$ is the phase variance. For fixed unit phasors $z_{G,j}$, independent standard normal variables $Z_j$, gain $\eta>0$, and common background $b\geq0$,
 
-$$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim\operatorname{Poisson}(b+\eta I_G).$$
+$$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim\mathrm{Poisson}(b+\eta I_G).$$
 
 | Result | Precise scope |
 | --- | --- |
