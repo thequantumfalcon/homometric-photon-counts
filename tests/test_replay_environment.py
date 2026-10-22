@@ -1,5 +1,6 @@
 """Exercise actual subprocess imports after a caller-relative runtime is selected."""
 
+from contextlib import chdir
 import os
 from pathlib import Path
 import subprocess
@@ -21,8 +22,12 @@ class ReplayEnvironment(unittest.TestCase):
             (runtime / "runtime_probe.py").write_text("VALUE = 78231\n")
             child = root / "unrelated-child-directory"
             child.mkdir()
-            relative = os.path.relpath(runtime, Path.cwd())
-            with patch.dict(os.environ, {"PHOTON_FLINT_RUNTIME": relative, "PYTHONOPTIMIZE": "1"}):
+            # The checkout and system TEMP may be on different Windows drives.
+            # Establish the caller inside the fixture before selecting a relative path.
+            with (
+                chdir(root),
+                patch.dict(os.environ, {"PHOTON_FLINT_RUNTIME": "runtime", "PYTHONOPTIMIZE": "1"}),
+            ):
                 env = replay_environment()
             self.assertEqual(Path(env["PHOTON_FLINT_RUNTIME"]), runtime.resolve())
             self.assertNotIn("PYTHONOPTIMIZE", env)

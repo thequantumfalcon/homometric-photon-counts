@@ -7,6 +7,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 ### Fixed
 
 - Resolve caller-relative FLINT runtime paths before replay subprocesses change directory; keep assertions enabled in retained numerical verifiers.
+- Keep the runtime-path regression fixture independent of Windows checkout/TEMP drive placement.
 
 - Use a supported math macro for the Poisson distribution in GitHub's README renderer.
 - Canonicalize the extraction root before checking ZIP member containment, so Windows temporary-directory aliases do not reject safe packaged files. Traversal checks remain enforced before extraction.

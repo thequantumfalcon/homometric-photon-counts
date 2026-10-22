@@ -38,4 +38,6 @@ The source ZIP was compared member-by-member with the working tree, extracted to
 
 These are internal executed checks, not external human review, an experiment, or proof of every scientific claim. The receipts identify tested source hashes so later source changes cannot inherit these results silently.
 
+The initial optical supplement PR passed local checks and Ubuntu packaging, but its first Windows CI run exposed a test fixture that attempted a relative path across different drives. The [follow-up receipt](optical_validation_portability.json) records the fixture correction and new local tests. The runtime implementation and all scientific payloads remain unchanged; the initial receipt is retained with its original source hashes.
+
 For later documentation or source commits, inspect the [main-branch workflow runs](https://github.com/thequantumfalcon/homometric-photon-counts/actions/workflows/ci.yml?query=branch%3Amain). The historical receipts stay bound to their named commits; the README badge reports the live main-branch CI status.

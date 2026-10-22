@@ -1,0 +1,14 @@
+{
+  "status": "PASS_LOCAL_PORTABILITY_FIX",
+  "date": "2026-10-21",
+  "preceding_commit": "cb40dbd9427d36b425ec7e3c838132b940af2898",
+  "failed_windows_job": "https://github.com/thequantumfalcon/homometric-photon-counts/actions/runs/39706731785/job/119588408689",
+  "failure": "The regression fixture attempted a relative path between system TEMP on C: and checkout on D:.",
+  "fix": "Use the temporary fixture root as caller cwd before selecting the relative runtime; the actual subprocess still executes in a different directory.",
+  "maintained_unit_tests_passed": 31,
+  "ruff": "PASS",
+  "test_sha256_before": "aba46560886d4f3a1c73f7b4c5c624e95124864f40ced2020aa2592e01b74a04",
+  "test_sha256_after": "f32cce1d8a1c292a38791aab863c853794aaa69768a87a8aa1b28d8e5c4fbe8d",
+  "runtime_tools_and_scientific_inputs_unchanged": true,
+  "scope": "Test fixture portability only. New remote checks remain required; no scientific claim changes."
+}
