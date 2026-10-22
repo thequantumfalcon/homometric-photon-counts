@@ -14,7 +14,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Added
 
-- A labelled numerical study, `studies/noise-order-dictionary/`, of which noisy-intensity moment first separates a homometric pair. Across all 86 nontrivial pairs in `Z_N` with `N <= 14`, the first separating order equals the smallest charge of a differing charge-neutral harmonic monomial; 84 separate at the second moment. The fourth-order-only behavior of this repository's pair follows from `M_1 = 0` at its frequency. No theorem, certificate or evidence file changed.
+- A labelled numerical study, `studies/noise-order-dictionary/`, of which noisy-intensity moment first separates a homometric pair. Across all 86 nontrivial pairs in `Z_N` with `N <= 14`, the first separating order equals the smallest charge of a differing charge-neutral harmonic monomial; 84 separate at the second moment. The fourth-order-only behavior of this repository's pair follows from `M_1 = 0` at its frequency. A written separation law, `D_K = (K!)^2 (|c_K^A|^2 - |c_K^B|^2)`, reproduces this repository's fourth-order polynomial and matches direct moments for all 86 pairs under Gaussian and uniform phase laws. A survey of 23,168 pairs with `N <= 22` and a coset family `3Z_{3k} u (1 + 3T)` show homometric pairs whose noisy moments agree below order `k`. No theorem, certificate or evidence file changed.
 
 - Five optical/detector study stages with 115 preserved payloads, including failed wider-calibration outcomes, external GPL SPAD delay data, afterpulse simulations and an Arb finite-transfer certificate.
 - Portable standard-library supplement audits, exact Arb replay, source-package execution checks, and a development specification with physical/formal limitations.

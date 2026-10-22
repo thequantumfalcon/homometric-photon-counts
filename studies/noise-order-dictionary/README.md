@@ -48,6 +48,66 @@ contributes `-t^4`. The script reproduces it to about 40 digits at
 same derivation gives the coefficient `2[phi(2) phi(1)^2 - phi(1)^4]`; only
 the Gaussian case was checked.
 
+## A general separation law
+
+The two observations above are special cases of one formula. Write
+`phi(m) = E exp(i m theta)` for any iid phase law, and
+
+```text
+l_m = [x^m] log( sum_a phi(a) x^a / a! ),     c_K = [x^K] exp( sum_{m>=1} l_m M_m x^m ).
+```
+
+If two phasor multisets agree in every charge-neutral monomial of charge below
+`K`, then
+
+```text
+E_A[I^K] - E_B[I^K] = (K!)^2 ( |c_K^A|^2 - |c_K^B|^2 ).
+```
+
+Derivation sketch: `E[I^K] = (K!)^2 [x^K y^K] prod_j F(x z_j, y conj z_j)` with
+`F(a, b) = E exp(a u + b conj u)`, `u = exp(i theta)`. Taking logarithms turns the
+product into `exp(sum L_ab x^a y^b M_(a-b))`. A product of these factors has
+positive charge equal to the full `x`-degree `K` only when every factor is pure
+(`a = 0` or `b = 0`), so the charge-`K` part factors as
+`[x^K] exp(sum l_m M_m x^m)` times its conjugate. All lower-charge terms cancel
+by hypothesis.
+
+`python separation_law.py law results.json` checks the law against direct
+moments for all 86 pairs at `t = 0.3, 0.5, 0.9` and for a uniform phase law on
+`[-a, a]` (`a = 0.7, 1.9`); the worst relative mismatch is about `5e-67`. With
+the Gaussian law, `l_2 = -t^2 (1 - t^2) / 2` and
+`l_4 = -t^4 (1 - t^2)^3 (t^6 + 3t^4 + 6t^2 + 6) / 24`. Since `M_1 = 0` for this
+repository's pair, `D_4 = (4!)^2 l_4 l_2^2 * dRe(M_4 conj(M_2)^2)`, which with the
+gap `-455015761/120000` gives exactly
+`(455015761/20000) t^8 (1 - t^2)^5 (t^6 + 3t^4 + 6t^2 + 6)` (checked with sympy).
+The derivation is written here, not formalized.
+
+## Pairs hidden to high order
+
+`python separation_law.py survey 22` counts the first differing charge over all
+23,168 nontrivial homometric pairs in `Z_N`, `N <= 22`:
+
+| first differing charge | 2 | 3 | 4 | 5 | 6 | 7 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| pairs | 22,138 | 866 | 131 | 31 | 1 | 1 |
+
+No pair agreed in every charge-neutral monomial through charge 8, and no pair
+had a differing invariant while `|c_K|^2` agreed identically in `t`.
+
+The order-6 and order-7 pairs share a structure that generalizes. With
+`N = 3k`, `H = 3 Z_N` and `T` a subset of `Z_k` that is not a translate of its
+reflection, set `A = H u (1 + 3T)` and `B = H u (1 - 3T)`. For `k` not dividing
+`m`, `M_m(H) = 0` and `M_m(B)` is a fixed phase times `conj M_m(A)`, so every
+charge-neutral monomial of charge below `k` has equal real part. The two sets
+are therefore homometric and noncongruent, and their single-frequency
+intensity moments agree below order `k` for every iid phase law. The family
+was written down before being tested; `python separation_law.py family` checks
+`k = 6..10` (relative gaps below order `k` at the `1e-70` level, nonzero order-`k`
+gaps, and the separation law reproducing them). The order-`k` gaps are tiny in
+relative terms (about `1e-7` at `k = 6` and `1e-15` at `k = 10`), so these pairs
+are mathematically hidden to high order and are not practical measurement
+targets.
+
 ## Consequence for this repository's pair
 
 Both 63-site lists have `M_1 = 0` at `q = pi/3` (the
@@ -74,7 +134,17 @@ the other's phasor multiset, so nothing nontrivial is hidden. When
 
 - Integer subsets of `Z_N` at `q = 2 pi / N`, sizes at most 7, `N <= 14`; the
   separation tolerance is `1e-18` relative.
-- The identity is checked numerically, not formalized.
+- The identity, the separation law and the coset-family argument are checked
+  numerically and written as derivations; none is formalized. The family was
+  checked numerically only for the Gaussian law at `t = 0.6`.
+- An earlier version of the family check compared absolute residuals with a
+  fixed threshold below the arithmetic's resolution and mislabelled correct
+  instances as failures; the check now uses relative residuals.
+- Homometric subsets of `Z_N` are also studied as Z-related sets in
+  mathematical music theory (for example Mandereau, Ghisi and Amiot,
+  *Z-relation and homometry in musical distributions*, 2012), and random-phasor
+  intensity moments go back at least to Barakat's work listed in
+  [priority.md](../../docs/priority.md). Neither comparison was completed here.
 - Bispectral products already appear in photon-correlation phase retrieval
   (Bojer et al., equation 16, listed in [priority.md](../../docs/priority.md)),
   and Grunbaum-Moore use higher-order invariants for cyclotomic homometric sets.
