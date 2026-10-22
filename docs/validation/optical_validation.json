@@ -1,0 +1,93 @@
+{
+  "status": "PASS_LOCAL_CHECKS",
+  "date": "2026-10-21",
+  "baseline_commit": "0d3fad8a0ef20148595a01e042f08e0752db9215",
+  "python": "3.11.9",
+  "core_arithmetic_stages_passed": [
+    "endpoint-constants",
+    "necessary-samples",
+    "independent-exclusion",
+    "exact-phasors",
+    "independent-arb",
+    "arb-probabilities-and-bounded-roots",
+    "independent-fourier-tails",
+    "density-at-zero",
+    "global-four-roots",
+    "independent-global-four-roots"
+  ],
+  "previous_optical_replay": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "prototype-tests",
+        "returncode": 0
+      },
+      {
+        "name": "calibration-tests",
+        "returncode": 0
+      },
+      {
+        "name": "candidate",
+        "returncode": 0
+      },
+      {
+        "name": "calibration",
+        "returncode": 0
+      }
+    ],
+    "exploratory_tests": false,
+    "exact_certificate_reproduction": true,
+    "archive_preserved": "PASS"
+  },
+  "supplement_audit_and_arb_replay": {
+    "status": "PASS",
+    "archived_files": 115,
+    "measured_table_bins": 75658,
+    "available_original_workspace_bindings": 100,
+    "scope": "Selected byte identities and external processed-data checks; no physical validation.",
+    "checks": [
+      {
+        "study": "optical-bench-demo",
+        "returncode": 0,
+        "output": "PASS: 28 artifact hashes and 18 saved classification records.\nHashes and replayed classifications do not establish physical validity."
+      },
+      {
+        "study": "robustness-study",
+        "returncode": 0,
+        "output": "{\"status\": \"PASS\", \"payload_hashes\": 33, \"classification_records\": 104, \"independent_simultaneous_bound_checks\": 50, \"two_sided_interval_checks\": 104, \"lab_zero_error_minimum_trials_per_label\": 72}"
+      },
+      {
+        "study": "afterpulse-study",
+        "returncode": 0,
+        "output": "{\n  \"status\": \"PASS\",\n  \"integer_histogram_records\": 9600,\n  \"simultaneous_error_bounds\": 48,\n  \"max_simultaneous_upper\": 0.03375192026711007,\n  \"simulated_gates\": 48000000,\n  \"workspace_preservation_checked\": false,\n  \"previous_pinned_files_unchanged\": 0,\n  \"own_manifest_files_checked\": 28\n}"
+      },
+      {
+        "study": "optical-transfer-certificate",
+        "returncode": 0,
+        "output": "{\n  \"status\": \"PASS_EXACT_ENDPOINT_AND_BOUND_AUDIT\",\n  \"transfers\": 29,\n  \"coefficients_checked\": 1827,\n  \"integral_pairs\": 224,\n  \"witness_rates\": 192,\n  \"phase_commands\": 12096,\n  \"maximum_weight_l1_error_upper\": \"3/2500000000000000\",\n  \"maximum_correction_rad_error_upper\": \"343/1000000000000000000\",\n  \"maximum_fixed_command_intensity_error_upper\": \"39/10000000000000\",\n  \"maximum_witness_rate_error_upper\": \"113/50000000000000\",\n  \"minimum_witness_quantizer_margin_lower\": \"2830215724639548482936164783179892446329131584335485209806254599061947/14134776518227074636666380005943348126619871175004951664972849610340958208\",\n  \"scope\": \"Exact rational audit of exported enclosures, bounds and finite coverage. Integral truth requires the separate Arb replay; this audit is not a proof-assistant kernel.\",\n  \"negative_controls_rejected\": [\n    \"zero_weight_error_bound\",\n    \"changed_quantized_command\",\n    \"zero_witness_rate_error_bound\",\n    \"disjoint_integral_enclosure\"\n  ],\n  \"certificate_sha256\": \"76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5\",\n  \"verifier_sha256\": \"9845b4a67c241bf71c237d3258ff83d69251eaa55dcc65c69965b7c92ac37d9b\",\n  \"workspace_bindings_checked\": 0,\n  \"manifest_payloads_checked\": 14\n}"
+      }
+    ],
+    "certificate_reproduced_byte_for_byte": true,
+    "archive_preserved": "PASS"
+  },
+  "maintained_unit_tests_passed": 31,
+  "staged_payloads_match_original_bytes": 115,
+  "source_sha256": {
+    "tools/replay_environment.py": "13aa3e5b17a1613dc20e3b9f25714ca62634b4ca646d888025b3fce4327c35d5",
+    "tools/project.py": "32c7e8d7fc949bc2557efcfc13b642e73efdaf916048fb0309808ae11958881f",
+    "tools/optical_study.py": "47561347dffd814f4fa6ad8d316c2c508ed69c478c998f27eca596d93d85da40",
+    "tools/optical_validation.py": "d56fb3376bf0f4a6d5c6a326c4601ac358abbd5ef9b17defc2f84ce9f97069cf",
+    "tests/test_replay_environment.py": "aba46560886d4f3a1c73f7b4c5c624e95124864f40ced2020aa2592e01b74a04",
+    "tests/test_optical_validation.py": "331a54948763d4b72adf9a419651ef9c491140a6e8febf4009a428fb8367aee0",
+    "studies/optical-validation/manifest.json": "787476027996235d5b84ea1782564f37bca17827b02544b08c9114a13d9f299c"
+  },
+  "relative_runtime_regression": "Reproduced ModuleNotFoundError with a valid caller-relative runtime before fix; real subprocess-import regression and full corrected relative-path replay passed.",
+  "quality_checks": [
+    "ruff lint and format",
+    "actionlint",
+    "zizmor offline",
+    "staged gitleaks redacted scan"
+  ],
+  "secret_scan_exception": "One exact fingerprint at immutable source-bindings.json line92: verified SHA256 of an acquisition metadata file whose name includes api, not a credential.",
+  "limits": "Local software/numerical checks, not an experiment, external scientific review, new Lean coverage, or proof of novelty. Remote checks and final archive are recorded after commit."
+}

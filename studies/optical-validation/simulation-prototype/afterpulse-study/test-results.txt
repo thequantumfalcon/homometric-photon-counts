@@ -1,0 +1,12 @@
+test_compound_poisson_branching_limit (__main__.DetectorTests.test_compound_poisson_branching_limit) ... ok
+test_exact_initially_live_recovery_law (__main__.DetectorTests.test_exact_initially_live_recovery_law) ... ok
+test_independent_uniform_timestamp_reference (__main__.DetectorTests.test_independent_uniform_timestamp_reference) ... ok
+test_out_of_gate_daughters_are_excluded (__main__.DetectorTests.test_out_of_gate_daughters_are_excluded) ... ok
+test_poisson_limit (__main__.DetectorTests.test_poisson_limit) ... ok
+test_thread_scheduling_does_not_change_seeded_results (__main__.DetectorTests.test_thread_scheduling_does_not_change_seeded_results) ... ok
+test_zero_input_and_invalid_arguments (__main__.DetectorTests.test_zero_input_and_invalid_arguments) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.500s
+
+OK

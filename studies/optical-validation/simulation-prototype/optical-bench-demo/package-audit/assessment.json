@@ -1,0 +1,191 @@
+{
+  "status": "PASS_ARTIFACT_BINDING",
+  "rea_version": "6.7.0",
+  "rea_evidence_id": "ev_7ed1a830629063108ce180d669ebca4f51f79436472e6a8815caed0f025a106b",
+  "wheel_sha256": "dd24c012a4c098cb9696c34238ca9580620b472b562b0908dda60eb5d70fb243",
+  "member_count": 53,
+  "wheel_record_hashes_checked": 52,
+  "installed_python_sources_bound": [
+    {
+      "path": "poppy/__init__.py",
+      "sha256": "f5299702e7673d8d8c3117ec905ca0d2c01e475322f4731dfba6ca5b00f8a6c6"
+    },
+    {
+      "path": "poppy/accel_math.py",
+      "sha256": "cf259c2e018acdb9eb3c3ad40723974b9324214196c03056fa416cb8479653ad"
+    },
+    {
+      "path": "poppy/active_optics.py",
+      "sha256": "aeea657c79b69f90df5d958f97fcdc772c063cf7b7a0640fb5a5a59dfbdb6d64"
+    },
+    {
+      "path": "poppy/dms.py",
+      "sha256": "34a3e409974ddead9ed97e5de7e725e1a40d889a9c6b8e91668e17597f7b322f"
+    },
+    {
+      "path": "poppy/fresnel.py",
+      "sha256": "0ea160d080d203b4d2ff7bf9434f609e1ee0e48a94c281676501a4729c07bfea"
+    },
+    {
+      "path": "poppy/fwcentroid.py",
+      "sha256": "070583375cfe0112037f92a506cbbccec0f1215b0476332d2f67aeb1bbd30319"
+    },
+    {
+      "path": "poppy/geometry.py",
+      "sha256": "c6b91db184d9d0ffba8aec6bf451e38919e65090d9886e6d6437a534a849bddb"
+    },
+    {
+      "path": "poppy/instrument.py",
+      "sha256": "73adf06f1a323941ed09ca3250ea2a6f315420e6c7b4abb1fca72e7adb2d470f"
+    },
+    {
+      "path": "poppy/matrixDFT.py",
+      "sha256": "773ca114bf57eb405150df60f6690bc3c6b1e710b832ad72328c591809d27e9c"
+    },
+    {
+      "path": "poppy/misc.py",
+      "sha256": "1a6ec04290bc60e5110c7a086d8d8b7d22eba4acf70e9f8e859b989902768102"
+    },
+    {
+      "path": "poppy/optics.py",
+      "sha256": "3500ff094da55140010c0a02203794f21f13635208194dc8120011fead196652"
+    },
+    {
+      "path": "poppy/physical_wavefront.py",
+      "sha256": "07c48250e4eda4d524219e1a42678bfc180317aafdf2cb3e7073f7148762fe89"
+    },
+    {
+      "path": "poppy/poppy_core.py",
+      "sha256": "f3776e0b82267d7015fae3ca33ca19046eb28f0513acd4c27b139b6a9d1d0023"
+    },
+    {
+      "path": "poppy/special_prop.py",
+      "sha256": "d20e17a636da1523ac235ed74e396e0c867b852f4f42d6a2c7d8886aac1aa846"
+    },
+    {
+      "path": "poppy/sub_sampled_optics.py",
+      "sha256": "ae26cdd15601f34708eea679b502f87dede06dbeb0d15e28626d0d43b1d988e8"
+    },
+    {
+      "path": "poppy/utils.py",
+      "sha256": "a469a292abbd7782f5645a4766a824ef8ac9db830196aaf7a192256db7e64a59"
+    },
+    {
+      "path": "poppy/version.py",
+      "sha256": "5377ff260af7ce9822606da42dcbdc4f4e5342c57337d2a4b60fdfdd0f4e6450"
+    },
+    {
+      "path": "poppy/wfe.py",
+      "sha256": "a6b214e7e2c327bcb30d82d2679afdae0b6e9d9172e6dd1cd83b260ad59b6491"
+    },
+    {
+      "path": "poppy/zernike.py",
+      "sha256": "784db7ccd5c5271e76ec86664beb26e6c8ba3a7053611e94e952676e831eae55"
+    },
+    {
+      "path": "poppy/tests/__init__.py",
+      "sha256": "ef4abb89a47525ac2353211d976bf57d33b2c04bf7f25a88742635d05972fc21"
+    },
+    {
+      "path": "poppy/tests/test_accel_math.py",
+      "sha256": "1fb15491244694f87db9877c4d77797efa14e630d8dc49b37def00df330d5396"
+    },
+    {
+      "path": "poppy/tests/test_active_optics.py",
+      "sha256": "bf3b2c53353774a83f7dd1256e78a020ecab154bf1ced84362ab69340df86e4f"
+    },
+    {
+      "path": "poppy/tests/test_core.py",
+      "sha256": "612217a38f7fb358c1f6023d00e88fab77ae18190db33d0b6a4936e1d9a520a0"
+    },
+    {
+      "path": "poppy/tests/test_dms.py",
+      "sha256": "08b36176ad1bd08be10c2755076a10f321dd62185a1e01857ce007dd580e93dd"
+    },
+    {
+      "path": "poppy/tests/test_errorhandling.py",
+      "sha256": "b75122c66b0e2a2a57749bfd3c126a40fe61cad5750c47052bc60e0844cb8aa2"
+    },
+    {
+      "path": "poppy/tests/test_fft.py",
+      "sha256": "6c6b67f1c2eff04fc3e97d2e5d3b6e200761cf4c0e7befb7fec0e15f2e7a639c"
+    },
+    {
+      "path": "poppy/tests/test_fresnel.py",
+      "sha256": "cb53feb15c471d6a75ff842026941608dc2a91f71ff4497dc95934eb3aa6070f"
+    },
+    {
+      "path": "poppy/tests/test_fwcentroid.py",
+      "sha256": "60b17f1f39c9420f85b446fc7c1be3a77dfc4231db15c37d060cd8965bf84719"
+    },
+    {
+      "path": "poppy/tests/test_geometry.py",
+      "sha256": "64bfc9c0b87e07e84c44aea16588ec617f88675858eb12a000758f85bc74979b"
+    },
+    {
+      "path": "poppy/tests/test_instrument.py",
+      "sha256": "c6512994c84eec2eafc2f6f2c99c8d0fe206c7caa3d929061451444e7fdcb894"
+    },
+    {
+      "path": "poppy/tests/test_matrixDFT.py",
+      "sha256": "97e8607ffa0215a8d8ebc817f423572a70916f9b9645a1d69ff64d93f05da6a2"
+    },
+    {
+      "path": "poppy/tests/test_matrixFTcoronagraph.py",
+      "sha256": "a519f11c6dc1ba69a269de7635c5ea94a31920f2deede69fa54e1466cffc9669"
+    },
+    {
+      "path": "poppy/tests/test_misc.py",
+      "sha256": "5a805f391ab60303cd4892bd9a7e32e1d76aeacfe7fa2abc5633fa65469e57ca"
+    },
+    {
+      "path": "poppy/tests/test_multiprocessing.py",
+      "sha256": "4db9cd73a67edd9410ee1b2ba5e5118b3d8d93608ec708b34325aa4df665dc0c"
+    },
+    {
+      "path": "poppy/tests/test_nonsquare.py",
+      "sha256": "3664cd06788cb1c9beb5bde7d65dee7d2ce99436e0f7812d782341798c22fa12"
+    },
+    {
+      "path": "poppy/tests/test_optics.py",
+      "sha256": "3feac328ac1183c60bbac1d0f64946c4164af8036f5afed1e5c842c25a587727"
+    },
+    {
+      "path": "poppy/tests/test_physical_wavefront.py",
+      "sha256": "0bca8087df9d84d70f317fdc2c234f78f4a3081b9f66c3d32d1c6e2113f29339"
+    },
+    {
+      "path": "poppy/tests/test_plotting.py",
+      "sha256": "938506e3fb2676f53ea7ad15e7aa69efe5bb574ad315e9dcd0c46caed972d16d"
+    },
+    {
+      "path": "poppy/tests/test_sign_conventions.py",
+      "sha256": "fa4aeff2c612b99256152e5b801cd623078cabf4b12c73349f96f7bff3c984ee"
+    },
+    {
+      "path": "poppy/tests/test_special_prop.py",
+      "sha256": "4d10fed80090ccb4e4959603713725502b0abfd2c9d5d018b43ea49645bf5689"
+    },
+    {
+      "path": "poppy/tests/test_sub_sampled_optics.py",
+      "sha256": "d780ec84a6d79a56adba0095d17031d65fbf2aeb82938aa7f8e2a17246abbe6f"
+    },
+    {
+      "path": "poppy/tests/test_utils.py",
+      "sha256": "53793fda873cce384bf1d37cde13def70c715f287814170f22fb18de219015b0"
+    },
+    {
+      "path": "poppy/tests/test_wavefront.py",
+      "sha256": "9c85173c5572866122b93ed8eddff83ecb2ecaa986448a7725c4187aae0c0f8f"
+    },
+    {
+      "path": "poppy/tests/test_wfe.py",
+      "sha256": "cf79cee6dfa612b1022dc94ea6df61f47a504ca66a22eae990ace0c98ff55e1d"
+    },
+    {
+      "path": "poppy/tests/test_zernike.py",
+      "sha256": "7470762ea2cac7cab8a362f1522806139b2556d24b29a76056f353e3f5852291"
+    }
+  ],
+  "scope": "REA inventory reconciled against ZIP bytes; wheel RECORD verified; installed POPPY sources match. This is package identity evidence, not a security audit, numerical proof or physics validation."
+}

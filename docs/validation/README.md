@@ -6,6 +6,7 @@ Executed on Windows with Python 3.11.9, during 20–21 October 2026.
 | --- | --- |
 | Public evidence derivation | [327 files checked](public_derivation.json); all 45 transformed files differ only by declared provenance edits |
 | Arithmetic replay | [All ten stages passed](arithmetic_replay.json), including the separate global Fourier reconstruction |
+| Optical/detector supplement | [Local publication checks](optical_validation.json): 115 preserved payloads, 31 maintained tests, all ten core replay stages, both optical replays, and byte-identical reproduction of the finite Arb transfer certificate. External processed SPAD data retain GPL terms. No new Lean or experimental validation is implied. |
 | Public formal replay | [Five modules recompiled](formal_replay.json), with thirteen standard-axiom audits; no fresh-kernel rerun in this particular public replay |
 | Measurable-mixture extension | [Six modules and eighteen audits passed](mixture_formal_replay.json), including a fresh-kernel check of the extension and its imported environment |
 | Concrete geometry extension | [Seven modules and 38 audits passed](geometry_formal_replay.json), including a fresh-kernel check of the concrete geometry and its imported environment |

@@ -2,6 +2,8 @@
 
 The supplied gold-standard guide is used as a Tier 2 checklist, tailored to a scientific source capsule. Repository quality and proof completeness are assessed separately.
 
+The latest optical/detector addition preserves 115 supplemental payloads, adds a portable audit and exact Arb replay, and fixes caller-relative runtime selection. It does not change earlier scientific payloads. Its [development specification](../studies/optical-validation/DEVELOPMENT-SPEC.md) separates local acceptance criteria from remote publication status; previous CI receipts below remain tied to their recorded commits.
+
 | Area | Current state |
 | --- | --- |
 | Scientific claims | Explicit model, claim ledger, evidence links, formal scope, and remaining gaps |

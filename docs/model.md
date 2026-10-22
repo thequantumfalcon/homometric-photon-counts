@@ -16,4 +16,6 @@ The formal construction uses a finite product of centered Gaussian laws with var
 
 The fixed testing experiment pools counts at least 12 into one bin. It assumes iid snapshots and known $s,\eta,b$. Its lower bound does not apply to the richer unbinned observation, and its sufficient count does not establish a feasible measurement duration.
 
+The later [optical transfer/detector supplement](../studies/optical-validation/README.md) keeps the changed frequency and models unequal complex cell weights, estimated phase correction before quantization, and a separate finite-gate afterpulse event queue. Its data are external processed delay distributions, with afterpulse strengths separately specified. Initially-live gates, absent prehistory and excluded twilight/drift effects are modeling assumptions. Its simulations and finite arithmetic checks do not change the original Gaussian/Poisson theorem or establish the instrument response.
+
 Archived exposure, calibration and dependence extensions retain their own hypotheses. In particular, the public `homometric-motion` project studies a different spring/OU exposure model. Neither its sample counts nor its formal declarations are automatically premises of this repository.

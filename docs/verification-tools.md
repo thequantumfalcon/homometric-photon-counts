@@ -12,6 +12,8 @@ Status checked against retained local records on 2026-10-21. A tool's capabiliti
 
 See the [local validation records](validation/README.md), [formal scope](../evidence/followup-2026-10-20/lean/SCOPE.txt), and [claim ledger](claims.md) for evidence and exact limits.
 
+The [optical transfer supplement](../studies/optical-validation/README.md) additionally uses Python-FLINT 0.9.0 for 224 closed-form/validated-integral pairs and finite transfer/phase witnesses. Its public replay reproduced the saved certificate byte for byte. Both integral algorithms share Arb. Standard-library verifiers independently audit exported endpoint arithmetic, saved simulation scores and confidence bounds; they do not supply measured calibration or a full stochastic risk theorem. Local REA inspected the data/runtime artifacts, with separate byte binding; it did not prove their mathematical or physical correctness.
+
 Tool capabilities are documented in the [SageMath linear-algebra tutorial](https://doc.sagemath.org/html/en/tutorial/tour_linalg.html), [Python-FLINT documentation](https://python-flint.readthedocs.io/en/latest/), [Lean/mathlib introduction](https://leanprover-community.github.io/), and [Lean4Lean README](https://github.com/digama0/lean4lean). These references describe tools, not external review of this project.
 
 ## Assessment of additional candidates

@@ -1,0 +1,36 @@
+Measurement gate before physical validation
+==========================================
+
+This is a proposed protocol, not an executed experiment or hardware shopping list.
+
+1. Optical transfer: measure the complex collected amplitude from each cell
+   using a separate phase-stepping reference. Compare amplitude and phase with
+   the predicted c_j. Check repeated runs and both displacement directions.
+   Verify that the assumed added amplitude mask can actually be implemented.
+
+2. Phase response: measure actual optical phase versus command, settling time,
+   amplitude coupling, pixel gaps/crosstalk and the full commanded phase-noise
+   distribution. Measure autocorrelation between snapshots instead of assuming
+   that a frame-rate specification establishes independence.
+
+3. Focal images: record calibrated two-dimensional focal intensity for several
+   frozen masks, including an all-in-phase mask and the identical-mask control.
+   Compare the whole image and Gaussian-mode collection, not only a normalized
+   peak. Independently measure magnification, focal length and fibre mode size.
+
+4. Detector: use steady calibrated light and dark acquisitions to measure
+   background, gain, count distributions, dead time, afterpulsing and memory.
+   If those measurements reject this detector model, extend the model before
+   evaluating structural discrimination. Keep calibration data separate.
+
+5. Freeze analysis: select score, threshold, masking schedule, exclusions,
+   sample budget and error criterion before blinded validation data are taken.
+   Randomize A/B order, include identical-mask runs, and retain raw timestamps,
+   phase commands, alignment settings and calibration records. Do not tune the
+   decision threshold on validation labels.
+
+6. Compare honestly: report model discrepancies and performance for each true
+   structure. Include uncertainty and failed runs. Distinguishing two programmed
+   masks is a narrower result than recovering an unknown molecular structure.
+   A successful emulator would not by itself prove novelty or validate the
+   original fourth-order-only experiment.

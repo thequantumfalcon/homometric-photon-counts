@@ -44,6 +44,7 @@ jobs:
       - run: python -m pip install --require-hashes -r requirements-replay.txt
       - run: python tools/project.py replay --output build/arb-ci
       - run: python tools/optical_study.py replay --output build/optical-ci
+      - run: python tools/optical_validation.py replay --output build/optical-validation-ci
   ci:
     name: ci
     needs: [capsule, arb]

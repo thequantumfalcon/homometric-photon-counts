@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-21",
+  "status": "FROZEN_BEFORE_CLASSIFICATION_OUTCOMES",
+  "trials": 200,
+  "snapshots": 5000,
+  "phase_seed": 2026102400,
+  "detector_seed": 2026102401,
+  "threshold": -0.6401102,
+  "gate_s": 0.005,
+  "bin_width_s": 8.1e-11,
+  "profiles": [
+    {
+      "name": "baseline-22ns",
+      "recovery_ns": 22.0,
+      "ap_mean": 0.0,
+      "kernel": "apDist_3605H.txt"
+    },
+    {
+      "name": "CD3432H-noAP",
+      "recovery_ns": 29.1,
+      "ap_mean": 0.0,
+      "kernel": "apDist_3432H.txt"
+    },
+    {
+      "name": "CD3432H-anchorAP",
+      "recovery_ns": 29.1,
+      "ap_mean": 0.002,
+      "kernel": "apDist_3432H.txt"
+    },
+    {
+      "name": "CD3605H-noAP",
+      "recovery_ns": 24.1,
+      "ap_mean": 0.0,
+      "kernel": "apDist_3605H.txt"
+    },
+    {
+      "name": "CD3605H-anchorAP",
+      "recovery_ns": 24.1,
+      "ap_mean": 0.0171,
+      "kernel": "apDist_3605H.txt"
+    },
+    {
+      "name": "Count20C-noAP",
+      "recovery_ns": 56.3,
+      "ap_mean": 0.0,
+      "kernel": "apDist_Count.txt"
+    },
+    {
+      "name": "Count20C-anchorAP",
+      "recovery_ns": 56.3,
+      "ap_mean": 0.0035,
+      "kernel": "apDist_Count.txt"
+    },
+    {
+      "name": "CD3605H-stressAP",
+      "recovery_ns": 24.1,
+      "ap_mean": 0.05,
+      "kernel": "apDist_3605H.txt"
+    }
+  ],
+  "optical_cases": [
+    {
+      "name": "centered",
+      "x_um": 0,
+      "y_um": 0,
+      "opd_nm": 0,
+      "gain": 1,
+      "variance": 0.05,
+      "background": 0.125,
+      "error_x_um": 0,
+      "error_y_um": 0,
+      "error_opd_nm": 0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-209",
+      "x_um": -5.0,
+      "y_um": 5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.051,
+      "background": 0.1,
+      "error_x_um": -0.25,
+      "error_y_um": -0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-079",
+      "x_um": -5.0,
+      "y_um": -5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.049,
+      "background": 0.15,
+      "error_x_um": 0.25,
+      "error_y_um": 0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    }
+  ],
+  "family_size": 48,
+  "family_alpha": 0.05,
+  "criterion": "All one-sided Bonferroni 95% upper error bounds below 0.05 at these finite cases only.",
+  "selection": "Centered plus worst corrected A and worst corrected B from the prior tighter-budget development screen; no new outcome-based selection.",
+  "physics": "Initially live and no prior traps each gate. Poisson primary events; nonparalyzable recovery; Poisson daughter candidates per accepted avalanche; measured bin masses, uniform sub-bin delays; surviving older candidates persist. No twilight pulses or unmeasured tail beyond the stored histogram.",
+  "scope": "External-component-informed synthetic stress test. Published scalar anchors do not constitute a calibrated model of those detectors at our wavelength, gate or flux. Stress mean 0.05 is an assumption.",
+  "inputs_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+  "data_sha256": {
+    "apDist_3432H.txt": "b8485ca9fe366c99838bd98e8df00e9e96110643e02c6ec522660f27b6176524",
+    "apDist_3605H.txt": "3c671d475c2029ef167a706e0b1da0aa3c272b5995869f434c3313d13b244af0",
+    "apDist_Count.txt": "775d749b60f8612bfca7543095e9108c5de184f3c322bd7da10e45999bd953f8",
+    "archive-bindings.json": "3ee807c4d62ea602418a28e2f7aaf6464f18e9a3c6045ab7bed4218f314c1346",
+    "LICENSE.upstream.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  "preparer_sha256": "7b0b289c8fc7ed0bdc07e4e38afbabdfbfda5762ccbab37374b8805cbe4837fe"
+}

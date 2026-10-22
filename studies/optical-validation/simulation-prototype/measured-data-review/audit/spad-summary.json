@@ -1,0 +1,51 @@
+{
+  "status": "PASS_PROCESSED_MEASUREMENT_TABLES",
+  "bin_width_ns": 0.081,
+  "time_origin": "Zero-origin bin positions used by the shipped model, relative to recovery; not absolute trigger times.",
+  "normalization_tolerance": 1e-12,
+  "uncertainty": "Raw event totals, preprocessing history and per-bin uncertainties are not supplied in this archive.",
+  "rows": [
+    {
+      "file": "apDist_3432H.txt",
+      "bins": 25249,
+      "sum": 1.0,
+      "minimum": 1.5907277978007066e-06,
+      "maximum": 0.017137811304421092,
+      "last_bin_ns": 2045.088,
+      "mean_bin_position_ns": 178.2301494916565,
+      "median_bin_position_ns": 21.222,
+      "p90_bin_position_ns": 619.974,
+      "p99_bin_position_ns": 1813.428,
+      "sha256": "b8485ca9fe366c99838bd98e8df00e9e96110643e02c6ec522660f27b6176524",
+      "git_blob_sha1": "6e7cb55fa14dafcffca98e115a4bd579985a20e3"
+    },
+    {
+      "file": "apDist_3605H.txt",
+      "bins": 25402,
+      "sum": 1.0000000000000004,
+      "minimum": 0.0,
+      "maximum": 0.24373788145077355,
+      "last_bin_ns": 2057.481,
+      "mean_bin_position_ns": 52.94936974647309,
+      "median_bin_position_ns": 0.162,
+      "p90_bin_position_ns": 54.594,
+      "p99_bin_position_ns": 1320.624,
+      "sha256": "3c671d475c2029ef167a706e0b1da0aa3c272b5995869f434c3313d13b244af0",
+      "git_blob_sha1": "c832fa7754a7adbfd979a4afc254ef5948411a7b"
+    },
+    {
+      "file": "apDist_Count.txt",
+      "bins": 25007,
+      "sum": 1.0000000000000002,
+      "minimum": 4.753215311364763e-08,
+      "maximum": 0.02755108329114465,
+      "last_bin_ns": 2025.486,
+      "mean_bin_position_ns": 307.3219879119927,
+      "median_bin_position_ns": 86.265,
+      "p90_bin_position_ns": 1065.231,
+      "p99_bin_position_ns": 1910.0610000000001,
+      "sha256": "775d749b60f8612bfca7543095e9108c5de184f3c322bd7da10e45999bd953f8",
+      "git_blob_sha1": "5d5bae255714a370926fa9837f65c48cb314125b"
+    }
+  ]
+}

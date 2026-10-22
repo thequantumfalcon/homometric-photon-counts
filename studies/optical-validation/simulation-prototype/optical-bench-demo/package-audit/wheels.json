@@ -1,0 +1,132 @@
+{
+  "source": "https://pypi.org/simple",
+  "poppy_digest_source": "https://pypi.org/project/poppy/1.2.0/#files",
+  "wheels": [
+    {
+      "file": "astropy-8.0.2-cp311-abi3-win_amd64.whl",
+      "name": "astropy",
+      "version": "8.0.2",
+      "sha256": "8baaf4451dc4fdbdf635e033378cbb626a9fd4755803c8fdc30ef520fb1688ba",
+      "bytes": 6547000
+    },
+    {
+      "file": "astropy_iers_data-0.2026.10.19.0.52.1-py3-none-any.whl",
+      "name": "astropy-iers-data",
+      "version": "0.2026.10.19.0.52.1",
+      "sha256": "14665720aa481c7b97dfd104d7218b38ed7e2ba30a70ff53a5c26a0e14d4025c",
+      "bytes": 2005913
+    },
+    {
+      "file": "contourpy-1.4.0-cp312-cp312-win_amd64.whl",
+      "name": "contourpy",
+      "version": "1.4.0",
+      "sha256": "6e697d94e69f499ff6bebb899cae97a58d5d14f0e1fe9568b43a0248d2f9af8c",
+      "bytes": 234083
+    },
+    {
+      "file": "cycler-0.12.1-py3-none-any.whl",
+      "name": "cycler",
+      "version": "0.12.1",
+      "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30",
+      "bytes": 8321
+    },
+    {
+      "file": "fonttools-4.67.0-cp312-cp312-win_amd64.whl",
+      "name": "fonttools",
+      "version": "4.67.0",
+      "sha256": "2bfab2f5d1d255dec82f4bd082a1c10e77df808e42210890f50a9c30bf91570e",
+      "bytes": 2497985
+    },
+    {
+      "file": "kiwisolver-1.5.1-cp312-cp312-win_amd64.whl",
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "sha256": "06a6917674de9e0fe3f66f5430787f59a9f2ddb64af9b714eaec547e29ef5c19",
+      "bytes": 70748
+    },
+    {
+      "file": "matplotlib-3.11.2-cp312-cp312-win_amd64.whl",
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "sha256": "c5c1c68ee401fc98271263410f0e5ce88285abacf7627132914e8adf3d70ff43",
+      "bytes": 9349409
+    },
+    {
+      "file": "numexpr-2.14.2-cp312-cp312-win_amd64.whl",
+      "name": "numexpr",
+      "version": "2.14.2",
+      "sha256": "8fc55d14bcf17b3fe69213bea14f999451892b4690717008c66f2edfd6a085ce",
+      "bytes": 157563
+    },
+    {
+      "file": "numpy-2.5.4-cp312-cp312-win_amd64.whl",
+      "name": "numpy",
+      "version": "2.5.4",
+      "sha256": "a7b1b6353e36a7e50de2973a38d705c88ee93adcf120673cee7f45a4a3fa223a",
+      "bytes": 12573091
+    },
+    {
+      "file": "packaging-26.3-py3-none-any.whl",
+      "name": "packaging",
+      "version": "26.3",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "bytes": 129956
+    },
+    {
+      "file": "pillow-13.0.0-cp312-cp312-win_amd64.whl",
+      "name": "pillow",
+      "version": "13.0.0",
+      "sha256": "ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b",
+      "bytes": 7272166
+    },
+    {
+      "file": "poppy-1.2.0-py3-none-any.whl",
+      "name": "poppy",
+      "version": "1.2.0",
+      "sha256": "dd24c012a4c098cb9696c34238ca9580620b472b562b0908dda60eb5d70fb243",
+      "bytes": 2808552
+    },
+    {
+      "file": "pyerfa-2.0.1.5-cp39-abi3-win_amd64.whl",
+      "name": "pyerfa",
+      "version": "2.0.1.5",
+      "sha256": "66292d437dcf75925b694977aa06eb697126e7b86553e620371ed3e48b5e0ad0",
+      "bytes": 349410
+    },
+    {
+      "file": "pyparsing-3.3.3-py3-none-any.whl",
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4",
+      "bytes": 126420
+    },
+    {
+      "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+      "bytes": 229892
+    },
+    {
+      "file": "pyyaml-6.0.3-cp312-cp312-win_amd64.whl",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "sha256": "5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b",
+      "bytes": 154003
+    },
+    {
+      "file": "scipy-1.18.1-cp312-cp312-win_amd64.whl",
+      "name": "scipy",
+      "version": "1.18.1",
+      "sha256": "5e4d44984abc0020154ea81b247adeddcc3ac5527b975ff798bd1ba0adc513c2",
+      "bytes": 36658278
+    },
+    {
+      "file": "six-1.17.0-py2.py3-none-any.whl",
+      "name": "six",
+      "version": "1.17.0",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050
+    }
+  ]
+}

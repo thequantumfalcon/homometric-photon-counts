@@ -1,0 +1,642 @@
+{
+  "status": "PASS_EXISTING_REA_WHEEL_BINDING_AND_INSTALLED_RUNTIME",
+  "wheel_sha256": "8f1059536b7393e48b1444894c3b54ce1b961e4aa4a356e19217b26690f20db0",
+  "rea_evidence_id": "ev_dcbe86eeb38ce8e7515282f637e023489adc648e4dd1d819fb3df8a6f6c4c694",
+  "rea_evidence_sha256": "04c22fcb81554ccde77c8789eb759bae0071115aaeab7b4243741c3490cc5b81",
+  "wheel_members": 159,
+  "installed_payload_files": [
+    {
+      "path": "flint/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "flint/pyflint.lib",
+      "sha256": "1367a31d1a69defd18a8541c4f48b78d2b49c5e95636afb27a49b5936044abca"
+    },
+    {
+      "path": "flint/pyflint.pyd",
+      "sha256": "f1427349d712cb17a6aa1cd19dcce469417462fa66bd7edd6d049b5d11138a55"
+    },
+    {
+      "path": "flint/pyflint.pyi",
+      "sha256": "baa6dd22979ccdaa5fdb8c632902998232ae0a6f64d23e005d1a81429e668876"
+    },
+    {
+      "path": "flint/typing.py",
+      "sha256": "a9e5aaaa561599f76931bcc947cfc8cbe3e8da528692482e7db12d98397b81e2"
+    },
+    {
+      "path": "flint/__init__.py",
+      "sha256": "51b38d54b85e213a7ae1e801f9d6e9fec6e31aa25d28f57732df12dc0f1d0948"
+    },
+    {
+      "path": "flint/flint_base/flint_base.lib",
+      "sha256": "e6849d77944802cf26579fe90b7e5c94d4b9dc3f477ab710749a8011e6d2c1a4"
+    },
+    {
+      "path": "flint/flint_base/flint_base.pyd",
+      "sha256": "cb8fffb322708f770b73d0ec4d322cb0e85b396ec02ca282770109e19b23cb7a"
+    },
+    {
+      "path": "flint/flint_base/flint_base.pyi",
+      "sha256": "ff4610fd080221a80a5dc9057fe823d7f64b2920266b39848b0059e941d32e08"
+    },
+    {
+      "path": "flint/flint_base/flint_context.lib",
+      "sha256": "64c4d9ad5ee82ca43dfabf0e8846e49b08afcbad8d87dafadbb4a7605c497a6c"
+    },
+    {
+      "path": "flint/flint_base/flint_context.pyd",
+      "sha256": "88d83bdf31add7779e8f9e15185d18977cb3d32ffc144a55c6f69fa6682a1112"
+    },
+    {
+      "path": "flint/flint_base/flint_context.pyi",
+      "sha256": "72bf036f201f38270a7eda8e66da4da966daefcf3e9ad57c9fc114062356f5dc"
+    },
+    {
+      "path": "flint/flint_base/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "flint/functions/showgood.lib",
+      "sha256": "6d506af8942154b8d4f15443b67aad630353b5f246d3c509bd0839eb277d6e3a"
+    },
+    {
+      "path": "flint/functions/showgood.pyd",
+      "sha256": "593b6d6cc9986128e757743d371b253bb8f9ea93e2beb55c62626c98b9694053"
+    },
+    {
+      "path": "flint/functions/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "flint/test/helpers.py",
+      "sha256": "1c51182ad26c6c5215a4570d0371ae218b144c4e500784b03d3fd56b1c050c89"
+    },
+    {
+      "path": "flint/test/test_acb.py",
+      "sha256": "44e6eb84f02624b5abf270a72349d97549d286337ccf0f2a8e10f36124418afe"
+    },
+    {
+      "path": "flint/test/test_acb_mat.py",
+      "sha256": "e99c9f84a03c9dd44c8bf710d70c1958fa3791cb101c49df106e24969ad13c44"
+    },
+    {
+      "path": "flint/test/test_acb_poly.py",
+      "sha256": "8e36bbd3e5d18409c4316b029f80f6578af6ce944ac3167f28e93c647b8a01a2"
+    },
+    {
+      "path": "flint/test/test_acb_series.py",
+      "sha256": "064064ba49576786703ee945b114e2383c0501b792fd3dfc3c45ab221be8c9f2"
+    },
+    {
+      "path": "flint/test/test_acb_theta.py",
+      "sha256": "02a22f96fe78c15c58552c359310f214f6687ffd521867b1f841e3110c834a11"
+    },
+    {
+      "path": "flint/test/test_all.py",
+      "sha256": "d7fd26e67733a7b60e8e7a9a2a99b4451d0454924bde4239ffa12a3cdbb11685"
+    },
+    {
+      "path": "flint/test/test_arb.py",
+      "sha256": "3f8875e760a2188ca6d23a64192467fc92e3470c032a34aab260b57f27238e14"
+    },
+    {
+      "path": "flint/test/test_arb_mat.py",
+      "sha256": "f3dd7e55bd24610c3b238d828ec96f266e461e9b6fdf72cbaa7b7dd474d446df"
+    },
+    {
+      "path": "flint/test/test_arb_poly.py",
+      "sha256": "61ae9101f3cfee2a5af78d1b08cd556e7d221b1d21ce6c41e60ee4ab02d4768b"
+    },
+    {
+      "path": "flint/test/test_arb_series.py",
+      "sha256": "8aacfa7586fb093f6bdcda2b7a52bbee9de514236fbfeb9e288baccc00efb58e"
+    },
+    {
+      "path": "flint/test/test_dirichlet.py",
+      "sha256": "665e4605dd8c2a23c1251c628a70128fd02726d7e21f755bc52c3ec4c96a375f"
+    },
+    {
+      "path": "flint/test/test_docstrings.py",
+      "sha256": "21a51901ebe24c9515d926c6b300ff7eae2704df645b8a701329be319508f4b3"
+    },
+    {
+      "path": "flint/test/test_fmpq_vec.py",
+      "sha256": "4718dc8c6c1a507ee064620888cf9e89778df29f8e3fbc13eec7bdccc0423371"
+    },
+    {
+      "path": "flint/test/test_fmpz_vec.py",
+      "sha256": "c9bdfd1e219097e7e3c946f2108efdfe0480c1d24517b64cd574aaefdc7fd7dd"
+    },
+    {
+      "path": "flint/test/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "flint/test/__main__.py",
+      "sha256": "bc5a3d8b710eb54d311ae642f48122791a17cef8e22d409bee9fab8bb7907b63"
+    },
+    {
+      "path": "flint/types/acb.lib",
+      "sha256": "ae833f8353ddc7e69ca467d4e42fdbe6097e3f20d0ce6a2035da4cfc4f4be8ea"
+    },
+    {
+      "path": "flint/types/acb.pyd",
+      "sha256": "6559277133403ebdc06730c50f2768570568ce0a2d5d9084d527f5d85ed0b93c"
+    },
+    {
+      "path": "flint/types/acb.pyi",
+      "sha256": "661b8c4076559fe71b5db475debaaf0e1b90f2d350dac5fc71e0508c80ff78d0"
+    },
+    {
+      "path": "flint/types/acb_mat.lib",
+      "sha256": "24aec6f0c15d9b64327b28bcb3b98986f7212851cc6b873d2bb797c95c4c8f3e"
+    },
+    {
+      "path": "flint/types/acb_mat.pyd",
+      "sha256": "7101fb1549d94da162bd029d1e5278d7637018288dce6f41a037fda3004ca716"
+    },
+    {
+      "path": "flint/types/acb_mat.pyi",
+      "sha256": "f8b3dde1aae033028ae7c76d17a86aafaf5537b686d89d5f12873b982be09910"
+    },
+    {
+      "path": "flint/types/acb_poly.lib",
+      "sha256": "f44a4060430fe3b169055fc34792b357f710441ae3cb57278f2768514f777668"
+    },
+    {
+      "path": "flint/types/acb_poly.pyd",
+      "sha256": "27997d1dce6e869e1242b0f4d985a0d203e751d751cfa99e0735085fc97f6d3f"
+    },
+    {
+      "path": "flint/types/acb_poly.pyi",
+      "sha256": "9745ebfc6da4aef60649fd97aa1b36fa1bdc948bc6fecbc0f6e51b074c84e1d0"
+    },
+    {
+      "path": "flint/types/acb_series.lib",
+      "sha256": "6f973e11bea6331a792025cd4b7740e881af5953a40d6f192b7ebafad0f247d4"
+    },
+    {
+      "path": "flint/types/acb_series.pyd",
+      "sha256": "353a75b54fcf83530b3c5633ff7c2ebfcea05724665ea0b67c370524fca12595"
+    },
+    {
+      "path": "flint/types/acb_series.pyi",
+      "sha256": "445b057490d152811869f5f50fe88fd6a82bc5accd5dde7fac8a9e4b6a0676a1"
+    },
+    {
+      "path": "flint/types/acb_theta.lib",
+      "sha256": "a19eae9d395081a082aef4039116b0cc59ac202865c4b63eb12159c3edbea8d4"
+    },
+    {
+      "path": "flint/types/acb_theta.pyd",
+      "sha256": "17c886333765f18328b1534726f9c873f5f8a549bbdd8804a800b62ac8a62fda"
+    },
+    {
+      "path": "flint/types/acb_theta.pyi",
+      "sha256": "20ee7388343b771781c7a263b2077091c0d203428b0a4d910d7a17e75e3fba6c"
+    },
+    {
+      "path": "flint/types/arb.lib",
+      "sha256": "1f7999c195f73b8c673cec379ae781ceb376f02547cfc5941474f13b9affaec1"
+    },
+    {
+      "path": "flint/types/arb.pyd",
+      "sha256": "8216e9ab3fd7358234bbc3aec620998bf4a637ed93baadb2acfabd0a82428360"
+    },
+    {
+      "path": "flint/types/arb.pyi",
+      "sha256": "0b8f83271c2d328b49cd9d924c9cd6ec7383d6f72e59261ea754e42a2092d1f4"
+    },
+    {
+      "path": "flint/types/arb_mat.lib",
+      "sha256": "f5c3cab5c01428147df3c6c901bf35127d7f0315ca657ac47386eb9fa770c3d0"
+    },
+    {
+      "path": "flint/types/arb_mat.pyd",
+      "sha256": "ae68a710f826366d0f0ece01f79fbf8d4a97fae7de34f0f16eb0ed740590c821"
+    },
+    {
+      "path": "flint/types/arb_mat.pyi",
+      "sha256": "c53bab68a1b9fb8426f20653a36b8e39e324b47083f8b08756c328da3905d536"
+    },
+    {
+      "path": "flint/types/arb_poly.lib",
+      "sha256": "a8a85269ecc6d627653ae4f99158bc72bee39d8f2ddb797a9a3ea12e2a18fa3a"
+    },
+    {
+      "path": "flint/types/arb_poly.pyd",
+      "sha256": "ae58bff417d89274132a0daee15eee0dc8db3f685d2b32c0b002d0d3c9d3d795"
+    },
+    {
+      "path": "flint/types/arb_poly.pyi",
+      "sha256": "557dc3c518c173073c1547bc09fed589102cc5f6bf1a8ccaed00ee1f26604280"
+    },
+    {
+      "path": "flint/types/arb_series.lib",
+      "sha256": "d447a0734cd67ad84be15df5007d75eeac7bd2083b9a52a805a4b64702f46623"
+    },
+    {
+      "path": "flint/types/arb_series.pyd",
+      "sha256": "123464b87628208dc2586ef71e3b8d481f7e2b1e601d3e89de579b6d02d864a4"
+    },
+    {
+      "path": "flint/types/arb_series.pyi",
+      "sha256": "272cc03f466479b3ec193cceec5580150341646c9a10eb397095efd43e460b82"
+    },
+    {
+      "path": "flint/types/arf.lib",
+      "sha256": "7b88bf78720e480545ddfc78918215962c6a68c2181a19abfd3b7317c54ce21a"
+    },
+    {
+      "path": "flint/types/arf.pyd",
+      "sha256": "50581c442f4122301c4cf4e0324b97b5596ce399319cd72299307df69372a86e"
+    },
+    {
+      "path": "flint/types/arf.pyi",
+      "sha256": "6b7c07d89acbd097bafb0033c7c07d200d73d80c810615cdeed25cbbde3f8662"
+    },
+    {
+      "path": "flint/types/dirichlet.lib",
+      "sha256": "b2ea815bbaa76ebf1bf75782cb7cf6b23a0632d28bf77091975671462a1ac256"
+    },
+    {
+      "path": "flint/types/dirichlet.pyd",
+      "sha256": "a57a1046bf7ae0fbfa08f625530d8eb6a56bffdf6ba3be0d4e97bcfff7ae2381"
+    },
+    {
+      "path": "flint/types/dirichlet.pyi",
+      "sha256": "2fa0555eb5d6d10f51b807f4194f8a6cbf27654b86ccdc092f0751c964f86401"
+    },
+    {
+      "path": "flint/types/fmpq.lib",
+      "sha256": "00b35c538d325caceb12757257200975e49004923dbf83634ef03abf429a19d3"
+    },
+    {
+      "path": "flint/types/fmpq.pyd",
+      "sha256": "b480310ef0126c937170650dce5bc30442b0d6b3cb0560d2751edd93928ce15b"
+    },
+    {
+      "path": "flint/types/fmpq.pyi",
+      "sha256": "279c5a062d08ba82340174bfe6a7becdc697939593cb33dcae232b0a5561e924"
+    },
+    {
+      "path": "flint/types/fmpq_mat.lib",
+      "sha256": "b474d93e03532b68ed1fff8a964a6019584561844c08defc3dad436cbf7fb434"
+    },
+    {
+      "path": "flint/types/fmpq_mat.pyd",
+      "sha256": "069c658fb7c984483f7befe451157da22722c367d456aa49aa127818d6055b56"
+    },
+    {
+      "path": "flint/types/fmpq_mat.pyi",
+      "sha256": "a409b5a1a4f8d1b9f031adf1bf2cb1168157ccb678ab02dc68108d597e49d1ef"
+    },
+    {
+      "path": "flint/types/fmpq_mpoly.lib",
+      "sha256": "b179ac217468584bb8a41e0f32b21ad20e1284d65eb28607ea3ac84799680985"
+    },
+    {
+      "path": "flint/types/fmpq_mpoly.pyd",
+      "sha256": "5ee8fc039915ecbb1a1bca4be6a989e4dae5f446b38f0ed886c02509492ecd25"
+    },
+    {
+      "path": "flint/types/fmpq_mpoly.pyi",
+      "sha256": "cef1e0e7dd92889ce51bf232517f0feb77302fdf6efda90bd2bf734ca5cc454b"
+    },
+    {
+      "path": "flint/types/fmpq_poly.lib",
+      "sha256": "1842038be567bc170360440e0c61d27994091fb751ed63640997bb2fbe241931"
+    },
+    {
+      "path": "flint/types/fmpq_poly.pyd",
+      "sha256": "eb5f00243b93a49d86b4c6080cfc2f49e8afa4fe1e22bc8435a16f2aa8a08087"
+    },
+    {
+      "path": "flint/types/fmpq_poly.pyi",
+      "sha256": "480cc06221dd7e21e9d71f16c9d49880938b0ec017d168aac4089a9e9a009420"
+    },
+    {
+      "path": "flint/types/fmpq_series.lib",
+      "sha256": "447a2aad691d654ad93331dcc1c15f8b59a46ac332835a5c19cf88af2c2b64d6"
+    },
+    {
+      "path": "flint/types/fmpq_series.pyd",
+      "sha256": "6ace0c8ac7860484a9b9c9dced6b8b9b89122be54d8f1becb1cfda8c21b24fad"
+    },
+    {
+      "path": "flint/types/fmpq_series.pyi",
+      "sha256": "25cd0e7f8205ceb389824834dc949f74060eb6cfb3b7ed2a9515bb34ae3608fc"
+    },
+    {
+      "path": "flint/types/fmpq_vec.lib",
+      "sha256": "f5a35a9c12df7dd8e9a84f9d4d27276b6526578f6f779abaec8e25aa89126c24"
+    },
+    {
+      "path": "flint/types/fmpq_vec.pyd",
+      "sha256": "ed9c98cd497750def04fc955459f5054bc053a2597321cdb4a0f9466cc152af1"
+    },
+    {
+      "path": "flint/types/fmpq_vec.pyi",
+      "sha256": "bc3bf9f1c008bb61da11dda0a7d02946ea0a1f5bcd65b942773a607310617ff7"
+    },
+    {
+      "path": "flint/types/fmpz.lib",
+      "sha256": "f8d8ed5add003a5f041399f0e10d92b2ebda241f010e46454e266c492fd8ebaa"
+    },
+    {
+      "path": "flint/types/fmpz.pyd",
+      "sha256": "98c1791d1374d067e7af124a7e2235f787ac20a0c784d7e6effaad46c526a53d"
+    },
+    {
+      "path": "flint/types/fmpz.pyi",
+      "sha256": "0e8f5958d75fb9905c46099822c37a33ac7ee72df804d9c05ad464b0a7e412a3"
+    },
+    {
+      "path": "flint/types/fmpz_mat.lib",
+      "sha256": "22231c3f5e1ac5b014b9538c5e2b68ffe9cf8d92b0e71d4d8f81add11bdebed7"
+    },
+    {
+      "path": "flint/types/fmpz_mat.pyd",
+      "sha256": "71d70ab91529fbe050e6e864f4a6029c24c6a0548d4fe559f84ff2f9b631046c"
+    },
+    {
+      "path": "flint/types/fmpz_mat.pyi",
+      "sha256": "999446ac5aaf5c02e218a6b9dcac5cc6b7f5c5eb38448cc40f348f69757d938e"
+    },
+    {
+      "path": "flint/types/fmpz_mod.lib",
+      "sha256": "e6e006cf806eff8b8460cefc763678046e8f6bd6ba7842524290158251146c33"
+    },
+    {
+      "path": "flint/types/fmpz_mod.pyd",
+      "sha256": "0f6b76557c4bfb80367ae216082a924fbdf736151c34490875fed8173c05d4f3"
+    },
+    {
+      "path": "flint/types/fmpz_mod.pyi",
+      "sha256": "90c80a683ee4acce8ddfba82c298ae20eac5c7e2dcf3a125a304f2756b024c55"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mat.lib",
+      "sha256": "192f127fbaa48c9e8d38b89b77d35c1bd34c81fe6cfac8b0e3878e28f0cd1299"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mat.pyd",
+      "sha256": "6611f0be6a2d3467b0d37b1dd7a1eaad91749d213fa5ef5cef8b96a74543b383"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mat.pyi",
+      "sha256": "8a7793d259360be3be9c87ec13f10c634001a076e2e33e9e7772ff024dfee439"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mpoly.lib",
+      "sha256": "49cf84a47763f91c3b0d68b453d86fab8d9513d6cb4a0d6818c87d98e01cb15b"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mpoly.pyd",
+      "sha256": "59cf2971a08f9e029e18964d43757e217aa2ff5b20e7cf88d33b6c5b6529865c"
+    },
+    {
+      "path": "flint/types/fmpz_mod_mpoly.pyi",
+      "sha256": "9d25d25d13e3978ecd56ab659cc5729dcdf18ef561dba6337f239591551035e8"
+    },
+    {
+      "path": "flint/types/fmpz_mod_poly.lib",
+      "sha256": "e535e94d311730c7bc6ff9af54cd69c3dde1eaad71612e2d679f91a1c7587197"
+    },
+    {
+      "path": "flint/types/fmpz_mod_poly.pyd",
+      "sha256": "a23719e0d70ff4d15fbd3fba615a4a37aec2eedefb54c23ddb868be8b792a423"
+    },
+    {
+      "path": "flint/types/fmpz_mod_poly.pyi",
+      "sha256": "990e5f2d97178213b66c55fddd5055b7fc2c9c715dcea89db61a2087ce98fbfd"
+    },
+    {
+      "path": "flint/types/fmpz_mpoly.lib",
+      "sha256": "ed721b673caec29269cf6c9ad09ef21d5fb32eca1602beec214d8385d388bf39"
+    },
+    {
+      "path": "flint/types/fmpz_mpoly.pyd",
+      "sha256": "cc98e6373791ca6c802ae6d8a03990033f402da6e1ca909a30273b976428b721"
+    },
+    {
+      "path": "flint/types/fmpz_mpoly.pyi",
+      "sha256": "452d286bbed2a904f234d3f1a96aa952484d2b54a2980d41392aced8ad5a3c40"
+    },
+    {
+      "path": "flint/types/fmpz_poly.lib",
+      "sha256": "094501f08c9d66e62d63b405e01f5a51787fcbe32725b273a89b467070a9a08b"
+    },
+    {
+      "path": "flint/types/fmpz_poly.pyd",
+      "sha256": "62282cb1b2ebb98bf74f2fa2a41d35d6ec2574e345736c126328ce3cc59180f0"
+    },
+    {
+      "path": "flint/types/fmpz_poly.pyi",
+      "sha256": "bdc7f946fa931336cbcf917333b2bfce0bd8b857cfce90855db4385807a0dfa3"
+    },
+    {
+      "path": "flint/types/fmpz_series.lib",
+      "sha256": "a3e9ffebb16e0f7c487d59b80b921aa3727aa23a759e61986684ebb25f2bc89a"
+    },
+    {
+      "path": "flint/types/fmpz_series.pyd",
+      "sha256": "472ab331df82e2fe1d0c03c4a844b63fc6bbaffa5dd73304b174b800cae048cf"
+    },
+    {
+      "path": "flint/types/fmpz_series.pyi",
+      "sha256": "2c2753e3ced5e8ec5d3aa7203064e17504011fa44c0467367980bd2acc7acbf5"
+    },
+    {
+      "path": "flint/types/fmpz_vec.lib",
+      "sha256": "9ed954df4d667c9fd50d2f15a6e606e3c6063e27fae5a499b553309424428ced"
+    },
+    {
+      "path": "flint/types/fmpz_vec.pyd",
+      "sha256": "f8c3c4a09bf4de5b33a56f41041f3042387665f776e09ebab78b7319d5f65d4b"
+    },
+    {
+      "path": "flint/types/fmpz_vec.pyi",
+      "sha256": "e99033a5b80cc9d2c891da99bef46cb8d279fc2458a602d939143ca5d4f93c92"
+    },
+    {
+      "path": "flint/types/fq_default.lib",
+      "sha256": "344e7f842b482ba5a5a12a86744efa68dffdc146546edaf0cfb7b049573d86ee"
+    },
+    {
+      "path": "flint/types/fq_default.pyd",
+      "sha256": "d0e1f8dcb793950e4943ef207f6fe7856c7ff990671ce3bdd368b39abf2750ca"
+    },
+    {
+      "path": "flint/types/fq_default.pyi",
+      "sha256": "b2f628d7fa89ddb1afd74bcb5f8022cf0d509edcd965592a9f0f09ad85739cf4"
+    },
+    {
+      "path": "flint/types/fq_default_poly.lib",
+      "sha256": "31776c000767e6b8aafe45f2bd125c6f7502aae3aac5b1e346a3d98fae22f7a3"
+    },
+    {
+      "path": "flint/types/fq_default_poly.pyd",
+      "sha256": "c3d07a44a8bdaa10e521809529137bdfcf2f23116c3ec2b5da4b53a220280e62"
+    },
+    {
+      "path": "flint/types/fq_default_poly.pyi",
+      "sha256": "b9c6b4c91b537933e51db93608a3ad3404d8df5f2eef7a4c848017b235393dc9"
+    },
+    {
+      "path": "flint/types/nmod.lib",
+      "sha256": "df7153b8a88542983828170c63229a25bca6ae051ed50c7d7e890370c149dcf4"
+    },
+    {
+      "path": "flint/types/nmod.pyd",
+      "sha256": "d2db1c5a790978e341a811ed3d6f5e14181e2bf3526e77020470c41671060dd7"
+    },
+    {
+      "path": "flint/types/nmod.pyi",
+      "sha256": "e540c1519b9a81bd71a6072c4963d8112b23dcb435b7845349b40bd606255f55"
+    },
+    {
+      "path": "flint/types/nmod_mat.lib",
+      "sha256": "d2bd2971cdfa141045e08704fb3b0414689e71e698e245379b4515c461f7d6ad"
+    },
+    {
+      "path": "flint/types/nmod_mat.pyd",
+      "sha256": "665bec3b90f0959a6de7604136dfbcd429defb5079de74448168b130de007f3d"
+    },
+    {
+      "path": "flint/types/nmod_mat.pyi",
+      "sha256": "ae49207279d135aeb5aac819395346b0a266233a1bca8a3abe4e584ee5fa10ed"
+    },
+    {
+      "path": "flint/types/nmod_mpoly.lib",
+      "sha256": "b7ffca86935865a664546fcdab0e9a76e04bfdc86aead9e45f7311568a3079c1"
+    },
+    {
+      "path": "flint/types/nmod_mpoly.pyd",
+      "sha256": "bfa9a70724c4fd13f4ee6d0a3c66b58f4cbbc207d26e58f44c3d506fb8fdcccd"
+    },
+    {
+      "path": "flint/types/nmod_mpoly.pyi",
+      "sha256": "69110b834b7c335058d6cfa169f73ad972ec4c5400436715a1ac08dd6f73683b"
+    },
+    {
+      "path": "flint/types/nmod_poly.lib",
+      "sha256": "965387c2e0a9dcc9a7be34a11dcf8c0294316d1a26e8d4ca40d2f4cb879c3172"
+    },
+    {
+      "path": "flint/types/nmod_poly.pyd",
+      "sha256": "4ad643d2d9c1fc22008d3d7e3890e2cf0986f057ff8453bd2b0ceb65ee7dd53b"
+    },
+    {
+      "path": "flint/types/nmod_poly.pyi",
+      "sha256": "5c136b2d80097fe9731db6ece6826293e054ea3a1b78e465c812e3d0ae0ffff7"
+    },
+    {
+      "path": "flint/types/nmod_series.lib",
+      "sha256": "db43cbe5ab635738290fd24e052a506907c081926bafe32b6acbb24762443ea1"
+    },
+    {
+      "path": "flint/types/nmod_series.pyd",
+      "sha256": "7b318b370791acc2e145e9ee69b06575db721b4298b4fbe8a5e269483bd95036"
+    },
+    {
+      "path": "flint/types/_gr.lib",
+      "sha256": "aefeed2aafda165000e52a682d51f39b41a82f5689ee789374ebbcd3bf81a718"
+    },
+    {
+      "path": "flint/types/_gr.pyd",
+      "sha256": "2e546f92c5188e0d018534acaeebfae194fa24784519b80fc5309a3f4405cc9c"
+    },
+    {
+      "path": "flint/types/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "flint/utils/flint_exceptions.py",
+      "sha256": "88bd68c2d4b41a2d18c48a5e80906278a96bf47252620b65671bd3c66d466362"
+    },
+    {
+      "path": "flint/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "python_flint.libs/libflint.24.0.0-9b2d98b6da8eded35def7bc3b288ff65.dll",
+      "sha256": "aac725ed1c5dbb74c57230dda97634a87d6475e46acd54b3849d16c134a23e57"
+    },
+    {
+      "path": "python_flint.libs/libgcc_s_seh-1-ca70890bbc5723b6d0ea31e9c9cded2b.dll",
+      "sha256": "4661795a1debb1448f2ccfecc054fc369561f44c616ff3dfa25650327555037f"
+    },
+    {
+      "path": "python_flint.libs/libgmp-10-b84ebdfad40b1a203ac4096a9c8425c2.dll",
+      "sha256": "b84ebdfad40b1a203ac4096a9c8425c288d88f1ebc71e052e048ada8a46975b0"
+    },
+    {
+      "path": "python_flint.libs/libmpfr-6-681398cede0f6f27feb0cbd931b38241.dll",
+      "sha256": "dddd060671cc9adfd6e7c78b44b0daff3957abe9f4831212805aebf4cd7bff05"
+    },
+    {
+      "path": "python_flint.libs/libwinpthread-1-f5042e8e3d21edce20c1bc99445f551b.dll",
+      "sha256": "f5042e8e3d21edce20c1bc99445f551b89212403164e9388d2c6f48d6d6bcb78"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/DELVEWHEEL",
+      "sha256": "7bbef0aeb67065b95df888d004b19ae889e915cef5baad82de703c40a44c1ac8"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/METADATA",
+      "sha256": "5916181439cbc4d71a2e033aa50f8809cff66a641879da630023500eaef34901"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/WHEEL",
+      "sha256": "5ebf1141048e68b657ab667bad3c5dfc6921982bbc95781337d55af8f33d29ed"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/LICENSE",
+      "sha256": "a887c9adb6aa9906eb9b89a98516fb64e611a4c3fd656123bc4f3860e639749c"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/flint-3.6.0/COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/flint-3.6.0/COPYING.LESSER",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/gcc/COPYING.LIB",
+      "sha256": "362aa1af296393556b4c77891986cc62ef2b55caf5b9dfd2ab9102e742d880b7"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/gcc/COPYING.RUNTIME",
+      "sha256": "90077ba306ee9d8ed966cab1b4abd69b6e728acf08777283cc50283cd9503fa6"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/gcc/COPYING3",
+      "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/gmp-6.3.0/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/gmp-6.3.0/COPYING.LESSERv3",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/mpfr-4.2.2/COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/mpfr-4.2.2/COPYING.LESSER",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    {
+      "path": "python_flint-0.9.0.dist-info/licenses/python-flint.libs/winpthreads/COPYING",
+      "sha256": "1c8d23063c3772b9435831410b31b51fef3d9cf2138a442dc367ef5d72239f67"
+    }
+  ],
+  "scope": "Reuses previous local REA inventory, independently rebinds every archive file, and compares installed wheel payload bytes except installer-rewritten RECORD. No new security or algorithm-correctness audit."
+}

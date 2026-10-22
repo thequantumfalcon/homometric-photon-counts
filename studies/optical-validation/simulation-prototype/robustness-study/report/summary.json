@@ -1,0 +1,15 @@
+{
+  "status": "PROMISING_AT_TESTED_SETTINGS",
+  "initial_budget_status": "REDESIGN_OR_TIGHTER_CALIBRATION_NEEDED",
+  "tighter_settings": 8,
+  "tighter_family_size": 16,
+  "maximum_tighter_simultaneous_upper": 0.028429655815507066,
+  "worst_initial_corrected_empirical_error": 0.55,
+  "heldout_classification_records": 104,
+  "snapshots_per_record": 1000000,
+  "calibration_target": {
+    "position_residual_each_axis_um": 0.25,
+    "quadratic_opd_coefficient_residual_nm": 2
+  },
+  "no_continuous_tolerance_or_hardware_guarantee": true
+}

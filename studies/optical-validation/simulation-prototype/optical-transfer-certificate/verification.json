@@ -1,0 +1,24 @@
+{
+  "status": "PASS_EXACT_ENDPOINT_AND_BOUND_AUDIT",
+  "transfers": 29,
+  "coefficients_checked": 1827,
+  "integral_pairs": 224,
+  "witness_rates": 192,
+  "phase_commands": 12096,
+  "maximum_weight_l1_error_upper": "3/2500000000000000",
+  "maximum_correction_rad_error_upper": "343/1000000000000000000",
+  "maximum_fixed_command_intensity_error_upper": "39/10000000000000",
+  "maximum_witness_rate_error_upper": "113/50000000000000",
+  "minimum_witness_quantizer_margin_lower": "2830215724639548482936164783179892446329131584335485209806254599061947/14134776518227074636666380005943348126619871175004951664972849610340958208",
+  "scope": "Exact rational audit of exported enclosures, bounds and finite coverage. Integral truth requires the separate Arb replay; this audit is not a proof-assistant kernel.",
+  "negative_controls_rejected": [
+    "zero_weight_error_bound",
+    "changed_quantized_command",
+    "zero_witness_rate_error_bound",
+    "disjoint_integral_enclosure"
+  ],
+  "certificate_sha256": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5",
+  "verifier_sha256": "9845b4a67c241bf71c237d3258ff83d69251eaa55dcc65c69965b7c92ac37d9b",
+  "workspace_bindings_checked": 128,
+  "manifest_payloads_checked": 0
+}

@@ -11,3 +11,18 @@ SymEngine, NumPy, or their runtime binaries. Optional separately installed
 dependencies remain governed by their own licenses. Scientific citations
 in the archived proof notes are references, not claims of ownership of
 the referenced research.
+
+External processed SPAD afterpulse distributions
+
+The optical-validation supplement includes apDist_3432H.txt, apDist_3605H.txt
+and apDist_Count.txt from Ivo Straka's SPAD-counting-model repository at commit
+4ed0903200b59b7f94715c38ca2668bb832e80d8:
+https://github.com/ivo-s/SPAD-counting-model/tree/4ed0903200b59b7f94715c38ca2668bb832e80d8
+Associated paper: Straka, Grygar, Hlousek and Jezek, Counting Statistics of
+Actively Quenched SPADs Under Continuous Illumination,
+https://doi.org/10.1109/JLT.2020.2994654.
+The upstream GPL-3.0 license is preserved as LICENSE.upstream.txt beside the
+data in measured-data-review/data/spad and their copies in afterpulse-study/data,
+under studies/optical-validation/simulation-prototype. These unmodified tables
+retain their original terms; the project's MIT grant does not replace them.
+No upstream executable source or third-party article PDF is distributed here.

@@ -5,6 +5,11 @@ emulator could distinguish the same two coordinate sets within an acquisition
 budget. It contains **no measured detector data or hardware validation**. The
 original proofs and the 327-file historical evidence inventory are unchanged.
 
+Later [optical transfer and detector supplements](../optical-validation/README.md)
+add a continuum optical model, robustness simulations, external processed SPAD
+data and finite arithmetic checks. Those additions have separate assumptions;
+they do not retroactively broaden the certificates on this page.
+
 | Experiment | Result under its stated model |
 | --- | --- |
 | Original frequency, reference variance/gain and 13-bin counts | At 288,000 iid snapshots, equal-prior error is at least **49.9934757992162%**. This is an eight-hour budget only at the assumed 10 independent snapshots/second. |

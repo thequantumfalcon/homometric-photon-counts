@@ -1,0 +1,102 @@
+Development specification and gap register -- 2026-10-21
+
+Purpose
+Make the bounded optical feasibility study numerically auditable, while keeping
+mathematical model verification distinct from physical validation. Preserve the
+sealed prior studies. No apparatus or project-specific measured calibration is
+available. The present prototype uses known programmed masks at q=201*pi/200;
+it is not an experimental demonstration of fourth-moment-only discrimination.
+
+Current work package: rigorous optical transfer arithmetic (CHECKS PASSED)
+Location: simulation-prototype/optical-transfer-certificate/
+Inputs: pinned robustness-study optical model and its 26 validation settings;
+the three already saved afterpulse-study optical transfers and 32 noise-vector
+witnesses per label/settings combination. Physical decimal parameters denote
+exact rationals. Saved binary64 numbers denote exact dyadic values.
+
+Requirements
+1. Reconstruct the finite-cell complex Gaussian integrals in Python-FLINT/Arb.
+2. Check a closed-form error-function evaluation against validated integration
+   of the entire integrand. These are two algorithms sharing the Arb backend,
+   not independent implementations of interval arithmetic.
+3. Bound differences from the floating-point transfer and correction values.
+4. Propagate coefficient errors to intensity errors for fixed unit phasors.
+5. Explicitly handle quantizer boundaries in finite saved witness checks;
+   do not infer a uniform error guarantee through discontinuous rounding.
+6. Store exact dyadic enclosure endpoints, source hashes and reproducible
+   scripts. Independently audit algebraic bounds using rational arithmetic.
+7. Recheck that previous manifests still bind unchanged files. Save results
+   and a handoff; do not replace existing simulation outcomes.
+
+Acceptance criteria
+All requested finite coefficients have finite, narrow enclosures; the two
+integral algorithms overlap; declared numeric-error caps pass; saved witness
+phase indices are unambiguous and match; witness rate bounds pass; deliberate
+invalid certificate mutations are rejected; standalone artifact audit passes.
+If a criterion fails, retain and report the failure instead of weakening scope
+or silently changing prior parameters.
+
+Existing evidence to preserve
+- Central geometry/count-law Lean results and selected Nanoda checks are saved
+  in public-repo. See its docs/verification-tools.md and docs/roadmap.md for scope.
+- Bounded robustness study: finite selected settings only, not a continuous
+  tolerance box. Broader calibration budget failed; tighter selected settings
+  passed their simulation criterion.
+- Public measured-data review: three external, processed SPAD afterpulse delay
+  distributions; numerical optical calibration data still missing.
+- Afterpulse study: 48 selected conditional error probabilities, each 0/200;
+  simultaneous 95% upper bound 0.03375192026711007. Synthetic, not measured.
+
+Open obligations and next gates
+- Numerical optics: finite-setting coefficient and saved-witness arithmetic
+  certificate completed; continuous tolerances and full stochastic numeric
+  error propagation remain outside this result.
+- Formalization: remaining root/testing certificates and decision-theorem
+  connections are separate from the already proved central count-law chain.
+- Instrument response: measured per-cell complex transfer, SLM phase/amplitude
+  response, wavelength/flux-dependent detector response and calibration error.
+- Temporal model: exposure, settling, drift, dependence, cross-gate memory,
+  twilight counts and unknown afterpulse tails remain model limitations.
+- Experimental feasibility: a measured pilot and acquisition-rate/budget check
+  precede a preregistered physical discrimination experiment.
+- Novelty: comparison with prior work remains open; search cannot prove absence
+  of all prior art. Do not claim a fundamental physical limit is overturned.
+
+Execution policy
+Use the existing pinned FLINT runtime; no new prover or package installation.
+REA is useful for artifact identity/provenance. It does not prove optics or
+replace measured calibration. Do not execute downloaded third-party research
+code merely to inspect it. Preserve third-party license terms and the existing
+MIT grant for project-owned work. Keep AI methods disclosure honest; do not add
+AI contributor/co-author Git attribution. No publication claim without an actual
+push receipt. Public repo last recorded clean at 0d3fad8a0ef20148595a01e042f08e0752db9215.
+
+Progress and resume instructions are in HANDOFF-2026-10-21.md. Update this sheet
+with verified results and remaining gates when the work package completes.
+
+Verified results for the current work package
+certificate.json and verification.json passed: 224 integral pairs, 29 transfer
+records (26 replayed settings plus three frozen transfers), 1,827 coefficients,
+12,096 finite phase commands and 192 saved photon rates. Exact upper bounds:
+weight L1 error 1.20e-15; correction error 3.43e-16 rad; intensity discrepancy
+from weights at fixed commands 3.90e-12; saved-rate error 2.26e-12 photons/gate.
+The minimum checked quantizer margin exceeds 0.0002002 in index units.
+Four deliberately invalid certificate copies were rejected. A reversed OPD
+sign also fails a transfer comparison. 123 prior payloads remain unchanged;
+128 workspace source/manifest/preparer bindings pass. Existing local REA wheel
+evidence was rebound to all 159 archive files; 158 installed payloads match
+the wheel (installer-rewritten RECORD excluded). No runtime was installed.
+
+Delivery checklist
+- Exact endpoint and bound audit: PASS.
+- Source preservation and runtime identity checks: PASS.
+- Fresh extracted-packet audit and Arb replay: recorded in the delivery receipt
+  referenced by the handoff when complete; do not infer that from this sheet.
+- Public GitHub: this supplemental study is local; no push in this work package.
+
+Next development package, if pursued
+Obtain usable numerical optical transfer/SLM calibration data, or define a
+rigorous stochastic error budget covering phase-rounding boundary crossings,
+floating-point phase/rate evaluation and sampler approximation. Do not claim
+that this finite witness certificate already supplies that probability bound.
+Further identical simulation reruns do not resolve the absent physical data.

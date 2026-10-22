@@ -11,4 +11,6 @@ The general moment formula sums over pairs of site assignments. Its proof applie
 
 Criticism should identify a specific implication, assumption, certificate entry, or reproduction failure. A successful file hash proves identity, and a successful formal check proves its exact statement; neither validates a physical detector.
 
+For the later prototype, compare the [ideal feasibility certificate](../studies/optical-feasibility/README.md) with the [optical/detector supplements](../studies/optical-validation/README.md). Review the failed wider calibration budget, finite selection of the tighter settings, 48 separate simulation error comparisons, and external-data wavelength/processing limitations. Run `python tools/optical_validation.py audit`. The finite Arb transfer checks bound numerical evaluation of a declared optical model; they do not turn the selected simulations into a continuous-tolerance guarantee or an experiment.
+
 The older evidence directories are historical layers. Their status notes can predate the reference four-root result and new lower bound. Current conclusions are stated in the root README and claim ledger; archived historical prose is not silently rewritten to suggest that it always contained later results.

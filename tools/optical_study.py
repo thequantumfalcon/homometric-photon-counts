@@ -6,11 +6,12 @@ import argparse
 from fractions import Fraction as F
 from hashlib import sha256
 import json
-import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+
+from replay_environment import replay_environment
 
 ROOT = Path(__file__).resolve().parents[1]
 STUDY = ROOT / "studies/optical-feasibility"
@@ -192,12 +193,7 @@ def stage(output: Path) -> Path:
 
 def replay(output: Path, exploratory_tests: bool = False) -> None:
     workspace = stage(output)
-    env = os.environ.copy()
-    env["PYTHONDONTWRITEBYTECODE"] = "1"
-    if env.get("PHOTON_FLINT_RUNTIME"):
-        env["PYTHONPATH"] = (
-            str(Path(env["PHOTON_FLINT_RUNTIME"]).resolve()) + os.pathsep + env.get("PYTHONPATH", "")
-        )
+    env = replay_environment()
     jobs = [
         ("prototype-tests", ["simulation-prototype/test_simulation.py"]),
         ("calibration-tests", ["simulation-prototype/calibration-study/test_calibration.py"]),

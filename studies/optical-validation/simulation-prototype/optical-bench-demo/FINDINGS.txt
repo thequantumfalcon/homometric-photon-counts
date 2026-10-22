@@ -1,0 +1,43 @@
+Simulation findings, 2026-10-21
+===============================
+
+100 independent trials per true label and scenario, 5,000 snapshots per trial.
+Fixed score, threshold, photon scaling and modeled amplitude calibration.
+
+Scenario                                  A errors/100   B errors/100
+Centered                                             0              0
+Fibre +0.5 um                                        0              0
+Fibre +1 um                                          0              0
+Fibre +2 um                                          0              0
+Fibre +5 um                                        100              0
+Fibre -5 um                                        100              0
+Quadratic phase coefficient +30 nm                   17              0
+Quadratic phase coefficient -30 nm                    0              0
+Identical-mask control (A programmed for both)         0            100
+
+For zero errors among 100 independent trials, the per-hypothesis two-sided
+95% Clopper-Pearson interval extends from zero to approximately 3.62%. It is
+neither a simultaneous guarantee across this sweep nor a physical error bound.
+The identical-mask control has 50% balanced error as expected. Scenarios share
+phase draws and cannot be pooled as independent trials. No failed scenario
+has been discarded or used to refit the classifier.
+
+Interpretation: the assumed centered optical transfer supports separation
+in this simulator, but micron-scale collection errors can break the fixed
+classifier. Discrete passing offsets do not certify a continuous tolerance
+interval; untested combinations of imperfections may also break separation.
+The signed quadratic coefficient is an optical-path parameter, not RMS error.
+
+The next useful step is measured per-cell complex transfer and actual amplitude
+mask/phase response, following MEASUREMENT_PLAN.txt. More simulated trials cannot
+establish that those assumptions hold in hardware. This demonstration is a
+programmed phase-mask emulator, not reconstruction of an unknown specimen.
+
+Numerical consistency: independent Gaussian overlap quadrature, an erf closed
+form, grid refinement, forward/adjoint agreement, and a NumPy transform check.
+Detector renewal sampling is compared against an analytic waiting-time law.
+These are floating-point checks, not new rigorous enclosures or Lean proofs.
+REA independently inventories the POPPY wheel; it is not the physics engine.
+
+All original mathematical capsules and published evidence remain unchanged.
+The demo is local; no claim of peer review or physical validation is made.

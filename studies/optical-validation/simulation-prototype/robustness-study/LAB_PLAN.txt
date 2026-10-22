@@ -1,0 +1,70 @@
+Next laboratory gate: compare transfer before attempting performance claims
+==========================================================================
+
+This is an unexecuted protocol. No instrument, laboratory partner or measured
+data are available in this checkpoint. Do not buy equipment based on a claimed
+physical validation. The first decision is whether the assumed transfer and
+calibration precision can be demonstrated with an available apparatus.
+
+1. Record the actual optical layout, wavelength, polarization, pixel geometry,
+   illumination, relay magnification, focusing lens and collection mode. Check
+   that independent static amplitude compensation can be implemented; the
+   simulator does not assume a phase-only SLM can freely control amplitude.
+
+2. With a separate coherent reference, measure each of the 63 cells' complex
+   collected amplitude using phase stepping. Repeat at centered collection and
+   displaced/aberrated settings, and repeat across time. Retain unnormalized
+   power, reference phase, dark frames, exposures and stage readings. Determine
+   calibration precision from repeated data, not from nominal stage resolution.
+   63 cells x four phase steps x ten repetitions is 2,520 frames; this is only
+   a protocol-size illustration, NOT proof of sufficient precision or a required
+   budget. Shot noise and reference stability determine the actual budget.
+
+3. Fit the prescribed three-parameter optical response using calibration data
+   only. Compare predicted and measured complex coefficients on separate check
+   settings. Record residual spatial structure, not only fitted x/y/d errors.
+   The tighter simulated target is a residual of at most 0.25 um per position
+   axis and 2 nm in the signed quadratic OPD coefficient, for the tested finite
+   settings. These are targets to assess, not demonstrated hardware tolerances.
+   A general per-cell residual is not covered just because its RMS is small.
+   Reject this model if unmodeled amplitude/phase residuals are material.
+
+4. Measure phase versus command, amplitude coupling and settling. Confirm the
+   full injected Gaussian phase law and temporal independence. Measure gain,
+   background, dead time, afterpulsing and cross-gate memory. The tested corner
+   values were gain 0.98/1.02, phase variance 0.049/0.051 rad^2 and background
+   0.10/0.15 counts per gate. They are not a certificate for the entire box.
+   Test whether 5 ms gates and an illustrative 10 Hz settled-snapshot rate
+   actually give independent measurements. A frame-rate specification is not
+   evidence of independence or an achieved acquisition rate.
+
+5. Only after the transfer gate passes, freeze the measured calibration,
+   correction rule, score, threshold, exclusions and sample budget. Randomize
+   blinded mask order. Compare corrected and uncorrected data at centered and
+   adverse settings, plus identical-mask controls. Keep all failed runs.
+   A one-trial-per-label/method pilot at two settings uses 8 x 5,000 = 40,000
+   snapshots, or 66 min 40 s at an ASSUMED 10 Hz, excluding setup/calibration.
+   Two additional control trials add 16 min 40 s. This is only a model-comparison
+   pilot; it cannot establish a low misclassification probability.
+
+6. A confirmatory error-rate experiment is much larger. For one predeclared
+   setting and method, zero errors in 72 independent trials per label gives
+   Bonferroni one-sided 95% simultaneous upper bounds below 5% for the two
+   error probabilities. That is 720,000 snapshots: 20 hours at 10 Hz before
+   calibration and exclusions. If errors occur, the required evidence changes.
+   Multiple settings require another multiplicity-aware design. The simulator's
+   200 trials per label cost 55 h 33 min 20 s per setting/method at 10 Hz if
+   repeated physically. Software execution speed is not laboratory feasibility.
+
+Minimal retained record for every acquisition:
+  run ID, UTC time, blinded mask ID, phase command array, correction array,
+  calibration/check split, wavelength and polarization, stage settings,
+  estimated x/y/OPD with uncertainty, measured per-cell complex transfer,
+  actual amplitude transmissions, raw detector timestamps, gate boundaries,
+  dark/reference readings, settling delays, exclusions with reasons.
+
+Stop/revise if the optical-transfer model is rejected, calibration uncertainty
+exceeds the tested targets, or snapshots are dependent. Add measured effects
+to a new version of the simulator and preserve this checkpoint. A successful
+programmed-mask emulator would still not prove unknown-material reconstruction,
+the original fourth-order-only physical effect or historical novelty.

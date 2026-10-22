@@ -4,7 +4,7 @@
 
 Proofs and reproducible certificates for distinguishing two fixed 63-site homometric structures under independent Gaussian phase motion and conditional Poisson photon counting.
 
-This is conditional mathematical research. The repository contains no measured detector data, established novelty claim, or practical acquisition recommendation. Its exact assumptions and remaining gaps are part of the results.
+This is conditional mathematical research. The repository includes processed detector data from an external published study, but no measurements of the proposed apparatus, established novelty claim, or practical acquisition recommendation. Its exact assumptions and remaining gaps are part of the results.
 
 ## Start with a check
 
@@ -51,6 +51,10 @@ The [Gaussian formalization](formal/GAUSSIAN.md) derives the general expectation
 A separate [optical feasibility extension](studies/optical-feasibility/README.md) preserves the original results and explores a different measurement frequency with unbinned counts. Under its explicit iid Gaussian, ideal phase-quantization and detector assumptions, a fixed score and threshold have each error below **4.53% at 5,000 independent snapshots**, uniformly over specified simultaneous gain, background and phase-variance uncertainty. A wider box needs 11,000 snapshots for each error below 4.90%. Arb certificates, exact risk checks, simulation and reproducible sources are included.
 
 This candidate uses a **second-order signal at a different frequency**. It does not demonstrate the original fourth-order-only effect or contradict the original binned sample bound. Acquisition rates, optical transfer, real phase levels and detector behavior remain unvalidated. The study is conditional feasibility evidence, not a physical experiment or acquisition recommendation.
+
+The newer [optical transfer and detector checks](studies/optical-validation/README.md) preserve five further stages: an optical bench model, calibration robustness, three external processed SPAD delay distributions, an afterpulsing simulation, and an Arb transfer certificate. The broader optical calibration budget failed; eight selected tighter settings passed their simulation criterion. The afterpulsing study had 0/200 errors in each of 48 selected comparisons, with simultaneous one-sided 95% upper bound **0.03375192026711007**. These are finite conditional simulations, not continuous optical-tolerance or measured performance guarantees.
+
+Arb bounds the per-cell numerical transfer error by **1.20e-15** at the selected settings and checks 12,096 saved phase commands. It does not certify physical calibration or the full stochastic classifier. Run `python tools/optical_validation.py audit` for the offline standard-library audit; the [reproduction guide](docs/reproduction.md) also documents the exact Arb replay and retained data licenses.
 
 ## Research provenance
 

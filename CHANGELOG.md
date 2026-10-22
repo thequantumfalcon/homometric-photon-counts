@@ -6,10 +6,15 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Resolve caller-relative FLINT runtime paths before replay subprocesses change directory; keep assertions enabled in retained numerical verifiers.
+
 - Use a supported math macro for the Poisson distribution in GitHub's README renderer.
 - Canonicalize the extraction root before checking ZIP member containment, so Windows temporary-directory aliases do not reject safe packaged files. Traversal checks remain enforced before extraction.
 
 ### Added
+
+- Five optical/detector study stages with 115 preserved payloads, including failed wider-calibration outcomes, external GPL SPAD delay data, afterpulse simulations and an Arb finite-transfer certificate.
+- Portable standard-library supplement audits, exact Arb replay, source-package execution checks, and a development specification with physical/formal limitations.
 
 - A measurable Poisson-mixture construction, normalization and factorial tower theorem, composed with the conditional count-law distinction theorem.
 - Public GitHub repository with verified signed commits, Windows/Ubuntu package checks, Arb CI and default CodeQL analysis.

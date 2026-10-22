@@ -1,0 +1,9 @@
+{
+  "status": "PASS_BROWSER_CHECKS",
+  "browser": "155.0.4283.62",
+  "scenarios_checked": 9,
+  "downloaded_json_matches": true,
+  "mobile_overflow": false,
+  "page_errors": [],
+  "network_requests": []
+}

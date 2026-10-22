@@ -1,0 +1,130 @@
+{
+  "spad": {
+    "archive_sha256": "5784eba3340efc1c2b4742da71fd06963bb3b24e3380addaf900098e27586d62",
+    "rea_evidence_id": "ev_d873256da50e188723a02543faf1c6cbc4b7347eac45495e5c8d10c5fc42a05d",
+    "members": [
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/.gitignore",
+        "sha256": "608b49909d2a98f4a8c175418a83ff476426a05a0030398baff093f1507f94bf",
+        "bytes": 16
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/AP_dist_table_3432H.dist",
+        "sha256": "9175953ddbce2af9951d046922acb58a195a2608af23e05156bdb9ad912d7b27",
+        "bytes": 400000
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/AP_dist_table_3605H.dist",
+        "sha256": "a7defb91371fa319c4213ff2c79ae148c73abc13619d597ebdbb54d6a85ed42a",
+        "bytes": 400000
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/AP_dist_table_Count.dist",
+        "sha256": "726a9dfcac2908347c7154beed095fed7617d256cedd029eeb27ddce591841d4",
+        "bytes": 400000
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/apDist_3432H.txt",
+        "sha256": "b8485ca9fe366c99838bd98e8df00e9e96110643e02c6ec522660f27b6176524",
+        "bytes": 551953
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/apDist_3605H.txt",
+        "sha256": "3c671d475c2029ef167a706e0b1da0aa3c272b5995869f434c3313d13b244af0",
+        "bytes": 551321
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/AP_distributions/apDist_Count.txt",
+        "sha256": "775d749b60f8612bfca7543095e9108c5de184f3c322bd7da10e45999bd953f8",
+        "bytes": 562724
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/README.md",
+        "sha256": "ac6cd1a5bce24ef618bda743f9f4e0d0acfe6518e5226044f743a8894fd68e58",
+        "bytes": 1234
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/SPAD_simulation.c",
+        "sha256": "22b9cc9dda6a58e968543808c6e3ad96afa9cef33a2982524b27d3064f53fb80",
+        "bytes": 9994
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/makefile",
+        "sha256": "38d982efc6c97dd2337e9df91e1eacc999c9c48b277e0ffd59718ec08a6a4caa",
+        "bytes": 257
+      },
+      {
+        "path": "SPAD-counting-model-4ed0903200b59b7f94715c38ca2668bb832e80d8/mean_rate.py",
+        "sha256": "f3cb75d24bca1a64934f5d60562bcee5df57458ef587bc4cc4719a92b94a2409",
+        "bytes": 4228
+      }
+    ],
+    "count": 12,
+    "unique_content_nodes": 15,
+    "scope": "Every central-directory file occurrence bound to its exact path, size and digest. ZIP non-entry bytes are outside the REA member inventory."
+  },
+  "slm_figures": {
+    "archive_sha256": "499c71d1ea2d66bb24c95d83a31428ea78c3f0fbafc9973a72904c785b36091a",
+    "rea_evidence_id": "ev_15dd1df93a881595deeff7d39c4b7457aaaa40b4ed4da81c441c290039487d17",
+    "members": [
+      {
+        "path": "001.png",
+        "sha256": "133761a0e721e9cf2f4ed42b428b9164c1e2f04470da90709d5ddea759d8bb33",
+        "bytes": 192110
+      },
+      {
+        "path": "002.png",
+        "sha256": "637fd708848f7e9e58b8514c664a08ac324037d46cfd12f351186493f171a402",
+        "bytes": 705702
+      },
+      {
+        "path": "003.png",
+        "sha256": "505ecd8435c9a39985d1b7737e14df168053f37ee133c7804a6835d1382c713e",
+        "bytes": 1665510
+      },
+      {
+        "path": "004.png",
+        "sha256": "1c7886950d6d79cadeb1bfd59b5c3d8a2131011083d2346f4da70937e9725ea0",
+        "bytes": 1700406
+      },
+      {
+        "path": "005.png",
+        "sha256": "2bbd7d19a25345d675b60e3bad257bad02bed1dd0828086f787c65bb9f03447f",
+        "bytes": 424957
+      },
+      {
+        "path": "006.png",
+        "sha256": "943811709b026f726953eaa99137952bd61b5d72a83cb3df34cef4c0b2a9234b",
+        "bytes": 33758
+      },
+      {
+        "path": "007.png",
+        "sha256": "0c8839844fd9aa24308977b029e5bdd48eb2df8842dd23c64fb40dffa62b5065",
+        "bytes": 525862
+      },
+      {
+        "path": "008.png",
+        "sha256": "e3a1ea64179d1103653956f8b8c256cdddbf80cdb8f0bfaaf54777d38bdefa97",
+        "bytes": 30716
+      },
+      {
+        "path": "009.png",
+        "sha256": "196ce512fb7dad26e4813cace03f85bd0741a04626ee0bbdfe7392cc75035a88",
+        "bytes": 23933
+      },
+      {
+        "path": "010.png",
+        "sha256": "56c577809b62c152969ef46a598130a061528a9585f4d49e950dfd8a2fbc6025",
+        "bytes": 1794330
+      }
+    ],
+    "count": 10,
+    "unique_content_nodes": 11,
+    "scope": "Every central-directory file occurrence bound to its exact path, size and digest. ZIP non-entry bytes are outside the REA member inventory."
+  }
+}

@@ -1,0 +1,73 @@
+Optical and counting model
+==========================
+
+Let E(x,y)=exp(-(x^2+y^2)/w_in^2) on the 63 square pupil cells. Each cell j
+has fixed real amplitude transmission a_j and commanded phase phi_j. The
+64th cell is blocked. A signed quadratic phase screen adds exp(2*pi*i*W/lambda).
+The ideal lens maps the pupil to the focal plane using the scalar Fraunhofer
+transform with POPPY 1.2.0's positive Fourier exponent. Pupil samples are at
+cell-centered coordinates. Pixel-integrated complex amplitudes are used so
+their squared Euclidean norm equals the sampled power integral.
+
+The normalized collected field mode is
+g_f(X,Y)=sqrt(2/pi)/w_f * exp(-((X-delta)^2+Y^2)/w_f^2).
+The detector sees the squared coherent mode overlap |<g_f,T E>|^2, not the
+intensity at a single camera pixel or a sum over camera pixels. T is the
+Fraunhofer operator. The lens focal length and wavelength map its dimensionless
+Fourier coordinates into physical micrometers. The chosen finite focal window
+contains the Gaussian collection mode; focal and pupil discretizations are
+checked separately.
+
+POPPY's adjoint gives coefficients c_j=<T^* g_f,E_j>. Linearity then permits
+fast stochastic trials using sum_j a_j c_j exp(i phi_j). The reduction is
+checked against an explicitly propagated full pupil image for a random phase
+mask, with displaced fibre and a nonzero quadratic screen. It is not an
+independent mathematical theorem about the implementation.
+
+An independent continuum calculation uses the analytic pupil representation
+of the Gaussian fibre mode. Set w_p=lambda*f/(pi*w_f). With the same sign
+convention, the integrand for c_j is
+
+sqrt(2/pi)/w_p * exp(-r^2/w_p^2-r^2/w_in^2)
+  * exp(i*2*pi*x*delta/(lambda*f)) * exp(i*2*pi*W/lambda).
+
+Integrate over cell j by tensor Gauss-Legendre quadrature. In the centered,
+unaberrated case this also factors into two real Gaussian integrals evaluated
+using erf; the two evaluations are separately compared. Midpoint pupil grids
+of 64,128,256,512 samples per side are compared with continuum quadrature for
+every non-control scenario. These are floating-point convergence diagnostics,
+not rigorous interval enclosures. Negative and positive signs are checked.
+
+Define c_min=min_j c_j at the centered continuum reference and a_j=c_min/c_j.
+Then 0<a_j<=1 and each nominal a_j c_j=c_min. These transmissions represent an
+ideal added amplitude mask. The effective stochastic weights are
+w_j=a_j c_j(actual)/c_min, with no re-equalization after misalignment.
+The count rate per gate is lambda_count=|sum_j w_j exp(i phi_j)|^2+b.
+This fixes the scalar photon budget once at nominal calibration. For reference,
+P/c_min^2, where P is the attenuated pupil power integral, is the effective
+incident photon budget times scalar detection efficiency needed to make gain
+one under the normalized optical model; it is not a measured laser flux.
+
+For each snapshot, phi_j is q*x_G,j plus an independent N(0,s) variate, rounded
+to one of 256 uniformly spaced optical phases. Exact symbolic coordinate
+metadata is read from the byte-pinned original model. Its decimals are not
+treated as exact coordinates. The regular 8x8 optical grid is an emulator:
+the research coordinates are encoded as phases, not reproduced as spatial
+positions in that grid.
+
+Photon detection uses exact renewal sampling for the specified initially-live
+nonparalyzable counter: the first detection waits Exp(lambda_count) in gate
+units, and every subsequent accepted event waits dead_fraction plus another
+independent Exp(lambda_count). Stop at gate time one. Rejected arrivals during
+dead time do not extend it. The check against
+P(K>=k)=gammainc(k,lambda_count*(1-(k-1)*dead_fraction))
+uses deliberately large dead time to exercise a detectable non-Poisson regime.
+At zero dead time the implementation samples Poisson counts directly.
+Afterpulsing, event jitter and detector memory across gates are excluded.
+
+The fixed count-only classifier comes from the earlier changed-frequency
+study. It observes no latent phase, label or intensity. The new optical
+perturbations fall outside the previous certificate's assumptions; no error
+bound is inherited automatically. Report all scenarios and Monte Carlo error
+intervals, including negative controls and failures. Future measurements must
+test the full assumed transfer and noise model before any physical claim.

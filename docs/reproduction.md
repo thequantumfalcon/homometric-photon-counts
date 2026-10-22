@@ -43,6 +43,17 @@ python tools/optical_study.py replay --output build/optical-replay
 
 The first command uses only the standard library. The second uses the same pinned python-flint environment as the Arb reconstruction above, stages copies into a fresh output directory, runs 18 prototype/calibration tests, and reconstructs both new certificates. Every non-runtime result field must match the archive. It does not edit retained inputs or prove the analytic derivations in Lean. The Windows Arb CI job executes this additional replay.
 
+## Optical transfer and detector supplements
+
+The newer optical/detector supplement can be checked independently:
+
+```sh
+python tools/optical_validation.py audit
+python tools/optical_validation.py replay --output build/optical-validation
+```
+
+The first command is standard-library only: it verifies 115 retained files, external processed detector tables, saved simulation histograms/confidence bounds and the exact enclosure audit. The second uses the existing pinned Python-FLINT 0.9.0 runtime and reproduces the finite optical-transfer certificate byte for byte. Neither regenerates the Monte Carlo simulations. Caller-relative `PHOTON_FLINT_RUNTIME` paths are resolved before subprocess directories change. The [study guide](../studies/optical-validation/README.md) identifies optional simulation dependencies, historical nonportable audit flags and separate GPL data terms. The packaged release also runs these standard-library audits after extraction.
+
 ## Formal evidence
 
 Archived Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. Those receipts record historical fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative. Current extensions live under `formal/`, with execution coverage recorded separately in the validation directory.

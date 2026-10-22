@@ -1,0 +1,21 @@
+20/400 trials per label/task completed; 1.4 s
+40/400 trials per label/task completed; 2.8 s
+60/400 trials per label/task completed; 4.2 s
+80/400 trials per label/task completed; 5.7 s
+100/400 trials per label/task completed; 7.2 s
+120/400 trials per label/task completed; 8.7 s
+140/400 trials per label/task completed; 10.0 s
+160/400 trials per label/task completed; 11.4 s
+180/400 trials per label/task completed; 12.7 s
+200/400 trials per label/task completed; 14.1 s
+220/400 trials per label/task completed; 15.4 s
+240/400 trials per label/task completed; 16.9 s
+260/400 trials per label/task completed; 18.3 s
+280/400 trials per label/task completed; 19.8 s
+300/400 trials per label/task completed; 21.5 s
+320/400 trials per label/task completed; 22.9 s
+340/400 trials per label/task completed; 24.2 s
+360/400 trials per label/task completed; 25.5 s
+380/400 trials per label/task completed; 27.0 s
+400/400 trials per label/task completed; 28.3 s
+{"status": "PASS_AT_TESTED_SETTINGS", "rows": 48, "elapsed_s": 28.375}

@@ -1,0 +1,130 @@
+{
+  "status": "FROZEN_BEFORE_ITS_VALIDATION",
+  "source_hashes": {
+    "study.py": "c3bae18ca7829351c75558342a45ab10d94e979b794797054abe0ba736d3b07e",
+    "baseline.py": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+    "input_model.json": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+  },
+  "selector_sha256": "c228c7eff5975ab76f0ae46fda1af7268cfc2af9c741b4c4c0a94c6e324d3ff2",
+  "screen_sha256": "e692c725a6348d0d6ae12c398b83cc1a5a5ec1b95277910438bce37404e39d0b",
+  "trials": 200,
+  "snapshots": 5000,
+  "seed": 2026102318,
+  "threshold": -0.6401102,
+  "cases": [
+    {
+      "name": "residual-0.25-2-209",
+      "x_um": -5.0,
+      "y_um": 5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.051,
+      "background": 0.1,
+      "error_x_um": -0.25,
+      "error_y_um": -0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-273",
+      "x_um": 5.0,
+      "y_um": -5.0,
+      "opd_nm": -30.0,
+      "gain": 0.98,
+      "variance": 0.051,
+      "background": 0.1,
+      "error_x_um": -0.25,
+      "error_y_um": -0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-217",
+      "x_um": -5.0,
+      "y_um": 5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.051,
+      "background": 0.15,
+      "error_x_um": -0.25,
+      "error_y_um": -0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-281",
+      "x_um": 5.0,
+      "y_um": -5.0,
+      "opd_nm": -30.0,
+      "gain": 0.98,
+      "variance": 0.051,
+      "background": 0.15,
+      "error_x_um": -0.25,
+      "error_y_um": -0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-079",
+      "x_um": -5.0,
+      "y_um": -5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.049,
+      "background": 0.15,
+      "error_x_um": 0.25,
+      "error_y_um": 0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-399",
+      "x_um": 5.0,
+      "y_um": 5.0,
+      "opd_nm": -30.0,
+      "gain": 0.98,
+      "variance": 0.049,
+      "background": 0.15,
+      "error_x_um": 0.25,
+      "error_y_um": 0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-207",
+      "x_um": -5.0,
+      "y_um": 5.0,
+      "opd_nm": 30.0,
+      "gain": 0.98,
+      "variance": 0.049,
+      "background": 0.15,
+      "error_x_um": 0.25,
+      "error_y_um": 0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    },
+    {
+      "name": "residual-0.25-2-271",
+      "x_um": 5.0,
+      "y_um": -5.0,
+      "opd_nm": -30.0,
+      "gain": 0.98,
+      "variance": 0.049,
+      "background": 0.15,
+      "error_x_um": 0.25,
+      "error_y_um": 0.25,
+      "error_opd_nm": 2.0,
+      "control": false
+    }
+  ],
+  "chosen_calibration_budget": {
+    "key": "0.25um-2nm",
+    "position_error_um": 0.25,
+    "opd_coefficient_error_nm": 2.0,
+    "minimum_standardized_margin": 4.640228674199052
+  },
+  "correction": "Same phase-only precompensation as the initial study; no classifier or photon-scale change.",
+  "decision_rule": "All corrected non-control A/B one-sided Bonferroni 95% upper error limits below 5% at these tested settings only. No adaptive reruns.",
+  "family_size": 16,
+  "relation_to_initial_validation": "A separate, tighter calibration requirement selected solely from development moments; retain the initial broad-budget outcome even if it fails. Independent validation seed. This is not a rescue or relabeling of the broad-budget test."
+}

@@ -1,0 +1,122 @@
+Bounded optical robustness study
+===============================
+
+This is synthetic numerical evidence for the changed-frequency phase-mask
+emulator. It does not validate the original fourth-order-only experiment,
+unknown specimen imaging, continuous hardware tolerances or historical novelty.
+
+Preservation and optics
+----------------------
+baseline.py is a byte-identical copy of the previous optical bench's bench.py.
+Geometry, scalar Fraunhofer assumptions, wavelength, pupil layout, static
+amplitude mask, photon scaling, score and threshold are unchanged. The frozen
+source and input hashes are stored with each development screen and plan.
+The isolated, hash-locked POPPY environment and its prior REA identity audit
+are reused. REA does not perform the physical calculation or validate it.
+
+The collected Gaussian mode is now displaced in both x and y. The continuum
+coefficient integral factors into two one-dimensional Gaussian integrals with
+complex quadratic and linear exponents. 16-point Gauss-Legendre quadrature
+on each finite square cell evaluates them. Independent 32-point quadrature,
+the old one-dimensional implementation, and POPPY adjoint propagation at
+128,256,512 pupil grids check the new reduction. The optical coefficients
+used in the stochastic trials are the converged continuum calculation.
+POPPY supplies the separate sampled-propagation check. Neither is an interval
+enclosure of the other. The blocked 64th cell and indexing are unchanged.
+
+Correction and calibration knowledge
+------------------------------------
+Let c_j(delta_x,delta_y,d) be the complex collected amplitude per cell, with
+signed quadratic optical-path coefficient d. The original attenuation a_j
+and centered scale c_min remain fixed. Actual stochastic weights are
+w_j = a_j*c_j(actual)/c_min.
+
+The correction rule computes u_j=-arg(c_j(estimated)) and adds u_j to the
+commanded phase BEFORE rounding the entire noisy phase to one of 256 levels:
+theta_j = Q_256(q*x_G,j + u_j + sqrt(s)*Z_j).
+Uncorrected trials set u_j=0. Counts depend on gain*|sum w_j exp(i theta_j)|^2+b.
+The same correction is applied for A and B. It changes no attenuation,
+photon normalization, decision score or threshold. Calibration parameters are
+presumed obtained separately and are not fitted to validation labels/outcomes.
+
+For a specified calibration residual e, estimate=actual-e. These are fixed
+errors, not random extra noise. No calibration acquisition or estimator was
+simulated: the study tests what happens IF those residuals hold. Perfect
+calibration examples show the mechanism; combined stress cases use nonzero
+residuals. Unknown per-cell phase distortions outside the three-parameter
+optical model, amplitude errors, drift and nonuniform hardware quantization
+are not covered by these residual settings.
+
+Development screen and finite selection
+---------------------------------------
+The first screen evaluates x=-6..6 um at 0.25 um spacing, a two-dimensional
+625-point alignment grid at 0.5 um spacing, and d=-40..40 nm at 2.5 nm spacing.
+Its 512 simultaneous corner settings combine x,y in {-5,+5} um, d in {-30,+30}
+nm, gain in {0.98,1.02}, Gaussian phase variance in {0.049,0.051}, background
+in {0.10,0.15} counts/gate, position-estimation residuals in {-0.5,+0.5} um
+per axis and d-estimation residual in {-5,+5} nm.
+
+The screen propagates independent, UNQUANTIZED Gaussian phasor moments through
+order four by a finite exponential-generating-function convolution. With
+z_j=w_j*exp(i commanded_mean_j)/sqrt(63), each site's coefficient is
+z_j^a*conj(z_j)^b*exp(-s*(a-b)^2/2)/(a! b!). The diagonal coefficient times
+(k!)^2 equals E[(I/63)^k]. All 63 sites are included. Independent two-phasor
+Gauss-Hermite integration and a closed-form first moment check this recurrence.
+Conditional Poisson factorial-moment identities then give the mean and variance
+of the fixed count score. Dead time and quantization are omitted ONLY in this
+development proxy, and fully restored in the validation simulator.
+
+The signed mean-to-threshold distance divided by sqrt(variance/5000) is used
+to rank settings. It is NOT a normal-tail risk estimate or certificate.
+The 18-setting first validation plan contains centered and +/-5 um axis cases,
+selected adverse corners, two points bracketing each x mean crossing, and an
+identical-mask negative control. Its exact selection rule is in study.py.
+
+Before the first validation outcomes were available, select_tolerance.py
+screened exactly two tighter residual budgets: (0.25 um,2 nm) and (0.1 um,1 nm).
+It chose the first whose minimum corrected standardized margin was at least
+four, or the tighter budget if neither qualified. It selected four adverse A
+and four adverse B corners for a second fixed plan with a new seed. The first
+plan is retained even if it fails. The selector never reads validation files.
+There is no further adaptive budget search, threshold fitting or trial rerun.
+
+Finite corners cannot establish extrema of this nonlinear optical model over
+an interior box. Passing selected settings does not validate all screened
+corners, all parameter combinations, or a continuous alignment neighborhood.
+The x mean crossing is not the 5% risk boundary and may be earlier or later
+than a practical threshold under a different full detector/noise model.
+
+Held-out trials and statistical interpretation
+----------------------------------------------
+Each plan uses 200 independent trials per true label at each selected setting,
+with 5,000 snapshots per trial. Each snapshot has 63 iid Gaussian phase draws,
+ideal uniform quantization, conditional Poisson primaries and exact renewal
+sampling of an initially-live nonparalyzable detector (22 ns dead time/5 ms gate).
+Different trial indices and labels have different SeedSequences. Separate
+detector streams are used per setting and method. Phase draws are shared across
+settings and methods within each trial; observations cannot be pooled as iid
+across those settings. The two plans use distinct validation seeds.
+
+For each method, setting and label, report the empirical error and two-sided
+95% Clopper-Pearson interval. For the corrected non-control family of K error
+probabilities within one plan, report one-sided upper limits
+BetaQuantile(1-0.05/K, errors+1, trials-errors), or 1 when all trials fail.
+Bonferroni supplies at least 95% simultaneous coverage within that specified
+family, regardless of cross-setting dependence, under the simulation law.
+The gate is that ALL those upper limits must be strictly below 5%.
+This gate does not cover the baseline, the control, both plans jointly, new
+parameter settings, or the physical apparatus. No trials are discarded.
+
+The identical-mask control programs A for both labels. A successful control
+has approximately 50% balanced classification error, not successful separation.
+It is reported outside the discrimination success gate.
+
+Limits and measurement handoff
+------------------------------
+The phase mask is an emulator on a regular grid. The ideal static amplitude
+mask is an unvalidated hardware requirement. Scalar/monochromatic propagation,
+the Gaussian phase law and iid snapshots remain assumptions. Detector
+afterpulsing, pixel crosstalk, real transfer functions, polarization and drift
+are not included. Calibration residuals must be measured independently. Neither
+more Monte Carlo trials nor the previously passed Lean/Arb proofs establish them.
+See LAB_PLAN.txt for a bounded measured-transfer gate and acquisition costs.

@@ -6,7 +6,6 @@ import argparse
 import ast
 from hashlib import sha256
 import json
-import os
 from pathlib import Path
 import re
 import subprocess
@@ -18,6 +17,8 @@ import zipfile
 from check_archive_binding import certificate as archive_binding
 from check_coordinate_binding import certificate as coordinate_binding
 from optical_study import verify as optical_study_binding
+from optical_validation import verify as optical_validation_binding
+from replay_environment import replay_environment
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "evidence"
@@ -98,6 +99,7 @@ def verify() -> None:
     archive_binding()
     coordinate_binding()
     optical_study_binding()
+    optical_validation_binding()
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
 
 
@@ -156,10 +158,7 @@ def run_checks(output: Path, extended: bool) -> None:
                 "scientist-review-2026-10-20/review/independent_compact_gain.py",
             ),
         ]
-    env = os.environ.copy()
-    env["PYTHONDONTWRITEBYTECODE"] = "1"
-    if env.get("PHOTON_FLINT_RUNTIME"):
-        env["PYTHONPATH"] = env["PHOTON_FLINT_RUNTIME"] + os.pathsep + env.get("PYTHONPATH", "")
+    env = replay_environment()
     report = {
         "passed": False,
         "extended": extended,
@@ -247,6 +246,12 @@ def release(output: Path) -> None:
         extracted = destination / "homometric-photon-counts"
         subprocess.run(
             [sys.executable, "-B", str(extracted / "tools/project.py"), "check"], cwd=destination, check=True
+        )
+        subprocess.run(
+            [sys.executable, "-B", str(extracted / "tools/optical_validation.py"), "audit"],
+            cwd=destination,
+            check=True,
+            env=replay_environment(),
         )
         subprocess.run(
             [

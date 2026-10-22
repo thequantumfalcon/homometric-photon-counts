@@ -1,0 +1,89 @@
+Finite-setting optical transfer certificate -- mathematical specification
+
+The declared continuum model has 63 active square cells from an 8x8 array;
+cell 63 is blocked. All decimal physical parameters denote exact rationals:
+wavelength lambda=633/10^9 m, focal length f=1/10 m, pitch p=1/5000 m,
+illumination radius wI=3/1000 m, fiber radius wF=1/100000 m. Set
+wP=lambda*f/(pi*wF), a0=1/wP^2+1/wI^2. For the signed quadratic OPD
+coefficient d in nanometers and displacement delta in micrometers, define
+
+  alpha = a0 - i*2*pi*d*10^-9/(lambda*(4*p)^2)
+  beta = 2*pi*delta*10^-6/(lambda*f)
+  Ik(delta,d) = integral from (k-4)*p to (k-3)*p of
+                  exp(-alpha*u^2 + i*beta*u) du.
+
+The cell j=8*r+c coefficient is sqrt(2/pi)/wP * Ir(y,d)*Ic(x,d).
+These equations reproduce the scalar Gaussian/Fraunhofer model in the pinned
+robustness-study code. They do not derive its physical appropriateness.
+
+Completing the square gives the entire-function antiderivative
+
+  F(u) = sqrt(pi)/(2*sqrt(alpha)) * exp(-beta^2/(4*alpha))
+         * erf(sqrt(alpha)*u - i*beta/(2*sqrt(alpha))).
+
+Here Re(alpha)>0 and the principal square root is nonzero. Differentiation
+cancels the square-root prefactor, and expansion of the square gives
+-alpha*u^2+i*beta*u. Therefore Ik=F(right)-F(left). This derivation is
+written mathematics, not a new Lean theorem.
+
+certify.py evaluates that expression at 256 bits with Python-FLINT 0.9.0.
+It separately calls acb.integral on the exponential of the polynomial.
+The integrand is entire, so ignoring the analytic callback flag is legitimate.
+Integration tolerance goals are 2^-220 (relative and absolute). Every returned
+ball must be finite with each component radius below 10^-60, and the two
+algorithm enclosures must overlap. Both algorithms share Arb and the same
+declared integrand; overlap alone cannot establish physical model correctness.
+The certificate retains both sets of enclosures. The transfer calculation
+uses the closed-form enclosures, without intersecting to hide disagreement.
+
+At centered optics the coefficient c0_j is positive real. The ideal amplitude
+equalization in the prior code has attenuation=min(c0)/c0 and common=min(c0),
+so the effective weight simplifies to w_j=c_j/c0_j. The correction is
+-arg(c_j(x-error_x,y-error_y,d-error_d)). The exact model is compared against
+the floating-point results, including their calibration arithmetic error.
+There are 26 freshly re-exported selected validation settings from pinned code,
+plus the three transfers literally stored in the prior afterpulse inputs.
+Fresh exports of all three match their old stored values bit for bit.
+
+Every stored JSON float is reconstructed as its binary64 dyadic value when
+used as the comparison target. Exact decimal parameters use rational parsing.
+Endpoints are stored as integer [mantissa, exponent] pairs for mantissa*2^exponent,
+rounded outward with Arb lower()/upper(), never reconstructed from display text.
+
+Uniform bound for fixed unit phasors z_j:
+Set e >= sum_j |w_j - wHat_j|, S >= sum_j |wHat_j|. Then
+  | |sum_j w_j*z_j|^2 - |sum_j wHat_j*z_j|^2 | <= e*(2*S+e).
+Triangle inequalities prove this because the field difference is <=e and
+the approximate field magnitude is <=S. We use the conservative real/imaginary
+L1 bounds, so verify.py can audit this inequality with exact rational arithmetic.
+This does not include rounding of the phasor evaluation, matrix products or
+the stochastic sampler, and holds only when the same commands are supplied.
+
+Phase correction is applied BEFORE quantization. A small correction error
+cannot uniformly pass through the discontinuous rounding rule. For the saved
+32 noise vectors, each of three cases and two labels, reconstruct exact
+coordinates from geometry.json, q=201*pi/200, and exact sqrt(variance).
+Treat saved noise draws as fixed dyadic witnesses, not a proof of Gaussian RNG
+accuracy. For each of 12,096 commands, the entire ball for
+  (q*coordinate + correction + sqrt(variance)*noise)*128/pi
+must lie strictly inside (n-1/2,n+1/2) for the original binary64 command index n.
+This excludes ties and proves that these finite command indices agree.
+The exact modeled photon rate is gain*|sum_j w_j*exp(i*n_j*pi/128)|^2+background.
+All 192 saved rates receive an error bound; nothing is inferred about unseen
+draws or classification-risk bounds from this finite witness check.
+
+The stdlib verifier independently reconstructs the rational endpoint error
+bounds, interval overlaps, finite coverage, quantizer margins and byte bindings.
+It rejects four deliberately invalid copies in memory. It does not calculate
+transcendental integrals: those require certify.py and the trusted Arb runtime.
+A sign-reversed OPD model also differs from the saved reference by more than
+0.001 at a selected cell, detecting a material sign convention mistake.
+
+References for arithmetic APIs:
+https://python-flint.readthedocs.io/en/latest/acb.html
+https://python-flint.readthedocs.io/en/latest/arb.html
+
+Explicit exclusions: measured optical transfer; real calibration accuracy;
+continuous parameter-box guarantees; SLM settling/exposure integration;
+detector-model completeness; independence of successive exposures; a rigorous
+total classifier risk certificate; novel physics or priority over prior work.

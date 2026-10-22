@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "integer_histogram_records": 9600,
+  "simultaneous_error_bounds": 48,
+  "max_simultaneous_upper": 0.03375192026711007,
+  "simulated_gates": 48000000,
+  "workspace_preservation_checked": true,
+  "previous_pinned_files_unchanged": 120,
+  "own_manifest_files_checked": 0
+}

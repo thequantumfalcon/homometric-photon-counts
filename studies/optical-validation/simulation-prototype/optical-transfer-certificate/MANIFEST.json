@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-21",
+  "status": "LOCAL_FINITE_OPTICAL_TRANSFER_CERTIFICATE",
+  "sha256": {
+    "afterpulse-inputs.json": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+    "certificate.json": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5",
+    "certify.py": "cfc43523a73bbcce0c9266fe1a2fde560c3f5bf28ae4e4254c59e5af56ecf0c0",
+    "DEVELOPMENT-SPEC.txt": "3978c5f229e08ba8f04c4b39f88249aa7de1a4d9c53afd68801743a082b230b5",
+    "floating-reference.json": "d6ca32edad435c315eff072003dba279599ee9aeab606124b97005f33910c480",
+    "geometry.json": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+    "LICENSE.txt": "1f2f8c3a2c68a667fe0009399b46a9d81c36dd9d36d7971947b0fb83577393f9",
+    "METHOD.txt": "667c9b4a0670006ef759112ac2b8a113a1c1a3b4fd1d1245097b6ad6629a7d8d",
+    "README.txt": "3307a0b954917a1a4609aec3bfdaf150897e07b80ed9bb56a3e202aaaecf5d63",
+    "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "runtime-verification.json": "08b1e381a785196c0efd33b4aed09e5f0c83695331b9c0abcb3c7bca8678fbf2",
+    "source-bindings.json": "d83f1599273676c3fcf47f4dc217163775c067c42d0a8b95110b69fc04d59722",
+    "verification.json": "1b9cfd877b53c081adf8dc887e842198917a30115ababa42c5ee025231e47126",
+    "verify.py": "9845b4a67c241bf71c237d3258ff83d69251eaa55dcc65c69965b7c92ac37d9b"
+  }
+}

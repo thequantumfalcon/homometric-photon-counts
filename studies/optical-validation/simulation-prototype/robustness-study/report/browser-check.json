@@ -1,0 +1,11 @@
+{
+  "status": "PASS_BROWSER_CHECKS",
+  "browser": "155.0.4283.62",
+  "settings_checked": 26,
+  "classification_rows_checked": 104,
+  "images_loaded": 3,
+  "local_links_exist": true,
+  "mobile_overflow": false,
+  "page_errors": [],
+  "network_requests": []
+}

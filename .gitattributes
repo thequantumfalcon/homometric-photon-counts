@@ -11,4 +11,5 @@
 /evidence/** -text
 /formal/*.lean -text
 /studies/optical-feasibility/simulation-prototype/** -text whitespace=cr-at-eol
+/studies/optical-validation/simulation-prototype/** -text whitespace=cr-at-eol
 /docs/** linguist-documentation
