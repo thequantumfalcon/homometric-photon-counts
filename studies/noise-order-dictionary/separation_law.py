@@ -2,7 +2,8 @@
 
 Separation law. For an iid phase law phi(m) = E exp(i m theta), let
     l_m = [x^m] log(sum_a phi(a) x^a / a!),   c_K = [x^K] exp(sum_m l_m M_m x^m).
-If two phasor multisets agree in every charge-neutral monomial of charge < K, then
+If two phasor multisets have equal values of every charge-neutral monomial of charge < K
+(equal real parts suffice when phi is real), then
     E_A[I^K] - E_B[I^K] = (K!)^2 (|c_K^A|^2 - |c_K^B|^2).
 
 Commands:
@@ -11,6 +12,9 @@ Commands:
   family             coset family A = H u (1 + 3T), B = H u (1 - 3T), H = 3 Z_{3k}, k = 6..10:
                      relative moment gaps below order k and the order-k gap
   survey NMAX        first differing charge over all nontrivial homometric pairs in Z_N, N <= NMAX
+  brute              independent check: direct enumeration of every index tuple vs the DP,
+                     random off-lattice phasors, symmetric and asymmetric phase laws
+  asymmetric         the coset family under asymmetric phase laws (they separate at order 2)
 """
 
 import argparse
@@ -27,7 +31,7 @@ mp.mp.dps = 70
 
 def ell(phi, K):
     f = [phi(a) / mp.factorial(a) for a in range(K + 1)]
-    g = [mp.mpf(0)] * (K + 1)
+    g = [mp.mpc(0)] * (K + 1)
     for m in range(1, K + 1):
         g[m] = f[m] - mp.fsum(k * g[k] * f[m - k] for k in range(1, m)) / m
     return g
@@ -44,7 +48,7 @@ def c_K(phi, K, z):
 
 def moment(z, phi, K):
     fac = [mp.mpf(1) / factorial(i) for i in range(K + 1)]
-    ph = {c: phi(abs(c)) for c in range(-K, K + 1)}
+    ph = {c: phi(c) for c in range(-K, K + 1)}
     dp = {(0, 0): mp.mpc(1)}
     for zj in z:
         zp = {c: zj**c for c in range(-K, K + 1)}
@@ -70,6 +74,73 @@ def gauss(t):
 
 def uniform(a_):
     return lambda m: mp.mpf(1) if m == 0 else mp.sin(m * a_) / (m * a_)
+
+
+def two_point(p, a_):
+    # theta = 0 with probability p, theta = a_ otherwise: not symmetric about any point
+    return lambda m: p + (1 - p) * mp.expj(a_ * m)
+
+
+def wrapped_exponential(rate):
+    return lambda m: rate / (rate - 1j * m)
+
+
+def brute_moment(z, phi, K):
+    from itertools import product
+
+    n = len(z)
+    total = mp.mpc(0)
+    for J in product(range(n), repeat=K):
+        for L in product(range(n), repeat=K):
+            charge = [0] * n
+            prod = mp.mpc(1)
+            for j in J:
+                charge[j] += 1
+                prod *= z[j]
+            for j in L:
+                charge[j] -= 1
+                prod *= mp.conj(z[j])
+            for c in charge:
+                prod *= phi(c)
+            total += prod
+    return mp.re(total)
+
+
+def brute():
+    random.seed(11)
+    laws = [gauss(mp.mpf("0.6")), two_point(mp.mpf(2) / 3, mp.mpf("1.1")),
+            wrapped_exponential(mp.mpf("1.5"))]
+    worst = mp.mpf(0)
+    count = 0
+    for _ in range(6):
+        n = random.choice([3, 4, 5])
+        z = [mp.expj(random.uniform(0, 6.283)) for _ in range(n)]
+        for phi in laws:
+            for K in (1, 2, 3):
+                b, d = brute_moment(z, phi, K), moment(z, phi, K)
+                worst = max(worst, abs(b - d) / abs(b))
+                count += 1
+    print(f"{count} cases: worst relative difference between enumeration and DP {mp.nstr(worst, 3)}")
+
+
+def asymmetric():
+    laws = [("gaussian (symmetric)", gauss(mp.mpf("0.6"))),
+            ("two-point asymmetric", two_point(mp.mpf(2) / 3, mp.mpf("1.1"))),
+            ("wrapped exponential", wrapped_exponential(mp.mpf("1.5")))]
+    for k, T in ((6, [0, 2, 5]), (7, [1, 2, 3, 6])):
+        N = 3 * k
+        H = {3 * s for s in range(k)}
+        A = sorted(H | {(1 + 3 * t) % N for t in T})
+        B = sorted(H | {(1 - 3 * t) % N for t in T})
+        za, zb = phasors(A, N), phasors(B, N)
+        for name, phi in laws:
+            rel = []
+            for j in range(1, k + 1):
+                ea, eb = moment(za, phi, j), moment(zb, phi, j)
+                rel.append(abs(ea - eb) / abs(ea))
+            first = next((j for j, r in enumerate(rel, 1) if r > mp.mpf(10) ** -30), None)
+            print(f"k={k} {name:22}: first differing order {first}; "
+                  f"relative gaps {[mp.nstr(r, 2) for r in rel]}")
 
 
 def law(path):
@@ -180,11 +251,17 @@ def main():
     sub.add_parser("law").add_argument("results")
     sub.add_parser("family")
     sub.add_parser("survey").add_argument("nmax", type=int)
+    sub.add_parser("brute")
+    sub.add_parser("asymmetric")
     args = parser.parse_args()
     if args.command == "law":
         law(args.results)
     elif args.command == "family":
         family()
+    elif args.command == "brute":
+        brute()
+    elif args.command == "asymmetric":
+        asymmetric()
     else:
         survey(args.nmax)
 

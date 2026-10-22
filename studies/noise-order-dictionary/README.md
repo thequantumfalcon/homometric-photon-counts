@@ -19,7 +19,9 @@ T = prod M_(a_i) prod conj(M_(b_j)),   sum a_i = sum b_j <= k.
 Homometric pairs share every `|M_m|^2`. The study asks whether the first
 moment order `K_ph` at which a pair separates equals the smallest total charge
 `K_inv` of a monomial whose real part differs, and what that implies for this
-repository's 63-site pair.
+repository's 63-site pair. Real parts are the right comparison for symmetric
+phase laws such as the Gaussian one used throughout (see part 2 of the
+statement below).
 
 ## Results
 
@@ -57,20 +59,48 @@ The two observations above are special cases of one formula. Write
 l_m = [x^m] log( sum_a phi(a) x^a / a! ),     c_K = [x^K] exp( sum_{m>=1} l_m M_m x^m ).
 ```
 
-If two phasor multisets agree in every charge-neutral monomial of charge below
-`K`, then
+A charge-neutral monomial is `T = prod_i M_(m_i)` with integer `m_i` summing to
+zero (`M_(-m) = conj M_m`, `M_0 = n`); its charge is `sum_i max(m_i, 0)`.
 
-```text
-E_A[I^K] - E_B[I^K] = (K!)^2 ( |c_K^A|^2 - |c_K^B|^2 ).
-```
+**Statement.** Let `z_1, ..., z_n` be unit phasors, the site phases iid, and
+`I = |A|^2` with `A = sum_j z_j exp(i theta_j)` (unnormalized).
 
-Derivation sketch: `E[I^K] = (K!)^2 [x^K y^K] prod_j F(x z_j, y conj z_j)` with
-`F(a, b) = E exp(a u + b conj u)`, `u = exp(i theta)`. Taking logarithms turns the
-product into `exp(sum L_ab x^a y^b M_(a-b))`. A product of these factors has
-positive charge equal to the full `x`-degree `K` only when every factor is pure
-(`a = 0` or `b = 0`), so the charge-`K` part factors as
-`[x^K] exp(sum l_m M_m x^m)` times its conjugate. All lower-charge terms cancel
-by hypothesis.
+1. If two multisets have equal values of every charge-neutral monomial of
+   charge below `K`, then
+   `E_A[I^K] - E_B[I^K] = (K!)^2 ( |c_K^A|^2 - |c_K^B|^2 ) = |E_A[A^K]|^2 - |E_B[A^K]|^2`.
+   The second form uses `c_K = E[A^K] / K!`, which follows from step (vi) below.
+2. If `phi(m) = exp(i m theta_0) r(m)` with `r` real for some `theta_0` (a
+   phase law symmetric about some point), equal real parts of those monomials
+   suffice. The factor `exp(i m theta_0)` cancels in every neutral term.
+
+Equal `n` is part of the hypothesis, since `M_0 = n` is a charge-0 monomial.
+
+**Proof.**
+(i) `I^K = A^K conj(A)^K` with `A = sum_j z_j u_j`, `u_j = exp(i theta_j)`, so
+`E[I^K] = (K!)^2 [x^K y^K] E exp(x A + y conj A)`; `|A| <= n` justifies termwise
+expectation.
+(ii) By independence, `E exp(x A + y conj A) = prod_j F(x z_j, y conj z_j)`, where
+`F(a, b) = E exp(a u + b conj u) = sum_(a', b') a^a' b^b' phi(a' - b') / (a'! b'!)`.
+(iii) `F(0, 0) = 1`, so `log F(a, b) = sum L_(a'b') a^a' b^b'`. Because
+`|z_j| = 1`, `sum_j z_j^a' conj(z_j)^b' = M_(a' - b')`, hence
+`E exp(x A + y conj A) = exp( sum L_(a'b') M_(a'-b') x^a' y^b' )`.
+(iv) The `x^K y^K` coefficient is a finite sum of terms, each a universal
+coefficient times `prod_i M_(a_i - b_i)` with `sum a_i = sum b_i = K`. The
+monomial is neutral, and its charge `sum max(a_i - b_i, 0)` is at most
+`sum a_i = K`, with equality exactly when every factor has `a_i = 0` or `b_i = 0`.
+(v) Terms of charge below `K` are equal for the two multisets under
+hypothesis 1. For hypothesis 2: `L_(b'a') = conj L_(a'b')`, and the conjugate
+of a term is again a term with conjugated monomial and the same charge, so the
+lower part is real and equals `sum Re(coefficient * T)`. With real `r` the
+coefficients are real, and only `Re T` enters.
+(vi) The charge-`K` terms are those of
+`exp( sum_m L_(m0) M_m x^m ) * exp( sum_m L_(0m) conj(M_m) y^m )`. Here
+`L_(m0) = l_m` and `L_(0m) = conj(l_m)` (because `phi(-m) = conj phi(m)`), so
+their `x^K y^K` coefficient is `c_K conj(c_K) = |c_K|^2`. QED.
+
+The hypothesis is about values, not formal monomials. Unit amplitudes are
+required: with unequal scattering strengths, `sum_j z_j^a' conj(z_j)^b'` depends on
+both exponents and the statement needs two-index power sums.
 
 `python separation_law.py law results.json` checks the law against direct
 moments for all 86 pairs at `t = 0.3, 0.5, 0.9` and for a uniform phase law on
@@ -94,13 +124,36 @@ The derivation is written here, not formalized.
 No pair agreed in every charge-neutral monomial through charge 8, and no pair
 had a differing invariant while `|c_K|^2` agreed identically in `t`.
 
-The order-6 and order-7 pairs share a structure that generalizes. With
-`N = 3k`, `H = 3 Z_N` and `T` a subset of `Z_k` that is not a translate of its
-reflection, set `A = H u (1 + 3T)` and `B = H u (1 - 3T)`. For `k` not dividing
-`m`, `M_m(H) = 0` and `M_m(B)` is a fixed phase times `conj M_m(A)`, so every
-charge-neutral monomial of charge below `k` has equal real part. The two sets
-are therefore homometric and noncongruent, and their single-frequency
-intensity moments agree below order `k` for every iid phase law. The family
+The order-6 and order-7 pairs share a structure that generalizes. Let `k >= 6`,
+`N = 3k`, `H = 3 Z_N`, and `T` a subset of `Z_k` that is not a translate of its
+reflection (none exists for `k <= 5`; `T = {0, 1, 3}` works for every `k >= 6`).
+Set `A = H u (1 + 3T)` and `B = H u (1 - 3T)`, and observe at `q = 2 pi r / N` with
+`gcd(r, k) = 1`. Write `M_m` for the harmonics at that frequency.
+
+- For `k` not dividing `m`: `M_m(H) = 0` and `M_m(B) = exp(2 i q m) conj M_m(A)`.
+- For `k` dividing `m`: `M_m(A) = M_m(B) = k + |T| exp(i q m)`.
+- **Homometric:** the two bullets give `|M_m(A)| = |M_m(B)|` for every `m`.
+- **Noncongruent:** `1 <= |T| <= k - 1`, so `H` is the only full residue class
+  mod 3 in either set, and a congruence must map it to itself. A reflection then
+  sends class 1 to class 2. A translation by `3d` maps `A` to `B` exactly when
+  `T = d - T`, which is excluded.
+- **Equal real parts below charge `k`:** in a neutral monomial each `|m_i|` is
+  at most its charge, so below charge `k` no nonzero index is a multiple of `k`.
+  The phases `exp(2 i q m_i)` multiply to 1 because the indices sum to zero, so
+  `T(B) = conj T(A)`. `M_0 = k + |T|` is common.
+- **Equal moments below order `k`:** for `K < k` and a phase law as in part 2,
+  the lower-charge terms agree, and `c_K(B)` is a phase times `conj c_K(A)`, so
+  `|c_K|^2` agrees too.
+
+The frequency condition matters. At `q = 2 pi 2 / 18` (`k = 6`, `gcd = 2`), the
+`T = {0, 1, 3}` pair already differs at order 3, by 0.29% relative.
+
+Phase-law symmetry is sufficient but not necessary. Under the two asymmetric
+laws tested (a two-point law and a wrapped exponential law), the `k = 6` and
+`k = 7` pairs already differ at the second moment, by 2-3% relative
+(`python separation_law.py asymmetric`). An asymmetric law supported on a
+three-fold lattice (`theta = 2 pi U / 3 + psi`) still hides the `k = 6` pair
+through order 7. The family
 was written down before being tested; `python separation_law.py family` checks
 `k = 6..10` (relative gaps below order `k` at the `1e-70` level, nonzero order-`k`
 gaps, and the separation law reproducing them). The order-`k` gaps are tiny in
@@ -129,6 +182,27 @@ can push the first mismatch beyond order 4. When `M_2(W) = 0` the two
 three-factor sets have identical laws, but each is a global phase rotation of
 the other's phasor multiset, so nothing nontrivial is hidden. When
 `M_2(W) != 0`, the first mismatch stays at order 4.
+
+## Adversarial review
+
+The statements above were attacked before publication.
+
+- `python separation_law.py brute` compares the moment code with direct
+  enumeration of every index tuple, for random off-lattice phasors under
+  symmetric and asymmetric phase laws. Over 54 cases the worst relative
+  difference is about `4e-69`.
+- All 164 survey pairs whose first differing charge is at least 4 were
+  rechecked at 50 digits, both their invariants and their moments directly. No
+  mismatch was found.
+- An earlier wording claimed the coset family is hidden "for every iid phase
+  law". That was false; it now carries the symmetry and frequency conditions
+  above.
+- A separate read of the proof (another instance of the same AI model, with
+  its own scripts, not human review) found no error in steps (i)-(vi). It found
+  the missing frequency condition, the unargued homometry and noncongruence
+  steps, and two wording problems, all fixed here. It also checked part 1 under
+  asymmetric laws at `K = 4` and `K = 6`, and `l_4`, `D_4` and the second-moment
+  coefficient with sympy.
 
 ## Limits and related work
 
