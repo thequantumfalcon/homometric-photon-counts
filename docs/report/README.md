@@ -1,8 +1,14 @@
-# Recovered historical report
+# Historical report and current addendum
 
 [Read the original 18-page report](historical/science_completion_report.pdf),
 *Exact controls for homometric scattering: proofs and measurement limits*,
 dated **20 October 2026**.
+
+The [23 October addendum](update-2026-10-23.md) summarizes the later four-root
+certificate, fixed 13-bin necessary and sufficient sample counts, completed
+concrete Lean proof, and optical supplements. It states the assumptions and
+remaining limits beside each result. The historical report is preserved
+unchanged.
 
 The PDF and its complete LaTeX input set were recovered on 22 October 2026
 from the retained `homometric-photon-counts-research-v0.1.0.zip` and
@@ -22,7 +28,8 @@ crossings are different quantities from the later photon-event blind gains.
 This is a historical report. It predates the later four-blind-gain result,
 the fixed 13-bin sample-count bounds, the completed concrete Lean proof, and
 the optical supplements. Its descriptions of what was completed or unverified
-apply to its original date. For current statements and assumptions, see the
+apply to its original date. For current statements and assumptions, start
+with the [dated addendum](update-2026-10-23.md), then see the
 [construction and results](../../README.md), [model](../model.md),
 [claim ledger](../claims.md) and [formal validation record](../validation/README.md).
 Historical references inside the PDF to proof files correspond to the

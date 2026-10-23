@@ -1,6 +1,6 @@
 # A route through the evidence
 
-The [recovered original report](report/historical/science_completion_report.pdf) provides an 18-page account of the foundational construction and derivations. Its [source and recovery guide](report/README.md) explains the historical scope; use the current claim ledger for later root-count, testing and formal results.
+The [recovered original report](report/historical/science_completion_report.pdf) provides an 18-page account of the foundational construction and derivations. Read it with the [23 October addendum](report/update-2026-10-23.md) for the later root-count, testing and concrete formal results. The [source and recovery guide](report/README.md) explains the historical scope; the current claim ledger links each result to its evidence.
 
 1. Read the [model](model.md), [claim ledger](claims.md), and [research disclosure](research-disclosure.md).
 2. Run `python tools/project.py verify` and `python tools/project.py test --output build/reviewer-check`.
@@ -13,8 +13,10 @@ The general moment formula sums over pairs of site assignments. Its proof applie
 
 Criticism should identify a specific implication, assumption, certificate entry, or reproduction failure. A successful file hash proves identity, and a successful formal check proves its exact statement; neither validates a physical detector.
 
-For the later prototype, compare the [ideal feasibility certificate](../studies/optical-feasibility/README.md) with the [optical/detector supplements](../studies/optical-validation/README.md). Review the failed wider calibration budget, finite selection of the tighter settings, 48 separate simulation error comparisons, and external-data wavelength/processing limitations. Run `python tools/optical_validation.py audit`. The finite Arb transfer checks bound numerical evaluation of a declared optical model; they do not turn the selected simulations into a continuous-tolerance guarantee or an experiment.
+For the later prototype, start with the [optical-study guide](optical-studies.md), then compare the [ideal feasibility certificate](../studies/optical-feasibility/README.md) with the [optical/detector supplements](../studies/optical-validation/README.md). Review the failed wider calibration budget, finite selection of the tighter settings, 48 separate simulation error comparisons, and external-data wavelength/processing limitations. Run `python tools/optical_validation.py audit`. The finite Arb transfer checks bound numerical evaluation of a declared optical model; they do not turn the selected simulations into a continuous-tolerance guarantee or an experiment.
 
 The older evidence directories are historical layers. Their status notes can predate the reference four-root result and new lower bound. Current conclusions are stated in the root README and claim ledger; archived historical prose is not silently rewritten to suggest that it always contained later results.
+
+The [review of draft PR #12](reviews/pr-12-separation-law.md) records a separate proposed separation-law study, its reproduced examples and a counterexample to its broad three-factor claim. That revision remains draft pending mathematical and reproduction fixes; its results are not part of the accepted claim ledger. The [literature comparison](literature-comparison.md) identifies established ingredients and the exact remaining priority questions.
 
 Historical paths containing `review`, `independent_review` or `scientist-review` contain internal AI cross-checks. These names do not identify external scientists or establish external human peer review. A report's independence is limited to the separate implementation or checking step it describes; shared inputs, dependencies and any self-checking remain relevant. The paths are retained so the archived references and evidence bindings remain traceable.

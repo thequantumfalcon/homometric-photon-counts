@@ -18,17 +18,15 @@ With independent Gaussian site phases of variance $s>0$, write $t=e^{-s/2}$ and 
 
 $$D_4(t)=\frac{455015761}{20000}t^8(1-t^2)^5(t^6+3t^4+6t^2+6)>0\qquad(0<t<1).$$
 
-The mechanism is that the clean amplitude $M_{G,1}$ vanishes, while homometry gives equal magnitudes of the harmonic sums $M_{G,r}=\sum_j z_{G,j}^r$. The first three intensity moments depend only on shared quantities; order four introduces the unequal invariant $\operatorname{Re}(M_{G,4}\overline{M_{G,2}}^{\,2})$. The [coordinate construction](formal/COORDINATES.md), [moment derivation](evidence/homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_proof.txt), and [formal certificates](formal/CERTIFICATES.md) give the details.
+The clean amplitude vanishes and the first three moments depend only on shared quantities; order four introduces an unequal phase-sensitive invariant. See the [coordinate construction](formal/COORDINATES.md), [moment derivation](evidence/homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_proof.txt), and [formal certificates](formal/CERTIFICATES.md).
 
-The [original 18-page report](docs/report/historical/science_completion_report.pdf) and its [complete LaTeX sources](docs/report/README.md) are included. Recovered files match the historical archive hashes. The report gives the foundational derivations; its 20 October scope predates the later four-root certificates, fixed-bin sample bounds, completed concrete formal proof and optical supplements described below.
+Read the [original 18-page report](docs/report/historical/science_completion_report.pdf) with the [23 October update](docs/report/update-2026-10-23.md), which covers the later four-root certificates, sample bounds and completed concrete formal proof. The [historical report and LaTeX sources](docs/report/README.md) retain their original bytes.
 
 ## Explore the result
 
 A **blind gain** is a positive detector gain at which the two structures have the same probability of recording exactly four photons ($N=4$). The full photon-count distributions still differ.
 
-The [interactive demo](demo/index.html) follows the geometry, identical clean diffraction, fourth-moment separation and four certified blind gains. Download the repository and open `demo/index.html`, or follow the [local preview instructions](demo/README.md). The controls evaluate source-bound formulas and expose the exact certificate endpoints; the demo itself is an explanation, not a proof.
-
-The default view is 2D because the structures are one-dimensional. Optional 3D inspection shows their positions and complex phase vectors, with manual orbit, zoom and a seeded Gaussian snapshot. Display rows and phase-vector directions are illustrative, not a physical apparatus. All browser assets are included locally. See the [numerical and browser validation guide](docs/demo-testing.md) for reproducible checks.
+The [offline interactive demo](demo/index.html) follows the geometry, identical clean diffraction, fourth-moment separation and four certified blind gains. Download the repository and open `demo/index.html`, or use the [local preview instructions](demo/README.md). Its 2D plots and optional 3D phase view explain the source-bound formulas and exact certificate endpoints; the demo is not a proof or a physical apparatus. See the [demo validation guide](docs/demo-testing.md).
 
 ![Interactive fourth-moment plot with phase variance and photon gain controls.](docs/validation/demo_20261022/desktop-noise.png)
 
@@ -43,9 +41,7 @@ python tools/project.py test --output build/first-check
 
 These commands use the standard library, run offline, and preserve the evidence. `verify` checks bytes and input bindings. `test` reruns exact endpoint constants, a necessary sample bound, an independently coded sample exclusion, and the exact phasor reconstruction. Neither command proves every analytic step.
 
-For the longer Arb reconstruction, follow the [reproduction guide](docs/reproduction.md). The [reviewer guide](docs/reviewer-guide.md) provides a short route through the proofs.
-
-A [fresh Ubuntu Linux run](docs/validation/linux_replay_20261022.json) passed the full numerical and optical replays as well as the core and packaged-source checks. The reproduction guide includes separate hash-locked Windows and Linux dependencies.
+The [reproduction guide](docs/reproduction.md) covers longer Arb replays and pinned Windows/Linux dependencies. The [reviewer guide](docs/reviewer-guide.md) gives a short route through the proofs; the [validation record](docs/validation/README.md) records executed checks.
 
 ## Results and their scope
 
@@ -64,38 +60,20 @@ $$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim
 
 The sample counts require tens of trillions of independent observations for this fixed reference experiment; they do not establish a practical acquisition plan. The lower bound applies to the specified gain, variance, background and 13-bin iid observation, not to all measurements at this frequency. Arbitrary detectors, temporal dependence, unknown calibration and optimized designs need separate analysis.
 
-![Inverse-gain illustration showing one remaining root above gain 1/6 and the 24 certified derivative intervals.](docs/assets/compact_gain_certified.png)
-
-The curve is illustrative numerical quadrature. The endpoint signs and interval coverage come from the separately linked certificate; the first three roots are outside this plot's gain range.
-
-The [claim ledger](docs/claims.md) links each result to its actual proof, certificate, replay, and remaining assumptions. The [model guide](docs/model.md) separates this homogeneous phase model from the archived historical extensions.
-
-A [fresh Lean 4.35.0 source rebuild](docs/validation/formal_replay_20261022.json) passed **all 61 modules and 722 theorem-axiom audits** on Windows. Every project module was compiled anew with pinned dependencies; no theorem changes were needed. The [spatial separation theorem](formal/HOMOMETRY.md) connects exact coordinates, homometry and noncongruence to count-law distinction. The [validation record](docs/validation/README.md) distinguishes this compilation from historical Lean/Nanoda checks and the optional fresh reindexing timeout. Root-count and testing arguments are not fully formalized in Lean. The [verification-tool status](docs/verification-tools.md) records the scope of each checker.
-
-The [Gaussian formalization](formal/GAUSSIAN.md) derives the general expectation formula and proves a site-by-site moment recurrence for any finite complex geometry. [Checked exact certificates](formal/CERTIFICATES.md) evaluate that recurrence for this particular pair. The separating conclusion is specific to these two structures. The [joint snapshot model](formal/JOINT_MODEL.md) now proves the stated conditional Poisson law on one probability space. A separate [model-error bound](docs/model-tolerance.md) quantifies a conservative tolerance for the fixed-bin test; it does not demonstrate physical feasibility.
+The [claim ledger](docs/claims.md) links each result to its proof and assumptions. The [model guide](docs/model.md) and [formal validation record](docs/validation/README.md) explain the Gaussian/Poisson construction and Lean coverage. Root-count and testing arguments are not fully formalized in Lean. See also the [verification-tool status](docs/verification-tools.md) and [fixed-test model-error bound](docs/model-tolerance.md).
 
 ## Bounded optical feasibility study
 
-A separate [optical feasibility extension](studies/optical-feasibility/README.md) preserves the original results and explores a different measurement frequency with unbinned counts. Under its explicit iid Gaussian, ideal phase-quantization and detector assumptions, a fixed score and threshold have each error below **4.53% at 5,000 independent snapshots**, uniformly over specified simultaneous gain, background and phase-variance uncertainty. A wider box needs 11,000 snapshots for each error below 4.90%. Arb certificates, exact risk checks, simulation and reproducible sources are included.
-
-This candidate uses a **second-order signal at a different frequency**. It does not demonstrate the original fourth-order-only effect or contradict the original binned sample bound. Acquisition rates, optical transfer, real phase levels and detector behavior remain unvalidated. The study is conditional feasibility evidence, not a physical experiment or acquisition recommendation.
-
-The newer [optical transfer and detector checks](studies/optical-validation/README.md) preserve five further stages: an optical bench model, calibration robustness, three external processed SPAD delay distributions, an afterpulsing simulation, and an Arb transfer certificate. The broader optical calibration budget failed; eight selected tighter settings passed their simulation criterion. The afterpulsing study had 0/200 errors in each of 48 selected comparisons, with simultaneous one-sided 95% upper bound **0.03375192026711007**. These are finite conditional simulations, not continuous optical-tolerance or measured performance guarantees.
-
-Arb bounds the per-cell numerical transfer error by **1.20e-15** at the selected settings and checks 12,096 saved phase commands. It does not certify physical calibration or the full stochastic classifier. Run `python tools/optical_validation.py audit` for the offline standard-library audit; the [reproduction guide](docs/reproduction.md) also documents the exact Arb replay and retained data licenses.
+The [optical-study guide](docs/optical-studies.md) covers the separate feasibility, calibration, external detector-data and transfer studies. They use a **second-order signal at a different frequency**, with their own assumptions and sample bounds. They do not demonstrate the original fourth-order-only effect or physically validate the proposed apparatus.
 
 ## Research provenance
 
-Substantial parts of the arguments, code, checks, and documentation were developed with AI assistance under human direction. The maintainer did not independently derive or manually verify every step. Internal alternative implementations provide useful evidence but are not external human review. Read the [methods and limitations disclosure](docs/research-disclosure.md).
-
-AI tools are not listed as authors or Git contributors. Git identity and scientific-methods disclosure serve different purposes.
+Substantial parts of the arguments, code and checks were developed with AI assistance under human direction. The maintainer did not independently derive or manually verify every step. Read the [methods disclosure](docs/research-disclosure.md) and [evidence provenance](docs/provenance.md). Internal checks are not external human peer review. AI tools are not listed as authors or Git contributors.
 
 ## Reproduce and challenge
 
-The research capsule preserves explicit assumptions, exact rational inputs, analytic arguments, interval certificates, source code, and formal statements. Its [public provenance record](docs/provenance.md) describes the removal of machine-specific paths and the resulting hash updates. Mathematical inputs are not silently replaced.
-
 Report a proof gap with its statement, model, evidence path, and a concrete counterexample or failed implication. Report a reproduction failure with the command, Python version, and output. See [contribution guidance](.github/CONTRIBUTING.md).
 
-Open work includes temporal/exposure extensions, formalization of the root and testing certificates, useful larger stability neighborhoods, root counts over the full parameter domain, optimal testing/design, primary-literature comparison, and physical validation. See the [research roadmap](docs/roadmap.md).
+See the [research roadmap](docs/roadmap.md) for open mathematical and experimental work and the [priority comparison](docs/priority.md) for established antecedents and unresolved novelty questions.
 
 Maintained by **Thomas Albrecht**. Project-owned code and documentation are [MIT licensed](LICENSE.txt); [third-party terms remain intact](LICENSE_STATUS.md). The [public repository](https://github.com/thequantumfalcon/homometric-photon-counts) is available for inspection. It has no tagged scientific release or external peer-review endorsement. See the [repository status](docs/repository-readiness.md) for verified settings and checks.

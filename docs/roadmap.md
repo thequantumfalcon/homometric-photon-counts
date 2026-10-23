@@ -7,6 +7,7 @@
 | Global parameter root count | Exclusion of additional roots across all claimed phase widths/backgrounds, not a finite scan |
 | Optimal testing and design | Bounds for the exact observation/risk criterion and certified exclusion of competing designs; pooled bins do not automatically bound full counts |
 | Historical priority | [Claim-level comparison](priority.md) against the outstanding primary texts, with exact hypotheses and conclusions |
+| Proposed general separation-law study | Keep [PR #12 draft](reviews/pr-12-separation-law.md) until its three-factor overstatement, undeclared dependencies, unsupported survey claims and missing automated checks are addressed; review the integrated revision before merging |
 | Physical validation | Numerical optical transfer/SLM calibration and a measured pilot following the [laboratory plan](../studies/optical-validation/simulation-prototype/robustness-study/LAB_PLAN.txt). External processed SPAD delay tables inform conditional simulations; no proposed-apparatus measurements are present |
 | Complete numerical optics error budget | Extend the [finite transfer certificate](../studies/optical-validation/README.md) to continuous optical tolerances and stochastic phase-rounding/rate/sampler errors; saved witnesses alone do not supply this bound |
 | Broader formal portability | A separately validated Linux/macOS toolchain and dependency build; the supplied replay targets the retained pinned Windows environment |

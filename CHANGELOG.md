@@ -6,6 +6,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Shorten the README by linking detailed optical and formal accounts while keeping the model, core results and reproduction steps visible.
 - Define blind gain before the demo introduction and clarify that the root proof covers all positive gains, however large.
 - Use Thomas Albrecht consistently in current maintainer, citation and copyright credits; preserve historical evidence and commit attribution.
 - Prune ignored build/runtime directories before scanning source files, so Windows checks tolerate Linux environment symlinks in the workspace.
@@ -19,6 +20,10 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Added
 
+- Dated report addendum covering the global four-root certificate, fixed-bin sample bounds and completed concrete Lean proof without changing the historical report.
+- Optical-study guide separating changed-frequency feasibility and detector studies from the original fourth-order result.
+- Equation-level prior-work comparisons, with explicit classical reductions and remaining full-text/priority gaps.
+- Review and replay receipt for draft PR #12, including an exact counterexample to its broad three-factor claim and concrete requirements before merging.
 - Offline interactive research demo with source-bound geometry, diffraction and fourth-moment plots, exact blind-gain endpoints, optional 3D phase-vector inspection, independent numerical checks and responsive browser checks.
 - Fresh compilation of all 61 Lean modules and all 722 theorem-axiom audits, with pinned runtime/dependencies, the exact executed driver and all compiler logs.
 - Fresh Ubuntu Linux numerical and optical replay evidence, with a separately hash-locked CPython 3.13 wheel and reproduction instructions.
