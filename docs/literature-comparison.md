@@ -19,6 +19,8 @@ The [concrete formal proof](../formal/CERTIFICATES.md) verifies the 63-site spec
 
 ## Homometry and the Z-relation
 
+[Joseph Rosenblatt and Paul D. Seymour (1982), *The Structure of Homometric Sets*, SIAM Journal on Algebraic Discrete Methods 3(3), 343–350](https://doi.org/10.1137/0603035), is a direct antecedent. Its publisher abstract states a convolution-factorization characterization of homometry for finite integer-weight measures on Euclidean space: a pair can be written as $C*D$ and $C*\widetilde D$. We inspected the abstract, not the full proof. The construction below uses precisely this reflection mechanism, up to a translation; it does not require a new homometry method.
+
 [Jedrzejewski and Johnson (2013), section 1 and Proposition 1](https://arxiv.org/html/1304.6608v1) identify interval counts with coefficients of the Patterson product $P(x)P(x^{-1})$ in a finite cyclic group. [Callender and Hall's 2008 author handout, section 4](https://myweb.fsu.edu/ccallender/z-relationhandout.pdf), also treats real and circular positions, Fourier magnitudes, and the spectral-unit formulation. These inspected sources make the geometric ambiguity and the Fourier-magnitude criterion established background.
 
 Here the direct reduction can be written without choosing a cyclic modulus. Let $\mu_S=\sum_{x\in S}\delta_x$, and let $\widetilde\mu_S$ reflect this measure through zero. With the repository's motif $C$ and $V=\{0,31,63\}$,
@@ -43,11 +45,15 @@ This is our explicit substitution into the classical factor-reflection mechanism
 
 [Jaming and Kolountzakis (2003), section 2.1, equation (2.1), and section 3.1](https://nyjm.albany.edu/j/2003/9-12p.pdf) express correlation data through products of Fourier coefficients whose arguments sum to zero. The finite-measure version follows by expanding the sums. Taking arguments $2q,2q,-4q$ gives $M_2^2\overline{M_4}$; its real part is exactly $T$. This is our substitution, not a claim made there about this experiment. It establishes that the selected structural invariant has a classical bispectral form.
 
-The same paper's section 3.4, pp. 160–161, states the Grünbaum–Moore reconstruction results with their original theorem numbers. We inspected that account, but did not recover the complete [Grünbaum–Moore 1995 article](https://doi.org/10.1107/S0108767394009827) in this pass. A search-indexed public mirror was identified; direct retrieval timed out. Indexed passages are not a full-text review.
+The same paper's section 3.4, pp. 160–161, states the Grünbaum–Moore reconstruction results with their original theorem numbers. We inspected that account, but did not recover the complete [Grünbaum–Moore 1995 article](https://doi.org/10.1107/S0108767394009827) in this pass. Its full-text comparison remains open.
 
 The measurement orders must remain distinct: $T$ is third order in clean structural Fourier amplitudes; $I^4$ is fourth order in random intensity and eighth order in random field factors. Having full spatial correlation data is a different experiment from observing one noisy intensity at one frequency. A reconstruction theorem for the former does not automatically give the Gaussian coefficient, the photon-count law, or a sample bound for the latter.
 
 ## Finite random phasors and wrapped-normal moments
+
+[Joseph W. Goodman (1976), *Some fundamental properties of speckle*, Journal of the Optical Society of America 66(11), 1145–1150](https://doi.org/10.1364/JOSA.66.001145), supplies classical random-phasor and speckle-statistics background. The inspected publisher abstract discusses the random-walk description and the exponential intensity distribution of fully developed speckle. That distribution is not the exact law of this bounded finite wrapped-Gaussian sum: its higher moments must be computed under the stated site-phase law.
+
+[E. Jakeman and P. N. Pusey (1980), *Photon-Counting Statistics of Optical Scintillation*, in H. P. Baltes (ed.), *Inverse Scattering Problems in Optics*, Topics in Current Physics 20, 73–116](https://doi.org/10.1007/978-3-642-81472-3_3), is an earlier account of using fluctuations and higher-order scattered-light correlations in inverse problems through photon counting. The inspected publisher abstract emphasizes strong scatterers and K distributions. The full chapter has not been compared here. Inferring structural information from optical fluctuations is established background; identifying its precise implications for this finite Gaussian-phase pair requires a model-specific comparison.
 
 [Ainsleigh (2017), publisher abstract](https://epubs.siam.org/doi/10.1137/16M1082019), describes higher moments of quadratic forms in independent wrapped variables using characteristic functions. The full text remains unavailable here. The exact fit to that problem class is our algebraic observation: with $w_j=e^{i\sqrt{s}Z_j}$ and column vector $a_j=\overline{z_j}$,
 
@@ -66,11 +72,25 @@ This substitution directly recovers the exact finite random field within an earl
 
 The full article remained inaccessible on 23 October; the equation-navigation link did not expose its formulas. Earlier notes record a publisher preview. Neither that preview nor the abstract establishes the exact phase-law hypotheses needed to substitute $z_je^{i\sqrt{s}Z_j}$ into a numbered result. We therefore do not attribute uninspected Gaussian or homometric cancellation formulas to Barakat, or claim that his work excludes them. The [earlier dossier](../evidence/homometric-photon-counts/science_completion/literature/iid_gaussian_homometry_novelty_comparison.txt) also retains the unresolved 1981 and 1988 leads.
 
-For comparison once the article is available, the repository's detector step is explicit. If $N\mid I\sim\operatorname{Poisson}(b+\eta I)$, then
+## Mandel's counting framework
+
+The classical references are L. Mandel, [*Fluctuations of Photon Beams and their Correlations*, Proceedings of the Physical Society 72(6), 1037–1048 (1958)](https://doi.org/10.1088/0370-1328/72/6/312), and [*Fluctuations of Photon Beams: The Distribution of the Photo-Electrons*, Proceedings of the Physical Society 74(3), 233–243 (1959)](https://doi.org/10.1088/0370-1328/74/3/301). The indexed publisher abstract of the 1958 paper treats the relation between light fluctuations and photoelectron-count correlations. For the 1959 paper, publisher-deposited bibliographic metadata was verified; its formulas have not been inspected in this pass. Neither full article has been reviewed here, and no numbered equation from either is asserted to prove this repository's model-specific result.
+
+The detector step can be derived directly from our conditional law, within this established photon-counting framework. If $N\mid I\sim\operatorname{Poisson}(b+\eta I)$, then
 
 $$\mathbb E[(N)_r]=\mathbb E[(b+\eta I)^r].$$
 
 Common $b$ and matching intensity moments below order four give the fourth factorial-count gap $\eta^4(\mathbb E[I_A^4]-\mathbb E[I_B^4])$. This standard mixed-Poisson transfer is not a candidate new principle. It requires the stated conditional detector model; an exposure-integrated random rate would need its own intensity calculation.
+
+## Multi-reference alignment and invariant moments
+
+Three relevant precedents have accessible author preprints. The equation and theorem numbers below refer to those inspected versions.
+
+- Tamir Bendory, Nicolas Boumal, Chao Ma, Zhizhen Zhao and Amit Singer, [*Bispectrum Inversion with Application to Multireference Alignment*, IEEE Transactions on Signal Processing 66(4), 1037–1050 (2018)](https://doi.org/10.1109/TSP.2017.2775591); [author preprint v2](https://arxiv.org/html/1705.00641v2). Equation (II.5) gives $B_x[k_1,k_2]=y[k_1]\overline{y[k_2]}y[k_2-k_1]$. Proposition II.1 gives recovery up to shift under specified Fourier-support conditions; Propositions II.2–II.3 give stability and sample guarantees with nonvanishing Fourier coefficients. Substituting $y[2]=M_2$ and $y[4]=M_4$ into the algebraic expression for $B_x[2,4]$ yields $M_2^2\overline{M_4}$, whose real part is $T$. This is our algebraic comparison, not an identification of the experiments.
+- Amelia Perry, Jonathan Weed, Afonso S. Bandeira, Philippe Rigollet and Amit Singer, [*The Sample Complexity of Multireference Alignment*, SIAM Journal on Mathematics of Data Science 1(3), 497–517 (2019)](https://doi.org/10.1137/18M1214317); [author preprint v2](https://arxiv.org/html/1707.00943v2). Section 2.2 describes invariant moment estimation; Theorems 1 and 3 give low-signal-to-noise lower and upper bounds. The familiar sixth-power dependence on noise standard deviation concerns generic signals under uniformly random cyclic shifts and additive Gaussian noise, with recovery up to shift. Section 3.2 shows why nongeneric signals can need higher-order information.
+- Afonso S. Bandeira, Ben Blum-Smith, Joe Kileel, Jonathan Niles-Weed, Amelia Perry and Alexander S. Wein, [*Estimation under group actions: Recovering orbits from invariants*, Applied and Computational Harmonic Analysis 66, 236–319 (2023)](https://doi.org/10.1016/j.acha.2023.06.001); [author preprint v4](https://arxiv.org/html/1712.10163v4). Problem 2.1 specifies compact orthogonal group actions with Haar-distributed transformations and independent additive Gaussian noise. Theorems 2.15–2.16 connect invariant moment degree to high-noise sample bounds, including a lower bound from distinct orbits with matching lower moments.
+
+These papers establish that phase recovery through invariant moments, and a connection between moment matching and statistical difficulty, are prior methods. Their vector observations under latent group actions differ from our scalar Poisson counts with a rate set by independently perturbed site phases. Here a cubic structural invariant first enters a fourth intensity moment. None of the cited sample rates establishes the fixed-calibration 13-bin testing bounds, the exact cancellation coefficient, or the blind-gain certificate in this repository.
 
 ## What is established and what still needs comparison
 

@@ -1,6 +1,6 @@
 # A route through the evidence
 
-The [recovered original report](report/historical/science_completion_report.pdf) provides an 18-page account of the foundational construction and derivations. Read it with the [23 October addendum](report/update-2026-10-23.md) for the later root-count, testing and concrete formal results. The [source and recovery guide](report/README.md) explains the historical scope; the current claim ledger links each result to its evidence.
+Start with the [23 October report update](report/update-2026-10-23.md) by Thomas Albrecht for the later root-count, testing and concrete formal results. The [recovered original report](report/historical/science_completion_report.pdf) provides an 18-page account of the foundational construction and derivations. The [source and recovery guide](report/README.md) explains the historical scope; the current claim ledger links each result to its evidence.
 
 1. Read the [model](model.md), [claim ledger](claims.md), and [research disclosure](research-disclosure.md).
 2. Run `python tools/project.py verify` and `python tools/project.py test --output build/reviewer-check`.

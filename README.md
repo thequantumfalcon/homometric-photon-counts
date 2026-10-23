@@ -20,7 +20,7 @@ $$D_4(t)=\frac{455015761}{20000}t^8(1-t^2)^5(t^6+3t^4+6t^2+6)>0\qquad(0<t<1).$$
 
 The clean amplitude vanishes and the first three moments depend only on shared quantities; order four introduces an unequal phase-sensitive invariant. See the [coordinate construction](formal/COORDINATES.md), [moment derivation](evidence/homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_proof.txt), and [formal certificates](formal/CERTIFICATES.md).
 
-Read the [original 18-page report](docs/report/historical/science_completion_report.pdf) with the [23 October update](docs/report/update-2026-10-23.md), which covers the later four-root certificates, sample bounds and completed concrete formal proof. The [historical report and LaTeX sources](docs/report/README.md) retain their original bytes.
+Start with the [23 October report update](docs/report/update-2026-10-23.md) by Thomas Albrecht, which covers the later four-root certificates, sample bounds and completed concrete formal proof. The [historical 18-page report and LaTeX sources](docs/report/README.md) retain their original bytes and provide the foundational derivations.
 
 ## Explore the result
 

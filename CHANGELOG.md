@@ -6,6 +6,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Make the attributed 23 October report update the demo's paper link and the first stop in current reading guides; remove the third-party journal mirror link.
 - Shorten the README by linking detailed optical and formal accounts while keeping the model, core results and reproduction steps visible.
 - Define blind gain before the demo introduction and clarify that the root proof covers all positive gains, however large.
 - Use Thomas Albrecht consistently in current maintainer, citation and copyright credits; preserve historical evidence and commit attribution.
@@ -20,6 +21,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Added
 
+- Primary citations and scoped comparisons for Rosenblatt–Seymour, Goodman, Jakeman–Pusey, Mandel and multi-reference alignment, with explicit source-access limits.
 - Dated report addendum covering the global four-root certificate, fixed-bin sample bounds and completed concrete Lean proof without changing the historical report.
 - Optical-study guide separating changed-frequency feasibility and detector studies from the original fourth-order result.
 - Equation-level prior-work comparisons, with explicit classical reductions and remaining full-text/priority gaps.

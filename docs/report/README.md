@@ -1,14 +1,14 @@
-# Historical report and current addendum
+# Current report update and historical sources
 
-[Read the original 18-page report](historical/science_completion_report.pdf),
-*Exact controls for homometric scattering: proofs and measurement limits*,
-dated **20 October 2026**.
-
-The [23 October addendum](update-2026-10-23.md) summarizes the later four-root
+Start with the [23 October report update](update-2026-10-23.md) by
+**Thomas Albrecht**. It summarizes the later four-root
 certificate, fixed 13-bin necessary and sufficient sample counts, completed
 concrete Lean proof, and optical supplements. It states the assumptions and
-remaining limits beside each result. The historical report is preserved
-unchanged.
+remaining limits beside each result.
+
+The [original 18-page report](historical/science_completion_report.pdf),
+*Exact controls for homometric scattering: proofs and measurement limits*,
+is dated **20 October 2026** and preserved unchanged as a historical source.
 
 The PDF and its complete LaTeX input set were recovered on 22 October 2026
 from the retained `homometric-photon-counts-research-v0.1.0.zip` and
