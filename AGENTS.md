@@ -16,4 +16,4 @@ State the observation model, calibration knowledge, risk criterion and dependenc
 
 ## Identity and security
 
-Use the maintainer's repo-local pseudonymous Git identity and signed local commits. Never add AI co-author trailers, generated-by commit credits, or AI contributor/citation entries. Keep the honest research-methods disclosure. Do not use web/API merges, publish, change account settings, expose private sources, or grant a license from a template alone. Review the concrete artifact before any remote release.
+Use Thomas Albrecht as the maintainer's public author name, retain the repo-local Git email, and use signed local commits. Never add AI co-author trailers, generated-by commit credits, or AI contributor/citation entries. Keep the honest research-methods disclosure. Do not use web/API merges, publish, change account settings, expose private sources, or grant a license from a template alone. Review the concrete artifact before any remote release.

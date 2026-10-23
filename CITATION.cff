@@ -5,7 +5,8 @@ license: MIT
 repository-code: "https://github.com/thequantumfalcon/homometric-photon-counts"
 title: "Homometric photon counts: conditional proofs and reproducible certificates"
 authors:
-  - name: "The Quantum Falcon"
+  - family-names: "Albrecht"
+    given-names: "Thomas"
     website: "https://github.com/thequantumfalcon"
 abstract: "A research capsule for a fixed 63-site homometric pair under independent Gaussian phase motion and conditional Poisson counting. Results have explicit assumptions and include rigorous numerical certificates and focused formal checks."
 keywords:

@@ -24,6 +24,8 @@ The [original 18-page report](docs/report/historical/science_completion_report.p
 
 ## Explore the result
 
+A **blind gain** is a positive detector gain at which the two structures have the same probability of recording exactly four photons ($N=4$). The full photon-count distributions still differ.
+
 The [interactive demo](demo/index.html) follows the geometry, identical clean diffraction, fourth-moment separation and four certified blind gains. Download the repository and open `demo/index.html`, or follow the [local preview instructions](demo/README.md). The controls evaluate source-bound formulas and expose the exact certificate endpoints; the demo itself is an explanation, not a proof.
 
 The default view is 2D because the structures are one-dimensional. Optional 3D inspection shows their positions and complex phase vectors, with manual orbit, zoom and a seeded Gaussian snapshot. Display rows and phase-vector directions are illustrative, not a physical apparatus. All browser assets are included locally. See the [numerical and browser validation guide](docs/demo-testing.md) for reproducible checks.
@@ -51,13 +53,11 @@ Write $t=\exp(-s/2)$, where $s>0$ is the phase variance. For fixed unit phasors 
 
 $$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim\mathrm{Poisson}(b+\eta I_G).$$
 
-A **blind gain** is a positive gain $\eta$ at which the single event $N=4$ has equal probability under the two structures. It does not mean that the full count laws are equal.
-
 | Result | Precise scope |
 | --- | --- |
 | Exact noncongruent homometric sets | Lean proves that the saved symbolic coordinates define two sets of 63 distinct real positions, with the same 3,969 directed pair differences including multiplicities, and excludes every translation and reflection between them. See the [geometric theorem](formal/HOMOMETRY.md). |
 | Full count laws differ | The first three intensity moments match; the fourth differs positively for every $0<t<1$. The fourth factorial-count moment gap is $\eta^4D_4(t)$ under the stated detector model. |
-| Exactly four positive blind gains | At $t=1/2$ and $b=0$, the event $N=4$ has equal probability under the two structures at exactly four simple positive gains. The final root lies in $(0.2934841,0.2934842)$. The proof includes every arbitrarily large gain. |
+| Exactly four positive blind gains | At $t=1/2$ and $b=0$, the event $N=4$ has equal probability under the two structures at exactly four simple positive gains. The final root lies in $(0.2934841,0.2934842)$. The proof covers all positive gains, however large. |
 | Four roots persist on an explicit rectangle | Exactly four simple roots persist for $\lvert t-1/2\rvert\le10^{-23}$ and $0\le b\le10^{-20}$. The [analytic proof and exact rational budget](docs/root-stability.md) cover every positive gain. These conservative radii do not establish practical experimental tolerance; this result is not Lean-formalized. |
 | Necessary and sufficient counts | At $s=2\log2,\eta=1/20,b=0$, with iid observations of the fixed bins $0,\ldots,11,\geq12$, any test with each error below 5% needs at least **28,091,647,285,174** observations. A certified score succeeds with **102,399,876,723,169**. The ratio is below 3.646; the optimum is unknown. |
 | Formal count-law distinction | Lean proves the concrete first-three-moment matches, fourth-gap identity, and inequality of the two constructed count laws for every positive variance and gain and every common nonnegative background. The proof connects the explicit 63-site phase lists, Gaussian integrals and Poisson mixtures without assuming the concrete moment values. See the [certificate scope](formal/CERTIFICATES.md) and [executed checks](docs/validation/README.md). |
@@ -98,4 +98,4 @@ Report a proof gap with its statement, model, evidence path, and a concrete coun
 
 Open work includes temporal/exposure extensions, formalization of the root and testing certificates, useful larger stability neighborhoods, root counts over the full parameter domain, optimal testing/design, primary-literature comparison, and physical validation. See the [research roadmap](docs/roadmap.md).
 
-Maintained under the pseudonym **The Quantum Falcon**. Project-owned code and documentation are [MIT licensed](LICENSE.txt); [third-party terms remain intact](LICENSE_STATUS.md). The [public repository](https://github.com/thequantumfalcon/homometric-photon-counts) is available for inspection. It has no tagged scientific release or external peer-review endorsement. See the [repository status](docs/repository-readiness.md) for verified settings and checks.
+Maintained by **Thomas Albrecht**. Project-owned code and documentation are [MIT licensed](LICENSE.txt); [third-party terms remain intact](LICENSE_STATUS.md). The [public repository](https://github.com/thequantumfalcon/homometric-photon-counts) is available for inspection. It has no tagged scientific release or external peer-review endorsement. See the [repository status](docs/repository-readiness.md) for verified settings and checks.

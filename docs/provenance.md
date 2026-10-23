@@ -1,5 +1,7 @@
 # Public evidence provenance
 
+Current maintainer and citation credits use **Thomas Albrecht**. Earlier signed commits and byte-pinned study copyright notices retain **The Quantum Falcon**, the maintainer's former project credit.
+
 On 2026-10-22, a documented editorial derivative removed conversation wording from model provenance and named AI reviewer credit lines from internal reports. The methods disclosure and the reports' independence limitations remain. Dependent hashes and sizes were rebound, and the phase/coordinate byte checks were rerun. The [change record](validation/editorial_cleanup.json) preserves before/after identities; public inventories retain original archive identities and add pre-editorial identities for affected entries. Mathematical model data, numerical results and all Lean source text are unchanged. Historical execution receipts remain historical: updating a hash reference does not claim a new proof execution. The two external byte-binding receipts describe the current distributed input.
 
 The byte-for-byte copying descriptions below refer to initial import, before this recorded editorial transformation.

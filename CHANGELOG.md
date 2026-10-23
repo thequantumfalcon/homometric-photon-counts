@@ -6,6 +6,8 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Define blind gain before the demo introduction and clarify that the root proof covers all positive gains, however large.
+- Use Thomas Albrecht consistently in current maintainer, citation and copyright credits; preserve historical evidence and commit attribution.
 - Prune ignored build/runtime directories before scanning source files, so Windows checks tolerate Linux environment symlinks in the workspace.
 - Remove named AI reviewer credits and conversation residue while retaining the methods disclosure; record editorial changes and rebind affected public hashes.
 - Compare optical-transfer replay certificates exactly apart from platform line endings, while retaining strict archived-byte checks.

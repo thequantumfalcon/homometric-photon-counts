@@ -8,4 +8,4 @@ Do not edit a certificate simply to make a checker pass. Preserve prior evidence
 
 AI assistance may be used, but submitters must be able to explain and defend their changes. Disclose material use in the PR's methods/testing discussion. Unverified generated proofs or bug reports without a concrete argument are not evidence. AI tools must not be added as Git co-authors or citation authors.
 
-Use concise commit subjects and explain what changed and why in the PR. The maintainer uses signed local commits and local merges under a pseudonymous identity. Submit project-owned contributions under the [MIT license](../LICENSE.txt). Identify third-party material and preserve its applicable terms and notices.
+Use concise commit subjects and explain what changed and why in the PR. The maintainer, Thomas Albrecht, uses signed local commits and local merges. Submit project-owned contributions under the [MIT license](../LICENSE.txt). Identify third-party material and preserve its applicable terms and notices.
