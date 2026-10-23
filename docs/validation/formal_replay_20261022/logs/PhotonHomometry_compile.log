@@ -1,0 +1,4 @@
+'PhotonHomometry.differences_perm' depends on axioms: [propext, Quot.sound]
+'PhotonHomometry.differences_translates' depends on axioms: [propext, Quot.sound]
+'PhotonHomometry.translates_homometric' depends on axioms: [propext, Quot.sound]
+'PhotonHomometry.integer_shifts_homometric' depends on axioms: [propext, Classical.choice, Quot.sound]

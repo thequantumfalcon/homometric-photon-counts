@@ -1,0 +1,239 @@
+\section{Sharp orders for the number of independent measurements}
+\label{sec:sampling}
+
+The preceding total-variation calculation concerns one observation. Repeated
+observations require a separate argument: multiplying the one-observation
+distance by the number of samples generally loses the correct scaling.
+Here that gap can be closed for the stated, fully calibrated detector models.
+All limits in this section hold as $s\downarrow0$, with detector parameters
+fixed. Define the squared Hellinger distance and the affinity by
+\[
+ h^2(P,Q)=\int(\sqrt p-\sqrt q)^2,\qquad
+ \rho(P,Q)=\int\sqrt{pq}=1-\frac{h^2(P,Q)}2.
+\]
+Integrals are replaced by sums for count distributions. This convention gives
+$0\le h^2\le2$.
+
+\subsection{Common leading moments at every fixed order}
+
+The null condition and the uniform bound in \eqref{eq:Bp} imply
+\[
+ I_G(s)/s\ \longrightarrow\ J_G
+ =\left|i\sum_j z_{Gj}Z_j\right|^2
+\]
+almost surely and in every fixed moment. Dominated convergence applies because
+$I_G(s)/s\le n\|PZ\|^2$, which has every finite moment. The real Gaussian
+field has covariance eigenvalues
+\[
+ \lambda_\pm=\frac{n\pm|M_2|}{2}.
+\]
+They are the same for A and B. Thus $J_A$ and $J_B$ have the same law as
+$\lambda_+ Z_1^2+\lambda_- Z_2^2$ with independent standard normals.
+Write $m_k=\mathbb E J_G^k>0$. Each exact intensity moment is a finite sum
+of exponentials in $s$, hence is analytic at zero. Therefore, for every fixed
+integer $k\ge1$,
+\begin{equation}\label{eq:all-leading-moments}
+ \mathbb E I_G(s)^k=m_k s^k+O(s^{k+1}),\qquad
+ D_k(s)=O(s^{k+1}).
+\end{equation}
+The exact fourth-moment identity specifies the sharper coefficient
+$D_4(s)=c_5s^5+O(s^6)$. Put $R=|M_2|^2=129187/400$. The generating function
+\[
+ \mathbb E e^{tJ_G}=
+ \bigl[1-2nt+(n^2-R)t^2\bigr]^{-1/2}
+\]
+gives
+\begin{equation}\label{eq:m4}
+ m_4=24n^4+72n^2R+9R^2>0.
+\end{equation}
+These facts also justify $D_5=O(s^6)$ and $D_6=O(s^7)$ without assuming
+an uncomputed sixth-order symbolic identity.
+
+\subsection{Gaussian readout}
+
+For fixed $\sigma>0$, the squared Hellinger distance between the laws of
+$I_A+N(0,\sigma^2)$ and $I_B+N(0,\sigma^2)$ satisfies
+\begin{equation}\label{eq:hellinger-gaussian}
+ \boxed{\displaystyle
+ h^2=\frac{c_5^2}{96\sigma^8}s^{10}+o(s^{10}).}
+\end{equation}
+
+\paragraph{Proof.}
+Subtract the common mean $\mu(s)=\mathbb E I_G(s)=n(1-e^{-s})=O(s)$ from
+both observations; this translation preserves Hellinger distance.
+Set $V_G=I_G-\mu$. Then $\mathbb E V_G=0$, $|V_G|\le n^2$, and
+$\mathbb E|V_G|^k=O(s^k)$ for every fixed $k$. Equality of the first three
+raw moments gives equality of the first three central moments. The fourth
+central-moment difference is $D_4$, and the fifth is
+$D_5-5\mu D_4=O(s^6)$.
+
+Use the Hilbert norm $\|f\|_{g}^{2}=\int |f(x)|^2/g_\sigma(x)\,dx$.
+The translated Gaussian kernels obey the exact identity
+\[
+ \left\langle g_\sigma(\cdot-u),g_\sigma(\cdot-v)\right\rangle_g
+ =e^{uv/\sigma^2}.
+\]
+It follows either by completing the square or direct Gaussian integration.
+All fixed derivatives of these kernels have finite Hilbert norm, uniformly
+for $|u|\le n^2$; the derivative norms are an exponential times a polynomial
+in $u$. Taylor's theorem in this Hilbert space, through degree five, gives
+\[
+ \frac{p_{A,s}-p_{B,s}}{s^5}
+ \longrightarrow \frac{c_5}{24}g_\sigma^{(4)}
+ \quad\hbox{in }L^2(g_\sigma^{-1}dx).
+\]
+The sixth-order remainder is $O(s^6)$ in that norm by the uniform derivative
+bound and $\mathbb E|V_A|^6+\mathbb E|V_B|^6=O(s^6)$.
+
+Jensen's inequality supplies the needed denominator control globally:
+\[
+ \frac{p_{G,s}(x)}{g_\sigma(x)}
+ =\mathbb E\exp\left(\frac{xV_G}{\sigma^2}
+                 -\frac{V_G^2}{2\sigma^2}\right)
+ \ge \exp\left(-\frac{\mathbb E V_G^2}{2\sigma^2}\right).
+\]
+This lower bound tends to one, and $p_{G,s}(x)/g_\sigma(x)\to1$ for each
+fixed $x$. Hence
+\[
+ \frac{h^2}{s^{10}}
+ =\int\frac{[(p_{A,s}-p_{B,s})/s^5]^2}
+                 {(\sqrt{p_{A,s}}+\sqrt{p_{B,s}})^2}
+ \longrightarrow
+ \frac{c_5^2}{4\cdot24^2}
+ \int\frac{(g_\sigma^{(4)})^2}{g_\sigma}.
+\]
+For completeness, the limit follows from Hilbert-norm convergence of the
+numerator, which gives $L^1$ convergence of its weighted square; the extra
+factor $g_\sigma/(\sqrt{p_A}+\sqrt{p_B})^2$ is uniformly bounded and tends
+pointwise to $1/4$. Differentiating the kernel identity four times in each
+variable at zero gives
+$\int(g_\sigma^{(4)})^2/g_\sigma=4!/\sigma^8$.
+Substitution proves \eqref{eq:hellinger-gaussian}.
+
+\subsection{Photon counting with a fixed positive background}
+
+For fixed $b>0$ and $\eta>0$ in $N\mid I\sim\operatorname{Poisson}(b+\eta I)$,
+\begin{equation}\label{eq:hellinger-positive-background}
+ \boxed{\displaystyle
+ h^2=\frac{c_5^2\eta^8}{96b^4}s^{10}+o(s^{10}).}
+\end{equation}
+
+\paragraph{Proof.}
+Let $p_\lambda(k)=e^{-\lambda}\lambda^k/k!$ and use the Hilbert norm
+$\|f\|_b^2=\sum_k |f(k)|^2/p_b(k)$. Direct summation gives
+\[
+ \langle p_{b+u},p_{b+v}\rangle_b=e^{uv/b}.
+\]
+This identity ensures uniform Hilbert bounds for all fixed kernel derivatives
+on the compact interval $0\le u\le\eta n^2$. Taylor expansion in intensity
+through degree five, the exact lower-moment cancellations, and the sixth
+moment bound give
+\[
+ (p_{A,s}-p_{B,s})/s^5
+ \longrightarrow \frac{c_5\eta^4}{24}(S-\mathrm{Id})^4p_b
+ \quad\hbox{in }\ell^2(p_b^{-1}).
+\]
+For every count $k$ and every admissible intensity,
+\[
+ \frac{p_{b+\eta I}(k)}{p_b(k)}
+ =e^{-\eta I}(1+\eta I/b)^k\ge e^{-\eta n^2}.
+\]
+The mixture ratios tend pointwise to one and have the same positive lower
+bound. The argument used for Gaussian readout therefore applies to the
+Hellinger denominator. Differentiating the kernel identity gives
+\[
+ \sum_k\frac{[(S-\mathrm{Id})^4p_b(k)]^2}{p_b(k)}=\frac{4!}{b^4},
+\]
+which proves the stated coefficient. The assumption $b>0$ is essential;
+this formula is not uniform as $b$ tends to zero.
+
+\subsection{Zero-background counting and the four-count event}
+
+At $b=0$ and fixed $\eta>0$ the scaling changes:
+\begin{equation}\label{eq:hellinger-zero-background}
+ \boxed{\displaystyle
+ h^2=\frac{\eta^4c_5^2}{96m_4}s^6+O(s^7).}
+\end{equation}
+
+\paragraph{Proof.}
+For each fixed count $k$,
+\[
+ p_{G,s}(k)=\frac{\eta^k}{k!}\mathbb E[I_G^k e^{-\eta I_G}]
+ =\frac{\eta^km_k}{k!}s^k+O(s^{k+1}).
+\]
+For $k=0$, use $m_0=1$. Expanding the remaining exponential and using the
+exact equality of moments of orders zero through three shows
+$p_{A,s}(k)-p_{B,s}(k)=O(s^5)$ for $k=0,1,2,3$. Their Hellinger contributions
+are respectively $O(s^{10}),O(s^9),O(s^8),O(s^7)$.
+At $k=4$, the leading probability and the difference are
+\[
+ p_{G,s}(4)=\frac{\eta^4m_4}{24}s^4+O(s^5),\qquad
+ p_{A,s}(4)-p_{B,s}(4)=\frac{\eta^4c_5}{24}s^5+O(s^6).
+\]
+The second formula uses $D_5=O(s^6)$ and the sixth-moment remainder.
+Consequently
+\[
+ (\sqrt{p_{A,s}(4)}-\sqrt{p_{B,s}(4)})^2
+ =\frac{\eta^4c_5^2}{96m_4}s^6+O(s^7).
+\]
+For $k=5,6$, equation \eqref{eq:all-leading-moments} yields probability
+differences $O(s^6),O(s^7)$, so their contributions are $O(s^7),O(s^8)$.
+Finally, the entire remaining tail is bounded without any nonuniform series:
+\[
+ \sum_{k\ge7}(\sqrt{p_{A,s}(k)}-\sqrt{p_{B,s}(k)})^2
+ \le\Pr_A(N\ge7)+\Pr_B(N\ge7)
+ \le\frac{\eta^7}{7!}(\mathbb E I_A^7+\mathbb E I_B^7)=O(s^7).
+\]
+Here $\mathbf1_{\{N\ge7\}}\le (N)_7/7!$ supplies the factorial-moment
+bound. Summing all contributions proves \eqref{eq:hellinger-zero-background}.
+
+Keeping only the binary indicator $\mathbf1_{\{N=4\}}$ gives the same
+leading Hellinger coefficient: its complementary event contributes only
+$O(s^{10})$. Thus a frequency estimate of exactly-four-count observations
+achieves the optimal sample-order scaling in this limit. This concerns
+repeated independent observations, not a claim that four-count events
+dominate one-observation total variation at every noise level.
+
+The earlier parity rule illustrates this distinction. Its even-count
+probability is $1-\eta ns+O(s^2)$, and its A--B difference is
+$(c_5\eta^4/3)s^5+O(s^6)$. If only parity is retained, the two Bernoulli
+laws have
+\[
+ h^2_{\rm parity}=\frac{c_5^2\eta^7}{36n}s^9+O(s^{10}).
+\]
+Parity is asymptotically optimal for one observation in total variation,
+but discarding count magnitude loses information for repeated measurements.
+
+\subsection{From affinity to necessary and sufficient sample orders}
+
+Let $m$ observations be independent conditional on the unknown structure,
+with equal prior probabilities for A and B. The optimal success probability
+is $(1+d_{\rm TV}(P_s^{\otimes m},Q_s^{\otimes m}))/2$. Direct Cauchy--Schwarz
+and $\min(p,q)\le\sqrt{pq}$ give
+\[
+ 1-\rho(s)^m\le d_{\rm TV}(P_s^{\otimes m},Q_s^{\otimes m})
+ \le\sqrt{1-\rho(s)^{2m}}.
+\]
+These bounds and $\rho=1-h^2/2$ prove that, for any fixed target success
+$a\in(1/2,1)$, the minimum sample count has order $1/h^2(s)$. More explicitly,
+put $r=2a-1$. A necessary sample count is
+\[
+ m\ge\frac{\log(1-r^2)}{2\log\rho(s)},
+\]
+and taking the ceiling of $\log(1-r)/\log\rho(s)$ is sufficient for the
+optimal likelihood-ratio test. Therefore the sharp orders are
+\[
+ \boxed{\begin{aligned}
+  m_\mathrm{Gaussian}(s)&=\Theta(s^{-10}),&&\sigma>0\text{ fixed},\\
+  m_\mathrm{Poisson}(s)&=\Theta(s^{-10}),&&b>0,\ \eta>0\text{ fixed},\\
+  m_\mathrm{Poisson}(s)&=\Theta(s^{-6}),&&b=0,\ \eta>0\text{ fixed}.
+ \end{aligned}}
+\]
+With only parity retained in the zero-background case, the sharp order
+becomes $\Theta(s^{-9})$. The powers are proved; a universal finite-noise
+sample number, an exact optimal prefactor for the minimum sample count,
+and an experimental acquisition time are not. Calibration, independent
+snapshots, fixed exposure/gain, and the assumed structural model remain
+part of the theorem's conditions. Joint limits in $b$, $\eta$, $\sigma$,
+or the observation frequency require a separate analysis.
+

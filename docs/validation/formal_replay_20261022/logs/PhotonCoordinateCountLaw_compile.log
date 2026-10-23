@@ -1,0 +1,11 @@
+'PhotonCoordinateCountLaw.coordinateA_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateCountLaw.coordinateB_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateCountLaw.coordinate_count_laws_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateCountLaw.translatedA_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateCountLaw.translatedB_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateCountLaw.translated_coordinate_count_laws_distinct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PhotonCoordinateCountLaw.decoded_coordinate_count_laws_distinct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

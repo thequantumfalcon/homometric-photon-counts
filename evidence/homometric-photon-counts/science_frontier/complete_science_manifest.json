@@ -3,10 +3,10 @@
   "date": "2026-10-20",
   "assembled_at_utc": "2026-10-20T23:39:41.359462+00:00",
   "file_count": 125,
-  "total_bytes": 6308261,
+  "total_bytes": 6308086,
   "scope": "Complete preserved foundation and extension payloads, their unchanged manifests, and new frontier proof payloads. This active master, the portable container, and the self-referential verification sidecar are excluded from self-hashing. Hashes establish byte identity, not scientific truth.",
   "preservation_strategy": "Keep every predecessor manifest row and corresponding payload byte-for-byte, embed the exact predecessor master under its science_extension path, and add the current user-facing frontier inventory without editing old sources.",
-  "predecessor_manifest_sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b",
+  "predecessor_manifest_sha256": "9d1280a1ecbd5145323e8ab028299b661a5f36ebb7e38f991825b57378665784",
   "predecessor_payload_files_preserved": 87,
   "predecessor_manifest_embedded_as": "science_extension/complete_science_manifest.json",
   "original_manifest_sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0",
@@ -79,12 +79,12 @@
     {
       "path": "science_completion/harmonic_certificate/harmonic_groups.json",
       "bytes": 45062,
-      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+      "sha256": "bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96"
     },
     {
       "path": "science_completion/harmonic_certificate/harmonic_root_certificate.json",
       "bytes": 262857,
-      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+      "sha256": "bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8"
     },
     {
       "path": "science_completion/harmonic_certificate/harmonic_root_proof.txt",
@@ -94,17 +94,17 @@
     {
       "path": "science_completion/harmonic_certificate/harmonic_root_summary.json",
       "bytes": 4704,
-      "sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5"
+      "sha256": "bd5975e401c4e6aa7eb5f7957b48c7049c510029c8ffafb8a530b45195d4b36b"
     },
     {
       "path": "science_completion/harmonic_certificate/independent_harmonic_review.txt",
-      "bytes": 15244,
-      "sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41"
+      "bytes": 15188,
+      "sha256": "49d59d931b032a74e41a1a0ffeccfa69877f6743e0b797951e4983e086addb67"
     },
     {
       "path": "science_completion/harmonic_certificate/input_model.json",
-      "bytes": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "bytes": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
     },
     {
       "path": "science_completion/homogeneous_control/REPRODUCE.txt",
@@ -128,8 +128,8 @@
     },
     {
       "path": "science_completion/independent_completion_review.txt",
-      "bytes": 13740,
-      "sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296"
+      "bytes": 13753,
+      "sha256": "dc5e05a93845b7955cbb1016b2e7a7111a33d91e8c081fe47da82e7275a77fee"
     },
     {
       "path": "science_completion/literature/iid_gaussian_homometry_novelty_comparison.txt",
@@ -153,18 +153,18 @@
     },
     {
       "path": "science_completion/model_reconstruction/rebuild_independent.py",
-      "bytes": 13289,
-      "sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627"
+      "bytes": 13270,
+      "sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049"
     },
     {
       "path": "science_completion/model_reconstruction/rebuild_independent_model.json",
-      "bytes": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "bytes": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
     },
     {
       "path": "science_completion/model_reconstruction/rebuild_independent_premises.json",
       "bytes": 405925,
-      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+      "sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352"
     },
     {
       "path": "science_completion/model_reconstruction/rebuild_independent_premises.py",
@@ -178,8 +178,8 @@
     },
     {
       "path": "science_completion/report_science_review.txt",
-      "bytes": 5751,
-      "sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428"
+      "bytes": 5748,
+      "sha256": "0bec2b1b96d4c674d57709b8f51cfed32e5300f4821eb2b1309a3b9191580538"
     },
     {
       "path": "science_completion/root_certificate/certify_two_roots.py",
@@ -188,28 +188,28 @@
     },
     {
       "path": "science_completion/root_certificate/independent_root_review.txt",
-      "bytes": 13058,
-      "sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223"
+      "bytes": 13039,
+      "sha256": "675ef98802ed8ba6b2f111a4d2ead8629b5ba502e0973337e3b00933e4bd2249"
     },
     {
       "path": "science_completion/root_certificate/input_premises.json",
       "bytes": 405925,
-      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+      "sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352"
     },
     {
       "path": "science_completion/root_certificate/two_root_certificate.json",
       "bytes": 590553,
-      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+      "sha256": "6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889"
     },
     {
       "path": "science_completion/root_certificate/two_root_proof.txt",
       "bytes": 13512,
-      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+      "sha256": "f09cad5fed84fe9847ce59bd72ed1cb5677c11339dc98695fec04f6d7d29de84"
     },
     {
       "path": "science_completion/root_certificate/two_root_summary.json",
       "bytes": 3298,
-      "sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1"
+      "sha256": "2400777d63323ff03231c5e80ac346cf5b0ca361d5e8870d66e17415a083c9ae"
     },
     {
       "path": "science_completion/sample_complexity_proofs.tex",
@@ -219,7 +219,7 @@
     {
       "path": "science_completion/science_completion_manifest.json",
       "bytes": 8104,
-      "sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0"
+      "sha256": "268d006247997d5250ba89cc6de153858b45f4ad7ec7a6dd62d24552b15a4fea"
     },
     {
       "path": "science_completion/science_completion_render_review.json",
@@ -254,12 +254,12 @@
     {
       "path": "science_extension/assemble_complete_science.py",
       "bytes": 25940,
-      "sha256": "c41fa89f6191c0e17a37b099748581d76d0b732d6231ff20957da57000781d7a"
+      "sha256": "d2bec320d8aefb72ebfbf83a20cae59b78e09bc73258ab21a1d6b4cf002109bc"
     },
     {
       "path": "science_extension/complete_science_manifest.json",
       "bytes": 17622,
-      "sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b"
+      "sha256": "9d1280a1ecbd5145323e8ab028299b661a5f36ebb7e38f991825b57378665784"
     },
     {
       "path": "science_extension/extract_complete_science.py",
@@ -353,8 +353,8 @@
     },
     {
       "path": "science_extension/identifiability/independent_phase_robustness_review.txt",
-      "bytes": 2947,
-      "sha256": "c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33"
+      "bytes": 2944,
+      "sha256": "1d32f275cf0e5be284e65939d4e402bbc09405846d60e2cdfdd5a5392f8acba1"
     },
     {
       "path": "science_extension/identifiability/phase_robustness_proof.txt",
@@ -408,8 +408,8 @@
     },
     {
       "path": "science_extension/phase_laws/independent_phase_review.txt",
-      "bytes": 4289,
-      "sha256": "d28c787a83f926544dd8a4f81357fc7197f37d094e8f3739be604711e2c12c7b"
+      "bytes": 4306,
+      "sha256": "c1f89c698d3189b6e974261aeeec43ca6ad5106f82f62136c14bd360a9aae090"
     },
     {
       "path": "science_extension/phase_laws/phase_law_extension.py",
@@ -438,13 +438,13 @@
     },
     {
       "path": "science_extension/report_science_review.txt",
-      "bytes": 15775,
-      "sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d"
+      "bytes": 15717,
+      "sha256": "13164c77620f3b2479447bed9247affb42bba163c6406dc9d4079431e8b2174e"
     },
     {
       "path": "science_extension/science_extension_render_review.json",
       "bytes": 2011,
-      "sha256": "0b7832d8e08f0b5850f619d7e766a3f0e34b461c123cd7dd51b4f9ba0172a729"
+      "sha256": "bfcfdcd859c1bf187db66fb7459c0408bcd447c75b1dc547072a72db1626efa3"
     },
     {
       "path": "science_extension/science_extension_report.pdf",
@@ -469,7 +469,7 @@
     {
       "path": "science_frontier/assemble_complete_science.py",
       "bytes": 21660,
-      "sha256": "e9179db103458a172b37bba93ec36a94b325e79b28aaaf9a66b465dfd92e9560"
+      "sha256": "86282be030ebcc6235371199001dae990801f95a41bb8e559f4886d0c8ef63c2"
     },
     {
       "path": "science_frontier/calibration/REPRODUCE.txt",
@@ -503,13 +503,13 @@
     },
     {
       "path": "science_frontier/calibration/independent_calibration_review.txt",
-      "bytes": 14334,
-      "sha256": "89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073"
+      "bytes": 14325,
+      "sha256": "9309c4a9bb178bbe6d45c9056533853da0208318ee0d66788c33e1882235fa4c"
     },
     {
       "path": "science_frontier/final_review.txt",
       "bytes": 3902,
-      "sha256": "4393227691bdd4c5dd4c21333d83a90f9013bbf307c152659c2c0b7171cab253"
+      "sha256": "90d3b40a658e9c9757bda58f5853695f4a9418e50afd37cb2c0533a6b4cdcb8c"
     },
     {
       "path": "science_frontier/global_separation/blind_interval_certificate.json",

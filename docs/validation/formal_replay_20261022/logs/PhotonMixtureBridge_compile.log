@@ -1,0 +1,2 @@
+'PhotonMixtureBridge.integrated_factorial_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixtureBridge.count_gap_and_distinct_laws' depends on axioms: [propext, Classical.choice, Quot.sound]

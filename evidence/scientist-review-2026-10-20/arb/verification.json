@@ -3,8 +3,8 @@
   "python_flint_version": "0.9.0",
   "arb_precision_bits": 1024,
   "source_sha256": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d",
-  "engine_sha256": "2c96fb9e6f602b81c93b7d8432ca41a2eb17b30241aa72e0cd954122fc6d6d58",
-  "sealed_continuation_manifest_sha256": "ccc96f262f89aa2fb6fe8b3b5985227ef9d58455046f3c84d16d018dba80b6a8",
+  "engine_sha256": "c144f4d6ebd18cd03639b11a24bb5f54f3c8d04b6da48577e1b0de005463c631",
+  "sealed_continuation_manifest_sha256": "0ae2360f362788aedd395a2eee4c181bb272a630eaf81c66b86f83a6fc8a2d6c",
   "native_binary_hashes": {
     "flint/pyflint.pyd": "f1427349d712cb17a6aa1cd19dcce469417462fa66bd7edd6d049b5d11138a55",
     "flint/flint_base/flint_base.pyd": "cb8fffb322708f770b73d0ec4d322cb0e85b396ec02ca282770109e19b23cb7a",

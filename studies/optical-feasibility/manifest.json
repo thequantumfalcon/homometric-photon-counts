@@ -2,7 +2,7 @@
   "schema": 1,
   "date": "2026-10-21",
   "baseline_commit": "077430d24eb07f940fa175243ae511f8228ceb5a",
-  "transformation": "None. Selected local study files copied byte-for-byte.",
+  "transformation": "Editorial public derivative; pre-editorial and original local identities retained separately.",
   "historical_scope": "Local-only status fields describe the original executions before publication.",
   "files": [
     {
@@ -13,12 +13,18 @@
     {
       "path": "simulation-prototype/RUN_MANIFEST.json",
       "size": 1011,
-      "sha256": "f82e6b2826b32f55a157d4e7cc04e8367acb69a18c84498d5d81450b64addce9"
+      "sha256": "2ff7c60ab86c0d5ce1a100464111ccb1fd84b5482775f9731a1f92173f932b18",
+      "pre_editorial_sha256": "f82e6b2826b32f55a157d4e7cc04e8367acb69a18c84498d5d81450b64addce9",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/calibration-study/MANIFEST.json",
       "size": 4252,
-      "sha256": "cf51c51f2fe699c24a4938e54c3ad9df78472d66f630394722a7210e597fbc8e"
+      "sha256": "7e53c9a45110bde713b80077d3633a02e429542d8e5830957dfce5a77172a9c6",
+      "pre_editorial_sha256": "cf51c51f2fe699c24a4938e54c3ad9df78472d66f630394722a7210e597fbc8e",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/calibration-study/METHOD.txt",
@@ -33,12 +39,18 @@
     {
       "path": "simulation-prototype/calibration-study/calibrate.py",
       "size": 13065,
-      "sha256": "2f1d17f08a00a88814fa27af0201cb80ea31f4331662b968177a081771bdaa0d"
+      "sha256": "15f5df26418db9ea63467a39f684d6d878a14ba33c3623c18f79d90836d4cf25",
+      "pre_editorial_sha256": "2f1d17f08a00a88814fa27af0201cb80ea31f4331662b968177a081771bdaa0d",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/calibration-study/run-checked/calibration.json",
       "size": 25511,
-      "sha256": "cf262b1c7b31c476fc2e81f740e3d206355087038ed8d26b18f6aac3b6a9c8b3"
+      "sha256": "5a2ee8f9152c3ead47396c63c68d06d0d9a048b8bc24eff8cbb8dfd6d17341d0",
+      "pre_editorial_sha256": "cf262b1c7b31c476fc2e81f740e3d206355087038ed8d26b18f6aac3b6a9c8b3",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/calibration-study/test_calibration.py",
@@ -48,17 +60,26 @@
     {
       "path": "simulation-prototype/calibration-study/validation.json",
       "size": 2238,
-      "sha256": "124abdb6b02b65fd6343d4d7df5eec187770ce6bc2867412cf80ff6a622787c4"
+      "sha256": "8bbcedf125f2dccd3ebebd8c8856fc44932acdd7fe5d2434cecf41323cbb5f9b",
+      "pre_editorial_sha256": "124abdb6b02b65fd6343d4d7df5eec187770ce6bc2867412cf80ff6a622787c4",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/MANIFEST.json",
       "size": 4493,
-      "sha256": "96330f7ec35d82ad2d1debaa1d9cb323ad68ea86eea2fe4b737c8a65e9563b83"
+      "sha256": "dfc9acf38c78b03bd03e911be49beefb94a7596a835d84b1b31be8a4e903b6a7",
+      "pre_editorial_sha256": "96330f7ec35d82ad2d1debaa1d9cb323ad68ea86eea2fe4b737c8a65e9563b83",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/METHOD.txt",
       "size": 7123,
-      "sha256": "c9b302ea7bec7e11e6189dedf299c821f86562c98c626c382ca46a8c0c4731ea"
+      "sha256": "bc174b88842c842115341d8c9ab2fe11e5e93421b28efc56a8236492a3f0bdfe",
+      "pre_editorial_sha256": "c9b302ea7bec7e11e6189dedf299c821f86562c98c626c382ca46a8c0c4731ea",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/README.txt",
@@ -68,7 +89,10 @@
     {
       "path": "simulation-prototype/design-search/certify.py",
       "size": 13530,
-      "sha256": "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40"
+      "sha256": "4e24dc4c9615237c7c384ff47e8fb30a78222ca33b57a4908beb1f5da16d6992",
+      "pre_editorial_sha256": "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/figures-final/candidate.pdf",
@@ -83,12 +107,18 @@
     {
       "path": "simulation-prototype/design-search/heldout-final/simulation.json",
       "size": 3267,
-      "sha256": "fca2ff4044541591e848a84b36990fd434d1d92234bb9d266f4d23e11902ccab"
+      "sha256": "9d26110972476be64a3cc01e2006c7b2596157eee55d5cd2a884da9311819279",
+      "pre_editorial_sha256": "fca2ff4044541591e848a84b36990fd434d1d92234bb9d266f4d23e11902ccab",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/interval-final/certificate.json",
       "size": 38839,
-      "sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0"
+      "sha256": "35b377ca00f58b93e7d0dc1eb657a3d00b82fc130c478723f6019e3646d3be8a",
+      "pre_editorial_sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/plot_results.py",
@@ -98,12 +128,18 @@
     {
       "path": "simulation-prototype/design-search/scan-01/search.json",
       "size": 36687,
-      "sha256": "938f193db2bf6814e59e80d61850e147ab085b4954c8b0dc680eaa638e658229"
+      "sha256": "5424248979a2957e4f1b6e54aba222eda183a2032c209781060701ee88d42f1b",
+      "pre_editorial_sha256": "938f193db2bf6814e59e80d61850e147ab085b4954c8b0dc680eaa638e658229",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/search.py",
       "size": 8071,
-      "sha256": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45"
+      "sha256": "dbfd41e92addfb30261c3ab47cc285fae1cc9598e9ef69fbe1724947aa3ad013",
+      "pre_editorial_sha256": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/design-search/simulate_candidate.py",
@@ -123,7 +159,10 @@
     {
       "path": "simulation-prototype/feasibility-study/MANIFEST.json",
       "size": 2724,
-      "sha256": "c76a9660d43b25c6b8787ef0a56eeed1853155eb42124e3bef7b21afd8e0f389"
+      "sha256": "e208e5e655b85bb3c6dc6bc5d4d56ed2a1234d03ff97842dd87309076a9fed60",
+      "pre_editorial_sha256": "c76a9660d43b25c6b8787ef0a56eeed1853155eb42124e3bef7b21afd8e0f389",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/feasibility-study/README.txt",
@@ -143,12 +182,18 @@
     {
       "path": "simulation-prototype/feasibility-study/run-checked/results.json",
       "size": 22182,
-      "sha256": "855430d22378efbca4197f1ecb332341d700ff5ac93fe26f4bfaadb4aca93d04"
+      "sha256": "d96a61ba05f7d00a64238e176ddcb0532b038be16fe99c4962b61d691a58bced",
+      "pre_editorial_sha256": "855430d22378efbca4197f1ecb332341d700ff5ac93fe26f4bfaadb4aca93d04",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/feasibility-study/study.py",
       "size": 17395,
-      "sha256": "6a01a6d27926ccaf39f55445dbe0290e47f61f18ca56dde8ab4f7190508ea23e"
+      "sha256": "4eebaf214003f17e30d2a33976a8d0ae344b676b81f5a101775e547c9b2b3dcb",
+      "pre_editorial_sha256": "6a01a6d27926ccaf39f55445dbe0290e47f61f18ca56dde8ab4f7190508ea23e",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/feasibility-study/test_study.py",
@@ -158,7 +203,10 @@
     {
       "path": "simulation-prototype/run-validated/report.json",
       "size": 17196,
-      "sha256": "e1cbb596e7f1d3b077ebf501221e382edb08e3b5c108380565479d58134b7e8a"
+      "sha256": "59af44f5eccc50c2617ca184a77c778cece76fd48f8e13fbdaa09bda6544ef2b",
+      "pre_editorial_sha256": "e1cbb596e7f1d3b077ebf501221e382edb08e3b5c108380565479d58134b7e8a",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/run-validated/report.txt",
@@ -173,7 +221,10 @@
     {
       "path": "simulation-prototype/simulate.py",
       "size": 15478,
-      "sha256": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92"
+      "sha256": "86e8ab0f8ba754ba7751e2e3cfdcb22a154212dbde49c2e96345d504f38dfa9d",
+      "pre_editorial_sha256": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/test_simulation.py",
@@ -185,5 +236,10 @@
       "size": 2075,
       "sha256": "bf56e916886df8f93b3d7079dc58b96e5747b5e6a80bd65711e6f7396e10ac60"
     }
-  ]
+  ],
+  "editorial_derivative": {
+    "date": "2026-10-22",
+    "scope": "Remove conversation wording and named AI reviewer credits; preserve methods disclosures, mathematical payloads and Lean source. Rebind dependent hashes and sizes.",
+    "record": "docs/validation/editorial_cleanup.json (repository-relative)"
+  }
 }

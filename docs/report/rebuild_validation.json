@@ -1,0 +1,926 @@
+{
+  "date": "2026-10-22",
+  "scope": "Successful rendering of the recovered historical LaTeX source, not a new mathematical validation. The recovered historical PDF is unchanged.",
+  "platform": "Ubuntu 22.04 under WSL",
+  "command": "python3.13 docs/report/build.py --output build/report-linux-final-20261022",
+  "rebuild": {
+    "scope": "New rendering of unchanged historical source; original recovered PDF preserved.",
+    "pdf_sha256": "66c585a00b9a8c7ef18fc028bf16d576b17aae626938c882fbbfd762a3c48851",
+    "engine_version": "pdfTeX 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian)",
+    "engine_sha256": "01a7ab54ebf2fd89865aa0743ae9eaeec37ba4be75ca7cd254631cba6fb76cf9",
+    "builder_sha256": "8cee6c72b0ea2beff987e299699e5bb899fdbbf9f6406502f1f073686def744d",
+    "source_manifest_sha256": "d30d6494cfad0088bb599b33037d5c7600d4e5d96efbf1d221f675558726f110",
+    "passes": 3,
+    "shell_escape": false
+  },
+  "packages_downloaded_or_installed": false,
+  "system_configuration_changed": false,
+  "package_versions_and_license_notices": [
+    {
+      "package": "lmodern",
+      "version": "2.004.5-6.1",
+      "license_notice": "/usr/share/doc/lmodern/copyright",
+      "license_notice_sha256": "d6ed520aa5a7ad376209ea8367a4781a3b6b76139b3376892b12500c0967ed44"
+    },
+    {
+      "package": "texlive-base",
+      "version": "2021.20220204-1",
+      "license_notice": "/usr/share/doc/texlive-base/copyright",
+      "license_notice_sha256": "d7f9a14c6f223e71df0329ad164351d2188291cc20a385a30c83f21eaa42de61"
+    },
+    {
+      "package": "texlive-binaries",
+      "version": "2021.20210626.59705-1ubuntu0.3",
+      "license_notice": "/usr/share/doc/texlive-binaries/copyright",
+      "license_notice_sha256": "8a35ca91b6332fe77d27c7c4e14d491bd5ea64c504d07774ca2639dbfbb1c344"
+    },
+    {
+      "package": "texlive-latex-base",
+      "version": "2021.20220204-1",
+      "license_notice": "/usr/share/doc/texlive-latex-base/copyright",
+      "license_notice_sha256": "d7f9a14c6f223e71df0329ad164351d2188291cc20a385a30c83f21eaa42de61"
+    },
+    {
+      "package": "texlive-latex-recommended",
+      "version": "2021.20220204-1",
+      "license_notice": "/usr/share/doc/texlive-latex-recommended/copyright",
+      "license_notice_sha256": "d7f9a14c6f223e71df0329ad164351d2188291cc20a385a30c83f21eaa42de61"
+    },
+    {
+      "package": "texlive-plain-generic",
+      "version": "2021.20220204-1",
+      "license_notice": "/usr/share/doc/texlive-plain-generic/copyright",
+      "license_notice_sha256": "d7f9a14c6f223e71df0329ad164351d2188291cc20a385a30c83f21eaa42de61"
+    }
+  ],
+  "tex_input_files": [
+    {
+      "path": "/etc/texmf/web2c/texmf.cnf",
+      "sha256": "3443c7e22fbb4585732473f7e95d3cbf3e8657100f9117e711e2af5b0db85a40",
+      "size": 475,
+      "package": "locally generated TeX configuration or format"
+    },
+    {
+      "path": "/usr/bin/pdftex",
+      "sha256": "01a7ab54ebf2fd89865aa0743ae9eaeec37ba4be75ca7cd254631cba6fb76cf9",
+      "size": 1802504,
+      "package": "texlive-binaries"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map",
+      "sha256": "d9693993efdc7d0b9ab3df777589995d43e24eeae95f12b6a230a19caadeaa42",
+      "size": 3524,
+      "package": "texlive-plain-generic"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm",
+      "sha256": "6a3850cd71bbb2f43d98b7eb6b47f925de25626f5f4a0648c2d9d7b4b774eb2a",
+      "size": 3584,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm",
+      "sha256": "3b54bde5cb0e0bd071eea7bc702ed3a1a284f786779ef8e75b06eba4104bb9f2",
+      "size": 916,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm",
+      "sha256": "c800d1dfd533040219fcc06d52e0e00c2a20fb9b0039fe9f58ccec53fd003a9f",
+      "size": 924,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm",
+      "sha256": "719d100c110fa1cfae9ad0b63e6c21753f4980f925fa516c1a04961e206f69d5",
+      "size": 928,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm",
+      "sha256": "d9f5f519ec718e9dbccb8527c1f5d3b4a008dfb946377f97f71611b385d3d010",
+      "size": 908,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm",
+      "sha256": "9e0909a297a3097e50960158d324006ddd5302db665400fa1fdf966df14e1a17",
+      "size": 940,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm",
+      "sha256": "361b5530a4b410c6274e9330c11e993843c62e394323aeaa6e0aee61e8042444",
+      "size": 940,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm",
+      "sha256": "87f2d8981927644cbecaf3d639e96e348ea4e7be49d8804468bd8ba9ff3f5244",
+      "size": 1296,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb",
+      "sha256": "d2121de7e7c14490a2d352e3b62e62882d6c300235464bfa577e6055696e6e62",
+      "size": 34694,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii",
+      "sha256": "5dd3675b88c7b61d3703e6bf35ed75623acc6b163dff7b1477b485cee8ad71cb",
+      "size": 71627,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty",
+      "sha256": "a73003b4bb2dc8a814533ddbd31600e6626827799c2a465d03ef42e7a33fa71b",
+      "size": 24708,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty",
+      "sha256": "050f2ad3a3671a1f4f9bcf97784836301bc751507e7ada546632379406aea103",
+      "size": 40635,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty",
+      "sha256": "af5c7196c69dc9d28225189169b60c9b9039125bc1756c04d54886f0a3e1891e",
+      "size": 33961,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty",
+      "sha256": "a7db2834e02bd11be0e62a3be15e3dc293ba1be9196f19b29b9d98bfdbeb7514",
+      "size": 7734,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty",
+      "sha256": "26ab10fd43fd5a90f98bcbed3a99978808da8878eb73835db4e0346371aee41e",
+      "size": 8371,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty",
+      "sha256": "3ef84c3b0794f630fef909af51b9d72f2a1fafce921803a73909a2caab7d323b",
+      "size": 6501,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty",
+      "sha256": "1138730b9ad7d9f664b4760a4ea0ae0945afd21c006b76b67e623e863bbf3756",
+      "size": 1057,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty",
+      "sha256": "8c3e23b8bb7d940ff26cb0cf96e0151f540acf55020dc3c1aa8bcdb2eb66305c",
+      "size": 8356,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty",
+      "sha256": "1343ba1b10b245bfd199c22947249af1d756808690c7811c90f07fe0a3772080",
+      "size": 31769,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty",
+      "sha256": "c42f0c2628dc5fbd95b535cf8cd3cc964347653c099d38c0d416f896d84e8240",
+      "size": 5412,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty",
+      "sha256": "00c8665544687fea57c27a6be454f832c5190e710545102ef0507238bad1365e",
+      "size": 13807,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty",
+      "sha256": "72a45b7f07d85a66605bbec6c0f783527995722e15c3bc5963b3048b9831bbc0",
+      "size": 17859,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty",
+      "sha256": "b3f0e56366c11b85dae521f9a48a6fd415dec1ce8c83152fde813a9f64445b49",
+      "size": 19007,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty",
+      "sha256": "2df7e0bd148c99d8097352b8ac9948dccf91d61ba360dcf43f82206933b6045b",
+      "size": 20089,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty",
+      "sha256": "9d11c81501953d689787ff14c073d2f1eda5874068db9e882b8dbbf9a9d863b0",
+      "size": 7008,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty",
+      "sha256": "8d5e2bdb117297385971927b14fe4804314133dc0027b3171249a08280894626",
+      "size": 12594,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty",
+      "sha256": "dab8b0e621267acfd89736cf97bdcc02647c545c0719c4997be8a7d1bf98f9c3",
+      "size": 5949,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty",
+      "sha256": "70838b061b56569dd3ed9f339b1bdd1c78ba185de49f27ceae331c97f48b5986",
+      "size": 13829,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd",
+      "sha256": "48355e960333be747dd7b4500e76fde7c3ef0b1fa9c74ec0f1438af0d3a661a4",
+      "size": 961,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd",
+      "sha256": "e20f21f6ed631cbe3a627d5da5fef82367732a7d51207f8df5ee7e9c77ee342e",
+      "size": 961,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty",
+      "sha256": "7f25c33d4010066ff2eed0286f62854867698b06d10ebad93b1b1ab96d12f936",
+      "size": 2222,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty",
+      "sha256": "d90cfa74087e9f8678fb81bde57f809f0d4043f2674cb23b73a85958ec4a0fb6",
+      "size": 4173,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty",
+      "sha256": "027b292408d989f370f160c9b5f5b89641f69cd19027b0342beb022dd74d7c83",
+      "size": 87648,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty",
+      "sha256": "18c28b99321d0f4576cb42e2793d2654828b273700224cd9ee27047f803e99f5",
+      "size": 4128,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty",
+      "sha256": "49426425d82407dc702c77236fdeb4b82568ebb9566b8dd849bcfbf9eb9644de",
+      "size": 2444,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty",
+      "sha256": "a62143db8b3bf1e52082c32e3feb7450bc90c000c6c48a38fa51cf96a6075eae",
+      "size": 19336,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty",
+      "sha256": "1d9f36f4e9674bef594a47cac7d5781e9f7e0c7c8edf9f72769f4dc6f10d1b5f",
+      "size": 3935,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls",
+      "sha256": "988fb3e599df7e5b545e4253829dab11f0c7bd7827b79d32c2aaadfb52db6f6c",
+      "size": 20144,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty",
+      "sha256": "815582a920087c3a3c7dbf4d357b22db05e087f87b7fdcadf606d9f1fe750cb4",
+      "size": 3034,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty",
+      "sha256": "5cf523f1f8f87a365b9b2d16d79e62e0363a833dfdfa889e99f5251064661e83",
+      "size": 2462,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty",
+      "sha256": "d088c75e16c3c9f6b979a59571b96e5dd9e487a720bc74591580878388b82918",
+      "size": 4946,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo",
+      "sha256": "efc946da03cfa55c75be27d73012ab866fcc935fd47ac4a674026bbdbdcfa9f1",
+      "size": 8464,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty",
+      "sha256": "3fe694a5406f84847143e56ba1841385364277cfe7694a9f4bc0072ca8656abc",
+      "size": 6078,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty",
+      "sha256": "b10381f0017ae75bd03dc9175b35ad56b93fdd24f2a47dd4aa9c6987ef35ccdb",
+      "size": 46845,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty",
+      "sha256": "d5d36ad74051ad36288242b51438e2d9a5db2bd6c063b9b5704d0931fbc9f439",
+      "size": 41601,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty",
+      "sha256": "2b4ecc9d1ba83a5179742f31dcdf8513518febd33d6077e41ba6de4263c9e6bd",
+      "size": 7197,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty",
+      "sha256": "63cb7c6ae98653209d8f77ee842849676930fd694bc45a771309e0486c1cd9b5",
+      "size": 18399,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty",
+      "sha256": "da1e0ad80baeea2859059307358257c506069c91bdd29fde9e12ee957cc5db44",
+      "size": 7996,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty",
+      "sha256": "cdac603619a4c129511ef8a3abfbb4d2068b1bb67626cb30568baa0ceb26aea2",
+      "size": 2671,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty",
+      "sha256": "4af1b021af86649d926eb025a92fa4a3603f0d65893ccdb6fb756b5a16810a51",
+      "size": 4009,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg",
+      "sha256": "a3529ccdadc8248b4c5d7c34ceea53bdc1509b54f18a192ad51b924bd297d8df",
+      "size": 1213,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg",
+      "sha256": "feb91e48789a21e4acced98e952c77a2e2cf4a77e01bf147b59fa56a1b3f2008",
+      "size": 1224,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def",
+      "sha256": "62c3a2892e6acc3d94b1e8a50ecc2a11a16565ddee3f68006a84822eb5b93a5d",
+      "size": 19103,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty",
+      "sha256": "8acaa03eda19a8158780356701e905e354e1dc47dc736e6e26fc860c12a15e14",
+      "size": 17914,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def",
+      "sha256": "3c08230c780a081f903eaf264d73fe4f7e048c9e120d9f68ec9a22a9fca75a94",
+      "size": 49890,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def",
+      "sha256": "5c06584486c1e879456058641d489fb39c844819f7da76cd6edd0200156f3519",
+      "size": 1777,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty",
+      "sha256": "77e7c2421a06900f158416e090665069dd724a6e0c605cd2a1838c7d3b7944d2",
+      "size": 230915,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty",
+      "sha256": "4a728ad40dd3708c44cb418f4a19bf0ba4f32fdbfa35ee3a5ad205352d5497b6",
+      "size": 13242,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def",
+      "sha256": "f58f928db18cb7549787c074bbc7fd6a15ec005a4081e22435c8097ab79d662a",
+      "size": 14132,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def",
+      "sha256": "2f61dd99e83b8c04ede33d738564aa335c82132b1f0dcf276b98435d7931d28e",
+      "size": 117004,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty",
+      "sha256": "28be410832fdddeb9c853ceb14d49845de1c62316acfe4406f8b5b60f2e13e62",
+      "size": 22521,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def",
+      "sha256": "9617358386bec1691faec14fd624634525f105505a5f9573c47bd4f617ddcb5d",
+      "size": 29921,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty",
+      "sha256": "3a5e77870557530b7bef361a2d5af7346121807e335dcc291cb6fb6a773b569a",
+      "size": 5766,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty",
+      "sha256": "e6bb70c66ffccc39e0ce8786d3dfca962a473339008a5a51ffae09075b74f5a7",
+      "size": 59397,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty",
+      "sha256": "c3ae1e23f43029fbfc271e3b1440a692e1cd924d1810430b99e4f2aa5b9ccf09",
+      "size": 5582,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def",
+      "sha256": "fa3832daa966cdddbc19f8a974c9a73be57f7e50ec8ffc9ef1c2a514116b5bfe",
+      "size": 48111,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg",
+      "sha256": "7874c99976a0d0872bc8317d6608d9f16b3f166f6ed2fa68e44448bd5895b959",
+      "size": 26645,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty",
+      "sha256": "a23ca4bacbb60ff7b5aa1052e2a3281cebfcd06ea2e615ad14d12c1786204b4d",
+      "size": 88856,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg",
+      "sha256": "2feb08c0d6c37a9ecaa17d728c04128aece366e4eb4012982e047bf18b8df4e3",
+      "size": 22905,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg",
+      "sha256": "54db5efa582a99e180af6c8cf6f4e8f7f975d1b666e648b05fa726ba968a8cab",
+      "size": 5928,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg",
+      "sha256": "ab63481847d5b299b8e3f076cb476f531fc6f9662946e8ad048c3ea0520bb259",
+      "size": 5593,
+      "package": "texlive-latex-recommended"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty",
+      "sha256": "1bd5d42025520bef74f8808af99cf3f3be7d2e3774b9931bf85c11ba81bb6cab",
+      "size": 9878,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty",
+      "sha256": "c206a966a49fe47d1c59723d116dac95994468272cda392a56cf7379519c460f",
+      "size": 9715,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty",
+      "sha256": "1518422cc09b174c47105e41e3606260714b8f99049e3005a87f3c2ce034d157",
+      "size": 12694,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty",
+      "sha256": "57beb2c684bafae5e22ed8ebf3873d279c68038200b1d47703f88d87cd2ea6d2",
+      "size": 10214,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty",
+      "sha256": "196f2a7038e1727c4088a015bf11cac88abfedc5b7ee5eca65f44ab91dbac415",
+      "size": 12892,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty",
+      "sha256": "2373f56849ac606473e77053e5c1d14c92aba312b3f684e02a130eaf36f2de47",
+      "size": 12796,
+      "package": "texlive-latex-base"
+    },
+    {
+      "path": "/usr/share/texlive/texmf-dist/web2c/texmf.cnf",
+      "sha256": "ced214c26baca02d79428fd1e7f3acf59e8d60436e28bc269c3fde93e1f70bab",
+      "size": 39432,
+      "package": "texlive-base"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc",
+      "sha256": "7f9932c402d22a937b853406cfdf4166b80260e3ff21a03fe9a4c05105a2918c",
+      "size": 2375,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc",
+      "sha256": "7ecd3eb53329d24551d4e125c741037a4bf94872bf545492b6fb4c7d21f381c4",
+      "size": 3486,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc",
+      "sha256": "0d7b9e82ad6274470876761c22573c28db1f1b32d647b688230b3a366f0e373b",
+      "size": 2405,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc",
+      "sha256": "a2980b38288ef4024b8a3e170c19c9d4e2ee8b7dde97a59e8148291ffd3443db",
+      "size": 2840,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc",
+      "sha256": "8bf8f9bd48d49aa3f3c597716908854e4d9207b009c109e6d9c5887feb856844",
+      "size": 2327,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm",
+      "sha256": "0895c940bd2e763b70dcab18ebf27fd3f93c2490f43b2a8c028fc7fc24b2e855",
+      "size": 12076,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm",
+      "sha256": "d19c45859d453c0802699d27aa2bff735574b9bc97d8791aa76e3c7de6c38a36",
+      "size": 12088,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm",
+      "sha256": "cd13479f463b9a575d053dd7bf0884daa46bfdeffe4b7f537c193861652ac9e5",
+      "size": 12056,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm",
+      "sha256": "299021120f0a29ef61278a2363903bd8defbb8faaade458eb79067342aecb56f",
+      "size": 12092,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm",
+      "sha256": "67fb845ec934b2d50e788280d2c6d63ae719c9d8ac16a02d42fd346c81196c0c",
+      "size": 12156,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm",
+      "sha256": "db2ec8f82b5dd559b686afb9da660c397f79c819905ed2706c86b0fd3e1017c7",
+      "size": 12048,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr8.tfm",
+      "sha256": "9c60dbef6aea9e108bd6512f10bd2855331b31ffa49bfb6161bf4ee9ac570584",
+      "size": 12064,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm",
+      "sha256": "372f968b4eeb47bf6a6c941c8793bce118d1800f12e194a351c7493ecc158f2a",
+      "size": 17148,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm",
+      "sha256": "d1d413f1d0d07f65ff7bc3ebc09a3c104087e20eccd10ccb384da5c4f175c485",
+      "size": 1372,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmex10.tfm",
+      "sha256": "9547b25fd525782610200d794a82de33037887422751fcc29c5768cfa650e626",
+      "size": 992,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm",
+      "sha256": "d9fce8963e8cb075bf31a5715a8f4a54688f7026b3a06e882ff2eb9c0d110320",
+      "size": 1528,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi12.tfm",
+      "sha256": "06870b7e003008214eefcf9bc4215006faff9edf5d99bee75211de57620d1818",
+      "size": 1524,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi5.tfm",
+      "sha256": "7bc98c12006eb1d784ce276f5dc008e0d631ee6bc659efadec24801c00d2a462",
+      "size": 1508,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi6.tfm",
+      "sha256": "e7305bead3f6b2c8313e1234cb52376219d4283227c23295fe2f654e3ba3b551",
+      "size": 1512,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi7.tfm",
+      "sha256": "8548d4d19fc2b3671a5e11526f9013df8828b5b9b0f8277dc0ae7148bd1d33f5",
+      "size": 1528,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmmi8.tfm",
+      "sha256": "8d8514f9b0d11e443d9a3cdc059622b06797c1dbcb3cee994f6ac3329c462a82",
+      "size": 1520,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm",
+      "sha256": "11f429b2c08f944627faa5942277297d7f8fef40edae2bae46cb238b838400ba",
+      "size": 1308,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmsy5.tfm",
+      "sha256": "cac282b076edc89a2bbc8cdd1bd899117cd1af05612bca2b203e8b5ebe715431",
+      "size": 1296,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmsy6.tfm",
+      "sha256": "8548e4b09655eb2b166bf95df4be4f2a7ae54d5df2069bc04ef233bfd941167b",
+      "size": 1300,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm",
+      "sha256": "3e92767469b4df54c985a533b8064789df60f21ab69d381dbf01bb608e3fbff8",
+      "size": 1304,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/lmsy8.tfm",
+      "sha256": "b6b96268d56481a5bc7cbb34b140ca1fa5017d2767acc4e11a94b30eabd114f7",
+      "size": 1304,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm",
+      "sha256": "2b9ed6698b37f0276ba76fd4f1bb60f4378eac10121ebc9913eddec542ecb0a4",
+      "size": 11880,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm",
+      "sha256": "f41386043b050899f4fb2dfd6d4de00df98f656c35df84c860818422b7c10db4",
+      "size": 11852,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm",
+      "sha256": "0f5fef90281406ea1ff2686ed6766373c75c1a2c603c6b99727e20c027408d6f",
+      "size": 11868,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm",
+      "sha256": "50dc8240a67003c1ec5bcd55f703c87189aeab0d199c42b4dc3e141a02488998",
+      "size": 11868,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr12.tfm",
+      "sha256": "9d4e3d8e39a41b93d91f79c1c47d2297efb7b1af220b94860693c08361f227aa",
+      "size": 11888,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr5.tfm",
+      "sha256": "420a4fc1563b171e5a791bb71211d85e6bf62fd2f2ed2a7f34f742049d6e5071",
+      "size": 11804,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr6.tfm",
+      "sha256": "eb0bfdf8db3ae1409639fac9c88f84923872500d882d9ff8dc37aff445c723fe",
+      "size": 11836,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm",
+      "sha256": "373a4f72b5a088f9caee2cfd75adb2b25116e0cba3ad2bfa99b5f8a7e902a482",
+      "size": 11852,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr8.tfm",
+      "sha256": "80bcbfd844d2310ac1d3bead45aee25e91b1a4a0a60ff1771959b9a1e90ec1a2",
+      "size": 11864,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb",
+      "sha256": "4acd67f9ece59a12e073aa863dbb1d5cea194f7f7b88ecce4659184d8275aa42",
+      "size": 121021,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb",
+      "sha256": "fb9b7cf1d13a8a837c2c6b238e7255f8d6f4cd6608bf3024ee68e43d04f01a08",
+      "size": 116908,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb",
+      "sha256": "8e12eda1d29f55271bcef9a5022b42c8c10f8e65060dd6a8880556aa5484c052",
+      "size": 23055,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb",
+      "sha256": "c24662506b402f3e0033cc75eb746eb490a1b7477e6b3ef52053f5025ec0fc57",
+      "size": 30388,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb",
+      "sha256": "84b90db59b216d7f25f89a45c7565d7cccccc6c32961fe972b1a53558fa2035e",
+      "size": 31113,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb",
+      "sha256": "ec3aa1701ea2dbbd9ea2b7316ffe81726a3a2ecb31442fbaf719800f2625e68d",
+      "size": 30635,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb",
+      "sha256": "84eb01245abb17c0530ca3909427256d73df8bed2d7243b9f2717ca08c010ac8",
+      "size": 119235,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr12.pfb",
+      "sha256": "d5fd4fdecfdbc8f97e955964aa2574927182303df178fe0c2e568fe9056e326c",
+      "size": 113634,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr17.pfb",
+      "sha256": "03b0f1f3e62a2866480f8f12edd465349a8f18afac0d5fb906dd493254d950fb",
+      "size": 119752,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr6.pfb",
+      "sha256": "0169c3fcc2685ba53356a09c1b96c8f71c250ba5177da7b23e7a819e583ccf88",
+      "size": 123394,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr7.pfb",
+      "sha256": "cf94a1a79a32c446f11e585164463234a515721d509d2f2cfb0ab61f6f744ddc",
+      "size": 121145,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb",
+      "sha256": "4a117a1dd9cf4f8b7eea4587eaa4f612be7ca329cb1d8255a2c6bb20febbfa69",
+      "size": 122174,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmri10.pfb",
+      "sha256": "1239c71330ac8f0584e22f4d6abd0f016421fc73c545b15512ccf80b263f5c66",
+      "size": 112593,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb",
+      "sha256": "9969fd5ae5281ad40cdf6d8caf50084636a43ed7b7647e0e9e1195e859cec7cc",
+      "size": 27863,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb",
+      "sha256": "c434f5fb70bc41978ac63c673556a2d913211f297947aa1f0d18b93da25ebe4b",
+      "size": 27941,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb",
+      "sha256": "e23c98a5dadbaf4f156082cfcfa7b3366f849ee86b0410db53a9c6fe4e67920b",
+      "size": 27802,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb",
+      "sha256": "4b266a3e09581283d72e31df9f240811c77e02f8debf720744cc4614f7493616",
+      "size": 113227,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/lmodern.sty",
+      "sha256": "e1cdd137ae86b4e860f0b0bcfc4c1a90cae3ff1f9c651cb21bd86c15bb83b916",
+      "size": 1606,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/omllmm.fd",
+      "sha256": "337c71b9927dc7aa1d408fed8aa5fac106d81ba22523cd86ab833579da7f5789",
+      "size": 888,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/omslmsy.fd",
+      "sha256": "0ed6c71ca08b1dfe16617ceeb5edc06f00704fd545fe0017406ed943c57f4080",
+      "size": 805,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/omxlmex.fd",
+      "sha256": "7e4062e5811c7f60b26bba06df02871989100ea848ea381b8a17f6e5c2ccb741",
+      "size": 566,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/ot1lmr.fd",
+      "sha256": "4e83c944e093586d510eb4eeab51a88b73cb6a82700db290851c36fd73f66fa4",
+      "size": 1880,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/t1lmr.fd",
+      "sha256": "54f78bd9a0a0ea15f67a34ecb4aa9c18475dc891fcf5da32d4611613386d6a33",
+      "size": 1865,
+      "package": "lmodern"
+    },
+    {
+      "path": "/usr/share/texmf/tex/latex/lm/t1lmtt.fd",
+      "sha256": "ed94775a6bab5267b1e471e54d209a08737a2756021338301eaa6e343728f043",
+      "size": 2681,
+      "package": "lmodern"
+    },
+    {
+      "path": "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex_dl14.map",
+      "sha256": "4cd4a85d463bb2a7bb9f164b1d5479e498f81e67a2518b2742f4b12934968383",
+      "size": 165012,
+      "package": "locally generated TeX configuration or format"
+    },
+    {
+      "path": "/var/lib/texmf/web2c/pdftex/pdflatex.fmt",
+      "sha256": "18f1ce8ac31d62f2120e63cb4334ec11a9edb907c9f534e6bf3dc20600b3eebf",
+      "size": 1435972,
+      "package": "locally generated TeX configuration or format"
+    }
+  ],
+  "dependency_scope": "Existing TeX engine plus non-generated-source INPUT files recorded by pdfTeX. TeX-generated formats/configuration are hashed separately from package-owned files. This does not claim a fully pinned operating system or byte-reproducible PDF metadata.",
+  "checks": {
+    "original_pdf_sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6",
+    "rebuilt_pdf_pages": 18,
+    "rebuilt_pdf_size": 469911,
+    "original_pdf_unchanged": true,
+    "recovered_source_inputs_unchanged": true,
+    "text_equal_after_whitespace_normalization": true,
+    "final_tex_log_sha256": "023e22f416d8ee15d1cb5a5bf704bf24a6b4e420a41c619a5e1470c8fb62d799",
+    "final_tex_diagnostics": [],
+    "page_rendering": "pdftoppm -scale-to 1100 -png; same renderer for original and rebuilt PDF",
+    "pixel_identical_rendered_pages": 18,
+    "all_original_pages_visually_inspected": true,
+    "rebuilt_pages_visually_spot_checked": true,
+    "rendering_limit": "Pixel equality is for the stated renderer and resolution; PDF bytes differ across TeX versions and creation metadata."
+  }
+}

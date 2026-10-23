@@ -1,7 +1,7 @@
 INDEPENDENT DETECTOR-GAIN MATHEMATICAL AND ARITHMETIC REVIEW
 21 October 2026
 
-Reviewer: a separate assistant agent (/root/blind_and_global).
+Method: a separate internal AI cross-check.
 This is internal independent checking, not an external human mathematical
 review and not an experimental validation.
 

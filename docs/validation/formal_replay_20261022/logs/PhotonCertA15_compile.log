@@ -1,0 +1,5 @@
+'PhotonCertA.v15_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v15_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v15_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v15_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v15_44' depends on axioms: [propext, Classical.choice, Quot.sound]

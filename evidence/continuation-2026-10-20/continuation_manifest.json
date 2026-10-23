@@ -304,8 +304,8 @@
     },
     {
       "path": "theory/continuous_exposure_review.txt",
-      "size": 2272,
-      "sha256": "3fe72c6bbe3760fb434a0070f9ab3ed29c25f855c990bed62711e5a0a41d08a0"
+      "size": 2263,
+      "sha256": "61b44e11171ab2720841c657450aa208082f2e191974d63cc9706ab7ee041262"
     },
     {
       "path": "theory/continuous_exposure_verification.json",

@@ -12,7 +12,9 @@ The final theorem for A says that there exists a phase-record list `ps` such tha
 
 The [external byte checker](../tools/check_archive_binding.py) verifies that the quoted fragments reproduce the original ASCII input, including whitespace, at the recorded offsets and JSON fields of the pinned [input model](../evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json). Its [receipt](../docs/validation/archive_byte_binding.json) records the hashes and offsets. `project.py check` and packaged verification run this check. Hashing, filesystem/ZIP selection and the correspondence of external bytes to source literals remain external operations.
 
-Local REA inspection identified the preceding source capsule and reconciled its member inventory. A separate [archive identity record](../docs/validation/archive_artifacts.json) confirms that the model input is identical in the supplied v0.1.0 and v0.2.0 archives. REA supplied artifact evidence; Lean supplied the mathematical proof. Neither operation establishes physical validity or historical priority.
+Reverse Engineer Anything (REA), an artifact-inspection tool, identified the preceding local source capsule and reconciled its member inventory. A separate [archive identity record](../docs/validation/archive_artifacts.json) confirms that the model input is identical in the supplied v0.1.0 and v0.2.0 archives. REA supplied artifact evidence; Lean supplied the mathematical proof. Neither operation establishes physical validity or historical priority.
+
+That identity record describes the original imports. The [editorial derivative](../docs/provenance.md) changes surrounding provenance text and source hashes while preserving the phase-array characters and all Lean sources. The current byte-binding receipt has been recomputed for the distributed model's hash and fragment offsets.
 
 ## Scope of this earlier branch
 

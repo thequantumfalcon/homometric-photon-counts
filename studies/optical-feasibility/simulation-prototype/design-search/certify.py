@@ -20,7 +20,7 @@ MODEL = (
     ROOT
     / "public-repo/evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json"
 )
-MODEL_SHA = "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+MODEL_SHA = "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
 BETA = Fraction(17, 10)
 RATIO = Fraction(201, 200)
 VARIANCE = Fraction(1, 20)

@@ -1,7 +1,7 @@
 INDEPENDENT REVIEW OF THE CONTINUOUS-EXPOSURE EXTENSION
 
-Reviewer: root agent, separate from the derivation agent. This is internal
-mathematical review, not external peer review or proof-assistant checking.
+Method: internal AI mathematical cross-check performed separately from the
+derivation; not external peer review or proof-assistant checking.
 
 Reviewed continuous_exposure_proof.txt and verify_continuous_exposure.py.
 Replayed the exact verifier successfully on 20 October 2026 local date.

@@ -1,0 +1,708 @@
+{
+  "date": "2026-10-22",
+  "scope": "Documented editorial derivative, not new historical proof executions.",
+  "scientific_model_data_equal_except_provenance_and_source_hash": true,
+  "all_lean_sources_unchanged": true,
+  "research_methods_disclosure_retained": true,
+  "disclosure_scope_correction": "External processed detector data are included; measurements of the proposed apparatus are not. AI-assistance and independence disclosures are retained.",
+  "historical_validation_receipts_preserved": "All prior docs/validation receipts except the two freshly recomputed external byte bindings remain unchanged.",
+  "hash_rewrite_iterations": 14,
+  "files": [
+    {
+      "path": "docs/validation/archive_byte_binding.json",
+      "before_sha256": "ece9f380c5e08c95294f27a1cf52cda99d343adf79be3fc2060eb162c1426db4",
+      "after_sha256": "853a69adad1c1d371639f9807d2450ca9b71acd834cc972af55e663d6284117b",
+      "before_size": 1055,
+      "after_size": 1055,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "docs/validation/coordinate_byte_binding.json",
+      "before_sha256": "c0adea2470e1dde43bb775cc4ff65a382bc32dd4a876836876dc9966f6f73dd7",
+      "after_sha256": "13bcf1beb00372ae47442400aae67d6c8f939afe17993d9d61bb81b1f7d28b3a",
+      "before_size": 1152,
+      "after_size": 1152,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/continuation-2026-10-20/continuation_manifest.json",
+      "before_sha256": "ccc96f262f89aa2fb6fe8b3b5985227ef9d58455046f3c84d16d018dba80b6a8",
+      "after_sha256": "0ae2360f362788aedd395a2eee4c181bb272a630eaf81c66b86f83a6fc8a2d6c",
+      "before_size": 11089,
+      "after_size": 11089,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/continuation-2026-10-20/theory/continuous_exposure_review.txt",
+      "before_sha256": "3fe72c6bbe3760fb434a0070f9ab3ed29c25f855c990bed62711e5a0a41d08a0",
+      "after_sha256": "61b44e11171ab2720841c657450aa208082f2e191974d63cc9706ab7ee041262",
+      "before_size": 2272,
+      "after_size": 2263,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_advance/assemble_complete_science.py",
+      "before_sha256": "68e88fdef9e6165a04f84e8f2c20b58b60068911f56f52310f5e680ae025fa5c",
+      "after_sha256": "f354527de762db770838e813aa70240452d4ec7474df5356c0c8cf7f812ea7b9",
+      "before_size": 25775,
+      "after_size": 25775,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_advance/complete_science_manifest.json",
+      "before_sha256": "f686ab186bf9d8e7bcbf69e5de8d876e9c7df2b7ee33175ddee2eaa19e2e8ed9",
+      "after_sha256": "3ff514859bb03e3cd934a5bda25fe8f15f8f898eb3134b133dcdde7be59ad90a",
+      "before_size": 33169,
+      "after_size": 33169,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_advance/detector_gain/independent_detector_gain_review.txt",
+      "before_sha256": "7c49b0667ebf2415db06659eb896ba29be4d1f5240cf433110e6178c1cffdb95",
+      "after_sha256": "245c777ee4cac627d2c84f31064400143acf097ebaa90bf3ad9a7c2e8508209a",
+      "before_size": 5093,
+      "after_size": 5074,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_advance/portable_record_verification.json",
+      "before_sha256": "33161667858beea706218e249a545e0bde60c809073c5e71d56d69aa03d74132",
+      "after_sha256": "d38c69a4537154c183a700c175a54e7cd1d5fca23ffb4e837a095b3e3d532178",
+      "before_size": 30722,
+      "after_size": 30722,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/harmonic_groups.json",
+      "before_sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac",
+      "after_sha256": "bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96",
+      "before_size": 45062,
+      "after_size": 45062,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/harmonic_root_certificate.json",
+      "before_sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912",
+      "after_sha256": "bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8",
+      "before_size": 262857,
+      "after_size": 262857,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/harmonic_root_summary.json",
+      "before_sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5",
+      "after_sha256": "bd5975e401c4e6aa7eb5f7957b48c7049c510029c8ffafb8a530b45195d4b36b",
+      "before_size": 4704,
+      "after_size": 4704,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/independent_harmonic_review.txt",
+      "before_sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41",
+      "after_sha256": "49d59d931b032a74e41a1a0ffeccfa69877f6743e0b797951e4983e086addb67",
+      "before_size": 15244,
+      "after_size": 15188,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+      "before_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "after_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "before_size": 336739,
+      "after_size": 336720,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/independent_completion_review.txt",
+      "before_sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296",
+      "after_sha256": "dc5e05a93845b7955cbb1016b2e7a7111a33d91e8c081fe47da82e7275a77fee",
+      "before_size": 13740,
+      "after_size": 13753,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent.py",
+      "before_sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627",
+      "after_sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049",
+      "before_size": 13289,
+      "after_size": 13270,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent_model.json",
+      "before_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "after_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "before_size": 336739,
+      "after_size": 336720,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/model_reconstruction/rebuild_independent_premises.json",
+      "before_sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "after_sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352",
+      "before_size": 405925,
+      "after_size": 405925,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/report_science_review.txt",
+      "before_sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428",
+      "after_sha256": "0bec2b1b96d4c674d57709b8f51cfed32e5300f4821eb2b1309a3b9191580538",
+      "before_size": 5751,
+      "after_size": 5748,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/root_certificate/independent_root_review.txt",
+      "before_sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223",
+      "after_sha256": "675ef98802ed8ba6b2f111a4d2ead8629b5ba502e0973337e3b00933e4bd2249",
+      "before_size": 13058,
+      "after_size": 13039,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/root_certificate/input_premises.json",
+      "before_sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
+      "after_sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352",
+      "before_size": 405925,
+      "after_size": 405925,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/root_certificate/two_root_certificate.json",
+      "before_sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07",
+      "after_sha256": "6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889",
+      "before_size": 590553,
+      "after_size": 590553,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/root_certificate/two_root_proof.txt",
+      "before_sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667",
+      "after_sha256": "f09cad5fed84fe9847ce59bd72ed1cb5677c11339dc98695fec04f6d7d29de84",
+      "before_size": 13512,
+      "after_size": 13512,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/root_certificate/two_root_summary.json",
+      "before_sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1",
+      "after_sha256": "2400777d63323ff03231c5e80ac346cf5b0ca361d5e8870d66e17415a083c9ae",
+      "before_size": 3298,
+      "after_size": 3298,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/science_completion_manifest.json",
+      "before_sha256": "3a23a6e6dafe93b6958c98d571befa061553d9bbe657409edaccf56d0bd753c0",
+      "after_sha256": "268d006247997d5250ba89cc6de153858b45f4ad7ec7a6dd62d24552b15a4fea",
+      "before_size": 8104,
+      "after_size": 8104,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/assemble_complete_science.py",
+      "before_sha256": "c41fa89f6191c0e17a37b099748581d76d0b732d6231ff20957da57000781d7a",
+      "after_sha256": "d2bec320d8aefb72ebfbf83a20cae59b78e09bc73258ab21a1d6b4cf002109bc",
+      "before_size": 25940,
+      "after_size": 25940,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/complete_science_manifest.json",
+      "before_sha256": "b388aabf5a47f557da0e2cca24da90181993eb630622da0af1741199c0abd05b",
+      "after_sha256": "9d1280a1ecbd5145323e8ab028299b661a5f36ebb7e38f991825b57378665784",
+      "before_size": 17622,
+      "after_size": 17622,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/identifiability/independent_phase_robustness_review.txt",
+      "before_sha256": "c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33",
+      "after_sha256": "1d32f275cf0e5be284e65939d4e402bbc09405846d60e2cdfdd5a5392f8acba1",
+      "before_size": 2947,
+      "after_size": 2944,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/phase_laws/independent_phase_review.txt",
+      "before_sha256": "d28c787a83f926544dd8a4f81357fc7197f37d094e8f3739be604711e2c12c7b",
+      "after_sha256": "c1f89c698d3189b6e974261aeeec43ca6ad5106f82f62136c14bd360a9aae090",
+      "before_size": 4289,
+      "after_size": 4306,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/report_science_review.txt",
+      "before_sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d",
+      "after_sha256": "13164c77620f3b2479447bed9247affb42bba163c6406dc9d4079431e8b2174e",
+      "before_size": 15775,
+      "after_size": 15717,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_extension/science_extension_render_review.json",
+      "before_sha256": "0b7832d8e08f0b5850f619d7e766a3f0e34b461c123cd7dd51b4f9ba0172a729",
+      "after_sha256": "bfcfdcd859c1bf187db66fb7459c0408bcd447c75b1dc547072a72db1626efa3",
+      "before_size": 2011,
+      "after_size": 2011,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_frontier/assemble_complete_science.py",
+      "before_sha256": "e9179db103458a172b37bba93ec36a94b325e79b28aaaf9a66b465dfd92e9560",
+      "after_sha256": "86282be030ebcc6235371199001dae990801f95a41bb8e559f4886d0c8ef63c2",
+      "before_size": 21660,
+      "after_size": 21660,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_frontier/calibration/independent_calibration_review.txt",
+      "before_sha256": "89254599dcf5d7ead389eb62c815359d336a7ac3dab31e81429551b653096073",
+      "after_sha256": "9309c4a9bb178bbe6d45c9056533853da0208318ee0d66788c33e1882235fa4c",
+      "before_size": 14334,
+      "after_size": 14325,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_frontier/complete_science_manifest.json",
+      "before_sha256": "15dc6eafac0d2f2d3cb87d526170aa49b8ebec136f3c93e75ad8e08e6fc305ee",
+      "after_sha256": "c5cfd6a6145e5608604f1f286d7ebf71bf7d92be22536fdf0289f7bb8788d79b",
+      "before_size": 25726,
+      "after_size": 25726,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_frontier/final_review.txt",
+      "before_sha256": "4393227691bdd4c5dd4c21333d83a90f9013bbf307c152659c2c0b7171cab253",
+      "after_sha256": "90d3b40a658e9c9757bda58f5853695f4a9418e50afd37cb2c0533a6b4cdcb8c",
+      "before_size": 3902,
+      "after_size": 3902,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/public_manifest.json",
+      "before_sha256": "a7dd9a003d88f193eac09bfb9def36a40ad5088b3729bc257f06ca7027258b24",
+      "after_sha256": "f5a412cd443e062481bad5f1eca3b0093f60b70cf426a5867fc7e539279ac150",
+      "before_size": 119717,
+      "after_size": 124483,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/public_manifest.sha256",
+      "before_sha256": "7e733d4c1328196ea07e788a9468073e4865ca233a304ea326febb5ff30821f8",
+      "after_sha256": "f3fbdc737f12f4779dd8d6da5d268b4ebade4360436474199a7f47a7499833ab",
+      "before_size": 88,
+      "after_size": 87,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/scientist-review-2026-10-20/arb/engine.py",
+      "before_sha256": "2c96fb9e6f602b81c93b7d8432ca41a2eb17b30241aa72e0cd954122fc6d6d58",
+      "after_sha256": "c144f4d6ebd18cd03639b11a24bb5f54f3c8d04b6da48577e1b0de005463c631",
+      "before_size": 7036,
+      "after_size": 7036,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "evidence/scientist-review-2026-10-20/arb/verification.json",
+      "before_sha256": "532a40928d55bb0cbc1ea9e248f5985f9e68fd68c03fee69b93f8e26fa1e1b4f",
+      "after_sha256": "9bba5b198d5f091000dbf5b0cd591acd722cac1aac992f94bd85a5f2bfd8a21e",
+      "before_size": 65703,
+      "after_size": 65703,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/manifest.json",
+      "before_sha256": "832c9a4471a4b086bb81930f7c2adfc8d464866f7e57af69a0d9865dee45feee",
+      "after_sha256": "2f34a417209ac2241e7a104e6fce4f7a164163abd2ffe31b422685c12026ef9c",
+      "before_size": 6977,
+      "after_size": 10221,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/manifest.sha256",
+      "before_sha256": "3bdb48abf493f2d9fbcf0986ed4281ef1ad47526da8329e57766f1f00e875376",
+      "after_sha256": "500d5ab6840de2d66351a04b13ccf05546b0ab5808677df98059c9f987a452d9",
+      "before_size": 80,
+      "after_size": 80,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/RUN_MANIFEST.json",
+      "before_sha256": "f82e6b2826b32f55a157d4e7cc04e8367acb69a18c84498d5d81450b64addce9",
+      "after_sha256": "2ff7c60ab86c0d5ce1a100464111ccb1fd84b5482775f9731a1f92173f932b18",
+      "before_size": 1011,
+      "after_size": 1011,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/calibration-study/MANIFEST.json",
+      "before_sha256": "cf51c51f2fe699c24a4938e54c3ad9df78472d66f630394722a7210e597fbc8e",
+      "after_sha256": "7e53c9a45110bde713b80077d3633a02e429542d8e5830957dfce5a77172a9c6",
+      "before_size": 4252,
+      "after_size": 4252,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/calibration-study/calibrate.py",
+      "before_sha256": "2f1d17f08a00a88814fa27af0201cb80ea31f4331662b968177a081771bdaa0d",
+      "after_sha256": "15f5df26418db9ea63467a39f684d6d878a14ba33c3623c18f79d90836d4cf25",
+      "before_size": 13065,
+      "after_size": 13065,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/calibration-study/run-checked/calibration.json",
+      "before_sha256": "cf262b1c7b31c476fc2e81f740e3d206355087038ed8d26b18f6aac3b6a9c8b3",
+      "after_sha256": "5a2ee8f9152c3ead47396c63c68d06d0d9a048b8bc24eff8cbb8dfd6d17341d0",
+      "before_size": 25511,
+      "after_size": 25511,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/calibration-study/validation.json",
+      "before_sha256": "124abdb6b02b65fd6343d4d7df5eec187770ce6bc2867412cf80ff6a622787c4",
+      "after_sha256": "8bbcedf125f2dccd3ebebd8c8856fc44932acdd7fe5d2434cecf41323cbb5f9b",
+      "before_size": 2238,
+      "after_size": 2238,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/MANIFEST.json",
+      "before_sha256": "96330f7ec35d82ad2d1debaa1d9cb323ad68ea86eea2fe4b737c8a65e9563b83",
+      "after_sha256": "dfc9acf38c78b03bd03e911be49beefb94a7596a835d84b1b31be8a4e903b6a7",
+      "before_size": 4493,
+      "after_size": 4493,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/METHOD.txt",
+      "before_sha256": "c9b302ea7bec7e11e6189dedf299c821f86562c98c626c382ca46a8c0c4731ea",
+      "after_sha256": "bc174b88842c842115341d8c9ab2fe11e5e93421b28efc56a8236492a3f0bdfe",
+      "before_size": 7123,
+      "after_size": 7123,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/certify.py",
+      "before_sha256": "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40",
+      "after_sha256": "4e24dc4c9615237c7c384ff47e8fb30a78222ca33b57a4908beb1f5da16d6992",
+      "before_size": 13530,
+      "after_size": 13530,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/heldout-final/simulation.json",
+      "before_sha256": "fca2ff4044541591e848a84b36990fd434d1d92234bb9d266f4d23e11902ccab",
+      "after_sha256": "9d26110972476be64a3cc01e2006c7b2596157eee55d5cd2a884da9311819279",
+      "before_size": 3267,
+      "after_size": 3267,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/interval-final/certificate.json",
+      "before_sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0",
+      "after_sha256": "35b377ca00f58b93e7d0dc1eb657a3d00b82fc130c478723f6019e3646d3be8a",
+      "before_size": 38839,
+      "after_size": 38839,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/scan-01/search.json",
+      "before_sha256": "938f193db2bf6814e59e80d61850e147ab085b4954c8b0dc680eaa638e658229",
+      "after_sha256": "5424248979a2957e4f1b6e54aba222eda183a2032c209781060701ee88d42f1b",
+      "before_size": 36687,
+      "after_size": 36687,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/design-search/search.py",
+      "before_sha256": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45",
+      "after_sha256": "dbfd41e92addfb30261c3ab47cc285fae1cc9598e9ef69fbe1724947aa3ad013",
+      "before_size": 8071,
+      "after_size": 8071,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/feasibility-study/MANIFEST.json",
+      "before_sha256": "c76a9660d43b25c6b8787ef0a56eeed1853155eb42124e3bef7b21afd8e0f389",
+      "after_sha256": "e208e5e655b85bb3c6dc6bc5d4d56ed2a1234d03ff97842dd87309076a9fed60",
+      "before_size": 2724,
+      "after_size": 2724,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/feasibility-study/run-checked/results.json",
+      "before_sha256": "855430d22378efbca4197f1ecb332341d700ff5ac93fe26f4bfaadb4aca93d04",
+      "after_sha256": "d96a61ba05f7d00a64238e176ddcb0532b038be16fe99c4962b61d691a58bced",
+      "before_size": 22182,
+      "after_size": 22182,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/feasibility-study/study.py",
+      "before_sha256": "6a01a6d27926ccaf39f55445dbe0290e47f61f18ca56dde8ab4f7190508ea23e",
+      "after_sha256": "4eebaf214003f17e30d2a33976a8d0ae344b676b81f5a101775e547c9b2b3dcb",
+      "before_size": 17395,
+      "after_size": 17395,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/run-validated/report.json",
+      "before_sha256": "e1cbb596e7f1d3b077ebf501221e382edb08e3b5c108380565479d58134b7e8a",
+      "after_sha256": "59af44f5eccc50c2617ca184a77c778cece76fd48f8e13fbdaa09bda6544ef2b",
+      "before_size": 17196,
+      "after_size": 17196,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/simulate.py",
+      "before_sha256": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92",
+      "after_sha256": "86e8ab0f8ba754ba7751e2e3cfdcb22a154212dbde49c2e96345d504f38dfa9d",
+      "before_size": 15478,
+      "after_size": 15478,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/manifest.json",
+      "before_sha256": "787476027996235d5b84ea1782564f37bca17827b02544b08c9114a13d9f299c",
+      "after_sha256": "2fbb381558d0bea7345cf4d8b436311b12884d5eeffb57f1c98af260e0101fbb",
+      "before_size": 23464,
+      "after_size": 28399,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/manifest.sha256",
+      "before_sha256": "6780509ba1a4ec9d4d7aa2cb6c50a2afc5dd65892d03cbacf7dc2dcc04d331d3",
+      "after_sha256": "b19715a0f43ddd6f7f49a3845747dff343180354c031665a38493217bc3a412f",
+      "before_size": 80,
+      "after_size": 80,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/afterpulse-study/MANIFEST.json",
+      "before_sha256": "c9a36bfc0e23f8370be0f6c85026b05c028d1834bd03c934e90eb6449f3cff17",
+      "after_sha256": "df69c0602fe8578738e4a905d1b1b8efefafa12d6ac4e1c3cb4cdeebb6becfad",
+      "before_size": 3089,
+      "after_size": 3089,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/afterpulse-study/inputs.json",
+      "before_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+      "after_sha256": "0ce0fc5ba6294df6f6e3d7a30d5e8c8486daa177748c04a94d0ce3171cdfa46d",
+      "before_size": 82504,
+      "after_size": 82504,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/afterpulse-study/plan.json",
+      "before_sha256": "09f4e0bc1a6ca76fb861f9d7ef34920264497656c4780f01471e60e6241fdf95",
+      "after_sha256": "30ae6df1888563114d4cdd415f5b1c083f6941c0a7cd0795b3dbada9bf6efb88",
+      "before_size": 3775,
+      "after_size": 3775,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/afterpulse-study/run/execution-plan.json",
+      "before_sha256": "4339bd1991bab2a4a29d4cf9b147b4d93c86cdd824a3dd95114e309ddea05159",
+      "after_sha256": "0fe543f16c654abd9b62ea918a0567fc4428828b22ec90f9ff6b812c3a020d84",
+      "before_size": 560,
+      "after_size": 560,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/afterpulse-study/run/results.json",
+      "before_sha256": "8a6e74f645186a5d6e10434417d910f1d6243c94fa7172043a69bbd54f3c1ead",
+      "after_sha256": "0b73a6fa4f7cfd13e85b2b2de8891baf68bae7f0a5be126787296604ab954e8c",
+      "before_size": 21265,
+      "after_size": 21265,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-bench-demo/MANIFEST.json",
+      "before_sha256": "365b8a43321185b7b9ae734f73ed4e14d9f66c5b84820c8086965eb4d18fb3a2",
+      "after_sha256": "860aef2c08bb8ad7dbce6815cb78eab82f52b77c60a2d8115cee6e07766045ed",
+      "before_size": 3181,
+      "after_size": 3181,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-bench-demo/bench.py",
+      "before_sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+      "after_sha256": "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92",
+      "before_size": 15556,
+      "after_size": 15556,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-bench-demo/input_model.json",
+      "before_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "after_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "before_size": 336739,
+      "after_size": 336720,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/demo.html",
+      "before_sha256": "081c286fc8ccc274680a446ddb2609bc378feec89ad41701193ee3e0db1a5028",
+      "after_sha256": "e27ac0e0ae94aa6dc845ceeb13923dade0589731ab95354a8d527766e4203c32",
+      "before_size": 3255765,
+      "after_size": 3255765,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/results.json",
+      "before_sha256": "fc40ea48bffa98192bc47afe9287517cc51b2a24e906e98b478e30ec6eebdb6b",
+      "after_sha256": "af3b6b21448d999cc00e3bc823ae9bc30a22fb6458f7a89f8a958e6405aeffad",
+      "before_size": 143094,
+      "after_size": 143094,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/MANIFEST.json",
+      "before_sha256": "1c6c3cfd19869ecda873982ce563160a4cfad4a84c1e83ff665aaa0e66c1e2c2",
+      "after_sha256": "60ad251764ee85d7d5c199089ab03c1755097624d0fe34883f96deec93588d8a",
+      "before_size": 1408,
+      "after_size": 1408,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/afterpulse-inputs.json",
+      "before_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+      "after_sha256": "0ce0fc5ba6294df6f6e3d7a30d5e8c8486daa177748c04a94d0ce3171cdfa46d",
+      "before_size": 82504,
+      "after_size": 82504,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/certificate.json",
+      "before_sha256": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5",
+      "after_sha256": "14964d2c3f9766bd19f8d4ef0994d630ce1e0aa6be99cd65f246688606ef0953",
+      "before_size": 6242905,
+      "after_size": 6242905,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/geometry.json",
+      "before_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "after_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "before_size": 336739,
+      "after_size": 336720,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/source-bindings.json",
+      "before_sha256": "d83f1599273676c3fcf47f4dc217163775c067c42d0a8b95110b69fc04d59722",
+      "after_sha256": "209abb621bcc9af461da76eaf2914a29b800ad0d6dbc64fc4a5cdc680b1a3f62",
+      "before_size": 17724,
+      "after_size": 17724,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/optical-transfer-certificate/verification.json",
+      "before_sha256": "1b9cfd877b53c081adf8dc887e842198917a30115ababa42c5ee025231e47126",
+      "after_sha256": "f71d791a1a231ee8a791aad7cc1c2511ac996907f6660ded72831eb51a4d6263",
+      "before_size": 1258,
+      "after_size": 1258,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/MANIFEST.json",
+      "before_sha256": "3940c015a13641ec4e87f4911ac1c32b6e76fc7b857be29a4f84b11c8d05cd6f",
+      "after_sha256": "3316bc8eb5193435cc5b51fbe39ea12bfea9411e7f41b77bd1f6f93b972f6929",
+      "before_size": 3604,
+      "after_size": 3604,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/baseline.py",
+      "before_sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+      "after_sha256": "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92",
+      "before_size": 15556,
+      "after_size": 15556,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/input_model.json",
+      "before_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "after_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "before_size": 336739,
+      "after_size": 336720,
+      "direct_editorial_change": true
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/report/report.html",
+      "before_sha256": "12b86da7bb00b5dd8d779a9ab339be6c6749868fa544ed662371789432750456",
+      "after_sha256": "554613b9c548ae3797a63bbc961cc4155f6ae59e22b28ee0374f63f60fcca745",
+      "before_size": 899409,
+      "after_size": 899409,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/screen-frozen/screen.json",
+      "before_sha256": "3998933e430a5a98314105d24828f989f3dcf9b8546219929dad62f4719c4b16",
+      "after_sha256": "a0776425d5b4b40cb3240c5aca6f8b29a993d6386dbb79037cba55c3c8b4f33c",
+      "before_size": 1628538,
+      "after_size": 1628538,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/screen-frozen/validation-plan.json",
+      "before_sha256": "2efcd0096a103f2927d57c3a161640db34d214d1f3fddbac11a23a77c255f2f9",
+      "after_sha256": "dcfecfebb0bd82cc60511ea240eab0cf449723c6d0cac643108bf08077aea661",
+      "before_size": 6051,
+      "after_size": 6051,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/study.py",
+      "before_sha256": "c3bae18ca7829351c75558342a45ab10d94e979b794797054abe0ba736d3b07e",
+      "after_sha256": "ffcc215fb5dbf4ae13ff9b762d5ef8459f5360d3807d478cd665ecb8731b6c45",
+      "before_size": 17042,
+      "after_size": 17042,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/tolerance-frozen/screen.json",
+      "before_sha256": "e692c725a6348d0d6ae12c398b83cc1a5a5ec1b95277910438bce37404e39d0b",
+      "after_sha256": "bff078880dfb8081305a10e1988c918cd7ca6ad5b86220501103984af7e8cb4f",
+      "before_size": 1386865,
+      "after_size": 1386865,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/tolerance-frozen/validation-plan.json",
+      "before_sha256": "29a3fec647c7b97004371f4a520ba2dfa41326c1e4f2c59af62770341f341ce3",
+      "after_sha256": "76a8dd3b8a0e69809ded0bb123383a30a667c4c39d2608921e548e223b03f722",
+      "before_size": 3772,
+      "after_size": 3772,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/tolerance-heldout/validation.json",
+      "before_sha256": "c08efc5fd1b5c0464b505115352d155a5c4b8c4261eb928bada78b40ab4bd3bd",
+      "after_sha256": "a5e381cc615fca38887cde83c8dcf26ba9fee6f0c1dfea361c7768d705093118",
+      "before_size": 219310,
+      "after_size": 219310,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "studies/optical-validation/simulation-prototype/robustness-study/validation-heldout/validation.json",
+      "before_sha256": "7a59b3da6c0853788f9e90f6065d2fa1910d7adbed103c42bf1bad17401cc527",
+      "after_sha256": "c59b59a3171e82df5b1da74bdea3d6b563cc48aae9c3df4500366ad117bb4c75",
+      "before_size": 491299,
+      "after_size": 491299,
+      "direct_editorial_change": false
+    },
+    {
+      "path": "tools/check_archive_binding.py",
+      "before_sha256": "ecfad95801388c57d8f5812d873208018641c6db82fcc11c34188f46559feee5",
+      "after_sha256": "5f5b4182fe927477ce18e1e6c30f4b301f9a250cb89e7c802ad3e9a5c8b759d7",
+      "before_size": 3995,
+      "after_size": 3995,
+      "direct_editorial_change": false
+    }
+  ]
+}

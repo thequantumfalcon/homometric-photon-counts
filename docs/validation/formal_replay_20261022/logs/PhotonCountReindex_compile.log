@@ -1,0 +1,6 @@
+'PhotonCountReindex.perm_index_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCountReindex.field_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCountReindex.listIntensity_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCountReindex.rate_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCountReindex.phaseLaw_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCountReindex.countLaw_perm' depends on axioms: [propext, Classical.choice, Quot.sound]

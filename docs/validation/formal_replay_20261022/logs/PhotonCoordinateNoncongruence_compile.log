@@ -1,0 +1,3 @@
+'PhotonCoordinateNoncongruence.no_translation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateNoncongruence.no_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateNoncongruence.positions_not_permutation' depends on axioms: [propext, Classical.choice, Quot.sound]

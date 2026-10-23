@@ -6,6 +6,7 @@ import argparse
 import ast
 from hashlib import sha256
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -16,6 +17,7 @@ import zipfile
 
 from check_archive_binding import certificate as archive_binding
 from check_coordinate_binding import certificate as coordinate_binding
+from check_demo import verify as demo_binding
 from optical_study import verify as optical_study_binding
 from optical_validation import verify as optical_validation_binding
 from replay_environment import replay_environment
@@ -31,11 +33,16 @@ def require(condition: bool, message: str) -> None:
 
 
 def files(root: Path = ROOT) -> dict[str, Path]:
-    return {
-        p.relative_to(root).as_posix(): p
-        for p in root.rglob("*")
-        if p.is_file() and not (set(p.relative_to(root).parts) & IGNORED)
-    }
+    result = {}
+    for directory, directories, filenames in os.walk(root, topdown=True):
+        directories[:] = [name for name in directories if name not in IGNORED]
+        for name in filenames:
+            if name in IGNORED:
+                continue
+            path = Path(directory) / name
+            if path.is_file():
+                result[path.relative_to(root).as_posix()] = path
+    return result
 
 
 def formal_manifest() -> dict:
@@ -100,7 +107,17 @@ def verify() -> None:
     coordinate_binding()
     optical_study_binding()
     optical_validation_binding()
+    demo_binding()
+    vendor = ROOT / "demo/vendor"
+    for name, row in json.loads((vendor / "manifest.json").read_text())["artifacts"].items():
+        require(Path(name).name == name, "Unsafe demo vendor artifact path")
+        data = (vendor / name).read_bytes()
+        require(
+            len(data) == row["bytes"] and sha256(data).hexdigest() == row["sha256"],
+            "Changed demo vendor artifact: " + name,
+        )
     print(f"PASS: {len(rows)} public scientific files and input bindings. Integrity is not proof truth.")
+    print("PASS: demo source bindings and vendored renderer integrity.")
 
 
 def check() -> None:
@@ -118,6 +135,7 @@ def check() -> None:
     # Current navigation is checked separately from archived scientific prose.
     docs = [
         ROOT / "README.md",
+        *list((ROOT / "demo").rglob("*.md")),
         *list((ROOT / "docs").rglob("*.md")),
         *list((ROOT / ".github").rglob("*.md")),
         *list((ROOT / "formal").rglob("*.md")),

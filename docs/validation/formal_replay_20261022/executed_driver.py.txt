@@ -1,0 +1,98 @@
+"""Full fresh source compilation using canonical pins and a two-worker import DAG."""
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor,wait,FIRST_COMPLETED
+from hashlib import sha256
+import datetime,json,os,re,shutil,subprocess,sys,time
+HERE=Path(__file__).resolve().parent
+ROOT=HERE.parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
+from project import verify,formal_manifest,require
+from replay_formal import digest
+
+runtime=HERE/'lean-4.35.0-windows'; mathlib=HERE/'mathlib4'
+output=ROOT/'build/review-formal-20261022'
+require(not output.exists(),'Fresh output required')
+verify()
+manifest_path=ROOT/'evidence/followup-2026-10-20/lean/proof_manifest.json'
+manifest=json.loads(manifest_path.read_bytes());extension=formal_manifest()
+checked={}
+for name,wanted in manifest['input_sha256'].items():
+    if name.startswith(manifest['runtime_relative_path']+'/'):
+        path=runtime/name.removeprefix(manifest['runtime_relative_path']+'/')
+    elif name.startswith(manifest['mathlib_relative_path']+'/'):
+        path=mathlib/name.removeprefix(manifest['mathlib_relative_path']+'/')
+    else:continue
+    require(digest(path)==wanted,'Pinned runtime/library mismatch: '+name);checked[name]=wanted
+env=os.environ.copy();env.pop('GIT_CONFIG_PARAMETERS',None)
+deps=[(mathlib/Path(row['path']).relative_to(manifest['mathlib_relative_path']),row) for row in manifest['git_dependencies']]
+env['GIT_CONFIG_COUNT']=str(len(deps)+1)
+for i,(path,row) in enumerate(deps):
+    require(path==mathlib or path.parent==mathlib/'.lake/packages','Unsafe dependency')
+    env[f'GIT_CONFIG_KEY_{i}']='safe.directory';env[f'GIT_CONFIG_VALUE_{i}']=str(path)
+env[f'GIT_CONFIG_KEY_{len(deps)}']='core.excludesFile';env[f'GIT_CONFIG_VALUE_{len(deps)}']=os.devnull
+for path,row in deps:
+    head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=path,env=env,text=True).strip()
+    dirty=subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=path,env=env,text=True).strip()
+    require(head==row['commit'] and not dirty,'Dependency source/commit mismatch: '+row['path'])
+env['PATH']=str(runtime/'bin')+os.pathsep+env.get('PATH','')
+env['LEAN_PATH']=str(output)
+env['MATHLIB_CACHE_DIR']=str(HERE/'mathlib-cache')
+modules=[(row,ROOT/'evidence'/row['source'],manifest['input_sha256'][row['source']]) for row in manifest['modules']]
+modules += [(row,ROOT/'formal'/row['source'],row['sha256']) for row in extension['modules']]
+require(len(modules)==61 and sum(r['axiom_audit_count'] for r,_,_ in modules)==722,'Unexpected module/audit count')
+names={row['name'] for row,_,_ in modules};require(len(names)==len(modules),'Duplicate modules')
+dag={}
+for row,source,wanted in modules:
+    require(digest(source)==wanted,'Source hash mismatch: '+row['name'])
+    import_lines=re.findall(r'^import\s+([^\r\n]+)',source.read_text(encoding='utf-8'),re.M)
+    require(all(len(line.split())==1 for line in import_lines),'Expected exactly one uncommented import per line: '+row['name'])
+    imports=set(line.strip() for line in import_lines)
+    require(all(n in names or n.startswith('Mathlib.') for n in imports),'Unrecognized import')
+    dag[row['name']]=imports&names
+output.mkdir()
+for row,source,wanted in modules:shutil.copyfile(source,output/(row['name']+'.lean'))
+started=time.monotonic()
+summary={'passed':False,'compilation_mode':'Full fresh source compilation, maximum two simultaneous modules, gated by explicit project import dependencies. No historical proof objects reused.','fresh_kernel_performed':False,'max_parallel_modules':2,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'proof_manifest_sha256':digest(manifest_path),'extension_manifest_sha256':digest(ROOT/'formal/manifest.json'),'runtime_inputs':checked,'git_dependencies':manifest['git_dependencies'],'driver_sha256':digest(Path(__file__)),'canonical_replay_sha256':digest(ROOT/'tools/replay_formal.py'),'project_wrapper_sha256':digest(ROOT/'tools/project.py'),'command_pattern':['lake.exe','--no-cache','env','lean','-R','FRESH_OUTPUT','-o','FRESH_OUTPUT/MODULE.olean','FRESH_OUTPUT/MODULE.lean'],'steps':[],'scope':'Fresh ordinary Lean kernel compilation of all 61 pinned project modules with 722 explicit theorem-axiom audits. This is not an additional leanchecker --fresh run, Nanoda export check, or formalization of the separate root/testing analytic arguments.'}
+def save():
+    summary['seconds']=time.monotonic()-started
+    (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+save()
+def compile_module(item):
+    row,source,wanted=item;name=row['name'];log=output/(name+'_compile.log')
+    command=[str(runtime/'bin/lake.exe'),'--no-cache','env','lean','-R',str(output),'-o',str(output/(name+'.olean')),str(output/(name+'.lean'))]
+    begin=time.monotonic();print('RUN compile',name,flush=True)
+    with log.open('x',encoding='utf-8') as stream:
+        result=subprocess.run(command,cwd=mathlib,env=env,stdout=stream,stderr=subprocess.STDOUT,check=False)
+    text=log.read_text(encoding='utf-8',errors='replace')
+    audits=re.findall(r'depends on axioms:\s*\[([^]]*)\]',text)
+    axioms=[sorted({v.strip() for v in a.split(',') if v.strip()}) for a in audits]
+    step={'module':name,'kind':'compile','returncode':result.returncode,'seconds':time.monotonic()-begin,'source_sha256':digest(source),'log_sha256':digest(log),'axiom_audits':len(audits),'required_axiom_audits':row['axiom_audit_count'],'project_imports':sorted(dag[name]),'permitted_axioms_only':all(set(a)<={'propext','Classical.choice','Quot.sound'} for a in axioms)}
+    step['passed']=result.returncode==0 and len(audits)==row['axiom_audit_count'] and step['permitted_axioms_only'] and digest(source)==wanted and digest(output/(name+'.lean'))==wanted
+    if (output/(name+'.olean')).exists():step['object_sha256']=digest(output/(name+'.olean'))
+    print('PASS' if step['passed'] else 'FAIL','compile',name,round(step['seconds'],2),'seconds',flush=True)
+    return step
+pending={row['name']:(row,source,wanted) for row,source,wanted in modules};done=set();running={};failed=False
+with ThreadPoolExecutor(max_workers=2) as pool:
+    while pending or running:
+        if not failed:
+            for name,item in list(pending.items()):
+                if len(running)>=2:break
+                if dag[name]<=done:
+                    running[pool.submit(compile_module,item)]=name;del pending[name]
+        require(running or failed,'Import DAG cycle')
+        if not running:break
+        finished,_=wait(running,return_when=FIRST_COMPLETED)
+        for future in finished:
+            name=running.pop(future)
+            try:step=future.result()
+            except Exception as exc:step={'module':name,'passed':False,'error':repr(exc)}
+            summary['steps'].append(step)
+            if step['passed']:done.add(name)
+            else:failed=True
+            save()
+    summary['passed']=not failed and len(done)==61 and sum(x.get('axiom_audits',0) for x in summary['steps'])==722
+    summary['completed_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+    summary['compiled_modules']=len(done);summary['axiom_audits']=sum(x.get('axiom_audits',0) for x in summary['steps'])
+    save()
+require(summary['passed'],'Fresh source compilation failed; inspect retained logs')
+print('PASS all 61 modules, all 722 axiom audits',flush=True)

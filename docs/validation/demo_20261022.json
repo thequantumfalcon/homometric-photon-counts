@@ -1,0 +1,1774 @@
+{
+  "schema": "homometric-photon-demo-browser-validation-v1",
+  "status": "PASS",
+  "scope": "Validation of the explanatory frontend and its displayed numerical/source bindings. These runs do not reprove the mathematical results, establish physical feasibility, or extend the recorded Lean theorem scope.",
+  "commands": [
+    "python tools/check_demo_browser.py --output build/demo-validation-20261022/pr-chromium",
+    "python tools/check_demo_browser.py --browser-executable <existing Microsoft Edge executable> --output build/demo-validation-20261022/pr-edge"
+  ],
+  "command_note": "The machine-specific executable path is omitted. Microsoft Edge 155.0.4283.62 was executed, not merely detected.",
+  "scientific_source_bindings": [
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/harmonic_certificate/input_model.json",
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "purpose": "Exact symbolic coordinates; historical graph-covariance fields are not used."
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_results.json",
+      "sha256": "aba1d6e9cabb804eae61d4734308b0e7dda470a0ea1ac7f49bfe7935bf536142",
+      "purpose": "IID Gaussian phase intensity moments and factored fourth-order gap."
+    },
+    {
+      "path": "evidence/scientist-review-2026-10-20/global/certified_roots.json",
+      "sha256": "c5af01547af0712da591d885363f988fef196d2aafe1841b98236e33490c1e16",
+      "purpose": "Four certified blind-gain brackets at t=1/2, background=0, event N=4."
+    },
+    {
+      "path": "evidence/followup-2026-10-20/lowerbounds/binned_lower_bound.json",
+      "sha256": "cca4c8ed55a0b7e61f9e8bd599c7c5188f4fc680b1f45c1276d6d1a498575fb0",
+      "purpose": "Necessary and sufficient sample counts for the specified 13-bin observation."
+    },
+    {
+      "path": "studies/optical-feasibility/simulation-prototype/calibration-study/run-checked/calibration.json",
+      "sha256": "5a2ee8f9152c3ead47396c63c68d06d0d9a048b8bc24eff8cbb8dfd6d17341d0",
+      "purpose": "Conditional ideal-model calibration-box score bounds at a changed frequency."
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_frontier/global_separation/blind_interval_certificate.json",
+      "sha256": "60f7ab263be537be208db15ebbad1eac37fd8d4a1f59fae7ceb828acd7b30548",
+      "purpose": "Source certificate for blind-gain bracket 1."
+    },
+    {
+      "path": "evidence/homometric-photon-counts/science_advance/global/additional_blind_gains_certificate.json",
+      "sha256": "a6c86b9f8116d47a270a87c125168fe89f7d3120f97a9de31d6b114917005bf6",
+      "purpose": "Source certificate for blind-gain bracket 2."
+    },
+    {
+      "path": "evidence/continuation-2026-10-20/gain/order96_extension_certificate.json",
+      "sha256": "526ca5f17281fcf433b74fbc8413f7692ed58674912de4f3eadca9f0f42f844b",
+      "purpose": "Source certificate for blind-gain bracket 3."
+    },
+    {
+      "path": "evidence/scientist-review-2026-10-20/global/compact_gain_certificate.json",
+      "sha256": "ed4eb69fa068eff3adce534998d4f20ce8d854c63a0ca0d360e62752c6c9f706",
+      "purpose": "Source certificate for blind-gain bracket 4."
+    }
+  ],
+  "runs": [
+    {
+      "browser": "Chromium",
+      "output_directory": "build/demo-validation-20261022/pr-chromium",
+      "original_summary_sha256": "3523d6f51d890e73e014214b9eddbf6945275438eff250705fe4c5b2a51e9b36",
+      "summary": {
+        "status": "PASS",
+        "started_utc": "2026-10-23T05:49:32.988011+00:00",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "checker_sha256": "679c6d02abb796d0cc2f1acaffcc69e99a0fc5c66a0ca919cc6699bcfb033d02",
+        "profile": "core",
+        "entry": "demo/index.html",
+        "entry_sha256": "bdae09f898e2ee01df1ff3915a647051a2e3730b18e2302c2f878f0ea9328a2e",
+        "screenshots": [
+          {
+            "path": "initial-desktop.png",
+            "sha256": "08620b4c5c6a4ec42389d7fec3dda4a06220320a92ecff8b4208912bd6ac6c3a",
+            "width": 1440,
+            "height": 2781,
+            "rgb_variance_sum": 1650.4575024124665
+          },
+          {
+            "path": "initial-mobile.png",
+            "sha256": "da49510fa449abbd0809abab81bff34a6adfab3da4642e9e67130f95a1c0f87e",
+            "width": 390,
+            "height": 4213,
+            "rgb_variance_sum": 2967.1812954143234
+          },
+          {
+            "path": "geometry-3d-before.png",
+            "sha256": "f62fba555dd1cebccdfc9c232d94973e5e8021198a192cec878d36fb1b888d64",
+            "width": 952,
+            "height": 311,
+            "rgb_variance_sum": 550.8781836644616
+          },
+          {
+            "path": "geometry-3d-orbited.png",
+            "sha256": "b17f0cb114ff3e9af06c20d9b9b9c30b7afbb9bf0514b580556e1b58b9c1646b",
+            "width": 952,
+            "height": 311,
+            "rgb_variance_sum": 417.9367534186937
+          },
+          {
+            "path": "core-desktop-geometry.png",
+            "sha256": "38bc21622ea6da4ee4ae7f9f646b00fb72d2b7b3aac6aea3e947b407c178e278",
+            "width": 1440,
+            "height": 2781,
+            "rgb_variance_sum": 1685.90367533404
+          },
+          {
+            "path": "panel-desktop-geometry.png",
+            "sha256": "d3e516f4b6b68b67521b6462d3f462b1b85ff00267c396701359ce935cb02280",
+            "width": 1320,
+            "height": 909,
+            "rgb_variance_sum": 1812.9412920270374
+          },
+          {
+            "path": "core-desktop-noise.png",
+            "sha256": "babb6719f7ab9136e8e5493b6e46581f9c95b42e861d820608ebff825bd9a680",
+            "width": 1440,
+            "height": 2939,
+            "rgb_variance_sum": 1866.2586601439905
+          },
+          {
+            "path": "panel-desktop-noise.png",
+            "sha256": "8997205869ca6b42297d0d6251cc1670eea795648bedf8ce9ef2bd812a972242",
+            "width": 1320,
+            "height": 1067,
+            "rgb_variance_sum": 1771.4234832829106
+          },
+          {
+            "path": "core-desktop-gains.png",
+            "sha256": "d2b6006a114aad46d6e8b2a458957abb7b0e4ce6ff26d98ba5cf29c9bd135f80",
+            "width": 1440,
+            "height": 2808,
+            "rgb_variance_sum": 2254.2120093359226
+          },
+          {
+            "path": "panel-desktop-gains.png",
+            "sha256": "d72d0b0f0a2ce81ee198ea643c887bdb719361e370189760bdd2e20d9437996c",
+            "width": 1320,
+            "height": 937,
+            "rgb_variance_sum": 3068.8734588022116
+          },
+          {
+            "path": "core-desktop-3d.png",
+            "sha256": "82a992f42f40a5fd8893d59f1f41eedb5a046fdf1f3542382f39755c06eb7229",
+            "width": 1440,
+            "height": 2896,
+            "rgb_variance_sum": 1841.297579587384
+          },
+          {
+            "path": "panel-desktop-3d.png",
+            "sha256": "bc0930bd0bfd26c5b9fbba08638b54725beefa77f9e210b2631f0577b06f90ca",
+            "width": 1320,
+            "height": 1024,
+            "rgb_variance_sum": 1702.2996793888058
+          },
+          {
+            "path": "core-wide-geometry.png",
+            "sha256": "84ee89071b42055e381f19d12eec22b20650a6c5726468ef977b3010f218663f",
+            "width": 1920,
+            "height": 2814,
+            "rgb_variance_sum": 1426.889944036875
+          },
+          {
+            "path": "core-wide-noise.png",
+            "sha256": "f0219a9e6a949d2e2692b7e823d90f0d2f5762a3b495b91815429e1bfe8185fc",
+            "width": 1920,
+            "height": 2959,
+            "rgb_variance_sum": 1422.8777561124145
+          },
+          {
+            "path": "core-wide-gains.png",
+            "sha256": "a20b14d08183f3c49a07e26f9310d922d85f567ac7f5df959e5e15c2bca45810",
+            "width": 1920,
+            "height": 2842,
+            "rgb_variance_sum": 1695.4851140094647
+          },
+          {
+            "path": "core-wide-3d.png",
+            "sha256": "2552f66d7f70593cb67f44cd00095154611600165996a5fbd86510833ad3d5a9",
+            "width": 1920,
+            "height": 2916,
+            "rgb_variance_sum": 1400.5198945073053
+          },
+          {
+            "path": "core-tablet-geometry.png",
+            "sha256": "4097a27615d1d2db839ddf9b6ed034ae096f3986980539de81c6f11f7d4609fa",
+            "width": 768,
+            "height": 3921,
+            "rgb_variance_sum": 2369.1870671944744
+          },
+          {
+            "path": "core-tablet-noise.png",
+            "sha256": "ae8eeedcd2eaed55e608743b6d54c148f562e53fd145a8c5240c552879dbd4ee",
+            "width": 768,
+            "height": 4051,
+            "rgb_variance_sum": 2466.1177700429375
+          },
+          {
+            "path": "core-tablet-gains.png",
+            "sha256": "8fe208193df5fd504be234ecb8422f02e380f078692b7a4654b5cbc76ee39fc6",
+            "width": 768,
+            "height": 3842,
+            "rgb_variance_sum": 2779.242604915765
+          },
+          {
+            "path": "core-tablet-3d.png",
+            "sha256": "694f072233f185474df83e2c8f60f3222d0792497b7137a92c551c3fccc9c123",
+            "width": 768,
+            "height": 4083,
+            "rgb_variance_sum": 2311.021479444841
+          },
+          {
+            "path": "core-mobile-geometry.png",
+            "sha256": "2825b537de76f8e57fbfa8191b342945da3f7abb7e2b46002a3792d0546df8b6",
+            "width": 390,
+            "height": 4213,
+            "rgb_variance_sum": 3539.931359172013
+          },
+          {
+            "path": "panel-mobile-geometry.png",
+            "sha256": "4831c4126b9b3af5a4389370b153eca38b3078fb4183f7f8e26c417ecab5e8ae",
+            "width": 358,
+            "height": 1794,
+            "rgb_variance_sum": 2719.4281101809124
+          },
+          {
+            "path": "core-mobile-noise.png",
+            "sha256": "30d167837b2fe3af645de0b4491c73e49d25f0640c05132a42b9427cab9d75b3",
+            "width": 390,
+            "height": 4471,
+            "rgb_variance_sum": 3595.0781776834656
+          },
+          {
+            "path": "panel-mobile-noise.png",
+            "sha256": "ae8bd908ce4a7a5019fce72ffb16ebed83384ba1512d8e6d2db8c13ae84abf90",
+            "width": 358,
+            "height": 2053,
+            "rgb_variance_sum": 3003.747753857665
+          },
+          {
+            "path": "core-mobile-gains.png",
+            "sha256": "66fd29c5c3c36ebb0414006f988d8788119432ef72e129347d57dd6f8eb9b01f",
+            "width": 390,
+            "height": 4255,
+            "rgb_variance_sum": 4220.211939860561
+          },
+          {
+            "path": "panel-mobile-gains.png",
+            "sha256": "fbfd9c1b31957cd7edad9e561a8244c19619a1c8cce9c5f49ee96c43c9f5b9ad",
+            "width": 358,
+            "height": 1836,
+            "rgb_variance_sum": 4524.920565294887
+          },
+          {
+            "path": "core-mobile-3d.png",
+            "sha256": "ffda77cf27e3c063aff6817e982646494e40541c1ab25667f07c54db61fb7cb6",
+            "width": 390,
+            "height": 4409,
+            "rgb_variance_sum": 3468.431139844057
+          },
+          {
+            "path": "panel-mobile-3d.png",
+            "sha256": "ee3d64825704bb8f13999f158e00a58c9d1b542c2efcc95cdca7dbb0c1cae796",
+            "width": 358,
+            "height": 1991,
+            "rgb_variance_sum": 2664.4714548165393
+          },
+          {
+            "path": "core-reflow-geometry.png",
+            "sha256": "48ea0922ea0106748f5f0e2109e14860214fe9b92515c9ea1f4c4072b795888c",
+            "width": 320,
+            "height": 4639,
+            "rgb_variance_sum": 3861.8835003147196
+          },
+          {
+            "path": "core-reflow-noise.png",
+            "sha256": "97cf5859bb523ce4a22839d38425dd9582fc3477897d0c25fcda74d78508e4d7",
+            "width": 320,
+            "height": 4923,
+            "rgb_variance_sum": 3914.234296403647
+          },
+          {
+            "path": "core-reflow-gains.png",
+            "sha256": "fb493dd43301fff91d35569930710ea32be66e0e2ca505dd8ccc49409ae2d219",
+            "width": 320,
+            "height": 4825,
+            "rgb_variance_sum": 4634.217051071839
+          },
+          {
+            "path": "core-reflow-3d.png",
+            "sha256": "eedc298c84f60e9924d99f521843f6370c54e1638a704e76ba244e4a4bad92a9",
+            "width": 320,
+            "height": 4873,
+            "rgb_variance_sum": 3776.883247476463
+          },
+          {
+            "path": "mobile-touch-3d.png",
+            "sha256": "74a5a6d77db0b8b41b20208a2599aa996d6a6ba050dad3bba6dbd7d84d9c776b",
+            "width": 644,
+            "height": 602,
+            "rgb_variance_sum": 663.8251989847198
+          }
+        ],
+        "source_files": {
+          "demo/app.js": "e850219afb53775e742b5b7f458b028cef50d2501fe42d649321353dcbc23da1",
+          "demo/data.js": "8e2662dce2c6d8078da4905a3e10b610a2770cd13e0db58c37918f1da0aa1d6c",
+          "demo/index.html": "bdae09f898e2ee01df1ff3915a647051a2e3730b18e2302c2f878f0ea9328a2e",
+          "demo/mark.svg": "c1bf57473c393ce5be0663aba4b5d05a42bcf300c20f8223e91cbfb2b43fefe8",
+          "demo/model.js": "363b6a2defc96b51d5eba6068d766b61e5b8f909e3b51c30962eced79751b16b",
+          "demo/README.md": "530557326034e4479b635513f1b7ed181f312491682259e436a9cbe595deccba",
+          "demo/scene.js": "692c328aa72940605dde1a3ff1993498f9bac37b337e96aa0e52e557b74879cc",
+          "demo/style.css": "2005d023c6c1631134f387eaa1a232b92e5eb9c059a165ba531e23b5d7e58e1c",
+          "demo/vendor/build_vendor.py": "abe567f61bc255b8fbc71b242a186ab4ebf6b5fa83ed98ef660a40b5c9c4cec7",
+          "demo/vendor/entry.js": "7d10dfbc949f02c037ab07654ed0919395470a1828322f82d29d910eccd17fb0",
+          "demo/vendor/LICENSE-three.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+          "demo/vendor/manifest.json": "a3ee059c1d8c42256dd383ab67e2b2e862e4904a31377ac6128a5810f81c96f2",
+          "demo/vendor/README.md": "eabcfe65bfbbe997a3f3ee96c6b009b01acf3e3a3ef50232d54734dd5fa01126",
+          "demo/vendor/three-orbit.min.js": "1f24d1df9a7842db61f4fbd1b96279065b4ff76060d9b846ba72088ba7dfd553"
+        },
+        "browser_version": "145.0.7632.6",
+        "interactions": {
+          "tab_states": [
+            {
+              "activeTab": "geometry",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "noise",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "gains",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "geometry",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            }
+          ],
+          "numeric_slider_checks": [
+            {
+              "s": 0.05,
+              "gain": 0.0005,
+              "expected_fourth_gap": 0.0785460056617456,
+              "expected_count_gap": 4.9091253538591014e-15,
+              "intensity_text": "0.078546",
+              "count_text": "4.90913e-15"
+            },
+            {
+              "s": 0.7,
+              "gain": 0.01,
+              "expected_fourth_gap": 440.22436573051584,
+              "expected_count_gap": 4.402243657305158e-06,
+              "intensity_text": "440.224",
+              "count_text": "4.40224e-6"
+            },
+            {
+              "s": 1.3862943611198906,
+              "gain": 0.05,
+              "expected_fourth_gap": 162.45375022899808,
+              "expected_count_gap": 0.0010153359389312381,
+              "intensity_text": "162.454",
+              "count_text": "0.00101534"
+            },
+            {
+              "s": 3,
+              "gain": 0.2,
+              "expected_fourth_gap": 0.6828742505229606,
+              "expected_count_gap": 0.0010925988008367372,
+              "intensity_text": "0.682874",
+              "count_text": "0.0010926"
+            },
+            {
+              "s": 6,
+              "gain": 0.4,
+              "expected_fourth_gap": 5.102316722309937e-06,
+              "expected_count_gap": 1.306193080911344e-07,
+              "intensity_text": "5.10232e-6",
+              "count_text": "1.30619e-7"
+            }
+          ],
+          "root_checks": [
+            {
+              "root": 1,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 2,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 3,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 4,
+              "exact_endpoints_match": true
+            }
+          ],
+          "phase_vector_checks": [
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 1.7258922468954552e-07
+            },
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 1.9349680857594365e-07
+            },
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 2.0541369050164349e-07
+            }
+          ],
+          "webgl": {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          },
+          "camera_before": {
+            "position": [
+              7.999999999999998,
+              12.999999999999998,
+              18
+            ],
+            "zoom": 1,
+            "view": "perspective",
+            "orthographic": true
+          },
+          "camera_after_orbit": {
+            "position": [
+              -7.501109150660135,
+              21.962236251845653,
+              -4.28876909240863
+            ],
+            "zoom": 1,
+            "view": "perspective",
+            "orthographic": true
+          },
+          "orbit_pixels_changed": true,
+          "keyboard_tab_range_canvas": true,
+          "reduced_motion": true,
+          "idle_render_count_stable": true,
+          "download": {
+            "path": "downloaded-view.json",
+            "source_bindings_verified": 9
+          }
+        },
+        "source_links": [
+          {
+            "path": "/README.md",
+            "status": 200
+          },
+          {
+            "path": "/demo/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/claims.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/report/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/report/historical/science_completion_report.pdf",
+            "status": 200
+          },
+          {
+            "path": "/docs/research-disclosure.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/validation/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/validation/formal_replay_20261022.json",
+            "status": 200
+          },
+          {
+            "path": "/evidence/homometric-photon-counts/science_frontier/global_separation/blind_interval_certificate.json",
+            "status": 200
+          },
+          {
+            "path": "/studies/optical-feasibility/README.md",
+            "status": 200
+          },
+          {
+            "path": "/studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/demo.html",
+            "status": 200
+          }
+        ],
+        "layouts": {
+          "desktop": {
+            "geometry": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "wide": {
+            "geometry": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "tablet": {
+            "geometry": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "mobile": {
+            "geometry": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 95,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 11
+              }
+            },
+            "noise": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 127,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 12,
+                "minimum_rendered_height": 14
+              }
+            },
+            "gains": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 107,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "reflow": {
+            "geometry": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 95,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 11
+              }
+            },
+            "noise": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 127,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 12,
+                "minimum_rendered_height": 14
+              }
+            },
+            "gains": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 107,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          }
+        },
+        "secondary_contexts": {
+          "file": {
+            "local_scripts_and_webgl_loaded": true,
+            "nonlocal_requests": [],
+            "quantitative_2d_panel_available": true
+          },
+          "touch": {
+            "physical_device_test": false,
+            "touch_points": 2,
+            "zoom_before": 1,
+            "zoom_after": 2.0813830185046838,
+            "device_scale_factor": 2,
+            "quantitative_2d_panel_available": true
+          },
+          "webgl-unavailable": {
+            "injection": "HTMLCanvasElement.getContext returns null for WebGL types",
+            "fallback_notice": "3D is unavailable in this browser. The complete 2D explanation and quantitative figures remain available.",
+            "expected_renderer_console_errors": [
+              "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context."
+            ],
+            "quantitative_2d_panel_available": true
+          },
+          "context-loss": {
+            "injection": "WEBGL_lose_context.loseContext()",
+            "fallback_notice": "The 3D graphics context was lost. The 2D explanation remains available.",
+            "quantitative_2d_panel_available": true
+          }
+        },
+        "finished_utc": "2026-10-23T05:49:55.452537+00:00",
+        "console_errors": [],
+        "nonlocal_resource_requests": [],
+        "playwright_version": "1.58.0",
+        "pillow_version": "12.0.0"
+      }
+    },
+    {
+      "browser": "Microsoft Edge",
+      "output_directory": "build/demo-validation-20261022/pr-edge",
+      "original_summary_sha256": "7a12631ca009edffb5f17bdf4d7c7567e4ea7d1c8095d6b44292d5b4c37776df",
+      "summary": {
+        "status": "PASS",
+        "started_utc": "2026-10-23T05:49:35.600145+00:00",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "checker_sha256": "679c6d02abb796d0cc2f1acaffcc69e99a0fc5c66a0ca919cc6699bcfb033d02",
+        "profile": "core",
+        "entry": "demo/index.html",
+        "entry_sha256": "bdae09f898e2ee01df1ff3915a647051a2e3730b18e2302c2f878f0ea9328a2e",
+        "screenshots": [
+          {
+            "path": "initial-desktop.png",
+            "sha256": "7c2c39e2d564d3edf13835426090e90ecfa0710fdd345538803f04cd434038aa",
+            "width": 1440,
+            "height": 2781,
+            "rgb_variance_sum": 1643.1725692216196
+          },
+          {
+            "path": "initial-mobile.png",
+            "sha256": "2eabcb68d9138cf85ede54f3404fa86e953a5a1b83e5185081efbf81a7b00649",
+            "width": 390,
+            "height": 4213,
+            "rgb_variance_sum": 2952.9343570858864
+          },
+          {
+            "path": "geometry-3d-before.png",
+            "sha256": "99f0d9847fdf6160aacffe5ff721b6b14e582a8a652c34126d429c73eef00215",
+            "width": 952,
+            "height": 311,
+            "rgb_variance_sum": 622.6404691763901
+          },
+          {
+            "path": "geometry-3d-orbited.png",
+            "sha256": "43f6a2477c3a4251a53d0541a6d66000c090524de743aa14a143c75c68e28937",
+            "width": 952,
+            "height": 311,
+            "rgb_variance_sum": 467.7764043194237
+          },
+          {
+            "path": "core-desktop-geometry.png",
+            "sha256": "107de6bf319efd9ab258f8c9ee0c546226eedd38074152eb254d740f1cb34fd4",
+            "width": 1440,
+            "height": 2781,
+            "rgb_variance_sum": 1678.6171802584306
+          },
+          {
+            "path": "panel-desktop-geometry.png",
+            "sha256": "7344c72e52a5ab5c4423db8c74187f1e2d851b2a74785a4cb51be53632377823",
+            "width": 1320,
+            "height": 909,
+            "rgb_variance_sum": 1806.1376554705769
+          },
+          {
+            "path": "core-desktop-noise.png",
+            "sha256": "f73ec3b05fe6d317fa16aad6d28d73445dc2811094a9a7ba50aff3a79978fb7b",
+            "width": 1440,
+            "height": 2939,
+            "rgb_variance_sum": 1858.7895973983477
+          },
+          {
+            "path": "panel-desktop-noise.png",
+            "sha256": "c281e0a1bc222d12a10a1f843d749a59dac751ca8ea4f1df22ca78744e71a694",
+            "width": 1320,
+            "height": 1067,
+            "rgb_variance_sum": 1763.8666026892827
+          },
+          {
+            "path": "core-desktop-gains.png",
+            "sha256": "eb39ae8928274edb22af8cac96501a4a6ab08b1967dbb502833d50a53d92f483",
+            "width": 1440,
+            "height": 2808,
+            "rgb_variance_sum": 2246.506066382267
+          },
+          {
+            "path": "panel-desktop-gains.png",
+            "sha256": "14d81e4dcc705eaa33264a120c8338fa8800717ee7c068c30e13589c63795942",
+            "width": 1320,
+            "height": 937,
+            "rgb_variance_sum": 3060.8776510985335
+          },
+          {
+            "path": "core-desktop-3d.png",
+            "sha256": "2f922b1355d803c30e99d047ab13d73fe62425aea973e806b2d89dfcb1208e85",
+            "width": 1440,
+            "height": 2896,
+            "rgb_variance_sum": 1838.8276444246023
+          },
+          {
+            "path": "panel-desktop-3d.png",
+            "sha256": "11a8c8af46b5db5106f0f2f8b21ce912fde07b74b2ad863f4bcf82e47a6ba0d9",
+            "width": 1320,
+            "height": 1024,
+            "rgb_variance_sum": 1711.7998677350242
+          },
+          {
+            "path": "core-wide-geometry.png",
+            "sha256": "e9697bd13b78c05211f83628884c1b0b76597cfd0f007d73a38456266e41fb74",
+            "width": 1920,
+            "height": 2814,
+            "rgb_variance_sum": 1421.424923260216
+          },
+          {
+            "path": "core-wide-noise.png",
+            "sha256": "aafb67f12cec7385460b7704795274478c89d807eba33d779678f775193662d4",
+            "width": 1920,
+            "height": 2959,
+            "rgb_variance_sum": 1417.3015793463126
+          },
+          {
+            "path": "core-wide-gains.png",
+            "sha256": "4b90a1c1d83cbe7c814a4ddbe7d2f38ecc1dcd4ba561c778b60115e881d345df",
+            "width": 1920,
+            "height": 2842,
+            "rgb_variance_sum": 1689.7592222413405
+          },
+          {
+            "path": "core-wide-3d.png",
+            "sha256": "00553b47a4d0c6bf418fd95fb9babb44daf45f1abed62fc39d1ac9e4aa461386",
+            "width": 1920,
+            "height": 2916,
+            "rgb_variance_sum": 1398.46635950716
+          },
+          {
+            "path": "core-tablet-geometry.png",
+            "sha256": "44588e912e8c15d57622627c5949c225d4dd8d21f74eff71e1d3a1347a55e5ea",
+            "width": 768,
+            "height": 3921,
+            "rgb_variance_sum": 2359.0549834493695
+          },
+          {
+            "path": "core-tablet-noise.png",
+            "sha256": "3193195ae2a65a09fc986e4ac5a584644ce1e3b37327aa7c2d8b57419c1ae1eb",
+            "width": 768,
+            "height": 4051,
+            "rgb_variance_sum": 2455.346832337982
+          },
+          {
+            "path": "core-tablet-gains.png",
+            "sha256": "d7b115212807546a3de50b84f6ca76057ee20e48cafbd1439af6ce0ccc88de2a",
+            "width": 768,
+            "height": 3842,
+            "rgb_variance_sum": 2767.777603881611
+          },
+          {
+            "path": "core-tablet-3d.png",
+            "sha256": "49cf7ac3d922ea8e79a7fb1154aceb1228bf35ea33a9d695e30f7c0046b575ba",
+            "width": 768,
+            "height": 4083,
+            "rgb_variance_sum": 2305.861418817518
+          },
+          {
+            "path": "core-mobile-geometry.png",
+            "sha256": "3174cb8d28bcbbf2266e589aec0663951bbda0de2f4a76c27a0f9d18c118eab5",
+            "width": 390,
+            "height": 4213,
+            "rgb_variance_sum": 3525.7113193522946
+          },
+          {
+            "path": "panel-mobile-geometry.png",
+            "sha256": "350c85f5b0dd700c685efabf399fd7f3093d7a47b19b129a5b2eeb8501034c11",
+            "width": 358,
+            "height": 1794,
+            "rgb_variance_sum": 2715.8138138812924
+          },
+          {
+            "path": "core-mobile-noise.png",
+            "sha256": "7ecd81b1f9c34686672a5d71706f67079bb55b3eca24441e38b97a4392842976",
+            "width": 390,
+            "height": 4471,
+            "rgb_variance_sum": 3576.96449822265
+          },
+          {
+            "path": "panel-mobile-noise.png",
+            "sha256": "909cb5e7ca05a08d2c89626e500b2dc45440ddce6852233330765c42a25c7167",
+            "width": 358,
+            "height": 2053,
+            "rgb_variance_sum": 2989.5672375500108
+          },
+          {
+            "path": "core-mobile-gains.png",
+            "sha256": "b35250aab047e70928e294e531900c825091aac7088ab8e6188fae2ed17a4ef7",
+            "width": 390,
+            "height": 4255,
+            "rgb_variance_sum": 4201.078649188529
+          },
+          {
+            "path": "panel-mobile-gains.png",
+            "sha256": "1337754ef98a228de4fdc7f8291c2d3825d5a990461837a5e83937303a500f8a",
+            "width": 358,
+            "height": 1836,
+            "rgb_variance_sum": 4508.691183001785
+          },
+          {
+            "path": "core-mobile-3d.png",
+            "sha256": "7613cdf74a1fe173083ff058c9fe3f78c7e9c87404f3623df1d4d05cd35eaf24",
+            "width": 390,
+            "height": 4409,
+            "rgb_variance_sum": 3455.155320260839
+          },
+          {
+            "path": "panel-mobile-3d.png",
+            "sha256": "3f5bae874b7f34184529517abc91beec4f816817cbaf5663afe43a7f7ca900b8",
+            "width": 358,
+            "height": 1991,
+            "rgb_variance_sum": 2663.2796251945383
+          },
+          {
+            "path": "core-reflow-geometry.png",
+            "sha256": "903f5b2eecd573ec3830d822ebe6115aa5a9c7d72c2beb128b137aee24257d30",
+            "width": 320,
+            "height": 4639,
+            "rgb_variance_sum": 3845.293804308473
+          },
+          {
+            "path": "core-reflow-noise.png",
+            "sha256": "b474c4ed7b5986fdc9e4bb8007535ed0f9092d3f341dfef2d238a877bf1cf282",
+            "width": 320,
+            "height": 4923,
+            "rgb_variance_sum": 3893.9619622687023
+          },
+          {
+            "path": "core-reflow-gains.png",
+            "sha256": "575f995e701a039e19eaff176ad9a3936f763fd5171a49af89e031e7ed46206f",
+            "width": 320,
+            "height": 4825,
+            "rgb_variance_sum": 4613.405838537582
+          },
+          {
+            "path": "core-reflow-3d.png",
+            "sha256": "81db0f62e8b7b2437e799ca3a400eab4521d7dc826ab975a8abe5f9296ec38de",
+            "width": 320,
+            "height": 4873,
+            "rgb_variance_sum": 3760.9910442001983
+          },
+          {
+            "path": "mobile-touch-3d.png",
+            "sha256": "d0d7f16f87014837be52561745860bf4c59513b90f17de75a19423c6963b62ba",
+            "width": 644,
+            "height": 602,
+            "rgb_variance_sum": 707.4022834200287
+          }
+        ],
+        "source_files": {
+          "demo/app.js": "e850219afb53775e742b5b7f458b028cef50d2501fe42d649321353dcbc23da1",
+          "demo/data.js": "8e2662dce2c6d8078da4905a3e10b610a2770cd13e0db58c37918f1da0aa1d6c",
+          "demo/index.html": "bdae09f898e2ee01df1ff3915a647051a2e3730b18e2302c2f878f0ea9328a2e",
+          "demo/mark.svg": "c1bf57473c393ce5be0663aba4b5d05a42bcf300c20f8223e91cbfb2b43fefe8",
+          "demo/model.js": "363b6a2defc96b51d5eba6068d766b61e5b8f909e3b51c30962eced79751b16b",
+          "demo/README.md": "530557326034e4479b635513f1b7ed181f312491682259e436a9cbe595deccba",
+          "demo/scene.js": "692c328aa72940605dde1a3ff1993498f9bac37b337e96aa0e52e557b74879cc",
+          "demo/style.css": "2005d023c6c1631134f387eaa1a232b92e5eb9c059a165ba531e23b5d7e58e1c",
+          "demo/vendor/build_vendor.py": "abe567f61bc255b8fbc71b242a186ab4ebf6b5fa83ed98ef660a40b5c9c4cec7",
+          "demo/vendor/entry.js": "7d10dfbc949f02c037ab07654ed0919395470a1828322f82d29d910eccd17fb0",
+          "demo/vendor/LICENSE-three.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+          "demo/vendor/manifest.json": "a3ee059c1d8c42256dd383ab67e2b2e862e4904a31377ac6128a5810f81c96f2",
+          "demo/vendor/README.md": "eabcfe65bfbbe997a3f3ee96c6b009b01acf3e3a3ef50232d54734dd5fa01126",
+          "demo/vendor/three-orbit.min.js": "1f24d1df9a7842db61f4fbd1b96279065b4ff76060d9b846ba72088ba7dfd553"
+        },
+        "browser_version": "155.0.4283.62",
+        "interactions": {
+          "tab_states": [
+            {
+              "activeTab": "geometry",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "noise",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "gains",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            },
+            {
+              "activeTab": "geometry",
+              "view": "2d",
+              "s": 1.3862943611198906,
+              "t": 0.5,
+              "q": 1.0471975511965976,
+              "gain": 0.05
+            }
+          ],
+          "numeric_slider_checks": [
+            {
+              "s": 0.05,
+              "gain": 0.0005,
+              "expected_fourth_gap": 0.0785460056617456,
+              "expected_count_gap": 4.9091253538591014e-15,
+              "intensity_text": "0.078546",
+              "count_text": "4.90913e-15"
+            },
+            {
+              "s": 0.7,
+              "gain": 0.01,
+              "expected_fourth_gap": 440.22436573051584,
+              "expected_count_gap": 4.402243657305158e-06,
+              "intensity_text": "440.224",
+              "count_text": "4.40224e-6"
+            },
+            {
+              "s": 1.3862943611198906,
+              "gain": 0.05,
+              "expected_fourth_gap": 162.45375022899808,
+              "expected_count_gap": 0.0010153359389312381,
+              "intensity_text": "162.454",
+              "count_text": "0.00101534"
+            },
+            {
+              "s": 3,
+              "gain": 0.2,
+              "expected_fourth_gap": 0.6828742505229606,
+              "expected_count_gap": 0.0010925988008367372,
+              "intensity_text": "0.682874",
+              "count_text": "0.0010926"
+            },
+            {
+              "s": 6,
+              "gain": 0.4,
+              "expected_fourth_gap": 5.102316722309937e-06,
+              "expected_count_gap": 1.306193080911344e-07,
+              "intensity_text": "5.10232e-6",
+              "count_text": "1.30619e-7"
+            }
+          ],
+          "root_checks": [
+            {
+              "root": 1,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 2,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 3,
+              "exact_endpoints_match": true
+            },
+            {
+              "root": 4,
+              "exact_endpoints_match": true
+            }
+          ],
+          "phase_vector_checks": [
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 1.7258922468954552e-07
+            },
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 1.9349680857594365e-07
+            },
+            {
+              "site_count": 126,
+              "phase_vectors": 126,
+              "max_coordinate_or_phase_error": 2.3046643171653614e-07,
+              "max_unit_squared_error": 2.0541369050164349e-07
+            }
+          ],
+          "webgl": {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+          },
+          "camera_before": {
+            "position": [
+              7.999999999999999,
+              12.999999999999998,
+              18
+            ],
+            "zoom": 1,
+            "view": "perspective",
+            "orthographic": true
+          },
+          "camera_after_orbit": {
+            "position": [
+              -7.501109150660121,
+              21.96223625184566,
+              -4.288769092408619
+            ],
+            "zoom": 1,
+            "view": "perspective",
+            "orthographic": true
+          },
+          "orbit_pixels_changed": true,
+          "keyboard_tab_range_canvas": true,
+          "reduced_motion": true,
+          "idle_render_count_stable": true,
+          "download": {
+            "path": "downloaded-view.json",
+            "source_bindings_verified": 9
+          }
+        },
+        "source_links": [
+          {
+            "path": "/README.md",
+            "status": 200
+          },
+          {
+            "path": "/demo/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/claims.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/report/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/report/historical/science_completion_report.pdf",
+            "status": 200
+          },
+          {
+            "path": "/docs/research-disclosure.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/validation/README.md",
+            "status": 200
+          },
+          {
+            "path": "/docs/validation/formal_replay_20261022.json",
+            "status": 200
+          },
+          {
+            "path": "/evidence/homometric-photon-counts/science_frontier/global_separation/blind_interval_certificate.json",
+            "status": 200
+          },
+          {
+            "path": "/studies/optical-feasibility/README.md",
+            "status": 200
+          },
+          {
+            "path": "/studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/demo.html",
+            "status": 200
+          }
+        ],
+        "layouts": {
+          "desktop": {
+            "geometry": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 1440,
+              "documentWidth": 1440,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "wide": {
+            "geometry": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 1920,
+              "documentWidth": 1920,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "tablet": {
+            "geometry": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 98,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 12
+              }
+            },
+            "noise": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 130,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 15,
+                "minimum_rendered_height": 15
+              }
+            },
+            "gains": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 110,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 768,
+              "documentWidth": 768,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "mobile": {
+            "geometry": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 95,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 11
+              }
+            },
+            "noise": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 127,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 12,
+                "minimum_rendered_height": 14
+              }
+            },
+            "gains": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 107,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 390,
+              "documentWidth": 390,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          },
+          "reflow": {
+            "geometry": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 95,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 24,
+                "minimum_rendered_height": 11
+              }
+            },
+            "noise": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 127,
+                "minimum_ratio": 4.738398467744666
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 12,
+                "minimum_rendered_height": 14
+              }
+            },
+            "gains": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": [],
+              "html_text_contrast": {
+                "checked_text_elements": 107,
+                "minimum_ratio": 4.840766210783463
+              },
+              "svg_text_bounds": {
+                "text_labels_checked": 8,
+                "minimum_rendered_height": 15
+              }
+            },
+            "3d": {
+              "width": 320,
+              "documentWidth": 320,
+              "language": "en",
+              "h1Count": 1,
+              "missingImageAlt": 0,
+              "brokenImages": 0,
+              "unnamedControls": []
+            }
+          }
+        },
+        "secondary_contexts": {
+          "file": {
+            "local_scripts_and_webgl_loaded": true,
+            "nonlocal_requests": [],
+            "quantitative_2d_panel_available": true
+          },
+          "touch": {
+            "physical_device_test": false,
+            "touch_points": 2,
+            "zoom_before": 1,
+            "zoom_after": 2.0813830185046838,
+            "device_scale_factor": 2,
+            "quantitative_2d_panel_available": true
+          },
+          "webgl-unavailable": {
+            "injection": "HTMLCanvasElement.getContext returns null for WebGL types",
+            "fallback_notice": "3D is unavailable in this browser. The complete 2D explanation and quantitative figures remain available.",
+            "expected_renderer_console_errors": [
+              "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context."
+            ],
+            "quantitative_2d_panel_available": true
+          },
+          "context-loss": {
+            "injection": "WEBGL_lose_context.loseContext()",
+            "fallback_notice": "The 3D graphics context was lost. The 2D explanation remains available.",
+            "quantitative_2d_panel_available": true
+          }
+        },
+        "finished_utc": "2026-10-23T05:49:54.413351+00:00",
+        "console_errors": [],
+        "nonlocal_resource_requests": [],
+        "playwright_version": "1.58.0",
+        "pillow_version": "12.0.0"
+      }
+    }
+  ],
+  "selected_screenshots": [
+    {
+      "path": "docs/validation/demo_20261022/overview-desktop.png",
+      "sha256": "08620b4c5c6a4ec42389d7fec3dda4a06220320a92ecff8b4208912bd6ac6c3a",
+      "width": 1440,
+      "height": 2781,
+      "rgb_variance_sum": 1650.4575024124665,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "initial-desktop.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/desktop-geometry.png",
+      "sha256": "d3e516f4b6b68b67521b6462d3f462b1b85ff00267c396701359ce935cb02280",
+      "width": 1320,
+      "height": 909,
+      "rgb_variance_sum": 1812.9412920270374,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-desktop-geometry.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/desktop-noise.png",
+      "sha256": "8997205869ca6b42297d0d6251cc1670eea795648bedf8ce9ef2bd812a972242",
+      "width": 1320,
+      "height": 1067,
+      "rgb_variance_sum": 1771.4234832829106,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-desktop-noise.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/desktop-gains.png",
+      "sha256": "d72d0b0f0a2ce81ee198ea643c887bdb719361e370189760bdd2e20d9437996c",
+      "width": 1320,
+      "height": 937,
+      "rgb_variance_sum": 3068.8734588022116,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-desktop-gains.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/desktop-3d.png",
+      "sha256": "bc0930bd0bfd26c5b9fbba08638b54725beefa77f9e210b2631f0577b06f90ca",
+      "width": 1320,
+      "height": 1024,
+      "rgb_variance_sum": 1702.2996793888058,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-desktop-3d.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/mobile-3d.png",
+      "sha256": "ee3d64825704bb8f13999f158e00a58c9d1b542c2efcc95cdca7dbb0c1cae796",
+      "width": 358,
+      "height": 1991,
+      "rgb_variance_sum": 2664.4714548165393,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-mobile-3d.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/mobile-noise.png",
+      "sha256": "ae8bd908ce4a7a5019fce72ffb16ebed83384ba1512d8e6d2db8c13ae84abf90",
+      "width": 358,
+      "height": 2053,
+      "rgb_variance_sum": 3003.747753857665,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-mobile-noise.png"
+    },
+    {
+      "path": "docs/validation/demo_20261022/mobile-gains.png",
+      "sha256": "fbfd9c1b31957cd7edad9e561a8244c19619a1c8cce9c5f49ee96c43c9f5b9ad",
+      "width": 358,
+      "height": 1836,
+      "rgb_variance_sum": 4524.920565294887,
+      "source_browser": "Chromium 145.0.7632.6",
+      "source_screenshot": "panel-mobile-gains.png"
+    }
+  ],
+  "visual_inspection": {
+    "type": "Internal screenshot inspection during development; not external human peer review",
+    "reviewed_public_images": [
+      "overview-desktop.png",
+      "desktop-geometry.png",
+      "desktop-noise.png",
+      "desktop-gains.png",
+      "desktop-3d.png",
+      "mobile-3d.png",
+      "mobile-noise.png",
+      "mobile-gains.png"
+    ],
+    "outcome": "The final desktop/mobile figures, layout, labels, spacing and optional 3D views were inspected. Detected axis clipping, label color precedence, joined mobile heading words and simultaneous 2D/3D display were corrected before these final runs.",
+    "limits": "Browser touch emulation is not a physical mobile-device test. Targeted accessibility checks and screenshot inspection are not a full accessibility conformance audit.",
+    "additional_edge_inspection": [
+      "build/demo-validation-20261022/pr-edge/panel-desktop-3d.png",
+      "build/demo-validation-20261022/pr-edge/panel-mobile-noise.png"
+    ],
+    "fresh_screenshot_identity_check": {
+      "selected_chromium_screenshots_byte_identical_to_previously_inspected": 8,
+      "selected_edge_screenshots_byte_identical_to_previously_inspected": 2,
+      "scope": "The fresh screenshots reproduce the previously inspected image bytes exactly. No new visual differences were inferred from source equivalence alone."
+    }
+  },
+  "artifact_note": "All 33 screenshots per run are enumerated in the retained original summaries. Eight selected Chromium screenshots are included here; remaining screenshots and runtime logs stay in the named ignored build directories. Published paths are repository-relative.",
+  "normal_operation": "Both runs had zero page/console errors and zero nonlocal resource requests. The separately recorded unavailable-WebGL test deliberately causes a renderer error; the application catches it and preserves its 2D explanation.",
+  "rendering_note": "Chromium used actual WebGL2 through ANGLE/SwiftShader software rendering. Microsoft Edge used actual WebGL2 through ANGLE/D3D11 on the installed GPU. Both rendered nonblank scenes and passed orbit, zoom, reset, keyboard and touch tests.",
+  "refresh_record": {
+    "reason": "Fresh full Chromium and Edge runs after the documentation link addition and Python validation/build helper formatting.",
+    "all_current_demo_source_hashes_match_both_runs": true,
+    "post_run_source_exceptions": [],
+    "previous_public_receipt_sha256": "0e1226cb4b49a8e5994be40e848c1333d54e16f0bca502a697cbb56d62b2d2dd",
+    "previous_public_receipt_preserved_at": "build/demo-validation-20261022/pr-chromium/prior-public-receipt.json",
+    "old_raw_runs_and_source_archives_unchanged": true
+  }
+}

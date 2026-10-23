@@ -26,3 +26,12 @@ data in measured-data-review/data/spad and their copies in afterpulse-study/data
 under studies/optical-validation/simulation-prototype. These unmodified tables
 retain their original terms; the project's MIT grant does not replace them.
 No upstream executable source or third-party article PDF is distributed here.
+
+Interactive demo renderer
+
+demo/vendor/three-orbit.min.js contains Three.js 0.186.1 and its OrbitControls
+addon, distributed under the MIT license. The complete upstream license is
+retained in demo/vendor/LICENSE-three.txt. The bundle preserves its license
+notice. Source archive integrity, bundle hash and build instructions are in
+demo/vendor/manifest.json and demo/vendor/README.md. The esbuild 0.25.12 build
+tool is downloaded only for an optional reproducible rebuild and is not bundled.

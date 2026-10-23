@@ -2,10 +2,10 @@
   "schema": "fresh-global-D05-two-simple-positive-roots-v1",
   "complete": true,
   "source_sha256": "d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631",
-  "input_premises_sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e",
-  "model_sha256_from_input": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "input_premises_sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352",
+  "model_sha256_from_input": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
   "input_group_reconstruction_source_sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4",
-  "input_group_reconstruction_helper_sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627",
+  "input_group_reconstruction_helper_sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049",
   "proof_scope": "Fresh complete positive-axis count for the exact supplied exponential polynomial, with transfer to the reconstructed original and star Gaussian controls. No historical root certificate is used.",
   "definition": {
     "D05": "sum_i c_i exp(-r_i*x)",

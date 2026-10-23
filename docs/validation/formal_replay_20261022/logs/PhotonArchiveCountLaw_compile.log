@@ -1,0 +1,4 @@
+'PhotonArchiveCountLaw.archiveA_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveCountLaw.archiveB_countLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveCountLaw.archived_count_laws_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveCountLaw.decoded_count_laws_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]

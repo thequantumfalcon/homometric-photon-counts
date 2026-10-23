@@ -1,6 +1,6 @@
 INDEPENDENT ANALYTIC AND EXACT-CONSTANT REVIEW
 20 October 2026
-Reviewer: /root, separately from the phase-law extension's author.
+Method: internal AI cross-check performed separately from the phase-law derivation.
 
 Conclusion: PASS. No mathematical defect was found in the stated selection,
 counterexample, or two-family population-identifiability claims.

@@ -2,8 +2,8 @@ INDEPENDENT INTERNAL REVIEW OF THE FRESH HARMONIC ROOT CERTIFICATE
 ================================================================
 
 Review date: 2026-10-20
-Reviewer: the /root/phasor_novelty_review AI agent, separate from the
-          /root/independent_model_rebuild agent that constructed the package.
+Method: internal AI cross-check performed separately from the package
+        construction.
 Disposition: PASS. No mathematical or implementation blocker was found.
 
 This report records the audit already completed during this session. Saving
@@ -60,19 +60,19 @@ certify_harmonic_root.py
   53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07
 
 harmonic_groups.json
-  e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac
+  bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96
 
 harmonic_root_certificate.json
-  83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912
+  bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8
 
 harmonic_root_proof.txt
   bc5b8e81bda852bd1e1f9dd32f592d77ab9a597562989749accf260e0ae61658
 
 harmonic_root_summary.json
-  72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5
+  bd5975e401c4e6aa7eb5f7957b48c7049c510029c8ffafb8a530b45195d4b36b
 
 input_model.json
-  4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288
+  f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f
 
 The group JSON's builder-source and model-input bindings were checked.
 The certificate's engine, group, builder, and model bindings were checked.

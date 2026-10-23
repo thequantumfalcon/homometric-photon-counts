@@ -92,12 +92,12 @@
     {
       "name": "harmonic_groups.json",
       "bytes": 45062,
-      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+      "sha256": "bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96"
     },
     {
       "name": "harmonic_root_certificate.json",
       "bytes": 262857,
-      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+      "sha256": "bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8"
     },
     {
       "name": "harmonic_root_proof.txt",
@@ -106,8 +106,8 @@
     },
     {
       "name": "input_model.json",
-      "bytes": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "bytes": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
     }
   ],
   "summary_hash_location": "Supplied separately by the parent manifest or delivery record; not self-referential.",

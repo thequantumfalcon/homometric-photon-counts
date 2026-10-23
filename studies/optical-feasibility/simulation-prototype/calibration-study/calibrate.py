@@ -14,8 +14,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 PREVIOUS = HERE.parent / "design-search"
-BASE_SHA = "c4ae5037c8fb2d7a842709b53136cea2dac352af55dca48c213c929d1448bd40"
-CERT_SHA = "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0"
+BASE_SHA = "4e24dc4c9615237c7c384ff47e8fb30a78222ca33b57a4908beb1f5da16d6992"
+CERT_SHA = "35b377ca00f58b93e7d0dc1eb657a3d00b82fc130c478723f6019e3646d3be8a"
 path = PREVIOUS / "certify.py"
 if sha256(path.read_bytes()).hexdigest() != BASE_SHA:
     raise ValueError("Previous evaluator identity changed")

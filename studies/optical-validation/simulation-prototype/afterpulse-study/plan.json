@@ -105,7 +105,7 @@
   "selection": "Centered plus worst corrected A and worst corrected B from the prior tighter-budget development screen; no new outcome-based selection.",
   "physics": "Initially live and no prior traps each gate. Poisson primary events; nonparalyzable recovery; Poisson daughter candidates per accepted avalanche; measured bin masses, uniform sub-bin delays; surviving older candidates persist. No twilight pulses or unmeasured tail beyond the stored histogram.",
   "scope": "External-component-informed synthetic stress test. Published scalar anchors do not constitute a calibrated model of those detectors at our wavelength, gate or flux. Stress mean 0.05 is an assumption.",
-  "inputs_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+  "inputs_sha256": "0ce0fc5ba6294df6f6e3d7a30d5e8c8486daa177748c04a94d0ce3171cdfa46d",
   "data_sha256": {
     "apDist_3432H.txt": "b8485ca9fe366c99838bd98e8df00e9e96110643e02c6ec522660f27b6176524",
     "apDist_3605H.txt": "3c671d475c2029ef167a706e0b1da0aa3c272b5995869f434c3313d13b244af0",

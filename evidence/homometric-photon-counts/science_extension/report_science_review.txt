@@ -7,12 +7,12 @@ science_extension_report.tex
 Bytes: 36027
 SHA-256: 636c673b7f4c398fa82c7271a2a10d01623d515cc65a537c6526cf3f9e0d223f
 
-Reviewer: /root/phase_law_extension. I authored the phase-law extension and
-its exact computational checks. This is a report-to-evidence consistency
-review of those results, together with analytic review of the root's
-identifiability and robustness arguments and a consistency check against
-the completed finite-detection certificate. It is not a wholly independent
-reproof of my own phase package, external peer review, or formal verification.
+Method: internal AI report-to-evidence consistency checking within the same
+development process as the phase-law extension and its exact computational
+checks. This covers those results, the identifiability and robustness
+arguments, and the completed finite-detection certificate. It is not a wholly
+independent reproof of the phase package, external peer review, or formal
+verification.
 
 VERDICT
 
@@ -232,7 +232,7 @@ identifiability/independent_identifiability_review.txt
 identifiability/phase_robustness_proof.txt
   599856d56e037deab32758d93e9956261b3837bc2dc28540dff40499a3e983a0
 identifiability/independent_phase_robustness_review.txt
-  c64062566bf796ea244a0f859ba4c4e6bfe099b2192553ea0ffad65c04c27b33
+  1d32f275cf0e5be284e65939d4e402bbc09405846d60e2cdfdd5a5392f8acba1
 finite_detection/finite_detection_proof.txt
   cbb8b679a6b0b05f37faeeacf2ae34f2133ec3349e7c6ec074924d91f884468e
 finite_detection/finite_detection_certificate.json

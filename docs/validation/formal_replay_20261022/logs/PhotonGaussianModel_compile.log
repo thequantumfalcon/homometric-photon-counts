@@ -1,0 +1,6 @@
+'PhotonGaussianModel.rate_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianModel.countLaw_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianModel.factorial_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianModel.geometryA_moments_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianModel.geometryB_moments_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianModel.count_gap_of_intensity_moments' depends on axioms: [propext, Classical.choice, Quot.sound]

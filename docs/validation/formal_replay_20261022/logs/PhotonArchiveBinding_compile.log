@@ -1,0 +1,2 @@
+'PhotonArchiveBinding.archiveA_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveBinding.archiveB_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]

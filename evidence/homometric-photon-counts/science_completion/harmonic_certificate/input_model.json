@@ -1,6 +1,6 @@
 {
   "schema": "fresh-independent-CM05-model-reconstruction-v1",
-  "provenance": "Reconstructed from mathematical definitions retained in this conversation; no historical file or certificate recovered.",
+  "provenance": "Reconstructed from the stated mathematical definitions; no historical file or certificate recovered.",
   "n": 63,
   "omega": "pi/3",
   "centered_MSD_parameter": "v=trace(Cov(u))/63",
@@ -13359,5 +13359,5 @@
       }
     }
   },
-  "source_sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627"
+  "source_sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049"
 }

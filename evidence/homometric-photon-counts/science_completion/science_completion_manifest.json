@@ -2,7 +2,7 @@
   "schema": "science-completion-manifest-v1",
   "date": "2026-10-20",
   "file_count": 44,
-  "total_bytes": 4054124,
+  "total_bytes": 4054002,
   "scope": "Complete delivered proof record. This manifest and the portable PDF containing it are excluded from self-hashing. Temporary rendering/upload files are excluded. Hashes establish byte identity, not scientific truth.",
   "files": [
     {
@@ -63,12 +63,12 @@
     {
       "path": "harmonic_certificate/harmonic_groups.json",
       "bytes": 45062,
-      "sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac"
+      "sha256": "bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96"
     },
     {
       "path": "harmonic_certificate/harmonic_root_certificate.json",
       "bytes": 262857,
-      "sha256": "83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912"
+      "sha256": "bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8"
     },
     {
       "path": "harmonic_certificate/harmonic_root_proof.txt",
@@ -78,17 +78,17 @@
     {
       "path": "harmonic_certificate/harmonic_root_summary.json",
       "bytes": 4704,
-      "sha256": "72d720e4dbaad1c2e4d6aa496d7af052a0fe8df5771682cdefdfa12961fdd4f5"
+      "sha256": "bd5975e401c4e6aa7eb5f7957b48c7049c510029c8ffafb8a530b45195d4b36b"
     },
     {
       "path": "harmonic_certificate/independent_harmonic_review.txt",
-      "bytes": 15244,
-      "sha256": "1e514730818696b1650e65529699df5c336d614013fde36ccf51c0c82f910e41"
+      "bytes": 15188,
+      "sha256": "49d59d931b032a74e41a1a0ffeccfa69877f6743e0b797951e4983e086addb67"
     },
     {
       "path": "harmonic_certificate/input_model.json",
-      "bytes": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "bytes": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
     },
     {
       "path": "homogeneous_control/REPRODUCE.txt",
@@ -112,8 +112,8 @@
     },
     {
       "path": "independent_completion_review.txt",
-      "bytes": 13740,
-      "sha256": "80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296"
+      "bytes": 13753,
+      "sha256": "dc5e05a93845b7955cbb1016b2e7a7111a33d91e8c081fe47da82e7275a77fee"
     },
     {
       "path": "literature/iid_gaussian_homometry_novelty_comparison.txt",
@@ -137,18 +137,18 @@
     },
     {
       "path": "model_reconstruction/rebuild_independent.py",
-      "bytes": 13289,
-      "sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627"
+      "bytes": 13270,
+      "sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049"
     },
     {
       "path": "model_reconstruction/rebuild_independent_model.json",
-      "bytes": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "bytes": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
     },
     {
       "path": "model_reconstruction/rebuild_independent_premises.json",
       "bytes": 405925,
-      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+      "sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352"
     },
     {
       "path": "model_reconstruction/rebuild_independent_premises.py",
@@ -162,8 +162,8 @@
     },
     {
       "path": "report_science_review.txt",
-      "bytes": 5751,
-      "sha256": "2371a51d960cfe4fae93bcbb5c72c4784dad77d35aa6445e7ccf41b563d71428"
+      "bytes": 5748,
+      "sha256": "0bec2b1b96d4c674d57709b8f51cfed32e5300f4821eb2b1309a3b9191580538"
     },
     {
       "path": "root_certificate/certify_two_roots.py",
@@ -172,28 +172,28 @@
     },
     {
       "path": "root_certificate/independent_root_review.txt",
-      "bytes": 13058,
-      "sha256": "1fc41aeeecd63dbf154ad05a801ba2701014b41c381a9edf18f131cb4baa4223"
+      "bytes": 13039,
+      "sha256": "675ef98802ed8ba6b2f111a4d2ead8629b5ba502e0973337e3b00933e4bd2249"
     },
     {
       "path": "root_certificate/input_premises.json",
       "bytes": 405925,
-      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+      "sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352"
     },
     {
       "path": "root_certificate/two_root_certificate.json",
       "bytes": 590553,
-      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+      "sha256": "6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889"
     },
     {
       "path": "root_certificate/two_root_proof.txt",
       "bytes": 13512,
-      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+      "sha256": "f09cad5fed84fe9847ce59bd72ed1cb5677c11339dc98695fec04f6d7d29de84"
     },
     {
       "path": "root_certificate/two_root_summary.json",
       "bytes": 3298,
-      "sha256": "28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1"
+      "sha256": "2400777d63323ff03231c5e80ac346cf5b0ca361d5e8870d66e17415a083c9ae"
     },
     {
       "path": "sample_complexity_proofs.tex",

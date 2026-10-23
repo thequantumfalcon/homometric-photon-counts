@@ -2,9 +2,9 @@
   "schema": "fresh-independent-exact-CM05-premises-v1",
   "status": "all_asserted_exact_checks_passed",
   "scope": "New reconstruction and exact verification; not recovery or replay of historical CM05 certificates. No root-count or root-localization search occurs here.",
-  "model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "model_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
   "source_sha256": "829cbaa183fe5c88e9dd9edcbe849c6a59658d2c58d55da38ba96f444f6f6af4",
-  "helper_source_sha256": "fab14e33b90ffc97d31eb2b3a80809a2bf26da81d47d8ddc1fff52e687b48627",
+  "helper_source_sha256": "c93e2750cead8af714a2732b87ebf121e4604cbcb8cbfe2e6b7c9890c6a05049",
   "number_field": {
     "radicands": [
       3,

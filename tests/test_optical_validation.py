@@ -10,6 +10,22 @@ import optical_validation as study  # noqa: E402
 
 
 class OpticalValidation(unittest.TestCase):
+    def test_certificate_replay_accepts_linux_newlines_without_changing_archive(self):
+        archived = (study.ARCHIVE / "optical-transfer-certificate/certificate.json").read_bytes()
+        linux_output = archived.replace(b"\r\n", b"\n")
+        self.assertIn(b"\r\n", archived)
+        self.assertNotEqual(linux_output, archived)
+        result = study.compare_certificate(linux_output, archived)
+        self.assertFalse(result["certificate_reproduced_byte_for_byte"])
+        self.assertTrue(result["certificate_reproduced_after_line_ending_normalization"])
+        self.assertTrue(study.compare_certificate(archived, archived)["certificate_reproduced_byte_for_byte"])
+
+    def test_certificate_replay_rejects_changes_below_float_precision(self):
+        archived = b'{"lower": 0.1234567890123456789012345678901}\r\n'
+        changed = b'{"lower": 0.1234567890123456789012345678902}\n'
+        with self.assertRaisesRegex(ValueError, "beyond line endings"):
+            study.compare_certificate(changed, archived)
+
     def test_distributed_inputs_and_nested_manifests(self):
         result = study.verify()
         self.assertEqual(result["archived_files"], 115)

@@ -1,0 +1,5 @@
+'PhotonCoordinateHomometry.position_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateHomometry.positionsA_construction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateHomometry.positionsB_construction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateHomometry.coordinates_homometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateHomometry.separation_observables' depends on axioms: [propext, Classical.choice, Quot.sound]

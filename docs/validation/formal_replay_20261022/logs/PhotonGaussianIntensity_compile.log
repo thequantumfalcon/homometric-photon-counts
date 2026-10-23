@@ -1,0 +1,3 @@
+'PhotonGaussianIntensity.intensity_phase_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianIntensity.gaussian_intensity_power_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianIntensity.gaussian_intensity_moment' depends on axioms: [propext, Classical.choice, Quot.sound]

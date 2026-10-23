@@ -1,0 +1,3 @@
+'PhotonArchiveParser.rational_probe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveParser.zero_denominator_rejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveParser.trailing_input_rejected' depends on axioms: [propext, Classical.choice, Quot.sound]

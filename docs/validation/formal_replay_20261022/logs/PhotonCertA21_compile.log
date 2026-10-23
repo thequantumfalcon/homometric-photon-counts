@@ -1,0 +1,98 @@
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:89:6: warning: Unused tactic linter: `simp only [phase21_00]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:97:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:105:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:113:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:121:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_04]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:129:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_10]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:137:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_10, phase21_11]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:145:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_10, phase21_11, phase21_12]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:153:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_10, phase21_11, phase21_12,
+  phase21_13]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:161:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_04, phase21_10, phase21_11,
+  phase21_12, phase21_13, phase21_14]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:169:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_10, phase21_20]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:177:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_10, phase21_11, phase21_20, phase21_21]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:185:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_10, phase21_11, phase21_12, phase21_20,
+  phase21_21, phase21_22]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:193:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_10, phase21_11, phase21_12,
+  phase21_13, phase21_20, phase21_21, phase21_22, phase21_23]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:201:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_04, phase21_10, phase21_11,
+  phase21_12, phase21_13, phase21_14, phase21_20, phase21_21, phase21_22, phase21_23, phase21_24]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:209:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_10, phase21_20, phase21_30]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:217:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_10, phase21_11, phase21_20, phase21_21, phase21_30,
+  phase21_31]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:225:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_10, phase21_11, phase21_12, phase21_20,
+  phase21_21, phase21_22, phase21_30, phase21_31, phase21_32]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:233:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_10, phase21_11, phase21_12,
+  phase21_13, phase21_20, phase21_21, phase21_22, phase21_23, phase21_30, phase21_31, phase21_32,
+  phase21_33]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:241:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_04, phase21_10, phase21_11,
+  phase21_12, phase21_13, phase21_14, phase21_20, phase21_21, phase21_22, phase21_23, phase21_24, phase21_30,
+  phase21_31, phase21_32, phase21_33, phase21_34]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:249:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_10, phase21_20, phase21_30, phase21_40]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:257:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_10, phase21_11, phase21_20, phase21_21, phase21_30,
+  phase21_31, phase21_40, phase21_41]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:265:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_10, phase21_11, phase21_12, phase21_20,
+  phase21_21, phase21_22, phase21_30, phase21_31, phase21_32, phase21_40, phase21_41, phase21_42]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:273:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_10, phase21_11, phase21_12,
+  phase21_13, phase21_20, phase21_21, phase21_22, phase21_23, phase21_30, phase21_31, phase21_32, phase21_33,
+  phase21_40, phase21_41, phase21_42, phase21_43]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertA21.lean:281:6: warning: Unused tactic linter: `simp only [phase21_00, phase21_01, phase21_02, phase21_03, phase21_04, phase21_10, phase21_11,
+  phase21_12, phase21_13, phase21_14, phase21_20, phase21_21, phase21_22, phase21_23, phase21_24, phase21_30,
+  phase21_31, phase21_32, phase21_33, phase21_34, phase21_40, phase21_41, phase21_42, phase21_43,
+  phase21_44]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertA.v21_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v21_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v21_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v21_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertA.v21_44' depends on axioms: [propext, Classical.choice, Quot.sound]

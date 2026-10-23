@@ -15,7 +15,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INPUTS = {
-    "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+    "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
     "continuation-2026-10-20/multibin/certificate.json": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
     "followup-2026-10-20/lowerbounds/binned_lower_bound.json": "cca4c8ed55a0b7e61f9e8bd599c7c5188f4fc680b1f45c1276d6d1a498575fb0",
 }

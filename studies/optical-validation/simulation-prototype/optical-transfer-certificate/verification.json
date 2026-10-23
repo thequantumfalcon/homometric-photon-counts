@@ -17,7 +17,7 @@
     "zero_witness_rate_error_bound",
     "disjoint_integral_enclosure"
   ],
-  "certificate_sha256": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5",
+  "certificate_sha256": "14964d2c3f9766bd19f8d4ef0994d630ce1e0aa6be99cd65f246688606ef0953",
   "verifier_sha256": "9845b4a67c241bf71c237d3258ff83d69251eaa55dcc65c69965b7c92ac37d9b",
   "workspace_bindings_checked": 128,
   "manifest_payloads_checked": 0

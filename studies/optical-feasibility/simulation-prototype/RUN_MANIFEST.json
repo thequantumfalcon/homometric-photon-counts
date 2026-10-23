@@ -5,12 +5,12 @@
   "lint_passed": true,
   "samples_per_structure": 100000,
   "sha256": {
-    "simulate.py": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92",
+    "simulate.py": "86e8ab0f8ba754ba7751e2e3cfdcb22a154212dbde49c2e96345d504f38dfa9d",
     "test_simulation.py": "41da66892dc8dba5fc05fba35bbae23d876a384f9ca14bb8602d606c2de443b0",
     "validate_run.py": "bf56e916886df8f93b3d7079dc58b96e5747b5e6a80bd65711e6f7396e10ac60",
     "README.txt": "8aafb90ab8867c77ccfb74e0ae5d39783bcf551f494d9d60caeda66df51df784",
     "run-validated/report.txt": "5b4925ae4bfe7c4ddeb607921cdde7b98e0c5c40ee7a2b548b6424d9137c1541",
-    "run-validated/report.json": "e1cbb596e7f1d3b077ebf501221e382edb08e3b5c108380565479d58134b7e8a",
+    "run-validated/report.json": "59af44f5eccc50c2617ca184a77c778cece76fd48f8e13fbdaa09bda6544ef2b",
     "run-validated/validation.json": "ec64199df6e4b9f69c1b5c9a50f48f29469873793cfa75b4ed70681056d8e1c5"
   },
   "scope": "Synthetic model and illustrative detector stress test; no physical validation, additional formal proof or installed physics package."

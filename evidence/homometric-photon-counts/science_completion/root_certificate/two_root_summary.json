@@ -56,17 +56,17 @@
     {
       "name": "input_premises.json",
       "bytes": 405925,
-      "sha256": "0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e"
+      "sha256": "7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352"
     },
     {
       "name": "two_root_certificate.json",
       "bytes": 590553,
-      "sha256": "5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07"
+      "sha256": "6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889"
     },
     {
       "name": "two_root_proof.txt",
       "bytes": 13512,
-      "sha256": "5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667"
+      "sha256": "f09cad5fed84fe9847ce59bd72ed1cb5677c11339dc98695fec04f6d7d29de84"
     }
   ]
 }

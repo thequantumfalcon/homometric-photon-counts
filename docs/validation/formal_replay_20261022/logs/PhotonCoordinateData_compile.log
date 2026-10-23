@@ -1,0 +1,4 @@
+'PhotonCoordinateInput.parsed_coordinatesA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateInput.parsed_coordinatesB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateInput.recordsA_construction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateInput.recordsB_construction' depends on axioms: [propext, Classical.choice, Quot.sound]

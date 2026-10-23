@@ -1,0 +1,7 @@
+'PhotonMixedRecurrence.field_norm_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.mixed_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.mixed_add_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.gaussian_append_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.gaussian_append_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.recurrence_eq_mixedMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonMixedRecurrence.recurrence_eq_real_intensity' depends on axioms: [propext, Classical.choice, Quot.sound]

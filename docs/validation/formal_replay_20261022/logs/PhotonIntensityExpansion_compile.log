@@ -1,0 +1,4 @@
+'PhotonIntensityExpansion.product_occupancy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonIntensityExpansion.field_power_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonIntensityExpansion.phasor_power_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonIntensityExpansion.intensity_power_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

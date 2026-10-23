@@ -1,0 +1,1205 @@
+{
+  "passed": true,
+  "compilation_mode": "Full fresh source compilation, maximum two simultaneous modules, gated by explicit project import dependencies. No historical proof objects reused.",
+  "fresh_kernel_performed": false,
+  "max_parallel_modules": 2,
+  "started_utc": "2026-10-23T04:02:06.826207+00:00",
+  "proof_manifest_sha256": "ad3e0db6ce653542785f8119fa664b06c0450a318e1cafcd319015e0633300c3",
+  "extension_manifest_sha256": "737a21eafabd3e90dc9c659abe8d3e9a3ff0cec30ca130950dafcdc12bc61236",
+  "runtime_inputs": {
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "tool-runtime/lean-4.35.0/mathlib4/lake-manifest.json": "a7190d6c08899259e731c0d98b94fb540feb172f0dc7754be2a097ceae253f3d",
+    "tool-runtime/lean-4.35.0/mathlib4/lean-toolchain": "27e73059e3a4d568450f74e39c2f79676c4f8d41373fff15170690f124e3bacd",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libc++.dll": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libclang-cpp.dll": "5c775e6e1d3f9ebdf729ce9b6c896e4517209a48fb57b7711c52ee11c4c4421f",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libInit_shared.dll": "da779e21c05a2dc4518eb03e62b7319cc03e813a5abe9aa56607b8f974f8c6b7",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLake_shared.dll": "4f4647a626bb75f117d98802b2539498843d6664a4f0ae14dedfd4005660bc18",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared.dll": "1175ac09966d023c2584c3cf2692f25cbb62c9f59f4e0244eb6d61f66c4e07f5",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_1.dll": "67d53556c84cb01969704e704a5179867bc7763745d424eb8f8ad3d967c90564",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libleanshared_2.dll": "60d88ed08f3f60eab5003f213c512873b8cb54f04f3fa27565ade6c97695e05b",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/libLLVM-23.dll": "55fec27e1f2808a2f8268aa589fc9cdac0065234edd21b0b384e43ae080f6340",
+    "tool-runtime/lean-4.35.0/lean-4.35.0-windows/bin/zlib1.dll": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a"
+  },
+  "git_dependencies": [
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4",
+      "commit": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/plausible",
+      "commit": "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/LeanSearchClient",
+      "commit": "d6b4c7be5be75ec4917c873ac50c756dc1436372"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/importGraph",
+      "commit": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/proofwidgets",
+      "commit": "df72b022e558978a1c50264cfc4d7fec86fa8e04"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/aesop",
+      "commit": "4a174c490d8707121c4a9290800489f105d85e07"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Qq",
+      "commit": "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/batteries",
+      "commit": "66e469188fe07963e5cf666c7d4433f45b8131c5"
+    },
+    {
+      "path": "tool-runtime/lean-4.35.0/mathlib4/.lake/packages/Cli",
+      "commit": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  ],
+  "driver_sha256": "8135ab1b100cf47a574f14e493c7d456dbec00ee39474b33d3e086718bf14f4f",
+  "canonical_replay_sha256": "8b377c0275805ce1689987774c0012e295b5dab61bb0b2d4841894247e6be886",
+  "project_wrapper_sha256": "a691df7b065e2e8cea6d6dc489101ea76f1bc09854b0e8c3d8be261b084cff98",
+  "command_pattern": [
+    "lake.exe",
+    "--no-cache",
+    "env",
+    "lean",
+    "-R",
+    "FRESH_OUTPUT",
+    "-o",
+    "FRESH_OUTPUT/MODULE.olean",
+    "FRESH_OUTPUT/MODULE.lean"
+  ],
+  "steps": [
+    {
+      "module": "PhotonAlgebra",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 36.45299999997951,
+      "source_sha256": "ce29b7870dbd8d1fe7e836a1f144f067d346a36677df1c99b019059c03a22127",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "7ba7faa455588e6a477b4eea674bf6b142d4390839d8feeb55ea518364e8999a",
+      "original_log_sha256": "295529823faa7324fd54c477c91af586cad5ff90e77a224fb86fa8fec7e10e67",
+      "public_log_sha256": "295529823faa7324fd54c477c91af586cad5ff90e77a224fb86fa8fec7e10e67",
+      "log_path": "formal_replay_20261022/logs/PhotonAlgebra_compile.log"
+    },
+    {
+      "module": "PhotonMomentTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 44.889999999984866,
+      "source_sha256": "911c8db0c7a1a7044abb74479af553c3bb5ba0abbaaa52b8c99e400e269e0ea8",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "335cf47985bb65da3119bd5b86e8bdf09728dcc98647dd8fa10253084c897977",
+      "original_log_sha256": "41c05ea4de81a749295fe02c5d90e27df01a94bd067be95909a5e2982ad41869",
+      "public_log_sha256": "41c05ea4de81a749295fe02c5d90e27df01a94bd067be95909a5e2982ad41869",
+      "log_path": "formal_replay_20261022/logs/PhotonMomentTransfer_compile.log"
+    },
+    {
+      "module": "PhotonPoissonSeries",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 15.296999999991385,
+      "source_sha256": "667564be18101e3184335fde9bff6e1dd6c98f3fabbe1de6ea72e8d61b41c294",
+      "axiom_audits": 1,
+      "required_axiom_audits": 1,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "cdc6fa7ee4b10adfd37bbaa7bfcf197f696675a9c50374aac1752618a3dd5a29",
+      "original_log_sha256": "734b00516864818f0d2ac70fc232d829d7d4ff800bb40455eee2c7806eb8e09a",
+      "public_log_sha256": "734b00516864818f0d2ac70fc232d829d7d4ff800bb40455eee2c7806eb8e09a",
+      "log_path": "formal_replay_20261022/logs/PhotonPoissonSeries_compile.log"
+    },
+    {
+      "module": "PhotonGaussianPhase",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.719000000011874,
+      "source_sha256": "d60b521a8353ab8614c3409dc4c62ba635371428634774a08dc146a431f693e7",
+      "axiom_audits": 12,
+      "required_axiom_audits": 12,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9620dd8f9c7b9f12d51c3249dd28726466d06f06b05662e7528f736461ddc62a",
+      "original_log_sha256": "14a784fe61c3f1790219df5b804e6c1afb3a6bfc06a989e3ddd6f4933cd8ef45",
+      "public_log_sha256": "14a784fe61c3f1790219df5b804e6c1afb3a6bfc06a989e3ddd6f4933cd8ef45",
+      "log_path": "formal_replay_20261022/logs/PhotonGaussianPhase_compile.log"
+    },
+    {
+      "module": "PhotonPoissonMeasure",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 15.860000000015134,
+      "source_sha256": "9b4ea374cc97ef842c91c2ff7409325cdcd1fc63fae6f97b3b4fec2bfb9b933f",
+      "axiom_audits": 3,
+      "required_axiom_audits": 3,
+      "project_imports": [
+        "PhotonPoissonSeries"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "8470d3d75be0d4dbbf23f083c0d925414906b541cc47c0acb5cfdafbd4397ad1",
+      "original_log_sha256": "eb2f71cff40281126be1e0a811251ba8fe62a7778c1231759bf7106929a9b635",
+      "public_log_sha256": "eb2f71cff40281126be1e0a811251ba8fe62a7778c1231759bf7106929a9b635",
+      "log_path": "formal_replay_20261022/logs/PhotonPoissonMeasure_compile.log"
+    },
+    {
+      "module": "PhotonArchiveParserCore",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 10.23399999999674,
+      "source_sha256": "278328d4480988bcf4a88482a523f0f1c541214bd960401bc90f938b7c953bc5",
+      "axiom_audits": 3,
+      "required_axiom_audits": 3,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "a3ab65052f9db78c3877f25efaf92933bf8a469c1299be0bd901e33bfdccb347",
+      "original_log_sha256": "7e661caa8fadc8e98af9eb2c5a34af774de07fe65d4b5939ca22d4891e15853b",
+      "public_log_sha256": "7e661caa8fadc8e98af9eb2c5a34af774de07fe65d4b5939ca22d4891e15853b",
+      "log_path": "formal_replay_20261022/logs/PhotonArchiveParserCore_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateParser",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 10.187999999994645,
+      "source_sha256": "3f233f46b933fd1112fe21d1e878d642c530f8c7e24d74ba91199f56cb38f345",
+      "axiom_audits": 3,
+      "required_axiom_audits": 3,
+      "project_imports": [
+        "PhotonArchiveParserCore"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "f04cb8c34430f7863916b842a803b043390b1113c345965533e0a93cc84a92a9",
+      "original_log_sha256": "7417db82d699ac59a48955be67b437ff998e7929483edc08077f130d90a435cc",
+      "public_log_sha256": "7417db82d699ac59a48955be67b437ff998e7929483edc08077f130d90a435cc",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateParser_compile.log"
+    },
+    {
+      "module": "PhotonMixtureBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.32799999997951,
+      "source_sha256": "a50412c7e6aed894618ba86695fb51869e45c7d2adce74aee4e2a80f6bfa9334",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonAlgebra",
+        "PhotonMomentTransfer",
+        "PhotonPoissonMeasure"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "55a06f78f2edeb20b7e34382e8c52b5c7e5879c5621fa39e56b811f4d9b5d5b2",
+      "original_log_sha256": "0d3ce7c73149c72db7e0d61169a521db8706b71b70b6151e6a97a07668cf83de",
+      "public_log_sha256": "0d3ce7c73149c72db7e0d61169a521db8706b71b70b6151e6a97a07668cf83de",
+      "log_path": "formal_replay_20261022/logs/PhotonMixtureBridge_compile.log"
+    },
+    {
+      "module": "PhotonPoissonMixture",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 16.29700000002049,
+      "source_sha256": "a707820836634fb91c8f3f2b5e6becdf5b2ef492058d264515b4053cf5da1c8a",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonMixtureBridge",
+        "PhotonPoissonMeasure"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "345ca62898087fdc28539cc77dbceea6846ffe5bbd511d9edd6aa671f400506b",
+      "original_log_sha256": "2927f11b34b979d16f0294fe8e059dfd67a46cb15e52d71e371490b438fa3b80",
+      "public_log_sha256": "2927f11b34b979d16f0294fe8e059dfd67a46cb15e52d71e371490b438fa3b80",
+      "log_path": "formal_replay_20261022/logs/PhotonPoissonMixture_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateData",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 27.0,
+      "source_sha256": "593c5148145143615f80f0ff1bebb67bd110f2ee6a778f74029f2a0f8095a066",
+      "axiom_audits": 4,
+      "required_axiom_audits": 4,
+      "project_imports": [
+        "PhotonCoordinateParser"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "52c01812c41aa27d97c664524e812beac50e9c0a932277d5b0aff9c594286b11",
+      "original_log_sha256": "ce0ab7266a5124f94d57c34ac8da2bf12fca1636208ad1d03761b58a4c161040",
+      "public_log_sha256": "ce0ab7266a5124f94d57c34ac8da2bf12fca1636208ad1d03761b58a4c161040",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateData_compile.log"
+    },
+    {
+      "module": "PhotonGeometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 19.110000000015134,
+      "source_sha256": "88667df23f32776eed39a38d96231b22d8c80f0945731acce743e1ecbf160300",
+      "axiom_audits": 20,
+      "required_axiom_audits": 20,
+      "project_imports": [
+        "PhotonPoissonMixture"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "58c8f0b716c0986da00ec268a7b1b7aed6ab7dc912dd3bb02b8accecace76d31",
+      "original_log_sha256": "42d4c6df540bac54e03ceb063bc1c991c912dd4dfabe0b55d543ee23355b942e",
+      "public_log_sha256": "42d4c6df540bac54e03ceb063bc1c991c912dd4dfabe0b55d543ee23355b942e",
+      "log_path": "formal_replay_20261022/logs/PhotonGeometry_compile.log"
+    },
+    {
+      "module": "PhotonHomometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 11.0,
+      "source_sha256": "e264fee37e174dc4143d606aafc90b164ea0a1284b5862f29a535bd944c1f8bc",
+      "axiom_audits": 4,
+      "required_axiom_audits": 4,
+      "project_imports": [],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "798f86f18e43e3ba92ef28a756d7a311a9dc272afcc16793fa07788b9bb26979",
+      "original_log_sha256": "7285b240e250d7bf8aad535d95218f95ba4dd44b3d89a1eca439c2868ec0d1c2",
+      "public_log_sha256": "7285b240e250d7bf8aad535d95218f95ba4dd44b3d89a1eca439c2868ec0d1c2",
+      "log_path": "formal_replay_20261022/logs/PhotonHomometry_compile.log"
+    },
+    {
+      "module": "PhotonIntensityBounds",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.875,
+      "source_sha256": "3b641a7131fcb2f34c6c66fa74df8c05e3d82cc02bd350d85a4c68dc8cebadde",
+      "axiom_audits": 10,
+      "required_axiom_audits": 10,
+      "project_imports": [
+        "PhotonGeometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "5e78f03fa1bc698473288b9eba9da9b5036a7f0883f6a40b23b97a19c312f8e5",
+      "original_log_sha256": "485e13f7182d2c7e0094f17e16ace6211107094fa3707ddbc29e0f399cfbf992",
+      "public_log_sha256": "485e13f7182d2c7e0094f17e16ace6211107094fa3707ddbc29e0f399cfbf992",
+      "log_path": "formal_replay_20261022/logs/PhotonIntensityBounds_compile.log"
+    },
+    {
+      "module": "PhotonArchiveBinding",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 19.14100000000326,
+      "source_sha256": "9d0e265799210f38b3f9a1293b49c7876621b78ed8d9dfdf78869d601005706c",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonGeometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "d8df2093801657df9fb6366749ffc162527224f81dea8c089c85ca8a1e75b878",
+      "original_log_sha256": "d3ab5345d4a7c7441f9c1dfa77787a7d00c4fd56e382b142f2db03b5d304f386",
+      "public_log_sha256": "d3ab5345d4a7c7441f9c1dfa77787a7d00c4fd56e382b142f2db03b5d304f386",
+      "log_path": "formal_replay_20261022/logs/PhotonArchiveBinding_compile.log"
+    },
+    {
+      "module": "PhotonIntensityExpansion",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 16.75,
+      "source_sha256": "e38fa60c3f792cb24d89643d90a5d5097bb63c67aed77b6bae91d7c5f308bb39",
+      "axiom_audits": 4,
+      "required_axiom_audits": 4,
+      "project_imports": [
+        "PhotonIntensityBounds"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "8574175502cd1d96af6cc9c71bd7195dd91f27168d2d973b1e19876f3659f196",
+      "original_log_sha256": "5a352fa0ac738c1b3cb090ae623b7ce71eefd68e5757a5fe22b016d785d94b63",
+      "public_log_sha256": "5a352fa0ac738c1b3cb090ae623b7ce71eefd68e5757a5fe22b016d785d94b63",
+      "log_path": "formal_replay_20261022/logs/PhotonIntensityExpansion_compile.log"
+    },
+    {
+      "module": "PhotonGaussianIntensity",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.35899999999674,
+      "source_sha256": "22440bdb3421d842d8fa40a2fa95fafefe8b6edc674f7ae12b1e81a8a615bdb7",
+      "axiom_audits": 3,
+      "required_axiom_audits": 3,
+      "project_imports": [
+        "PhotonGaussianPhase",
+        "PhotonIntensityExpansion"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "c23b22f6e260d6b8b6e5d5d8090fd5909a44a966cc8b9536abd2734c0b00213a",
+      "original_log_sha256": "ab4f31e279257d137a13abd17456397c5a2b2352f7db992a90fbe2f89816812a",
+      "public_log_sha256": "ab4f31e279257d137a13abd17456397c5a2b2352f7db992a90fbe2f89816812a",
+      "log_path": "formal_replay_20261022/logs/PhotonGaussianIntensity_compile.log"
+    },
+    {
+      "module": "PhotonArchiveParsed",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 39.546999999991385,
+      "source_sha256": "2993621e7d955098da769d2bc1332675fbbacd482f017d30297e7b86ccb52464",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonArchiveBinding",
+        "PhotonArchiveParserCore"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "41f9d25f01b9471ad4f2cc0eb6631605833c6444ae82886ee3b013567244596f",
+      "original_log_sha256": "816f7e0455fba7bd8b03225f1e0a762029b6e94202e451c40648fe677b63f4e5",
+      "public_log_sha256": "816f7e0455fba7bd8b03225f1e0a762029b6e94202e451c40648fe677b63f4e5",
+      "log_path": "formal_replay_20261022/logs/PhotonArchiveParsed_compile.log"
+    },
+    {
+      "module": "PhotonGaussianModel",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.828000000008615,
+      "source_sha256": "573252cd4344a2620dd224bc639ae510c6c7910aeb7caee8ec441485adb5c2b4",
+      "axiom_audits": 6,
+      "required_axiom_audits": 6,
+      "project_imports": [
+        "PhotonGaussianIntensity",
+        "PhotonGaussianPhase"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "2ff5e782e8bf9d26fc583fd6270f670ea13693d6853c1a1d86915c573d2a3e43",
+      "original_log_sha256": "e257f6d32781d73563d994d462fe18e251f4c2015bcd0ba480f746e385e09229",
+      "public_log_sha256": "e257f6d32781d73563d994d462fe18e251f4c2015bcd0ba480f746e385e09229",
+      "log_path": "formal_replay_20261022/logs/PhotonGaussianModel_compile.log"
+    },
+    {
+      "module": "PhotonArchiveBridge",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 16.21899999998277,
+      "source_sha256": "502c15013f5f869b991250400e58b153a2eb6c3061a30b0c3cd11b6d466f65c3",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonArchiveParsed"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "67b47ad0945585438caf7c2483ff75e347978bf3c346e3d09888b55310afac52",
+      "original_log_sha256": "638a647ef7c4cdae9c56498aa3d9af4a0fd3eea9a8e134af6de4e267293a2407",
+      "public_log_sha256": "638a647ef7c4cdae9c56498aa3d9af4a0fd3eea9a8e134af6de4e267293a2407",
+      "log_path": "formal_replay_20261022/logs/PhotonArchiveBridge_compile.log"
+    },
+    {
+      "module": "PhotonGaussianAppend",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.35999999998603,
+      "source_sha256": "d77fefb08e9682ce81667fb25b94b8719783a5a9bf536e324f0b283b2e448bd8",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonGaussianModel"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "022ce1e3dbe40660438aa686d986308a63da97d01def50d57c9ca0814861d6f4",
+      "original_log_sha256": "139253fb8b96e349a55de7ee3dc6b40f599b53b3c047d0c4f10ca1be81bc771b",
+      "public_log_sha256": "139253fb8b96e349a55de7ee3dc6b40f599b53b3c047d0c4f10ca1be81bc771b",
+      "log_path": "formal_replay_20261022/logs/PhotonGaussianAppend_compile.log"
+    },
+    {
+      "module": "PhotonCoordinates",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.14100000000326,
+      "source_sha256": "a04e43caf1deff962403693847441a934e5e21cebaf7f86fb6df6dd81c91be5e",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonGeometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9fc6ade9fa2a8e9cf2fc8eede35c2a196efb42f517c4440bad6849e4e08c57fd",
+      "original_log_sha256": "6ea0ec4800b86cbfbc690c2ac7f4bf07c60a53cc213f56f338e10bbc374fa575",
+      "public_log_sha256": "6ea0ec4800b86cbfbc690c2ac7f4bf07c60a53cc213f56f338e10bbc374fa575",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinates_compile.log"
+    },
+    {
+      "module": "PhotonMixedRecurrence",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.921000000002095,
+      "source_sha256": "ad3bb594affd4e662e769cc079ca5ac224017ae9f394c723545d942396bb3d09",
+      "axiom_audits": 7,
+      "required_axiom_audits": 7,
+      "project_imports": [
+        "PhotonGaussianAppend",
+        "PhotonGaussianModel"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "d874b07c1c1f698596cdfd26bdbf7cbe90bc77b2948aa58dc9547cd6d76f9e13",
+      "original_log_sha256": "a95283d13e7420c09c0c6b5c6332741384ba8554352c96d7a7bcecbb7147004d",
+      "public_log_sha256": "a95283d13e7420c09c0c6b5c6332741384ba8554352c96d7a7bcecbb7147004d",
+      "log_path": "formal_replay_20261022/logs/PhotonMixedRecurrence_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateGeometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.655999999988126,
+      "source_sha256": "ec3dcc7d518751346dc5bcb7c1233821c7f48ecd7fdb0e21abe3a8d3f748cb10",
+      "axiom_audits": 4,
+      "required_axiom_audits": 4,
+      "project_imports": [
+        "PhotonArchiveBinding",
+        "PhotonCoordinateData",
+        "PhotonCoordinates"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "5d4487a71ae3a58bb838ae8e92f645ef58375a69e4884cc9d167f3f0a3fd33ca",
+      "original_log_sha256": "1610f01e9776cbf3dab4bec50b23e319f2583eda0334f59832b8da836ecd31e5",
+      "public_log_sha256": "1610f01e9776cbf3dab4bec50b23e319f2583eda0334f59832b8da836ecd31e5",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateGeometry_compile.log"
+    },
+    {
+      "module": "PhotonMomentPolynomial",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.780999999988126,
+      "source_sha256": "12f178bf7c193a2ae304ec6a2d41fa8527eee1993ef2c4134151751ae8a0c119",
+      "axiom_audits": 10,
+      "required_axiom_audits": 10,
+      "project_imports": [
+        "PhotonMixedRecurrence"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "bf564c01645cf7eface4c591b9bfe0b799e726963f5c8235569016b02a62800b",
+      "original_log_sha256": "87e4df4b1c98bfe8778ce51b178f6a71417c7769125d1e1e09f13c42eefed61a",
+      "public_log_sha256": "87e4df4b1c98bfe8778ce51b178f6a71417c7769125d1e1e09f13c42eefed61a",
+      "log_path": "formal_replay_20261022/logs/PhotonMomentPolynomial_compile.log"
+    },
+    {
+      "module": "PhotonCountReindex",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.28100000001723,
+      "source_sha256": "e6d78710195a6e8cb8d4efd5fd154ce61277a03675364be9556d8754c08c9752",
+      "axiom_audits": 6,
+      "required_axiom_audits": 6,
+      "project_imports": [
+        "PhotonGaussianModel"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "b93c673cc19130291a96eaa258811072b14e6d252ee50a8862279caa2de57042",
+      "original_log_sha256": "56c544e31e8a63e2952f1fc90f54705662941ffa999792992f943e94f2c3de1e",
+      "public_log_sha256": "56c544e31e8a63e2952f1fc90f54705662941ffa999792992f943e94f2c3de1e",
+      "log_path": "formal_replay_20261022/logs/PhotonCountReindex_compile.log"
+    },
+    {
+      "module": "PhotonCertA0",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.89100000000326,
+      "source_sha256": "84a3e082f575157c861b84a7648b25e2ac854999c3c21449fbcfaa78fba9fc59",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonMomentPolynomial"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "3a0c3d7e0d04e1af4ae53ce3d2628a86446ba9c38469a04a93e73427fc0272a2",
+      "original_log_sha256": "0943749547506098afdaca3f2eb2ae633ff73414ca384f3492f8fded88b8a7a7",
+      "public_log_sha256": "0943749547506098afdaca3f2eb2ae633ff73414ca384f3492f8fded88b8a7a7",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA0_compile.log"
+    },
+    {
+      "module": "PhotonConcreteTransfer",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 17.75,
+      "source_sha256": "f1b91baef92ef888434f4a3820fc5447955e6e3befe56bc03659c3b727933fa7",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonMomentPolynomial"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9aacfa23a98a2be010b9465e92702c7db5f757f284f2d6cd0ff6281fc5eecec1",
+      "original_log_sha256": "9f1565abd73b3643e5630cdbfe5b0b7bb03a1646edf68976d419c5b8b3fd90b9",
+      "public_log_sha256": "9f1565abd73b3643e5630cdbfe5b0b7bb03a1646edf68976d419c5b8b3fd90b9",
+      "log_path": "formal_replay_20261022/logs/PhotonConcreteTransfer_compile.log"
+    },
+    {
+      "module": "PhotonCertA1",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 24.26600000000326,
+      "source_sha256": "5d1e95cf23879951a16c8e9a9e356a1887a5b065c5288f72e013814c6a86812b",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA0"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "280cf7e0455c3514aa40675a3e19d9f310c8e5e401e43b6dfb60324116dd2b77",
+      "original_log_sha256": "b7fc33c6e2271b52d36d76b600a19690bf39f8e554337fe7e653f1622d83628b",
+      "public_log_sha256": "b7fc33c6e2271b52d36d76b600a19690bf39f8e554337fe7e653f1622d83628b",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA1_compile.log"
+    },
+    {
+      "module": "PhotonCertA2",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.109000000025844,
+      "source_sha256": "40be09ebd64447fecf745cc0fa50bd1795ec33170a5c215e2642f7bd6ab69137",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA1"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "3aced76c015e0cd994f609a5a6e735c41b6b62fa0b81d21e732ff0a181d955aa",
+      "original_log_sha256": "1115d8ee7e07bc3416c94cee289d67f4f75fcb035a3d04cc5345640dab006f28",
+      "public_log_sha256": "1115d8ee7e07bc3416c94cee289d67f4f75fcb035a3d04cc5345640dab006f28",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA2_compile.log"
+    },
+    {
+      "module": "PhotonCertA3",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 28.79700000002049,
+      "source_sha256": "b7063ce379d161ba195ea8ad8295adc89aa41738dc24638fd7057a1a6e7e9fc3",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA2"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "19096df14cb73e6538b4da0568fb46fbd2c366917f1da24be82258fe2eb66df9",
+      "original_log_sha256": "4cf19f2b1349f71cb19d2381a468600904ac64019e4d9cd83951499161ace900",
+      "public_log_sha256": "4cf19f2b1349f71cb19d2381a468600904ac64019e4d9cd83951499161ace900",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA3_compile.log"
+    },
+    {
+      "module": "PhotonConcreteVectors",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 81.85900000002584,
+      "source_sha256": "cf0099f262f4c7b16b7d0758394d4f6420fe7e0ea8a93fccf4f404f86f4aee7f",
+      "axiom_audits": 2,
+      "required_axiom_audits": 2,
+      "project_imports": [
+        "PhotonMomentPolynomial"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "75cb35282f2822fdd53ef90788915ae63cb33e3f8b80a2af9bbde71e3d54ae7e",
+      "original_log_sha256": "37a8e20f79991594efe17363e7d65c97bc61d9d73740f36b993aa12a569605ff",
+      "public_log_sha256": "37a8e20f79991594efe17363e7d65c97bc61d9d73740f36b993aa12a569605ff",
+      "log_path": "formal_replay_20261022/logs/PhotonConcreteVectors_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateOrder",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.953000000008615,
+      "source_sha256": "bb5ab2df8f5cd9b381e93d6e942b30726c7cb9951158a288eb174d078d7c254f",
+      "axiom_audits": 9,
+      "required_axiom_audits": 9,
+      "project_imports": [
+        "PhotonCoordinateGeometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9995aa6f0db2ac162f7744ff537397f60cbc239f9f18e783337790fa68375767",
+      "original_log_sha256": "530160f83177fa62b7998b8d19e7d3ef827e0941f743119ff14c8be76ea9eb46",
+      "public_log_sha256": "530160f83177fa62b7998b8d19e7d3ef827e0941f743119ff14c8be76ea9eb46",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateOrder_compile.log"
+    },
+    {
+      "module": "PhotonCertA4",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.0,
+      "source_sha256": "850594184b3fc09c530abff8920a5d9824ceb2092345e33f5b4e6ae026d91d5e",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA3"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "7a8a86c3fc288e7397687fc6c350efd559c122cd8bb7ce62378c38d7371a862d",
+      "original_log_sha256": "3d0ea6ea2094767631a627b5ff5ba909faee54392d61d3d0c763e30358051fc3",
+      "public_log_sha256": "3d0ea6ea2094767631a627b5ff5ba909faee54392d61d3d0c763e30358051fc3",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA4_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateHomometry",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 18.875,
+      "source_sha256": "d1fdd2efe727774ab011ec6e6e71ea9e792e3199e2e5d896188332350836591b",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCoordinateGeometry",
+        "PhotonHomometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "d4e7a2cb8627508b1a41f3663b34e358d958775f83596ad822327f1acccaa187",
+      "original_log_sha256": "393435297367ad4d8b1de4e27669bf7bca1dfaf1f5e04157a986d3dcf646af63",
+      "public_log_sha256": "393435297367ad4d8b1de4e27669bf7bca1dfaf1f5e04157a986d3dcf646af63",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateHomometry_compile.log"
+    },
+    {
+      "module": "PhotonCertA5",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 36.594000000011874,
+      "source_sha256": "9991ea20ba01558c79c2b7bd7ff8504dacbe0ea0642444c124256aab3ec51f44",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA4"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "f612bdc59871e6123b2a5d266adfd152de2be5c6f75d710d1b9636763bb8a199",
+      "original_log_sha256": "a7818d5b0eaa7fd98be51a9eec1241e90349237d585f179a1c906c2b22572e88",
+      "public_log_sha256": "a7818d5b0eaa7fd98be51a9eec1241e90349237d585f179a1c906c2b22572e88",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA5_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateNoncongruence",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 22.953000000008615,
+      "source_sha256": "2790055d8a6066b7e2d6e657a6ee93354bf779e928a368cde6bd2a768c7b0905",
+      "axiom_audits": 3,
+      "required_axiom_audits": 3,
+      "project_imports": [
+        "PhotonCoordinateHomometry",
+        "PhotonCoordinateOrder"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9ae11ae171aacface41095c2aa9760e4033456ab4ba69584c2c3d930f55913ac",
+      "original_log_sha256": "b1a5bb3e655eaa620fd3325d7e9d3a88d824ee6d1c12eac23aba892b858f5062",
+      "public_log_sha256": "b1a5bb3e655eaa620fd3325d7e9d3a88d824ee6d1c12eac23aba892b858f5062",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateNoncongruence_compile.log"
+    },
+    {
+      "module": "PhotonCertA6",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 33.625,
+      "source_sha256": "79f364cf8c78ac49fa0724c3cf27bfb126c278c63e4ffdd49348b1934fe40c85",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA5"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "a9d67b9c7e601ceb883f2905c903eae94b4a3a21589cfaa320ef2847473505ad",
+      "original_log_sha256": "130dce464747b1c0d71696b86525ad7f56e4520e610f96c5c3bf38117eb0e4cf",
+      "public_log_sha256": "130dce464747b1c0d71696b86525ad7f56e4520e610f96c5c3bf38117eb0e4cf",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA6_compile.log"
+    },
+    {
+      "module": "PhotonCertA7",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.48399999999674,
+      "source_sha256": "f298015123479d3cbf26054f9e9194169b48bb3682da9cb68eabd53bf6bae83a",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA6"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "7a0b0ee53f3110e6940e3d1c52eb06286ee7659b6c9cd01341267c5740daf812",
+      "original_log_sha256": "6029b03c0e4ec8756bdd7e834fc8bf6cf507040bc6d38cc620143aeeb6585e6f",
+      "public_log_sha256": "6029b03c0e4ec8756bdd7e834fc8bf6cf507040bc6d38cc620143aeeb6585e6f",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA7_compile.log"
+    },
+    {
+      "module": "PhotonCertA8",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.90600000001723,
+      "source_sha256": "06792d1dd4a7f43b97e0edc8b0023bbe34756f0b985d990b86bc5fc85c23d105",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA7"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "68d8c17b6719736ee22ae5b298ba7ae9249cbfe5983469013d2e6e3b3a98dd6e",
+      "original_log_sha256": "e3bb11c01562a44c59d0306c67b8cfb2d363a7f83c4846eda59ac8a3362ce7d4",
+      "public_log_sha256": "e3bb11c01562a44c59d0306c67b8cfb2d363a7f83c4846eda59ac8a3362ce7d4",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA8_compile.log"
+    },
+    {
+      "module": "PhotonCertA9",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.48399999999674,
+      "source_sha256": "1a8ac6515fb334e2c118766299c6b478215f6abedba274a21ee3b2f6fa7ec107",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA8"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "2c098bdf94a53846b908fa713d6ca9aebd9d85bd3387f99a0ccacaf1678254f3",
+      "original_log_sha256": "e16fce554984ce6977c22a9b99ec5ef6e02b29202c3abf4b343d11f680fabbb7",
+      "public_log_sha256": "e16fce554984ce6977c22a9b99ec5ef6e02b29202c3abf4b343d11f680fabbb7",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA9_compile.log"
+    },
+    {
+      "module": "PhotonCertA10",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 29.062000000005355,
+      "source_sha256": "76d0d8adfec566cd7011b014ec17337f53ea3f29dbdf86b6511c6a65790faa40",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA9"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "0a7b030775138b9cc7bd6e4c01df501bee90c1dfb856c65451f246a4aa185dea",
+      "original_log_sha256": "af07d51bd68e92eed998600651a8d6f32ca043b09192ad83064949d215d1ded2",
+      "public_log_sha256": "af07d51bd68e92eed998600651a8d6f32ca043b09192ad83064949d215d1ded2",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA10_compile.log"
+    },
+    {
+      "module": "PhotonCertA11",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 30.125,
+      "source_sha256": "eb937f593b91240fabece37d3611aa86c5044590022e7beb0c817383517e49a5",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA10"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "38939863c890454ea3b42fa4ed69ec7c10ed3441537597a63a3b0f1a09e0315e",
+      "original_log_sha256": "2da9e96bb1aaa381ceea2c21437f45f767b5e692fa6e144e9836e24603b1954f",
+      "public_log_sha256": "2da9e96bb1aaa381ceea2c21437f45f767b5e692fa6e144e9836e24603b1954f",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA11_compile.log"
+    },
+    {
+      "module": "PhotonCertA12",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.48399999999674,
+      "source_sha256": "45afcf431d95ba12ded3c525543d93983fc0a94f9c48673e6851497d56d8d59a",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA11"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "b4d74a4459fc4fdfc2f4d1ae289df527f8268c003c1f68ad94260fd6dac39210",
+      "original_log_sha256": "e7a4e7cdcf50942aa4fbb8832ae83f94fa481c2066fd402df4aa6a856a4f9676",
+      "public_log_sha256": "e7a4e7cdcf50942aa4fbb8832ae83f94fa481c2066fd402df4aa6a856a4f9676",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA12_compile.log"
+    },
+    {
+      "module": "PhotonCertA13",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 33.703000000008615,
+      "source_sha256": "70b6a0e7526f0fbaf85e247834ceddbfd30f5400d9bf8cf28d49fff9c8235658",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA12"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "77a47de60525cb9d5116229ea3fd26147a474097936833f90f2bdfcb270ba8e7",
+      "original_log_sha256": "e7d488121e69ea6740c1bb655be01a04b9bacc8c089d3d8996b913710c4a7f4c",
+      "public_log_sha256": "e7d488121e69ea6740c1bb655be01a04b9bacc8c089d3d8996b913710c4a7f4c",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA13_compile.log"
+    },
+    {
+      "module": "PhotonCertA14",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 34.375,
+      "source_sha256": "819f2dde047a70ca765d83750892911c54845f9999a25b57a84070db0128c375",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA13"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "7a7851e421234806a881d110f805e0d25d3f8022b3937e06ae0e7bae77de026c",
+      "original_log_sha256": "37f8f123fce3f0c0fc3b2c8d736b2e22188efbd1b09120f09acb99fc8674559a",
+      "public_log_sha256": "37f8f123fce3f0c0fc3b2c8d736b2e22188efbd1b09120f09acb99fc8674559a",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA14_compile.log"
+    },
+    {
+      "module": "PhotonCertA15",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 32.953000000008615,
+      "source_sha256": "88a6c307da8dfd78fc1cfb649ebcfbfc60f10253f3e8f7acd7d7de0bb8cf2acb",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA14"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "ae385df752a8c7833c31c5276d259f9fac2f5757b2bf596ab2f18af133353e33",
+      "original_log_sha256": "4bfab392a56f5e54513260815028a122847cc607da004d9311b7ae0a53c896e1",
+      "public_log_sha256": "4bfab392a56f5e54513260815028a122847cc607da004d9311b7ae0a53c896e1",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA15_compile.log"
+    },
+    {
+      "module": "PhotonCertA16",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 34.67200000002049,
+      "source_sha256": "d0b4494988c8fc1be0b4d7c8a22b8aa54e6d3a7ad04e7a08b206eaac3a72fa18",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA15"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "632c5d72b4bed179dd587250b7d0b1cc20860d8ca61b15b422c191125b765b0a",
+      "original_log_sha256": "5edb426303eec287098ce595f7191ff6b6d3ec93bfde7f274816b1bddcb78d36",
+      "public_log_sha256": "5edb426303eec287098ce595f7191ff6b6d3ec93bfde7f274816b1bddcb78d36",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA16_compile.log"
+    },
+    {
+      "module": "PhotonCertA17",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 35.35899999999674,
+      "source_sha256": "d70edf042b6e55868994120f06c9fc14e27dea60ab2cf942a6371fe37fa40339",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA16"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "3c2f6bf043ea138125425e44d16f008ac8dbd95fa54b4c5027271b1184a6fd69",
+      "original_log_sha256": "96e4197f135c12fae5be34f417e14e7d9f930ebe2918c5645b795b15b54c6e5f",
+      "public_log_sha256": "96e4197f135c12fae5be34f417e14e7d9f930ebe2918c5645b795b15b54c6e5f",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA17_compile.log"
+    },
+    {
+      "module": "PhotonCertA18",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 31.03100000001723,
+      "source_sha256": "3e0200f439e64f3cb62a30bbc510ba68c3ad4e781454230a6c933cf378ddcb47",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA17"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "a732d5892d4bbc3ba9668b70cd5c8b8be0f499ff2b2c9df7d757eeabd2ce5615",
+      "original_log_sha256": "7542bfc9a1a9c337f939a10e6c63fb97dcde7d27295d922ad4bc6ff00f2f1fa3",
+      "public_log_sha256": "7542bfc9a1a9c337f939a10e6c63fb97dcde7d27295d922ad4bc6ff00f2f1fa3",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA18_compile.log"
+    },
+    {
+      "module": "PhotonCertA19",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 24.53100000001723,
+      "source_sha256": "439059d23958b4297568a4013f6be8818365ea8e32f6b0230773fd84f72d7765",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA18"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "44b245b319ee388ca9a94a8e0d593ae7c9e8ddaa063d8257c490ba25911581fe",
+      "original_log_sha256": "b8b1f73b0d0eb7a45c37635169e44f957e5ab599d1fae7e01f8124b2fe13adf6",
+      "public_log_sha256": "18783eab74997a1a7772d970b52fd2e420a75412ac4661d72d3f0f83b9eccadd",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA19_compile.log"
+    },
+    {
+      "module": "PhotonCertA20",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 23.17200000002049,
+      "source_sha256": "596e1823c8d8b3950e065f9d2b8ee9366bf184633195a73031b08fa59b0494f6",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA19"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "9e561b94b5605cc74d3329d4edfa999982e0c33f19b9b288b99c1a4ff3392d39",
+      "original_log_sha256": "3c1d9f7cb8101d2a372fdf164195b6dc0b50fd1c0aec5c40b78bc87190cebbe4",
+      "public_log_sha256": "181345245330b7b97f64d7575840e5743302433d506e4ba4d6f5633ddc745add",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA20_compile.log"
+    },
+    {
+      "module": "PhotonCertA21",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 25.062999999994645,
+      "source_sha256": "31a56028c01313022f4c5af8ebd90d587d4652b11aba8cb5a967b60e2cd4518b",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCertA20"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "b822f00c2f5061b105862c8ef592466afd4403870154cb5e64fb62b9056a394a",
+      "original_log_sha256": "4b5d5b487f98b1f2bd18e5a8eff76049c9918189bc6d87a91fd21676ec5e0425",
+      "public_log_sha256": "6562eb9a3327b9aa3d5922aadc6ccecd08f09d25e027d0ba1e0435157fa69076",
+      "log_path": "formal_replay_20261022/logs/PhotonCertA21_compile.log"
+    },
+    {
+      "module": "PhotonCertBBlock42",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 628.9070000000065,
+      "source_sha256": "56ff6612e64791b127c7497d28e3d4c0cda25bc5dadc5ec3ff0fccbfe97fbf70",
+      "axiom_audits": 110,
+      "required_axiom_audits": 110,
+      "project_imports": [
+        "PhotonCertA21"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "30b53327f0a0d98e6014d843b784d0e57a7e2fa800daa5897c8c91996427a044",
+      "original_log_sha256": "f71b7977cb8148d1a35d97e87361b5e6f15300a7794da41e2431a0d745e7bb6a",
+      "public_log_sha256": "76f0171cafc25da67d1d5168ee218998a91074af76d0434adaf0056d686c92b1",
+      "log_path": "formal_replay_20261022/logs/PhotonCertBBlock42_compile.log"
+    },
+    {
+      "module": "PhotonCertABlock42",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 730.5940000000119,
+      "source_sha256": "3095ff94bc2033be028f87bf28f6055fb6c125d23d5ef153b5ea71d735300bc6",
+      "axiom_audits": 105,
+      "required_axiom_audits": 105,
+      "project_imports": [
+        "PhotonCertA21"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "44d493ae98d80569e8a649ce1c9a8b234633f0044aa314d25c8a71f6a7686baa",
+      "original_log_sha256": "46204991f7025d94cce39cae2aaf1a7a90ae2e3b3daa713166e8c80606815ead",
+      "public_log_sha256": "7dfbc151377cbeacf0f3357539904d20b4c8d51d4f90613a7a7e5d587a0f9d4c",
+      "log_path": "formal_replay_20261022/logs/PhotonCertABlock42_compile.log"
+    },
+    {
+      "module": "PhotonCertBBlock63",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 682.2970000000205,
+      "source_sha256": "0e59a67135c5f4dd8a9bb844da6d876f7f0ef5213115b5672750a44423d7ede5",
+      "axiom_audits": 105,
+      "required_axiom_audits": 105,
+      "project_imports": [
+        "PhotonCertBBlock42"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "7bf318850745abe8148815c2ae2ffd97e423de0c97503d411a303e022141ef15",
+      "original_log_sha256": "dbaa1bb89e38b839d850678b6ad753f83e10616cdad9bbe663b03251de866cad",
+      "public_log_sha256": "e24d8896a46233ca95adec701469f0d54fec08a06f27437ae0bcf44a985734ec",
+      "log_path": "formal_replay_20261022/logs/PhotonCertBBlock63_compile.log"
+    },
+    {
+      "module": "PhotonCertABlock63",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 654.8589999999967,
+      "source_sha256": "c80141417aa72c48c3cb9908c0e16511f5ac3620fbf6054469a63cf319a0641f",
+      "axiom_audits": 105,
+      "required_axiom_audits": 105,
+      "project_imports": [
+        "PhotonCertABlock42"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "a6bbd4ebede3f382ce03ca193a0277d5717b80a9e3ad20117e81b4e73d19bbc7",
+      "original_log_sha256": "bc1ae8f7afca1c0b6dbc71f6ebc95cb8d0974309efdad5bdee313c9550dc47ab",
+      "public_log_sha256": "23b5480c6bc330c0d047ee3ecbf69167035ca4b9d6feae8d51f1bd10da3925d7",
+      "log_path": "formal_replay_20261022/logs/PhotonCertABlock63_compile.log"
+    },
+    {
+      "module": "PhotonConcreteSeparation",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.32799999997951,
+      "source_sha256": "1c900776eb332b3fd83aa026246a07f3ca2ae9fad391f7d4ea1ef26dde56c64f",
+      "axiom_audits": 10,
+      "required_axiom_audits": 10,
+      "project_imports": [
+        "PhotonCertABlock63",
+        "PhotonCertBBlock63",
+        "PhotonConcreteTransfer",
+        "PhotonConcreteVectors"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "76e28376f3d86a58de58439dc2444c32854ca1c5cb1dad696794bfe75468f7bf",
+      "original_log_sha256": "51c3e867d956822631fa532231041f6b2c8a28bd5f492fefdc71e3a491a8718f",
+      "public_log_sha256": "51c3e867d956822631fa532231041f6b2c8a28bd5f492fefdc71e3a491a8718f",
+      "log_path": "formal_replay_20261022/logs/PhotonConcreteSeparation_compile.log"
+    },
+    {
+      "module": "PhotonArchiveCountLaw",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 20.562999999994645,
+      "source_sha256": "1c95f707b4ee149f8f47ea8d7168863dc5f83c285bca9759fdef5ca350280ec7",
+      "axiom_audits": 4,
+      "required_axiom_audits": 4,
+      "project_imports": [
+        "PhotonArchiveBridge",
+        "PhotonConcreteSeparation",
+        "PhotonCountReindex"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "0d3a2fb00141f934b1eb113a22244aad9824537456c685d3ad4f9834dc4b53a1",
+      "original_log_sha256": "176938c7603420598d6d7daf4a63609b713c0ede4ff9f34bd9c89d17b270b02d",
+      "public_log_sha256": "176938c7603420598d6d7daf4a63609b713c0ede4ff9f34bd9c89d17b270b02d",
+      "log_path": "formal_replay_20261022/logs/PhotonArchiveCountLaw_compile.log"
+    },
+    {
+      "module": "PhotonJointModel",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.125,
+      "source_sha256": "35033ce8fccb030f37cfb8ab2c5e8d78ed9153cc3c009833e8666b473aa2fd0b",
+      "axiom_audits": 13,
+      "required_axiom_audits": 13,
+      "project_imports": [
+        "PhotonConcreteSeparation"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "ad746ca11002bd4ddfb6b04ebdefefc2615a492098614cee216ade7ea639b40c",
+      "original_log_sha256": "46c575671b42baf550d44d1d02a5ad6da12e83e1137b1a98cd5d72257310cead",
+      "public_log_sha256": "46c575671b42baf550d44d1d02a5ad6da12e83e1137b1a98cd5d72257310cead",
+      "log_path": "formal_replay_20261022/logs/PhotonJointModel_compile.log"
+    },
+    {
+      "module": "PhotonCoordinateCountLaw",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 19.23399999999674,
+      "source_sha256": "c02f9c29187d4c563d59606abc41a154cdf17e5d372d1a38bed95f7f248965f3",
+      "axiom_audits": 7,
+      "required_axiom_audits": 7,
+      "project_imports": [
+        "PhotonArchiveCountLaw",
+        "PhotonCoordinateGeometry"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "e68ae49ad53b62283501cb65c7b96febee3bce030f9f44c4b10cbf104a282c75",
+      "original_log_sha256": "07a600001722563b5d388ea5c2e2271b790ca97e5530ef3dfd922e2d6781cb37",
+      "public_log_sha256": "07a600001722563b5d388ea5c2e2271b790ca97e5530ef3dfd922e2d6781cb37",
+      "log_path": "formal_replay_20261022/logs/PhotonCoordinateCountLaw_compile.log"
+    },
+    {
+      "module": "PhotonSpatialSeparation",
+      "kind": "compile",
+      "returncode": 0,
+      "seconds": 21.0,
+      "source_sha256": "028a97ca610a67e819cbf8f39facc1dd93be996e87eecdbe74364172b5702e7e",
+      "axiom_audits": 5,
+      "required_axiom_audits": 5,
+      "project_imports": [
+        "PhotonCoordinateCountLaw",
+        "PhotonCoordinateNoncongruence"
+      ],
+      "permitted_axioms_only": true,
+      "passed": true,
+      "object_sha256": "492aafde54be091477a208a1ec9bb5b465cd3f01e6a6f941318ebf173c39144b",
+      "original_log_sha256": "59d468105e7e75e02b1b34e2387b58d12b1c435f7c12744439e246e588677059",
+      "public_log_sha256": "59d468105e7e75e02b1b34e2387b58d12b1c435f7c12744439e246e588677059",
+      "log_path": "formal_replay_20261022/logs/PhotonSpatialSeparation_compile.log"
+    }
+  ],
+  "scope": "Fresh ordinary Lean kernel compilation of all 61 pinned project modules with 722 explicit theorem-axiom audits. This is not an additional leanchecker --fresh run, Nanoda export check, or formalization of the separate root/testing analytic arguments.",
+  "seconds": 2378.4219999999914,
+  "completed_utc": "2026-10-23T04:41:45.240532+00:00",
+  "compiled_modules": 61,
+  "axiom_audits": 722,
+  "validation_date": "2026-10-22",
+  "client_timezone": "America/Denver",
+  "environment": "Windows, Python 3.11, pinned Lean 4.35.0 x86_64-w64-windows-gnu",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "official_runtime_archive_sha256": "5fc033e93e1a7bc59c5ebf311103d2c9cd18d4b3eddda4ffa3414e8adb0ef79e",
+  "dependency_setup": "Official Lean archive hash-checked before extraction; all nine Git checkouts matched pinned commits with no tracked source changes. Original Windows CRLF encoding reproduced for the two hash-pinned mathlib metadata files. 3196 imported library cache artifacts fetched from the official master cache before compilation.",
+  "network_during_compilation": false,
+  "executed_driver_source": "formal_replay_20261022/executed_driver.py.txt",
+  "executed_driver_command": "python build/review-lean-runtime-20261022/replay_dag.py",
+  "recommended_replay_command": "python tools/replay_formal.py --runtime PATH_TO_LEAN_4_35_WINDOWS --mathlib PATH_TO_PINNED_MATHLIB --output FRESH_OUTPUT_DIRECTORY",
+  "retained_driver_note": "Exact executed source retained for inspection. Its paths are relative to its original build/review-lean-runtime-20261022 location; the canonical tools/replay_formal.py remains the maintained public replay entrypoint.",
+  "published_log_transformation": {
+    "absolute_repository_path_replacements": 2175,
+    "replacement": "REPOSITORY_ROOT",
+    "original_and_public_sha256_recorded": true
+  },
+  "artifacts_omitted": "Downloaded runtime, mathlib checkout/cache and compiled .olean objects remain build-only. Every newly compiled object is identified by SHA256 in the corresponding step."
+}

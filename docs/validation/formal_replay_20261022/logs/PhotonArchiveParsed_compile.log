@@ -1,0 +1,2 @@
+'PhotonArchiveParser.parsedA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveParser.parsedB' depends on axioms: [propext, Classical.choice, Quot.sound]

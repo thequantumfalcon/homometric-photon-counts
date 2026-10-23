@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore two 63-site structures with identical diffraction and different photon-count statistics. An interactive, source-bound research demonstration.">
+  <meta name="theme-color" content="#f5f4ee">
+  <title>Homometric photon counts — an interactive explanation</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="model.js"></script>
+  <script defer src="vendor/three-orbit.min.js"></script>
+  <script defer src="scene.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#explorer">Skip to the interactive demo</a>
+<header class="site-header wrap">
+  <a class="brand" href="#top" aria-label="Homometric photon counts, top"><img src="mark.svg" width="34" height="34" alt=""><span>HOMOMETRIC<br><b>PHOTON COUNTS</b></span></a>
+  <nav aria-label="Main navigation"><a href="#explorer">Explore</a><a href="#result">The result</a><a href="#evidence">Evidence</a></nav>
+  <a class="paper-link" href="../docs/report/historical/science_completion_report.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+</header>
+<main id="top">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div><p class="eyebrow"><span class="status-dot"></span> AN INTERACTIVE RESEARCH NOTE</p><h1 id="hero-title">Different structures.<br><em>Identical diffraction.</em></h1></div>
+    <div class="hero-copy"><p>Two arrangements of 63 sites share every pair distance. Ordinary diffraction cannot distinguish them. Under a precise phase-noise model, the fourth moment can.</p><button class="text-action" id="start-story">Find the hidden difference <span aria-hidden="true">↘</span></button><p class="scope-line">Exact mathematics · Conditional model · No apparatus measurements</p></div>
+  </section>
+
+  <section class="explorer wrap" id="explorer" aria-label="Interactive research explorer">
+    <div class="explorer-heading"><p class="eyebrow">THE EXPERIMENT, EXPLAINED</p><button class="quiet-button" id="download-view">Export this view <span aria-hidden="true">↓</span></button></div>
+    <div class="tabs" role="tablist" aria-label="Explore the result">
+      <button id="tab-geometry" role="tab" aria-selected="true" aria-controls="panel-geometry"><span>01</span> Same diffraction</button>
+      <button id="tab-noise" role="tab" aria-selected="false" aria-controls="panel-noise" tabindex="-1"><span>02</span> The hidden difference</button>
+      <button id="tab-gains" role="tab" aria-selected="false" aria-controls="panel-gains" tabindex="-1"><span>03</span> Four blind gains</button>
+    </div>
+
+    <section id="panel-geometry" role="tabpanel" aria-labelledby="tab-geometry">
+      <div class="workspace">
+        <div class="visual-column">
+          <div class="figure-heading"><div><p class="figure-number">FIGURE 01 / EXACT CONSTRUCTION</p><h2>One motif. Two arrangements.</h2></div><div class="segmented" role="group" aria-label="Geometry view"><button id="view-2d" aria-pressed="true">2D</button><button id="view-3d" aria-pressed="false">3D inspection</button></div></div>
+          <div class="geometry-stage" id="geometry-stage">
+            <svg id="geometry-svg" viewBox="0 0 860 255" role="img" aria-labelledby="geometry-title geometry-desc"><title id="geometry-title">Two 63-site structures</title><desc id="geometry-desc">The same 21-site motif is placed at offsets 0, 31, 63 for A, and 0, 32, 63 for B. The middle copy moves by one coordinate unit.</desc></svg>
+            <div id="three-view" hidden><div class="scene-legend legend"><span class="legend-a">Structure A</span><span class="legend-b">Structure B</span></div><canvas id="geometry-canvas" tabindex="0" aria-label="3D positions and phase vectors. Drag to rotate, scroll to zoom, or use the camera buttons." aria-describedby="three-caption"></canvas><div class="camera-tools" role="group" aria-label="3D camera controls"><button id="rotate-left" aria-label="Rotate camera left">↶</button><button id="rotate-right" aria-label="Rotate camera right">↷</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="reset-view">Reset view</button></div></div>
+          </div>
+          <p class="figure-caption" id="geometry-caption">All positions lie on a line. Rows are separated for display. The highlighted middle motif shifts by one unit; no translation or reflection aligns the complete sets.</p>
+          <p class="figure-caption" id="three-caption" hidden>Spatial position runs along each row. Rods represent complex phase vectors, not extra spatial coordinates or a physical apparatus. Drag to orbit; use two fingers to zoom.</p>
+          <p class="notice" id="render-status" role="status" hidden></p>
+          <div class="plot-heading"><h3>The clean diffraction intensity is the same</h3><div class="legend"><span class="legend-a">A</span><span class="legend-b">B (dashed)</span></div></div>
+          <svg id="diffraction-svg" class="chart" viewBox="0 0 860 235" role="img" aria-label="Clean diffraction intensity against spatial angular frequency; the two curves coincide"></svg>
+          <p class="figure-caption">The curves overlap for every frequency. The displayed curve is a floating-point rendering of the clean-field formula; the homometry statement is exact.</p>
+        </div>
+        <aside class="controls" aria-label="Geometry controls">
+          <span class="tag">PROVED GEOMETRY</span><h3>Same pair distances. <br>Different positions.</h3><p>Homometric sets have the same directed pair differences, including their multiplicities.</p>
+          <div class="stat-pair"><div><strong>63</strong><span>sites in each set</span></div><div><strong>3,969</strong><span>directed differences</span></div></div>
+          <label class="control-label" for="frequency">Spatial angular frequency <span>q</span></label><output id="frequency-value" for="frequency" class="control-value"></output><input id="frequency" type="range" min="0" max="6.283185307179586" step="any" value="1.0471975511965976"><div class="range-ends"><span>0</span><span>2π</span></div><button class="small-link" id="frequency-reference">Set q = π/3</button>
+          <dl class="readout"><div><dt>Clean intensity A</dt><dd id="clean-a"></dd></div><div><dt>Clean intensity B</dt><dd id="clean-b"></dd></div></dl>
+          <div id="phase-controls" hidden><label class="checkbox-label"><input type="checkbox" id="phase-example"> Add a Gaussian phase snapshot</label><button class="small-button" id="new-snapshot" disabled>New snapshot</button><p class="microcopy">Illustrative draws at s = 2 ln 2. The diffraction chart above remains the clean field. No temporal-motion model is implied.</p></div>
+          <div class="aside-note"><b>Why q = π/3?</b><p>At this selected frequency, the clean amplitude vanishes and the first three noisy intensity moments match.</p></div>
+          <button class="next-step" data-next="noise">Explore the fourth moment <span aria-hidden="true">→</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="panel-noise" role="tabpanel" aria-labelledby="tab-noise" hidden>
+      <div class="workspace">
+        <div class="visual-column">
+          <div class="figure-heading"><div><p class="figure-number">FIGURE 02 / EXACT MOMENT IDENTITY</p><h2>The difference appears at order four.</h2></div><span class="frequency-lock">q = π/3</span></div>
+          <div class="moment-strip" role="group" aria-label="Intensity moment differences"><div><span>FIRST MOMENT</span><strong>0</strong><small>D₁, exactly</small></div><div><span>SECOND MOMENT</span><strong>0</strong><small>D₂, exactly</small></div><div><span>THIRD MOMENT</span><strong>0</strong><small>D₃, exactly</small></div><div class="moment-four"><span>FOURTH MOMENT</span><strong id="fourth-intensity"></strong><small>D₄, displayed approximately</small></div></div>
+          <div class="plot-heading"><h3 id="gap-chart-heading">Fourth intensity-moment difference</h3><div class="segmented" role="group" aria-label="Moment display"><button id="metric-intensity" aria-pressed="true">Intensity</button><button id="metric-counts" aria-pressed="false">Photon counts</button></div></div>
+          <svg id="gap-svg" class="gap-chart" viewBox="0 0 860 325" role="img" aria-label="Fourth-moment difference against Gaussian phase variance, positive for every finite positive variance"></svg>
+          <div class="formula-box"><span id="gap-symbol">D₄(t)</span><span>=</span><span><span class="fraction"><span>455015761</span><span>20000</span></span> t<sup>8</sup>(1 − t²)<sup>5</sup>(t<sup>6</sup> + 3t<sup>4</sup> + 6t² + 6)</span></div>
+          <p class="figure-caption">The equation is the intensity identity: Dₖ = E[I<sub>A</sub><sup>k</sup>] − E[I<sub>B</sub><sup>k</sup>]. The differences vanish through order three; the moments themselves do not. For photon counts, the plot shows η⁴D₄: the difference in E[N(N − 1)(N − 2)(N − 3)]. Both plots numerically render exact identities.</p>
+        </div>
+        <aside class="controls" aria-label="Moment controls"><span class="tag">FORMALIZED RESULT</span><h3>Noise reveals what <br>diffraction cannot.</h3><p>Each site receives an independent Gaussian phase. A positive fourth-moment gap proves the full count laws differ.</p><details class="model-definition"><summary>The intensity model</summary><p>I<sub>G</sub> = |∑<sub>x∈G</sub> exp(i(qx + φ<sub>x</sub>))|², with equal unit amplitudes and independent φ<sub>x</sub> ∼ Normal(0, s).</p></details>
+          <label class="control-label" for="phase-variance">Gaussian phase variance <span>s</span></label><output id="variance-value" for="phase-variance" class="control-value"></output><input id="phase-variance" type="range" min="0.05" max="6" step="any" value="1.3862943611198906"><div class="range-ends"><span>0.05</span><span>6</span></div><button class="small-link" id="variance-reference">Reference: s = 2 ln 2</button>
+          <label class="control-label" for="gain">Photon gain <span>η</span></label><output id="gain-value" for="gain" class="control-value"></output><input id="gain" type="range" min="-3.3010299956639813" max="-0.3979400086720376" step="any" value="-1.3010299956639813"><div class="range-ends"><span>0.0005</span><span>0.4 · log scale</span></div>
+          <dl class="readout"><div><dt>Coherence t = e<sup>−s/2</sup></dt><dd id="coherence-value"></dd></div><div><dt>Fourth factorial-count gap</dt><dd id="count-gap"></dd></div></dl>
+          <div class="aside-note"><b>Distinct does not mean easy to measure.</b><p>At the reference point, the fourth intensity-moment gap is only about 1.375 parts per million of the moment.</p></div>
+          <p class="microcopy">N | I ∼ Poisson(b + ηI), with common b ≥ 0. The fourth factorial-count gap is η⁴D₄; the background cancels because moments 1–3 match.</p><button class="next-step" data-next="gains">Inspect the blind gains <span aria-hidden="true">→</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="panel-gains" role="tabpanel" aria-labelledby="tab-gains" hidden>
+      <div class="workspace"><div class="visual-column"><div class="figure-heading"><div><p class="figure-number">FIGURE 03 / CERTIFIED ROOT INTERVALS</p><h2>One event can miss the difference.</h2></div><span class="frequency-lock">t = 1/2 · b = 0</span></div>
+        <p class="figure-intro">A <b>blind gain</b> is a positive η where P<sub>A</sub>(N = 4) = P<sub>B</sub>(N = 4). Exactly four such gains exist in this reference model. The complete photon-count laws still differ.</p>
+        <svg id="roots-svg" class="root-chart" viewBox="0 0 860 220" role="img" aria-label="Four certified blind-gain intervals shown at approximate positions on a logarithmic gain axis"></svg>
+        <div id="root-buttons" class="root-buttons" role="group" aria-label="Choose a certified blind gain"></div>
+        <div class="root-detail"><div class="root-detail-head"><span class="tag">CERTIFIED INTERVAL</span><span id="root-location"></span></div><h3 id="root-title"></h3><p id="root-description"></p><div class="sign-row" id="root-signs"></div><details id="exact-root"><summary>Inspect the exact endpoints</summary><dl class="exact-bounds"><div><dt>Lower endpoint</dt><dd id="root-lower"></dd></div><div><dt>Upper endpoint</dt><dd id="root-upper"></dd></div></dl><a id="root-source" href="../docs/claims.md">Open the source certificate ↗</a></details></div>
+        <p class="figure-caption">Markers indicate approximate locations, not interval widths. Some exact brackets are narrower than floating-point display precision. This diagram does not numerically prove the root count.</p>
+      </div><aside class="controls"><span class="tag">INTERVAL / ANALYTIC PROOF</span><h3>Choose the statistic <br>with care.</h3><p>A single event probability can agree even when two probability distributions are different.</p><div class="event-equation">P<sub>A</sub>(N = 4)<br><span>=</span><br>P<sub>B</sub>(N = 4)</div><div class="aside-note"><b>Blind event, not identical laws.</b><p>At every positive gain, the positive fourth factorial-moment gap still separates the complete count distributions.</p></div><p class="microcopy">These four-root results use q = π/3, s = 2 ln 2 and b = 0. Their certificates and analytic arguments are separate from the Lean formalization.</p><a class="next-step" href="../docs/claims.md">Read the precise claims <span aria-hidden="true">↗</span></a></aside></div>
+    </section>
+    <div class="explorer-footer"><span><span class="status-dot"></span> Runs locally · No data sent</span><span>Illustrations are numerical; linked proofs establish the statements.</span></div>
+  </section>
+
+  <section class="result-section wrap" id="result" aria-labelledby="result-title"><div class="section-intro"><p class="eyebrow">WHAT THIS ESTABLISHES</p><h2 id="result-title">A mathematical distinction.<br><em>An experimental challenge.</em></h2><p>The result is not a claim of practical imaging performance. The observation model, statistic and calibration matter.</p></div><div class="result-content"><article class="sample-panel"><p class="eyebrow">ORIGINAL REFERENCE EXPERIMENT</p><h3>Tens of trillions of observations.</h3><div class="sample-counts"><div><strong>≈28.1 trillion</strong><span>necessary lower bound</span></div><span class="count-arrow" aria-hidden="true">→</span><div><strong>≈102.4 trillion</strong><span>certified sufficient count</span></div></div><p>Each testing error below 5%, at s = 2 ln 2, η = 1/20, b = 0, using independent observations of the 13 fixed bins 0–11 and ≥12.</p><details class="exact-counts"><summary>Exact sample counts</summary><p>Necessary: at least <b>28,091,647,285,174</b> observations. Sufficient for the certified score: <b>102,399,876,723,169</b>.</p></details><p class="microcopy">These bounds concern this fixed binned experiment. They are not an acquisition plan or a lower bound for every detector, frequency or measurement.</p><a href="../docs/claims.md">Inspect the sample-bound assumptions ↗</a></article><article class="optical-note"><span class="tag">SEPARATE OPTICAL STUDY</span><h3>A changed design asks a different question.</h3><p>At a different frequency, a second-order signal gives a conditional 5,000-snapshot guarantee with each error below 4.53%, under the ideal optical and calibration assumptions below.</p><details><summary>Assumptions of this separate guarantee</summary><p>q = 201π/200; iid snapshots with independent Gaussian site phases and equal amplitudes; gain η ∈ [0.98, 1.02], phase variance s ∈ [0.049, 0.051], and background b ∈ [0.10, 0.15] per gate, fixed within the box. Ideal 256-level phase quantization and initially-live nonparalyzable dead time ≤22 ns per 5 ms gate are included. Afterpulsing and temporal dependence are excluded.</p><a href="../studies/optical-feasibility/README.md">Read the feasibility certificate and model ↗</a></details><p>This does not demonstrate the original fourth-order-only effect. Physical transfer and detector validation remain open.</p><a href="../studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/demo.html">Explore the archived synthetic optical viewer ↗</a></article></div></section>
+
+  <section class="evidence-section wrap" id="evidence" aria-labelledby="evidence-title"><div class="section-intro"><p class="eyebrow">INSPECT, REPRODUCE, CHALLENGE</p><h2 id="evidence-title">Every result has<br>a route to its evidence.</h2><p>The demo is an explanation. It does not replace the exact inputs, proofs or verification records.</p></div><div class="evidence-list"><a href="../docs/report/README.md"><span class="evidence-num">01</span><div><h3>The written argument</h3><p>Original 18-page report, recovered sources and historical scope.</p></div><span aria-hidden="true">↗</span></a><a href="../docs/validation/formal_replay_20261022.json"><span class="evidence-num">02</span><div><h3>The formalized statements</h3><p>61 Lean modules and 722 axiom audits in a fresh source rebuild.</p></div><span aria-hidden="true">↗</span></a><a href="../docs/validation/README.md"><span class="evidence-num">03</span><div><h3>The executed checks</h3><p>Numerical replays, interval certificates and exact execution scopes.</p></div><span aria-hidden="true">↗</span></a><a href="README.md"><span class="evidence-num">04</span><div><h3>How this demo is checked</h3><p>Source bindings, numerical tests, browser checks and visual inspection.</p></div><span aria-hidden="true">↗</span></a></div></section>
+  <section class="disclosure wrap" aria-label="Research disclosure"><b>Methods and limitations.</b> Substantial parts of this work were developed with AI assistance under human direction. The maintainer did not independently derive or manually verify every step. Internal checks are not external human peer review. No novelty or measured apparatus performance is claimed. <a href="../docs/research-disclosure.md">Read the full disclosure.</a></section>
+</main>
+<footer class="site-footer wrap"><span>HOMOMETRIC PHOTON COUNTS</span><span>Maintained by The Quantum Falcon</span><a href="../README.md">Repository guide ↗</a></footer>
+<noscript><div class="noscript">Enable JavaScript to interact with the figures. The <a href="../docs/report/historical/science_completion_report.pdf">report</a> and <a href="../docs/claims.md">claim ledger</a> remain available without it.</div></noscript>
+</body>
+</html>

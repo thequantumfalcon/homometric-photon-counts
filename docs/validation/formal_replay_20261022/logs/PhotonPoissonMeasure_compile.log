@@ -1,0 +1,3 @@
+'PhotonPoissonMeasure.poissonLaw_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMeasure.poissonLaw_factorial_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMeasure.poissonLaw_factorial_moment' depends on axioms: [propext, Classical.choice, Quot.sound]

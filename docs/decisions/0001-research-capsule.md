@@ -1,10 +1,10 @@
-# Research capsule rather than a fabricated application package
+# Source research capsule
 
 Status: accepted for the local public candidate.
 
-The user requested a factual scientific repository using the supplied gold-standard guide. Tier 2 is the appropriate target: a real project intended for inspection, without growth automation or empty application scaffolding.
+The repository distributes scientific arguments, exact inputs and executable checks for inspection and reproduction.
 
-The distributable is a source research capsule with a standard-library command catalog. There is no invented Python library API requiring an artificial `src/` package or package-registry publication. The actual artifact is a ZIP containing the proofs, inputs and replay programs, and it must be tested after extraction.
+The distributable is a source research capsule with a standard-library command catalog. A ZIP contains the proofs, inputs and replay programs, and must be tested after extraction. The documented commands are the supported interface.
 
 Scientific evidence keeps byte identity under the public inventory. `.gitattributes` marks evidence as binary for Git's text-conversion purposes, even when the file format is textual. This prevents line-ending normalization from invalidating certificate hashes.
 

@@ -5,7 +5,8 @@ with a scalar optical model, calibration-error simulations, external processed
 SPAD data, an afterpulsing simulation and rigorous finite-setting numerical
 checks. **They do not physically validate the proposed apparatus.**
 
-The [manifest](manifest.json) preserves 115 selected files byte for byte. Earlier
+The [manifest](manifest.json) pins 115 selected files and records the
+[editorial derivative](../../docs/provenance.md) of the original byte-for-byte import. Earlier
 proofs, certificates, and unsuccessful outcomes remain intact. Historical
 README/status fields describe their original local execution; this page and
 the public runner below describe the supported distribution.
@@ -61,7 +62,8 @@ Zero observed errors do not prove zero true error.
 The original [GPL-3.0 license](simulation-prototype/measured-data-review/data/spad/LICENSE.upstream.txt)
 is retained beside the tables and their afterpulse-study copies. The project's
 MIT grant does not replace those terms. No upstream executable source, article
-PDF, viewer JavaScript, SLM figure archive or raw REA path log is included.
+PDF, viewer JavaScript, SLM figure archive or raw path log from Reverse Engineer
+Anything (REA), an artifact-inspection tool, is included.
 The retained acquisition notes refer to some omitted local materials. Numerical
 SLM calibration data remain unavailable; the retrieved SLM archive held figures
 only. REA supplied artifact-identity evidence, not a physics or security proof.
@@ -88,7 +90,9 @@ python tools/optical_validation.py replay --output build/optical-validation
 ```
 
 This stages the transfer certificate in a fresh directory, repeats the audits,
-and regenerates the entire certificate byte for byte. It fetches and installs
+and regenerates the entire certificate exactly apart from CRLF/LF line endings.
+Every other byte, including all enclosure digits, must match. The replay reports
+byte identity separately and preserves the archived certificate. It fetches and installs
 nothing. `PHOTON_FLINT_RUNTIME` may select an existing target installation;
 relative paths are resolved against the caller's working directory. Windows
 Arb CI includes this replay. Packaged standard-library audits run on both CI

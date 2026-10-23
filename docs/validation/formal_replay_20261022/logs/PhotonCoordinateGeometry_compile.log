@@ -1,0 +1,4 @@
+'PhotonCoordinateGeometry.coordinatesA_archive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateGeometry.coordinatesB_archive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateGeometry.coordinatesA_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateGeometry.coordinatesB_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]

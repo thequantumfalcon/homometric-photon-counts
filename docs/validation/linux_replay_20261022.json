@@ -1,0 +1,346 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-23T03:50:48.225753+00:00",
+  "completed_at_utc": "2026-10-23T03:57:31.765659+00:00",
+  "scope": "Fresh execution on Ubuntu Linux under WSL2, using an isolated CPython 3.13 environment and hash-verified python-flint 0.9.0. Covers integrity, core replay, all ten extended Arb stages, both optical replays, 33 maintained tests and extracted-package execution. No Lean compilation, physical experiment or external human review is implied.",
+  "platform": {
+    "status": "PASS",
+    "environment": "existing Ubuntu WSL2 distribution; isolated workspace virtual environment",
+    "distro": {
+      "NAME": "Ubuntu",
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+      "VERSION_ID": "22.04",
+      "VERSION": "22.04.5 LTS (Jammy Jellyfish)",
+      "VERSION_CODENAME": "jammy",
+      "ID_LIKE": "debian",
+      "HOME_URL": "https://www.ubuntu.com/",
+      "SUPPORT_URL": "https://help.ubuntu.com/",
+      "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+      "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+      "UBUNTU_CODENAME": "jammy"
+    },
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.13.14 (main, Aug  5 2026, 15:44:26) [Clang 22.1.3 ]",
+    "python_flint": "0.9.0",
+    "wheel": {
+      "filename": "python_flint-0.9.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "2a0d8db1fab69104afdc7a9763a690337a1cecafbf476b310f5bcd8ccc97b29b",
+      "metadata_url": "https://pypi.org/pypi/python-flint/0.9.0/json",
+      "published_download_url": "https://files.pythonhosted.org/packages/22/7d/a9c0538fbd4444cd6ef98852e1ded2b65caadd255604963d38917358653b/python_flint-0.9.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+    },
+    "requirements_sha256": "39de718202aeda0a4e5088ea475781713d9c4c2bb23a490df10c79ca7a94c00c",
+    "source_archive_sha256": "9eefd46e9d5637299637bffb14bbb963dddf496a18e630ba975a45ffac5fba8c",
+    "source_extraction_verified_byte_for_byte": true,
+    "commands": [
+      [
+        "python3.13",
+        "-m",
+        "pip",
+        "download",
+        "--only-binary=:all:",
+        "--no-deps",
+        "--dest",
+        "BUILD_DIR/runtime/wheels",
+        "--index-url",
+        "https://pypi.org/simple",
+        "python-flint==0.9.0"
+      ],
+      [
+        "python3.13",
+        "-m",
+        "venv",
+        "BUILD_DIR/runtime/venv"
+      ],
+      [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "BUILD_DIR/runtime/wheels",
+        "--require-hashes",
+        "--no-deps",
+        "-r",
+        "BUILD_DIR/runtime/requirements-linux.txt"
+      ]
+    ]
+  },
+  "source_snapshot": {
+    "archive": "build/linux-validation-20261022/source.zip",
+    "sha256": "9eefd46e9d5637299637bffb14bbb963dddf496a18e630ba975a45ffac5fba8c",
+    "member_count": 646,
+    "extraction_byte_verified": true,
+    "scientific_inventory_sha256": {
+      "evidence/public_manifest.json": "f5a412cd443e062481bad5f1eca3b0093f60b70cf426a5867fc7e539279ac150",
+      "formal/manifest.json": "737a21eafabd3e90dc9c659abe8d3e9a3ff0cec30ca130950dafcdc12bc61236",
+      "studies/optical-feasibility/manifest.json": "2f34a417209ac2241e7a104e6fce4f7a164163abd2ffe31b422685c12026ef9c",
+      "studies/optical-validation/manifest.json": "2fbb381558d0bea7345cf4d8b436311b12884d5eeffb57f1c98af260e0101fbb"
+    },
+    "executed_source_sha256": {
+      "evidence/followup-2026-10-20/stability/check_constants.py": "99538769203eeb13397a9723cbb9ac6bf75b3164685ad1e3b411d803ff8a708d",
+      "evidence/followup-2026-10-20/lowerbounds/certify_binned_lower_bound.py": "4ece1a5d969accb72b478b058113d4ed7614511256f1de0a87df4075c1fa63a5",
+      "evidence/followup-2026-10-20/independent_lowerbounds/check_direct_exclusion.py": "e884aa0c29944b96dee857c9ab023531316fee808222281a6c94424310b704a8",
+      "evidence/scientist-review-2026-10-20/review/verify_density_phasors.py": "e63bda94d101ccbebce80ca91287d11d37c700a18f7c24b79c7df12335f47f94",
+      "evidence/followup-2026-10-20/lowerbounds/verify_lower_bound_arb.py": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e",
+      "evidence/scientist-review-2026-10-20/arb/verify_arb.py": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d",
+      "evidence/scientist-review-2026-10-20/review/verify_compact_tail_cover.py": "75981e69a2bf5ae9c0d10a0dbdf6e0b485c05c812d02f11d4fc4e77c53ee9861",
+      "evidence/scientist-review-2026-10-20/global/certify_density_zero.py": "cd63f4e4d0b04a91304323da3519a8641edebeef0872e167aed116fae748e608",
+      "evidence/scientist-review-2026-10-20/global/certify_compact_gain.py": "4c0eb01d3c1373c1c53848a96dbe068ef397101ca0c307fc531a987b1580e9ac",
+      "evidence/scientist-review-2026-10-20/review/independent_compact_gain.py": "f750d26eec54fb7d98cd37d577b4627502e1ae7f434f4fe9f407d5fe8c5a0167",
+      "tools/project.py": "32c7e8d7fc949bc2557efcfc13b642e73efdaf916048fb0309808ae11958881f",
+      "tools/optical_study.py": "47561347dffd814f4fa6ad8d316c2c508ed69c478c998f27eca596d93d85da40",
+      "tools/optical_validation.py": "ab4ca8e66341f7f99b900b0fd46143935a799fa330a70edab737747aade34918",
+      "tools/replay_environment.py": "13aa3e5b17a1613dc20e3b9f25714ca62634b4ca646d888025b3fce4327c35d5",
+      "evidence/scientist-review-2026-10-20/arb/engine.py": "c144f4d6ebd18cd03639b11a24bb5f54f3c8d04b6da48577e1b0de005463c631"
+    }
+  },
+  "requirements_file": "requirements-replay-linux.txt",
+  "maintained_unit_tests_passed": 33,
+  "steps": [
+    {
+      "name": "core-replay",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/project.py",
+        "test",
+        "--output",
+        "BUILD_DIR/outputs/core"
+      ],
+      "returncode": 0,
+      "seconds": 16.927849985000023,
+      "log": "outputs/core-replay.log",
+      "log_sha256": "2cfb1d38371a1d8f3aa10839e5a63aa4a2334596a76fd060afa3ca6ad916598b"
+    },
+    {
+      "name": "extended-arb",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/project.py",
+        "replay",
+        "--output",
+        "BUILD_DIR/outputs/extended"
+      ],
+      "returncode": 0,
+      "seconds": 330.42629876599995,
+      "log": "outputs/extended-arb.log",
+      "log_sha256": "69eb8bffefa04a96f3b78bd8128a121abafae99e23f7f5ca8e8e3ddcb15a9c13"
+    },
+    {
+      "name": "extracted-package",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/project.py",
+        "release",
+        "--output",
+        "BUILD_DIR/outputs/release/source.zip"
+      ],
+      "returncode": 0,
+      "seconds": 114.370475387,
+      "log": "outputs/extracted-package.log",
+      "log_sha256": "dd18bfc7736461ee05f2b4c039ee6512db010b24344643d99e669977736952b8"
+    },
+    {
+      "name": "integrity-and-links",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/project.py",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 26.117850773000015,
+      "log": "outputs/integrity-and-links.log",
+      "log_sha256": "c716cef4560ac601c677f91f9f8b3b9ee58a46dc98f7e0a9d348d6e364e91f78"
+    },
+    {
+      "name": "maintained-tests",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "seconds": 16.70572878300004,
+      "log": "outputs/maintained-tests.log",
+      "log_sha256": "d630a27b247d4b92ff80cf42a680e8f179e77b7fd7b3e9aa3553ddcd7229007c"
+    },
+    {
+      "name": "optical-feasibility",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/optical_study.py",
+        "replay",
+        "--output",
+        "BUILD_DIR/outputs/optical-feasibility"
+      ],
+      "returncode": 0,
+      "seconds": 9.370821579999983,
+      "log": "outputs/optical-feasibility.log",
+      "log_sha256": "13ceb7eb9182d7403f854a86c8f5aa9bf9b452577d3c2bf30b6c3e26874beb03"
+    },
+    {
+      "name": "optical-transfer",
+      "command": [
+        "BUILD_DIR/runtime/venv/bin/python",
+        "-B",
+        "tools/optical_validation.py",
+        "replay",
+        "--output",
+        "BUILD_DIR/outputs/optical-transfer"
+      ],
+      "returncode": 0,
+      "seconds": 25.64091491199997,
+      "log": "outputs/optical-transfer.log",
+      "log_sha256": "a73cabdc238710f8aa2a4808ad73a6bfeabeb2b4c3d675be6515b9112f22b78c"
+    }
+  ],
+  "extended_replay": {
+    "passed": true,
+    "extended": true,
+    "steps": [
+      {
+        "name": "endpoint-constants",
+        "returncode": 0,
+        "seconds": 0.2512350619999779,
+        "source": "followup-2026-10-20/stability/check_constants.py",
+        "source_sha256": "99538769203eeb13397a9723cbb9ac6bf75b3164685ad1e3b411d803ff8a708d"
+      },
+      {
+        "name": "necessary-samples",
+        "returncode": 0,
+        "seconds": 0.34560928300004434,
+        "source": "followup-2026-10-20/lowerbounds/certify_binned_lower_bound.py",
+        "source_sha256": "4ece1a5d969accb72b478b058113d4ed7614511256f1de0a87df4075c1fa63a5"
+      },
+      {
+        "name": "independent-exclusion",
+        "returncode": 0,
+        "seconds": 0.25074021599999696,
+        "source": "followup-2026-10-20/independent_lowerbounds/check_direct_exclusion.py",
+        "source_sha256": "e884aa0c29944b96dee857c9ab023531316fee808222281a6c94424310b704a8"
+      },
+      {
+        "name": "exact-phasors",
+        "returncode": 0,
+        "seconds": 0.5164602410000043,
+        "source": "scientist-review-2026-10-20/review/verify_density_phasors.py",
+        "source_sha256": "e63bda94d101ccbebce80ca91287d11d37c700a18f7c24b79c7df12335f47f94"
+      },
+      {
+        "name": "independent-arb",
+        "returncode": 0,
+        "seconds": 0.7324206960000197,
+        "source": "followup-2026-10-20/lowerbounds/verify_lower_bound_arb.py",
+        "source_sha256": "a7d45c9efc207bce4c8a954f9f57d88dcf6338d2d13f7713449a8197863c898e"
+      },
+      {
+        "name": "arb-probabilities-and-bounded-roots",
+        "returncode": 0,
+        "seconds": 38.039343616999986,
+        "source": "scientist-review-2026-10-20/arb/verify_arb.py",
+        "source_sha256": "b73221fb0a94abca2f4a7f50f610a7e10ee5dafb710bf28cecd053763e7a8c6d"
+      },
+      {
+        "name": "independent-fourier-tails",
+        "returncode": 0,
+        "seconds": 1.2365853100000095,
+        "source": "scientist-review-2026-10-20/review/verify_compact_tail_cover.py",
+        "source_sha256": "75981e69a2bf5ae9c0d10a0dbdf6e0b485c05c812d02f11d4fc4e77c53ee9861"
+      },
+      {
+        "name": "density-at-zero",
+        "returncode": 0,
+        "seconds": 139.156563533,
+        "source": "scientist-review-2026-10-20/global/certify_density_zero.py",
+        "source_sha256": "cd63f4e4d0b04a91304323da3519a8641edebeef0872e167aed116fae748e608"
+      },
+      {
+        "name": "global-four-roots",
+        "returncode": 0,
+        "seconds": 34.06230764899999,
+        "source": "scientist-review-2026-10-20/global/certify_compact_gain.py",
+        "source_sha256": "4c0eb01d3c1373c1c53848a96dbe068ef397101ca0c307fc531a987b1580e9ac"
+      },
+      {
+        "name": "independent-global-four-roots",
+        "returncode": 0,
+        "seconds": 105.1971752149999,
+        "source": "scientist-review-2026-10-20/review/independent_compact_gain.py",
+        "source_sha256": "f750d26eec54fb7d98cd37d577b4627502e1ae7f434f4fe9f407d5fe8c5a0167"
+      }
+    ],
+    "evidence_manifest_sha256": "f5a412cd443e062481bad5f1eca3b0093f60b70cf426a5867fc7e539279ac150"
+  },
+  "optical_feasibility": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "prototype-tests",
+        "returncode": 0
+      },
+      {
+        "name": "calibration-tests",
+        "returncode": 0
+      },
+      {
+        "name": "candidate",
+        "returncode": 0
+      },
+      {
+        "name": "calibration",
+        "returncode": 0
+      }
+    ],
+    "exploratory_tests": false,
+    "exact_certificate_reproduction": true,
+    "archive_preserved": "PASS"
+  },
+  "optical_transfer": {
+    "status": "PASS",
+    "archived_files": 115,
+    "measured_table_bins": 75658,
+    "available_original_workspace_bindings": 100,
+    "scope": "Selected byte identities and external processed-data checks; no physical validation.",
+    "checks": [
+      {
+        "study": "optical-bench-demo",
+        "returncode": 0,
+        "output": "PASS: 28 artifact hashes and 18 saved classification records.\nHashes and replayed classifications do not establish physical validity."
+      },
+      {
+        "study": "robustness-study",
+        "returncode": 0,
+        "output": "{\"status\": \"PASS\", \"payload_hashes\": 33, \"classification_records\": 104, \"independent_simultaneous_bound_checks\": 50, \"two_sided_interval_checks\": 104, \"lab_zero_error_minimum_trials_per_label\": 72}"
+      },
+      {
+        "study": "afterpulse-study",
+        "returncode": 0,
+        "output": "{\n  \"status\": \"PASS\",\n  \"integer_histogram_records\": 9600,\n  \"simultaneous_error_bounds\": 48,\n  \"max_simultaneous_upper\": 0.033751920267110075,\n  \"simulated_gates\": 48000000,\n  \"workspace_preservation_checked\": false,\n  \"previous_pinned_files_unchanged\": 0,\n  \"own_manifest_files_checked\": 28\n}"
+      },
+      {
+        "study": "optical-transfer-certificate",
+        "returncode": 0,
+        "output": "{\n  \"status\": \"PASS_EXACT_ENDPOINT_AND_BOUND_AUDIT\",\n  \"transfers\": 29,\n  \"coefficients_checked\": 1827,\n  \"integral_pairs\": 224,\n  \"witness_rates\": 192,\n  \"phase_commands\": 12096,\n  \"maximum_weight_l1_error_upper\": \"3/2500000000000000\",\n  \"maximum_correction_rad_error_upper\": \"343/1000000000000000000\",\n  \"maximum_fixed_command_intensity_error_upper\": \"39/10000000000000\",\n  \"maximum_witness_rate_error_upper\": \"113/50000000000000\",\n  \"minimum_witness_quantizer_margin_lower\": \"2830215724639548482936164783179892446329131584335485209806254599061947/14134776518227074636666380005943348126619871175004951664972849610340958208\",\n  \"scope\": \"Exact rational audit of exported enclosures, bounds and finite coverage. Integral truth requires the separate Arb replay; this audit is not a proof-assistant kernel.\",\n  \"negative_controls_rejected\": [\n    \"zero_weight_error_bound\",\n    \"changed_quantized_command\",\n    \"zero_witness_rate_error_bound\",\n    \"disjoint_integral_enclosure\"\n  ],\n  \"certificate_sha256\": \"14964d2c3f9766bd19f8d4ef0994d630ce1e0aa6be99cd65f246688606ef0953\",\n  \"verifier_sha256\": \"9845b4a67c241bf71c237d3258ff83d69251eaa55dcc65c69965b7c92ac37d9b\",\n  \"workspace_bindings_checked\": 0,\n  \"manifest_payloads_checked\": 14\n}"
+      }
+    ],
+    "certificate_reproduced_byte_for_byte": false,
+    "certificate_reproduced_after_line_ending_normalization": true,
+    "archive_preserved": "PASS"
+  },
+  "linux_newline_regression_exercised_in_real_replay": true,
+  "driver_sha256": "89a0fd306da8790be0bac68bb66c91c5a944e04b41d8e02c7e182e6f44e8ccec",
+  "local_execution_record_sha256": "7aacd987382a95f0dc686fcc4e01f4bf6d9090d2c154a3f7befcd41f6002cfb3",
+  "source_snapshot_note": "This immutable numerical-replay snapshot precedes the later wrapper-only fix that prunes ignored build directories before Windows file traversal. The replay evaluator/data bytes remain bound above; a separate final-package Linux check is required to cover that maintained wrapper update."
+}

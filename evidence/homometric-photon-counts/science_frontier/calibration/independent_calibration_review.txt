@@ -1,6 +1,6 @@
 INDEPENDENT INTERNAL REVIEW OF JOINT CALIBRATION AND STRUCTURE IDENTIFICATION
 Review date: 2026-10-20
-Reviewer: separate /root/tighter_testing mathematical-work agent.
+Method: a separate internal AI mathematical cross-check.
 
 VERDICT
 

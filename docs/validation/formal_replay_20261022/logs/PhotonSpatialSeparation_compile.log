@@ -1,0 +1,5 @@
+'PhotonSpatialSeparation.exact_geometric_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonSpatialSeparation.positionsA_phases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonSpatialSeparation.positionsB_phases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonSpatialSeparation.spatial_count_laws_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonSpatialSeparation.decoded_spatial_separation' depends on axioms: [propext, Classical.choice, Quot.sound]

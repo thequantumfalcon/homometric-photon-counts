@@ -16,7 +16,7 @@ import numpy as np
 from scipy.stats import beta
 
 HERE = Path(__file__).resolve().parent
-BASE_SHA = "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a"
+BASE_SHA = "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92"
 CONFIG = b.Bench()
 Q = 201 * np.pi / 200
 TRIALS = 200

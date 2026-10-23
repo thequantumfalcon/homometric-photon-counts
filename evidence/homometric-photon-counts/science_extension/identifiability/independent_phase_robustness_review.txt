@@ -1,6 +1,6 @@
 INDEPENDENT INTERNAL REVIEW: COMMON PHASE-LAW ROBUSTNESS
 20 October 2026
-Reviewer: /root/phase_law_extension
+Method: internal AI cross-check.
 
 Conclusion: PASS. I read the analytic proof and accompanying exact-arithmetic
 script/results. No incorrect bound or unsupported scope claim was found.

@@ -1,0 +1,62 @@
+{
+  "schema": "recovered-historical-report-v1",
+  "recovered_on": "2026-10-22",
+  "historical_report_date": "2026-10-20",
+  "scope": "Original report and its complete LaTeX input dependency set recovered byte-for-byte from two matching retained research archives. This is not a new report or a new scientific proof execution.",
+  "source_archives": [
+    {
+      "filename": "homometric-photon-counts-research-v0.1.0.zip",
+      "sha256": "61774346a947371b935ec4142ff57ab4dd39a50d3e8f7e7d4196e83fc2afd90a",
+      "size": 9549209
+    },
+    {
+      "filename": "homometric-photon-counts-research-v0.2.0.zip",
+      "sha256": "ecdf3169f00d795775e5731f65fffd5649fc09d24e493d8aa2d585d947425494",
+      "size": 9745283
+    }
+  ],
+  "files": [
+    {
+      "path": "historical/science_completion_report.pdf",
+      "archive_member": "homometric-photon-counts/science_completion/science_completion_report.pdf",
+      "sha256": "6931eba60d9e83478be28f8f929159dc58f829b3e8e4e6419e15d45125f7d1d6",
+      "size": 470043
+    },
+    {
+      "path": "historical/science_completion_report.tex",
+      "archive_member": "homometric-photon-counts/science_completion/science_completion_report.tex",
+      "sha256": "7f24c5dbfe105eb4c6a30af18a7806529a31da2f90fb7f391607be9c93bf9d92",
+      "size": 33623
+    },
+    {
+      "path": "historical/detector_proofs.tex",
+      "archive_member": "homometric-photon-counts/science_completion/detector_proofs.tex",
+      "sha256": "f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b",
+      "size": 8012
+    },
+    {
+      "path": "historical/sample_complexity_proofs.tex",
+      "archive_member": "homometric-photon-counts/science_completion/sample_complexity_proofs.tex",
+      "sha256": "4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf",
+      "size": 9755
+    },
+    {
+      "path": "historical/figures/homogeneous_fourth_moment_and_sampling.pdf",
+      "archive_member": "homometric-photon-counts/science_completion/figures/homogeneous_fourth_moment_and_sampling.pdf",
+      "sha256": "ac75ea9f379950d4724a4a3abfe64ff38e42faeb6a638c2fadd347f1f374a5eb",
+      "size": 61265
+    }
+  ],
+  "retained_manifest": "../../evidence/homometric-photon-counts/science_completion/science_completion_manifest.json",
+  "original_pdf_sha256_matches_retained_summary": true,
+  "validation": {
+    "original_pdf_pages": 18,
+    "all_pages_text_extracted": true,
+    "all_pages_rendered_and_visually_inspected": true,
+    "named_ai_author_credit_found": false,
+    "methods_disclosure_present": true,
+    "private_path_markers_found": false,
+    "source_dependency_set_complete": true,
+    "local_rebuild": "The unchanged recovered sources compiled successfully in three passes with the existing TeX Live installation on Ubuntu. No packages were downloaded or installed; the historical PDF remains unchanged. See rebuild_validation.json for the rendering checks and dependency identities."
+  }
+}

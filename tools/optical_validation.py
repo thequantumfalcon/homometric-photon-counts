@@ -126,6 +126,19 @@ def fresh_output(output: Path) -> Path:
     return output
 
 
+def compare_certificate(reproduced: bytes, archived: bytes) -> dict[str, bool]:
+    # The retained writer uses platform-native newlines. Permit only CRLF/LF
+    # differences; comparing parsed floats could hide changed enclosure digits.
+    require(
+        reproduced.replace(b"\r\n", b"\n") == archived.replace(b"\r\n", b"\n"),
+        "Arb certificate differs beyond line endings",
+    )
+    return {
+        "certificate_reproduced_byte_for_byte": reproduced == archived,
+        "certificate_reproduced_after_line_ending_normalization": True,
+    }
+
+
 def replay(output: Path) -> dict:
     output = fresh_output(output)
     result = audit()
@@ -142,10 +155,8 @@ def replay(output: Path) -> dict:
         run = subprocess.run(command, cwd=output, env=env, capture_output=True, text=True, check=False)
         (output / (name + ".log")).write_text(run.stdout + run.stderr, encoding="utf-8")
         require(run.returncode == 0, name + " replay failed; see log")
-    require(certificate.read_bytes() == (source / "certificate.json").read_bytes(), "Arb certificate differs")
-    result.update(
-        status="PASS", certificate_reproduced_byte_for_byte=True, archive_preserved=verify()["status"]
-    )
+    result.update(compare_certificate(certificate.read_bytes(), (source / "certificate.json").read_bytes()))
+    result.update(status="PASS", archive_preserved=verify()["status"])
     (output / "summary.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     return result
 

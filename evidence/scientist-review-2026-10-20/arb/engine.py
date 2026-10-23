@@ -17,7 +17,7 @@ if LOCAL.is_dir():sys.path.insert(0,str(LOCAL))
 import flint
 from flint import arb, fmpq as Q, fmpq_poly as Poly, ctx
 
-MANIFEST_SHA='ccc96f262f89aa2fb6fe8b3b5985227ef9d58455046f3c84d16d018dba80b6a8'
+MANIFEST_SHA='0ae2360f362788aedd395a2eee4c181bb272a630eaf81c66b86f83a6fc8a2d6c'
 
 
 def require(ok,message):

@@ -42,7 +42,7 @@
     "pixel_margin_check": "All raster pages retain at least 60 pixels of white below visible content at 140 dpi."
   },
   "scientific_review": "report_science_review.txt",
-  "scientific_review_sha256": "ada41d498be30039ca080e77d0939cc0083e814595f7964e6006982c20da377d",
+  "scientific_review_sha256": "13164c77620f3b2479447bed9247affb42bba163c6406dc9d4079431e8b2174e",
   "layout_edits_after_first_scientific_review": [
     "Inserted the separately reviewed finite-count figure and caption.",
     "Moved the unchanged sufficient-sample inequality from inline to displayed mathematics.",

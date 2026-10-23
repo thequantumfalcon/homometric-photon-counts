@@ -1,0 +1,65 @@
+{
+  "purpose": "Offline optional illustration renderer, separate from scientific evidence and proof evaluators.",
+  "source": {
+    "name": "three",
+    "version": "0.186.1",
+    "license": "MIT",
+    "registry_metadata_url": "https://registry.npmjs.org/three/0.186.1",
+    "url": "https://registry.npmjs.org/three/-/three-0.186.1.tgz",
+    "archive_filename": "three-0.186.1.tgz",
+    "integrity": "sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==",
+    "sha256": "8cd068708ea44f2c73c944b1cead2ba2f0d5c15c8fc194e5700f4e4f4a033fe7",
+    "bytes": 4648523
+  },
+  "build_tools": {
+    "win32-x64": {
+      "name": "@esbuild/win32-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "registry_metadata_url": "https://registry.npmjs.org/@esbuild%2fwin32-x64/0.25.12",
+      "url": "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.12.tgz",
+      "archive_filename": "esbuild-win32-x64-0.25.12.tgz",
+      "integrity": "sha512-alJC0uCZpTFrSL0CCDjcgleBXPnCrEAhTBILpeAp7M/OFgoqtAetfBzX0xM00MUsVVPpVjlPuMbREqnZCXaTnA==",
+      "sha256": "c77076b48f96323cae6257bd515e5ea96ecf38ab8f7fa34364d4fc4ae5905b74",
+      "bytes": 4484984,
+      "executable": "esbuild.exe",
+      "executable_sha256": "cae1bbc86f4df800b01d99e28aea0a154b02243de6797e98f48a9b88a64a7be0"
+    },
+    "linux-x64": {
+      "name": "@esbuild/linux-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "registry_metadata_url": "https://registry.npmjs.org/@esbuild%2flinux-x64/0.25.12",
+      "url": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz",
+      "archive_filename": "esbuild-linux-x64-0.25.12.tgz",
+      "integrity": "sha512-uqZMTLr/zR/ed4jIGnwSLkaHmPjOjJvnm6TVVitAa08SLS9Z0VM8wIRx7gWbJB5/J54YuIMInDquWyYvQLZkgw==",
+      "sha256": "f7efc127658a108dcda9d4210b01804ee8f5d6b3acbd6d63f20aa51d3b50bd5f",
+      "bytes": 4395720,
+      "executable": "bin/esbuild",
+      "executable_sha256": "bab29b2ca7a9e89b67cf720b77b2d743f9f31f5cf0d5bd74ee8c8de30ced7014"
+    }
+  },
+  "build_options": [
+    "--bundle",
+    "--minify",
+    "--format=iife",
+    "--target=es2020",
+    "--legal-comments=inline"
+  ],
+  "artifacts": {
+    "entry.js": {
+      "sha256": "7d10dfbc949f02c037ab07654ed0919395470a1828322f82d29d910eccd17fb0",
+      "bytes": 743
+    },
+    "three-orbit.min.js": {
+      "sha256": "1f24d1df9a7842db61f4fbd1b96279065b4ff76060d9b846ba72088ba7dfd553",
+      "bytes": 564664
+    },
+    "LICENSE-three.txt": {
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "bytes": 1081
+    }
+  },
+  "package_install_scripts_executed": false,
+  "external_runtime_requests_required": false
+}

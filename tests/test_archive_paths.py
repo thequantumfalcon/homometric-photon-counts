@@ -1,16 +1,56 @@
-"""Regression checks for canonical extraction roots and traversal rejection."""
+"""Regression checks for archive paths and pruned source inventories."""
 
+import os
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from project import extract_source_archive  # noqa: E402
+from project import extract_source_archive, files  # noqa: E402
 
 
 class ArchivePaths(unittest.TestCase):
+    def test_inventory_never_visits_ignored_subtrees_or_stats_ignored_files(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            for name in ("top.txt", ".gitignore", "included/nested.txt"):
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("included")
+            for name in ("build/runtime/lib64", ".git/objects/item", "included/dist/item"):
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("must never inspect")
+            (root / ".venv").write_text("ignored filename")
+
+            real_scandir = os.scandir
+            real_is_file = Path.is_file
+            ignored = {"build", ".git", "dist", ".venv"}
+
+            def assert_included(path):
+                self.assertFalse(set(Path(path).relative_to(root).parts) & ignored)
+
+            def guarded_scandir(path):
+                assert_included(path)
+                return real_scandir(path)
+
+            def guarded_is_file(path):
+                assert_included(path)
+                return real_is_file(path)
+
+            with (
+                patch("os.scandir", side_effect=guarded_scandir),
+                patch.object(Path, "is_file", autospec=True, side_effect=guarded_is_file),
+            ):
+                inventory = files(root)
+            self.assertEqual(
+                inventory,
+                {name: root / name for name in ("top.txt", ".gitignore", "included/nested.txt")},
+            )
+
     def test_noncanonical_root_accepts_safe_member(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

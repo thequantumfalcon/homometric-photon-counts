@@ -1,6 +1,6 @@
 INTERNAL AI ADVERSARIAL PROOF REVIEW
 Date: 2026-10-20
-Reviewer: a separate AI agent in the same working session.
+Method: a separate internal AI cross-check in the same working session.
 This is an internal mathematical/code review, not external peer review,
 experimental replication, a proof-assistant certificate, or a novelty ruling.
 

@@ -1,0 +1,2 @@
+'PhotonGaussianAppend.field_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonGaussianAppend.phaseLaw_integral_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]

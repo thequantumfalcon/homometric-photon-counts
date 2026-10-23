@@ -1,0 +1,3 @@
+'PhotonCoordinateInput.trailing_input_rejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateInput.negative_sign_parsed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCoordinateInput.separated_sign_rejected' depends on axioms: [propext, Classical.choice, Quot.sound]

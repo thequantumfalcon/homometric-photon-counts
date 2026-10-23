@@ -83,6 +83,6 @@
     }
   ],
   "source_sha256": "996f97d0bb457439918c7dd3c52d0c3d7810eab9b30d6f2c12e5849078cb7871",
-  "certificate_sha256": "9db00ed8fc351e57c6cb48352128e9306ffefe35257f44cfb8a9beb270fd61b0",
+  "certificate_sha256": "35b377ca00f58b93e7d0dc1eb657a3d00b82fc130c478723f6019e3646d3be8a",
   "scope": "Synthetic held-out diagnostic of four simplified count laws, with independent A/B streams. Scenarios share phase samples within a structure. No physical observations; zero observed failures would not prove zero risk. Dead-time bound is not simulated here."
 }

@@ -1,9 +1,9 @@
 REPORT SCIENTIFIC CONSISTENCY REVIEW
 ===================================
 
-Reviewer: /root/independent_model_rebuild, author of the original/star and
-harmonic root-certificate engines. This is a report-to-evidence consistency
-review, not a new independent implementation or external peer review.
+Method: internal AI report-to-evidence consistency checking within the same
+development process as the original/star and harmonic root-certificate
+engines; not a new independent implementation or external peer review.
 
 Reviewed report snapshot
 ------------------------
@@ -95,12 +95,12 @@ corresponding update to the consistency review.
 Evidence hashes checked/read
 ----------------------------
 root_certificate/two_root_certificate.json
-  5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07
+  6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889
 harmonic_certificate/harmonic_root_certificate.json
-  83fbedadf376cc5759d5d37cbf82f4ebb09b2b1ea524579020f8472e201ad912
+  bba24c8b0dcb3dff522200f34656f6d8dfa46c83c154c4c104eb0bd2e72f68a8
 detector_proofs.tex
   f9e508a499f67207ffffc5f666a39bcbfd93cca273e745b74c43fa9151d1501b
 sample_complexity_proofs.tex
   4fa6bdb64e4f2a8028ea9f331eb5f8c1753c35c4a4466d252728cef626724fcf
 independent_completion_review.txt
-  80387d68b5a5677645c19126dcf0b54c765c2e11956bba8b457a3126b4dba296
+  dc5e05a93845b7955cbb1016b2e7a7111a33d91e8c081fe47da82e7275a77fee

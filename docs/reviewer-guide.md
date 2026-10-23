@@ -1,5 +1,7 @@
 # A route through the evidence
 
+The [recovered original report](report/historical/science_completion_report.pdf) provides an 18-page account of the foundational construction and derivations. Its [source and recovery guide](report/README.md) explains the historical scope; use the current claim ledger for later root-count, testing and formal results.
+
 1. Read the [model](model.md), [claim ledger](claims.md), and [research disclosure](research-disclosure.md).
 2. Run `python tools/project.py verify` and `python tools/project.py test --output build/reviewer-check`.
 3. For the reference root count, inspect the compact inverse-gain proof and tail cover linked in the ledger. Check how the bounded-gain and large-gain arguments join at $1/6$.
@@ -14,3 +16,5 @@ Criticism should identify a specific implication, assumption, certificate entry,
 For the later prototype, compare the [ideal feasibility certificate](../studies/optical-feasibility/README.md) with the [optical/detector supplements](../studies/optical-validation/README.md). Review the failed wider calibration budget, finite selection of the tighter settings, 48 separate simulation error comparisons, and external-data wavelength/processing limitations. Run `python tools/optical_validation.py audit`. The finite Arb transfer checks bound numerical evaluation of a declared optical model; they do not turn the selected simulations into a continuous-tolerance guarantee or an experiment.
 
 The older evidence directories are historical layers. Their status notes can predate the reference four-root result and new lower bound. Current conclusions are stated in the root README and claim ledger; archived historical prose is not silently rewritten to suggest that it always contained later results.
+
+Historical paths containing `review`, `independent_review` or `scientist-review` contain internal AI cross-checks. These names do not identify external scientists or establish external human peer review. A report's independence is limited to the separate implementation or checking step it describes; shared inputs, dependencies and any self-checking remain relevant. The paths are retained so the archived references and evidence bindings remain traceable.

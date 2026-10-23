@@ -2,7 +2,7 @@
   "schema": 1,
   "date": "2026-10-21",
   "baseline_commit": "0d3fad8a0ef20148595a01e042f08e0752db9215",
-  "transformation": "None. All selected scientific payloads copied byte-for-byte.",
+  "transformation": "Editorial public derivative; pre-editorial and original local identities retained separately.",
   "historical_scope": "Local-only and earlier-next-step statements describe the original executions. Current public scope is in the study README.",
   "original_local_manifest_sha256": {
     "optical-bench-demo": "365b8a43321185b7b9ae734f73ed4e14d9f66c5b84820c8086965eb4d18fb3a2",
@@ -21,7 +21,10 @@
     {
       "path": "simulation-prototype/afterpulse-study/MANIFEST.json",
       "size": 3089,
-      "sha256": "c9a36bfc0e23f8370be0f6c85026b05c028d1834bd03c934e90eb6449f3cff17"
+      "sha256": "df69c0602fe8578738e4a905d1b1b8efefafa12d6ac4e1c3cb4cdeebb6becfad",
+      "pre_editorial_sha256": "c9a36bfc0e23f8370be0f6c85026b05c028d1834bd03c934e90eb6449f3cff17",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/afterpulse-study/README.txt",
@@ -61,7 +64,10 @@
     {
       "path": "simulation-prototype/afterpulse-study/inputs.json",
       "size": 82504,
-      "sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5"
+      "sha256": "0ce0fc5ba6294df6f6e3d7a30d5e8c8486daa177748c04a94d0ce3171cdfa46d",
+      "pre_editorial_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/afterpulse-study/make_report.py",
@@ -71,7 +77,10 @@
     {
       "path": "simulation-prototype/afterpulse-study/plan.json",
       "size": 3775,
-      "sha256": "09f4e0bc1a6ca76fb861f9d7ef34920264497656c4780f01471e60e6241fdf95"
+      "sha256": "30ae6df1888563114d4cdd415f5b1c083f6941c0a7cd0795b3dbada9bf6efb88",
+      "pre_editorial_sha256": "09f4e0bc1a6ca76fb861f9d7ef34920264497656c4780f01471e60e6241fdf95",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/afterpulse-study/report/browser-check.json",
@@ -121,12 +130,18 @@
     {
       "path": "simulation-prototype/afterpulse-study/run/execution-plan.json",
       "size": 560,
-      "sha256": "4339bd1991bab2a4a29d4cf9b147b4d93c86cdd824a3dd95114e309ddea05159"
+      "sha256": "0fe543f16c654abd9b62ea918a0567fc4428828b22ec90f9ff6b812c3a020d84",
+      "pre_editorial_sha256": "4339bd1991bab2a4a29d4cf9b147b4d93c86cdd824a3dd95114e309ddea05159",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/afterpulse-study/run/results.json",
       "size": 21265,
-      "sha256": "8a6e74f645186a5d6e10434417d910f1d6243c94fa7172043a69bbd54f3c1ead"
+      "sha256": "0b73a6fa4f7cfd13e85b2b2de8891baf68bae7f0a5be126787296604ab954e8c",
+      "pre_editorial_sha256": "8a6e74f645186a5d6e10434417d910f1d6243c94fa7172043a69bbd54f3c1ead",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/afterpulse-study/run/trials.jsonl",
@@ -211,7 +226,10 @@
     {
       "path": "simulation-prototype/optical-bench-demo/MANIFEST.json",
       "size": 3181,
-      "sha256": "365b8a43321185b7b9ae734f73ed4e14d9f66c5b84820c8086965eb4d18fb3a2"
+      "sha256": "860aef2c08bb8ad7dbce6815cb78eab82f52b77c60a2d8115cee6e07766045ed",
+      "pre_editorial_sha256": "365b8a43321185b7b9ae734f73ed4e14d9f66c5b84820c8086965eb4d18fb3a2",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-bench-demo/MEASUREMENT_PLAN.txt",
@@ -231,12 +249,18 @@
     {
       "path": "simulation-prototype/optical-bench-demo/bench.py",
       "size": 15556,
-      "sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a"
+      "sha256": "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92",
+      "pre_editorial_sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-bench-demo/input_model.json",
-      "size": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "size": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "pre_editorial_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "editorial_cleanup": true,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-bench-demo/package-audit/assessment.json",
@@ -271,12 +295,18 @@
     {
       "path": "simulation-prototype/optical-bench-demo/run-demo/demo.html",
       "size": 3255765,
-      "sha256": "081c286fc8ccc274680a446ddb2609bc378feec89ad41701193ee3e0db1a5028"
+      "sha256": "e27ac0e0ae94aa6dc845ceeb13923dade0589731ab95354a8d527766e4203c32",
+      "pre_editorial_sha256": "081c286fc8ccc274680a446ddb2609bc378feec89ad41701193ee3e0db1a5028",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-bench-demo/run-demo/results.json",
       "size": 143094,
-      "sha256": "fc40ea48bffa98192bc47afe9287517cc51b2a24e906e98b478e30ec6eebdb6b"
+      "sha256": "af3b6b21448d999cc00e3bc823ae9bc30a22fb6458f7a89f8a958e6405aeffad",
+      "pre_editorial_sha256": "fc40ea48bffa98192bc47afe9287517cc51b2a24e906e98b478e30ec6eebdb6b",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-bench-demo/run-demo/scenario-0.png",
@@ -356,7 +386,10 @@
     {
       "path": "simulation-prototype/optical-transfer-certificate/MANIFEST.json",
       "size": 1408,
-      "sha256": "1c6c3cfd19869ecda873982ce563160a4cfad4a84c1e83ff665aaa0e66c1e2c2"
+      "sha256": "60ad251764ee85d7d5c199089ab03c1755097624d0fe34883f96deec93588d8a",
+      "pre_editorial_sha256": "1c6c3cfd19869ecda873982ce563160a4cfad4a84c1e83ff665aaa0e66c1e2c2",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/METHOD.txt",
@@ -371,12 +404,18 @@
     {
       "path": "simulation-prototype/optical-transfer-certificate/afterpulse-inputs.json",
       "size": 82504,
-      "sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5"
+      "sha256": "0ce0fc5ba6294df6f6e3d7a30d5e8c8486daa177748c04a94d0ce3171cdfa46d",
+      "pre_editorial_sha256": "5d2c1681744279a46e0fa50cd01479b91af9df094503944f537a030df6fd15b5",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/certificate.json",
       "size": 6242905,
-      "sha256": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5"
+      "sha256": "14964d2c3f9766bd19f8d4ef0994d630ce1e0aa6be99cd65f246688606ef0953",
+      "pre_editorial_sha256": "76cc575a11e9ba7eaaf60801166f950566dd0f86660b9dbbfc0e82698c346be5",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/certify.py",
@@ -390,8 +429,11 @@
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/geometry.json",
-      "size": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "size": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "pre_editorial_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "editorial_cleanup": true,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/requirements.txt",
@@ -406,12 +448,18 @@
     {
       "path": "simulation-prototype/optical-transfer-certificate/source-bindings.json",
       "size": 17724,
-      "sha256": "d83f1599273676c3fcf47f4dc217163775c067c42d0a8b95110b69fc04d59722"
+      "sha256": "209abb621bcc9af461da76eaf2914a29b800ad0d6dbc64fc4a5cdc680b1a3f62",
+      "pre_editorial_sha256": "d83f1599273676c3fcf47f4dc217163775c067c42d0a8b95110b69fc04d59722",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/verification.json",
       "size": 1258,
-      "sha256": "1b9cfd877b53c081adf8dc887e842198917a30115ababa42c5ee025231e47126"
+      "sha256": "f71d791a1a231ee8a791aad7cc1c2511ac996907f6660ded72831eb51a4d6263",
+      "pre_editorial_sha256": "1b9cfd877b53c081adf8dc887e842198917a30115ababa42c5ee025231e47126",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/optical-transfer-certificate/verify.py",
@@ -431,7 +479,10 @@
     {
       "path": "simulation-prototype/robustness-study/MANIFEST.json",
       "size": 3604,
-      "sha256": "3940c015a13641ec4e87f4911ac1c32b6e76fc7b857be29a4f84b11c8d05cd6f"
+      "sha256": "3316bc8eb5193435cc5b51fbe39ea12bfea9411e7f41b77bd1f6f93b972f6929",
+      "pre_editorial_sha256": "3940c015a13641ec4e87f4911ac1c32b6e76fc7b857be29a4f84b11c8d05cd6f",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/METHOD.txt",
@@ -446,12 +497,18 @@
     {
       "path": "simulation-prototype/robustness-study/baseline.py",
       "size": 15556,
-      "sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a"
+      "sha256": "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92",
+      "pre_editorial_sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/input_model.json",
-      "size": 336739,
-      "sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+      "size": 336720,
+      "sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+      "pre_editorial_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+      "editorial_cleanup": true,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/make_report.py",
@@ -501,7 +558,10 @@
     {
       "path": "simulation-prototype/robustness-study/report/report.html",
       "size": 899409,
-      "sha256": "12b86da7bb00b5dd8d779a9ab339be6c6749868fa544ed662371789432750456"
+      "sha256": "554613b9c548ae3797a63bbc961cc4155f6ae59e22b28ee0374f63f60fcca745",
+      "pre_editorial_sha256": "12b86da7bb00b5dd8d779a9ab339be6c6749868fa544ed662371789432750456",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/report/summary.json",
@@ -541,12 +601,18 @@
     {
       "path": "simulation-prototype/robustness-study/screen-frozen/screen.json",
       "size": 1628538,
-      "sha256": "3998933e430a5a98314105d24828f989f3dcf9b8546219929dad62f4719c4b16"
+      "sha256": "a0776425d5b4b40cb3240c5aca6f8b29a993d6386dbb79037cba55c3c8b4f33c",
+      "pre_editorial_sha256": "3998933e430a5a98314105d24828f989f3dcf9b8546219929dad62f4719c4b16",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/screen-frozen/validation-plan.json",
       "size": 6051,
-      "sha256": "2efcd0096a103f2927d57c3a161640db34d214d1f3fddbac11a23a77c255f2f9"
+      "sha256": "dcfecfebb0bd82cc60511ea240eab0cf449723c6d0cac643108bf08077aea661",
+      "pre_editorial_sha256": "2efcd0096a103f2927d57c3a161640db34d214d1f3fddbac11a23a77c255f2f9",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/select_tolerance.py",
@@ -556,7 +622,10 @@
     {
       "path": "simulation-prototype/robustness-study/study.py",
       "size": 17042,
-      "sha256": "c3bae18ca7829351c75558342a45ab10d94e979b794797054abe0ba736d3b07e"
+      "sha256": "ffcc215fb5dbf4ae13ff9b762d5ef8459f5360d3807d478cd665ecb8731b6c45",
+      "pre_editorial_sha256": "c3bae18ca7829351c75558342a45ab10d94e979b794797054abe0ba736d3b07e",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/test_robustness.py",
@@ -566,27 +635,44 @@
     {
       "path": "simulation-prototype/robustness-study/tolerance-frozen/screen.json",
       "size": 1386865,
-      "sha256": "e692c725a6348d0d6ae12c398b83cc1a5a5ec1b95277910438bce37404e39d0b"
+      "sha256": "bff078880dfb8081305a10e1988c918cd7ca6ad5b86220501103984af7e8cb4f",
+      "pre_editorial_sha256": "e692c725a6348d0d6ae12c398b83cc1a5a5ec1b95277910438bce37404e39d0b",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/tolerance-frozen/validation-plan.json",
       "size": 3772,
-      "sha256": "29a3fec647c7b97004371f4a520ba2dfa41326c1e4f2c59af62770341f341ce3"
+      "sha256": "76a8dd3b8a0e69809ded0bb123383a30a667c4c39d2608921e548e223b03f722",
+      "pre_editorial_sha256": "29a3fec647c7b97004371f4a520ba2dfa41326c1e4f2c59af62770341f341ce3",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/tolerance-heldout/validation.json",
       "size": 219310,
-      "sha256": "c08efc5fd1b5c0464b505115352d155a5c4b8c4261eb928bada78b40ab4bd3bd"
+      "sha256": "a5e381cc615fca38887cde83c8dcf26ba9fee6f0c1dfea361c7768d705093118",
+      "pre_editorial_sha256": "c08efc5fd1b5c0464b505115352d155a5c4b8c4261eb928bada78b40ab4bd3bd",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/validation-heldout/validation.json",
       "size": 491299,
-      "sha256": "7a59b3da6c0853788f9e90f6065d2fa1910d7adbed103c42bf1bad17401cc527"
+      "sha256": "c59b59a3171e82df5b1da74bdea3d6b563cc48aae9c3df4500366ad117bb4c75",
+      "pre_editorial_sha256": "7a59b3da6c0853788f9e90f6065d2fa1910d7adbed103c42bf1bad17401cc527",
+      "editorial_cleanup": false,
+      "dependent_hash_rebound": true
     },
     {
       "path": "simulation-prototype/robustness-study/verify.py",
       "size": 5854,
       "sha256": "3a27152ff10b85eba34c4211ccb4e772a0b392a77ec155a666ebc6a433c0fe90"
     }
-  ]
+  ],
+  "editorial_derivative": {
+    "date": "2026-10-22",
+    "scope": "Remove conversation wording and named AI reviewer credits; preserve methods disclosures, mathematical payloads and Lean source. Rebind dependent hashes and sizes.",
+    "record": "docs/validation/editorial_cleanup.json (repository-relative)"
+  }
 }

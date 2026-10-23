@@ -1383,6 +1383,6 @@
     }
   ],
   "mean_homometry_max_float_residual": 9.103828801926284e-14,
-  "source_sha256": "a89410c825c106df3c719c60d451cb2e31aceea1af0b48589fd24682f1b7bd45",
+  "source_sha256": "dbfd41e92addfb30261c3ab47cc285fae1cc9598e9ef69fbe1724947aa3ad013",
   "scope": "Finite-grid second-moment screen at changed frequency, plus fourth-moment controls at original frequency. No global optimization, physical claim, or simulated detection result."
 }

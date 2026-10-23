@@ -3,7 +3,8 @@
 This bounded simulation and arithmetic study asks whether a programmable optical
 emulator could distinguish the same two coordinate sets within an acquisition
 budget. It contains **no measured detector data or hardware validation**. The
-original proofs and the 327-file historical evidence inventory are unchanged.
+original mathematical results are unchanged. The [public provenance record](../../docs/provenance.md)
+documents the later editorial cleanup and hash rebinding, including this study's input bindings.
 
 Later [optical transfer and detector supplements](../optical-validation/README.md)
 add a continuum optical model, robustness simulations, external processed SPAD

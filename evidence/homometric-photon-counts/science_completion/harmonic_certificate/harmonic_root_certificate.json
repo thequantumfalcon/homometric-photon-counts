@@ -2,8 +2,8 @@
   "schema": "fresh-global-harmonic-one-simple-positive-root-v1",
   "complete": true,
   "source_sha256": "53e9ffd708380209976d2340cafced26c00223d52002af5e17dc96f03d580d07",
-  "input_groups_sha256": "e1fc42037bb44fc82f10129fb1c324c85508ef88d89f0fba1477554bec4bc2ac",
-  "input_model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+  "input_groups_sha256": "bf7e1fc2564fab30861cc5ad0ab35f680f607d121df66b27e6ef85f694a39a96",
+  "input_model_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
   "input_group_reconstruction_source_sha256": "95fba2d066281229806b91b2cff8a6ca39b40846e0005a9fe0a6e1d7d33ec440",
   "proof_scope": "Fresh complete positive-axis count for the harmonic contrast reconstructed directly from the exact graph covariance and coordinate phases. No historical root certificate, root count, or localization is used.",
   "definition": {

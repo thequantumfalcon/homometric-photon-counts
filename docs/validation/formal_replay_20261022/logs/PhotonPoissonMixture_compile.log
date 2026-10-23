@@ -1,0 +1,5 @@
+'PhotonPoissonMixture.poissonLaw_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMixture.countLaw_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMixture.countLaw_factorial_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMixture.countLaw_factorial_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonPoissonMixture.count_gap_from_mixtures' depends on axioms: [propext, Classical.choice, Quot.sound]

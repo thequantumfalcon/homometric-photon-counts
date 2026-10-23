@@ -1,0 +1,464 @@
+{
+  "date": "2026-10-22",
+  "repository": "https://github.com/thequantumfalcon/homometric-photon-counts",
+  "main_head": "fc76c4c8d7344625eed38741904e7c870b0094cd",
+  "visible_refs": [
+    "main",
+    "study/noise-order-dictionary"
+  ],
+  "commit_count": 22,
+  "main_commit_count": 19,
+  "main_signatures_verified_by_github": true,
+  "commits": [
+    {
+      "sha": "fc76c4c8d7344625eed38741904e7c870b0094cd",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T01:42:35Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T01:42:35Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-22T01:42:55Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/fc76c4c8d7344625eed38741904e7c870b0094cd"
+    },
+    {
+      "sha": "cb40dbd9427d36b425ec7e3c838132b940af2898",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T01:32:40Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T01:32:40Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-22T01:36:35Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/cb40dbd9427d36b425ec7e3c838132b940af2898"
+    },
+    {
+      "sha": "0d3fad8a0ef20148595a01e042f08e0752db9215",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T21:32:27Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T21:32:27Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T21:32:47Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/0d3fad8a0ef20148595a01e042f08e0752db9215"
+    },
+    {
+      "sha": "077430d24eb07f940fa175243ae511f8228ceb5a",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T19:15:16Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T19:15:16Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T19:15:34Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/077430d24eb07f940fa175243ae511f8228ceb5a"
+    },
+    {
+      "sha": "14168c47808a82af1fa887d37b87540397aece07",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T18:37:14Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T18:37:14Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T18:37:26Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/14168c47808a82af1fa887d37b87540397aece07"
+    },
+    {
+      "sha": "649add00cd382a073a51db60233783dcd1a11611",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T17:26:21Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T17:26:21Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T17:26:52Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/649add00cd382a073a51db60233783dcd1a11611"
+    },
+    {
+      "sha": "9aec575fa509c9a71e267e4c55c7ccd5543c8e33",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T16:30:42Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T16:30:42Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T16:32:10Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/9aec575fa509c9a71e267e4c55c7ccd5543c8e33"
+    },
+    {
+      "sha": "c3d1020c64d20671de0a1ef348b55df3578a8d68",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T11:27:36Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T11:27:36Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T11:27:43Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/c3d1020c64d20671de0a1ef348b55df3578a8d68"
+    },
+    {
+      "sha": "2c0ca470b4d3f1a45df2188141adfa9a9538f5e6",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T11:10:59Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T11:10:59Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T11:11:34Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/2c0ca470b4d3f1a45df2188141adfa9a9538f5e6"
+    },
+    {
+      "sha": "4bc4c3174b9e6ccb63227db33e1195f17572c069",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T10:18:09Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T10:18:09Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T10:18:31Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/4bc4c3174b9e6ccb63227db33e1195f17572c069"
+    },
+    {
+      "sha": "b450472ef5c0049ff61a09774027dfc7516e8618",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T10:06:50Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T10:06:50Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T10:18:31Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/b450472ef5c0049ff61a09774027dfc7516e8618"
+    },
+    {
+      "sha": "a767d251028ae5225440b5118eaa0e19e14b846b",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T09:29:57Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T09:29:57Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T10:18:31Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/a767d251028ae5225440b5118eaa0e19e14b846b"
+    },
+    {
+      "sha": "d3dbcae2ffd81e482ebd43d27acfa114671686e6",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T08:46:35Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T08:46:35Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T08:46:41Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/d3dbcae2ffd81e482ebd43d27acfa114671686e6"
+    },
+    {
+      "sha": "f020344b44b5c2661eadf958d394bcb42315a8a1",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T07:35:13Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T07:35:13Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T07:35:19Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/f020344b44b5c2661eadf958d394bcb42315a8a1"
+    },
+    {
+      "sha": "051a524d1a1a3667e58e4d4dea56deb5086ed615",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T07:33:36Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T07:33:36Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T07:33:43Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/051a524d1a1a3667e58e4d4dea56deb5086ed615"
+    },
+    {
+      "sha": "57a41bfbd987e8c01d5a172aaf7f84044b7925bc",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:50:35Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:50:35Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T06:50:41Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/57a41bfbd987e8c01d5a172aaf7f84044b7925bc"
+    },
+    {
+      "sha": "a5620bb2289980c39ee8afac70927945c7b36bc6",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:46:28Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:46:28Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T06:46:35Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/a5620bb2289980c39ee8afac70927945c7b36bc6"
+    },
+    {
+      "sha": "b3b280899a01da52ae6279460559e9ec10fbf3ae",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:28:18Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:28:18Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T06:28:25Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/b3b280899a01da52ae6279460559e9ec10fbf3ae"
+    },
+    {
+      "sha": "d7fece070757c9e045acc554751d286dc928b187",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:22:47Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-21T06:22:47Z"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "verified_at": "2026-10-21T06:25:44Z"
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/d7fece070757c9e045acc554751d286dc928b187"
+    },
+    {
+      "sha": "1f310ad92286398a44b68183d245ef639902ad7e",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T23:15:59Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T23:15:59Z"
+      },
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "verified_at": null
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/1f310ad92286398a44b68183d245ef639902ad7e"
+    },
+    {
+      "sha": "e5d78ce25057f89763f44eccc070994e4a605af5",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T15:50:20Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T15:50:20Z"
+      },
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "verified_at": null
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/e5d78ce25057f89763f44eccc070994e4a605af5"
+    },
+    {
+      "sha": "603b968a20f99e7a4ea869b2798ec9a6dcb39398",
+      "author": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T14:38:53Z"
+      },
+      "committer": {
+        "name": "The Quantum Falcon",
+        "email": "thequantumfalcon@users.noreply.github.com",
+        "date": "2026-10-22T14:38:53Z"
+      },
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "verified_at": null
+      },
+      "url": "https://github.com/thequantumfalcon/homometric-photon-counts/commit/603b968a20f99e7a4ea869b2798ec9a6dcb39398"
+    }
+  ],
+  "scope": "GitHub-reported verification statuses for fetched public branch histories; this is not a new independent signature verification.",
+  "status": "PASS",
+  "local_history_restored": true,
+  "shallow_repository": false,
+  "local_all_refs_commit_count": 22,
+  "local_commit_ids_equal_github_observed": true,
+  "attribution_guard": {
+    "passed": true,
+    "checked": "Authors, committers, co-author/generated-by credit lines across all fetched refs",
+    "source_sha256": "4360fef2c9447ef5c37749539846a054225a5babb62352270a61d565bf514172",
+    "output": "PASS: no AI attribution trailers or generated-by credits in inspected commit messages"
+  },
+  "object_database_check": {
+    "command": "git fsck --full",
+    "returncode": 0
+  },
+  "restoration": {
+    "method": "Copy verified cloned Git metadata and initialize index from HEAD; no working-tree checkout or file replacement",
+    "head": "fc76c4c8d7344625eed38741904e7c870b0094cd",
+    "working_edits_preserved": true,
+    "commits_created": 0,
+    "published": false
+  },
+  "upstream_bundle": {
+    "path": "build/reproduction-20261022/upstream-history.bundle",
+    "sha256": "c85ee8798590e6e732b92fa1e9016fa866453abbfc5a59043d3b9ee2d8d49142",
+    "size": 13793953,
+    "complete_history": true,
+    "includes_uncommitted_changes": false
+  },
+  "signature_scope": "GitHub verifies all 19 main-branch commit signatures. The separate feature branch adds 3 unsigned commits; those are recorded as unsigned and were not rewritten.",
+  "history_scope": "All visible fetched branch histories and tags as observed; no assertion about deleted refs or inaccessible server-side history."
+}

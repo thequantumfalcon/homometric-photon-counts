@@ -1,6 +1,6 @@
 INTERNAL INDEPENDENT AI REVIEW OF THE GLOBAL TWO-ROOT CERTIFICATE
 Review date: 2026-10-20
-Reviewer: separate assistant agent /root/phasor_novelty_review
+Method: a separate internal AI cross-check.
 
 VERDICT
 
@@ -25,16 +25,16 @@ FILES REVIEWED AND IDENTITY
 certify_two_roots.py
   SHA256 d0df1c532b9baadda11b75badfbfc4d81d5506c93d1b829c355e004501f15631
 two_root_certificate.json
-  SHA256 5b53808ab51be7b1c1fa1512aeaad5a37eb4a3c1bcd0e3c92554045f3124ad07
+  SHA256 6ecd2ea0ca27689263f92cbd1109ee6f4b9de6a5dbd09b2141f7484d4c824889
 two_root_proof.txt
-  SHA256 5b647b77c93b58ef5bd66a6f8da1f07f77bb8e23c2cd7dc8a49a6c74fe252667
+  SHA256 f09cad5fed84fe9847ce59bd72ed1cb5677c11339dc98695fec04f6d7d29de84
 input_premises.json
-  SHA256 0fc209850fe56f58c90c8f3c1e1a4ecb97e96d3e519becf64588ced311b38a0e
+  SHA256 7f274ac5a03672db264ff977785b0cc87f2efb1e3e75fb187ae87f4c36680352
 two_root_summary.json
-  SHA256 28e292e278af6a58a3ae76362e2e61b526efe9fa076254dd05b10fe7a27800c1
+  SHA256 2400777d63323ff03231c5e80ac346cf5b0ca361d5e8870d66e17415a083c9ae
 
 The exact reconstructed model bound to the input has SHA256
-  4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288.
+  f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f.
 
 All five reviewed files were hashed before and after the audit and were
 unchanged. This review file is the only file written by this audit. Python

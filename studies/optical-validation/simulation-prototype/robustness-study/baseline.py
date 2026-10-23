@@ -16,7 +16,7 @@ from scipy.special import erf
 from scipy.stats import beta
 
 HERE = Path(__file__).resolve().parent
-MODEL_SHA = "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288"
+MODEL_SHA = "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f"
 THRESHOLD = -0.6401102
 
 

@@ -1,0 +1,1685 @@
+'PhotonCertB.v21_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v21_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v21_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v21_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v21_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:181:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:189:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:197:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:205:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:213:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:221:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:229:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:237:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:245:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:253:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:261:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:269:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:277:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:285:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:293:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:301:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:309:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:317:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:325:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:333:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:341:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:349:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:357:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:365:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:373:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v22_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v22_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v22_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v22_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v22_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:394:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:402:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:410:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:418:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:426:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:434:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:442:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:450:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:458:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:466:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:474:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:482:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:490:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:498:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:506:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:514:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:522:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:530:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:538:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:546:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:554:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:562:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:570:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:578:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:586:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v23_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v23_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v23_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v23_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v23_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:607:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:615:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:623:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:631:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:639:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:647:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:655:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:663:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:671:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:679:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:687:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:695:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:703:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:711:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:719:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:727:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:735:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:743:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:751:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:759:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:767:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:775:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:783:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:791:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:799:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v24_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v24_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v24_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v24_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v24_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:820:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:828:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:836:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:844:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:852:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:860:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:868:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:876:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:884:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:892:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:900:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:908:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:916:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:924:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:932:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:940:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:948:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:956:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:964:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:972:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:980:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:988:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:996:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1004:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1012:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v25_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v25_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v25_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v25_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v25_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1033:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1041:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1049:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1057:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1065:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1073:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1081:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1089:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1097:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1105:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1113:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1121:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1129:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1137:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1145:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1153:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1161:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1169:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1177:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1185:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1193:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1201:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1209:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1217:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1225:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v26_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v26_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v26_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v26_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v26_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1349:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1357:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1365:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1373:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1381:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1389:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1397:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1405:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1413:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1421:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1429:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1437:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1445:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1453:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1461:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1469:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1477:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1485:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1493:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1501:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1509:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1517:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1525:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1533:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1541:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v27_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v27_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v27_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v27_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v27_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1562:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1570:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1578:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1586:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1594:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1602:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1610:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1618:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1626:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1634:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1642:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1650:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1658:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1666:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1674:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1682:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1690:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1698:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1706:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1714:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1722:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1730:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1738:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1746:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1754:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v28_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v28_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v28_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v28_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v28_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1775:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1783:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1791:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1799:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1807:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1815:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1823:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1831:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1839:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1847:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1855:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1863:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1871:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1879:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1887:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1895:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1903:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1911:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1919:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1927:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1935:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1943:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1951:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1959:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1967:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v29_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v29_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v29_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v29_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v29_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1988:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:1996:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2004:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2012:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2020:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2028:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2036:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2044:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2052:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2060:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2068:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2076:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2084:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2092:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2100:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2108:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2116:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2124:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2132:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2140:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2148:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2156:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2164:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2172:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2180:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v30_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v30_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v30_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v30_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v30_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2201:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2209:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2217:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2225:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2233:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2241:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2249:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2257:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2265:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2273:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2281:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2289:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2297:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2305:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2313:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2321:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2329:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2337:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2345:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2353:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2361:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2369:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2377:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2385:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2393:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v31_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v31_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v31_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v31_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v31_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2517:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2525:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2533:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2541:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2549:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2557:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2565:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2573:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2581:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2589:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2597:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2605:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2613:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2621:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2629:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2637:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2645:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2653:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2661:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2669:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2677:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2685:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2693:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2701:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2709:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v32_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v32_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v32_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v32_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v32_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2730:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2738:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2746:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2754:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2762:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2770:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2778:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2786:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2794:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2802:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2810:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2818:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2826:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2834:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2842:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2850:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2858:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2866:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2874:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2882:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2890:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2898:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2906:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2914:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2922:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v33_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v33_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v33_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v33_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v33_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2943:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2951:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2959:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2967:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2975:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2983:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2991:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:2999:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3007:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3015:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3023:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3031:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3039:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3047:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3055:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3063:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3071:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3079:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3087:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3095:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3103:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3111:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3119:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3127:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3135:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v34_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v34_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v34_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v34_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v34_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3156:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3164:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3172:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3180:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3188:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3196:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3204:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3212:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3220:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3228:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3236:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3244:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3252:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3260:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3268:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3276:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3284:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3292:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3300:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3308:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3316:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3324:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3332:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3340:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3348:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v35_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v35_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v35_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v35_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v35_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3472:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3480:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3488:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3496:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3504:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3512:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3520:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3528:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3536:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3544:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3552:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3560:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3568:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3576:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3584:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3592:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3600:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3608:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3616:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3624:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3632:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3640:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3648:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3656:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3664:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v36_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v36_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v36_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v36_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v36_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3685:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3693:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3701:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3709:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3717:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3725:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3733:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3741:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3749:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3757:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3765:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3773:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3781:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3789:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3797:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3805:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3813:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3821:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3829:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3837:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3845:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3853:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3861:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3869:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3877:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v37_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v37_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v37_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v37_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v37_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3898:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3906:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3914:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3922:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3930:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3938:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3946:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3954:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3962:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3970:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3978:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3986:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:3994:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4002:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4010:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4018:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4026:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4034:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4042:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4050:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4058:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4066:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4074:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4082:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4090:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v38_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v38_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v38_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v38_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v38_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4111:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4119:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4127:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4135:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4143:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4151:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4159:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4167:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4175:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4183:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4191:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4199:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4207:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4215:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4223:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4231:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4239:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4247:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4255:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4263:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4271:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4279:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4287:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4295:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4303:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v39_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v39_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v39_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v39_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v39_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4427:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4435:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4443:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4451:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4459:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4467:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4475:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4483:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4491:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4499:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4507:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4515:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4523:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4531:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4539:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4547:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4555:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4563:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4571:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4579:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4587:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4595:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4603:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4611:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4619:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v40_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v40_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v40_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v40_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v40_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4640:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4648:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4656:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4664:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4672:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4680:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4688:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4696:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4704:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4712:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4720:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4728:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4736:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4744:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4752:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4760:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4768:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4776:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4784:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4792:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4800:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4808:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4816:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4824:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4832:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v41_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v41_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v41_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v41_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v41_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4956:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4964:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4972:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4980:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4988:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:4996:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5004:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5012:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5020:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5028:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5036:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5044:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5052:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5060:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5068:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5076:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5084:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5092:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5100:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5108:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5116:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5124:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5132:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5140:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+REPOSITORY_ROOT\build\review-formal-20261022\PhotonCertBBlock42.lean:5148:6: warning: Unused tactic linter: `simp only [star_one, star_neg]` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'PhotonCertB.v42_00' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v42_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v42_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v42_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonCertB.v42_44' depends on axioms: [propext, Classical.choice, Quot.sound]

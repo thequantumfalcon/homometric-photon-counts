@@ -270,7 +270,7 @@ def main():
                                "d05":d05,"dstar":dstar}
         model = {
             "schema":"fresh-independent-CM05-model-reconstruction-v1",
-            "provenance":"Reconstructed from mathematical definitions retained in this conversation; no historical file or certificate recovered.",
+            "provenance":"Reconstructed from the stated mathematical definitions; no historical file or certificate recovered.",
             "n":N,"omega":"pi/3","centered_MSD_parameter":"v=trace(Cov(u))/63",
             "number_field":{"radicands":list(RAD),"basis_index":"bit mask product of sqrt(radicands); indices 0..7", "coefficients":"exact rational strings"},
             "decimal_precision":ctx.prec,"pi_decimal":str(pi),"a_decimal":str(a),"b_decimal":str(b),

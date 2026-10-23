@@ -8,8 +8,14 @@
 *.png -text
 *.svg text eol=lf
 # Scientific inventories identify exact bytes. Never normalize their payloads.
-/evidence/** -text
+/evidence/** -text whitespace=cr-at-eol
 /formal/*.lean -text
+/docs/report/historical/** -text whitespace=-blank-at-eof,cr-at-eol
+/docs/report/*.json -text whitespace=cr-at-eol
+/docs/validation/formal_replay_20261022/** -text
+/docs/validation/formal_replay_20261022.json -text whitespace=cr-at-eol
 /studies/optical-feasibility/simulation-prototype/** -text whitespace=cr-at-eol
 /studies/optical-validation/simulation-prototype/** -text whitespace=cr-at-eol
+# Generated shader strings retain the reproducible upstream bundle's whitespace.
+/demo/vendor/three-orbit.min.js -text whitespace=-blank-at-eol,-space-before-tab linguist-generated
 /docs/** linguist-documentation

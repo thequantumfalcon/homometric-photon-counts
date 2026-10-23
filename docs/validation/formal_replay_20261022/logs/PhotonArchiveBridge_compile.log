@@ -1,0 +1,2 @@
+'PhotonArchiveParser.decodedA_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhotonArchiveParser.decodedB_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]

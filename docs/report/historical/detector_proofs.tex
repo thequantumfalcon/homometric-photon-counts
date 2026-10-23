@@ -1,0 +1,200 @@
+\section{Common measurement noise and the fifth-power loss of information}
+\label{sec:detectors}
+
+This section derives consequences of the homogeneous-control theorem. These
+are mathematical measurement models, not experimental validation. The phase
+variance is $s>0$, the number of sites is $n=63$, and
+\[
+ X_s=I_A(s),\qquad Y_s=I_B(s),\qquad 0\le X_s,Y_s\le n^2.
+\]
+Their first three moments agree exactly. Write
+\[
+ D_j(s)=\mathbb E X_s^j-\mathbb E Y_s^j,\qquad
+ C=\frac{455015761}{20000},\qquad c_5=16C=\frac{455015761}{1250}.
+\]
+The exact fourth-moment identity gives
+\[
+ D_4(s)=C e^{-4s}(1-e^{-s})^5
+ (e^{-3s}+3e^{-2s}+6e^{-s}+6)>0,
+ \qquad D_4(s)=c_5s^5+O(s^6).
+\]
+The separately computed fifth-moment polynomial satisfies
+$D_5(s)=O(s^6)$. This also follows analytically: the scaled intensities
+$I_G(s)/s$ tend in every fixed moment to the squared modulus of a complex
+Gaussian with common covariance and common pseudocovariance magnitude;
+therefore the $s^5$ coefficients of the fifth moments agree. Every moment
+is a finite exponential polynomial, so its Taylor expansion has integer
+powers. The saved rational calculation verifies all coefficients through
+order five of $D_5$ are zero without using this limiting argument.
+
+\subsection{A uniform moment bound}
+
+Let $Z\sim N(0,I_n)$, $P=I-\mathbf1\mathbf1^T/n$, and $U=PZ$.
+Centering changes the amplitude by a common phase and leaves intensity
+unchanged. At the common clean null, $\sum_i z_i=0$, so
+\[
+ \left|\sum_i z_i e^{i\sqrt{s}U_i}\right|
+ =\left|\sum_i z_i(e^{i\sqrt{s}U_i}-1)\right|
+ \le\sqrt{ns}\,\|U\|.
+\]
+Since $\|U\|^2$ is chi-square with $n-1$ degrees of freedom,
+\begin{equation}\label{eq:Bp}
+ \mathbb E X_s^p+\mathbb E Y_s^p\le B_p s^p,
+ \qquad B_p=2n^p\prod_{j=0}^{p-1}(n-1+2j).
+\end{equation}
+The identity for the chi-square moment follows by differentiating its
+moment generating function $(1-2t)^{-(n-1)/2}$ at zero. This estimate is
+deliberately conservative and holds for every $s>0$.
+
+\subsection{Distinction survives common additive noise}
+
+Let $E$ have any fixed distribution with finite fourth absolute moment,
+independent of the intensity, and use the same noise law for A and B.
+The binomial expansion proves that the first three moments of $X_s+E$
+and $Y_s+E$ agree and
+\[
+ \mathbb E(X_s+E)^4-\mathbb E(Y_s+E)^4=D_4(s)>0.
+\]
+Thus the measured distributions remain distinct at every finite positive
+$s$. This is an identifiability statement; it supplies no uniform practical
+accuracy guarantee as the noise level grows or the signal shrinks.
+
+\subsection{Gaussian readout: an exact leading total-variation asymptotic}
+
+Take $E\sim N(0,\sigma^2)$ with fixed $\sigma>0$, and let $g_\sigma$ be its
+density. Denote total variation by $d_{\rm TV}(P,Q)=\tfrac12\|p-q\|_1$
+when densities exist. Taylor's theorem with an integral remainder gives,
+in $L^1(\mathbb R)$,
+\[
+ p_A-p_B=\frac{D_4(s)}{24}g_\sigma^{(4)}
+             -\frac{D_5(s)}{120}g_\sigma^{(5)}+R_s,
+ \qquad
+ \|R_s\|_1\le\frac{B_6s^6}{720}\|g_\sigma^{(6)}\|_1.
+\]
+All terms of degree zero through three cancel. Translation invariance of
+the $L^1$ norm justifies the remainder bound for all nonnegative input
+values, including unbounded Taylor segments. Consequently,
+\begin{equation}\label{eq:gaussian-asymptotic}
+ d_{\rm TV}(X_s+E,Y_s+E)
+ =\frac{c_5}{48}\|g_\sigma^{(4)}\|_1s^5+O(s^6).
+\end{equation}
+The remainder may depend on the fixed detector parameter $\sigma$.
+In particular the distance is of order $s^5$, with a strictly positive
+coefficient; this statement concerns total variation, not merely one
+selected statistic.
+
+For explicit constants, let $H_k$ be the probabilists' Hermite polynomial.
+Then
+\[
+ \|g_\sigma^{(k)}\|_1
+ =\sigma^{-k}\mathbb E|H_k(Z)|\le\frac{\sqrt{k!}}{\sigma^k},
+ \qquad Z\sim N(0,1).
+\]
+The inequality follows from Cauchy--Schwarz and
+$\mathbb E H_k(Z)^2=k!$, which follows by repeated Gaussian integration
+by parts. Put $a=\sqrt{3-\sqrt6}$, $b=\sqrt{3+\sqrt6}$, and
+$\varphi(t)=e^{-t^2/2}/\sqrt{2\pi}$. Splitting at the four roots of
+$H_4(t)=t^4-6t^2+3$ and integrating
+$(H_3\varphi)'=-H_4\varphi$ yields
+\[
+ \|g_\sigma^{(4)}\|_1
+ =\frac{4\sqrt6}{\sigma^4}\bigl[a\varphi(a)+b\varphi(b)\bigr]>0.
+\]
+
+The saved arithmetic supplies rational $A_4,A_5$ such that
+\[
+ |D_4(s)-c_5s^5|\le A_4s^6,
+ \qquad |D_5(s)|\le A_5s^6.
+\]
+For a polynomial $D_j(s)=\sum_m a_{jm}e^{-ms}$ they are obtained from
+$A_j=\sum_m|a_{jm}|m^6/6!$ after the exact lower-order cancellations.
+Thus an explicit finite-$s$ error in \eqref{eq:gaussian-asymptotic} is
+\begin{equation}\label{eq:gaussian-error}
+ s^6\left[
+ \frac{A_4\|g_\sigma^{(4)}\|_1}{48}
+ +\frac{A_5\|g_\sigma^{(5)}\|_1}{240}
+ +\frac{B_6\|g_\sigma^{(6)}\|_1}{1440}\right].
+\end{equation}
+A simpler all-$s$ upper bound, using a Taylor expansion only through
+degree four, is
+\[
+ d_{\rm TV}(X_s+E,Y_s+E)
+ \le\min\left\{1,
+ \frac{D_4(s)}{2\sqrt{24}\,\sigma^4}
+ +\frac{B_5s^5}{2\sqrt{120}\,\sigma^5}\right\}.
+\]
+
+\subsection{Photon counting: strict distinction and fifth-power scaling}
+
+Consider a count $N$ conditional on intensity $I$ with
+\[
+ N\mid I\sim\operatorname{Poisson}(b+\eta I),
+ \qquad b\ge0,\quad\eta>0,
+\]
+where the background $b$ and gain $\eta$ are fixed and common to the two
+hypotheses. The falling factorial $(N)_j=N(N-1)\cdots(N-j+1)$ satisfies
+$\mathbb E[(N)_j\mid I]=(b+\eta I)^j$. Hence the first three factorial
+moments agree and the fourth differs by $\eta^4D_4(s)>0$. The two count
+distributions are therefore distinct for every finite $s>0$.
+
+Let $p_b$ be the Poisson mass function at mean $b$, and let the shift
+operator $S$ act by $(Sp)(k)=p(k-1)$ with $p(-1)=0$. Derivatives with
+respect to intensity satisfy
+\[
+ \frac{d^j}{dI^j}p_{b+\eta I}
+ =\eta^j(S-\mathrm{Id})^j p_{b+\eta I},
+ \qquad \left\|\frac{d^j}{dI^j}p_{b+\eta I}\right\|_1\le(2\eta)^j.
+\]
+Taylor expansion in the Banach space $\ell^1$ therefore proves
+\begin{equation}\label{eq:poisson-asymptotic}
+ d_{\rm TV}(N_A,N_B)
+ =\frac{c_5\eta^4}{48}\|(S-\mathrm{Id})^4p_b\|_1s^5+O(s^6).
+\end{equation}
+The leading constant is positive: the generating function of
+$(S-\mathrm{Id})^4p_b$ is $(z-1)^4e^{b(z-1)}$, which is not the zero
+function. For zero background, $p_0$ is a point mass and the fourth
+difference has coefficients $(1,-4,6,-4,1)$, so
+\begin{equation}\label{eq:poisson-zero}
+ d_{\rm TV}(N_A,N_B)=\frac{c_5\eta^4}{3}s^5+O(s^6).
+\end{equation}
+An explicit all-$s$ error for this last expression is
+\[
+ s^6\left[\frac{\eta^4A_4}{3}
+ +\frac{2\eta^5A_5}{15}+\frac{2\eta^6B_6}{45}\right].
+\]
+An all-$s$ upper bound requiring no sixth-order quantities is
+\[
+ d_{\rm TV}(N_A,N_B)\le\min\left\{1,
+ \frac{\eta^4D_4(s)}{3}+\frac{2\eta^5B_5s^5}{15}\right\}.
+\]
+
+\subsection{An asymptotically optimal count-parity rule}
+
+In the zero-background model, the difference in even-count probabilities is
+\[
+ \Pr(N_A\text{ even})-\Pr(N_B\text{ even})
+ =\frac12\left(\mathbb E e^{-2\eta X_s}
+                   -\mathbb E e^{-2\eta Y_s}\right)
+ =\frac{c_5\eta^4}{3}s^5+O(s^6).
+\]
+The same coefficient occurs in \eqref{eq:poisson-zero}. With equal prior
+probabilities and one observation, choosing A on even counts and B on odd
+counts therefore has advantage over random guessing asymptotic to the
+optimal advantage: the ratio tends to one as $s\downarrow0$.
+This is a one-observation asymptotic statement. Its absolute advantage
+tends to zero, and the argument does not claim finite-$s$ optimality,
+optimality for positive background, or optimality for multiple observations.
+
+\subsection{Sampling and interpretation}
+
+For $m$ independent observations from one unknown configuration with equal
+priors, a one-observation TV bound $\delta(s)$ implies
+\[
+ \Pr(\text{correct})\le\frac{1+\min\{1,m\delta(s)\}}2.
+\]
+This elementary inequality gives a necessary $\Omega(s^{-5})$ sample bound.
+Section~\ref{sec:sampling} improves it to sharp necessary and sufficient
+orders using Hellinger distance. Unknown gain, background, noise calibration,
+temporal dependence, and changes in the structural model are outside the
+stated experiment.
+

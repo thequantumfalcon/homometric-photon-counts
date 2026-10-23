@@ -5403,7 +5403,7 @@
     0.8670744304410958,
     0.9179812805472235
   ],
-  "model_sha256": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
-  "source_sha256": "8dd6334a1866245d1b10e64c71d3d0b34e68a24c6d72e9ae95d756de9f48680a",
+  "model_sha256": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
+  "source_sha256": "45d5812d63ff38f9fe9ae0da20e83ba8569bf56bc4ad2d3b5c851ae95b246c92",
   "scope": "Monochromatic scalar Fraunhofer phase-mask emulator with finite square cells, Gaussian illumination and single-mode collection. Ideal per-cell amplitude calibration is assumed. Initially-live nonparalyzable Poisson detector; no afterpulsing, phase transfer error, relay aberrations, polarization, temporal dependence or measured input data. Fixed classifier; no threshold refitting. Scenarios share phase draws and must not be pooled. Numerical and Monte Carlo checks are not Arb certificates or physical validation."
 }

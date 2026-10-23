@@ -3,16 +3,16 @@
   "status": "NO_GO_REFERENCE_SEPARATION_WITHIN_BUDGET",
   "final_output_directory": "run-checked",
   "sha256": {
-    "study.py": "6a01a6d27926ccaf39f55445dbe0290e47f61f18ca56dde8ab4f7190508ea23e",
+    "study.py": "4eebaf214003f17e30d2a33976a8d0ae344b676b81f5a101775e547c9b2b3dcb",
     "test_study.py": "c20a78cebccf33a3a2cbbc2380b2d45694bccaa0819e175929824402949b207f",
     "README.txt": "110c0bbdf8bf2ddfe4eade33e33994a165f92811388200ad2a85a6d86805a2c3",
-    "run-checked/results.json": "855430d22378efbca4197f1ecb332341d700ff5ac93fe26f4bfaadb4aca93d04",
+    "run-checked/results.json": "d96a61ba05f7d00a64238e176ddcb0532b038be16fe99c4962b61d691a58bced",
     "run-checked/feasibility.png": "e838e40e82e0058a374636eb872a30c1fb1bac40d960324fa15bf53004b7f031",
     "run-checked/feasibility.pdf": "a5e9bc97c432e5a84aa05d8f69ea233f23f2d04d8f921983c8187a6cda118b51"
   },
-  "base_source_sha256": "7b77ac71459e0ba6258a9df79a2969f314486759d932314e3ab51579482e7c92",
+  "base_source_sha256": "86e8ab0f8ba754ba7751e2e3cfdcb22a154212dbde49c2e96345d504f38dfa9d",
   "input_sha256": {
-    "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json": "4b9b37a013347b2bd8a273bd2e1be2c867986f2287e1012d6ea9488ed515b288",
+    "homometric-photon-counts/science_completion/harmonic_certificate/input_model.json": "f4f3462b6aac8b56b152f63817cbf5de6848b3226f7dfe26cd29be87490c236f",
     "continuation-2026-10-20/multibin/certificate.json": "1e0be4aecb7818a5b9c832f627ad7a955d7fbeee23f77989fab8cc20b6a3e29b",
     "followup-2026-10-20/lowerbounds/binned_lower_bound.json": "cca4c8ed55a0b7e61f9e8bd599c7c5188f4fc680b1f45c1276d6d1a498575fb0"
   },

@@ -1,6 +1,14 @@
 # Recorded validation
 
-Executed on Windows with Python 3.11.9, during 20–21 October 2026.
+The earlier records below were executed on Windows with Python 3.11.9 during 20–21 October 2026. Additional checks dated 22 October are recorded separately:
+
+- [Interactive demo browser validation](demo_20261022.json): numerical display checks, five responsive widths, 3D geometry and controls, keyboard and touch emulation, offline loading and WebGL fallback. The record binds frontend sources and retained screenshots; internal visual inspection does not establish complete accessibility or physical-device coverage.
+
+- [Fresh full Lean source rebuild](formal_replay_20261022.json): all 61 project modules compiled anew with pinned Lean 4.35.0 and mathlib dependencies; all 722 theorem-axiom audits passed. The exact executed driver and all 61 compiler logs are retained with source, output and log hashes. This was ordinary kernel compilation, without an additional `leanchecker --fresh` or Nanoda run; the separate root-count and testing arguments are not thereby formalized.
+- [Original report recovery](../report/recovery.json): the 18-page PDF and all four source/figure inputs match two retained archives and the historical manifest. A [fresh Linux rebuild](../report/rebuild_validation.json) passed three LaTeX runs without warnings; all 18 rendered pages matched the original at the recorded resolution.
+- [Git history audit](git_history_20261022.json): all 22 visible commits checked for AI author, committer and credit metadata; the full matching history restored locally while preserving working edits. All 19 main-branch signatures are GitHub-verified; three separate feature-branch commits are unsigned.
+- [Fresh Linux replay](linux_replay_20261022.json): Ubuntu 22.04.5 under WSL2, CPython 3.13.14, all ten Arb stages, both optical replays, core checks, 33 snapshot tests and extracted-package checks passed. The actual Linux optical-transfer output differs from the archived Windows certificate only by line endings. The separately pinned Linux wheel and exact tested source snapshot are recorded.
+- [Updated Linux package check](linux_updated_package_20261022.json): the restored report and updated source-inventory traversal passed 34 tests, core replay, report-file verification and extracted-package checks. All 545 protected scientific/formal/evaluator files match the earlier successful numerical snapshot. Subsequent changes, including report-rendering metadata, proof receipts and documentation, are outside this package's recorded scope.
 
 | Check | Recorded result |
 | --- | --- |
