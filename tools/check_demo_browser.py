@@ -654,7 +654,7 @@ def main() -> None:
     from playwright.sync_api import sync_playwright
 
     require(version("playwright") == "1.58.0", "Use the documented Playwright version")
-    require(version("Pillow") == "12.0.0", "Use the documented Pillow version")
+    require(version("Pillow") == "13.0.0", "Use the documented Pillow version")
     output.mkdir(parents=True)
     (output / "browser-temp").mkdir()
     errors: list[str] = []

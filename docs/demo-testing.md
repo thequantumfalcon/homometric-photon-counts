@@ -1,6 +1,6 @@
 # Local browser checks
 
-The demonstration runs without a JavaScript package manager or external web assets. Browser QA is optional and separate from the mathematical replays. Its Python dependencies are pinned in [requirements-demo-test.txt](../requirements-demo-test.txt): Playwright 1.58.0 and Pillow 12.0.0. An existing matching Chromium installation is also required; the checker does not install software or download a browser.
+The demonstration runs without a JavaScript package manager or external web assets. Browser QA is optional and separate from the mathematical replays. Its Python dependencies are pinned in [requirements-demo-test.txt](../requirements-demo-test.txt): Playwright 1.58.0 and Pillow 13.0.0, requiring Python 3.11 or later. An existing matching Chromium installation is also required; the checker does not install software or download a browser.
 
 ```sh
 python tools/check_demo_browser.py --output build/demo-browser-check
@@ -15,6 +15,8 @@ Separate browser contexts check direct `file://` loading, a two-finger zoom gest
 The targeted accessibility checks cover names, headings, keyboard operation, visible focus, horizontal overflow, SVG text bounds and solid-background HTML text contrast. Screenshot inspection remains necessary; these checks do not establish complete accessibility compliance or behavior on physical mobile hardware. In particular, canvas content and color contrast over complex backgrounds require separate inspection. The retained `summary.json` describes the exact executed checks; failed runs keep a failure record.
 
 The [recorded runs from 2026-10-22](validation/demo_20261022.json) passed in Chromium 145.0.7632.6 and Microsoft Edge 155.0.4283.62. They include source hashes, exact test outcomes and eight retained screenshots, including the [desktop moment panel](validation/demo_20261022/desktop-noise.png) and [mobile 3D view](validation/demo_20261022/mobile-3d.png). Internal screenshot inspection found and corrected display issues before the final runs; this is not external peer review.
+
+The [23 October security-update checks](validation/demo_pillow13_20261023.json) passed both the core and archived-viewer profiles with Pillow 13.0.0, Playwright 1.58.0 and Chromium 145.0.7632.6. Pillow 13.0.0 includes the [upstream security fixes](https://pillow.readthedocs.io/en/stable/releasenotes/13.0.0.html). The receipt records the isolated environment's package versions and wheel hashes, source bindings and check scopes. Earlier receipts retain their original versions and dates.
 
 To inspect the unchanged archived optical viewer separately:
 

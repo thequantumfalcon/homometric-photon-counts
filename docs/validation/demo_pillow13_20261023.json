@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "purpose": "Local browser regression checks after the Pillow 13.0.0 security update",
+  "local_date": "2026-10-23",
+  "timezone": "America/Denver",
+  "python_version": "3.11.9",
+  "package_source": "https://pypi.org/simple",
+  "installed_packages": [
+    {
+      "name": "playwright",
+      "version": "1.58.0",
+      "wheel_sha256": "a2bf639d0ce33b3ba38de777e08697b0d8f3dc07ab6802e4ac53fb65e3907af8"
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "wheel_sha256": "d7710eb676e9bb68965cb045be0d333b4c0d7f9dfbaa7fbf121385b1588683d3"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.6",
+      "wheel_sha256": "a6b4ff33f7e011bbaa148238d131c4fd4f8afbab3c104ddfbdb2b12b74ff7016"
+    },
+    {
+      "name": "pyee",
+      "version": "13.0.1",
+      "wheel_sha256": "af2f8fede4171ef667dfded53f96e2ed0d6e6bd7ee3bb46437f77e3b57689228"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "wheel_sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    }
+  ],
+  "source_sha256": {
+    "requirements-demo-test.txt": "3f8f5d515fd70f8256ab42e54cb1e2937be0ed87e2d19390a441b7b62151786b",
+    "tools/check_demo_browser.py": "3244be34c5f5e6088a1309beecda9b97ac7610f01617fade8f1551d250544c94"
+  },
+  "commands": [
+    "python -m pip check",
+    "python tools/check_demo_browser.py --output <fresh-core-output>",
+    "python tools/check_demo_browser.py --profile baseline --output <fresh-baseline-output>"
+  ],
+  "pip_check": "No broken requirements found",
+  "browser_runs": {
+    "core": {
+      "status": "PASS",
+      "started_utc": "2026-10-24T01:32:37.997451+00:00",
+      "finished_utc": "2026-10-24T01:33:01.132903+00:00",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "profile": "core",
+      "entry": "demo/index.html",
+      "entry_sha256": "2ae655fcb1bd98aad8352200545eccb51400a26e6d3e30fa306b3f14e2e60243",
+      "checker_sha256": "3244be34c5f5e6088a1309beecda9b97ac7610f01617fade8f1551d250544c94",
+      "browser_version": "145.0.7632.6",
+      "playwright_version": "1.58.0",
+      "pillow_version": "13.0.0",
+      "console_errors": [],
+      "nonlocal_resource_requests": [],
+      "viewports_checked": [
+        "desktop",
+        "wide",
+        "tablet",
+        "mobile",
+        "reflow"
+      ],
+      "secondary_contexts_checked": [
+        "file",
+        "touch",
+        "webgl-unavailable",
+        "context-loss"
+      ],
+      "screenshots_checked": 33,
+      "full_local_summary_sha256": "a4de406ce7678daa0667aafe5f8e2800dcc519a06e374bc70a843e2b7e5e7c45"
+    },
+    "baseline": {
+      "status": "PASS",
+      "started_utc": "2026-10-24T01:33:12.348458+00:00",
+      "finished_utc": "2026-10-24T01:33:15.792057+00:00",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "profile": "baseline",
+      "entry": "studies/optical-validation/simulation-prototype/optical-bench-demo/run-demo/demo.html",
+      "entry_sha256": "e27ac0e0ae94aa6dc845ceeb13923dade0589731ab95354a8d527766e4203c32",
+      "checker_sha256": "3244be34c5f5e6088a1309beecda9b97ac7610f01617fade8f1551d250544c94",
+      "browser_version": "145.0.7632.6",
+      "playwright_version": "1.58.0",
+      "pillow_version": "13.0.0",
+      "console_errors": [],
+      "nonlocal_resource_requests": [],
+      "viewports_checked": [
+        "desktop",
+        "mobile"
+      ],
+      "secondary_contexts_checked": [],
+      "screenshots_checked": 4,
+      "full_local_summary_sha256": "790de9b7a68fd07953aee9b6ddad0e093293df33285ee89b75a32a61d8f72e85"
+    }
+  },
+  "visual_spot_checks": [
+    "core-desktop-noise.png",
+    "core-mobile-geometry.png"
+  ],
+  "limits": "Local Chromium regression checks, not physical-device or mathematical validation. Full summaries and screenshots remain local build outputs; the hashes identify those outputs. Earlier browser receipts retain their original package versions and scope."
+}

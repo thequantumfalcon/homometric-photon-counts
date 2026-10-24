@@ -6,6 +6,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Upgrade the optional browser-check dependency to Pillow 13.0.0 and update its runtime version guard to address the reported Pillow security advisories.
 - Remove account-security/outreach housekeeping and the catalog of verification tools without project execution records.
 - Identify review folders as AI-only checks, distinguish local Lean compilation from GitHub CI, label the retained PR #12 review as historical after its closure, and correct stale publication/build wording.
 - Make the attributed 23 October report update the demo's paper link and the first stop in current reading guides; remove the third-party journal mirror link.
