@@ -71,6 +71,8 @@ The first command is standard-library only: it verifies 115 retained files, exte
 
 ## Formal evidence
 
+The recorded Lean compilations ran on the maintainer's own Windows machine, using the pinned environment below. The GitHub CI workflow does not compile Lean.
+
 Archived Lean sources and scoped successful local receipts are included in the evidence tree. They were checked with Lean 4.35.0 and pinned mathlib dependencies identified by their proof manifests. Those receipts record historical fresh-kernel checks and standard axiom audits; their local command paths are explicitly redacted in this public derivative. Current extensions live under `formal/`, with execution coverage recorded separately in the validation directory.
 
 On 22 October, a [full fresh Windows source rebuild](validation/formal_replay_20261022.json) passed all 61 modules and all 722 required theorem-axiom audits in 39 minutes 38 seconds. The [exact executed driver](validation/formal_replay_20261022/executed_driver.py.txt) ran at most two modules concurrently, gated by their project imports, with the same compiler command and input checks as the maintained helper below. Every project proof object was newly compiled; only pinned imported library artifacts came from the official mathlib cache. The receipt retains all compiler logs, source and output hashes, and the declared replacement of absolute repository prefixes in public logs. This was ordinary Lean kernel compilation, without an additional `leanchecker --fresh` or Nanoda run. The root-count and testing arguments retain their separate analytic and numerical scope.

@@ -1,9 +1,15 @@
-# Review of draft PR #12: separation law and noise-order dictionary
+# Historical AI-only review of closed PR #12: separation law and noise-order dictionary
+
+**Status: PR #12 was closed without merging on 23 October 2026.** This document
+preserves the review of the revision identified below, including its
+counterexample and replay limits. It is not an active merge recommendation;
+the proposed study is outside the accepted claim ledger. The replay receipt's
+draft status and disposition describe the earlier inspection.
 
 Reviewed 23 October 2026 at head
 [`1f310ad92286398a44b68183d245ef639902ad7e`](https://github.com/thequantumfalcon/homometric-photon-counts/commit/1f310ad92286398a44b68183d245ef639902ad7e)
 of [PR #12](https://github.com/thequantumfalcon/homometric-photon-counts/pull/12).
-**Disposition: retain as a draft; do not merge this revision.** The central
+**Disposition at review time: retain as a draft; do not merge this revision.** The central
 coefficient derivation survived this bounded review, and the small dictionary
 reproduced. A separate, broadly worded three-factor conclusion has an explicit
 counterexample. Dependency, survey-evidence and automated-check gaps also remain.
@@ -209,6 +215,7 @@ The following gaps must be fixed or the associated claims narrowed:
 Narrowing the negative-check paragraph to its four actual examples would remove
 that particular overstatement. A stronger revision could include the explicit
 fifth-order example with its own derivation and checked source. Neither route
-requires claiming formalization or novelty. Reassess the draft after the listed
-mathematical and reproducibility issues are addressed; this review does not
-authorize treating the proposed study as an accepted result on main.
+requires claiming formalization or novelty. Any future proposal would need a new
+review after the listed mathematical and reproducibility issues are addressed.
+This review does not authorize treating the proposed study as an accepted result
+on main.

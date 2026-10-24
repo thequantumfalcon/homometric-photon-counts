@@ -6,6 +6,7 @@ Changes to this research capsule are recorded here. The source repository is pub
 
 ### Fixed
 
+- Identify review folders as AI-only checks, distinguish local Lean compilation from GitHub CI, label the retained PR #12 review as historical after its closure, and correct stale publication/build wording.
 - Make the attributed 23 October report update the demo's paper link and the first stop in current reading guides; remove the third-party journal mirror link.
 - Shorten the README by linking detailed optical and formal accounts while keeping the model, core results and reproduction steps visible.
 - Define blind gain before the demo introduction and clarify that the root proof covers all positive gains, however large.

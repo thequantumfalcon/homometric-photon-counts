@@ -1,6 +1,6 @@
 # Source research capsule
 
-Status: accepted for the local public candidate.
+Status: accepted; implemented in the published source capsule.
 
 The repository distributes scientific arguments, exact inputs and executable checks for inspection and reproduction.
 

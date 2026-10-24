@@ -9,7 +9,7 @@ The optical/detector addition preserves 115 supplemental payloads, adds a portab
 | Scientific claims | Explicit model, claim ledger, evidence links, formal scope, and remaining gaps |
 | Public provenance | Selected source inventory, original/distributed hashes, bounded path redaction and hash rebinding |
 | Local checks | Standard-library and Arb replays, scoped Lean checks, lint, workflow audits, source secret scan, and extracted-package checks; see the validation records |
-| Identity | All 19 main-branch signatures are GitHub-verified; three feature-branch commits are unsigned. The [22-commit history audit](validation/git_history_20261022.json) records identities and signature scope; the attribution guard is retained. |
+| Identity | At the 22 October inspection, all 19 main-branch signatures were GitHub-verified; three feature-branch commits were unsigned. The [22-commit history audit](validation/git_history_20261022.json) records that snapshot's identities and signature scope; the attribution guard is retained. |
 | Attribution | No AI contributor, co-author, or citation entries; research-methods disclosure retained |
 | License | MIT adopted by the owner on 2026-10-21; third-party terms and notices retained |
 | Remote repository | Public at [thequantumfalcon/homometric-photon-counts](https://github.com/thequantumfalcon/homometric-photon-counts); the [published joint-proof commit](validation/github_joint.json) passed PR and main-branch Windows/Ubuntu packaging, Arb replay and combined `ci`, plus main-branch CodeQL Python/Actions checks |

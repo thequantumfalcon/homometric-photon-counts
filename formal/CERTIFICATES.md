@@ -22,7 +22,7 @@ The 33-node interpolation theorem remains available, but this final proof establ
 
 ## Executed checks and reproducibility
 
-The joint snapshot milestone contains 45 modules and 654 explicit theorem-axiom audits. Later additions are counted in the current README. The final theorem's transitive axiom list is exactly `propext`, `Classical.choice`, and `Quot.sound`. Sources are pinned in [manifest.json](manifest.json); the [validation record](../docs/validation/README.md) distinguishes source compilation, fresh-kernel checking and other checks. Generated files can emit harmless unused-tactic warnings; no warning-free compilation claim is made.
+The joint snapshot milestone contains 45 modules and 654 explicit theorem-axiom audits. The validation record lists later additions and their executed coverage. The final theorem's transitive axiom list is exactly `propext`, `Classical.choice`, and `Quot.sound`. Sources are pinned in [manifest.json](manifest.json); the [validation record](../docs/validation/README.md) distinguishes source compilation, fresh-kernel checking and other checks. Generated files can emit harmless unused-tactic warnings; no warning-free compilation claim is made.
 
 The retained concrete compilation receipt collects successful source-bound compilations and copies their objects into a new isolated directory. This is not a second compilation of unchanged files. A subsequent fresh-kernel check rechecks the complete imported proof environment. For a new full rebuild, use the pinned replay command in the [reproduction guide](../docs/reproduction.md), with `--fresh-kernel`.
 

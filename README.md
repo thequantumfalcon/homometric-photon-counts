@@ -62,11 +62,15 @@ The sample counts require tens of trillions of independent observations for this
 
 The [claim ledger](docs/claims.md) links each result to its proof and assumptions. The [model guide](docs/model.md) and [formal validation record](docs/validation/README.md) explain the Gaussian/Poisson construction and Lean coverage. Root-count and testing arguments are not fully formalized in Lean. See also the [verification-tool status](docs/verification-tools.md) and [fixed-test model-error bound](docs/model-tolerance.md).
 
+The [recorded Lean build](docs/validation/formal_replay_20261022.json) ran on the maintainer's own Windows machine. GitHub CI checks the source package and numerical replays; it does not compile Lean.
+
 ## Bounded optical feasibility study
 
 The [optical-study guide](docs/optical-studies.md) covers the separate feasibility, calibration, external detector-data and transfer studies. They use a **second-order signal at a different frequency**, with their own assumptions and sample bounds. They do not demonstrate the original fourth-order-only effect or physically validate the proposed apparatus.
 
 ## Research provenance
+
+Folders named `review`, `independent_review`, `scientist-review`, or similar hold AI-only checks under human direction, not external human peer review.
 
 Substantial parts of the arguments, code and checks were developed with AI assistance under human direction. The maintainer did not independently derive or manually verify every step. Read the [methods disclosure](docs/research-disclosure.md) and [evidence provenance](docs/provenance.md). Internal checks are not external human peer review. AI tools are not listed as authors or Git contributors.
 

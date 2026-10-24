@@ -1,5 +1,7 @@
 # Recorded validation
 
+The Lean builds and separate proof-checker runs recorded here were executed locally on the maintainer's Windows machine. GitHub CI runs source-package and numerical checks; it does not compile Lean.
+
 The earlier records below were executed on Windows with Python 3.11.9 during 20–21 October 2026. Additional checks dated 22 October are recorded separately:
 
 - [Interactive demo browser validation](demo_20261022.json): numerical display checks, five responsive widths, 3D geometry and controls, keyboard and touch emulation, offline loading and WebGL fallback. The record binds frontend sources and retained screenshots; internal visual inspection does not establish complete accessibility or physical-device coverage.
