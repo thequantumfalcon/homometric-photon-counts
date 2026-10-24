@@ -1,3 +1,5 @@
 # Optional browser QA only; the demo itself has no Python dependencies.
 playwright==1.58.0
+# Pillow 13.0.0 is the security baseline; keep this pin in sync with
+# the version guard in tools/check_demo_browser.py.
 Pillow==13.0.0
