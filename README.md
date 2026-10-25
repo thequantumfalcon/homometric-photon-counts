@@ -20,6 +20,8 @@ $$D_4(t)=\frac{455015761}{20000}t^8(1-t^2)^5(t^6+3t^4+6t^2+6)>0\qquad(0<t<1).$$
 
 The clean amplitude vanishes and the first three moments depend only on shared quantities; order four introduces an unequal phase-sensitive invariant. See the [coordinate construction](formal/COORDINATES.md), [moment derivation](evidence/homometric-photon-counts/science_completion/homogeneous_control/homogeneous_control_proof.txt), and [formal certificates](formal/CERTIFICATES.md).
 
+Matching these three moments does **not** mean that the intensity distributions or photon-count distributions agree. It also does not mean that the individual probabilities of counts 0, 1, 2 or 3 agree. The positive fourth-moment gap proves that the full laws differ at the same phase variance, positive gain and common background. The [model guide](docs/model.md#moments-cumulants-and-count-probabilities) distinguishes intensity moments, count factorial moments and count probabilities.
+
 Start with the [23 October report update](docs/report/update-2026-10-23.md) by Thomas Albrecht, which covers the later four-root certificates, sample bounds and completed concrete formal proof. The [historical 18-page report and LaTeX sources](docs/report/README.md) retain their original bytes and provide the foundational derivations.
 
 ## Explore the result
@@ -59,6 +61,8 @@ $$I_G=\left|\sum_{j=1}^{63}z_{G,j}e^{i\sqrt{s}Z_j}\right|^2,\qquad N\mid I_G\sim
 | Formal count-law distinction | Lean proves the concrete first-three-moment matches, fourth-gap identity, and inequality of the two constructed count laws for every positive variance and gain and every common nonnegative background. The proof connects the explicit 63-site phase lists, Gaussian integrals and Poisson mixtures without assuming the concrete moment values. See the [certificate scope](formal/CERTIFICATES.md) and [executed checks](docs/validation/README.md). |
 
 The sample counts require tens of trillions of independent observations for this fixed reference experiment; they do not establish a practical acquisition plan. The lower bound applies to the specified gain, variance, background and 13-bin iid observation, not to all measurements at this frequency. Arbitrary detectors, temporal dependence, unknown calibration and optimized designs need separate analysis.
+
+Population count-law distinction is separate from estimating unknown phase variance, gain or background from a finite record. The related [bounded-count identification project](https://github.com/thequantumfalcon/bounded-count-identifiability) studies a bounded integer source plus independent Poisson background. Here the bounded quantity is a real intensity and the observed count is a Poisson mixture; that project's finite-order reconstruction theorem does not apply directly. See the [model boundary](docs/model.md#relation-to-bounded-count-identification).
 
 The [claim ledger](docs/claims.md) links each result to its proof and assumptions. The [model guide](docs/model.md) and [formal validation record](docs/validation/README.md) explain the Gaussian/Poisson construction and Lean coverage. Root-count and testing arguments are not fully formalized in Lean. See also the [verification-tool status](docs/verification-tools.md) and [fixed-test model-error bound](docs/model-tolerance.md).
 
